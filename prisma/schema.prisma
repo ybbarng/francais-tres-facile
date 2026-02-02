@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Exercise {
+  id            String    @id @default(cuid())
+  title         String
+  level         String    // A1, A2, B1, B2
+  category      String    // société, environnement, etc.
+  sourceUrl     String    @unique
+  audioUrl      String?   // MP3 URL
+  h5pEmbedUrl   String?   // H5P iframe URL
+  transcript    String?   // 스크립트 텍스트 (PDF에서 추출)
+  thumbnailUrl  String?
+  publishedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  progress      Progress?
+}
+
+model Progress {
+  id            String    @id @default(cuid())
+  exerciseId    String    @unique
+  completed     Boolean   @default(false)
+  score         Int?      // 획득 점수 (예: 15)
+  maxScore      Int?      // 최대 점수 (예: 23)
+  screenshotUrl String?   // 결과 스크린샷 경로
+  listenCount   Int       @default(0)  // 오디오 재생 횟수
+  notes         String?   // 개인 메모
+  completedAt   DateTime?
+  updatedAt     DateTime  @updatedAt
+
+  exercise      Exercise  @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+}
