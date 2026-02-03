@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[oklch(0.40_0.18_260)] dark:bg-[oklch(0.25_0.12_260)] text-white shadow-lg">
+    <header className="bg-header text-white shadow-lg">
       {/* French tricolor accent bar */}
       <div className="french-tricolor h-1" />
 

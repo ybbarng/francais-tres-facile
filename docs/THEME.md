@@ -68,10 +68,37 @@
 
 ### Header (상단바)
 
-| 모드 | 색상 | 값 |
+CSS 변수: `--header` / Tailwind: `bg-header`
+
+| 모드 | 이름 | 값 |
 |------|------|-----|
 | 라이트 | Bleu Royal | `oklch(0.40 0.18 260)` |
 | 다크 | Marine Profond | `oklch(0.25 0.12 260)` |
+
+*텍스트: 항상 흰색 (`text-white`)*
+
+### Quick Action 버튼 (홈 화면)
+
+홈 화면의 큰 네비게이션 버튼입니다.
+라이트 모드에서는 밝은 색, 다크 모드에서는 어두운 색을 사용합니다.
+
+**Exercices 버튼 (파랑):**
+
+CSS 변수: `--action-blue` / Tailwind: `bg-action-blue`
+
+| 모드 | 이름 | 값 |
+|------|------|-----|
+| 라이트 | Bleu Clair | `oklch(0.55 0.18 260)` |
+| 다크 | Bleu Nuit | `oklch(0.35 0.15 260)` |
+
+**Playlist 버튼 (빨강):**
+
+CSS 변수: `--action-red` / Tailwind: `bg-action-red`
+
+| 모드 | 이름 | 값 |
+|------|------|-----|
+| 라이트 | Rouge Clair | `oklch(0.60 0.22 25)` |
+| 다크 | Rouge Sombre | `oklch(0.45 0.18 25)` |
 
 *텍스트: 항상 흰색 (`text-white`)*
 
@@ -223,4 +250,5 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 - 테마 정의: `src/app/globals.css`
 - Badge 변형: `src/components/ui/badge.tsx`
 - Header 색상: `src/components/layout/Header.tsx`
+- 홈 화면 버튼: `src/app/page.tsx`
 - 로고: `src/components/Logo.tsx`

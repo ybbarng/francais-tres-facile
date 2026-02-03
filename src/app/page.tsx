@@ -127,20 +127,20 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         <Link
           href="/exercises"
-          className="bg-primary text-primary-foreground rounded-xl p-6 hover:opacity-90 transition-all flex items-center gap-4 shadow-md"
+          className="bg-action-blue text-white rounded-xl p-6 hover:opacity-90 transition-all flex items-center gap-4 shadow-md"
         >
-          <div className="p-3 bg-primary-foreground/20 rounded-lg">
+          <div className="p-3 bg-white/20 rounded-lg">
             <BookOpen className="w-8 h-8" />
           </div>
           <div>
             <div className="text-lg font-semibold">Exercices</div>
-            <div className="text-primary-foreground/80 text-sm">Voir tous les exercices</div>
+            <div className="text-white/80 text-sm">Voir tous les exercices</div>
           </div>
         </Link>
 
         <Link
           href="/playlist"
-          className="bg-[oklch(0.55_0.22_25)] dark:bg-[oklch(0.50_0.18_25)] text-white rounded-xl p-6 hover:opacity-90 transition-all flex items-center gap-4 shadow-md"
+          className="bg-action-red text-white rounded-xl p-6 hover:opacity-90 transition-all flex items-center gap-4 shadow-md"
         >
           <div className="p-3 bg-white/20 rounded-lg">
             <Music className="w-8 h-8" />

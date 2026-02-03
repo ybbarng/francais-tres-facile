@@ -48,6 +48,11 @@
   --color-french-blue: var(--french-blue);
   --color-french-red: var(--french-red);
   --color-french-gold: var(--french-gold);
+
+  /* Component-specific colors */
+  --color-header: var(--header);
+  --color-action-blue: var(--action-blue);
+  --color-action-red: var(--action-red);
 }
 
 /* ============================================
@@ -114,6 +119,11 @@
   --sidebar-accent-foreground: oklch(0.30 0.08 260);
   --sidebar-border: oklch(0.90 0.01 260);
   --sidebar-ring: oklch(0.50 0.15 260);
+
+  /* Component-specific - Light mode: bright colors */
+  --header: oklch(0.40 0.18 260);             /* Header background */
+  --action-blue: oklch(0.55 0.18 260);        /* Exercices button */
+  --action-red: oklch(0.60 0.22 25);          /* Playlist button */
 }
 
 /* ============================================
@@ -178,6 +188,11 @@
   --sidebar-accent-foreground: oklch(0.92 0.01 260);
   --sidebar-border: oklch(0.30 0.03 260);
   --sidebar-ring: oklch(0.55 0.15 260);
+
+  /* Component-specific - Dark mode: darker colors */
+  --header: oklch(0.25 0.12 260);             /* Header background */
+  --action-blue: oklch(0.35 0.15 260);        /* Exercices button */
+  --action-red: oklch(0.45 0.18 25);          /* Playlist button */
 }
 
 /* French tricolor accent bar for header */
