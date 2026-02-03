@@ -188,6 +188,21 @@ export default function DashboardPage() {
                     href={`/exercises/${exercise.id}`}
                     className="flex items-center gap-4 px-6 py-4 hover:bg-muted/50 transition-colors"
                   >
+                    {/* Thumbnail */}
+                    {exercise.thumbnailUrl ? (
+                      <div className="w-20 h-14 rounded-md overflow-hidden bg-muted shrink-0">
+                        <img
+                          src={exercise.thumbnailUrl}
+                          alt=""
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-20 h-14 rounded-md bg-muted shrink-0 flex items-center justify-center">
+                        <BookOpen className="w-6 h-6 text-muted-foreground" />
+                      </div>
+                    )}
+
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <Badge
@@ -207,7 +222,7 @@ export default function DashboardPage() {
                       )}
                     </div>
 
-                    <div className="flex items-center gap-2 text-muted-foreground">
+                    <div className="flex items-center gap-2 text-muted-foreground shrink-0">
                       {exercise.audioUrl && <Volume2 className="w-5 h-5" />}
                       {exercise.h5pEmbedUrl && <Headphones className="w-5 h-5" />}
                       <ChevronRight className="w-5 h-5" />
