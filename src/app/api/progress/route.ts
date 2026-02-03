@@ -5,7 +5,6 @@ export async function GET() {
   try {
     const progress = await prisma.progress.findMany({
       include: { exercise: true },
-      orderBy: { updatedAt: "desc" },
     });
 
     // 통계 계산

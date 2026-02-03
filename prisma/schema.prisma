@@ -25,16 +25,14 @@ model Exercise {
 }
 
 model Progress {
-  id            String    @id @default(cuid())
-  exerciseId    String    @unique
-  completed     Boolean   @default(false)
-  score         Int?      // 획득 점수 (예: 15)
-  maxScore      Int?      // 최대 점수 (예: 23)
-  screenshotUrl String?   // 결과 스크린샷 경로
-  listenCount   Int       @default(0)  // 오디오 재생 횟수
-  notes         String?   // 개인 메모
-  completedAt   DateTime?
-  updatedAt     DateTime  @updatedAt
+  id          String    @id @default(cuid())
+  exerciseId  String    @unique
+  completed   Boolean   @default(false)
+  score       Int?      // 획득 점수 (예: 15)
+  maxScore    Int?      // 최대 점수 (예: 23)
+  listenCount Int       @default(0)  // 오디오 재생 횟수
+  notes       String?   // 개인 메모
+  completedAt DateTime?
 
-  exercise      Exercise  @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  exercise    Exercise  @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
 }

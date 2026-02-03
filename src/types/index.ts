@@ -22,7 +22,6 @@ export interface ProgressInput {
   completedAt?: string | null;
   score?: number;
   maxScore?: number;
-  screenshotUrl?: string;
   listenCount?: number;
   notes?: string;
 }
