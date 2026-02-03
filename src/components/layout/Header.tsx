@@ -9,6 +9,7 @@ export default function Header() {
   const navItems = [
     { href: "/", label: "Tableau de bord" },
     { href: "/exercises", label: "Exercices" },
+    { href: "/completed", label: "Terminés" },
     { href: "/playlist", label: "Playlist" },
   ];
 
