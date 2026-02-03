@@ -23,14 +23,7 @@ describe("H5PQuiz", () => {
     vi.clearAllMocks();
   });
 
-  describe("initial rendering", () => {
-    it("should render with quiz inactive overlay", () => {
-      render(<H5PQuiz {...defaultProps} />);
-
-      expect(screen.getByText("Commencer le quiz")).toBeInTheDocument();
-      expect(screen.getByText("Cliquez pour passer en mode quiz")).toBeInTheDocument();
-    });
-
+  describe("rendering", () => {
     it("should render iframe with correct src", () => {
       render(<H5PQuiz {...defaultProps} />);
 
@@ -39,69 +32,13 @@ describe("H5PQuiz", () => {
       expect(iframe?.src).toBe(defaultProps.h5pUrl);
     });
 
-    it("should have pointer-events none when quiz is inactive", () => {
+    it("should show manual score input by default", () => {
       render(<H5PQuiz {...defaultProps} />);
 
-      const iframe = document.querySelector("iframe");
-      expect(iframe?.style.pointerEvents).toBe("none");
-    });
-  });
-
-  describe("quiz activation", () => {
-    it("should activate quiz mode when overlay is clicked", async () => {
-      render(<H5PQuiz {...defaultProps} />);
-
-      const overlay = screen.getByText("Commencer le quiz");
-      fireEvent.click(overlay);
-
-      await waitFor(() => {
-        expect(screen.queryByText("Commencer le quiz")).not.toBeInTheDocument();
-      });
-
-      expect(screen.getByText("Retour au mode défilement")).toBeInTheDocument();
-    });
-
-    it("should enable pointer-events when quiz is active", async () => {
-      render(<H5PQuiz {...defaultProps} />);
-
-      const overlay = screen.getByText("Commencer le quiz");
-      fireEvent.click(overlay);
-
-      await waitFor(() => {
-        const iframe = document.querySelector("iframe");
-        expect(iframe?.style.pointerEvents).toBe("auto");
-      });
-    });
-
-    it("should show manual score input when quiz is active", async () => {
-      render(<H5PQuiz {...defaultProps} />);
-
-      const overlay = screen.getByText("Commencer le quiz");
-      fireEvent.click(overlay);
-
-      await waitFor(() => {
-        expect(
-          screen.getByText("Entrez votre score après avoir terminé le quiz (ex: 15/23)")
-        ).toBeInTheDocument();
-      });
-    });
-
-    it("should deactivate quiz mode when return button is clicked", async () => {
-      render(<H5PQuiz {...defaultProps} />);
-
-      // Activate quiz
-      fireEvent.click(screen.getByText("Commencer le quiz"));
-
-      await waitFor(() => {
-        expect(screen.getByText("Retour au mode défilement")).toBeInTheDocument();
-      });
-
-      // Deactivate quiz
-      fireEvent.click(screen.getByText("Retour au mode défilement"));
-
-      await waitFor(() => {
-        expect(screen.getByText("Commencer le quiz")).toBeInTheDocument();
-      });
+      expect(
+        screen.getByText("Entrez votre score après avoir terminé le quiz (ex: 15/23)")
+      ).toBeInTheDocument();
+      expect(screen.getByPlaceholderText("15/23")).toBeInTheDocument();
     });
   });
 
@@ -110,18 +47,8 @@ describe("H5PQuiz", () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
 
-      // Activate quiz
-      fireEvent.click(screen.getByText("Commencer le quiz"));
-
-      await waitFor(() => {
-        expect(screen.getByPlaceholderText("15/23")).toBeInTheDocument();
-      });
-
-      // Enter score
       const input = screen.getByPlaceholderText("15/23");
       fireEvent.change(input, { target: { value: "18/23" } });
-
-      // Submit
       fireEvent.click(screen.getByText("Enregistrer"));
 
       expect(onScoreReceived).toHaveBeenCalledWith({ score: 18, maxScore: 23 });
@@ -130,12 +57,6 @@ describe("H5PQuiz", () => {
     it("should handle score format with spaces", async () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
-
-      fireEvent.click(screen.getByText("Commencer le quiz"));
-
-      await waitFor(() => {
-        expect(screen.getByPlaceholderText("15/23")).toBeInTheDocument();
-      });
 
       const input = screen.getByPlaceholderText("15/23");
       fireEvent.change(input, { target: { value: "15 / 20" } });
@@ -148,17 +69,24 @@ describe("H5PQuiz", () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
 
-      fireEvent.click(screen.getByText("Commencer le quiz"));
-
-      await waitFor(() => {
-        expect(screen.getByPlaceholderText("15/23")).toBeInTheDocument();
-      });
-
       const input = screen.getByPlaceholderText("15/23");
       fireEvent.change(input, { target: { value: "invalid" } });
       fireEvent.click(screen.getByText("Enregistrer"));
 
       expect(onScoreReceived).not.toHaveBeenCalled();
+    });
+
+    it("should show score registered message after manual submission", async () => {
+      const onScoreReceived = vi.fn();
+      render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
+
+      const input = screen.getByPlaceholderText("15/23");
+      fireEvent.change(input, { target: { value: "18/23" } });
+      fireEvent.click(screen.getByText("Enregistrer"));
+
+      await waitFor(() => {
+        expect(screen.getByText(/Score enregistré/)).toBeInTheDocument();
+      });
     });
   });
 
@@ -241,12 +169,9 @@ describe("H5PQuiz", () => {
       });
     });
 
-    it("should show auto-detected message after xAPI score", async () => {
+    it("should show score registered message after xAPI detection", async () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
-
-      // Activate quiz first
-      fireEvent.click(screen.getByText("Commencer le quiz"));
 
       // Simulate xAPI completed event
       const xapiEvent = new MessageEvent("message", {
@@ -262,30 +187,7 @@ describe("H5PQuiz", () => {
       window.dispatchEvent(xapiEvent);
 
       await waitFor(() => {
-        expect(screen.getByText(/Score détecté automatiquement/)).toBeInTheDocument();
-      });
-    });
-  });
-
-  describe("expand button", () => {
-    it("should increase iframe height when expand button is clicked", async () => {
-      render(<H5PQuiz {...defaultProps} />);
-
-      // Activate quiz
-      fireEvent.click(screen.getByText("Commencer le quiz"));
-
-      await waitFor(() => {
-        expect(screen.getByTitle("Agrandir le quiz")).toBeInTheDocument();
-      });
-
-      const iframe = document.querySelector("iframe");
-      expect(iframe?.style.height).toBe("800px");
-
-      // Click expand button
-      fireEvent.click(screen.getByTitle("Agrandir le quiz"));
-
-      await waitFor(() => {
-        expect(iframe?.style.height).toBe("1100px"); // 800 + 300
+        expect(screen.getByText(/Score enregistré/)).toBeInTheDocument();
       });
     });
   });
