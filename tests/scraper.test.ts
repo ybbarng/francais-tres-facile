@@ -1,12 +1,29 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { scrapeAllExercises, scrapeExerciseDetail, scrapeExerciseList } from "@/lib/scraper";
+import {
+  scrapeAllExercises,
+  scrapeCategory,
+  scrapeCategoryPage,
+  scrapeCategoryUrls,
+  scrapeExerciseDetail,
+} from "@/lib/scraper";
 
 // Load mock HTML files
 const mockPage1 = readFileSync(join(__dirname, "mocks/rfi-societe-a2-page1.html"), "utf-8");
 const mockPage2 = readFileSync(join(__dirname, "mocks/rfi-societe-a2-page2.html"), "utf-8");
 const mockDetail = readFileSync(join(__dirname, "mocks/rfi-exercise-detail.html"), "utf-8");
+
+// Mock level index page with category links
+const mockLevelPage = `
+<!DOCTYPE html>
+<html>
+<body>
+  <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/">Société</a>
+  <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/culture-a2/">Culture</a>
+</body>
+</html>
+`;
 
 // Mock fetch globally
 const mockFetch = vi.fn();
@@ -20,14 +37,32 @@ afterEach(() => {
   vi.clearAllMocks();
 });
 
-describe("scrapeExerciseList", () => {
+describe("scrapeCategoryUrls", () => {
+  it("should extract category URLs from level page", async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockLevelPage,
+    });
+
+    const urls = await scrapeCategoryUrls("A2");
+
+    expect(urls).toHaveLength(2);
+    expect(urls[0]).toContain("société-a2");
+    expect(urls[1]).toContain("culture-a2");
+  });
+});
+
+describe("scrapeCategoryPage", () => {
   it("should scrape exercises from page 1", async () => {
     mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => mockPage1,
     });
 
-    const { exercises, hasMore } = await scrapeExerciseList(1);
+    const { exercises, hasMore } = await scrapeCategoryPage(
+      "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/",
+      1
+    );
 
     expect(exercises).toHaveLength(3);
     expect(hasMore).toBe(true);
@@ -51,7 +86,10 @@ describe("scrapeExerciseList", () => {
       text: async () => mockPage2,
     });
 
-    const { exercises, hasMore } = await scrapeExerciseList(2);
+    const { exercises, hasMore } = await scrapeCategoryPage(
+      "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/",
+      2
+    );
 
     expect(exercises).toHaveLength(2);
     expect(hasMore).toBe(false);
@@ -63,7 +101,12 @@ describe("scrapeExerciseList", () => {
       status: 404,
     });
 
-    await expect(scrapeExerciseList(1)).rejects.toThrow("Failed to fetch");
+    await expect(
+      scrapeCategoryPage(
+        "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/",
+        1
+      )
+    ).rejects.toThrow("Failed to fetch");
   });
 });
 
@@ -115,19 +158,58 @@ describe("scrapeExerciseDetail", () => {
   });
 });
 
-describe("scrapeAllExercises", () => {
-  it("should scrape all pages until no more", async () => {
+describe("scrapeCategory", () => {
+  it("should scrape all pages of a category", async () => {
     // Page 1 fetch
     mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => mockPage1,
     });
-    // Page 2 fetch
+    // Page 2 fetch (last page)
     mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => mockPage2,
     });
-    // Detail fetches for 5 exercises (3 from page 1 + 2 from page 2)
+
+    const exercises = await scrapeCategory(
+      "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/"
+    );
+
+    // 3 from page 1 + 2 from page 2
+    expect(exercises).toHaveLength(5);
+  });
+});
+
+describe("scrapeAllExercises", () => {
+  it("should scrape all categories and deduplicate", async () => {
+    // Level page fetch
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockLevelPage,
+    });
+
+    // First category (société) - page 1
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockPage1,
+    });
+    // First category - page 2 (last)
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockPage2,
+    });
+
+    // Second category (culture) - same content to test deduplication
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockPage1, // Same as société page 1
+    });
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockPage2, // Same as société page 2
+    });
+
+    // Detail fetches for 5 unique exercises
     for (let i = 0; i < 5; i++) {
       mockFetch.mockResolvedValueOnce({
         ok: true,
@@ -135,9 +217,9 @@ describe("scrapeAllExercises", () => {
       });
     }
 
-    const exercises = await scrapeAllExercises();
+    const exercises = await scrapeAllExercises("A2");
 
-    // 3 from page 1 + 2 from page 2
+    // Should have 5 unique exercises (duplicates removed)
     expect(exercises).toHaveLength(5);
 
     // All should have audio URL from detail page
@@ -146,31 +228,23 @@ describe("scrapeAllExercises", () => {
     );
   });
 
-  it("should respect maxPages limit", async () => {
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      text: async () => mockPage1,
-    });
-    // Detail fetches for 3 exercises from page 1
-    for (let i = 0; i < 3; i++) {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        text: async () => mockDetail,
-      });
-    }
-
-    const exercises = await scrapeAllExercises(1); // Only 1 page
-
-    expect(exercises).toHaveLength(3);
-    // Should only call fetch for page 1 + 3 details = 4 times
-    expect(mockFetch).toHaveBeenCalledTimes(4);
-  });
-
   it("should handle detail fetch errors gracefully", async () => {
+    // Level page
     mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => mockPage2, // 2 exercises
+      text: async () => `
+        <html><body>
+          <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/">Société</a>
+        </body></html>
+      `,
     });
+
+    // Category page with 2 exercises
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockPage2,
+    });
+
     // First detail succeeds
     mockFetch.mockResolvedValueOnce({
       ok: true,
@@ -182,7 +256,7 @@ describe("scrapeAllExercises", () => {
       status: 500,
     });
 
-    const exercises = await scrapeAllExercises();
+    const exercises = await scrapeAllExercises("A2");
 
     // Should still return 2 exercises
     expect(exercises).toHaveLength(2);

@@ -15,8 +15,13 @@ export const RFI_HEADERS: HeadersInit = {
 export const RFI_BASE_URL = "https://francaisfacile.rfi.fr";
 export const RFI_PODCAST_URL = `${RFI_BASE_URL}/fr/podcasts/journal-en-fran%C3%A7ais-facile/`;
 
-// Comprendre l'actualité en français - Exercices par niveau
-export const RFI_SOCIETE_A2_URL = `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/soci%C3%A9t%C3%A9-a2/`;
+// Comprendre l'actualité en français - Level index pages
+export const RFI_LEVEL_URLS: Record<string, string> = {
+  A1: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/a1/`,
+  A2: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/a2/`,
+  B1: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/b1/`,
+  B2: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/b2/`,
+};
 
-// Default exercices URL (Société A2)
-export const RFI_EXERCICES_URL = RFI_SOCIETE_A2_URL;
+// Default level to scrape
+export const RFI_DEFAULT_LEVEL = "A2";

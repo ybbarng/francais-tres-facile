@@ -6,9 +6,9 @@ import type { SyncResult } from "@/types";
 export async function POST(request: Request) {
   try {
     const body = await request.json().catch(() => ({}));
-    const maxPages = body.maxPages || 0; // 0 = unlimited (load all pages)
+    const level = body.level || "A2"; // Default to A2
 
-    const exercises = await scrapeAllExercises(maxPages);
+    const exercises = await scrapeAllExercises(level);
     const result: SyncResult = { added: 0, updated: 0, errors: [] };
 
     for (const exercise of exercises) {

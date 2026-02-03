@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import { RFI_BASE_URL, RFI_EXERCICES_URL, RFI_HEADERS } from "./rfi-headers";
+import { RFI_BASE_URL, RFI_DEFAULT_LEVEL, RFI_HEADERS, RFI_LEVEL_URLS } from "./rfi-headers";
 
 export interface ScrapedExercise {
   title: string;
@@ -51,22 +51,75 @@ function extractDateFromUrl(url: string): Date | null {
 
 function extractLevelFromUrl(url: string): string {
   // Check if URL contains level indicators
-  if (url.includes("-a1") || url.includes("/a1")) return "A1";
-  if (url.includes("-a2") || url.includes("/a2")) return "A2";
-  if (url.includes("-b1") || url.includes("/b1")) return "B1";
-  if (url.includes("-b2") || url.includes("/b2")) return "B2";
+  const lowerUrl = url.toLowerCase();
+  if (lowerUrl.includes("-a1") || lowerUrl.includes("/a1")) return "A1";
+  if (lowerUrl.includes("-a2") || lowerUrl.includes("/a2")) return "A2";
+  if (lowerUrl.includes("-b1") || lowerUrl.includes("/b1")) return "B1";
+  if (lowerUrl.includes("-b2") || lowerUrl.includes("/b2")) return "B2";
   return "A2"; // Default
 }
 
-export async function scrapeExerciseList(
+function extractCategoryFromUrl(url: string): string {
+  // Extract category from URL like /société-a2/, /culture-a2/, etc.
+  const match = url.match(/\/([^/]+)-(?:a1|a2|b1|b2)\/?/i);
+  if (match) {
+    const category = match[1];
+    // Capitalize first letter and decode URL
+    const decoded = decodeURIComponent(category);
+    return decoded.charAt(0).toUpperCase() + decoded.slice(1);
+  }
+  return "Exercice";
+}
+
+/**
+ * Fetch all category URLs from a level index page (e.g., /a2/)
+ */
+export async function scrapeCategoryUrls(level: string): Promise<string[]> {
+  const levelUrl = RFI_LEVEL_URLS[level];
+  if (!levelUrl) {
+    throw new Error(`Unknown level: ${level}`);
+  }
+
+  console.log(`Fetching category list from: ${levelUrl}`);
+  const html = await fetchRFIPage(levelUrl);
+  const $ = cheerio.load(html);
+
+  const categoryUrls: string[] = [];
+  const seenUrls = new Set<string>();
+
+  // Find links to category pages (e.g., /société-a2/, /culture-a2/)
+  const levelLower = level.toLowerCase();
+  $(`a[href*="-${levelLower}/"]`).each((_, el) => {
+    const href = $(el).attr("href");
+    if (!href) return;
+
+    const fullUrl = href.startsWith("http") ? href : `${RFI_BASE_URL}${href}`;
+
+    // Only include French category pages
+    if (!fullUrl.includes("/fr/")) return;
+    if (seenUrls.has(fullUrl)) return;
+
+    seenUrls.add(fullUrl);
+    categoryUrls.push(fullUrl);
+  });
+
+  console.log(`Found ${categoryUrls.length} categories for level ${level}`);
+  return categoryUrls;
+}
+
+/**
+ * Scrape exercises from a single category page
+ */
+export async function scrapeCategoryPage(
+  categoryUrl: string,
   page = 1
 ): Promise<{ exercises: ScrapedExercise[]; hasMore: boolean }> {
-  // Société A2 uses different pagination: /2/#pager, /3/#pager, etc.
   let url: string;
   if (page === 1) {
-    url = RFI_EXERCICES_URL;
+    url = categoryUrl.endsWith("/") ? categoryUrl : `${categoryUrl}/`;
   } else {
-    url = `${RFI_EXERCICES_URL}${page}/#pager`;
+    const baseUrl = categoryUrl.endsWith("/") ? categoryUrl : `${categoryUrl}/`;
+    url = `${baseUrl}${page}/#pager`;
   }
 
   console.log(`Fetching: ${url}`);
@@ -76,11 +129,13 @@ export async function scrapeExerciseList(
   const exercises: ScrapedExercise[] = [];
   const seenUrls = new Set<string>();
 
-  // Structure for Société A2 pages: m-item-list-article with data-article-item-link
+  const level = extractLevelFromUrl(categoryUrl);
+  const category = extractCategoryFromUrl(categoryUrl);
+
+  // Structure for category pages: m-item-list-article with data-article-item-link
   $(".m-item-list-article").each((_, el) => {
     const $el = $(el);
 
-    // Find the article link (with data-article-item-link attribute)
     const linkEl = $el.find("a[data-article-item-link]").first();
     const href = linkEl.attr("href");
 
@@ -88,19 +143,16 @@ export async function scrapeExerciseList(
 
     const sourceUrl = href.startsWith("http") ? href : `${RFI_BASE_URL}${href}`;
 
-    // Skip if we've already seen this URL (each article has 2 links: image + title)
+    // Skip duplicates within same page
     if (seenUrls.has(sourceUrl)) return;
     seenUrls.add(sourceUrl);
 
-    // Extract title from h2
     const title = $el.find("h2").first().text().trim();
     if (!title) return;
 
-    // Extract thumbnail
     const imgEl = $el.find("img").first();
     const thumbnailUrl = imgEl.attr("src") || imgEl.attr("data-src") || null;
 
-    // Extract date from datetime attribute or URL
     const timeEl = $el.find("time");
     let publishedAt: Date | null = null;
     if (timeEl.length > 0) {
@@ -112,12 +164,6 @@ export async function scrapeExerciseList(
     if (!publishedAt) {
       publishedAt = extractDateFromUrl(href);
     }
-
-    // Extract level from URL or page context
-    const level = extractLevelFromUrl(RFI_EXERCICES_URL);
-
-    // Extract category from breadcrumb or tag
-    const category = $el.find(".article__tag, .m-tag").first().text().trim() || "Société";
 
     exercises.push({
       title,
@@ -131,54 +177,35 @@ export async function scrapeExerciseList(
     });
   });
 
-  // Also try podcast-item structure (for Journal en français facile)
-  if (exercises.length === 0) {
-    $(".m-podcast-item").each((_, el) => {
-      const $el = $(el);
-      const linkEl = $el.find("a.m-podcast-item__image, a.m-podcast-item__infos__edition").first();
-      const href = linkEl.attr("href");
-
-      if (!href) return;
-
-      const sourceUrl = href.startsWith("http") ? href : `${RFI_BASE_URL}${href}`;
-      if (seenUrls.has(sourceUrl)) return;
-      seenUrls.add(sourceUrl);
-
-      const title =
-        $el.find(".m-podcast-item__infos__edition h2").text().trim() ||
-        $el.find("h2").first().text().trim() ||
-        linkEl.attr("title") ||
-        "";
-
-      if (!title) return;
-
-      const imgEl = $el.find("img").first();
-      const thumbnailUrl = imgEl.attr("src") || imgEl.attr("data-src") || null;
-
-      const dateText = $el.find(".m-podcast-item__infos__date").text().trim();
-      const publishedAt = parseDate(dateText);
-
-      exercises.push({
-        title,
-        level: "A2",
-        category: "Journal en français facile",
-        sourceUrl,
-        audioUrl: null,
-        h5pEmbedUrl: null,
-        thumbnailUrl,
-        publishedAt,
-      });
-    });
-  }
-
   // Check for next page
-  // Société A2 pagination: links like /société-a2/2/#pager
   const hasMore =
     $(`a[href*="/${page + 1}/"]`).length > 0 ||
     $('a[rel="next"]').length > 0 ||
     $(".m-pagination__link--next").length > 0;
 
   return { exercises, hasMore };
+}
+
+/**
+ * Scrape all pages of a single category
+ */
+export async function scrapeCategory(categoryUrl: string): Promise<ScrapedExercise[]> {
+  const exercises: ScrapedExercise[] = [];
+  let page = 1;
+  let hasMore = true;
+
+  while (hasMore) {
+    const { exercises: pageExercises, hasMore: more } = await scrapeCategoryPage(categoryUrl, page);
+    console.log(`  Page ${page}: ${pageExercises.length} exercises`);
+    exercises.push(...pageExercises);
+    hasMore = more;
+    page++;
+
+    // Rate limiting
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  }
+
+  return exercises;
 }
 
 export async function scrapeExerciseDetail(sourceUrl: string): Promise<Partial<ScrapedExercise>> {
@@ -249,28 +276,46 @@ export async function scrapeExerciseDetail(sourceUrl: string): Promise<Partial<S
   };
 }
 
+/**
+ * Scrape all exercises from a level (e.g., A2)
+ * Fetches all categories and deduplicates exercises
+ */
 export async function scrapeAllExercises(
-  maxPages = 0 // 0 = unlimited
+  level: string = RFI_DEFAULT_LEVEL
 ): Promise<ScrapedExercise[]> {
+  // Get all category URLs for this level
+  const categoryUrls = await scrapeCategoryUrls(level);
+
+  // Scrape all categories
   const allExercises: ScrapedExercise[] = [];
-  let page = 1;
-  let hasMore = true;
+  const seenUrls = new Set<string>();
 
-  while (hasMore && (maxPages === 0 || page <= maxPages)) {
-    console.log(`Scraping page ${page}...`);
-    const { exercises, hasMore: more } = await scrapeExerciseList(page);
-    console.log(`Found ${exercises.length} exercises on page ${page}`);
-    allExercises.push(...exercises);
-    hasMore = more;
-    page++;
+  for (const categoryUrl of categoryUrls) {
+    console.log(`\nScraping category: ${categoryUrl}`);
+    const categoryExercises = await scrapeCategory(categoryUrl);
 
-    // Rate limiting
+    // Deduplicate: only add exercises we haven't seen
+    let added = 0;
+    let duplicates = 0;
+    for (const exercise of categoryExercises) {
+      if (!seenUrls.has(exercise.sourceUrl)) {
+        seenUrls.add(exercise.sourceUrl);
+        allExercises.push(exercise);
+        added++;
+      } else {
+        duplicates++;
+      }
+    }
+    console.log(`  Added ${added} exercises, skipped ${duplicates} duplicates`);
+
+    // Rate limiting between categories
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
 
-  console.log(`Total exercises found: ${allExercises.length}, fetching details...`);
+  console.log(`\nTotal unique exercises: ${allExercises.length}, fetching details...`);
 
   // Fetch details for each exercise
+  let detailsCount = 0;
   for (const exercise of allExercises) {
     try {
       const details = await scrapeExerciseDetail(exercise.sourceUrl);
@@ -278,6 +323,11 @@ export async function scrapeAllExercises(
       if (details.h5pEmbedUrl) exercise.h5pEmbedUrl = details.h5pEmbedUrl;
       if (details.level) exercise.level = details.level;
       if (details.title) exercise.title = details.title;
+      detailsCount++;
+
+      if (detailsCount % 10 === 0) {
+        console.log(`  Fetched details for ${detailsCount}/${allExercises.length} exercises`);
+      }
 
       // Rate limiting
       await new Promise((resolve) => setTimeout(resolve, 300));
@@ -286,5 +336,15 @@ export async function scrapeAllExercises(
     }
   }
 
+  console.log(`Done! Total: ${allExercises.length} exercises`);
   return allExercises;
+}
+
+// Legacy function for backward compatibility with tests
+export async function scrapeExerciseList(
+  page = 1,
+  categoryUrl?: string
+): Promise<{ exercises: ScrapedExercise[]; hasMore: boolean }> {
+  const url = categoryUrl || RFI_LEVEL_URLS[RFI_DEFAULT_LEVEL];
+  return scrapeCategoryPage(url, page);
 }
