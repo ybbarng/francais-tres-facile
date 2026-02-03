@@ -25,8 +25,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-              Une application web pour faciliter l'apprentissage du français avec les ressources de
-              RFI (Radio France Internationale). Écoutez, pratiquez et progressez à votre rythme.
+              Apprendre le français facile avec RFI, mais{" "}
+              <span className="font-bold text-primary italic">très</span> facile.
             </p>
           </div>
 
