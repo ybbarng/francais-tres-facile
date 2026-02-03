@@ -20,13 +20,14 @@ export default function Footer() {
               <div>
                 <div className="font-bold text-lg">Français Très Facile</div>
                 <div className="text-xs text-muted-foreground">
-                  Apprenez le français avec plaisir
+                  Apprendre le français facile avec RFI, mais{" "}
+                  <span className="font-semibold text-primary italic">très</span> facile.
                 </div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-              Apprendre le français facile avec RFI, mais{" "}
-              <span className="font-bold text-primary italic">très</span> facile.
+              Le meilleur contenu de RFI, en plus pratique. Navigation mobile fluide, suivi de
+              votre progression, playlists audio — tout ce qui manquait au site original.
             </p>
           </div>
 
