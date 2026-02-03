@@ -14,4 +14,9 @@ export const RFI_HEADERS: HeadersInit = {
 
 export const RFI_BASE_URL = "https://francaisfacile.rfi.fr";
 export const RFI_PODCAST_URL = `${RFI_BASE_URL}/fr/podcasts/journal-en-fran%C3%A7ais-facile/`;
-export const RFI_EXERCICES_URL = RFI_PODCAST_URL;
+
+// Comprendre l'actualité en français - Exercices par niveau
+export const RFI_SOCIETE_A2_URL = `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/soci%C3%A9t%C3%A9-a2/`;
+
+// Default exercices URL (Société A2)
+export const RFI_EXERCICES_URL = RFI_SOCIETE_A2_URL;
