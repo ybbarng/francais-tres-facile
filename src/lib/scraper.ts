@@ -246,13 +246,13 @@ export async function scrapeExerciseDetail(
 }
 
 export async function scrapeAllExercises(
-  maxPages = 5
+  maxPages = 0 // 0 = unlimited
 ): Promise<ScrapedExercise[]> {
   const allExercises: ScrapedExercise[] = [];
   let page = 1;
   let hasMore = true;
 
-  while (hasMore && page <= maxPages) {
+  while (hasMore && (maxPages === 0 || page <= maxPages)) {
     console.log(`Scraping page ${page}...`);
     const { exercises, hasMore: more } = await scrapeExerciseList(page);
     console.log(`Found ${exercises.length} exercises on page ${page}`);
