@@ -1,7 +1,8 @@
-import type { Exercise, Progress } from "@prisma/client";
+import type { Exercise } from "@prisma/client";
+import type { ProgressData } from "@/lib/progress";
 
 export type ExerciseWithProgress = Exercise & {
-  progress: Progress | null;
+  progress: ProgressData | null;
 };
 
 export interface ExerciseFilter {

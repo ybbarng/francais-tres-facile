@@ -21,6 +21,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
+import { getAllProgress } from "@/lib/progress";
 import type { ExerciseWithProgress } from "@/types";
 import ExerciseCard from "./ExerciseCard";
 
@@ -92,14 +93,38 @@ export default function ExerciseList({ initialExercises = [] }: ExerciseListProp
       if (section) params.set("section", section);
       if (level) params.set("level", level);
       if (category) params.set("category", category);
-      if (completed) params.set("completed", completed);
       if (search) params.set("search", search);
-      params.set("page", page.toString());
+      // Fetch more items for client-side filtering
+      params.set("page", "1");
+      params.set("limit", "1000");
 
       const res = await fetch(`/api/exercises?${params}`);
       const data = await res.json();
-      setExercises(data.exercises);
-      setTotalPages(data.pagination.totalPages);
+
+      // Merge with localStorage progress data
+      const allProgress = getAllProgress();
+      let exercisesWithProgress: ExerciseWithProgress[] = data.exercises.map(
+        (ex: ExerciseWithProgress) => ({
+          ...ex,
+          progress: allProgress[ex.id] || null,
+        })
+      );
+
+      // Client-side completed filter
+      if (completed === "true") {
+        exercisesWithProgress = exercisesWithProgress.filter((ex) => ex.progress?.completed);
+      } else if (completed === "false") {
+        exercisesWithProgress = exercisesWithProgress.filter((ex) => !ex.progress?.completed);
+      }
+
+      // Client-side pagination
+      const totalFiltered = exercisesWithProgress.length;
+      const itemsPerPage = 24;
+      const startIndex = (page - 1) * itemsPerPage;
+      const paginatedExercises = exercisesWithProgress.slice(startIndex, startIndex + itemsPerPage);
+
+      setExercises(paginatedExercises);
+      setTotalPages(Math.ceil(totalFiltered / itemsPerPage));
     } catch (error) {
       console.error("Failed to fetch exercises:", error);
     } finally {
