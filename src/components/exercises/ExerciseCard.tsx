@@ -1,9 +1,26 @@
+import { Check } from "lucide-react";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 import type { ExerciseWithProgress } from "@/types";
 
 interface ExerciseCardProps {
   exercise: ExerciseWithProgress;
 }
+
+const levelVariant = (level: string) => {
+  switch (level) {
+    case "A1":
+      return "a1";
+    case "A2":
+      return "a2";
+    case "B1":
+      return "b1";
+    case "B2":
+      return "b2";
+    default:
+      return "secondary";
+  }
+};
 
 export default function ExerciseCard({ exercise }: ExerciseCardProps) {
   const { progress } = exercise;
@@ -23,45 +40,24 @@ export default function ExerciseCard({ exercise }: ExerciseCardProps) {
               className="w-full h-full object-cover"
             />
             {progress?.completed && (
-              <div
-                className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1
-                            rounded-full text-xs font-medium flex items-center gap-1"
-              >
-                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+              <Badge variant="success" className="absolute top-2 right-2">
+                <Check className="w-3 h-3" />
                 Terminé
-              </div>
+              </Badge>
             )}
           </div>
         )}
 
         <div className="p-4">
           <div className="flex items-center gap-2 mb-2">
-            <span
-              className={`px-2 py-0.5 rounded text-xs font-medium ${
-                exercise.level === "A1"
-                  ? "bg-green-100 text-green-700"
-                  : exercise.level === "A2"
-                    ? "bg-blue-100 text-blue-700"
-                    : exercise.level === "B1"
-                      ? "bg-yellow-100 text-yellow-700"
-                      : exercise.level === "B2"
-                        ? "bg-orange-100 text-orange-700"
-                        : "bg-gray-100 text-gray-700"
-              }`}
+            <Badge
+              variant={levelVariant(exercise.level) as "a1" | "a2" | "b1" | "b2" | "secondary"}
             >
               {exercise.level}
-            </span>
+            </Badge>
             <span className="text-xs text-gray-500">{exercise.category}</span>
             {(!exercise.audioUrl || !exercise.transcript) && (
-              <span className="px-1.5 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-700">
-                Atypique
-              </span>
+              <Badge variant="warning">Atypique</Badge>
             )}
           </div>
 

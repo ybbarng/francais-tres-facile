@@ -1,7 +1,11 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Search, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import {
   Pagination,
   PaginationButton,
@@ -9,6 +13,14 @@ import {
   PaginationEllipsis,
   PaginationItem,
 } from "@/components/ui/pagination";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Skeleton } from "@/components/ui/skeleton";
 import type { ExerciseWithProgress } from "@/types";
 import ExerciseCard from "./ExerciseCard";
 
@@ -107,20 +119,25 @@ export default function ExerciseList({ initialExercises = [] }: ExerciseListProp
 
   // Reset dependent filters when parent filter changes
   const handleSectionChange = (value: string) => {
-    setSection(value);
+    setSection(value === "all" ? "" : value);
     setLevel("");
     setCategory("");
     setPage(1);
   };
 
   const handleLevelChange = (value: string) => {
-    setLevel(value);
+    setLevel(value === "all" ? "" : value);
     setCategory("");
     setPage(1);
   };
 
   const handleCategoryChange = (value: string) => {
-    setCategory(value);
+    setCategory(value === "all" ? "" : value);
+    setPage(1);
+  };
+
+  const handleCompletedChange = (value: string) => {
+    setCompleted(value === "all" ? "" : value);
     setPage(1);
   };
 
@@ -130,174 +147,178 @@ export default function ExerciseList({ initialExercises = [] }: ExerciseListProp
     fetchExercises();
   };
 
+  const clearFilters = () => {
+    setSection("");
+    setLevel("");
+    setCategory("");
+    setCompleted("");
+    setPage(1);
+  };
+
+  const hasActiveFilters = section || level || category || completed;
+
   return (
     <div>
       {/* Filters */}
-      <div className="bg-white rounded-xl shadow-md p-4 mb-6 border border-gray-100">
-        <form onSubmit={handleSearch} className="space-y-4">
-          {/* Search */}
-          <div className="flex gap-4">
-            <div className="flex-1">
-              <input
-                type="text"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Rechercher un titre..."
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg
-                         focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <button
-              type="submit"
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg
-                       hover:bg-blue-700 transition-colors"
-            >
-              Rechercher
-            </button>
-          </div>
-
-          {/* Hierarchical Filters: Section -> Level -> Category */}
-          <div className="flex flex-wrap gap-4">
-            {/* Section */}
-            <div className="min-w-[200px]">
-              <label
-                htmlFor="filter-section"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Section
-              </label>
-              <select
-                id="filter-section"
-                value={section}
-                onChange={(e) => handleSectionChange(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg
-                         focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Toutes les sections</option>
-                {filterOptions.sections.map((s) => (
-                  <option key={s} value={s}>
-                    {SECTION_LABELS[s] || s}
-                  </option>
-                ))}
-              </select>
+      <Card className="mb-6">
+        <CardContent className="pt-6">
+          <form onSubmit={handleSearch} className="space-y-4">
+            {/* Search */}
+            <div className="flex gap-3">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="text"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Rechercher un titre..."
+                  className="pl-9"
+                />
+              </div>
+              <Button type="submit">Rechercher</Button>
             </div>
 
-            {/* Level */}
-            <div className="min-w-[150px]">
-              <label
-                htmlFor="filter-level"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Niveau
-              </label>
-              <select
-                id="filter-level"
-                value={level}
-                onChange={(e) => handleLevelChange(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg
-                         focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Tous les niveaux</option>
-                {filterOptions.levels.map((l) => (
-                  <option key={l} value={l}>
-                    {l}
-                  </option>
-                ))}
-              </select>
+            {/* Hierarchical Filters: Section -> Level -> Category */}
+            <div className="flex flex-wrap gap-4">
+              {/* Section */}
+              <div className="min-w-[200px]">
+                <label
+                  htmlFor="filter-section"
+                  className="block text-sm font-medium text-muted-foreground mb-1.5"
+                >
+                  Section
+                </label>
+                <Select value={section || "all"} onValueChange={handleSectionChange}>
+                  <SelectTrigger id="filter-section" className="w-full">
+                    <SelectValue placeholder="Toutes les sections" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Toutes les sections</SelectItem>
+                    {filterOptions.sections.map((s) => (
+                      <SelectItem key={s} value={s}>
+                        {SECTION_LABELS[s] || s}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Level */}
+              <div className="min-w-[150px]">
+                <label
+                  htmlFor="filter-level"
+                  className="block text-sm font-medium text-muted-foreground mb-1.5"
+                >
+                  Niveau
+                </label>
+                <Select value={level || "all"} onValueChange={handleLevelChange}>
+                  <SelectTrigger id="filter-level" className="w-full">
+                    <SelectValue placeholder="Tous les niveaux" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Tous les niveaux</SelectItem>
+                    {filterOptions.levels.map((l) => (
+                      <SelectItem key={l} value={l}>
+                        {l}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Category */}
+              <div className="min-w-[180px]">
+                <label
+                  htmlFor="filter-category"
+                  className="block text-sm font-medium text-muted-foreground mb-1.5"
+                >
+                  Catégorie
+                </label>
+                <Select value={category || "all"} onValueChange={handleCategoryChange}>
+                  <SelectTrigger id="filter-category" className="w-full">
+                    <SelectValue placeholder="Toutes les catégories" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Toutes les catégories</SelectItem>
+                    {filterOptions.categories.map((c) => (
+                      <SelectItem key={c} value={c}>
+                        {c}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Completion Status */}
+              <div className="min-w-[150px]">
+                <label
+                  htmlFor="filter-status"
+                  className="block text-sm font-medium text-muted-foreground mb-1.5"
+                >
+                  Statut
+                </label>
+                <Select value={completed || "all"} onValueChange={handleCompletedChange}>
+                  <SelectTrigger id="filter-status" className="w-full">
+                    <SelectValue placeholder="Tous les statuts" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Tous les statuts</SelectItem>
+                    <SelectItem value="true">Terminé</SelectItem>
+                    <SelectItem value="false">En cours</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
 
-            {/* Category */}
-            <div className="min-w-[180px]">
-              <label
-                htmlFor="filter-category"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Catégorie
-              </label>
-              <select
-                id="filter-category"
-                value={category}
-                onChange={(e) => handleCategoryChange(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg
-                         focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Toutes les catégories</option>
-                {filterOptions.categories.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Completion Status */}
-            <div className="min-w-[150px]">
-              <label
-                htmlFor="filter-status"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Statut
-              </label>
-              <select
-                id="filter-status"
-                value={completed}
-                onChange={(e) => {
-                  setCompleted(e.target.value);
-                  setPage(1);
-                }}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg
-                         focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Tous les statuts</option>
-                <option value="true">Terminé</option>
-                <option value="false">En cours</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Active Filters Summary */}
-          {(section || level || category) && (
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <span>Filtres actifs:</span>
-              {section && (
-                <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded">
-                  {SECTION_LABELS[section] || section}
-                </span>
-              )}
-              {level && (
-                <span className="px-2 py-1 bg-green-100 text-green-800 rounded">{level}</span>
-              )}
-              {category && (
-                <span className="px-2 py-1 bg-purple-100 text-purple-800 rounded">{category}</span>
-              )}
-              <button
-                type="button"
-                onClick={() => {
-                  setSection("");
-                  setLevel("");
-                  setCategory("");
-                  setPage(1);
-                }}
-                className="ml-2 text-red-600 hover:text-red-800"
-              >
-                Effacer tout
-              </button>
-            </div>
-          )}
-        </form>
-      </div>
+            {/* Active Filters Summary */}
+            {hasActiveFilters && (
+              <div className="flex items-center gap-2 text-sm">
+                <span className="text-muted-foreground">Filtres actifs:</span>
+                {section && <Badge variant="a2">{SECTION_LABELS[section] || section}</Badge>}
+                {level && <Badge variant="a1">{level}</Badge>}
+                {category && <Badge variant="secondary">{category}</Badge>}
+                {completed && (
+                  <Badge variant={completed === "true" ? "success" : "outline"}>
+                    {completed === "true" ? "Terminé" : "En cours"}
+                  </Badge>
+                )}
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearFilters}
+                  className="text-destructive hover:text-destructive"
+                >
+                  <X className="h-3 w-3 mr-1" />
+                  Effacer tout
+                </Button>
+              </div>
+            )}
+          </form>
+        </CardContent>
+      </Card>
 
       {/* Results */}
       {loading ? (
-        <div className="text-center py-12">
-          <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-600 border-t-transparent" />
-          <p className="mt-4 text-gray-500">Chargement...</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={`skeleton-${i}`} className="space-y-3">
+              <Skeleton className="h-40 w-full rounded-xl" />
+              <div className="space-y-2 p-4">
+                <Skeleton className="h-4 w-20" />
+                <Skeleton className="h-5 w-full" />
+                <Skeleton className="h-4 w-24" />
+              </div>
+            </div>
+          ))}
         </div>
       ) : exercises.length === 0 ? (
-        <div className="text-center py-12 text-gray-500">
-          <p>Aucun exercice disponible.</p>
-          <p className="text-sm mt-2">Veuillez d'abord synchroniser avec RFI.</p>
-        </div>
+        <Card className="py-12">
+          <CardContent className="text-center text-muted-foreground">
+            <p>Aucun exercice disponible.</p>
+            <p className="text-sm mt-2">Veuillez d'abord synchroniser avec RFI.</p>
+          </CardContent>
+        </Card>
       ) : (
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

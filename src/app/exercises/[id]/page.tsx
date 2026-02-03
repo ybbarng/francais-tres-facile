@@ -1,14 +1,35 @@
 "use client";
 
+import { ArrowLeft, Check, CheckCircle2, Circle, ExternalLink, RefreshCw } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { use, useCallback, useEffect, useState } from "react";
 import AudioPlayer from "@/components/AudioPlayer";
 import H5PQuiz from "@/components/H5PQuiz";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Textarea } from "@/components/ui/textarea";
 import type { ExerciseWithProgress, ProgressInput } from "@/types";
 
 interface ExerciseDetailPageProps {
   params: Promise<{ id: string }>;
 }
+
+const levelVariant = (level: string) => {
+  switch (level) {
+    case "A1":
+      return "a1";
+    case "A2":
+      return "a2";
+    case "B1":
+      return "b1";
+    case "B2":
+      return "b2";
+    default:
+      return "secondary";
+  }
+};
 
 export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) {
   const { id } = use(params);
@@ -110,103 +131,82 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
 
   if (loading) {
     return (
-      <div className="text-center py-12">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-600 border-t-transparent" />
-        <p className="mt-4 text-gray-500">Chargement...</p>
+      <div className="max-w-4xl mx-auto space-y-6">
+        <Skeleton className="h-8 w-32" />
+        <div className="space-y-3">
+          <div className="flex gap-2">
+            <Skeleton className="h-6 w-12" />
+            <Skeleton className="h-6 w-24" />
+          </div>
+          <Skeleton className="h-10 w-3/4" />
+        </div>
+        <Skeleton className="h-80 w-full rounded-lg" />
+        <Skeleton className="h-24 w-full" />
+        <Skeleton className="h-96 w-full" />
       </div>
     );
   }
 
   if (!exercise) {
-    return <div className="text-center py-12 text-gray-500">Exercice introuvable.</div>;
+    return (
+      <Card className="max-w-4xl mx-auto">
+        <CardContent className="py-12 text-center text-muted-foreground">
+          Exercice introuvable.
+        </CardContent>
+      </Card>
+    );
   }
 
   return (
     <div className="max-w-4xl mx-auto">
       {/* Header */}
       <div className="mb-6">
-        <button
-          onClick={() => router.back()}
-          className="text-blue-600 hover:text-blue-700 flex items-center gap-1 mb-4"
-        >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
+        <Button variant="ghost" onClick={() => router.back()} className="mb-4 -ml-2">
+          <ArrowLeft className="h-4 w-4 mr-1" />
           Retour à la liste
-        </button>
+        </Button>
 
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span
-                className={`px-2 py-0.5 rounded text-xs font-medium ${
-                  exercise.level === "A1"
-                    ? "bg-green-100 text-green-700"
-                    : exercise.level === "A2"
-                      ? "bg-blue-100 text-blue-700"
-                      : exercise.level === "B1"
-                        ? "bg-yellow-100 text-yellow-700"
-                        : exercise.level === "B2"
-                          ? "bg-orange-100 text-orange-700"
-                          : "bg-gray-100 text-gray-700"
-                }`}
+              <Badge
+                variant={levelVariant(exercise.level) as "a1" | "a2" | "b1" | "b2" | "secondary"}
               >
                 {exercise.level}
-              </span>
-              <span className="text-sm text-gray-500">{exercise.category}</span>
+              </Badge>
+              <span className="text-sm text-muted-foreground">{exercise.category}</span>
               {exercise.publishedAt && (
-                <span className="text-sm text-gray-400">
+                <span className="text-sm text-muted-foreground">
                   · {new Date(exercise.publishedAt).toLocaleDateString("fr-FR")}
                 </span>
               )}
               {(!exercise.audioUrl || !exercise.transcript) && (
-                <span className="px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-700">
-                  Atypique
-                </span>
+                <Badge variant="warning">Atypique</Badge>
               )}
             </div>
-            <h1 className="text-2xl font-bold text-gray-900">{exercise.title}</h1>
+            <h1 className="text-2xl font-bold">{exercise.title}</h1>
           </div>
 
-          <button
+          <Button
+            variant={isCompleted ? "outline" : "secondary"}
             onClick={handleCompletedToggle}
             disabled={saving}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-              isCompleted
-                ? "bg-green-100 text-green-700 hover:bg-green-200"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-            }`}
+            className={
+              isCompleted ? "border-green-300 bg-green-50 text-green-700 hover:bg-green-100" : ""
+            }
           >
             {isCompleted ? (
               <>
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <CheckCircle2 className="h-4 w-4 mr-1" />
                 Terminé
               </>
             ) : (
               <>
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <Circle className="h-4 w-4 mr-1" />
                 Marquer terminé
               </>
             )}
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -224,30 +224,35 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
       {/* Progress info */}
       {exercise.progress &&
         (exercise.progress.score !== null || exercise.progress.listenCount > 0) && (
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-            <h3 className="font-medium text-blue-900 mb-2">Historique d'apprentissage</h3>
-            <div className="flex gap-6 text-sm text-blue-700">
-              {exercise.progress.score !== null && exercise.progress.maxScore && (
-                <span>
-                  Score du quiz : {exercise.progress.score}/{exercise.progress.maxScore}
-                </span>
-              )}
-              {exercise.progress.listenCount > 0 && (
-                <span>Écoutes : {exercise.progress.listenCount} fois</span>
-              )}
-              {exercise.progress.completedAt && (
-                <span>
-                  Terminé le : {new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR")}
-                </span>
-              )}
-            </div>
-          </div>
+          <Card className="mb-6 border-blue-200 bg-blue-50">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base text-blue-900">Historique d'apprentissage</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="flex gap-6 text-sm text-blue-700">
+                {exercise.progress.score !== null && exercise.progress.maxScore && (
+                  <span>
+                    Score du quiz : {exercise.progress.score}/{exercise.progress.maxScore}
+                  </span>
+                )}
+                {exercise.progress.listenCount > 0 && (
+                  <span>Écoutes : {exercise.progress.listenCount} fois</span>
+                )}
+                {exercise.progress.completedAt && (
+                  <span>
+                    Terminé le :{" "}
+                    {new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR")}
+                  </span>
+                )}
+              </div>
+            </CardContent>
+          </Card>
         )}
 
       {/* Audio Player */}
       {exercise.audioUrl && (
         <div className="mb-8">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Audio</h2>
+          <h2 className="text-lg font-semibold mb-4">Audio</h2>
           <AudioPlayer
             audioUrl={exercise.audioUrl}
             title={exercise.title}
@@ -260,35 +265,21 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
       {(exercise.h5pEmbedUrl || exercise.section !== "comprendre-actualite") && (
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">Quiz</h2>
+            <h2 className="text-lg font-semibold">Quiz</h2>
             {!exercise.h5pEmbedUrl && (
-              <button
-                type="button"
-                onClick={handleRefresh}
-                disabled={refreshing}
-                className="text-sm px-3 py-1 bg-blue-100 text-blue-700 rounded-lg
-                         hover:bg-blue-200 disabled:opacity-50 transition-colors
-                         flex items-center gap-1"
-              >
+              <Button variant="secondary" size="sm" onClick={handleRefresh} disabled={refreshing}>
                 {refreshing ? (
                   <>
-                    <span className="inline-block animate-spin rounded-full h-3 w-3 border-2 border-blue-700 border-t-transparent" />
+                    <RefreshCw className="h-3 w-3 mr-1 animate-spin" />
                     Chargement...
                   </>
                 ) : (
                   <>
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                      />
-                    </svg>
+                    <RefreshCw className="h-3 w-3 mr-1" />
                     Charger le quiz
                   </>
                 )}
-              </button>
+              </Button>
             )}
           </div>
           {exercise.h5pEmbedUrl ? (
@@ -298,12 +289,14 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
               onScoreReceived={handleScoreReceived}
             />
           ) : (
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
-              <p className="text-gray-500 mb-2">Le quiz n'est pas encore chargé.</p>
-              <p className="text-sm text-gray-400">
-                Cliquez sur "Charger le quiz" pour récupérer le quiz depuis RFI.
-              </p>
-            </div>
+            <Card className="bg-muted/50">
+              <CardContent className="py-6 text-center">
+                <p className="text-muted-foreground mb-2">Le quiz n'est pas encore chargé.</p>
+                <p className="text-sm text-muted-foreground">
+                  Cliquez sur "Charger le quiz" pour récupérer le quiz depuis RFI.
+                </p>
+              </CardContent>
+            </Card>
           )}
         </div>
       )}
@@ -311,58 +304,54 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
       {/* Transcript */}
       {exercise.transcript && (
         <div className="mb-8">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Transcription</h2>
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-            <p className="text-gray-700 whitespace-pre-line leading-relaxed">
-              {exercise.transcript}
-            </p>
-          </div>
+          <h2 className="text-lg font-semibold mb-4">Transcription</h2>
+          <Card className="bg-muted/50">
+            <CardContent className="py-4">
+              <p className="whitespace-pre-line leading-relaxed">{exercise.transcript}</p>
+            </CardContent>
+          </Card>
         </div>
       )}
 
       {/* Notes */}
       <div className="mb-8">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Notes</h2>
-        <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-          <textarea
-            value={notes}
-            onChange={(e) => handleNotesChange(e.target.value)}
-            placeholder="Prenez des notes pendant votre apprentissage..."
-            rows={4}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg resize-none
-                     focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          />
-          <div className="flex justify-end mt-2">
-            <button
-              onClick={handleNotesSave}
-              disabled={saving}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg
-                       hover:bg-blue-700 disabled:opacity-50 transition-colors"
-            >
-              {saving ? "Enregistrement..." : "Enregistrer"}
-            </button>
-          </div>
-        </div>
+        <h2 className="text-lg font-semibold mb-4">Notes</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <Textarea
+              value={notes}
+              onChange={(e) => handleNotesChange(e.target.value)}
+              placeholder="Prenez des notes pendant votre apprentissage..."
+              rows={4}
+              className="resize-none mb-3"
+            />
+            <div className="flex justify-end">
+              <Button onClick={handleNotesSave} disabled={saving}>
+                {saving ? (
+                  <>
+                    <RefreshCw className="h-3 w-3 mr-1 animate-spin" />
+                    Enregistrement...
+                  </>
+                ) : (
+                  <>
+                    <Check className="h-3 w-3 mr-1" />
+                    Enregistrer
+                  </>
+                )}
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Source link */}
       <div className="text-center">
-        <a
-          href={exercise.sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-700 text-sm flex items-center justify-center gap-1"
-        >
-          Voir sur le site RFI
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
-        </a>
+        <Button variant="link" asChild>
+          <a href={exercise.sourceUrl} target="_blank" rel="noopener noreferrer">
+            Voir sur le site RFI
+            <ExternalLink className="h-3 w-3 ml-1" />
+          </a>
+        </Button>
       </div>
     </div>
   );
