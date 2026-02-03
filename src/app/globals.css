@@ -43,87 +43,166 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  /* French theme colors */
+  --color-french-blue: var(--french-blue);
+  --color-french-red: var(--french-red);
+  --color-french-gold: var(--french-gold);
 }
 
-.btn-primary {
-  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium;
-}
-
-.btn-secondary {
-  @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors font-medium;
-}
-
-.card {
-  @apply bg-white rounded-xl shadow-md p-6 border border-gray-100;
-}
-
+/* ============================================
+   French Theme - Light Mode (Tricolore Clair)
+   Inspired by RFI and French elegance
+   ============================================ */
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --radius: 0.5rem;
+
+  /* French flag and RFI-inspired palette */
+  --french-blue: oklch(0.35 0.15 260);      /* Bleu de France - deep royal blue */
+  --french-red: oklch(0.55 0.22 25);        /* Rouge français - elegant red */
+  --french-gold: oklch(0.75 0.12 85);       /* Or - golden accent */
+
+  /* Base colors - warm off-white like aged paper */
+  --background: oklch(0.985 0.005 90);      /* Slightly warm white */
+  --foreground: oklch(0.20 0.02 260);       /* Deep blue-tinted black */
+
+  /* Card - clean white with subtle warmth */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.20 0.02 260);
+
+  /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --popover-foreground: oklch(0.20 0.02 260);
+
+  /* Primary - French Blue (Bleu de France) */
+  --primary: oklch(0.40 0.18 260);          /* Rich royal blue */
+  --primary-foreground: oklch(0.98 0 0);    /* White */
+
+  /* Secondary - Soft blue-gray */
+  --secondary: oklch(0.95 0.01 260);        /* Very light blue-gray */
+  --secondary-foreground: oklch(0.30 0.08 260);
+
+  /* Muted - Elegant gray with blue undertone */
+  --muted: oklch(0.96 0.008 260);
+  --muted-foreground: oklch(0.50 0.03 260);
+
+  /* Accent - Light blue with French character */
+  --accent: oklch(0.93 0.03 260);
+  --accent-foreground: oklch(0.30 0.12 260);
+
+  /* Destructive - French red */
+  --destructive: oklch(0.55 0.22 25);
+
+  /* Borders and inputs */
+  --border: oklch(0.90 0.01 260);
+  --input: oklch(0.92 0.01 260);
+  --ring: oklch(0.50 0.15 260);
+
+  /* Charts - French-inspired palette */
+  --chart-1: oklch(0.45 0.18 260);          /* Blue */
+  --chart-2: oklch(0.55 0.20 25);           /* Red */
+  --chart-3: oklch(0.70 0.12 85);           /* Gold */
+  --chart-4: oklch(0.55 0.12 200);          /* Teal */
+  --chart-5: oklch(0.60 0.15 320);          /* Purple */
+
+  /* Sidebar */
+  --sidebar: oklch(0.98 0.005 260);
+  --sidebar-foreground: oklch(0.20 0.02 260);
+  --sidebar-primary: oklch(0.40 0.18 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.94 0.02 260);
+  --sidebar-accent-foreground: oklch(0.30 0.08 260);
+  --sidebar-border: oklch(0.90 0.01 260);
+  --sidebar-ring: oklch(0.50 0.15 260);
 }
 
+/* ============================================
+   French Theme - Dark Mode (Nuit Parisienne)
+   Elegant dark theme inspired by Paris at night
+   ============================================ */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* French palette for dark mode */
+  --french-blue: oklch(0.55 0.18 260);      /* Brighter blue for dark mode */
+  --french-red: oklch(0.60 0.20 25);        /* Softer red */
+  --french-gold: oklch(0.75 0.14 85);       /* Warm gold */
+
+  /* Base - Deep navy like Parisian night sky */
+  --background: oklch(0.16 0.025 260);      /* Deep navy blue */
+  --foreground: oklch(0.95 0.01 260);       /* Soft white */
+
+  /* Card - Slightly lighter navy */
+  --card: oklch(0.20 0.03 260);
+  --card-foreground: oklch(0.95 0.01 260);
+
+  /* Popover */
+  --popover: oklch(0.22 0.03 260);
+  --popover-foreground: oklch(0.95 0.01 260);
+
+  /* Primary - Brighter French Blue for contrast */
+  --primary: oklch(0.60 0.18 260);
+  --primary-foreground: oklch(0.98 0 0);
+
+  /* Secondary */
+  --secondary: oklch(0.25 0.035 260);
+  --secondary-foreground: oklch(0.92 0.01 260);
+
+  /* Muted */
+  --muted: oklch(0.25 0.03 260);
+  --muted-foreground: oklch(0.65 0.03 260);
+
+  /* Accent */
+  --accent: oklch(0.28 0.04 260);
+  --accent-foreground: oklch(0.92 0.01 260);
+
+  /* Destructive - Softer red for dark mode */
+  --destructive: oklch(0.60 0.20 25);
+
+  /* Borders and inputs */
+  --border: oklch(0.30 0.03 260);
+  --input: oklch(0.28 0.03 260);
+  --ring: oklch(0.55 0.15 260);
+
+  /* Charts - Vibrant for dark mode */
+  --chart-1: oklch(0.60 0.18 260);          /* Blue */
+  --chart-2: oklch(0.60 0.18 25);           /* Red */
+  --chart-3: oklch(0.75 0.14 85);           /* Gold */
+  --chart-4: oklch(0.60 0.14 200);          /* Teal */
+  --chart-5: oklch(0.65 0.15 320);          /* Purple */
+
+  /* Sidebar */
+  --sidebar: oklch(0.18 0.03 260);
+  --sidebar-foreground: oklch(0.95 0.01 260);
+  --sidebar-primary: oklch(0.60 0.18 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.25 0.04 260);
+  --sidebar-accent-foreground: oklch(0.92 0.01 260);
+  --sidebar-border: oklch(0.30 0.03 260);
+  --sidebar-ring: oklch(0.55 0.15 260);
+}
+
+/* French tricolor accent bar for header */
+.french-tricolor {
+  background: linear-gradient(
+    to right,
+    oklch(0.45 0.18 260) 0%,
+    oklch(0.45 0.18 260) 33.33%,
+    oklch(1 0 0) 33.33%,
+    oklch(1 0 0) 66.66%,
+    oklch(0.55 0.22 25) 66.66%,
+    oklch(0.55 0.22 25) 100%
+  );
+}
+
+.dark .french-tricolor {
+  background: linear-gradient(
+    to right,
+    oklch(0.55 0.18 260) 0%,
+    oklch(0.55 0.18 260) 33.33%,
+    oklch(0.90 0.01 260) 33.33%,
+    oklch(0.90 0.01 260) 66.66%,
+    oklch(0.60 0.20 25) 66.66%,
+    oklch(0.60 0.20 25) 100%
+  );
 }
 
 @layer base {
@@ -132,5 +211,37 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+/* Custom utility classes */
+.btn-primary {
+  @apply bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:opacity-90 transition-all font-medium shadow-sm;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-lg hover:bg-secondary/80 transition-all font-medium;
+}
+
+/* French-styled card */
+.card-french {
+  @apply bg-card rounded-lg shadow-md border border-border;
+}
+
+/* Elegant focus ring */
+:focus-visible {
+  @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+}
+
+/* Smooth theme transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Disable transitions on page load */
+.no-transitions * {
+  transition: none !important;
 }

@@ -1,6 +1,10 @@
 "use client";
 
+import { Check, Save } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 const MIN_HEIGHT = 600;
 const DEFAULT_HEIGHT = 800;
@@ -92,7 +96,7 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
     <div>
       <iframe
         src={h5pUrl}
-        className="w-full rounded-lg border border-gray-200 transition-[height] duration-300"
+        className="w-full rounded-lg border border-border transition-[height] duration-300"
         style={{
           height: `${iframeHeight}px`,
           overflow: "hidden",
@@ -105,32 +109,33 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
       {/* 점수 입력 */}
       <div className="mt-4">
         {scoreSubmitted ? (
-          <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-            <p className="text-sm text-green-800">✓ Score enregistré</p>
-          </div>
+          <Card className="border-green-200 bg-green-50 dark:border-green-900 dark:bg-green-950/50">
+            <CardContent className="py-4 flex items-center gap-2">
+              <Check className="w-4 h-4 text-green-600 dark:text-green-400" />
+              <span className="text-sm text-green-800 dark:text-green-300">Score enregistré</span>
+            </CardContent>
+          </Card>
         ) : (
-          <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
-            <p className="text-sm text-gray-600 mb-3">
-              Entrez votre score après avoir terminé le quiz (ex: 15/23)
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={manualScore}
-                onChange={(e) => setManualScore(e.target.value)}
-                placeholder="15/23"
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg
-                         focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-              <button
-                onClick={handleScoreSubmit}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg
-                         hover:bg-blue-700 transition-colors"
-              >
-                Enregistrer
-              </button>
-            </div>
-          </div>
+          <Card className="bg-muted/50">
+            <CardContent className="py-4">
+              <p className="text-sm text-muted-foreground mb-3">
+                Entrez votre score après avoir terminé le quiz (ex: 15/23)
+              </p>
+              <div className="flex gap-2">
+                <Input
+                  type="text"
+                  value={manualScore}
+                  onChange={(e) => setManualScore(e.target.value)}
+                  placeholder="15/23"
+                  className="flex-1"
+                />
+                <Button onClick={handleScoreSubmit}>
+                  <Save className="w-4 h-4 mr-1" />
+                  Enregistrer
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         )}
       </div>
     </div>
