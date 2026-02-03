@@ -13,15 +13,27 @@ export const RFI_HEADERS: HeadersInit = {
 };
 
 export const RFI_BASE_URL = "https://francaisfacile.rfi.fr";
-export const RFI_PODCAST_URL = `${RFI_BASE_URL}/fr/podcasts/journal-en-fran%C3%A7ais-facile/`;
 
-// Comprendre l'actualité en français - Level index pages
-export const RFI_LEVEL_URLS: Record<string, string> = {
-  A1: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/a1/`,
-  A2: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/a2/`,
-  B1: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/b1/`,
-  B2: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/b2/`,
-};
+// Section definitions
+export interface RFISection {
+  id: string;
+  name: string;
+  url: string;
+}
 
-// Default level to scrape
-export const RFI_DEFAULT_LEVEL = "A2";
+export const RFI_SECTIONS: RFISection[] = [
+  {
+    id: "comprendre-actualite",
+    name: "Comprendre l'actualité",
+    url: `${RFI_BASE_URL}/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/`,
+  },
+  {
+    id: "communiquer-quotidien",
+    name: "Communiquer au quotidien",
+    url: `${RFI_BASE_URL}/fr/communiquer-quotidien/`,
+  },
+];
+
+// Valid levels
+export const RFI_LEVELS = ["A1", "A2", "B1", "B2", "C1C2"] as const;
+export type RFILevel = (typeof RFI_LEVELS)[number];

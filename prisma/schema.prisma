@@ -9,7 +9,8 @@ datasource db {
 model Exercise {
   id            String    @id @default(cuid())
   title         String
-  level         String    // A1, A2, B1, B2
+  section       String    // comprendre-actualite, communiquer-quotidien
+  level         String    // A1, A2, B1, B2, C1C2
   category      String    // société, environnement, etc.
   sourceUrl     String    @unique
   audioUrl      String?   // MP3 URL

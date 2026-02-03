@@ -1,12 +1,15 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { RFI_SECTIONS } from "@/lib/rfi-headers";
+import type { CategoryInfo } from "@/lib/scraper";
 import {
-  scrapeAllExercises,
   scrapeCategory,
   scrapeCategoryPage,
   scrapeCategoryUrls,
   scrapeExerciseDetail,
+  scrapeSectionCategories,
+  scrapeSectionExercises,
 } from "@/lib/scraper";
 
 // Load mock HTML files
@@ -14,13 +17,14 @@ const mockPage1 = readFileSync(join(__dirname, "mocks/rfi-societe-a2-page1.html"
 const mockPage2 = readFileSync(join(__dirname, "mocks/rfi-societe-a2-page2.html"), "utf-8");
 const mockDetail = readFileSync(join(__dirname, "mocks/rfi-exercise-detail.html"), "utf-8");
 
-// Mock level index page with category links
-const mockLevelPage = `
+// Mock section page with category links
+const mockSectionPage = `
 <!DOCTYPE html>
 <html>
 <body>
-  <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/">Société</a>
-  <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/culture-a2/">Culture</a>
+  <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/">Société A2</a>
+  <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/culture-a2/">Culture A2</a>
+  <a href="https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/environnement-b1/">Environnement B1</a>
 </body>
 </html>
 `;
@@ -37,11 +41,46 @@ afterEach(() => {
   vi.clearAllMocks();
 });
 
-describe("scrapeCategoryUrls", () => {
-  it("should extract category URLs from level page", async () => {
+// Test CategoryInfo for use in tests
+const testCategoryInfo: CategoryInfo = {
+  url: "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/",
+  section: "comprendre-actualite",
+  level: "A2",
+  category: "Société",
+};
+
+describe("scrapeSectionCategories", () => {
+  it("should extract category URLs from section page", async () => {
     mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => mockLevelPage,
+      text: async () => mockSectionPage,
+    });
+
+    const categories = await scrapeSectionCategories(RFI_SECTIONS[0]);
+
+    expect(categories).toHaveLength(3);
+    expect(categories[0]).toMatchObject({
+      url: expect.stringContaining("société-a2"),
+      section: "comprendre-actualite",
+      level: "A2",
+      category: "Société",
+    });
+    expect(categories[1]).toMatchObject({
+      url: expect.stringContaining("culture-a2"),
+      level: "A2",
+    });
+    expect(categories[2]).toMatchObject({
+      url: expect.stringContaining("environnement-b1"),
+      level: "B1",
+    });
+  });
+});
+
+describe("scrapeCategoryUrls (legacy)", () => {
+  it("should filter category URLs by level", async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockSectionPage,
     });
 
     const urls = await scrapeCategoryUrls("A2");
@@ -59,17 +98,15 @@ describe("scrapeCategoryPage", () => {
       text: async () => mockPage1,
     });
 
-    const { exercises, hasMore } = await scrapeCategoryPage(
-      "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/",
-      1
-    );
+    const { exercises, hasMore } = await scrapeCategoryPage(testCategoryInfo, 1);
 
     expect(exercises).toHaveLength(3);
     expect(hasMore).toBe(true);
 
-    // Check first exercise
+    // Check first exercise includes section
     expect(exercises[0]).toMatchObject({
       title: "Dernier adieu à Brigitte Bardot",
+      section: "comprendre-actualite",
       level: "A2",
       category: "Société",
       sourceUrl: expect.stringContaining("dernier-adieu-brigitte-bardot"),
@@ -86,10 +123,7 @@ describe("scrapeCategoryPage", () => {
       text: async () => mockPage2,
     });
 
-    const { exercises, hasMore } = await scrapeCategoryPage(
-      "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/",
-      2
-    );
+    const { exercises, hasMore } = await scrapeCategoryPage(testCategoryInfo, 2);
 
     expect(exercises).toHaveLength(2);
     expect(hasMore).toBe(false);
@@ -101,12 +135,7 @@ describe("scrapeCategoryPage", () => {
       status: 404,
     });
 
-    await expect(
-      scrapeCategoryPage(
-        "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/",
-        1
-      )
-    ).rejects.toThrow("Failed to fetch");
+    await expect(scrapeCategoryPage(testCategoryInfo, 1)).rejects.toThrow("Failed to fetch");
   });
 });
 
@@ -171,24 +200,26 @@ describe("scrapeCategory", () => {
       text: async () => mockPage2,
     });
 
-    const exercises = await scrapeCategory(
-      "https://francaisfacile.rfi.fr/fr/comprendre-actualité-français/société-a2/"
-    );
+    const exercises = await scrapeCategory(testCategoryInfo);
 
     // 3 from page 1 + 2 from page 2
     expect(exercises).toHaveLength(5);
+    // All exercises should have section info
+    for (const ex of exercises) {
+      expect(ex.section).toBe("comprendre-actualite");
+    }
   });
 });
 
-describe("scrapeAllExercises", () => {
-  it("should scrape all categories and deduplicate", async () => {
-    // Level page fetch
+describe("scrapeSectionExercises", () => {
+  it("should scrape all categories in a section and deduplicate", async () => {
+    // Section page fetch
     mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => mockLevelPage,
+      text: async () => mockSectionPage,
     });
 
-    // First category (société) - page 1
+    // First category (société-a2) - page 1
     mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => mockPage1,
@@ -199,37 +230,37 @@ describe("scrapeAllExercises", () => {
       text: async () => mockPage2,
     });
 
-    // Second category (culture) - same content to test deduplication
+    // Second category (culture-a2) - same content to test deduplication
     mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => mockPage1, // Same as société page 1
+      text: async () => mockPage1,
     });
     mockFetch.mockResolvedValueOnce({
       ok: true,
-      text: async () => mockPage2, // Same as société page 2
+      text: async () => mockPage2,
     });
 
-    // Detail fetches for 5 unique exercises
-    for (let i = 0; i < 5; i++) {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        text: async () => mockDetail,
-      });
-    }
+    // Third category (environnement-b1) - different level
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockPage2, // Just 2 exercises
+    });
 
-    const exercises = await scrapeAllExercises("A2");
+    const exercises = await scrapeSectionExercises("comprendre-actualite");
 
-    // Should have 5 unique exercises (duplicates removed)
+    // société: 5, culture: 0 (duplicates), environnement: 2
+    // But mockPage1/2 have same URLs, so we get 5 unique from first two categories
+    // and 0 new from third (same mock data)
     expect(exercises).toHaveLength(5);
 
-    // All should have audio URL from detail page
-    expect(exercises[0].audioUrl).toBe(
-      "https://aod-fle.akamaized.net/rfi/francais/audio/exercice_20260109.mp3"
-    );
+    // All should have section info
+    for (const ex of exercises) {
+      expect(ex.section).toBe("comprendre-actualite");
+    }
   });
 
   it("should handle detail fetch errors gracefully", async () => {
-    // Level page
+    // Section page with only one category
     mockFetch.mockResolvedValueOnce({
       ok: true,
       text: async () => `
@@ -245,23 +276,9 @@ describe("scrapeAllExercises", () => {
       text: async () => mockPage2,
     });
 
-    // First detail succeeds
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      text: async () => mockDetail,
-    });
-    // Second detail fails
-    mockFetch.mockResolvedValueOnce({
-      ok: false,
-      status: 500,
-    });
+    const exercises = await scrapeSectionExercises("comprendre-actualite");
 
-    const exercises = await scrapeAllExercises("A2");
-
-    // Should still return 2 exercises
+    // Should return 2 exercises (no detail fetching in scrapeSectionExercises)
     expect(exercises).toHaveLength(2);
-    // First one has audio, second doesn't
-    expect(exercises[0].audioUrl).toBeTruthy();
-    expect(exercises[1].audioUrl).toBeNull();
   });
 });

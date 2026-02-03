@@ -5,6 +5,7 @@ export type ExerciseWithProgress = Exercise & {
 };
 
 export interface ExerciseFilter {
+  section?: string;
   level?: string;
   category?: string;
   completed?: boolean;
