@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db";
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
+    const section = searchParams.get("section");
     const level = searchParams.get("level");
     const category = searchParams.get("category");
     const completed = searchParams.get("completed");
@@ -13,12 +14,16 @@ export async function GET(request: NextRequest) {
 
     const where: Record<string, unknown> = {};
 
+    if (section) {
+      where.section = section;
+    }
+
     if (level) {
       where.level = level;
     }
 
     if (category) {
-      where.category = { contains: category };
+      where.category = category;
     }
 
     if (search) {
