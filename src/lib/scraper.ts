@@ -23,6 +23,16 @@ export async function fetchRFIPage(url: string): Promise<string> {
   return res.text();
 }
 
+function parseDate(dateStr: string): Date | null {
+  // Format: "30/01/2026"
+  const match = dateStr.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if (match) {
+    const [, day, month, year] = match;
+    return new Date(`${year}-${month}-${day}`);
+  }
+  return null;
+}
+
 export async function scrapeExerciseList(
   page = 1
 ): Promise<{ exercises: ScrapedExercise[]; hasMore: boolean }> {
@@ -32,31 +42,39 @@ export async function scrapeExerciseList(
 
   const exercises: ScrapedExercise[] = [];
 
-  $(".m-item-list-article, article.m-item-article").each((_, el) => {
+  // 새로운 RFI 사이트 구조: m-podcast-item 클래스 사용
+  $(".m-podcast-item").each((_, el) => {
     const $el = $(el);
-    const linkEl = $el.find("a").first();
+
+    // 링크 및 URL 추출
+    const linkEl = $el.find("a.m-podcast-item__image, a.m-podcast-item__infos__edition").first();
     const href = linkEl.attr("href");
 
     if (!href) return;
 
     const sourceUrl = href.startsWith("http") ? href : `${RFI_BASE_URL}${href}`;
-    const title =
-      $el.find(".m-item-article__title, h3, h2").first().text().trim() ||
-      linkEl.text().trim();
-    const thumbnailUrl = $el.find("img").first().attr("src") || null;
 
-    // 레벨 추출 (보통 A2, B1 등)
-    const levelMatch = $el.text().match(/\b(A1|A2|B1|B2|C1|C2)\b/i);
-    const level = levelMatch ? levelMatch[1].toUpperCase() : "A2";
+    // 제목 추출
+    const title = $el.find(".m-podcast-item__infos__edition h2").text().trim() ||
+                  $el.find("h2").first().text().trim() ||
+                  linkEl.attr("title") ||
+                  "";
 
-    // 카테고리 추출
-    const category =
-      $el.find(".m-tag, .m-item-article__tag").first().text().trim() ||
-      "exercice";
+    if (!title) return;
+
+    // 썸네일 추출
+    const imgEl = $el.find("img").first();
+    const thumbnailUrl = imgEl.attr("src") || imgEl.attr("data-src") || null;
 
     // 날짜 추출
-    const dateText = $el.find("time, .m-item-article__date").attr("datetime");
-    const publishedAt = dateText ? new Date(dateText) : null;
+    const dateText = $el.find(".m-podcast-item__infos__date").text().trim();
+    const publishedAt = parseDate(dateText);
+
+    // 레벨 (Journal en français facile는 기본 A2)
+    const level = "A2";
+
+    // 카테고리
+    const category = "Journal en français facile";
 
     exercises.push({
       title,
@@ -71,7 +89,9 @@ export async function scrapeExerciseList(
   });
 
   // 다음 페이지 확인
-  const hasMore = $('a[rel="next"], .pagination__next').length > 0;
+  const hasMore = $('a[rel="next"], .pagination__next, a.m-pagination__link--next').length > 0 ||
+                  $('a[href*="page="]:contains("Suivant")').length > 0 ||
+                  $('a[href*="page=' + (page + 1) + '"]').length > 0;
 
   return { exercises, hasMore };
 }
@@ -82,25 +102,46 @@ export async function scrapeExerciseDetail(
   const html = await fetchRFIPage(sourceUrl);
   const $ = cheerio.load(html);
 
-  // MP3 URL 추출 (Akamai CDN)
+  // MP3 URL 추출
   let audioUrl: string | null = null;
+
+  // 1. audio 태그에서 찾기
   const audioSrc = $("audio source").attr("src") || $("audio").attr("src");
   if (audioSrc) {
     audioUrl = audioSrc;
-  } else {
-    // data-url 속성에서 찾기
-    const dataUrl = $("[data-url*='.mp3'], [data-audio*='.mp3']").attr(
-      "data-url"
-    );
+  }
+
+  // 2. data 속성에서 찾기
+  if (!audioUrl) {
+    const dataUrl = $("[data-url*='.mp3'], [data-audio*='.mp3']").attr("data-url") ||
+                    $("[data-url*='.mp3'], [data-audio*='.mp3']").attr("data-audio");
     if (dataUrl) audioUrl = dataUrl;
   }
 
-  // 스크립트에서 MP3 URL 찾기
+  // 3. JSON 데이터에서 찾기 (새로운 RFI 구조)
+  if (!audioUrl) {
+    const scripts = $("script").text();
+
+    // sources 배열에서 MP3 URL 찾기
+    const jsonMatch = scripts.match(/"sources"\s*:\s*\[\s*\{\s*"url"\s*:\s*"([^"]+\.mp3[^"]*)"/);
+    if (jsonMatch) {
+      audioUrl = jsonMatch[1];
+    }
+  }
+
+  // 4. 스크립트에서 Akamai MP3 URL 찾기
   if (!audioUrl) {
     const scripts = $("script").text();
     const mp3Match = scripts.match(
       /https?:\/\/[^"'\s]+akamaized\.net[^"'\s]+\.mp3/
     );
+    if (mp3Match) audioUrl = mp3Match[0];
+  }
+
+  // 5. 일반 MP3 URL 찾기
+  if (!audioUrl) {
+    const scripts = $("script").text();
+    const mp3Match = scripts.match(/https?:\/\/[^"'\s]+\.mp3/);
     if (mp3Match) audioUrl = mp3Match[0];
   }
 
@@ -134,7 +175,9 @@ export async function scrapeAllExercises(
   let hasMore = true;
 
   while (hasMore && page <= maxPages) {
+    console.log(`Scraping page ${page}...`);
     const { exercises, hasMore: more } = await scrapeExerciseList(page);
+    console.log(`Found ${exercises.length} exercises on page ${page}`);
     allExercises.push(...exercises);
     hasMore = more;
     page++;
@@ -142,6 +185,8 @@ export async function scrapeAllExercises(
     // Rate limiting
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
+
+  console.log(`Total exercises found: ${allExercises.length}, fetching details...`);
 
   // 각 exercice의 상세 정보 가져오기
   for (const exercise of allExercises) {
