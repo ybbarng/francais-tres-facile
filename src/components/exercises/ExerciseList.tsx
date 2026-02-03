@@ -300,27 +300,121 @@ export default function ExerciseList({ initialExercises = [] }: ExerciseListProp
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center items-center gap-1 mt-8">
+              {/* First & Previous */}
+              <button
+                type="button"
+                onClick={() => setPage(1)}
+                disabled={page === 1}
+                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
+                         disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                title="Première page"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
+                  />
+                </svg>
+              </button>
               <button
                 type="button"
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
                 disabled={page === 1}
-                className="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
+                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
                          disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                title="Page précédente"
               >
-                Précédent
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
               </button>
-              <span className="px-4 py-2 text-gray-600">
-                {page} / {totalPages}
-              </span>
+
+              {/* Page Numbers */}
+              {(() => {
+                const pages: (number | string)[] = [];
+                const showPages = 5;
+                let start = Math.max(1, page - Math.floor(showPages / 2));
+                const end = Math.min(totalPages, start + showPages - 1);
+                start = Math.max(1, end - showPages + 1);
+
+                if (start > 1) {
+                  pages.push(1);
+                  if (start > 2) pages.push("...");
+                }
+
+                for (let i = start; i <= end; i++) {
+                  pages.push(i);
+                }
+
+                if (end < totalPages) {
+                  if (end < totalPages - 1) pages.push("...");
+                  pages.push(totalPages);
+                }
+
+                return pages.map((p, idx) =>
+                  typeof p === "string" ? (
+                    <span key={`ellipsis-${idx}`} className="px-2 py-2 text-gray-400">
+                      {p}
+                    </span>
+                  ) : (
+                    <button
+                      key={p}
+                      type="button"
+                      onClick={() => setPage(p)}
+                      className={`min-w-[40px] px-3 py-2 rounded-lg transition-colors ${
+                        p === page
+                          ? "bg-blue-600 text-white"
+                          : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                      }`}
+                    >
+                      {p}
+                    </button>
+                  )
+                );
+              })()}
+
+              {/* Next & Last */}
               <button
                 type="button"
                 onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                 disabled={page === totalPages}
-                className="px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
+                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
                          disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                title="Page suivante"
               >
-                Suivant
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() => setPage(totalPages)}
+                disabled={page === totalPages}
+                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
+                         disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                title="Dernière page"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 5l7 7-7 7M5 5l7 7-7 7"
+                  />
+                </svg>
               </button>
             </div>
           )}
