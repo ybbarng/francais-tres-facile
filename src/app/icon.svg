@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with French blue -->
+  <circle cx="24" cy="24" r="23" fill="white"/>
+  <circle cx="24" cy="24" r="22" fill="#1e40af"/>
+
+  <!-- French tricolor arc at top -->
+  <path d="M8 18 A18 18 0 0 1 24 6" stroke="#2563eb" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M24 6 A18 18 0 0 1 32 8" stroke="white" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M32 8 A18 18 0 0 1 40 18" stroke="#dc2626" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Stylized "F" letter -->
+  <text x="24" y="30" text-anchor="middle" font-size="22" font-weight="bold" font-family="system-ui, sans-serif" fill="white">F</text>
+
+  <!-- Radio wave arcs -->
+  <path d="M32 32 Q36 28 36 24" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <path d="M34 34 Q40 28 40 22" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+</svg>

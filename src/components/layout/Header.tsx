@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 
@@ -26,17 +27,9 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            {/* French flag icon */}
-            <div className="hidden sm:flex h-6 w-8 rounded overflow-hidden shadow-sm">
-              <div className="w-1/3 bg-[oklch(0.45_0.18_260)]" />
-              <div className="w-1/3 bg-white" />
-              <div className="w-1/3 bg-[oklch(0.55_0.22_25)]" />
-            </div>
-            <span className="text-lg sm:text-2xl font-bold tracking-tight">FTF</span>
-            <span className="hidden sm:inline text-lg sm:text-xl font-medium opacity-90">
-              Français Très Facile
-            </span>
+          <Link href="/" className="flex items-center">
+            <Logo size="sm" showText={false} className="sm:hidden" />
+            <Logo size="md" showText className="hidden sm:flex" />
           </Link>
 
           {/* Desktop Nav */}
