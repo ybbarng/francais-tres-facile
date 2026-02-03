@@ -14,7 +14,6 @@
       "!**/out",
       "!**/build",
       "!**/coverage",
-      "!**/scripts",
       "!**/*.config.js",
       "!**/*.config.mjs"
     ]
