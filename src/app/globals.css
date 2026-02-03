@@ -80,7 +80,7 @@
   --popover-foreground: oklch(0.20 0.02 260);
 
   /* Primary - French Blue (Bleu de France) */
-  --primary: oklch(0.40 0.18 260);          /* Rich royal blue */
+  --primary: oklch(0.50 0.20 260);          /* Brighter royal blue */
   --primary-foreground: oklch(0.98 0 0);    /* White */
 
   /* Secondary - Soft blue-gray */
@@ -113,7 +113,7 @@
   /* Sidebar */
   --sidebar: oklch(0.98 0.005 260);
   --sidebar-foreground: oklch(0.20 0.02 260);
-  --sidebar-primary: oklch(0.40 0.18 260);
+  --sidebar-primary: oklch(0.50 0.20 260);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.94 0.02 260);
   --sidebar-accent-foreground: oklch(0.30 0.08 260);
@@ -132,67 +132,67 @@
    ============================================ */
 .dark {
   /* French palette for dark mode */
-  --french-blue: oklch(0.55 0.18 260);      /* Brighter blue for dark mode */
-  --french-red: oklch(0.60 0.20 25);        /* Softer red */
-  --french-gold: oklch(0.75 0.14 85);       /* Warm gold */
+  --french-blue: oklch(0.45 0.15 260);      /* Darker blue for dark mode */
+  --french-red: oklch(0.50 0.18 25);        /* Darker red */
+  --french-gold: oklch(0.65 0.12 85);       /* Muted gold */
 
   /* Base - Deep navy like Parisian night sky */
   --background: oklch(0.16 0.025 260);      /* Deep navy blue */
-  --foreground: oklch(0.95 0.01 260);       /* Soft white */
+  --foreground: oklch(0.88 0.015 260);      /* Soft grayish white */
 
   /* Card - Slightly lighter navy */
   --card: oklch(0.20 0.03 260);
-  --card-foreground: oklch(0.95 0.01 260);
+  --card-foreground: oklch(0.88 0.015 260);
 
   /* Popover */
   --popover: oklch(0.22 0.03 260);
-  --popover-foreground: oklch(0.95 0.01 260);
+  --popover-foreground: oklch(0.88 0.015 260);
 
-  /* Primary - Brighter French Blue for contrast */
-  --primary: oklch(0.60 0.18 260);
-  --primary-foreground: oklch(0.98 0 0);
+  /* Primary - Darker French Blue */
+  --primary: oklch(0.40 0.15 260);
+  --primary-foreground: oklch(0.92 0.01 260);  /* Slightly gray white */
 
   /* Secondary */
   --secondary: oklch(0.25 0.035 260);
-  --secondary-foreground: oklch(0.92 0.01 260);
+  --secondary-foreground: oklch(0.85 0.015 260);
 
   /* Muted */
   --muted: oklch(0.25 0.03 260);
-  --muted-foreground: oklch(0.65 0.03 260);
+  --muted-foreground: oklch(0.60 0.025 260);
 
   /* Accent */
   --accent: oklch(0.28 0.04 260);
-  --accent-foreground: oklch(0.92 0.01 260);
+  --accent-foreground: oklch(0.85 0.015 260);
 
-  /* Destructive - Softer red for dark mode */
-  --destructive: oklch(0.60 0.20 25);
+  /* Destructive - Darker red for dark mode */
+  --destructive: oklch(0.45 0.18 25);
 
   /* Borders and inputs */
   --border: oklch(0.30 0.03 260);
   --input: oklch(0.28 0.03 260);
-  --ring: oklch(0.55 0.15 260);
+  --ring: oklch(0.45 0.12 260);
 
-  /* Charts - Vibrant for dark mode */
-  --chart-1: oklch(0.60 0.18 260);          /* Blue */
-  --chart-2: oklch(0.60 0.18 25);           /* Red */
-  --chart-3: oklch(0.75 0.14 85);           /* Gold */
-  --chart-4: oklch(0.60 0.14 200);          /* Teal */
-  --chart-5: oklch(0.65 0.15 320);          /* Purple */
+  /* Charts - Muted for dark mode */
+  --chart-1: oklch(0.45 0.15 260);          /* Blue */
+  --chart-2: oklch(0.50 0.16 25);           /* Red */
+  --chart-3: oklch(0.65 0.12 85);           /* Gold */
+  --chart-4: oklch(0.50 0.12 200);          /* Teal */
+  --chart-5: oklch(0.55 0.13 320);          /* Purple */
 
   /* Sidebar */
   --sidebar: oklch(0.18 0.03 260);
-  --sidebar-foreground: oklch(0.95 0.01 260);
-  --sidebar-primary: oklch(0.60 0.18 260);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-foreground: oklch(0.88 0.015 260);
+  --sidebar-primary: oklch(0.40 0.15 260);
+  --sidebar-primary-foreground: oklch(0.92 0.01 260);
   --sidebar-accent: oklch(0.25 0.04 260);
-  --sidebar-accent-foreground: oklch(0.92 0.01 260);
+  --sidebar-accent-foreground: oklch(0.85 0.015 260);
   --sidebar-border: oklch(0.30 0.03 260);
-  --sidebar-ring: oklch(0.55 0.15 260);
+  --sidebar-ring: oklch(0.45 0.12 260);
 
   /* Component-specific - Dark mode: darker colors */
-  --header: oklch(0.25 0.12 260);             /* Header background */
-  --action-blue: oklch(0.35 0.15 260);        /* Exercices button */
-  --action-red: oklch(0.45 0.18 25);          /* Playlist button */
+  --header: oklch(0.22 0.10 260);             /* Header background */
+  --action-blue: oklch(0.30 0.12 260);        /* Exercices button */
+  --action-red: oklch(0.38 0.15 25);          /* Playlist button */
 }
 
 /* French tricolor accent bar for header */

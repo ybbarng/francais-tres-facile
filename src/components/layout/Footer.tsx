@@ -1,6 +1,6 @@
 "use client";
 
-import { Code2, Github, Heart, Radio } from "lucide-react";
+import { Code2, Github, Radio, Wrench } from "lucide-react";
 import { LogoCompact } from "@/components/Logo";
 
 export default function Footer() {
@@ -74,11 +74,10 @@ export default function Footer() {
             {/* Copyright */}
             <div>© {currentYear} Français Très Facile</div>
 
-            {/* Made with love */}
+            {/* Implemented by */}
             <div className="flex items-center gap-1.5">
-              <span>Fait avec</span>
-              <Heart className="w-4 h-4 text-[oklch(0.55_0.22_25)] fill-[oklch(0.55_0.22_25)]" />
-              <span>par</span>
+              <Wrench className="w-4 h-4" />
+              <span>Implémenté par</span>
               <a
                 href="https://github.com/ybbarng"
                 target="_blank"

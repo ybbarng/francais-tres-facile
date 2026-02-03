@@ -40,7 +40,7 @@
 | **Background** | Papier Ancien | `oklch(0.985 0.005 90)` | 따뜻한 오프화이트 |
 | **Foreground** | Encre Marine | `oklch(0.20 0.02 260)` | 짙은 네이비 텍스트 |
 | **Card** | Blanc Pur | `oklch(1 0 0)` | 순수한 흰색 |
-| **Primary** | Bleu Royal | `oklch(0.40 0.18 260)` | 진한 로열 블루 |
+| **Primary** | Bleu Royal | `oklch(0.50 0.20 260)` | 밝은 로열 블루 |
 | **Secondary** | Gris Bleuté | `oklch(0.95 0.01 260)` | 연한 청회색 |
 | **Muted** | Gris Élégant | `oklch(0.96 0.008 260)` | 은은한 회색 |
 | **Accent** | Bleu Clair | `oklch(0.93 0.03 260)` | 연한 파랑 |
@@ -53,9 +53,9 @@
 | 역할 | 이름 | 값 | 설명 |
 |------|------|-----|------|
 | **Background** | Ciel de Nuit | `oklch(0.16 0.025 260)` | 깊은 네이비 |
-| **Foreground** | Lumière Douce | `oklch(0.95 0.01 260)` | 부드러운 흰색 |
+| **Foreground** | Lumière Douce | `oklch(0.88 0.015 260)` | 부드러운 회백색 |
 | **Card** | Ardoise | `oklch(0.20 0.03 260)` | 슬레이트 |
-| **Primary** | Bleu Lumineux | `oklch(0.60 0.18 260)` | 밝은 파랑 |
+| **Primary** | Bleu Lumineux | `oklch(0.40 0.15 260)` | 어두운 파랑 |
 | **Secondary** | Marine Profond | `oklch(0.25 0.035 260)` | 진한 네이비 |
 | **Muted** | Ombre | `oklch(0.25 0.03 260)` | 그림자 |
 | **Accent** | Reflet Nocturne | `oklch(0.28 0.04 260)` | 야간 반사 |
@@ -73,7 +73,7 @@ CSS 변수: `--header` / Tailwind: `bg-header`
 | 모드 | 이름 | 값 |
 |------|------|-----|
 | 라이트 | Bleu Royal | `oklch(0.40 0.18 260)` |
-| 다크 | Marine Profond | `oklch(0.25 0.12 260)` |
+| 다크 | Marine Profond | `oklch(0.22 0.10 260)` |
 
 *텍스트: 항상 흰색 (`text-white`)*
 
@@ -89,7 +89,7 @@ CSS 변수: `--action-blue` / Tailwind: `bg-action-blue`
 | 모드 | 이름 | 값 |
 |------|------|-----|
 | 라이트 | Bleu Clair | `oklch(0.55 0.18 260)` |
-| 다크 | Bleu Nuit | `oklch(0.35 0.15 260)` |
+| 다크 | Bleu Nuit | `oklch(0.30 0.12 260)` |
 
 **Playlist 버튼 (빨강):**
 
@@ -98,7 +98,7 @@ CSS 변수: `--action-red` / Tailwind: `bg-action-red`
 | 모드 | 이름 | 값 |
 |------|------|-----|
 | 라이트 | Rouge Clair | `oklch(0.60 0.22 25)` |
-| 다크 | Rouge Sombre | `oklch(0.45 0.18 25)` |
+| 다크 | Rouge Sombre | `oklch(0.38 0.15 25)` |
 
 *텍스트: 항상 흰색 (`text-white`)*
 
