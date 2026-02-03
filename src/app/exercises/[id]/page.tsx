@@ -11,8 +11,8 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { use, useCallback, useEffect, useState } from "react";
+import AudioPlayer from "@/components/AudioPlayer";
 import H5PQuiz from "@/components/H5PQuiz";
-import Player from "@/components/Player";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -341,7 +341,7 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
           <h2 className="text-lg font-semibold mb-4">Audio</h2>
           <Card>
             <CardContent className="pt-6">
-              <Player
+              <AudioPlayer
                 audioUrl={exercise.audioUrl}
                 title={exercise.title}
                 onPlayCountUpdate={handlePlayCountUpdate}

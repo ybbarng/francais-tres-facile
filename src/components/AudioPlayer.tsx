@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 
 export type RepeatMode = "none" | "one" | "all";
 
-interface PlayerProps {
+interface AudioPlayerProps {
   audioUrl: string | null;
   title: string;
   subtitle?: string;
@@ -30,7 +30,7 @@ interface PlayerProps {
   onRepeatCycle?: () => void;
 }
 
-export default function Player({
+export default function AudioPlayer({
   audioUrl,
   title,
   subtitle,
@@ -42,7 +42,7 @@ export default function Player({
   onNext,
   onShuffleToggle,
   onRepeatCycle,
-}: PlayerProps) {
+}: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);

@@ -4,7 +4,7 @@ import { CheckCircle2, Pause } from "lucide-react";
 import { useCallback, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { ExerciseWithProgress } from "@/types";
-import Player, { type RepeatMode } from "./Player";
+import AudioPlayer, { type RepeatMode } from "./AudioPlayer";
 
 interface PlaylistProps {
   exercises: ExerciseWithProgress[];
@@ -74,7 +74,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
         <Card className="sticky top-4">
           <CardContent className="pt-6">
             {currentExercise && (
-              <Player
+              <AudioPlayer
                 audioUrl={currentExercise.audioUrl}
                 title={currentExercise.title}
                 subtitle={`${currentExercise.level} · ${currentExercise.category}`}
