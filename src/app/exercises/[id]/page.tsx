@@ -240,55 +240,57 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         </div>
       )}
 
-      {/* H5P Quiz */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-900">Quiz</h2>
-          {!exercise.h5pEmbedUrl && (
-            <button
-              type="button"
-              onClick={handleRefresh}
-              disabled={refreshing}
-              className="text-sm px-3 py-1 bg-blue-100 text-blue-700 rounded-lg
-                       hover:bg-blue-200 disabled:opacity-50 transition-colors
-                       flex items-center gap-1"
-            >
-              {refreshing ? (
-                <>
-                  <span className="inline-block animate-spin rounded-full h-3 w-3 border-2 border-blue-700 border-t-transparent" />
-                  Chargement...
-                </>
-              ) : (
-                <>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                    />
-                  </svg>
-                  Charger le quiz
-                </>
-              )}
-            </button>
+      {/* H5P Quiz - 퀴즈가 있는 콘텐츠만 표시 */}
+      {(exercise.h5pEmbedUrl || exercise.section !== "comprendre-actualite") && (
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-gray-900">Quiz</h2>
+            {!exercise.h5pEmbedUrl && (
+              <button
+                type="button"
+                onClick={handleRefresh}
+                disabled={refreshing}
+                className="text-sm px-3 py-1 bg-blue-100 text-blue-700 rounded-lg
+                         hover:bg-blue-200 disabled:opacity-50 transition-colors
+                         flex items-center gap-1"
+              >
+                {refreshing ? (
+                  <>
+                    <span className="inline-block animate-spin rounded-full h-3 w-3 border-2 border-blue-700 border-t-transparent" />
+                    Chargement...
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                      />
+                    </svg>
+                    Charger le quiz
+                  </>
+                )}
+              </button>
+            )}
+          </div>
+          {exercise.h5pEmbedUrl ? (
+            <H5PQuiz
+              h5pUrl={exercise.h5pEmbedUrl}
+              exerciseId={exercise.id}
+              onScoreReceived={handleScoreReceived}
+            />
+          ) : (
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
+              <p className="text-gray-500 mb-2">Le quiz n'est pas encore chargé.</p>
+              <p className="text-sm text-gray-400">
+                Cliquez sur "Charger le quiz" pour récupérer le quiz depuis RFI.
+              </p>
+            </div>
           )}
         </div>
-        {exercise.h5pEmbedUrl ? (
-          <H5PQuiz
-            h5pUrl={exercise.h5pEmbedUrl}
-            exerciseId={exercise.id}
-            onScoreReceived={handleScoreReceived}
-          />
-        ) : (
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
-            <p className="text-gray-500 mb-2">Le quiz n'est pas encore chargé.</p>
-            <p className="text-sm text-gray-400">
-              Cliquez sur "Charger le quiz" pour récupérer le quiz depuis RFI.
-            </p>
-          </div>
-        )}
-      </div>
+      )}
 
       {/* Notes */}
       <div className="mb-8">

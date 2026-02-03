@@ -2,6 +2,9 @@
 
 import { useCallback, useEffect, useState } from "react";
 
+const MIN_HEIGHT = 600;
+const DEFAULT_HEIGHT = 800;
+
 interface H5PQuizProps {
   h5pUrl: string;
   exerciseId: string;
@@ -12,8 +15,21 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
   const [quizActive, setQuizActive] = useState(false);
   const [autoScoreDetected, setAutoScoreDetected] = useState(false);
   const [manualScore, setManualScore] = useState("");
+  const [iframeHeight, setIframeHeight] = useState(DEFAULT_HEIGHT);
 
-  // H5P xAPI 이벤트 리스너
+  // H5P resizer 스크립트 로드
+  useEffect(() => {
+    const scriptId = "h5p-resizer-script";
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  // H5P 메시지 리스너 (xAPI 결과 + resize)
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       // H5P 도메인 확인
@@ -21,6 +37,41 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
 
       try {
         const data = event.data;
+
+        // H5P resize 메시지 감지 (다양한 형식 처리)
+        if (data?.context === "h5p" && data?.action === "resize") {
+          const newHeight = data.scrollHeight || data.height;
+          if (newHeight && newHeight > MIN_HEIGHT) {
+            setIframeHeight(newHeight + 50);
+          }
+        }
+
+        // 문자열 형태의 resize 메시지 처리
+        if (typeof data === "string") {
+          try {
+            const parsed = JSON.parse(data);
+            if (parsed.context === "h5p" && parsed.action === "resize") {
+              const newHeight = parsed.scrollHeight || parsed.height;
+              if (newHeight && newHeight > MIN_HEIGHT) {
+                setIframeHeight(newHeight + 50);
+              }
+            }
+          } catch {
+            // JSON 파싱 실패 무시
+          }
+        }
+
+        // h5p-resizer 형식의 메시지 처리
+        if (typeof data === "string" && data.startsWith("h5p")) {
+          const match = data.match(/h5p:(\d+)/);
+          if (match) {
+            const newHeight = parseInt(match[1], 10);
+            if (newHeight > MIN_HEIGHT) {
+              setIframeHeight(newHeight + 50);
+            }
+          }
+        }
+
         // xAPI 결과 감지
         if (data?.statement?.result?.score) {
           const { raw, max } = data.statement.result.score;
@@ -63,26 +114,40 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
       {/* iframe: 비활성 시 pointer-events: none */}
       <iframe
         src={h5pUrl}
-        className="w-full rounded-lg border border-gray-200"
+        className="w-full rounded-lg border border-gray-200 transition-[height] duration-300"
         style={{
           pointerEvents: quizActive ? "auto" : "none",
-          height: "700px",
+          height: `${iframeHeight}px`,
+          overflow: "hidden",
         }}
         title={`Quiz ${exerciseId}`}
         allow="fullscreen"
+        scrolling="no"
       />
 
       {/* 활성 상태: 컨트롤 버튼들 */}
       {quizActive && (
         <div className="mt-4 space-y-4">
-          <button
-            onClick={() => setQuizActive(false)}
-            className="w-full px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg
-                       text-gray-700 font-medium transition-colors flex items-center justify-center gap-2"
-          >
-            <span>↑</span>
-            <span>Retour au mode défilement</span>
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setQuizActive(false)}
+              className="flex-1 px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg
+                         text-gray-700 font-medium transition-colors flex items-center justify-center gap-2"
+            >
+              <span>↑</span>
+              <span>Retour au mode défilement</span>
+            </button>
+            <button
+              onClick={() => setIframeHeight((h) => h + 300)}
+              className="px-4 py-3 bg-blue-100 hover:bg-blue-200 rounded-lg
+                         text-blue-700 font-medium transition-colors flex items-center justify-center gap-2"
+              title="Agrandir le quiz"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+            </button>
+          </div>
 
           {/* 수동 점수 입력 (자동 감지 실패 시) */}
           {!autoScoreDetected && (
