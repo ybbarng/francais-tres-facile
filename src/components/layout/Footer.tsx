@@ -56,12 +56,12 @@ export default function Footer() {
               <li className="flex items-center gap-2 md:justify-end">
                 <Github className="w-4 h-4" />
                 <a
-                  href="https://github.com/ybbarng"
+                  href="https://github.com/ybbarng/francais-tres-facile"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  github.com/ybbarng
+                  github.com/ybbarng/francais-tres-facile
                 </a>
               </li>
             </ul>
