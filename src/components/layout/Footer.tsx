@@ -1,18 +1,10 @@
 "use client";
 
-import { Github, Heart, Radio } from "lucide-react";
-import Link from "next/link";
+import { Code2, Github, Heart, Radio } from "lucide-react";
 import { LogoCompact } from "@/components/Logo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const navLinks = [
-    { href: "/", label: "Accueil" },
-    { href: "/exercises", label: "Exercices" },
-    { href: "/completed", label: "Terminés" },
-    { href: "/playlist", label: "Playlist" },
-  ];
 
   return (
     <footer className="bg-card border-t border-border mt-auto">
@@ -20,7 +12,7 @@ export default function Footer() {
       <div className="french-tricolor h-1" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Brand & Description */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -32,34 +24,17 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
               Une application web pour faciliter l'apprentissage du français avec les ressources de
               RFI (Radio France Internationale). Écoutez, pratiquez et progressez à votre rythme.
             </p>
           </div>
 
-          {/* Navigation */}
-          <div>
-            <h3 className="font-semibold mb-4">Navigation</h3>
-            <ul className="space-y-2">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Credits & Links */}
-          <div>
-            <h3 className="font-semibold mb-4">Crédits</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
+          {/* Credits & Tech */}
+          <div className="space-y-4 md:text-right">
+            <h3 className="font-semibold">Crédits & Technologies</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-center gap-2 md:justify-end">
                 <Radio className="w-4 h-4 text-primary" />
                 <span>
                   Contenu par{" "}
@@ -73,7 +48,11 @@ export default function Footer() {
                   </a>
                 </span>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 md:justify-end">
+                <Code2 className="w-4 h-4" />
+                <span>Next.js, TypeScript, Tailwind CSS, shadcn/ui</span>
+              </li>
+              <li className="flex items-center gap-2 md:justify-end">
                 <Github className="w-4 h-4" />
                 <a
                   href="https://github.com/ybbarng"
@@ -81,7 +60,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  @ybbarng
+                  github.com/ybbarng
                 </a>
               </li>
             </ul>
@@ -92,7 +71,7 @@ export default function Footer() {
         <div className="mt-8 pt-6 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
             {/* Copyright */}
-            <div>© {currentYear} Français Très Facile. Tous droits réservés.</div>
+            <div>© {currentYear} Français Très Facile</div>
 
             {/* Made with love */}
             <div className="flex items-center gap-1.5">
