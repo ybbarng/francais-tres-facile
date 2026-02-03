@@ -131,7 +131,7 @@ export default function DataManager() {
                   value={exportedData}
                   readOnly
                   rows={6}
-                  className="font-mono text-xs"
+                  className="font-mono text-xs break-all"
                   onClick={(e) => (e.target as HTMLTextAreaElement).select()}
                 />
                 <Button onClick={handleCopy} className="w-full">
