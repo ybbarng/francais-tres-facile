@@ -94,10 +94,12 @@ export default function CompletedPage() {
                   )}
                   {exercise.progress?.completedAt && (
                     <div className="text-sm text-gray-400">
-                      {new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR", {
+                      {new Date(exercise.progress.completedAt).toLocaleString("fr-FR", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
                       })}
                     </div>
                   )}
