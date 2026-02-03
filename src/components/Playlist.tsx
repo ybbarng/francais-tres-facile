@@ -202,7 +202,11 @@ export default function Playlist({ exercises }: PlaylistProps) {
                   </Button>
 
                   <Button onClick={togglePlay} size="icon" className="h-14 w-14 rounded-full">
-                    {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6 ml-1" />}
+                    {isPlaying ? (
+                      <Pause className="h-6 w-6" />
+                    ) : (
+                      <Play className="h-6 w-6 ml-0.5" />
+                    )}
                   </Button>
 
                   <Button variant="ghost" size="icon" onClick={playNext}>

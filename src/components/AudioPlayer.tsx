@@ -128,7 +128,7 @@ export default function AudioPlayer({ audioUrl, title, onPlayCountUpdate }: Audi
 
           {/* Play/Pause */}
           <Button size="icon" onClick={togglePlay} className="h-14 w-14 rounded-full">
-            {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
+            {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5" />}
           </Button>
 
           {/* +10s */}
