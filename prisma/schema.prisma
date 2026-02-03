@@ -7,7 +7,7 @@ datasource db {
 }
 
 model Exercise {
-  id            String    @id @default(cuid())
+  id            String    @id
   title         String
   section       String    // comprendre-actualite, communiquer-quotidien
   level         String    // A1, A2, B1, B2, C1C2

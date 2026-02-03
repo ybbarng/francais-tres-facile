@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { generateShortId } from "@/lib/id";
 import { scrapeAllExercises, scrapeSectionExercises } from "@/lib/scraper";
 import type { SyncResult } from "@/types";
 
@@ -11,6 +12,12 @@ export async function POST(request: Request) {
     const exercises = sectionId
       ? await scrapeSectionExercises(sectionId)
       : await scrapeAllExercises();
+
+    // 기존 ID 맵 로드 (충돌 방지용)
+    const existingExercises = await prisma.exercise.findMany({
+      select: { id: true, sourceUrl: true },
+    });
+    const idToUrl = new Map(existingExercises.map((e) => [e.id, e.sourceUrl]));
 
     const result: SyncResult = { added: 0, updated: 0, errors: [] };
 
@@ -36,8 +43,22 @@ export async function POST(request: Request) {
           });
           result.updated++;
         } else {
+          // 충돌 방지하며 ID 생성
+          let suffix = 0;
+          let id: string;
+          while (true) {
+            id = generateShortId(exercise.sourceUrl, suffix);
+            const existingUrl = idToUrl.get(id);
+            if (!existingUrl) {
+              idToUrl.set(id, exercise.sourceUrl);
+              break;
+            }
+            suffix++;
+          }
+
           await prisma.exercise.create({
             data: {
+              id,
               title: exercise.title,
               section: exercise.section,
               level: exercise.level,
