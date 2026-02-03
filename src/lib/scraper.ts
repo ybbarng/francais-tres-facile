@@ -293,12 +293,82 @@ export async function scrapeExerciseDetail(sourceUrl: string): Promise<Partial<S
     if (mp3Match) audioUrl = mp3Match[0];
   }
 
-  // H5P iframe URL
+  // H5P iframe URL - try multiple patterns
   let h5pEmbedUrl: string | null = null;
+
+  // Debug: log all iframes found
+  const allIframes = $("iframe");
+  console.log(`  Found ${allIframes.length} iframes in page`);
+  allIframes.each((i, el) => {
+    const src = $(el).attr("src") || "";
+    console.log(`    [${i}] src: ${src.substring(0, 100)}`);
+  });
+
+  // 1. iframe with h5p in src
   const h5pIframe = $('iframe[src*="h5p"]');
   if (h5pIframe.length > 0) {
     h5pEmbedUrl = h5pIframe.attr("src") || null;
+    console.log(`  Found h5p iframe: ${h5pEmbedUrl}`);
   }
+
+  // 2. iframe with fle-rfi domain
+  if (!h5pEmbedUrl) {
+    const fleRfiIframe = $('iframe[src*="fle-rfi"]');
+    if (fleRfiIframe.length > 0) {
+      h5pEmbedUrl = fleRfiIframe.attr("src") || null;
+      console.log(`  Found fle-rfi iframe: ${h5pEmbedUrl}`);
+    }
+  }
+
+  // 3. data-src attribute (lazy loading)
+  if (!h5pEmbedUrl) {
+    const lazyIframe = $('iframe[data-src*="h5p"], iframe[data-src*="fle-rfi"]');
+    if (lazyIframe.length > 0) {
+      h5pEmbedUrl = lazyIframe.attr("data-src") || null;
+      console.log(`  Found lazy iframe: ${h5pEmbedUrl}`);
+    }
+  }
+
+  // 4. Look for H5P embed URL in script tags
+  if (!h5pEmbedUrl) {
+    const scripts = $("script").text();
+    const h5pMatch = scripts.match(/https?:\/\/[^"'\s]*h5p[^"'\s]*\/embed/i);
+    if (h5pMatch) {
+      h5pEmbedUrl = h5pMatch[0];
+      console.log(`  Found h5p in scripts: ${h5pEmbedUrl}`);
+    }
+  }
+
+  // 5. Look for fle-rfi.h5p.com URL in scripts or HTML
+  if (!h5pEmbedUrl) {
+    const fullHtml = $.html();
+    const fleMatch = fullHtml.match(/https?:\/\/fle-rfi\.h5p\.com\/content\/[^"'\s]+\/embed/i);
+    if (fleMatch) {
+      h5pEmbedUrl = fleMatch[0];
+      console.log(`  Found fle-rfi in HTML: ${h5pEmbedUrl}`);
+    }
+  }
+
+  // 6. Any iframe that might be a quiz (exclude ads, social, etc.)
+  if (!h5pEmbedUrl) {
+    $("iframe").each((_, el) => {
+      const src = $(el).attr("src") || $(el).attr("data-src") || "";
+      if (
+        src &&
+        !src.includes("twitter") &&
+        !src.includes("facebook") &&
+        !src.includes("youtube") &&
+        !src.includes("google") &&
+        (src.includes("embed") || src.includes("quiz") || src.includes("exercise"))
+      ) {
+        h5pEmbedUrl = src;
+        console.log(`  Found generic embed iframe: ${h5pEmbedUrl}`);
+        return false; // break
+      }
+    });
+  }
+
+  console.log(`  Final h5pEmbedUrl: ${h5pEmbedUrl}`);
 
   // Level extraction from page content
   const levelMatch = $("body")
