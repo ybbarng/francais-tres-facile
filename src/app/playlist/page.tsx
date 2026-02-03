@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Playlist from "@/components/Playlist";
+import { Skeleton } from "@/components/ui/skeleton";
 import type { ExerciseWithProgress } from "@/types";
 
 export default function PlaylistPage() {
@@ -26,16 +27,16 @@ export default function PlaylistPage() {
 
   if (loading) {
     return (
-      <div className="text-center py-12">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-600 border-t-transparent" />
-        <p className="mt-4 text-gray-500">Chargement...</p>
+      <div className="space-y-6">
+        <Skeleton className="h-8 w-32" />
+        <Skeleton className="h-64 rounded-xl" />
       </div>
     );
   }
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-900 mb-6">Playlist</h1>
+      <h1 className="text-2xl font-bold mb-6">Playlist</h1>
       <Playlist exercises={exercises} />
     </div>
   );

@@ -19,6 +19,7 @@ export interface PaginationParams {
 
 export interface ProgressInput {
   completed?: boolean;
+  completedAt?: string | null;
   score?: number;
   maxScore?: number;
   screenshotUrl?: string;

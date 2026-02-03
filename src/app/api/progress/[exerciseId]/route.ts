@@ -40,16 +40,26 @@ export async function POST(request: NextRequest, context: RouteContext) {
       return NextResponse.json({ error: "Exercise not found" }, { status: 404 });
     }
 
+    // completedAt 처리: 명시적으로 제공되면 그 값 사용, 아니면 completed가 true일 때 현재 시간
+    const completedAt =
+      body.completedAt !== undefined
+        ? body.completedAt
+          ? new Date(body.completedAt)
+          : null
+        : body.completed
+          ? new Date()
+          : undefined;
+
     const progress = await prisma.progress.upsert({
       where: { exerciseId },
       update: {
         ...body,
-        completedAt: body.completed ? new Date() : undefined,
+        completedAt,
       },
       create: {
         exerciseId,
         ...body,
-        completedAt: body.completed ? new Date() : undefined,
+        completedAt,
       },
     });
 
@@ -73,11 +83,21 @@ export async function PATCH(request: NextRequest, context: RouteContext) {
       return NextResponse.json({ error: "Progress not found" }, { status: 404 });
     }
 
+    // completedAt 처리: 명시적으로 제공되면 그 값 사용
+    const completedAt =
+      body.completedAt !== undefined
+        ? body.completedAt
+          ? new Date(body.completedAt)
+          : null
+        : body.completed
+          ? new Date()
+          : existing.completedAt;
+
     const progress = await prisma.progress.update({
       where: { exerciseId },
       data: {
         ...body,
-        completedAt: body.completed ? new Date() : existing.completedAt,
+        completedAt,
       },
     });
 

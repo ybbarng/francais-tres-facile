@@ -1,6 +1,14 @@
 "use client";
 
-import { ArrowLeft, Check, CheckCircle2, Circle, ExternalLink, RefreshCw } from "lucide-react";
+import {
+  ArrowLeft,
+  Calendar,
+  Check,
+  CheckCircle2,
+  Circle,
+  ExternalLink,
+  RefreshCw,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { use, useCallback, useEffect, useState } from "react";
 import AudioPlayer from "@/components/AudioPlayer";
@@ -8,6 +16,7 @@ import H5PQuiz from "@/components/H5PQuiz";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
 import type { ExerciseWithProgress, ProgressInput } from "@/types";
@@ -40,6 +49,8 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
   const [refreshing, setRefreshing] = useState(false);
   const [notes, setNotes] = useState("");
   const [isCompleted, setIsCompleted] = useState(false);
+  const [completedAt, setCompletedAt] = useState<string>("");
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
   useEffect(() => {
     const fetchExercise = async () => {
@@ -53,6 +64,14 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         setExercise(data);
         setNotes(data.progress?.notes || "");
         setIsCompleted(data.progress?.completed || false);
+        if (data.progress?.completedAt) {
+          // datetime-local 형식으로 변환 (YYYY-MM-DDTHH:mm)
+          const date = new Date(data.progress.completedAt);
+          const localDatetime = new Date(date.getTime() - date.getTimezoneOffset() * 60000)
+            .toISOString()
+            .slice(0, 16);
+          setCompletedAt(localDatetime);
+        }
       } catch (error) {
         console.error("Failed to fetch exercise:", error);
       } finally {
@@ -109,8 +128,30 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
   const handleCompletedToggle = useCallback(() => {
     const newCompleted = !isCompleted;
     setIsCompleted(newCompleted);
+    if (newCompleted) {
+      // 완료로 설정 시 현재 시간으로 초기화
+      const now = new Date();
+      const localDatetime = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+        .toISOString()
+        .slice(0, 16);
+      setCompletedAt(localDatetime);
+      setShowDatePicker(true);
+    } else {
+      setCompletedAt("");
+      setShowDatePicker(false);
+    }
     updateProgress({ completed: newCompleted });
   }, [isCompleted, updateProgress]);
+
+  const handleCompletedAtChange = useCallback(
+    (value: string) => {
+      setCompletedAt(value);
+      if (value) {
+        updateProgress({ completedAt: new Date(value).toISOString() });
+      }
+    },
+    [updateProgress]
+  );
 
   const handleRefresh = useCallback(async () => {
     setRefreshing(true);
@@ -187,26 +228,69 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
             <h1 className="text-2xl font-bold">{exercise.title}</h1>
           </div>
 
-          <Button
-            variant={isCompleted ? "outline" : "secondary"}
-            onClick={handleCompletedToggle}
-            disabled={saving}
-            className={
-              isCompleted ? "border-green-300 bg-green-50 text-green-700 hover:bg-green-100" : ""
-            }
-          >
-            {isCompleted ? (
-              <>
-                <CheckCircle2 className="h-4 w-4 mr-1" />
-                Terminé
-              </>
-            ) : (
-              <>
-                <Circle className="h-4 w-4 mr-1" />
-                Marquer terminé
-              </>
+          <div className="flex flex-col items-end gap-2">
+            <Button
+              variant={isCompleted ? "outline" : "secondary"}
+              onClick={handleCompletedToggle}
+              disabled={saving}
+              className={
+                isCompleted
+                  ? "border-green-300 bg-green-50 text-green-700 hover:bg-green-100 dark:border-green-700 dark:bg-green-950 dark:text-green-400 dark:hover:bg-green-900"
+                  : ""
+              }
+            >
+              {isCompleted ? (
+                <>
+                  <CheckCircle2 className="h-4 w-4 mr-1" />
+                  Terminé
+                </>
+              ) : (
+                <>
+                  <Circle className="h-4 w-4 mr-1" />
+                  Marquer terminé
+                </>
+              )}
+            </Button>
+
+            {isCompleted && (
+              <div className="flex items-center gap-2">
+                {showDatePicker ? (
+                  <div className="flex items-center gap-2">
+                    <Input
+                      type="datetime-local"
+                      value={completedAt}
+                      onChange={(e) => handleCompletedAtChange(e.target.value)}
+                      className="w-auto text-sm"
+                    />
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setShowDatePicker(false)}
+                      className="text-muted-foreground"
+                    >
+                      <Check className="h-3 w-3" />
+                    </Button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => setShowDatePicker(true)}
+                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Calendar className="h-3 w-3" />
+                    {completedAt
+                      ? new Date(completedAt).toLocaleString("fr-FR", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })
+                      : "Définir la date"}
+                  </button>
+                )}
+              </div>
             )}
-          </Button>
+          </div>
         </div>
       </div>
 
@@ -224,12 +308,14 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
       {/* Progress info */}
       {exercise.progress &&
         (exercise.progress.score !== null || exercise.progress.listenCount > 0) && (
-          <Card className="mb-6 border-blue-200 bg-blue-50">
+          <Card className="mb-6 border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950">
             <CardHeader className="pb-2">
-              <CardTitle className="text-base text-blue-900">Historique d'apprentissage</CardTitle>
+              <CardTitle className="text-base text-blue-900 dark:text-blue-200">
+                Historique d'apprentissage
+              </CardTitle>
             </CardHeader>
             <CardContent className="pt-0">
-              <div className="flex gap-6 text-sm text-blue-700">
+              <div className="flex gap-6 text-sm text-blue-700 dark:text-blue-300">
                 {exercise.progress.score !== null && exercise.progress.maxScore && (
                   <span>
                     Score du quiz : {exercise.progress.score}/{exercise.progress.maxScore}

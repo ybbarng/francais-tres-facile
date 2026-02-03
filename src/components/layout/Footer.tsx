@@ -26,8 +26,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-              Le meilleur contenu de RFI, en plus pratique. Navigation mobile fluide, suivi de
-              votre progression, playlists audio — tout ce qui manquait au site original.
+              Le meilleur contenu de RFI, en plus pratique. Navigation mobile fluide, suivi de votre
+              progression, playlists audio — tout ce qui manquait au site original.
             </p>
           </div>
 

@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-primary text-primary-foreground shadow-lg">
+    <header className="bg-[oklch(0.40_0.18_260)] dark:bg-[oklch(0.25_0.12_260)] text-white shadow-lg">
       {/* French tricolor accent bar */}
       <div className="french-tricolor h-1" />
 
@@ -41,8 +41,8 @@ export default function Header() {
                   href={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     pathname === item.href
-                      ? "bg-primary-foreground/20 text-primary-foreground"
-                      : "text-primary-foreground/80 hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                      ? "bg-white/20 text-white"
+                      : "text-white/80 hover:bg-white/10 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -59,7 +59,7 @@ export default function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-primary-foreground hover:bg-primary-foreground/10"
+              className="text-white hover:bg-white/10"
               aria-label="Menu"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -69,7 +69,7 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-4 space-y-1 border-t border-primary-foreground/20 pt-2">
+          <nav className="md:hidden pb-4 space-y-1 border-t border-white/20 pt-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -77,8 +77,8 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                   pathname === item.href
-                    ? "bg-primary-foreground/20 text-primary-foreground"
-                    : "text-primary-foreground/80 hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                    ? "bg-white/20 text-white"
+                    : "text-white/80 hover:bg-white/10 hover:text-white"
                 }`}
               >
                 {item.label}

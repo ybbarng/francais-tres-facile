@@ -1,7 +1,10 @@
 "use client";
 
+import { RefreshCw } from "lucide-react";
 import { useState } from "react";
 import ExerciseList from "@/components/exercises/ExerciseList";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function ExercisesPage() {
   const [syncing, setSyncing] = useState(false);
@@ -36,54 +39,50 @@ export default function ExercisesPage() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">Exercices</h1>
-        <button
-          onClick={handleSync}
-          disabled={syncing}
-          className="px-4 py-2 bg-green-600 text-white rounded-lg
-                   hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed
-                   transition-colors flex items-center gap-2"
-        >
+        <h1 className="text-2xl font-bold">Exercices</h1>
+        <Button onClick={handleSync} disabled={syncing} variant="secondary">
           {syncing ? (
             <>
-              <span className="inline-block animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent" />
+              <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
               Synchronisation...
             </>
           ) : (
             <>
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                />
-              </svg>
+              <RefreshCw className="h-4 w-4 mr-2" />
               Synchroniser RFI
             </>
           )}
-        </button>
+        </Button>
       </div>
 
       {syncResult && (
-        <div
-          className={`mb-6 p-4 rounded-lg ${
+        <Card
+          className={`mb-6 ${
             syncResult.errors.length > 0
-              ? "bg-yellow-50 border border-yellow-200"
-              : "bg-green-50 border border-green-200"
+              ? "border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950"
+              : "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950"
           }`}
         >
-          <p className="font-medium">
-            Synchronisation terminée : {syncResult.added} ajouté(s), {syncResult.updated} mis à jour
-          </p>
-          {syncResult.errors.length > 0 && (
-            <ul className="mt-2 text-sm text-yellow-700">
-              {syncResult.errors.slice(0, 5).map((error, i) => (
-                <li key={i}>{error}</li>
-              ))}
-            </ul>
-          )}
-        </div>
+          <CardContent className="py-4">
+            <p
+              className={`font-medium ${
+                syncResult.errors.length > 0
+                  ? "text-amber-900 dark:text-amber-200"
+                  : "text-green-900 dark:text-green-200"
+              }`}
+            >
+              Synchronisation terminée : {syncResult.added} ajouté(s), {syncResult.updated} mis à
+              jour
+            </p>
+            {syncResult.errors.length > 0 && (
+              <ul className="mt-2 text-sm text-amber-700 dark:text-amber-300">
+                {syncResult.errors.slice(0, 5).map((error, i) => (
+                  <li key={`error-${i}`}>{error}</li>
+                ))}
+              </ul>
+            )}
+          </CardContent>
+        </Card>
       )}
 
       <ExerciseList />
