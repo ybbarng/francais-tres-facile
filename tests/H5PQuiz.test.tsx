@@ -12,7 +12,6 @@ describe("H5PQuiz", () => {
   };
 
   beforeEach(() => {
-    // Clean up any existing H5P resizer script
     const existingScript = document.getElementById("h5p-resizer-script");
     if (existingScript) {
       existingScript.remove();
@@ -32,7 +31,7 @@ describe("H5PQuiz", () => {
       expect(iframe?.src).toBe(defaultProps.h5pUrl);
     });
 
-    it("should show manual score input by default", () => {
+    it("should show score input by default", () => {
       render(<H5PQuiz {...defaultProps} />);
 
       expect(
@@ -42,8 +41,8 @@ describe("H5PQuiz", () => {
     });
   });
 
-  describe("manual score input", () => {
-    it("should call onScoreReceived when valid score is submitted", async () => {
+  describe("score input", () => {
+    it("should call onScoreReceived when valid score is submitted", () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
 
@@ -54,7 +53,7 @@ describe("H5PQuiz", () => {
       expect(onScoreReceived).toHaveBeenCalledWith({ score: 18, maxScore: 23 });
     });
 
-    it("should handle score format with spaces", async () => {
+    it("should handle score format with spaces", () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
 
@@ -65,7 +64,7 @@ describe("H5PQuiz", () => {
       expect(onScoreReceived).toHaveBeenCalledWith({ score: 15, maxScore: 20 });
     });
 
-    it("should not call onScoreReceived for invalid score format", async () => {
+    it("should not call onScoreReceived for invalid score format", () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
 
@@ -76,7 +75,7 @@ describe("H5PQuiz", () => {
       expect(onScoreReceived).not.toHaveBeenCalled();
     });
 
-    it("should show score registered message after manual submission", async () => {
+    it("should show confirmation message after submission", async () => {
       const onScoreReceived = vi.fn();
       render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
 
@@ -90,13 +89,12 @@ describe("H5PQuiz", () => {
     });
   });
 
-  describe("H5P resize messages", () => {
+  describe("H5P resize", () => {
     it("should adjust height when receiving resize message", async () => {
       render(<H5PQuiz {...defaultProps} />);
 
       const iframe = document.querySelector("iframe");
 
-      // Simulate H5P resize message
       const resizeEvent = new MessageEvent("message", {
         origin: "https://fle-rfi.h5p.com",
         data: { context: "h5p", action: "resize", scrollHeight: 1200 },
@@ -104,8 +102,7 @@ describe("H5PQuiz", () => {
       window.dispatchEvent(resizeEvent);
 
       await waitFor(() => {
-        const newHeight = iframe?.style.height;
-        expect(newHeight).toBe("1250px"); // 1200 + 50 padding
+        expect(iframe?.style.height).toBe("1250px");
       });
     });
 
@@ -114,7 +111,6 @@ describe("H5PQuiz", () => {
 
       const iframe = document.querySelector("iframe");
 
-      // Simulate H5P resize message with small height
       const resizeEvent = new MessageEvent("message", {
         origin: "https://fle-rfi.h5p.com",
         data: { context: "h5p", action: "resize", scrollHeight: 300 },
@@ -122,7 +118,6 @@ describe("H5PQuiz", () => {
       window.dispatchEvent(resizeEvent);
 
       await waitFor(() => {
-        // Should remain at default height (800px) since 300 < MIN_HEIGHT (600)
         expect(iframe?.style.height).toBe("800px");
       });
     });
@@ -132,7 +127,6 @@ describe("H5PQuiz", () => {
 
       const iframe = document.querySelector("iframe");
 
-      // Simulate message from different origin
       const resizeEvent = new MessageEvent("message", {
         origin: "https://example.com",
         data: { context: "h5p", action: "resize", scrollHeight: 1500 },
@@ -140,54 +134,7 @@ describe("H5PQuiz", () => {
       window.dispatchEvent(resizeEvent);
 
       await waitFor(() => {
-        // Height should remain unchanged
         expect(iframe?.style.height).toBe("800px");
-      });
-    });
-  });
-
-  describe("xAPI score detection", () => {
-    it("should detect and report xAPI score", async () => {
-      const onScoreReceived = vi.fn();
-      render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
-
-      // Simulate xAPI completed event
-      const xapiEvent = new MessageEvent("message", {
-        origin: "https://fle-rfi.h5p.com",
-        data: {
-          statement: {
-            result: {
-              score: { raw: 20, max: 25 },
-            },
-          },
-        },
-      });
-      window.dispatchEvent(xapiEvent);
-
-      await waitFor(() => {
-        expect(onScoreReceived).toHaveBeenCalledWith({ score: 20, maxScore: 25 });
-      });
-    });
-
-    it("should show score registered message after xAPI detection", async () => {
-      const onScoreReceived = vi.fn();
-      render(<H5PQuiz {...defaultProps} onScoreReceived={onScoreReceived} />);
-
-      // Simulate xAPI completed event
-      const xapiEvent = new MessageEvent("message", {
-        origin: "https://fle-rfi.h5p.com",
-        data: {
-          statement: {
-            result: {
-              score: { raw: 20, max: 25 },
-            },
-          },
-        },
-      });
-      window.dispatchEvent(xapiEvent);
-
-      await waitFor(() => {
-        expect(screen.getByText(/Score enregistré/)).toBeInTheDocument();
       });
     });
   });

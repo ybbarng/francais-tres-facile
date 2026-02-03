@@ -12,7 +12,7 @@ interface H5PQuizProps {
 }
 
 export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuizProps) {
-  const [autoScoreDetected, setAutoScoreDetected] = useState(false);
+  const [scoreSubmitted, setScoreSubmitted] = useState(false);
   const [manualScore, setManualScore] = useState("");
   const [iframeHeight, setIframeHeight] = useState(DEFAULT_HEIGHT);
 
@@ -28,16 +28,15 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
     }
   }, []);
 
-  // H5P 메시지 리스너 (xAPI 결과 + resize)
+  // H5P resize 메시지 리스너
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      // H5P 도메인 확인
       if (!event.origin.includes("h5p")) return;
 
       try {
         const data = event.data;
 
-        // H5P resize 메시지 감지 (다양한 형식 처리)
+        // H5P resize 메시지 감지
         if (data?.context === "h5p" && data?.action === "resize") {
           const newHeight = data.scrollHeight || data.height;
           if (newHeight && newHeight > MIN_HEIGHT) {
@@ -70,13 +69,6 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
             }
           }
         }
-
-        // xAPI 결과 감지
-        if (data?.statement?.result?.score) {
-          const { raw, max } = data.statement.result.score;
-          setAutoScoreDetected(true);
-          onScoreReceived?.({ score: raw, maxScore: max });
-        }
       } catch {
         // 파싱 실패 무시
       }
@@ -84,15 +76,15 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
 
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
-  }, [onScoreReceived]);
+  }, []);
 
-  const handleManualScoreSubmit = useCallback(() => {
+  const handleScoreSubmit = useCallback(() => {
     const match = manualScore.match(/(\d+)\s*\/\s*(\d+)/);
     if (match) {
       const score = parseInt(match[1], 10);
       const maxScore = parseInt(match[2], 10);
       onScoreReceived?.({ score, maxScore });
-      setAutoScoreDetected(true);
+      setScoreSubmitted(true);
     }
   }, [manualScore, onScoreReceived]);
 
@@ -110,9 +102,9 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
         scrolling="no"
       />
 
-      {/* 점수 입력/표시 */}
+      {/* 점수 입력 */}
       <div className="mt-4">
-        {autoScoreDetected ? (
+        {scoreSubmitted ? (
           <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
             <p className="text-sm text-green-800">✓ Score enregistré</p>
           </div>
@@ -131,7 +123,7 @@ export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuiz
                          focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
               <button
-                onClick={handleManualScoreSubmit}
+                onClick={handleScoreSubmit}
                 className="px-4 py-2 bg-blue-600 text-white rounded-lg
                          hover:bg-blue-700 transition-colors"
               >
