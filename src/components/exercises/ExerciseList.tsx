@@ -1,6 +1,14 @@
 "use client";
 
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
+import {
+  Pagination,
+  PaginationButton,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+} from "@/components/ui/pagination";
 import type { ExerciseWithProgress } from "@/types";
 import ExerciseCard from "./ExerciseCard";
 
@@ -300,123 +308,106 @@ export default function ExerciseList({ initialExercises = [] }: ExerciseListProp
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-1 mt-8">
-              {/* First & Previous */}
-              <button
-                type="button"
-                onClick={() => setPage(1)}
-                disabled={page === 1}
-                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
-                         disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                title="Première page"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={() => setPage((p) => Math.max(1, p - 1))}
-                disabled={page === 1}
-                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
-                         disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                title="Page précédente"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
+            <Pagination className="mt-8">
+              <PaginationContent>
+                {/* First */}
+                <PaginationItem>
+                  <PaginationButton
+                    onClick={() => setPage(1)}
+                    disabled={page === 1}
+                    aria-label="Première page"
+                  >
+                    <ChevronsLeft className="h-4 w-4" />
+                  </PaginationButton>
+                </PaginationItem>
 
-              {/* Page Numbers */}
-              {(() => {
-                const pages: (number | string)[] = [];
-                const showPages = 5;
-                let start = Math.max(1, page - Math.floor(showPages / 2));
-                const end = Math.min(totalPages, start + showPages - 1);
-                start = Math.max(1, end - showPages + 1);
+                {/* Previous */}
+                <PaginationItem>
+                  <PaginationButton
+                    onClick={() => setPage((p) => Math.max(1, p - 1))}
+                    disabled={page === 1}
+                    aria-label="Page précédente"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                  </PaginationButton>
+                </PaginationItem>
 
-                if (start > 1) {
-                  pages.push(1);
-                  if (start > 2) pages.push("...");
-                }
+                {/* Page Numbers */}
+                {(() => {
+                  const items: React.ReactNode[] = [];
+                  const showPages = 5;
+                  let start = Math.max(1, page - Math.floor(showPages / 2));
+                  const end = Math.min(totalPages, start + showPages - 1);
+                  start = Math.max(1, end - showPages + 1);
 
-                for (let i = start; i <= end; i++) {
-                  pages.push(i);
-                }
+                  if (start > 1) {
+                    items.push(
+                      <PaginationItem key={1}>
+                        <PaginationButton onClick={() => setPage(1)}>1</PaginationButton>
+                      </PaginationItem>
+                    );
+                    if (start > 2) {
+                      items.push(
+                        <PaginationItem key="ellipsis-start">
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                      );
+                    }
+                  }
 
-                if (end < totalPages) {
-                  if (end < totalPages - 1) pages.push("...");
-                  pages.push(totalPages);
-                }
+                  for (let i = start; i <= end; i++) {
+                    items.push(
+                      <PaginationItem key={i}>
+                        <PaginationButton onClick={() => setPage(i)} isActive={i === page}>
+                          {i}
+                        </PaginationButton>
+                      </PaginationItem>
+                    );
+                  }
 
-                return pages.map((p, idx) =>
-                  typeof p === "string" ? (
-                    <span key={`ellipsis-${idx}`} className="px-2 py-2 text-gray-400">
-                      {p}
-                    </span>
-                  ) : (
-                    <button
-                      key={p}
-                      type="button"
-                      onClick={() => setPage(p)}
-                      className={`min-w-[40px] px-3 py-2 rounded-lg transition-colors ${
-                        p === page
-                          ? "bg-blue-600 text-white"
-                          : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-                      }`}
-                    >
-                      {p}
-                    </button>
-                  )
-                );
-              })()}
+                  if (end < totalPages) {
+                    if (end < totalPages - 1) {
+                      items.push(
+                        <PaginationItem key="ellipsis-end">
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                      );
+                    }
+                    items.push(
+                      <PaginationItem key={totalPages}>
+                        <PaginationButton onClick={() => setPage(totalPages)}>
+                          {totalPages}
+                        </PaginationButton>
+                      </PaginationItem>
+                    );
+                  }
 
-              {/* Next & Last */}
-              <button
-                type="button"
-                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-                disabled={page === totalPages}
-                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
-                         disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                title="Page suivante"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={() => setPage(totalPages)}
-                disabled={page === totalPages}
-                className="px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200
-                         disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                title="Dernière page"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 5l7 7-7 7M5 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-            </div>
+                  return items;
+                })()}
+
+                {/* Next */}
+                <PaginationItem>
+                  <PaginationButton
+                    onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                    disabled={page === totalPages}
+                    aria-label="Page suivante"
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </PaginationButton>
+                </PaginationItem>
+
+                {/* Last */}
+                <PaginationItem>
+                  <PaginationButton
+                    onClick={() => setPage(totalPages)}
+                    disabled={page === totalPages}
+                    aria-label="Dernière page"
+                  >
+                    <ChevronsRight className="h-4 w-4" />
+                  </PaginationButton>
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
           )}
         </>
       )}
