@@ -205,6 +205,17 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         </div>
       </div>
 
+      {/* Thumbnail */}
+      {exercise.thumbnailUrl && (
+        <div className="mb-6">
+          <img
+            src={exercise.thumbnailUrl}
+            alt={exercise.title}
+            className="w-full max-h-80 object-cover rounded-lg"
+          />
+        </div>
+      )}
+
       {/* Progress info */}
       {exercise.progress &&
         (exercise.progress.score !== null || exercise.progress.listenCount > 0) && (
