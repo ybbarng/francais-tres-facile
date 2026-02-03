@@ -11,6 +11,7 @@ export interface ScrapedExercise {
   audioUrl: string | null;
   h5pEmbedUrl: string | null;
   thumbnailUrl: string | null;
+  transcript: string | null;
   publishedAt: Date | null;
 }
 
@@ -208,6 +209,7 @@ export async function scrapeCategoryPage(
       audioUrl: null,
       h5pEmbedUrl: null,
       thumbnailUrl,
+      transcript: null,
       publishedAt,
     });
   });
@@ -379,11 +381,33 @@ export async function scrapeExerciseDetail(sourceUrl: string): Promise<Partial<S
   // Title from h1
   const title = $("h1").first().text().trim() || undefined;
 
+  // Transcript extraction
+  let transcript: string | null = null;
+  const articleText = $("article").text();
+
+  // Look for transcript section - it's between "Transcription\nOuvrir le PDF" and "Voir plus" or end
+  const transcriptMatch = articleText.match(
+    /Transcription\s*Ouvrir le PDF\s*([\s\S]*?)(?:Voir plus|Partager|$)/
+  );
+  if (transcriptMatch) {
+    transcript = transcriptMatch[1]
+      .trim()
+      .replace(/\s+/g, " ") // Normalize whitespace
+      .replace(/\s*\[([^\]]+)\]\s*/g, "\n[$1]\n") // Format bracketed text on new lines
+      .trim();
+
+    // Only keep if it has meaningful content
+    if (transcript.length < 50) {
+      transcript = null;
+    }
+  }
+
   return {
     audioUrl,
     h5pEmbedUrl,
     level,
     title,
+    transcript,
   };
 }
 
@@ -464,6 +488,7 @@ export async function scrapeAllExercises(): Promise<ScrapedExercise[]> {
       if (details.audioUrl) exercise.audioUrl = details.audioUrl;
       if (details.h5pEmbedUrl) exercise.h5pEmbedUrl = details.h5pEmbedUrl;
       if (details.title) exercise.title = details.title;
+      if (details.transcript) exercise.transcript = details.transcript;
       detailsCount++;
 
       if (detailsCount % 20 === 0) {

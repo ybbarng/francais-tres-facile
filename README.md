@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Français Très Facile
 
-## Getting Started
+RFI(Radio France Internationale) 프랑스어 학습 콘텐츠를 더 편리하게 학습할 수 있는 웹앱입니다.
 
-First, run the development server:
+## 주요 기능
+
+- RFI 학습 콘텐츠 동기화 (H5P 퀴즈, 오디오, 스크립트)
+- 학습 진도 추적 (완료 상태, 점수, 메모)
+- 레벨별 필터링 (A1, A2, B1, B2)
+- 퀴즈 자동 크기 조절
+- 스크립트(Transcription) 표시
+
+## 시작하기
+
+### 설치
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 데이터베이스 설정
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm prisma migrate dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 개발 서버 실행
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+[http://localhost:3000](http://localhost:3000)에서 앱을 확인할 수 있습니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 동기화 명령어
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+RFI 사이트에서 콘텐츠를 가져오는 동기화 스크립트입니다.
 
-## Deploy on Vercel
+```bash
+# 도움말
+pnpm sync help
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 전체 동기화 (모든 섹션 스크래핑 + H5P 추출)
+pnpm sync full
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# H5P URL만 업데이트 (기본값)
+pnpm sync update-h5p
+
+# 스크립트(Transcription)만 업데이트
+pnpm sync update-transcript
+```
+
+## 테스트
+
+```bash
+pnpm test
+```
+
+## 린트
+
+```bash
+pnpm lint
+```
+
+## 기술 스택
+
+- **프레임워크**: Next.js 15 (App Router)
+- **언어**: TypeScript
+- **스타일링**: Tailwind CSS
+- **데이터베이스**: SQLite + Prisma ORM
+- **테스트**: Vitest + React Testing Library
+- **크롤링**: Cheerio + Playwright (H5P 추출)

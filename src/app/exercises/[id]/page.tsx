@@ -303,6 +303,18 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         </div>
       )}
 
+      {/* Transcript */}
+      {exercise.transcript && (
+        <div className="mb-8">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Transcription</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p className="text-gray-700 whitespace-pre-line leading-relaxed">
+              {exercise.transcript}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Notes */}
       <div className="mb-8">
         <h2 className="text-lg font-semibold text-gray-900 mb-4">Notes</h2>

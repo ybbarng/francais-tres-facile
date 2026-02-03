@@ -196,6 +196,7 @@ async function saveExercises(
             audioUrl: exercise.audioUrl,
             h5pEmbedUrl: exercise.h5pEmbedUrl,
             thumbnailUrl: exercise.thumbnailUrl,
+            transcript: exercise.transcript,
             publishedAt: exercise.publishedAt,
           },
         });
@@ -211,6 +212,7 @@ async function saveExercises(
             audioUrl: exercise.audioUrl,
             h5pEmbedUrl: exercise.h5pEmbedUrl,
             thumbnailUrl: exercise.thumbnailUrl,
+            transcript: exercise.transcript,
             publishedAt: exercise.publishedAt,
           },
         });
@@ -277,6 +279,72 @@ async function updateMissingH5P(): Promise<void> {
 }
 
 /**
+ * Update transcripts for existing exercises that don't have them
+ */
+async function updateMissingTranscripts(): Promise<void> {
+  console.log("\n========================================");
+  console.log("Updating exercises without transcripts...");
+  console.log("========================================\n");
+
+  const exercisesWithoutTranscript = await prisma.exercise.findMany({
+    where: { transcript: null },
+    orderBy: { publishedAt: "desc" },
+  });
+
+  if (exercisesWithoutTranscript.length === 0) {
+    console.log("All exercises already have transcripts!");
+    return;
+  }
+
+  console.log(`Found ${exercisesWithoutTranscript.length} exercises without transcripts`);
+
+  let updated = 0;
+  let failed = 0;
+
+  for (let i = 0; i < exercisesWithoutTranscript.length; i++) {
+    const exercise = exercisesWithoutTranscript[i];
+
+    try {
+      const { scrapeExerciseDetail } = await import("../src/lib/scraper");
+      const details = await scrapeExerciseDetail(exercise.sourceUrl);
+
+      if (details.transcript) {
+        await prisma.exercise.update({
+          where: { id: exercise.id },
+          data: { transcript: details.transcript },
+        });
+        updated++;
+        console.log(
+          `  ✓ [${i + 1}/${exercisesWithoutTranscript.length}] ${exercise.title.substring(0, 40)}...`
+        );
+      } else {
+        console.log(
+          `  - [${i + 1}/${exercisesWithoutTranscript.length}] No transcript: ${exercise.title.substring(0, 40)}...`
+        );
+      }
+
+      // Rate limiting
+      await new Promise((resolve) => setTimeout(resolve, 300));
+    } catch (_error) {
+      failed++;
+      console.error(
+        `  ✗ [${i + 1}/${exercisesWithoutTranscript.length}] Failed: ${exercise.sourceUrl}`
+      );
+    }
+
+    // Progress update every 20 exercises
+    if ((i + 1) % 20 === 0) {
+      console.log(`  Progress: ${i + 1}/${exercisesWithoutTranscript.length} (${updated} updated)`);
+    }
+  }
+
+  console.log(`\nUpdated ${updated} exercises with transcripts`);
+  if (failed > 0) {
+    console.log(`Failed: ${failed} exercises`);
+  }
+}
+
+/**
  * Full sync: scrape all sections and fetch H5P details
  */
 async function fullSync(): Promise<void> {
@@ -336,13 +404,18 @@ async function main(): Promise<void> {
         await updateMissingH5P();
         break;
 
+      case "update-transcript":
+        await updateMissingTranscripts();
+        break;
+
       case "help":
         console.log("Usage: pnpm sync [command]");
         console.log("");
         console.log("Commands:");
-        console.log("  full       - Full sync: scrape all sections + fetch H5P");
-        console.log("  update-h5p - Update H5P URLs for existing exercises (default)");
-        console.log("  help       - Show this help");
+        console.log("  full              - Full sync: scrape all sections + fetch H5P");
+        console.log("  update-h5p        - Update H5P URLs for existing exercises (default)");
+        console.log("  update-transcript - Update transcripts for existing exercises");
+        console.log("  help              - Show this help");
         break;
 
       default:

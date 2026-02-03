@@ -185,6 +185,41 @@ describe("scrapeExerciseDetail", () => {
 
     expect(details.title).toBe("Dernier adieu à Brigitte Bardot");
   });
+
+  it("should extract transcript from page content", async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => mockDetail,
+    });
+
+    const details = await scrapeExerciseDetail("https://example.com/exercise");
+
+    expect(details.transcript).not.toBeNull();
+    expect(details.transcript).toContain("Brigitte Bardot");
+    expect(details.transcript).toContain("Saint-Tropez");
+    // Bracketed text should be on its own line
+    expect(details.transcript).toContain("\n[Extrait de « Initials B.B. »]\n");
+  });
+
+  it("should return null transcript if content is too short", async () => {
+    const shortTranscriptHtml = `
+      <article>
+        <h1>Test</h1>
+        <h2>Transcription</h2>
+        <a href="#">Ouvrir le PDF</a>
+        Short text.
+        <a href="#">Voir plus</a>
+      </article>
+    `;
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      text: async () => shortTranscriptHtml,
+    });
+
+    const details = await scrapeExerciseDetail("https://example.com/exercise");
+
+    expect(details.transcript).toBeNull();
+  });
 });
 
 describe("scrapeCategory", () => {
