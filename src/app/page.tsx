@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, ChevronRight, Headphones, Music, Star, Volume2 } from "lucide-react";
+import { BookOpen, ChevronRight, ListChecks, Music, Star, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -224,7 +224,7 @@ export default function DashboardPage() {
 
                     <div className="flex items-center gap-2 text-muted-foreground shrink-0">
                       {exercise.audioUrl && <Volume2 className="w-5 h-5" />}
-                      {exercise.h5pEmbedUrl && <Headphones className="w-5 h-5" />}
+                      {exercise.h5pEmbedUrl && <ListChecks className="w-5 h-5" />}
                       <ChevronRight className="w-5 h-5" />
                     </div>
                   </Link>

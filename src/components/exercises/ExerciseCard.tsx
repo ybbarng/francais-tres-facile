@@ -1,4 +1,4 @@
-import { Check, Headphones, Star, Volume2 } from "lucide-react";
+import { Check, ListChecks, Star, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -76,7 +76,7 @@ export default function ExerciseCard({ exercise }: ExerciseCardProps) {
               )}
               {exercise.h5pEmbedUrl && (
                 <span className="flex items-center gap-1" title="Quiz disponible">
-                  <Headphones className="w-4 h-4" />
+                  <ListChecks className="w-4 h-4" />
                 </span>
               )}
             </div>
