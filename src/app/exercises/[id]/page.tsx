@@ -164,6 +164,11 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
                   · {new Date(exercise.publishedAt).toLocaleDateString("fr-FR")}
                 </span>
               )}
+              {(!exercise.audioUrl || !exercise.transcript) && (
+                <span className="px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-700">
+                  Atypique
+                </span>
+              )}
             </div>
             <h1 className="text-2xl font-bold text-gray-900">{exercise.title}</h1>
           </div>

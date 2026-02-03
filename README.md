@@ -9,6 +9,7 @@ RFI(Radio France Internationale) 프랑스어 학습 콘텐츠를 더 편리하�
 - 레벨별 필터링 (A1, A2, B1, B2)
 - 퀴즈 자동 크기 조절
 - 스크립트(Transcription) 표시
+- 비전형적 콘텐츠 표시 (오디오/스크립트 누락 시 "Atypique" 배지)
 
 ## 시작하기
 
@@ -64,7 +65,7 @@ pnpm lint
 
 ## 기술 스택
 
-- **프레임워크**: Next.js 15 (App Router)
+- **프레임워크**: Next.js 16 (App Router)
 - **언어**: TypeScript
 - **스타일링**: Tailwind CSS
 - **데이터베이스**: SQLite + Prisma ORM

@@ -58,6 +58,11 @@ export default function ExerciseCard({ exercise }: ExerciseCardProps) {
               {exercise.level}
             </span>
             <span className="text-xs text-gray-500">{exercise.category}</span>
+            {(!exercise.audioUrl || !exercise.transcript) && (
+              <span className="px-1.5 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-700">
+                Atypique
+              </span>
+            )}
           </div>
 
           <h3 className="font-medium text-gray-900 line-clamp-2 mb-2">{exercise.title}</h3>
