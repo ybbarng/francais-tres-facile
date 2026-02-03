@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, use, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { use, useCallback, useEffect, useState } from "react";
 import AudioPlayer from "@/components/AudioPlayer";
 import H5PQuiz from "@/components/H5PQuiz";
 import type { ExerciseWithProgress, ProgressInput } from "@/types";
@@ -41,29 +41,35 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
     fetchExercise();
   }, [id, router]);
 
-  const updateProgress = useCallback(async (data: ProgressInput) => {
-    setSaving(true);
-    try {
-      await fetch(`/api/progress/${id}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-    } catch (error) {
-      console.error("Failed to update progress:", error);
-    } finally {
-      setSaving(false);
-    }
-  }, [id]);
+  const updateProgress = useCallback(
+    async (data: ProgressInput) => {
+      setSaving(true);
+      try {
+        await fetch(`/api/progress/${id}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+      } catch (error) {
+        console.error("Failed to update progress:", error);
+      } finally {
+        setSaving(false);
+      }
+    },
+    [id]
+  );
 
-  const handleScoreReceived = useCallback((score: { score: number; maxScore: number }) => {
-    updateProgress({
-      score: score.score,
-      maxScore: score.maxScore,
-      completed: true,
-    });
-    setIsCompleted(true);
-  }, [updateProgress]);
+  const handleScoreReceived = useCallback(
+    (score: { score: number; maxScore: number }) => {
+      updateProgress({
+        score: score.score,
+        maxScore: score.maxScore,
+        completed: true,
+      });
+      setIsCompleted(true);
+    },
+    [updateProgress]
+  );
 
   const handlePlayCountUpdate = useCallback(() => {
     const currentCount = exercise?.progress?.listenCount || 0;
@@ -94,11 +100,7 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
   }
 
   if (!exercise) {
-    return (
-      <div className="text-center py-12 text-gray-500">
-        Exercice introuvable.
-      </div>
-    );
+    return <div className="text-center py-12 text-gray-500">Exercice introuvable.</div>;
   }
 
   return (
@@ -110,7 +112,12 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
           className="text-blue-600 hover:text-blue-700 flex items-center gap-1 mb-4"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
           Retour à la liste
         </button>
@@ -118,13 +125,19 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className={`px-2 py-0.5 rounded text-xs font-medium ${
-                exercise.level === "A1" ? "bg-green-100 text-green-700" :
-                exercise.level === "A2" ? "bg-blue-100 text-blue-700" :
-                exercise.level === "B1" ? "bg-yellow-100 text-yellow-700" :
-                exercise.level === "B2" ? "bg-orange-100 text-orange-700" :
-                "bg-gray-100 text-gray-700"
-              }`}>
+              <span
+                className={`px-2 py-0.5 rounded text-xs font-medium ${
+                  exercise.level === "A1"
+                    ? "bg-green-100 text-green-700"
+                    : exercise.level === "A2"
+                      ? "bg-blue-100 text-blue-700"
+                      : exercise.level === "B1"
+                        ? "bg-yellow-100 text-yellow-700"
+                        : exercise.level === "B2"
+                          ? "bg-orange-100 text-orange-700"
+                          : "bg-gray-100 text-gray-700"
+                }`}
+              >
                 {exercise.level}
               </span>
               <span className="text-sm text-gray-500">{exercise.category}</span>
@@ -149,14 +162,23 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
             {isCompleted ? (
               <>
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 Terminé
               </>
             ) : (
               <>
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
                 Marquer terminé
               </>
@@ -166,22 +188,27 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
       </div>
 
       {/* Progress info */}
-      {exercise.progress && (exercise.progress.score !== null || exercise.progress.listenCount > 0) && (
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-          <h3 className="font-medium text-blue-900 mb-2">Historique d'apprentissage</h3>
-          <div className="flex gap-6 text-sm text-blue-700">
-            {exercise.progress.score !== null && exercise.progress.maxScore && (
-              <span>Score du quiz : {exercise.progress.score}/{exercise.progress.maxScore}</span>
-            )}
-            {exercise.progress.listenCount > 0 && (
-              <span>Écoutes : {exercise.progress.listenCount} fois</span>
-            )}
-            {exercise.progress.completedAt && (
-              <span>Terminé le : {new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR")}</span>
-            )}
+      {exercise.progress &&
+        (exercise.progress.score !== null || exercise.progress.listenCount > 0) && (
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+            <h3 className="font-medium text-blue-900 mb-2">Historique d'apprentissage</h3>
+            <div className="flex gap-6 text-sm text-blue-700">
+              {exercise.progress.score !== null && exercise.progress.maxScore && (
+                <span>
+                  Score du quiz : {exercise.progress.score}/{exercise.progress.maxScore}
+                </span>
+              )}
+              {exercise.progress.listenCount > 0 && (
+                <span>Écoutes : {exercise.progress.listenCount} fois</span>
+              )}
+              {exercise.progress.completedAt && (
+                <span>
+                  Terminé le : {new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR")}
+                </span>
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
       {/* Audio Player */}
       {exercise.audioUrl && (
@@ -242,7 +269,12 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         >
           Voir sur le site RFI
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
           </svg>
         </a>
       </div>

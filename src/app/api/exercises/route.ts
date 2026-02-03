@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 
 export async function GET(request: NextRequest) {
@@ -8,8 +8,8 @@ export async function GET(request: NextRequest) {
     const category = searchParams.get("category");
     const completed = searchParams.get("completed");
     const search = searchParams.get("search");
-    const page = parseInt(searchParams.get("page") || "1");
-    const limit = parseInt(searchParams.get("limit") || "20");
+    const page = parseInt(searchParams.get("page") || "1", 10);
+    const limit = parseInt(searchParams.get("limit") || "20", 10);
 
     const where: Record<string, unknown> = {};
 
@@ -29,10 +29,7 @@ export async function GET(request: NextRequest) {
       if (completed === "true") {
         where.progress = { completed: true };
       } else if (completed === "false") {
-        where.OR = [
-          { progress: null },
-          { progress: { completed: false } },
-        ];
+        where.OR = [{ progress: null }, { progress: { completed: false } }];
       }
     }
 
@@ -58,9 +55,6 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error("Error fetching exercises:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch exercises" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to fetch exercises" }, { status: 500 });
   }
 }

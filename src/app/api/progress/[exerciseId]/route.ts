@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import type { ProgressInput } from "@/types";
 
@@ -6,10 +6,7 @@ type RouteContext = {
   params: Promise<{ exerciseId: string }>;
 };
 
-export async function GET(
-  request: NextRequest,
-  context: RouteContext
-) {
+export async function GET(request: NextRequest, context: RouteContext) {
   try {
     const { exerciseId } = await context.params;
 
@@ -25,17 +22,11 @@ export async function GET(
     return NextResponse.json(progress);
   } catch (error) {
     console.error("Error fetching progress:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch progress" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to fetch progress" }, { status: 500 });
   }
 }
 
-export async function POST(
-  request: NextRequest,
-  context: RouteContext
-) {
+export async function POST(request: NextRequest, context: RouteContext) {
   try {
     const { exerciseId } = await context.params;
     const body: ProgressInput = await request.json();
@@ -46,10 +37,7 @@ export async function POST(
     });
 
     if (!exercise) {
-      return NextResponse.json(
-        { error: "Exercise not found" },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "Exercise not found" }, { status: 404 });
     }
 
     const progress = await prisma.progress.upsert({
@@ -68,17 +56,11 @@ export async function POST(
     return NextResponse.json(progress);
   } catch (error) {
     console.error("Error updating progress:", error);
-    return NextResponse.json(
-      { error: "Failed to update progress" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to update progress" }, { status: 500 });
   }
 }
 
-export async function PATCH(
-  request: NextRequest,
-  context: RouteContext
-) {
+export async function PATCH(request: NextRequest, context: RouteContext) {
   try {
     const { exerciseId } = await context.params;
     const body: ProgressInput = await request.json();
@@ -88,10 +70,7 @@ export async function PATCH(
     });
 
     if (!existing) {
-      return NextResponse.json(
-        { error: "Progress not found" },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: "Progress not found" }, { status: 404 });
     }
 
     const progress = await prisma.progress.update({
@@ -105,9 +84,6 @@ export async function PATCH(
     return NextResponse.json(progress);
   } catch (error) {
     console.error("Error updating progress:", error);
-    return NextResponse.json(
-      { error: "Failed to update progress" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "Failed to update progress" }, { status: 500 });
   }
 }

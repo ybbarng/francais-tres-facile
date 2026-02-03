@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { ExerciseWithProgress } from "@/types";
 
 interface PlaylistProps {
@@ -70,7 +70,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
     if (isPlaying) {
       audio.play();
     }
-  }, [currentIndex, currentExercise?.audioUrl, isPlaying]);
+  }, [currentExercise?.audioUrl, isPlaying]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -127,9 +127,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
 
   if (exercisesWithAudio.length === 0) {
     return (
-      <div className="text-center py-12 text-gray-500">
-        Aucun exercice avec audio disponible.
-      </div>
+      <div className="text-center py-12 text-gray-500">Aucun exercice avec audio disponible.</div>
     );
   }
 
@@ -143,9 +141,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
           {currentExercise && (
             <>
               <div className="mb-6">
-                <h3 className="font-medium text-gray-900 line-clamp-2">
-                  {currentExercise.title}
-                </h3>
+                <h3 className="font-medium text-gray-900 line-clamp-2">{currentExercise.title}</h3>
                 <p className="text-sm text-gray-500 mt-1">
                   {currentExercise.level} · {currentExercise.category}
                 </p>
@@ -224,7 +220,13 @@ export default function Playlist({ exercises }: PlaylistProps) {
                   className={`p-2 rounded-full transition-colors ${
                     repeat !== "none" ? "text-blue-600" : "text-gray-400 hover:text-gray-600"
                   }`}
-                  title={repeat === "one" ? "Répéter un titre" : repeat === "all" ? "Répéter tout" : "Pas de répétition"}
+                  title={
+                    repeat === "one"
+                      ? "Répéter un titre"
+                      : repeat === "all"
+                        ? "Répéter tout"
+                        : "Pas de répétition"
+                  }
                 >
                   {repeat === "one" ? (
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -274,19 +276,23 @@ export default function Playlist({ exercises }: PlaylistProps) {
                 key={exercise.id}
                 onClick={() => selectTrack(index)}
                 className={`p-4 cursor-pointer transition-colors ${
-                  index === currentIndex
-                    ? "bg-blue-50"
-                    : "hover:bg-gray-50"
+                  index === currentIndex ? "bg-blue-50" : "hover:bg-gray-50"
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm ${
-                    index === currentIndex
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-100 text-gray-600"
-                  }`}>
+                  <span
+                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm ${
+                      index === currentIndex
+                        ? "bg-blue-600 text-white"
+                        : "bg-gray-100 text-gray-600"
+                    }`}
+                  >
                     {index === currentIndex && isPlaying ? (
-                      <svg className="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-4 h-4 animate-pulse"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
                       </svg>
                     ) : (
@@ -294,9 +300,11 @@ export default function Playlist({ exercises }: PlaylistProps) {
                     )}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <p className={`font-medium truncate ${
-                      index === currentIndex ? "text-blue-600" : "text-gray-900"
-                    }`}>
+                    <p
+                      className={`font-medium truncate ${
+                        index === currentIndex ? "text-blue-600" : "text-gray-900"
+                      }`}
+                    >
                       {exercise.title}
                     </p>
                     <p className="text-sm text-gray-500">
@@ -306,7 +314,11 @@ export default function Playlist({ exercises }: PlaylistProps) {
                   {exercise.progress?.completed && (
                     <span className="text-green-500">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </span>
                   )}

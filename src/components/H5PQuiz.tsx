@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface H5PQuizProps {
   h5pUrl: string;
@@ -8,11 +8,7 @@ interface H5PQuizProps {
   onScoreReceived?: (score: { score: number; maxScore: number }) => void;
 }
 
-export default function H5PQuiz({
-  h5pUrl,
-  exerciseId,
-  onScoreReceived,
-}: H5PQuizProps) {
+export default function H5PQuiz({ h5pUrl, exerciseId, onScoreReceived }: H5PQuizProps) {
   const [quizActive, setQuizActive] = useState(false);
   const [autoScoreDetected, setAutoScoreDetected] = useState(false);
   const [manualScore, setManualScore] = useState("");
@@ -43,8 +39,8 @@ export default function H5PQuiz({
   const handleManualScoreSubmit = useCallback(() => {
     const match = manualScore.match(/(\d+)\s*\/\s*(\d+)/);
     if (match) {
-      const score = parseInt(match[1]);
-      const maxScore = parseInt(match[2]);
+      const score = parseInt(match[1], 10);
+      const maxScore = parseInt(match[2], 10);
       onScoreReceived?.({ score, maxScore });
     }
   }, [manualScore, onScoreReceived]);
@@ -60,9 +56,7 @@ export default function H5PQuiz({
         >
           <span className="text-4xl mb-4">🎯</span>
           <span className="text-xl font-bold">Commencer le quiz</span>
-          <span className="text-sm mt-2 text-gray-200">
-            Cliquez pour passer en mode quiz
-          </span>
+          <span className="text-sm mt-2 text-gray-200">Cliquez pour passer en mode quiz</span>
         </button>
       )}
 
@@ -118,9 +112,7 @@ export default function H5PQuiz({
 
           {autoScoreDetected && (
             <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-              <p className="text-sm text-green-800">
-                ✓ Score détecté automatiquement
-              </p>
+              <p className="text-sm text-green-800">✓ Score détecté automatiquement</p>
             </div>
           )}
         </div>

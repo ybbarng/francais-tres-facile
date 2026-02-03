@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import { RFI_HEADERS, RFI_BASE_URL, RFI_EXERCICES_URL } from "./rfi-headers";
+import { RFI_BASE_URL, RFI_EXERCICES_URL, RFI_HEADERS } from "./rfi-headers";
 
 export interface ScrapedExercise {
   title: string;
@@ -51,11 +51,11 @@ function extractDateFromUrl(url: string): Date | null {
 
 function extractLevelFromUrl(url: string): string {
   // Check if URL contains level indicators
-  if (url.includes('-a1') || url.includes('/a1')) return 'A1';
-  if (url.includes('-a2') || url.includes('/a2')) return 'A2';
-  if (url.includes('-b1') || url.includes('/b1')) return 'B1';
-  if (url.includes('-b2') || url.includes('/b2')) return 'B2';
-  return 'A2'; // Default
+  if (url.includes("-a1") || url.includes("/a1")) return "A1";
+  if (url.includes("-a2") || url.includes("/a2")) return "A2";
+  if (url.includes("-b1") || url.includes("/b1")) return "B1";
+  if (url.includes("-b2") || url.includes("/b2")) return "B2";
+  return "A2"; // Default
 }
 
 export async function scrapeExerciseList(
@@ -144,9 +144,11 @@ export async function scrapeExerciseList(
       if (seenUrls.has(sourceUrl)) return;
       seenUrls.add(sourceUrl);
 
-      const title = $el.find(".m-podcast-item__infos__edition h2").text().trim() ||
-                    $el.find("h2").first().text().trim() ||
-                    linkEl.attr("title") || "";
+      const title =
+        $el.find(".m-podcast-item__infos__edition h2").text().trim() ||
+        $el.find("h2").first().text().trim() ||
+        linkEl.attr("title") ||
+        "";
 
       if (!title) return;
 
@@ -171,16 +173,15 @@ export async function scrapeExerciseList(
 
   // Check for next page
   // Société A2 pagination: links like /société-a2/2/#pager
-  const hasMore = $(`a[href*="/${page + 1}/"]`).length > 0 ||
-                  $('a[rel="next"]').length > 0 ||
-                  $(".m-pagination__link--next").length > 0;
+  const hasMore =
+    $(`a[href*="/${page + 1}/"]`).length > 0 ||
+    $('a[rel="next"]').length > 0 ||
+    $(".m-pagination__link--next").length > 0;
 
   return { exercises, hasMore };
 }
 
-export async function scrapeExerciseDetail(
-  sourceUrl: string
-): Promise<Partial<ScrapedExercise>> {
+export async function scrapeExerciseDetail(sourceUrl: string): Promise<Partial<ScrapedExercise>> {
   const html = await fetchRFIPage(sourceUrl);
   const $ = cheerio.load(html);
 
@@ -195,8 +196,9 @@ export async function scrapeExerciseDetail(
 
   // 2. data attributes
   if (!audioUrl) {
-    const dataUrl = $("[data-url*='.mp3'], [data-audio*='.mp3']").attr("data-url") ||
-                    $("[data-url*='.mp3'], [data-audio*='.mp3']").attr("data-audio");
+    const dataUrl =
+      $("[data-url*='.mp3'], [data-audio*='.mp3']").attr("data-url") ||
+      $("[data-url*='.mp3'], [data-audio*='.mp3']").attr("data-audio");
     if (dataUrl) audioUrl = dataUrl;
   }
 
@@ -231,7 +233,9 @@ export async function scrapeExerciseDetail(
   }
 
   // Level extraction
-  const levelMatch = $("body").text().match(/\b(A1|A2|B1|B2|C1|C2)\b/i);
+  const levelMatch = $("body")
+    .text()
+    .match(/\b(A1|A2|B1|B2|C1|C2)\b/i);
   const level = levelMatch ? levelMatch[1].toUpperCase() : undefined;
 
   // Title from h1

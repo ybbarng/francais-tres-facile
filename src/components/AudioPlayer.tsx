@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface AudioPlayerProps {
   audioUrl: string;
@@ -8,11 +8,7 @@ interface AudioPlayerProps {
   onPlayCountUpdate?: () => void;
 }
 
-export default function AudioPlayer({
-  audioUrl,
-  title,
-  onPlayCountUpdate,
-}: AudioPlayerProps) {
+export default function AudioPlayer({ audioUrl, title, onPlayCountUpdate }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -88,9 +84,7 @@ export default function AudioPlayer({
       <audio ref={audioRef} src={audioUrl} preload="metadata" />
 
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-sm font-medium text-gray-700 truncate flex-1">
-          {title}
-        </h3>
+        <h3 className="text-sm font-medium text-gray-700 truncate flex-1">{title}</h3>
       </div>
 
       {/* Progress bar */}
@@ -122,8 +116,18 @@ export default function AudioPlayer({
           className="p-2 rounded-full hover:bg-gray-100 transition-colors"
           title="-10 secondes"
         >
-          <svg className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+          <svg
+            className="w-6 h-6 text-gray-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"
+            />
           </svg>
         </button>
 
@@ -149,8 +153,18 @@ export default function AudioPlayer({
           className="p-2 rounded-full hover:bg-gray-100 transition-colors"
           title="+10 secondes"
         >
-          <svg className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
+          <svg
+            className="w-6 h-6 text-gray-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z"
+            />
           </svg>
         </button>
       </div>

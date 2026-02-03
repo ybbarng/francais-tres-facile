@@ -52,7 +52,12 @@ export default function ExercisesPage() {
           ) : (
             <>
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
               </svg>
               Synchroniser RFI
             </>
@@ -61,11 +66,13 @@ export default function ExercisesPage() {
       </div>
 
       {syncResult && (
-        <div className={`mb-6 p-4 rounded-lg ${
-          syncResult.errors.length > 0
-            ? "bg-yellow-50 border border-yellow-200"
-            : "bg-green-50 border border-green-200"
-        }`}>
+        <div
+          className={`mb-6 p-4 rounded-lg ${
+            syncResult.errors.length > 0
+              ? "bg-yellow-50 border border-yellow-200"
+              : "bg-green-50 border border-green-200"
+          }`}
+        >
           <p className="font-medium">
             Synchronisation terminée : {syncResult.added} ajouté(s), {syncResult.updated} mis à jour
           </p>

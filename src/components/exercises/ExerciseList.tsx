@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import ExerciseCard from "./ExerciseCard";
+import { useCallback, useEffect, useState } from "react";
 import type { ExerciseWithProgress } from "@/types";
+import ExerciseCard from "./ExerciseCard";
 
 interface ExerciseListProps {
   initialExercises?: ExerciseWithProgress[];
@@ -65,7 +65,10 @@ export default function ExerciseList({ initialExercises = [] }: ExerciseListProp
 
           <select
             value={level}
-            onChange={(e) => { setLevel(e.target.value); setPage(1); }}
+            onChange={(e) => {
+              setLevel(e.target.value);
+              setPage(1);
+            }}
             className="px-4 py-2 border border-gray-300 rounded-lg
                      focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
@@ -78,7 +81,10 @@ export default function ExerciseList({ initialExercises = [] }: ExerciseListProp
 
           <select
             value={completed}
-            onChange={(e) => { setCompleted(e.target.value); setPage(1); }}
+            onChange={(e) => {
+              setCompleted(e.target.value);
+              setPage(1);
+            }}
             className="px-4 py-2 border border-gray-300 rounded-lg
                      focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
