@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, CheckCircle2, ChevronRight, Headphones, Music, Volume2 } from "lucide-react";
+import { BookOpen, ChevronRight, Headphones, Music, Star, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -32,22 +32,24 @@ const levelVariant = (level: string) => {
 
 export default function DashboardPage() {
   const [stats, setStats] = useState<Stats | null>(null);
-  const [recentExercises, setRecentExercises] = useState<ExerciseWithProgress[]>([]);
+  const [recommendations, setRecommendations] = useState<ExerciseWithProgress[]>([]);
+  const [remainingCount, setRemainingCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [progressRes, exercisesRes] = await Promise.all([
+        const [progressRes, recommendationsRes] = await Promise.all([
           fetch("/api/progress"),
-          fetch("/api/exercises?limit=5"),
+          fetch("/api/exercises/recommendations"),
         ]);
 
         const progressData = await progressRes.json();
-        const exercisesData = await exercisesRes.json();
+        const recommendationsData = await recommendationsRes.json();
 
         setStats(progressData.stats);
-        setRecentExercises(exercisesData.exercises);
+        setRecommendations(recommendationsData.exercises);
+        setRemainingCount(recommendationsData.total);
       } catch (error) {
         console.error("Failed to fetch data:", error);
       } finally {
@@ -132,7 +134,7 @@ export default function DashboardPage() {
           </div>
           <div>
             <div className="text-lg font-semibold">Exercices</div>
-            <div className="text-primary-foreground/80 text-sm">Commencer à apprendre</div>
+            <div className="text-primary-foreground/80 text-sm">Voir tous les exercices</div>
           </div>
         </Link>
 
@@ -150,29 +152,37 @@ export default function DashboardPage() {
         </Link>
       </div>
 
-      {/* Recent Exercises */}
+      {/* Recommended Exercises (Uncompleted) */}
       <Card>
         <CardHeader className="flex flex-row items-center justify-between pb-2">
-          <CardTitle className="text-lg">Exercices récents</CardTitle>
+          <div>
+            <CardTitle className="text-lg">À faire</CardTitle>
+            <p className="text-sm text-muted-foreground mt-1">
+              Comprendre l'actualité · A2 · {remainingCount} exercices restants
+            </p>
+          </div>
           <Link href="/exercises" className="text-sm text-primary hover:underline">
             Voir tout →
           </Link>
         </CardHeader>
         <CardContent>
-          {recentExercises.length === 0 ? (
-            <div className="py-8 text-center text-muted-foreground">
-              <p>Aucun exercice disponible.</p>
-              <p className="text-sm mt-2">
-                Veuillez synchroniser avec RFI sur la page{" "}
-                <Link href="/exercises" className="text-primary hover:underline">
-                  Exercices
-                </Link>
-                .
+          {recommendations.length === 0 ? (
+            <div className="py-8 text-center">
+              <Star className="w-12 h-12 mx-auto text-amber-500 fill-amber-500 mb-3" />
+              <p className="font-medium text-lg">Félicitations !</p>
+              <p className="text-muted-foreground mt-1">
+                Vous avez terminé tous les exercices disponibles.
               </p>
+              <Link
+                href="/completed"
+                className="inline-block mt-4 text-primary hover:underline text-sm"
+              >
+                Voir vos exercices terminés →
+              </Link>
             </div>
           ) : (
             <ul className="divide-y divide-border -mx-6">
-              {recentExercises.map((exercise) => (
+              {recommendations.map((exercise) => (
                 <li key={exercise.id}>
                   <Link
                     href={`/exercises/${exercise.id}`}
@@ -187,12 +197,14 @@ export default function DashboardPage() {
                         >
                           {exercise.level}
                         </Badge>
-                        {exercise.progress?.completed && (
-                          <CheckCircle2 className="w-4 h-4 text-green-500" />
-                        )}
+                        <span className="text-xs text-muted-foreground">{exercise.category}</span>
                       </div>
                       <p className="font-medium truncate">{exercise.title}</p>
-                      <p className="text-sm text-muted-foreground">{exercise.category}</p>
+                      {exercise.publishedAt && (
+                        <p className="text-sm text-muted-foreground">
+                          {new Date(exercise.publishedAt).toLocaleDateString("fr-FR")}
+                        </p>
+                      )}
                     </div>
 
                     <div className="flex items-center gap-2 text-muted-foreground">
