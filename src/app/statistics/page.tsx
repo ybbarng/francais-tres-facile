@@ -21,6 +21,7 @@ interface Statistics {
   totalListenCount: number;
   firstCompletedAt: string | null;
   averagePerDay: number;
+  mostCompletedInOneDay: number;
   streak: {
     current: number;
     longest: number;
@@ -47,6 +48,7 @@ interface Statistics {
     lowestExerciseId: string | null;
     perfectScores: number;
   };
+  scoreDistribution: Record<string, number>;
 }
 
 // 간단한 막대 차트 컴포넌트
@@ -283,18 +285,24 @@ export default function StatisticsPage() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
-                <p className="text-3xl font-bold text-orange-600 dark:text-orange-400">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="text-center p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+                <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
                   {stats.streak.current}
                 </p>
-                <p className="text-sm text-muted-foreground">Série actuelle</p>
+                <p className="text-xs text-muted-foreground">Série actuelle</p>
               </div>
-              <div className="text-center p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
-                <p className="text-3xl font-bold text-amber-600 dark:text-amber-400">
+              <div className="text-center p-3 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+                <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">
                   {stats.streak.longest}
                 </p>
-                <p className="text-sm text-muted-foreground">Record</p>
+                <p className="text-xs text-muted-foreground">Record jours</p>
+              </div>
+              <div className="text-center p-3 bg-rose-50 dark:bg-rose-900/20 rounded-lg">
+                <p className="text-2xl font-bold text-rose-600 dark:text-rose-400">
+                  {stats.mostCompletedInOneDay}
+                </p>
+                <p className="text-xs text-muted-foreground">Max/jour</p>
               </div>
             </div>
             <div className="mt-4 text-sm text-muted-foreground">
@@ -431,6 +439,30 @@ export default function StatisticsPage() {
               labelKey="month"
               valueKey="count"
               color="bg-emerald-500"
+              maxHeight={140}
+            />
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* 점수 분포표 */}
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base flex items-center gap-2">
+            <BarChart3 className="w-4 h-4" />
+            Distribution des scores
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="h-40">
+            <BarChart
+              data={Object.entries(stats.scoreDistribution).map(([range, count]) => ({
+                range: range.replace("-", "–"),
+                count,
+              }))}
+              labelKey="range"
+              valueKey="count"
+              color="bg-violet-500"
               maxHeight={140}
             />
           </div>

@@ -192,7 +192,36 @@ export async function GET() {
     // 8. 총 오디오 재생 횟수
     const totalListenCount = allProgress.reduce((sum, p) => sum + p.listenCount, 0);
 
-    // 9. 기타 재미 통계
+    // 9. 하루에 가장 많이 수행한 횟수
+    const dailyCounts: Record<string, number> = {};
+    for (const ex of withDates) {
+      const d = new Date(ex.progress!.completedAt!);
+      const key = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+      dailyCounts[key] = (dailyCounts[key] || 0) + 1;
+    }
+    const mostCompletedInOneDay =
+      Object.keys(dailyCounts).length > 0 ? Math.max(...Object.values(dailyCounts)) : 0;
+
+    // 10. 점수 분포표 (10% 단위)
+    const scoreDistribution: Record<string, number> = {
+      "0-10": 0,
+      "10-20": 0,
+      "20-30": 0,
+      "30-40": 0,
+      "40-50": 0,
+      "50-60": 0,
+      "60-70": 0,
+      "70-80": 0,
+      "80-90": 0,
+      "90-100": 0,
+    };
+    for (const s of scoresWithId) {
+      const bucket = Math.min(Math.floor(s.percent / 10) * 10, 90);
+      const key = `${bucket}-${bucket + 10}`;
+      scoreDistribution[key]++;
+    }
+
+    // 11. 기타 재미 통계
     const totalCompleted = completedExercises.length;
     const firstCompleted = sortedDates.length > 0 ? sortedDates[0] : null;
     const averagePerDay =
@@ -209,6 +238,7 @@ export async function GET() {
       totalListenCount,
       firstCompletedAt: firstCompleted?.toISOString() || null,
       averagePerDay: Math.round(averagePerDay * 100) / 100,
+      mostCompletedInOneDay,
       streak: {
         current: currentStreak,
         longest: longestStreak,
@@ -225,6 +255,7 @@ export async function GET() {
       byLevel,
       byCategory,
       scoreStats,
+      scoreDistribution,
     });
   } catch (error) {
     console.error("Error fetching statistics:", error);
