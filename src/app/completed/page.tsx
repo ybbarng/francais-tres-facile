@@ -140,26 +140,28 @@ export default function CompletedPage() {
       ) : (
         <div className="space-y-4">
           {exercises.map((exercise) => (
-            <Card key={exercise.id} className="hover:shadow-lg transition-shadow overflow-hidden">
+            <Card key={exercise.id} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-0">
-                <div className="flex">
+                <div className="flex items-center">
                   {/* Thumbnail */}
-                  <Link href={`/exercises/${exercise.id}`} className="shrink-0">
+                  <Link href={`/exercises/${exercise.id}`} className="shrink-0 m-4 mr-0">
                     {exercise.thumbnailUrl ? (
-                      <img
-                        src={exercise.thumbnailUrl}
-                        alt={exercise.title}
-                        className="w-24 h-24 sm:w-32 sm:h-32 object-cover"
-                      />
+                      <div className="w-20 h-14 sm:w-24 sm:h-16 rounded-md overflow-hidden bg-muted">
+                        <img
+                          src={exercise.thumbnailUrl}
+                          alt=""
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     ) : (
-                      <div className="w-24 h-24 sm:w-32 sm:h-32 bg-muted flex items-center justify-center">
-                        <Star className="w-8 h-8 text-muted-foreground" />
+                      <div className="w-20 h-14 sm:w-24 sm:h-16 rounded-md bg-muted flex items-center justify-center">
+                        <Star className="w-6 h-6 text-muted-foreground" />
                       </div>
                     )}
                   </Link>
 
                   {/* Content */}
-                  <div className="flex-1 p-4 flex flex-col justify-between min-w-0">
+                  <div className="flex-1 py-4 pr-4 pl-4 flex flex-col justify-center min-w-0">
                     <Link href={`/exercises/${exercise.id}`} className="group">
                       <div className="flex items-center gap-2 mb-1">
                         <Badge
