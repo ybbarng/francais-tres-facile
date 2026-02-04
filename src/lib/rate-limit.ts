@@ -51,6 +51,10 @@ export function recordFailedAttempt(ip: string): void {
   }
 }
 
+export function clearFailedAttempts(ip: string): void {
+  attempts.delete(ip);
+}
+
 // 메모리 정리 (오래된 기록 삭제)
 export function cleanupExpiredRecords(): void {
   const now = Date.now();

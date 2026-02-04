@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { checkRateLimit, recordFailedAttempt } from "./rate-limit";
+import { checkRateLimit, clearFailedAttempts, recordFailedAttempt } from "./rate-limit";
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
@@ -49,6 +49,8 @@ export function verifyPasswordWithRateLimit(request: NextRequest): AuthResult {
     };
   }
 
+  // 성공 시 실패 기록 삭제
+  clearFailedAttempts(ip);
   return { success: true };
 }
 
