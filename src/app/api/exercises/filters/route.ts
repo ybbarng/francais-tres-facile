@@ -44,9 +44,9 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json({
-      sections: sections.map((s) => s.section),
-      levels: levels.map((l) => l.level),
-      categories: categories.map((c) => c.category),
+      sections: sections.map((s: { section: string }) => s.section),
+      levels: levels.map((l: { level: string }) => l.level),
+      categories: categories.map((c: { category: string }) => c.category),
     });
   } catch (error) {
     console.error("Error fetching filters:", error);
