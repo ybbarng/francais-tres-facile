@@ -4,15 +4,15 @@ const STORAGE_KEY = "ftf-admin-password";
 
 export function getStoredPassword(): string | null {
   if (typeof window === "undefined") return null;
-  return sessionStorage.getItem(STORAGE_KEY);
+  return localStorage.getItem(STORAGE_KEY);
 }
 
 export function setStoredPassword(password: string): void {
-  sessionStorage.setItem(STORAGE_KEY, password);
+  localStorage.setItem(STORAGE_KEY, password);
 }
 
 export function clearStoredPassword(): void {
-  sessionStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(STORAGE_KEY);
 }
 
 // 암호 헤더가 포함된 fetch wrapper
