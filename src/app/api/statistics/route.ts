@@ -163,21 +163,30 @@ export async function GET() {
       .slice(0, 10); // 상위 10개
 
     // 7. 점수 통계
-    const scores = completedExercises
+    const scoresWithId = completedExercises
       .filter((e) => e.progress?.score !== null && e.progress?.maxScore)
       .map((e) => ({
+        exerciseId: e.id,
         score: e.progress!.score!,
         maxScore: e.progress!.maxScore!,
         percent: (e.progress!.score! / e.progress!.maxScore!) * 100,
       }));
 
+    const lowestScoreExercise =
+      scoresWithId.length > 0
+        ? scoresWithId.reduce((a, b) => (a.percent < b.percent ? a : b))
+        : null;
+
     const scoreStats = {
-      count: scores.length,
+      count: scoresWithId.length,
       averagePercent:
-        scores.length > 0 ? scores.reduce((a, b) => a + b.percent, 0) / scores.length : 0,
-      highestPercent: scores.length > 0 ? Math.max(...scores.map((s) => s.percent)) : 0,
-      lowestPercent: scores.length > 0 ? Math.min(...scores.map((s) => s.percent)) : 0,
-      perfectScores: scores.filter((s) => s.percent === 100).length,
+        scoresWithId.length > 0
+          ? scoresWithId.reduce((a, b) => a + b.percent, 0) / scoresWithId.length
+          : 0,
+      highestPercent: scoresWithId.length > 0 ? Math.max(...scoresWithId.map((s) => s.percent)) : 0,
+      lowestPercent: scoresWithId.length > 0 ? Math.min(...scoresWithId.map((s) => s.percent)) : 0,
+      lowestExerciseId: lowestScoreExercise?.exerciseId || null,
+      perfectScores: scoresWithId.filter((s) => s.percent === 100).length,
     };
 
     // 8. 총 오디오 재생 횟수

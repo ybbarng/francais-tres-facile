@@ -11,6 +11,7 @@ import {
   TrendingUp,
   Trophy,
 } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -43,6 +44,7 @@ interface Statistics {
     averagePercent: number;
     highestPercent: number;
     lowestPercent: number;
+    lowestExerciseId: string | null;
     perfectScores: number;
   };
 }
@@ -335,12 +337,24 @@ export default function StatisticsPage() {
                   {Math.round(stats.scoreStats.highestPercent)}%
                 </span>
               </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Score le plus bas</span>
-                <span className="font-medium text-red-600 dark:text-red-400">
-                  {Math.round(stats.scoreStats.lowestPercent)}%
-                </span>
-              </div>
+              {stats.scoreStats.lowestExerciseId ? (
+                <Link
+                  href={`/exercises/${stats.scoreStats.lowestExerciseId}`}
+                  className="flex justify-between items-center hover:bg-muted/50 -mx-2 px-2 py-1 rounded transition-colors"
+                >
+                  <span className="text-sm">Score le plus bas</span>
+                  <span className="font-medium text-red-600 dark:text-red-400">
+                    {Math.round(stats.scoreStats.lowestPercent)}%
+                  </span>
+                </Link>
+              ) : (
+                <div className="flex justify-between items-center">
+                  <span className="text-sm">Score le plus bas</span>
+                  <span className="font-medium text-red-600 dark:text-red-400">
+                    {Math.round(stats.scoreStats.lowestPercent)}%
+                  </span>
+                </div>
+              )}
               <div className="flex justify-between items-center">
                 <span className="text-sm">Scores parfaits (100%)</span>
                 <span className="font-medium text-amber-600 dark:text-amber-400">

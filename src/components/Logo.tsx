@@ -94,7 +94,11 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
       </svg>
 
       {/* Text */}
-      {showText && <span className={`font-bold tracking-tight text-white/85 ${text}`}>Français Très Facile</span>}
+      {showText && (
+        <span className={`font-bold tracking-tight text-white/85 ${text}`}>
+          Français Très Facile
+        </span>
+      )}
     </div>
   );
 }
