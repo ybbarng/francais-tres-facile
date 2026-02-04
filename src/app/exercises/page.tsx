@@ -2,6 +2,7 @@
 
 import { RefreshCw } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 import ExerciseList from "@/components/exercises/ExerciseList";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -27,7 +28,7 @@ export default function ExercisesPage() {
       });
 
       if (res.status === 401) {
-        alert("Mot de passe requis pour synchroniser.");
+        toast.error("Mot de passe requis pour synchroniser.");
         setSyncing(false);
         return;
       }

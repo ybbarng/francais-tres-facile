@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { use, useCallback, useEffect, useState } from "react";
+import { toast } from "sonner";
 import AudioPlayer from "@/components/AudioPlayer";
 import H5PQuiz from "@/components/H5PQuiz";
 import { Badge } from "@/components/ui/badge";
@@ -93,7 +94,7 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
           body: JSON.stringify(data),
         });
         if (res.status === 401) {
-          alert("Mot de passe requis pour modifier les données.");
+          toast.error("Mot de passe requis pour modifier les données.");
         }
       } catch (error) {
         console.error("Failed to update progress:", error);
@@ -164,7 +165,7 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         method: "POST",
       });
       if (res.status === 401) {
-        alert("Mot de passe requis pour modifier les données.");
+        toast.error("Mot de passe requis pour modifier les données.");
       } else if (res.ok) {
         const data = await res.json();
         setExercise(data.exercise);
