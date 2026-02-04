@@ -36,7 +36,7 @@ export default function PlaylistPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Playlist</h1>
+      <h1 className="text-2xl font-bold mb-6">Liste de lecture</h1>
       <Playlist exercises={exercises} />
     </div>
   );

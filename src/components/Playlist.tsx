@@ -96,7 +96,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
         <Card className="overflow-hidden">
           <CardHeader className="pb-3">
             <CardTitle className="text-base">
-              Playlist ({exercisesWithAudio.length} titres)
+              Liste de lecture ({exercisesWithAudio.length} titres)
             </CardTitle>
           </CardHeader>
           <ul className="divide-y divide-border max-h-[600px] overflow-y-auto">

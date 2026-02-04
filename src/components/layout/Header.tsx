@@ -18,7 +18,7 @@ export default function Header() {
     { href: "/exercises", label: "Exercices", icon: BookOpen },
     { href: "/completed", label: "Terminés", icon: CheckCircle },
     { href: "/statistics", label: "Stats", icon: BarChart3 },
-    { href: "/playlist", label: "Playlist", icon: Music },
+    { href: "/playlist", label: "Écoute", icon: Music },
   ];
 
   return (
