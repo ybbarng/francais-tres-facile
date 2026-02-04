@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import type { Exercise, Progress } from "@prisma/client";
+
+type ExerciseWithProgress = Exercise & { progress: Progress | null };
 
 // Category priority order for home page recommendations
 const CATEGORY_PRIORITY = [
