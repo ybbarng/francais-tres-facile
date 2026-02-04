@@ -48,7 +48,7 @@ interface Statistics {
     lowestExerciseId: string | null;
     perfectScores: number;
   };
-  scoreDistribution: Record<string, number>;
+  scoreDistribution: Record<number, number>;
 }
 
 // 간단한 막대 차트 컴포넌트
@@ -454,18 +454,35 @@ export default function StatisticsPage() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="h-40">
-            <BarChart
-              data={Object.entries(stats.scoreDistribution).map(([range, count]) => ({
-                range: range.replace("-", "–"),
-                count,
-              }))}
-              labelKey="range"
-              valueKey="count"
-              color="bg-violet-500"
-              maxHeight={140}
-            />
-          </div>
+          {(() => {
+            const data = Object.entries(stats.scoreDistribution).map(([percent, count]) => ({
+              percent: Number(percent),
+              count,
+            }));
+            const maxCount = Math.max(...data.map((d) => d.count), 1);
+            return (
+              <div>
+                <div className="flex items-end h-32 gap-px">
+                  {data.map((item) => (
+                    <div
+                      key={item.percent}
+                      className="flex-1 bg-violet-500 rounded-t-sm transition-all hover:bg-violet-400"
+                      style={{
+                        height: `${(item.count / maxCount) * 100}%`,
+                        minHeight: item.count > 0 ? "2px" : "0",
+                      }}
+                      title={`${item.percent}%: ${item.count}`}
+                    />
+                  ))}
+                </div>
+                <div className="flex justify-between text-xs text-muted-foreground mt-2">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            );
+          })()}
         </CardContent>
       </Card>
 

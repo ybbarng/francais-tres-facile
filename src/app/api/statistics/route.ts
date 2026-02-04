@@ -202,23 +202,14 @@ export async function GET() {
     const mostCompletedInOneDay =
       Object.keys(dailyCounts).length > 0 ? Math.max(...Object.values(dailyCounts)) : 0;
 
-    // 10. 점수 분포표 (10% 단위)
-    const scoreDistribution: Record<string, number> = {
-      "0-10": 0,
-      "10-20": 0,
-      "20-30": 0,
-      "30-40": 0,
-      "40-50": 0,
-      "50-60": 0,
-      "60-70": 0,
-      "70-80": 0,
-      "80-90": 0,
-      "90-100": 0,
-    };
+    // 10. 점수 분포표 (1% 단위)
+    const scoreDistribution: Record<number, number> = {};
+    for (let i = 0; i <= 100; i++) {
+      scoreDistribution[i] = 0;
+    }
     for (const s of scoresWithId) {
-      const bucket = Math.min(Math.floor(s.percent / 10) * 10, 90);
-      const key = `${bucket}-${bucket + 10}`;
-      scoreDistribution[key]++;
+      const percent = Math.round(s.percent);
+      scoreDistribution[percent]++;
     }
 
     // 11. 기타 재미 통계
