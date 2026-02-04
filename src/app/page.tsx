@@ -83,9 +83,48 @@ export default function DashboardPage() {
       {(() => {
         const completed = stats?.completed || 0;
         const months = [
-          { name: "Janvier", target: 31, cumulative: 31 },
-          { name: "Février", target: 28, cumulative: 59 },
-          { name: "Mars", target: 31, cumulative: 90 },
+          {
+            name: "Janvier",
+            slug: "janvier",
+            target: 31,
+            cumulative: 31,
+            colors: {
+              border: "border-blue-200 dark:border-blue-800",
+              bg: "bg-blue-50/50 dark:bg-blue-950/30",
+              completeBorder: "border-blue-400 dark:border-blue-600",
+              completeBg: "bg-blue-100 dark:bg-blue-900/50",
+              progress: "bg-blue-500",
+              icon: "text-blue-600 dark:text-blue-400",
+            },
+          },
+          {
+            name: "Février",
+            slug: "fevrier",
+            target: 28,
+            cumulative: 59,
+            colors: {
+              border: "border-rose-200 dark:border-rose-800",
+              bg: "bg-rose-50/50 dark:bg-rose-950/30",
+              completeBorder: "border-rose-400 dark:border-rose-600",
+              completeBg: "bg-rose-100 dark:bg-rose-900/50",
+              progress: "bg-rose-500",
+              icon: "text-rose-600 dark:text-rose-400",
+            },
+          },
+          {
+            name: "Mars",
+            slug: "mars",
+            target: 31,
+            cumulative: 90,
+            colors: {
+              border: "border-emerald-200 dark:border-emerald-800",
+              bg: "bg-emerald-50/50 dark:bg-emerald-950/30",
+              completeBorder: "border-emerald-400 dark:border-emerald-600",
+              completeBg: "bg-emerald-100 dark:bg-emerald-900/50",
+              progress: "bg-emerald-500",
+              icon: "text-emerald-600 dark:text-emerald-400",
+            },
+          },
         ];
 
         return (
@@ -106,20 +145,21 @@ export default function DashboardPage() {
                   const progressPercent = (monthProgress / month.target) * 100;
 
                   return (
-                    <div
+                    <Link
                       key={month.name}
-                      className={`p-4 rounded-lg border ${
+                      href={`/buzz-challenge/${month.slug}`}
+                      className={`block p-4 rounded-lg border transition-all hover:scale-[1.02] hover:shadow-md ${
                         isComplete
-                          ? "border-green-300 bg-green-50 dark:border-green-800 dark:bg-green-950"
-                          : "border-border bg-muted/30"
+                          ? `${month.colors.completeBorder} ${month.colors.completeBg}`
+                          : `${month.colors.border} ${month.colors.bg}`
                       }`}
                     >
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-medium">{month.name}</span>
                         {isComplete ? (
-                          <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+                          <CheckCircle className={`w-5 h-5 ${month.colors.icon}`} />
                         ) : (
-                          <Circle className="w-5 h-5 text-muted-foreground" />
+                          <Circle className={`w-5 h-5 ${month.colors.icon} opacity-50`} />
                         )}
                       </div>
                       <div className="text-2xl font-bold mb-1">
@@ -127,13 +167,11 @@ export default function DashboardPage() {
                       </div>
                       <div className="w-full bg-muted rounded-full h-2">
                         <div
-                          className={`h-2 rounded-full transition-all ${
-                            isComplete ? "bg-green-500" : "bg-primary"
-                          }`}
+                          className={`h-2 rounded-full transition-all ${month.colors.progress}`}
                           style={{ width: `${progressPercent}%` }}
                         />
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
