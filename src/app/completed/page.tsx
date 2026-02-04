@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getAllProgress, getCompletedIds } from "@/lib/progress";
 import type { ExerciseWithProgress } from "@/types";
 
 const levelVariant = (level: string) => {
@@ -32,35 +31,10 @@ export default function CompletedPage() {
   useEffect(() => {
     const fetchCompleted = async () => {
       try {
-        const completedIds = getCompletedIds();
-
-        if (completedIds.length === 0) {
-          setExercises([]);
-          setLoading(false);
-          return;
-        }
-
-        const res = await fetch(`/api/exercises/completed?ids=${completedIds.join(",")}`);
+        const res = await fetch("/api/exercises/completed");
         if (res.ok) {
           const data = await res.json();
-
-          // Merge with localStorage progress data
-          const allProgress = getAllProgress();
-          const exercisesWithProgress: ExerciseWithProgress[] = data.map(
-            (ex: ExerciseWithProgress) => ({
-              ...ex,
-              progress: allProgress[ex.id] || null,
-            })
-          );
-
-          // Sort by completedAt desc
-          exercisesWithProgress.sort((a, b) => {
-            const dateA = a.progress?.completedAt ? new Date(a.progress.completedAt).getTime() : 0;
-            const dateB = b.progress?.completedAt ? new Date(b.progress.completedAt).getTime() : 0;
-            return dateB - dateA;
-          });
-
-          setExercises(exercisesWithProgress);
+          setExercises(data);
         }
       } catch (error) {
         console.error("Failed to fetch completed exercises:", error);

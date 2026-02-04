@@ -13,18 +13,16 @@ const CATEGORY_PRIORITY = [
 
 export async function GET() {
   try {
-    // Fetch all exercises from comprendre-actualite / A2
-    // Progress filtering is now done client-side with localStorage
+    // Fetch uncompleted exercises from comprendre-actualite / A2
     const exercises = await prisma.exercise.findMany({
       where: {
         section: "comprendre-actualite",
         level: "A2",
+        OR: [{ progress: null }, { progress: { completed: false } }],
       },
+      include: { progress: true },
       orderBy: { publishedAt: "desc" },
     });
-
-    // Get total count
-    const totalExercises = await prisma.exercise.count();
 
     // Sort by category priority, then by publishedAt desc
     const sortedExercises = exercises.sort((a, b) => {
@@ -45,10 +43,10 @@ export async function GET() {
       return dateB - dateA;
     });
 
+    // Return top 5
     return NextResponse.json({
-      exercises: sortedExercises,
+      exercises: sortedExercises.slice(0, 5),
       total: sortedExercises.length,
-      totalExercises,
     });
   } catch (error) {
     console.error("Error fetching recommendations:", error);

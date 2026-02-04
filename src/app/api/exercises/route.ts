@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     const section = searchParams.get("section");
     const level = searchParams.get("level");
     const category = searchParams.get("category");
-    // Note: completed filter is now handled client-side with localStorage
+    const completed = searchParams.get("completed");
     const search = searchParams.get("search");
     const page = parseInt(searchParams.get("page") || "1", 10);
     const limit = parseInt(searchParams.get("limit") || "24", 10);
@@ -30,9 +30,18 @@ export async function GET(request: NextRequest) {
       where.title = { contains: search };
     }
 
+    if (completed !== null) {
+      if (completed === "true") {
+        where.progress = { completed: true };
+      } else if (completed === "false") {
+        where.OR = [{ progress: null }, { progress: { completed: false } }];
+      }
+    }
+
     const [exercises, total] = await Promise.all([
       prisma.exercise.findMany({
         where,
+        include: { progress: true },
         orderBy: { publishedAt: "desc" },
         skip: (page - 1) * limit,
         take: limit,

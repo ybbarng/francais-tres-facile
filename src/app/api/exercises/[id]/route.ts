@@ -11,6 +11,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
 
     const exercise = await prisma.exercise.findUnique({
       where: { id },
+      include: { progress: true },
     });
 
     if (!exercise) {

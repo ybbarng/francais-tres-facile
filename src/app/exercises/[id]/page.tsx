@@ -19,7 +19,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
-import { getProgress, type ProgressData, saveProgress } from "@/lib/progress";
 import type { ExerciseWithProgress, ProgressInput } from "@/types";
 
 interface ExerciseDetailPageProps {
@@ -62,19 +61,12 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
           return;
         }
         const data = await res.json();
-
-        // localStorage에서 진도 데이터 로드
-        const localProgress = getProgress(id);
-        if (localProgress) {
-          data.progress = localProgress;
-        }
-
         setExercise(data);
-        setNotes(localProgress?.notes || "");
-        setIsCompleted(localProgress?.completed || false);
-        if (localProgress?.completedAt) {
+        setNotes(data.progress?.notes || "");
+        setIsCompleted(data.progress?.completed || false);
+        if (data.progress?.completedAt) {
           // datetime-local 형식으로 변환 (YYYY-MM-DDTHH:mm)
-          const date = new Date(localProgress.completedAt);
+          const date = new Date(data.progress.completedAt);
           const localDatetime = new Date(date.getTime() - date.getTimezoneOffset() * 60000)
             .toISOString()
             .slice(0, 16);
@@ -91,12 +83,14 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
   }, [id, router]);
 
   const updateProgress = useCallback(
-    (data: ProgressInput) => {
+    async (data: ProgressInput) => {
       setSaving(true);
       try {
-        const updated = saveProgress(id, data as Partial<ProgressData>);
-        // exercise 상태도 업데이트
-        setExercise((prev) => (prev ? { ...prev, progress: updated } : prev));
+        await fetch(`/api/progress/${id}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
       } catch (error) {
         console.error("Failed to update progress:", error);
       } finally {

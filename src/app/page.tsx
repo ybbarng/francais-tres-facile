@@ -3,11 +3,9 @@
 import { BookOpen, ChevronRight, ListChecks, Music, Star, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import DataManager from "@/components/DataManager";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getCompletedIds, getStats } from "@/lib/progress";
 import type { ExerciseWithProgress } from "@/types";
 
 interface Stats {
@@ -41,24 +39,17 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const recommendationsRes = await fetch("/api/exercises/recommendations");
+        const [progressRes, recommendationsRes] = await Promise.all([
+          fetch("/api/progress"),
+          fetch("/api/exercises/recommendations"),
+        ]);
+
+        const progressData = await progressRes.json();
         const recommendationsData = await recommendationsRes.json();
 
-        // localStorage에서 완료된 ID 목록 가져오기
-        const completedIds = getCompletedIds();
-
-        // 완료되지 않은 exercice만 필터링
-        const filteredExercises = recommendationsData.exercises.filter(
-          (ex: ExerciseWithProgress) => !completedIds.includes(ex.id)
-        );
-
-        // 통계 계산
-        const totalExercises = recommendationsData.totalExercises || recommendationsData.total;
-        const localStats = getStats(totalExercises);
-
-        setStats(localStats);
-        setRecommendations(filteredExercises.slice(0, 5));
-        setRemainingCount(filteredExercises.length);
+        setStats(progressData.stats);
+        setRecommendations(recommendationsData.exercises);
+        setRemainingCount(recommendationsData.total);
       } catch (error) {
         console.error("Failed to fetch data:", error);
       } finally {
@@ -241,19 +232,6 @@ export default function DashboardPage() {
               ))}
             </ul>
           )}
-        </CardContent>
-      </Card>
-
-      {/* Data Management */}
-      <Card className="mt-8">
-        <CardHeader className="pb-2">
-          <CardTitle className="text-lg">Mes données</CardTitle>
-          <p className="text-sm text-muted-foreground">
-            Sauvegardez votre progression pour la conserver ou la transférer vers un autre appareil.
-          </p>
-        </CardHeader>
-        <CardContent>
-          <DataManager />
         </CardContent>
       </Card>
     </div>
