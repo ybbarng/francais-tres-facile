@@ -138,15 +138,15 @@ export default function CompletedPage() {
           </CardContent>
         </Card>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-3">
           {exercises.map((exercise) => (
-            <Card key={exercise.id} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
-                <div className="flex items-center">
+            <Card key={exercise.id} className="hover:shadow-md transition-shadow">
+              <CardContent className="p-3">
+                <div className="flex items-center gap-3">
                   {/* Thumbnail */}
-                  <Link href={`/exercises/${exercise.id}`} className="shrink-0 m-4 mr-0">
+                  <Link href={`/exercises/${exercise.id}`} className="shrink-0">
                     {exercise.thumbnailUrl ? (
-                      <div className="w-20 h-14 sm:w-24 sm:h-16 rounded-md overflow-hidden bg-muted">
+                      <div className="w-16 h-12 rounded overflow-hidden bg-muted">
                         <img
                           src={exercise.thumbnailUrl}
                           alt=""
@@ -154,16 +154,16 @@ export default function CompletedPage() {
                         />
                       </div>
                     ) : (
-                      <div className="w-20 h-14 sm:w-24 sm:h-16 rounded-md bg-muted flex items-center justify-center">
-                        <Star className="w-6 h-6 text-muted-foreground" />
+                      <div className="w-16 h-12 rounded bg-muted flex items-center justify-center">
+                        <Star className="w-5 h-5 text-muted-foreground" />
                       </div>
                     )}
                   </Link>
 
                   {/* Content */}
-                  <div className="flex-1 py-4 pr-4 pl-4 flex flex-col justify-center min-w-0">
+                  <div className="flex-1 min-w-0">
                     <Link href={`/exercises/${exercise.id}`} className="group">
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-center gap-2 mb-0.5">
                         <Badge
                           variant={
                             levelVariant(exercise.level) as "a1" | "a2" | "b1" | "b2" | "secondary"
@@ -171,71 +171,60 @@ export default function CompletedPage() {
                         >
                           {exercise.level}
                         </Badge>
-                        <span className="text-sm text-muted-foreground">{exercise.category}</span>
+                        <span className="text-xs text-muted-foreground">{exercise.category}</span>
+                        {exercise.progress?.score !== null && exercise.progress?.maxScore && (
+                          <span className="text-sm font-semibold text-primary ml-auto">
+                            {exercise.progress.score}/{exercise.progress.maxScore}
+                          </span>
+                        )}
                       </div>
-                      <h3 className="font-medium line-clamp-2 group-hover:text-primary transition-colors">
+                      <h3 className="font-medium text-sm line-clamp-1 group-hover:text-primary transition-colors">
                         {exercise.title}
                       </h3>
                     </Link>
-
-                    <div className="flex items-center justify-between mt-2">
-                      {/* Score */}
-                      {exercise.progress?.score !== null && exercise.progress?.maxScore ? (
-                        <div className="text-lg font-bold text-primary">
-                          {exercise.progress.score}/{exercise.progress.maxScore}
-                        </div>
-                      ) : (
-                        <div />
-                      )}
-
-                      {/* Date - Editable */}
-                      <div className="text-right">
-                        {editingId === exercise.id ? (
-                          <div className="flex items-center gap-1">
-                            <Input
-                              type="datetime-local"
-                              value={editingDate}
-                              onChange={(e) => setEditingDate(e.target.value)}
-                              className="w-auto text-sm h-8"
-                            />
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                handleDateSave(exercise.id);
-                              }}
-                              className="h-8 w-8 p-0"
-                            >
-                              <Check className="h-4 w-4" />
-                            </Button>
-                          </div>
-                        ) : (
-                          <button
-                            type="button"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              handleDateClick(
-                                exercise.id,
-                                exercise.progress?.completedAt?.toString() || null
-                              );
-                            }}
-                            className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                          >
-                            <Calendar className="h-3 w-3" />
-                            {exercise.progress?.completedAt
-                              ? new Date(exercise.progress.completedAt).toLocaleString("fr-FR", {
-                                  year: "numeric",
-                                  month: "short",
-                                  day: "numeric",
-                                  hour: "2-digit",
-                                  minute: "2-digit",
-                                })
-                              : "Définir la date"}
-                          </button>
-                        )}
+                    {/* Date - Editable */}
+                    {editingId === exercise.id ? (
+                      <div className="flex items-center gap-1 mt-1">
+                        <Input
+                          type="datetime-local"
+                          value={editingDate}
+                          onChange={(e) => setEditingDate(e.target.value)}
+                          className="w-auto text-xs h-7"
+                        />
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleDateSave(exercise.id);
+                          }}
+                          className="h-7 w-7 p-0"
+                        >
+                          <Check className="h-3 w-3" />
+                        </Button>
                       </div>
-                    </div>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleDateClick(
+                            exercise.id,
+                            exercise.progress?.completedAt?.toString() || null
+                          );
+                        }}
+                        className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors mt-0.5"
+                      >
+                        <Calendar className="h-3 w-3" />
+                        {exercise.progress?.completedAt
+                          ? new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR", {
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric",
+                            })
+                          : "Définir la date"}
+                      </button>
+                    )}
                   </div>
                 </div>
               </CardContent>
