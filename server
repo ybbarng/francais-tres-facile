@@ -7,10 +7,10 @@ echo "📥 Pulling latest changes..."
 git pull
 
 echo "📦 Installing dependencies..."
-npm install
+pnpm install
 
 echo "🔨 Building..."
-npm run build
+pnpm run build
 
 echo "🔄 Restarting pm2..."
 pm2 restart francais-tres-facile || pm2 start ecosystem.config.js
