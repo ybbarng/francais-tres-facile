@@ -7,6 +7,8 @@ import {
   CheckCircle2,
   Circle,
   ExternalLink,
+  Eye,
+  EyeOff,
   RefreshCw,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -53,6 +55,7 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
   const [isCompleted, setIsCompleted] = useState(false);
   const [completedAt, setCompletedAt] = useState<string>("");
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     const fetchExercise = async () => {
@@ -66,6 +69,7 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
         setExercise(data);
         setNotes(data.progress?.notes || "");
         setIsCompleted(data.progress?.completed || false);
+        setIsHidden(data.progress?.hidden || false);
         if (data.progress?.completedAt) {
           // datetime-local 형식으로 변환 (YYYY-MM-DDTHH:mm)
           const date = new Date(data.progress.completedAt);
@@ -159,6 +163,17 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
     [updateProgress]
   );
 
+  const handleHiddenToggle = useCallback(() => {
+    const newHidden = !isHidden;
+    setIsHidden(newHidden);
+    updateProgress({ hidden: newHidden });
+    if (newHidden) {
+      toast.success("Exercice masqué de l'accueil.");
+    } else {
+      toast.success("Exercice visible sur l'accueil.");
+    }
+  }, [isHidden, updateProgress]);
+
   const handleRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
@@ -238,28 +253,42 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
           </div>
 
           <div className="flex flex-col items-end gap-2">
-            <Button
-              variant={isCompleted ? "outline" : "secondary"}
-              onClick={handleCompletedToggle}
-              disabled={saving}
-              className={
-                isCompleted
-                  ? "border-green-300 bg-green-50 text-green-700 hover:bg-green-100 dark:border-green-700 dark:bg-green-950 dark:text-green-400 dark:hover:bg-green-900"
-                  : ""
-              }
-            >
-              {isCompleted ? (
-                <>
-                  <CheckCircle2 className="h-4 w-4 mr-1" />
-                  Terminé
-                </>
-              ) : (
-                <>
-                  <Circle className="h-4 w-4 mr-1" />
-                  Marquer terminé
-                </>
-              )}
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleHiddenToggle}
+                disabled={saving}
+                className={
+                  isHidden ? "text-muted-foreground" : "text-muted-foreground hover:text-foreground"
+                }
+                title={isHidden ? "Afficher sur l'accueil" : "Masquer de l'accueil"}
+              >
+                {isHidden ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              </Button>
+              <Button
+                variant={isCompleted ? "outline" : "secondary"}
+                onClick={handleCompletedToggle}
+                disabled={saving}
+                className={
+                  isCompleted
+                    ? "border-green-300 bg-green-50 text-green-700 hover:bg-green-100 dark:border-green-700 dark:bg-green-950 dark:text-green-400 dark:hover:bg-green-900"
+                    : ""
+                }
+              >
+                {isCompleted ? (
+                  <>
+                    <CheckCircle2 className="h-4 w-4 mr-1" />
+                    Terminé
+                  </>
+                ) : (
+                  <>
+                    <Circle className="h-4 w-4 mr-1" />
+                    Marquer terminé
+                  </>
+                )}
+              </Button>
+            </div>
 
             {isCompleted && (
               <div className="flex items-center gap-2">

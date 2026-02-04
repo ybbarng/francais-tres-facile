@@ -13,12 +13,12 @@ const CATEGORY_PRIORITY = [
 
 export async function GET() {
   try {
-    // Fetch uncompleted exercises from comprendre-actualite / A2
+    // Fetch uncompleted and non-hidden exercises from comprendre-actualite / A2
     const exercises = await prisma.exercise.findMany({
       where: {
         section: "comprendre-actualite",
         level: "A2",
-        OR: [{ progress: null }, { progress: { completed: false } }],
+        OR: [{ progress: null }, { progress: { completed: false, hidden: false } }],
       },
       include: { progress: true },
       orderBy: { publishedAt: "desc" },

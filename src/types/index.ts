@@ -24,6 +24,7 @@ export interface ProgressInput {
   maxScore?: number;
   listenCount?: number;
   notes?: string;
+  hidden?: boolean;
 }
 
 export interface SyncResult {

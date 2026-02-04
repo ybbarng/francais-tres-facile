@@ -33,6 +33,7 @@ model Progress {
   listenCount Int       @default(0)  // 오디오 재생 횟수
   notes       String?   // 개인 메모
   completedAt DateTime?
+  hidden      Boolean   @default(false)  // 홈에서 숨기기
 
   exercise    Exercise  @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
 }
