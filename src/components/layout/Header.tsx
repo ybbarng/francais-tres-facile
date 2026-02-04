@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { BookOpen, CheckCircle, Home, Menu, Music, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -14,10 +14,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: "Accueil" },
-    { href: "/exercises", label: "Exercices" },
-    { href: "/completed", label: "Terminés" },
-    { href: "/playlist", label: "Playlist" },
+    { href: "/", label: "Accueil", icon: Home },
+    { href: "/exercises", label: "Exercices", icon: BookOpen },
+    { href: "/completed", label: "Terminés", icon: CheckCircle },
+    { href: "/playlist", label: "Playlist", icon: Music },
   ];
 
   return (
@@ -40,12 +40,13 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     pathname === item.href
                       ? "bg-white/20 text-white"
                       : "text-white/80 hover:bg-white/10 hover:text-white"
                   }`}
                 >
+                  <item.icon className="h-4 w-4" />
                   {item.label}
                 </Link>
               ))}
@@ -78,12 +79,13 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                className={`flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
                   pathname === item.href
                     ? "bg-white/20 text-white"
                     : "text-white/80 hover:bg-white/10 hover:text-white"
                 }`}
               >
+                <item.icon className="h-5 w-5" />
                 {item.label}
               </Link>
             ))}

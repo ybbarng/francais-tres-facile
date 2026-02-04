@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, ChevronRight, ListChecks, Music, Star, Volume2 } from "lucide-react";
+import { BookOpen, ChevronRight, ListChecks, Star, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -63,15 +63,10 @@ export default function DashboardPage() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <Skeleton className="h-10 w-48" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {Array.from({ length: 4 }).map((_, i) => (
             <Skeleton key={`stat-${i}`} className="h-32 rounded-xl" />
           ))}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Skeleton className="h-24 rounded-xl" />
-          <Skeleton className="h-24 rounded-xl" />
         </div>
         <Skeleton className="h-96 rounded-xl" />
       </div>
@@ -80,8 +75,6 @@ export default function DashboardPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Tableau de bord</h1>
-
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <Card>
@@ -121,35 +114,6 @@ export default function DashboardPage() {
             </div>
           </CardContent>
         </Card>
-      </div>
-
-      {/* Quick Actions */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-        <Link
-          href="/exercises"
-          className="bg-action-blue text-white rounded-xl p-6 hover:opacity-90 transition-all flex items-center gap-4 shadow-md"
-        >
-          <div className="p-3 bg-white/20 rounded-lg">
-            <BookOpen className="w-8 h-8" />
-          </div>
-          <div>
-            <div className="text-lg font-semibold">Exercices</div>
-            <div className="text-white/80 text-sm">Voir tous les exercices</div>
-          </div>
-        </Link>
-
-        <Link
-          href="/playlist"
-          className="bg-action-red text-white rounded-xl p-6 hover:opacity-90 transition-all flex items-center gap-4 shadow-md"
-        >
-          <div className="p-3 bg-white/20 rounded-lg">
-            <Music className="w-8 h-8" />
-          </div>
-          <div>
-            <div className="text-lg font-semibold">Playlist</div>
-            <div className="text-white/80 text-sm">Lecture audio continue</div>
-          </div>
-        </Link>
       </div>
 
       {/* Recommended Exercises (Uncompleted) */}
