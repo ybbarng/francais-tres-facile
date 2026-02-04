@@ -1,8 +1,5 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import type { Prisma } from "@prisma/client";
-
-type ExerciseWithProgress = Prisma.ExerciseGetPayload<{ include: { progress: true } }>;
 
 // Category priority order for home page recommendations
 const CATEGORY_PRIORITY = [
