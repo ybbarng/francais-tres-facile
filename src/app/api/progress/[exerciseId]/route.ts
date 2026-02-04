@@ -46,15 +46,23 @@ export async function POST(request: NextRequest, context: RouteContext) {
       return NextResponse.json({ error: "Exercise not found" }, { status: 404 });
     }
 
-    // completedAt 처리: 명시적으로 제공되면 그 값 사용, 아니면 completed가 true일 때 현재 시간
-    const completedAt =
-      body.completedAt !== undefined
-        ? body.completedAt
-          ? new Date(body.completedAt)
-          : null
-        : body.completed
-          ? new Date()
-          : undefined;
+    // 기존 progress 확인
+    const existing = await prisma.progress.findUnique({
+      where: { exerciseId },
+    });
+
+    // completedAt 처리:
+    // 1. 명시적으로 제공되면 그 값 사용
+    // 2. 기존에 completedAt이 있으면 유지
+    // 3. 새로 completed가 true가 되면 현재 시간
+    let completedAt: Date | null | undefined;
+    if (body.completedAt !== undefined) {
+      completedAt = body.completedAt ? new Date(body.completedAt) : null;
+    } else if (existing?.completedAt) {
+      completedAt = existing.completedAt;
+    } else if (body.completed) {
+      completedAt = new Date();
+    }
 
     const progress = await prisma.progress.upsert({
       where: { exerciseId },
@@ -94,15 +102,18 @@ export async function PATCH(request: NextRequest, context: RouteContext) {
       return NextResponse.json({ error: "Progress not found" }, { status: 404 });
     }
 
-    // completedAt 처리: 명시적으로 제공되면 그 값 사용
-    const completedAt =
-      body.completedAt !== undefined
-        ? body.completedAt
-          ? new Date(body.completedAt)
-          : null
-        : body.completed
-          ? new Date()
-          : existing.completedAt;
+    // completedAt 처리:
+    // 1. 명시적으로 제공되면 그 값 사용
+    // 2. 기존에 completedAt이 있으면 유지
+    // 3. 새로 completed가 true가 되면 현재 시간
+    let completedAt: Date | null | undefined;
+    if (body.completedAt !== undefined) {
+      completedAt = body.completedAt ? new Date(body.completedAt) : null;
+    } else if (existing.completedAt) {
+      completedAt = existing.completedAt;
+    } else if (body.completed) {
+      completedAt = new Date();
+    }
 
     const progress = await prisma.progress.update({
       where: { exerciseId },
