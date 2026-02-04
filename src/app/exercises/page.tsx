@@ -27,8 +27,9 @@ export default function ExercisesPage() {
         body: JSON.stringify({ maxPages: 3 }),
       });
 
-      if (res.status === 401) {
-        toast.error("Mot de passe requis pour synchroniser.");
+      if (res.status === 401 || res.status === 429) {
+        const data = await res.json();
+        toast.error(data.error || "Mot de passe requis pour synchroniser.");
         setSyncing(false);
         return;
       }

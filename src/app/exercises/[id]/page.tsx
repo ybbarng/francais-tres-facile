@@ -93,8 +93,9 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         });
-        if (res.status === 401) {
-          toast.error("Mot de passe requis pour modifier les données.");
+        if (res.status === 401 || res.status === 429) {
+          const data = await res.json();
+          toast.error(data.error || "Mot de passe requis pour modifier les données.");
         }
       } catch (error) {
         console.error("Failed to update progress:", error);
@@ -164,8 +165,9 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
       const res = await fetchWithAuth(`/api/exercises/${id}/refresh`, {
         method: "POST",
       });
-      if (res.status === 401) {
-        toast.error("Mot de passe requis pour modifier les données.");
+      if (res.status === 401 || res.status === 429) {
+        const data = await res.json();
+        toast.error(data.error || "Mot de passe requis pour modifier les données.");
       } else if (res.ok) {
         const data = await res.json();
         setExercise(data.exercise);

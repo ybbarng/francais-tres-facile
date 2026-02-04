@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { unauthorizedResponse, verifyPassword } from "@/lib/auth";
+import { verifyPasswordWithRateLimit } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import type { ProgressInput } from "@/types";
 
@@ -28,8 +28,9 @@ export async function GET(request: NextRequest, context: RouteContext) {
 }
 
 export async function POST(request: NextRequest, context: RouteContext) {
-  if (!verifyPassword(request)) {
-    return unauthorizedResponse();
+  const auth = verifyPasswordWithRateLimit(request);
+  if (!auth.success) {
+    return auth.response;
   }
 
   try {
@@ -76,8 +77,9 @@ export async function POST(request: NextRequest, context: RouteContext) {
 }
 
 export async function PATCH(request: NextRequest, context: RouteContext) {
-  if (!verifyPassword(request)) {
-    return unauthorizedResponse();
+  const auth = verifyPasswordWithRateLimit(request);
+  if (!auth.success) {
+    return auth.response;
   }
 
   try {

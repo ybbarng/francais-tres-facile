@@ -1,13 +1,14 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { unauthorizedResponse, verifyPassword } from "@/lib/auth";
+import { verifyPasswordWithRateLimit } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { generateShortId } from "@/lib/id";
 import { scrapeAllExercises, scrapeSectionExercises } from "@/lib/scraper";
 import type { SyncResult } from "@/types";
 
 export async function POST(request: NextRequest) {
-  if (!verifyPassword(request)) {
-    return unauthorizedResponse();
+  const auth = verifyPasswordWithRateLimit(request);
+  if (!auth.success) {
+    return auth.response;
   }
 
   try {
