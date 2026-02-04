@@ -14,7 +14,8 @@
     "test:coverage": "vitest run --coverage",
     "sync": "npx tsx scripts/sync.ts",
     "sync:full": "npx tsx scripts/sync.ts full",
-    "sync:h5p": "npx tsx scripts/sync.ts update-h5p"
+    "sync:h5p": "npx tsx scripts/sync.ts update-h5p",
+    "server": "./server"
   },
   "dependencies": {
     "@libsql/client": "^0.17.0",
