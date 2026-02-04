@@ -127,26 +127,27 @@ export default function CompletedPage() {
         </p>
       </div>
 
-      {exercises.length === 0 ? (
-        <Card>
-          <CardContent className="py-12 text-center">
-            <Star className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
-            <p className="text-muted-foreground mb-4">Aucun exercice terminé pour le moment.</p>
-            <Button asChild>
-              <Link href="/exercises">Voir les exercices</Link>
-            </Button>
-          </CardContent>
-        </Card>
-      ) : (
-        <div className="space-y-3">
-          {exercises.map((exercise) => (
-            <Card key={exercise.id} className="hover:shadow-md transition-shadow">
-              <CardContent className="p-3">
-                <div className="flex items-center gap-3">
+      <Card>
+        <CardContent className="p-0">
+          {exercises.length === 0 ? (
+            <div className="py-12 text-center">
+              <Star className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
+              <p className="text-muted-foreground mb-4">Aucun exercice terminé pour le moment.</p>
+              <Button asChild>
+                <Link href="/exercises">Voir les exercices</Link>
+              </Button>
+            </div>
+          ) : (
+            <ul className="divide-y divide-border">
+              {exercises.map((exercise) => (
+                <li
+                  key={exercise.id}
+                  className="flex items-center gap-4 px-6 py-4 hover:bg-muted/50 transition-colors"
+                >
                   {/* Thumbnail */}
                   <Link href={`/exercises/${exercise.id}`} className="shrink-0">
                     {exercise.thumbnailUrl ? (
-                      <div className="w-16 h-12 rounded overflow-hidden bg-muted">
+                      <div className="w-20 h-14 rounded-md overflow-hidden bg-muted">
                         <img
                           src={exercise.thumbnailUrl}
                           alt=""
@@ -154,84 +155,83 @@ export default function CompletedPage() {
                         />
                       </div>
                     ) : (
-                      <div className="w-16 h-12 rounded bg-muted flex items-center justify-center">
-                        <Star className="w-5 h-5 text-muted-foreground" />
+                      <div className="w-20 h-14 rounded-md bg-muted flex items-center justify-center">
+                        <Star className="w-6 h-6 text-muted-foreground" />
                       </div>
                     )}
                   </Link>
 
                   {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <Link href={`/exercises/${exercise.id}`} className="group">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <Badge
-                          variant={
-                            levelVariant(exercise.level) as "a1" | "a2" | "b1" | "b2" | "secondary"
-                          }
-                        >
-                          {exercise.level}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground">{exercise.category}</span>
-                        {exercise.progress?.score !== null && exercise.progress?.maxScore && (
-                          <span className="text-sm font-semibold text-primary ml-auto">
-                            {exercise.progress.score}/{exercise.progress.maxScore}
-                          </span>
-                        )}
-                      </div>
-                      <h3 className="font-medium text-sm line-clamp-1 group-hover:text-primary transition-colors">
-                        {exercise.title}
-                      </h3>
-                    </Link>
-                    {/* Date - Editable */}
+                  <Link href={`/exercises/${exercise.id}`} className="flex-1 min-w-0 group">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge
+                        variant={
+                          levelVariant(exercise.level) as "a1" | "a2" | "b1" | "b2" | "secondary"
+                        }
+                      >
+                        {exercise.level}
+                      </Badge>
+                      <span className="text-xs text-muted-foreground">{exercise.category}</span>
+                      {exercise.progress?.score !== null && exercise.progress?.maxScore && (
+                        <span className="text-sm font-semibold text-primary">
+                          {exercise.progress.score}/{exercise.progress.maxScore}
+                        </span>
+                      )}
+                    </div>
+                    <p className="font-medium truncate group-hover:text-primary transition-colors">
+                      {exercise.title}
+                    </p>
+                  </Link>
+
+                  {/* Date - Editable (Right side) */}
+                  <div className="shrink-0 text-right">
                     {editingId === exercise.id ? (
-                      <div className="flex items-center gap-1 mt-1">
+                      <div className="flex items-center gap-1">
                         <Input
                           type="datetime-local"
                           value={editingDate}
                           onChange={(e) => setEditingDate(e.target.value)}
-                          className="w-auto text-xs h-7"
+                          className="w-auto text-sm h-8"
                         />
                         <Button
                           variant="ghost"
                           size="sm"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            handleDateSave(exercise.id);
-                          }}
-                          className="h-7 w-7 p-0"
+                          onClick={() => handleDateSave(exercise.id)}
+                          className="h-8 w-8 p-0"
                         >
-                          <Check className="h-3 w-3" />
+                          <Check className="h-4 w-4" />
                         </Button>
                       </div>
                     ) : (
                       <button
                         type="button"
-                        onClick={(e) => {
-                          e.preventDefault();
+                        onClick={() =>
                           handleDateClick(
                             exercise.id,
                             exercise.progress?.completedAt?.toString() || null
-                          );
-                        }}
-                        className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors mt-0.5"
+                          )
+                        }
+                        className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
-                        <Calendar className="h-3 w-3" />
-                        {exercise.progress?.completedAt
-                          ? new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR", {
-                              year: "numeric",
-                              month: "short",
-                              day: "numeric",
-                            })
-                          : "Définir la date"}
+                        <Calendar className="h-4 w-4" />
+                        <span>
+                          {exercise.progress?.completedAt
+                            ? new Date(exercise.progress.completedAt).toLocaleDateString("fr-FR", {
+                                year: "numeric",
+                                month: "short",
+                                day: "numeric",
+                              })
+                            : "Définir"}
+                        </span>
                       </button>
                     )}
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
 }
