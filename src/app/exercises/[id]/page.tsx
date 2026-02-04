@@ -19,6 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
+import { fetchWithAuth } from "@/lib/password";
 import type { ExerciseWithProgress, ProgressInput } from "@/types";
 
 interface ExerciseDetailPageProps {
@@ -86,11 +87,14 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
     async (data: ProgressInput) => {
       setSaving(true);
       try {
-        await fetch(`/api/progress/${id}`, {
+        const res = await fetchWithAuth(`/api/progress/${id}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         });
+        if (res.status === 401) {
+          alert("Mot de passe requis pour modifier les données.");
+        }
       } catch (error) {
         console.error("Failed to update progress:", error);
       } finally {
@@ -156,10 +160,12 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
   const handleRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
-      const res = await fetch(`/api/exercises/${id}/refresh`, {
+      const res = await fetchWithAuth(`/api/exercises/${id}/refresh`, {
         method: "POST",
       });
-      if (res.ok) {
+      if (res.status === 401) {
+        alert("Mot de passe requis pour modifier les données.");
+      } else if (res.ok) {
         const data = await res.json();
         setExercise(data.exercise);
       }

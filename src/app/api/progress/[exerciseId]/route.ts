@@ -1,4 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { unauthorizedResponse, verifyPassword } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import type { ProgressInput } from "@/types";
 
@@ -27,6 +28,10 @@ export async function GET(request: NextRequest, context: RouteContext) {
 }
 
 export async function POST(request: NextRequest, context: RouteContext) {
+  if (!verifyPassword(request)) {
+    return unauthorizedResponse();
+  }
+
   try {
     const { exerciseId } = await context.params;
     const body: ProgressInput = await request.json();
@@ -71,6 +76,10 @@ export async function POST(request: NextRequest, context: RouteContext) {
 }
 
 export async function PATCH(request: NextRequest, context: RouteContext) {
+  if (!verifyPassword(request)) {
+    return unauthorizedResponse();
+  }
+
   try {
     const { exerciseId } = await context.params;
     const body: ProgressInput = await request.json();

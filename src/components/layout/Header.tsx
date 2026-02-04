@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
+import PasswordPrompt from "@/components/PasswordPrompt";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 
@@ -49,11 +50,13 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
+            <PasswordPrompt />
             <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
+            <PasswordPrompt />
             <ThemeToggle />
             <Button
               variant="ghost"

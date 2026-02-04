@@ -1,10 +1,15 @@
-import { NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
+import { unauthorizedResponse, verifyPassword } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { generateShortId } from "@/lib/id";
 import { scrapeAllExercises, scrapeSectionExercises } from "@/lib/scraper";
 import type { SyncResult } from "@/types";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
+  if (!verifyPassword(request)) {
+    return unauthorizedResponse();
+  }
+
   try {
     const body = await request.json().catch(() => ({}));
     const sectionId = body.section; // Optional: sync specific section only

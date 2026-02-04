@@ -1,4 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { unauthorizedResponse, verifyPassword } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { scrapeExerciseDetail } from "@/lib/scraper";
 
@@ -7,6 +8,10 @@ interface RouteParams {
 }
 
 export async function POST(request: NextRequest, { params }: RouteParams) {
+  if (!verifyPassword(request)) {
+    return unauthorizedResponse();
+  }
+
   try {
     const { id } = await params;
 

@@ -5,6 +5,7 @@ import { useState } from "react";
 import ExerciseList from "@/components/exercises/ExerciseList";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { fetchWithAuth } from "@/lib/password";
 
 export default function ExercisesPage() {
   const [syncing, setSyncing] = useState(false);
@@ -19,11 +20,18 @@ export default function ExercisesPage() {
     setSyncResult(null);
 
     try {
-      const res = await fetch("/api/sync", {
+      const res = await fetchWithAuth("/api/sync", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ maxPages: 3 }),
       });
+
+      if (res.status === 401) {
+        alert("Mot de passe requis pour synchroniser.");
+        setSyncing(false);
+        return;
+      }
+
       const data = await res.json();
       setSyncResult(data);
       // 페이지 새로고침으로 목록 갱신
