@@ -94,12 +94,7 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
       </svg>
 
       {/* Text */}
-      {showText && (
-        <div className="flex flex-col leading-none">
-          <span className={`font-bold tracking-tight ${text}`}>FTF</span>
-          <span className="text-[10px] opacity-80 tracking-wide">FRANÇAIS TRÈS FACILE</span>
-        </div>
-      )}
+      {showText && <span className={`font-bold tracking-tight ${text}`}>Français Très Facile</span>}
     </div>
   );
 }
