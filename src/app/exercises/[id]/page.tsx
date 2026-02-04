@@ -93,9 +93,9 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
         });
-        if (res.status === 401 || res.status === 429) {
+        if (!res.ok) {
           const data = await res.json();
-          toast.error(data.error || "Mot de passe requis pour modifier les données.");
+          toast.error(data.error || "Erreur lors de la mise à jour.");
         }
       } catch (error) {
         console.error("Failed to update progress:", error);
@@ -165,10 +165,10 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
       const res = await fetchWithAuth(`/api/exercises/${id}/refresh`, {
         method: "POST",
       });
-      if (res.status === 401 || res.status === 429) {
+      if (!res.ok) {
         const data = await res.json();
-        toast.error(data.error || "Mot de passe requis pour modifier les données.");
-      } else if (res.ok) {
+        toast.error(data.error || "Erreur lors du rafraîchissement.");
+      } else {
         const data = await res.json();
         setExercise(data.exercise);
       }

@@ -19,9 +19,12 @@ function getClientIp(request: NextRequest): string {
 export type AuthResult = { success: true } | { success: false; response: NextResponse };
 
 export function verifyPasswordWithRateLimit(request: NextRequest): AuthResult {
-  // 암호가 설정되지 않으면 모든 요청 허용
+  // 암호가 설정되지 않으면 수정 차단
   if (!ADMIN_PASSWORD) {
-    return { success: true };
+    return {
+      success: false,
+      response: passwordNotConfiguredResponse(),
+    };
   }
 
   const ip = getClientIp(request);
@@ -52,10 +55,17 @@ export function verifyPasswordWithRateLimit(request: NextRequest): AuthResult {
 // 기존 함수 유지 (하위 호환성)
 export function verifyPassword(request: NextRequest): boolean {
   if (!ADMIN_PASSWORD) {
-    return true;
+    return false; // 암호 미설정 시 수정 차단
   }
   const password = request.headers.get("x-admin-password");
   return password === ADMIN_PASSWORD;
+}
+
+export function passwordNotConfiguredResponse() {
+  return NextResponse.json(
+    { error: "ADMIN_PASSWORD non configuré sur le serveur. Contactez l'administrateur." },
+    { status: 503 }
+  );
 }
 
 export function unauthorizedResponse(remainingAttempts?: number) {
