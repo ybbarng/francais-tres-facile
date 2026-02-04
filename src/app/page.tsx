@@ -1,6 +1,14 @@
 "use client";
 
-import { BookOpen, ChevronRight, ListChecks, Star, Volume2 } from "lucide-react";
+import {
+  BookOpen,
+  CheckCircle,
+  ChevronRight,
+  Circle,
+  ListChecks,
+  Star,
+  Volume2,
+} from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
@@ -63,11 +71,7 @@ export default function DashboardPage() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <Skeleton key={`stat-${i}`} className="h-32 rounded-xl" />
-          ))}
-        </div>
+        <Skeleton className="h-40 rounded-xl" />
         <Skeleton className="h-96 rounded-xl" />
       </div>
     );
@@ -75,46 +79,68 @@ export default function DashboardPage() {
 
   return (
     <div>
-      {/* Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <Card>
-          <CardContent className="pt-6">
-            <div className="text-sm text-muted-foreground mb-1">Total des exercices</div>
-            <div className="text-3xl font-bold">{stats?.total || 0}</div>
-          </CardContent>
-        </Card>
+      {/* Buzz Challenge 2026 1Q */}
+      {(() => {
+        const completed = stats?.completed || 0;
+        const months = [
+          { name: "Janvier", target: 31, cumulative: 31 },
+          { name: "Février", target: 28, cumulative: 59 },
+          { name: "Mars", target: 31, cumulative: 90 },
+        ];
 
-        <Card className="border-green-200 dark:border-green-900">
-          <CardContent className="pt-6">
-            <div className="text-sm text-muted-foreground mb-1">Terminés</div>
-            <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-              {stats?.completed || 0}
-            </div>
-          </CardContent>
-        </Card>
+        return (
+          <Card className="mb-8">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg">Buzz Challenge de Brice – 2026 1Q</CardTitle>
+              <p className="text-sm text-muted-foreground">{completed} / 90 exercices terminés</p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {months.map((month, index) => {
+                  const prevCumulative = index === 0 ? 0 : months[index - 1].cumulative;
+                  const monthProgress = Math.max(
+                    0,
+                    Math.min(month.target, completed - prevCumulative)
+                  );
+                  const isComplete = completed >= month.cumulative;
+                  const progressPercent = (monthProgress / month.target) * 100;
 
-        <Card className="border-amber-200 dark:border-amber-900">
-          <CardContent className="pt-6">
-            <div className="text-sm text-muted-foreground mb-1">En cours</div>
-            <div className="text-3xl font-bold text-amber-600 dark:text-amber-400">
-              {stats?.inProgress || 0}
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="border-primary/30">
-          <CardContent className="pt-6">
-            <div className="text-sm text-muted-foreground mb-1">Taux de réussite</div>
-            <div className="text-3xl font-bold text-primary">{stats?.completionRate || 0}%</div>
-            <div className="mt-2 w-full bg-muted rounded-full h-2">
-              <div
-                className="bg-primary h-2 rounded-full transition-all"
-                style={{ width: `${stats?.completionRate || 0}%` }}
-              />
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+                  return (
+                    <div
+                      key={month.name}
+                      className={`p-4 rounded-lg border ${
+                        isComplete
+                          ? "border-green-300 bg-green-50 dark:border-green-800 dark:bg-green-950"
+                          : "border-border bg-muted/30"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="font-medium">{month.name}</span>
+                        {isComplete ? (
+                          <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+                        ) : (
+                          <Circle className="w-5 h-5 text-muted-foreground" />
+                        )}
+                      </div>
+                      <div className="text-2xl font-bold mb-1">
+                        {monthProgress} / {month.target}
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div
+                          className={`h-2 rounded-full transition-all ${
+                            isComplete ? "bg-green-500" : "bg-primary"
+                          }`}
+                          style={{ width: `${progressPercent}%` }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </CardContent>
+          </Card>
+        );
+      })()}
 
       {/* Recommended Exercises (Uncompleted) */}
       <Card>
