@@ -476,9 +476,9 @@ export default function StatisticsPage() {
                   ))}
                 </div>
                 <div className="flex justify-between text-xs text-muted-foreground mt-2">
-                  <span>0%</span>
-                  <span>50%</span>
-                  <span>100%</span>
+                  {[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map((v) => (
+                    <span key={v}>{v}</span>
+                  ))}
                 </div>
               </div>
             );
