@@ -12,7 +12,6 @@ model Exercise {
   title         String
   section       String
   level         String
-  category      String
   sourceUrl     String    @unique
   audioUrl      String?
   h5pEmbedUrl   String?
@@ -21,4 +20,14 @@ model Exercise {
   publishedAt   DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+  categories    ExerciseCategory[]
+}
+
+model ExerciseCategory {
+  id         String   @id @default(cuid())
+  exerciseId String
+  category   String
+  exercise   Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@unique([exerciseId, category])
 }

@@ -12,6 +12,7 @@ export async function GET() {
     const completedExerciseIds = completedProgress.map((p) => p.exerciseId);
     const completedExercises = await exerciseDb.exercise.findMany({
       where: { id: { in: completedExerciseIds } },
+      include: { categories: true },
     });
     const exerciseMap = new Map(completedExercises.map((e) => [e.id, e]));
 
@@ -160,13 +161,15 @@ export async function GET() {
     for (const p of completedProgress) {
       const exercise = exerciseMap.get(p.exerciseId);
       if (exercise) {
-        categoryCounts[exercise.category] = (categoryCounts[exercise.category] || 0) + 1;
+        for (const c of exercise.categories) {
+          categoryCounts[c.category] = (categoryCounts[c.category] || 0) + 1;
+        }
       }
     }
     const byCategory = Object.entries(categoryCounts)
       .map(([category, count]) => ({ category, count }))
       .sort((a, b) => b.count - a.count)
-      .slice(0, 10); // 상위 10개
+      .slice(0, 10);
 
     // 7. 점수 통계
     const scoresWithId = completedProgress

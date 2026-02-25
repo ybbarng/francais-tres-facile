@@ -7,15 +7,6 @@ export async function GET(request: NextRequest) {
     const section = searchParams.get("section");
     const level = searchParams.get("level");
 
-    // Build where clause for filtering
-    const where: Record<string, string> = {};
-    if (section) {
-      where.section = section;
-    }
-    if (level) {
-      where.level = level;
-    }
-
     // Get distinct sections
     const sections = await exerciseDb.exercise.findMany({
       select: { section: true },
@@ -35,9 +26,15 @@ export async function GET(request: NextRequest) {
       orderBy: { level: "asc" },
     });
 
-    // Get distinct categories (filtered by section and level if provided)
-    const categories = await exerciseDb.exercise.findMany({
-      where,
+    // Get distinct categories from ExerciseCategory (filtered by section and level)
+    const categoryWhere: Record<string, unknown> = {};
+    if (section || level) {
+      categoryWhere.exercise = {};
+      if (section) (categoryWhere.exercise as Record<string, string>).section = section;
+      if (level) (categoryWhere.exercise as Record<string, string>).level = level;
+    }
+    const categoryRecords = await exerciseDb.exerciseCategory.findMany({
+      where: categoryWhere,
       select: { category: true },
       distinct: ["category"],
       orderBy: { category: "asc" },
@@ -46,7 +43,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       sections: sections.map((s: { section: string }) => s.section),
       levels: levels.map((l: { level: string }) => l.level),
-      categories: categories.map((c: { category: string }) => c.category),
+      categories: categoryRecords.map((c: { category: string }) => c.category),
     });
   } catch (error) {
     console.error("Error fetching filters:", error);

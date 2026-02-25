@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
     }
 
     if (category) {
-      where.category = category;
+      where.categories = { some: { category } };
     }
 
     if (search) {
@@ -31,9 +31,9 @@ export async function GET(request: NextRequest) {
     }
 
     if (completed !== null && (completed === "true" || completed === "false")) {
-      // completed 필터가 있으면 전체를 가져와서 앱 레벨에서 필터링
       const allExercises = await exerciseDb.exercise.findMany({
         where,
+        include: { categories: true },
         orderBy: { publishedAt: "desc" },
       });
 
@@ -68,6 +68,7 @@ export async function GET(request: NextRequest) {
     const [exercises, total] = await Promise.all([
       exerciseDb.exercise.findMany({
         where,
+        include: { categories: true },
         orderBy: { publishedAt: "desc" },
         skip: (page - 1) * limit,
         take: limit,

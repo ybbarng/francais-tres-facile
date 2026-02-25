@@ -77,7 +77,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
               <AudioPlayer
                 audioUrl={currentExercise.audioUrl}
                 title={currentExercise.title}
-                subtitle={`${currentExercise.level} · ${currentExercise.category}`}
+                subtitle={`${currentExercise.level} · ${currentExercise.categories.map((c: { category: string }) => c.category).join(", ")}`}
                 playlistLength={exercisesWithAudio.length}
                 shuffle={shuffle}
                 repeat={repeat}
@@ -136,7 +136,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
                       {exercise.title}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      {exercise.level} · {exercise.category}
+                      {exercise.level} · {exercise.categories.map((c: { category: string }) => c.category).join(", ")}
                     </p>
                   </div>
                   {exercise.progress?.completed && (

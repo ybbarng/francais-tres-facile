@@ -11,6 +11,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
 
     const exercise = await exerciseDb.exercise.findUnique({
       where: { id },
+      include: { categories: true },
     });
 
     if (!exercise) {

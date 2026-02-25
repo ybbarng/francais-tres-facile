@@ -53,7 +53,7 @@ export default function ExerciseCard({ exercise }: ExerciseCardProps) {
             >
               {exercise.level}
             </Badge>
-            <span className="text-xs text-muted-foreground">{exercise.category}</span>
+            <span className="text-xs text-muted-foreground">{exercise.categories.map((c) => c.category).join(", ")}</span>
             {(!exercise.audioUrl || !exercise.transcript) && (
               <Badge variant="warning">Atypique</Badge>
             )}

@@ -1,9 +1,13 @@
-import type { Exercise } from "@/generated/exercises";
+import type { Exercise, ExerciseCategory } from "@/generated/exercises";
 import type { Progress } from "@/generated/progress";
 
-export type { Exercise, Progress };
+export type { Exercise, ExerciseCategory, Progress };
 
-export type ExerciseWithProgress = Exercise & {
+export type ExerciseWithCategories = Exercise & {
+  categories: ExerciseCategory[];
+};
+
+export type ExerciseWithProgress = ExerciseWithCategories & {
   progress: Progress | null;
 };
 

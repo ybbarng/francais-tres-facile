@@ -14,6 +14,7 @@ export async function GET() {
     const exerciseIds = completedProgress.map((p) => p.exerciseId);
     const exercises = await exerciseDb.exercise.findMany({
       where: { id: { in: exerciseIds } },
+      include: { categories: true },
     });
 
     const exerciseMap = new Map(exercises.map((e) => [e.id, e]));

@@ -31,6 +31,7 @@ export async function POST(request: NextRequest) {
       try {
         const existing = await exerciseDb.exercise.findUnique({
           where: { sourceUrl: exercise.sourceUrl },
+          include: { categories: true },
         });
 
         if (existing) {
@@ -40,11 +41,22 @@ export async function POST(request: NextRequest) {
               title: exercise.title,
               section: exercise.section,
               level: exercise.level,
-              category: exercise.category,
               audioUrl: exercise.audioUrl,
               h5pEmbedUrl: exercise.h5pEmbedUrl,
               thumbnailUrl: exercise.thumbnailUrl,
               publishedAt: exercise.publishedAt,
+              // 새 category가 아직 없으면 추가
+              categories: {
+                connectOrCreate: {
+                  where: {
+                    exerciseId_category: {
+                      exerciseId: existing.id,
+                      category: exercise.category,
+                    },
+                  },
+                  create: { category: exercise.category },
+                },
+              },
             },
           });
           result.updated++;
@@ -68,12 +80,14 @@ export async function POST(request: NextRequest) {
               title: exercise.title,
               section: exercise.section,
               level: exercise.level,
-              category: exercise.category,
               sourceUrl: exercise.sourceUrl,
               audioUrl: exercise.audioUrl,
               h5pEmbedUrl: exercise.h5pEmbedUrl,
               thumbnailUrl: exercise.thumbnailUrl,
               publishedAt: exercise.publishedAt,
+              categories: {
+                create: { category: exercise.category },
+              },
             },
           });
           result.added++;

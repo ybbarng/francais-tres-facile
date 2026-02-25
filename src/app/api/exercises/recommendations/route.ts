@@ -13,12 +13,12 @@ const CATEGORY_PRIORITY = [
 
 export async function GET() {
   try {
-    // Fetch all exercises from comprendre-actualite / A2
     const exercises = await exerciseDb.exercise.findMany({
       where: {
         section: "comprendre-actualite",
         level: "A2",
       },
+      include: { categories: true },
       orderBy: { publishedAt: "desc" },
     });
 
@@ -36,26 +36,29 @@ export async function GET() {
         progress: progressMap.get(e.id) ?? null,
       }));
 
-    // Sort by category priority, then by publishedAt desc
+    // Sort by best category priority, then by publishedAt desc
     const sortedExercises = filtered.sort((a, b) => {
-      const priorityA = CATEGORY_PRIORITY.indexOf(a.category);
-      const priorityB = CATEGORY_PRIORITY.indexOf(b.category);
+      const bestPriority = (cats: { category: string }[]) => {
+        let best = CATEGORY_PRIORITY.length;
+        for (const c of cats) {
+          const idx = CATEGORY_PRIORITY.indexOf(c.category);
+          if (idx !== -1 && idx < best) best = idx;
+        }
+        return best;
+      };
 
-      // If category not in priority list, put at end
-      const effectivePriorityA = priorityA === -1 ? CATEGORY_PRIORITY.length : priorityA;
-      const effectivePriorityB = priorityB === -1 ? CATEGORY_PRIORITY.length : priorityB;
+      const priorityA = bestPriority(a.categories);
+      const priorityB = bestPriority(b.categories);
 
-      if (effectivePriorityA !== effectivePriorityB) {
-        return effectivePriorityA - effectivePriorityB;
+      if (priorityA !== priorityB) {
+        return priorityA - priorityB;
       }
 
-      // Same category: sort by publishedAt desc
       const dateA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
       const dateB = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
       return dateB - dateA;
     });
 
-    // Return top 5
     return NextResponse.json({
       exercises: sortedExercises.slice(0, 5),
       total: sortedExercises.length,

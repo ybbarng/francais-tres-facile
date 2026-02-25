@@ -34,6 +34,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
         h5pEmbedUrl: details.h5pEmbedUrl || exercise.h5pEmbedUrl,
         title: details.title || exercise.title,
       },
+      include: { categories: true },
     });
 
     const progress = await progressDb.progress.findUnique({

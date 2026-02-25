@@ -239,7 +239,7 @@ export default function ExerciseDetailPage({ params }: ExerciseDetailPageProps) 
               >
                 {exercise.level}
               </Badge>
-              <span className="text-sm text-muted-foreground">{exercise.category}</span>
+              <span className="text-sm text-muted-foreground">{exercise.categories.map((c) => c.category).join(", ")}</span>
               {exercise.publishedAt && (
                 <span className="text-sm text-muted-foreground">
                   · {new Date(exercise.publishedAt).toLocaleDateString("fr-FR")}
