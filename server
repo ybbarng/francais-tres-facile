@@ -10,7 +10,7 @@ echo "📦 Installing dependencies..."
 pnpm install
 
 echo "🔧 Generating Prisma client..."
-pnpm prisma generate
+pnpm run prisma:generate
 
 echo "🔨 Building..."
 pnpm run build

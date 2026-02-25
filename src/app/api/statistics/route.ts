@@ -1,30 +1,30 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/db";
+import { exerciseDb, progressDb } from "@/lib/db";
 
 export async function GET() {
   try {
-    // 완료된 exercice들 가져오기
-    const completedExercises = await prisma.exercise.findMany({
-      where: {
-        progress: {
-          completed: true,
-        },
-      },
-      include: {
-        progress: true,
-      },
+    // 완료된 progress 가져오기
+    const completedProgress = await progressDb.progress.findMany({
+      where: { completed: true },
     });
 
+    // 완료된 exercise 정보 가져오기
+    const completedExerciseIds = completedProgress.map((p) => p.exerciseId);
+    const completedExercises = await exerciseDb.exercise.findMany({
+      where: { id: { in: completedExerciseIds } },
+    });
+    const exerciseMap = new Map(completedExercises.map((e) => [e.id, e]));
+
     // 모든 progress 가져오기 (오디오 재생 횟수 등)
-    const allProgress = await prisma.progress.findMany();
+    const allProgress = await progressDb.progress.findMany();
 
     // completedAt이 있는 것만 필터링
-    const withDates = completedExercises.filter((e) => e.progress?.completedAt);
+    const withDates = completedProgress.filter((p) => p.completedAt);
 
     // 1. 요일별 완료 횟수
     const dayOfWeekCounts: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
-    for (const ex of withDates) {
-      const day = new Date(ex.progress!.completedAt!).getDay();
+    for (const p of withDates) {
+      const day = new Date(p.completedAt!).getDay();
       dayOfWeekCounts[day]++;
     }
     const dayNames = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
@@ -34,8 +34,8 @@ export async function GET() {
     // 2. 시간대별 완료 횟수
     const hourCounts: Record<number, number> = {};
     for (let i = 0; i < 24; i++) hourCounts[i] = 0;
-    for (const ex of withDates) {
-      const hour = new Date(ex.progress!.completedAt!).getHours();
+    for (const p of withDates) {
+      const hour = new Date(p.completedAt!).getHours();
       hourCounts[hour]++;
     }
     const byHour = Object.entries(hourCounts).map(([hour, count]) => ({
@@ -46,7 +46,7 @@ export async function GET() {
 
     // 3. 연속 학습 기록 (streak)
     const sortedDates = withDates
-      .map((e) => new Date(e.progress!.completedAt!))
+      .map((p) => new Date(p.completedAt!))
       .sort((a, b) => a.getTime() - b.getTime());
 
     const uniqueDays = new Set(
@@ -111,8 +111,8 @@ export async function GET() {
       const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
       monthlyData[key] = 0;
     }
-    for (const ex of withDates) {
-      const d = new Date(ex.progress!.completedAt!);
+    for (const p of withDates) {
+      const d = new Date(p.completedAt!);
       const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
       if (monthlyData[key] !== undefined) {
         monthlyData[key]++;
@@ -142,8 +142,11 @@ export async function GET() {
 
     // 5. 레벨별 완료 분포
     const levelCounts: Record<string, number> = {};
-    for (const ex of completedExercises) {
-      levelCounts[ex.level] = (levelCounts[ex.level] || 0) + 1;
+    for (const p of completedProgress) {
+      const exercise = exerciseMap.get(p.exerciseId);
+      if (exercise) {
+        levelCounts[exercise.level] = (levelCounts[exercise.level] || 0) + 1;
+      }
     }
     const byLevel = Object.entries(levelCounts)
       .map(([level, count]) => ({ level, count }))
@@ -154,8 +157,11 @@ export async function GET() {
 
     // 6. 카테고리별 완료 분포
     const categoryCounts: Record<string, number> = {};
-    for (const ex of completedExercises) {
-      categoryCounts[ex.category] = (categoryCounts[ex.category] || 0) + 1;
+    for (const p of completedProgress) {
+      const exercise = exerciseMap.get(p.exerciseId);
+      if (exercise) {
+        categoryCounts[exercise.category] = (categoryCounts[exercise.category] || 0) + 1;
+      }
     }
     const byCategory = Object.entries(categoryCounts)
       .map(([category, count]) => ({ category, count }))
@@ -163,13 +169,13 @@ export async function GET() {
       .slice(0, 10); // 상위 10개
 
     // 7. 점수 통계
-    const scoresWithId = completedExercises
-      .filter((e) => e.progress?.score !== null && e.progress?.maxScore)
-      .map((e) => ({
-        exerciseId: e.id,
-        score: e.progress!.score!,
-        maxScore: e.progress!.maxScore!,
-        percent: (e.progress!.score! / e.progress!.maxScore!) * 100,
+    const scoresWithId = completedProgress
+      .filter((p) => p.score !== null && p.maxScore)
+      .map((p) => ({
+        exerciseId: p.exerciseId,
+        score: p.score!,
+        maxScore: p.maxScore!,
+        percent: (p.score! / p.maxScore!) * 100,
       }));
 
     const lowestScoreExercise =
@@ -194,8 +200,8 @@ export async function GET() {
 
     // 9. 하루에 가장 많이 수행한 횟수
     const dailyCounts: Record<string, number> = {};
-    for (const ex of withDates) {
-      const d = new Date(ex.progress!.completedAt!);
+    for (const p of withDates) {
+      const d = new Date(p.completedAt!);
       const key = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
       dailyCounts[key] = (dailyCounts[key] || 0) + 1;
     }
@@ -213,7 +219,7 @@ export async function GET() {
     }
 
     // 11. 기타 재미 통계
-    const totalCompleted = completedExercises.length;
+    const totalCompleted = completedProgress.length;
     const firstCompleted = sortedDates.length > 0 ? sortedDates[0] : null;
     const averagePerDay =
       firstCompleted && sortedDates.length > 0

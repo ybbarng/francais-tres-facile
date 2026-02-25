@@ -1,4 +1,7 @@
-import type { Exercise, Progress } from "@prisma/client";
+import type { Exercise } from "@/generated/exercises";
+import type { Progress } from "@/generated/progress";
+
+export type { Exercise, Progress };
 
 export type ExerciseWithProgress = Exercise & {
   progress: Progress | null;

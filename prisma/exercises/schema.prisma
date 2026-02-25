@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../src/generated/exercises"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Exercise {
+  id            String    @id
+  title         String
+  section       String
+  level         String
+  category      String
+  sourceUrl     String    @unique
+  audioUrl      String?
+  h5pEmbedUrl   String?
+  transcript    String?
+  thumbnailUrl  String?
+  publishedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/db";
+import { exerciseDb, getProgressMap } from "@/lib/db";
 
 // Category priority order for home page recommendations
 const CATEGORY_PRIORITY = [
@@ -13,19 +13,31 @@ const CATEGORY_PRIORITY = [
 
 export async function GET() {
   try {
-    // Fetch uncompleted and non-hidden exercises from comprendre-actualite / A2
-    const exercises = await prisma.exercise.findMany({
+    // Fetch all exercises from comprendre-actualite / A2
+    const exercises = await exerciseDb.exercise.findMany({
       where: {
         section: "comprendre-actualite",
         level: "A2",
-        OR: [{ progress: null }, { progress: { completed: false, hidden: false } }],
       },
-      include: { progress: true },
       orderBy: { publishedAt: "desc" },
     });
 
+    const progressMap = await getProgressMap(exercises.map((e) => e.id));
+
+    // Filter: uncompleted and non-hidden
+    const filtered = exercises
+      .filter((e) => {
+        const progress = progressMap.get(e.id);
+        if (!progress) return true;
+        return !progress.completed && !progress.hidden;
+      })
+      .map((e) => ({
+        ...e,
+        progress: progressMap.get(e.id) ?? null,
+      }));
+
     // Sort by category priority, then by publishedAt desc
-    const sortedExercises = exercises.sort((a, b) => {
+    const sortedExercises = filtered.sort((a, b) => {
       const priorityA = CATEGORY_PRIORITY.indexOf(a.category);
       const priorityB = CATEGORY_PRIORITY.indexOf(b.category);
 

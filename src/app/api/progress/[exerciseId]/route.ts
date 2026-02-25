@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { verifyPasswordWithRateLimit } from "@/lib/auth";
-import { prisma } from "@/lib/db";
+import { exerciseDb, progressDb } from "@/lib/db";
 import type { ProgressInput } from "@/types";
 
 type RouteContext = {
@@ -11,16 +11,19 @@ export async function GET(request: NextRequest, context: RouteContext) {
   try {
     const { exerciseId } = await context.params;
 
-    const progress = await prisma.progress.findUnique({
+    const progress = await progressDb.progress.findUnique({
       where: { exerciseId },
-      include: { exercise: true },
     });
 
     if (!progress) {
       return NextResponse.json(null);
     }
 
-    return NextResponse.json(progress);
+    const exercise = await exerciseDb.exercise.findUnique({
+      where: { id: exerciseId },
+    });
+
+    return NextResponse.json({ ...progress, exercise: exercise ?? null });
   } catch (error) {
     console.error("Error fetching progress:", error);
     return NextResponse.json({ error: "Failed to fetch progress" }, { status: 500 });
@@ -38,7 +41,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
     const body: ProgressInput = await request.json();
 
     // 먼저 exercise가 존재하는지 확인
-    const exercise = await prisma.exercise.findUnique({
+    const exercise = await exerciseDb.exercise.findUnique({
       where: { id: exerciseId },
     });
 
@@ -47,7 +50,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
     }
 
     // 기존 progress 확인
-    const existing = await prisma.progress.findUnique({
+    const existing = await progressDb.progress.findUnique({
       where: { exerciseId },
     });
 
@@ -64,7 +67,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
       completedAt = new Date();
     }
 
-    const progress = await prisma.progress.upsert({
+    const progress = await progressDb.progress.upsert({
       where: { exerciseId },
       update: {
         ...body,
@@ -94,7 +97,7 @@ export async function PATCH(request: NextRequest, context: RouteContext) {
     const { exerciseId } = await context.params;
     const body: ProgressInput = await request.json();
 
-    const existing = await prisma.progress.findUnique({
+    const existing = await progressDb.progress.findUnique({
       where: { exerciseId },
     });
 
@@ -115,7 +118,7 @@ export async function PATCH(request: NextRequest, context: RouteContext) {
       completedAt = new Date();
     }
 
-    const progress = await prisma.progress.update({
+    const progress = await progressDb.progress.update({
       where: { exerciseId },
       data: {
         ...body,

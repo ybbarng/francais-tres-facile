@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/db";
+import { exerciseDb, getProgressMap } from "@/lib/db";
 
 export async function GET(request: NextRequest) {
   try {
@@ -30,27 +30,60 @@ export async function GET(request: NextRequest) {
       where.title = { contains: search };
     }
 
-    if (completed !== null) {
-      if (completed === "true") {
-        where.progress = { completed: true };
-      } else if (completed === "false") {
-        where.OR = [{ progress: null }, { progress: { completed: false } }];
-      }
+    if (completed !== null && (completed === "true" || completed === "false")) {
+      // completed 필터가 있으면 전체를 가져와서 앱 레벨에서 필터링
+      const allExercises = await exerciseDb.exercise.findMany({
+        where,
+        orderBy: { publishedAt: "desc" },
+      });
+
+      const progressMap = await getProgressMap(allExercises.map((e) => e.id));
+
+      const filtered = allExercises.filter((e) => {
+        const progress = progressMap.get(e.id);
+        if (completed === "true") {
+          return progress?.completed === true;
+        }
+        return !progress || progress.completed === false;
+      });
+
+      const total = filtered.length;
+      const paginated = filtered.slice((page - 1) * limit, page * limit);
+      const exercises = paginated.map((e) => ({
+        ...e,
+        progress: progressMap.get(e.id) ?? null,
+      }));
+
+      return NextResponse.json({
+        exercises,
+        pagination: {
+          page,
+          limit,
+          total,
+          totalPages: Math.ceil(total / limit),
+        },
+      });
     }
 
     const [exercises, total] = await Promise.all([
-      prisma.exercise.findMany({
+      exerciseDb.exercise.findMany({
         where,
-        include: { progress: true },
         orderBy: { publishedAt: "desc" },
         skip: (page - 1) * limit,
         take: limit,
       }),
-      prisma.exercise.count({ where }),
+      exerciseDb.exercise.count({ where }),
     ]);
 
+    const progressMap = await getProgressMap(exercises.map((e) => e.id));
+
+    const exercisesWithProgress = exercises.map((e) => ({
+      ...e,
+      progress: progressMap.get(e.id) ?? null,
+    }));
+
     return NextResponse.json({
-      exercises,
+      exercises: exercisesWithProgress,
       pagination: {
         page,
         limit,

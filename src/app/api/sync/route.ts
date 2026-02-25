@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { verifyPasswordWithRateLimit } from "@/lib/auth";
-import { prisma } from "@/lib/db";
+import { exerciseDb } from "@/lib/db";
 import { generateShortId } from "@/lib/id";
 import { scrapeAllExercises, scrapeSectionExercises } from "@/lib/scraper";
 import type { SyncResult } from "@/types";
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
       : await scrapeAllExercises();
 
     // 기존 ID 맵 로드 (충돌 방지용)
-    const existingExercises = await prisma.exercise.findMany({
+    const existingExercises = await exerciseDb.exercise.findMany({
       select: { id: true, sourceUrl: true },
     });
     const idToUrl = new Map(existingExercises.map((e) => [e.id, e.sourceUrl]));
@@ -29,12 +29,12 @@ export async function POST(request: NextRequest) {
 
     for (const exercise of exercises) {
       try {
-        const existing = await prisma.exercise.findUnique({
+        const existing = await exerciseDb.exercise.findUnique({
           where: { sourceUrl: exercise.sourceUrl },
         });
 
         if (existing) {
-          await prisma.exercise.update({
+          await exerciseDb.exercise.update({
             where: { sourceUrl: exercise.sourceUrl },
             data: {
               title: exercise.title,
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
             suffix++;
           }
 
-          await prisma.exercise.create({
+          await exerciseDb.exercise.create({
             data: {
               id,
               title: exercise.title,

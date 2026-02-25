@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { verifyPasswordWithRateLimit } from "@/lib/auth";
-import { prisma } from "@/lib/db";
+import { exerciseDb, progressDb } from "@/lib/db";
 import { scrapeExerciseDetail } from "@/lib/scraper";
 
 interface RouteParams {
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
   try {
     const { id } = await params;
 
-    const exercise = await prisma.exercise.findUnique({
+    const exercise = await exerciseDb.exercise.findUnique({
       where: { id },
     });
 
@@ -27,19 +27,22 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     console.log(`Refreshing details for: ${exercise.sourceUrl}`);
     const details = await scrapeExerciseDetail(exercise.sourceUrl);
 
-    const updated = await prisma.exercise.update({
+    const updated = await exerciseDb.exercise.update({
       where: { id },
       data: {
         audioUrl: details.audioUrl || exercise.audioUrl,
         h5pEmbedUrl: details.h5pEmbedUrl || exercise.h5pEmbedUrl,
         title: details.title || exercise.title,
       },
-      include: { progress: true },
+    });
+
+    const progress = await progressDb.progress.findUnique({
+      where: { exerciseId: id },
     });
 
     return NextResponse.json({
       success: true,
-      exercise: updated,
+      exercise: { ...updated, progress: progress ?? null },
       detailsFound: {
         audioUrl: !!details.audioUrl,
         h5pEmbedUrl: !!details.h5pEmbedUrl,

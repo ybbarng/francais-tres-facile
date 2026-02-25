@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/db";
+import { exerciseDb } from "@/lib/db";
 
 export async function GET(request: NextRequest) {
   try {
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Get distinct sections
-    const sections = await prisma.exercise.findMany({
+    const sections = await exerciseDb.exercise.findMany({
       select: { section: true },
       distinct: ["section"],
       orderBy: { section: "asc" },
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
     if (section) {
       levelsWhere.section = section;
     }
-    const levels = await prisma.exercise.findMany({
+    const levels = await exerciseDb.exercise.findMany({
       where: levelsWhere,
       select: { level: true },
       distinct: ["level"],
@@ -36,7 +36,7 @@ export async function GET(request: NextRequest) {
     });
 
     // Get distinct categories (filtered by section and level if provided)
-    const categories = await prisma.exercise.findMany({
+    const categories = await exerciseDb.exercise.findMany({
       where,
       select: { category: true },
       distinct: ["category"],
