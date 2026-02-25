@@ -117,7 +117,7 @@ async function main() {
         added++;
 
         // Rate limiting
-        await new Promise((resolve) => setTimeout(resolve, 300));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
       }
     } catch (e) {
       console.error(`  ERR  ${exercise.sourceUrl}: ${e instanceof Error ? e.message : e}`);
