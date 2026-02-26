@@ -13,8 +13,14 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 export type RepeatMode = "none" | "one" | "all";
+
+const SPEED_MIN = 0.3;
+const SPEED_MAX = 1.5;
+const SPEED_STEP = 0.1;
+const SPEED_PRESETS = [0.5, 0.75, 1, 1.25, 1.5];
 
 interface AudioPlayerProps {
   audioUrl: string | null;
@@ -31,8 +37,6 @@ interface AudioPlayerProps {
   onShuffleToggle?: () => void;
   onRepeatCycle?: () => void;
 }
-
-const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5];
 
 export default function AudioPlayer({
   audioUrl,
@@ -132,14 +136,13 @@ export default function AudioPlayer({
     setCurrentTime(time);
   };
 
-  const cycleSpeed = () => {
-    const currentIdx = SPEEDS.indexOf(playbackRate);
-    const nextIdx = (currentIdx + 1) % SPEEDS.length;
-    const nextSpeed = SPEEDS[nextIdx];
+  const setSpeed = (speed: number) => {
+    const rounded = Math.round(speed * 10) / 10;
+    const clamped = Math.max(SPEED_MIN, Math.min(SPEED_MAX, rounded));
     const audio = audioRef.current;
     if (!audio) return;
-    audio.playbackRate = nextSpeed;
-    setPlaybackRate(nextSpeed);
+    audio.playbackRate = clamped;
+    setPlaybackRate(clamped);
   };
 
   const skip = (seconds: number) => {
@@ -188,15 +191,58 @@ export default function AudioPlayer({
               {currentTrack} / {playlistLength}
             </span>
           )}
-          <Button
-            variant={playbackRate !== 1 ? "secondary" : "outline"}
-            size="sm"
-            onClick={cycleSpeed}
-            className="h-7 px-2 text-xs font-mono min-w-[3rem]"
-            title="Vitesse de lecture"
-          >
-            {playbackRate}x
-          </Button>
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button
+                variant={playbackRate !== 1 ? "secondary" : "outline"}
+                size="sm"
+                className="h-7 px-2 text-xs font-mono min-w-[3rem]"
+                title="Vitesse de lecture"
+              >
+                {playbackRate}x
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-56 p-3" align="end">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-medium">Vitesse</span>
+                  <span className="text-xs font-mono text-muted-foreground">{playbackRate}x</span>
+                </div>
+                <input
+                  type="range"
+                  min={SPEED_MIN}
+                  max={SPEED_MAX}
+                  step={SPEED_STEP}
+                  value={playbackRate}
+                  onChange={(e) => setSpeed(Number.parseFloat(e.target.value))}
+                  className="w-full h-1.5 bg-muted rounded-lg appearance-none cursor-pointer
+                             [&::-webkit-slider-thumb]:appearance-none
+                             [&::-webkit-slider-thumb]:w-3.5
+                             [&::-webkit-slider-thumb]:h-3.5
+                             [&::-webkit-slider-thumb]:bg-primary
+                             [&::-webkit-slider-thumb]:rounded-full
+                             [&::-webkit-slider-thumb]:shadow-md"
+                />
+                <div className="flex justify-between text-[10px] text-muted-foreground px-0.5">
+                  <span>{SPEED_MIN}x</span>
+                  <span>{SPEED_MAX}x</span>
+                </div>
+                <div className="flex gap-1">
+                  {SPEED_PRESETS.map((speed) => (
+                    <Button
+                      key={speed}
+                      variant={playbackRate === speed ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setSpeed(speed)}
+                      className="flex-1 h-7 px-0 text-xs"
+                    >
+                      {speed}x
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
 
