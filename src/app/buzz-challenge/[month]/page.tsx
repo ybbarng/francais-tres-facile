@@ -245,7 +245,11 @@ export default function BuzzChallengePage() {
                       >
                         {exercise.level}
                       </Badge>
-                      <span className="text-xs text-muted-foreground">{exercise.categories.map((c: { category: string }) => c.category).join(", ")}</span>
+                      <span className="text-xs text-muted-foreground">
+                        {exercise.categories
+                          .map((c: { category: string }) => c.category)
+                          .join(", ")}
+                      </span>
                       {exercise.progress?.score !== null && exercise.progress?.maxScore && (
                         <span className="text-sm font-semibold text-primary">
                           {exercise.progress.score}/{exercise.progress.maxScore}

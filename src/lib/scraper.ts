@@ -344,7 +344,9 @@ export async function scrapeExerciseDetail(sourceUrl: string): Promise<Partial<S
   // 5. Look for fle-rfi.h5p.com URL in scripts or HTML (handles escaped slashes)
   if (!h5pEmbedUrl) {
     const fullHtml = $.html();
-    const fleMatch = fullHtml.match(/https?:\\?\/\\?\/fle-rfi\.h5p\.com\\?\/content\\?\/[^"'\s]+\\?\/embed/i);
+    const fleMatch = fullHtml.match(
+      /https?:\\?\/\\?\/fle-rfi\.h5p\.com\\?\/content\\?\/[^"'\s]+\\?\/embed/i
+    );
     if (fleMatch) {
       h5pEmbedUrl = fleMatch[0].replace(/\\\//g, "/");
       console.log(`  Found fle-rfi in HTML: ${h5pEmbedUrl}`);

@@ -32,7 +32,9 @@ async function main() {
           where: { id: exercise.id },
           data,
         });
-        console.log(`  OK  h5p: ${data.h5pEmbedUrl ? "found" : "still null"}, audio: ${data.audioUrl ? "found" : "ok"}`);
+        console.log(
+          `  OK  h5p: ${data.h5pEmbedUrl ? "found" : "still null"}, audio: ${data.audioUrl ? "found" : "ok"}`
+        );
         updated++;
       } else {
         console.log(`  SKIP  no new data found`);

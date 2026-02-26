@@ -240,7 +240,11 @@ export default function DashboardPage() {
                         >
                           {exercise.level}
                         </Badge>
-                        <span className="text-xs text-muted-foreground">{exercise.categories.map((c: { category: string }) => c.category).join(", ")}</span>
+                        <span className="text-xs text-muted-foreground">
+                          {exercise.categories
+                            .map((c: { category: string }) => c.category)
+                            .join(", ")}
+                        </span>
                       </div>
                       <p className="font-medium truncate">{exercise.title}</p>
                       {exercise.publishedAt && (
