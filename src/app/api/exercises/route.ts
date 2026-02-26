@@ -9,10 +9,15 @@ export async function GET(request: NextRequest) {
     const category = searchParams.get("category");
     const completed = searchParams.get("completed");
     const search = searchParams.get("search");
+    const hasAudio = searchParams.get("hasAudio");
     const page = parseInt(searchParams.get("page") || "1", 10);
     const limit = parseInt(searchParams.get("limit") || "24", 10);
 
     const where: Record<string, unknown> = {};
+
+    if (hasAudio === "true") {
+      where.audioUrl = { not: null };
+    }
 
     if (section) {
       where.section = section;

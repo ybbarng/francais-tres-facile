@@ -12,7 +12,7 @@ export default function PlaylistPage() {
   useEffect(() => {
     const fetchExercises = async () => {
       try {
-        const res = await fetch("/api/exercises?limit=10000");
+        const res = await fetch("/api/exercises?hasAudio=true&limit=100");
         const data = await res.json();
         setExercises(data.exercises);
       } catch (error) {

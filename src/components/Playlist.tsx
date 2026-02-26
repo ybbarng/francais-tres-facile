@@ -16,22 +16,21 @@ export default function Playlist({ exercises }: PlaylistProps) {
   const [shuffle, setShuffle] = useState(false);
   const [repeat, setRepeat] = useState<RepeatMode>("none");
 
-  const exercisesWithAudio = exercises.filter((e) => e.audioUrl);
-  const currentExercise = exercisesWithAudio[currentIndex];
-  const hasMultipleTracks = exercisesWithAudio.length > 1;
+  const currentExercise = exercises[currentIndex];
+  const hasMultipleTracks = exercises.length > 1;
 
   const playNext = useCallback(() => {
     if (shuffle) {
-      const nextIndex = Math.floor(Math.random() * exercisesWithAudio.length);
+      const nextIndex = Math.floor(Math.random() * exercises.length);
       setCurrentIndex(nextIndex);
-    } else if (currentIndex < exercisesWithAudio.length - 1) {
+    } else if (currentIndex < exercises.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else if (repeat === "all") {
       setCurrentIndex(0);
     } else {
       setIsPlaying(false);
     }
-  }, [shuffle, currentIndex, exercisesWithAudio.length, repeat]);
+  }, [shuffle, currentIndex, exercises.length, repeat]);
 
   const playPrevious = useCallback(() => {
     if (currentIndex > 0) {
@@ -57,7 +56,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
     setIsPlaying(true);
   };
 
-  if (exercisesWithAudio.length === 0) {
+  if (exercises.length === 0) {
     return (
       <Card>
         <CardContent className="py-12 text-center text-muted-foreground">
@@ -78,7 +77,7 @@ export default function Playlist({ exercises }: PlaylistProps) {
                 audioUrl={currentExercise.audioUrl}
                 title={currentExercise.title}
                 subtitle={`${currentExercise.level} · ${currentExercise.categories.map((c: { category: string }) => c.category).join(", ")}`}
-                playlistLength={exercisesWithAudio.length}
+                playlistLength={exercises.length}
                 shuffle={shuffle}
                 repeat={repeat}
                 onPrevious={playPrevious}
@@ -96,11 +95,11 @@ export default function Playlist({ exercises }: PlaylistProps) {
         <Card className="overflow-hidden">
           <CardHeader className="pb-3">
             <CardTitle className="text-base">
-              Liste de lecture ({exercisesWithAudio.length} titres)
+              Liste de lecture ({exercises.length} titres)
             </CardTitle>
           </CardHeader>
           <ul className="divide-y divide-border max-h-[600px] overflow-y-auto">
-            {exercisesWithAudio.map((exercise, index) => (
+            {exercises.map((exercise, index) => (
               <li
                 key={exercise.id}
                 onClick={() => selectTrack(index)}
