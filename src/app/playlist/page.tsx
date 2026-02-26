@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
+import { buildMonthMap, MONTHS } from "@/lib/buzz-challenge";
 import type { ExerciseWithProgress } from "@/types";
 
 const SECTION_LABELS: Record<string, string> = {
@@ -22,12 +23,6 @@ const SECTION_LABELS: Record<string, string> = {
 };
 
 const LEVEL_ORDER = ["A1", "A2", "B1", "B2", "C1C2"];
-
-const MONTHS = [
-  { key: "janvier", name: "Janvier", startIndex: 0, endIndex: 31 },
-  { key: "fevrier", name: "Février", startIndex: 31, endIndex: 59 },
-  { key: "mars", name: "Mars", startIndex: 59, endIndex: 90 },
-];
 
 interface FilterOptions {
   sections: string[];
@@ -85,19 +80,11 @@ export default function PlaylistPage() {
         const res = await fetch("/api/exercises/completed");
         if (!res.ok) return;
         const data: ExerciseWithProgress[] = await res.json();
-        const sorted = [...data].sort((a, b) => {
-          const dateA = a.progress?.completedAt ? new Date(a.progress.completedAt).getTime() : 0;
-          const dateB = b.progress?.completedAt ? new Date(b.progress.completedAt).getTime() : 0;
-          return dateA - dateB;
-        });
-        const map = new Map<string, string>();
-        for (const m of MONTHS) {
-          const slice = sorted.slice(m.startIndex, m.endIndex);
-          for (const ex of slice) {
-            map.set(ex.id, m.key);
-          }
-        }
-        setMonthMap(map);
+        const mapped = data.map((e) => ({
+          id: e.id,
+          completedAt: e.progress?.completedAt ?? null,
+        }));
+        setMonthMap(buildMonthMap(mapped));
       } catch (error) {
         console.error("Failed to fetch month map:", error);
       }

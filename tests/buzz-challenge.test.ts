@@ -1,62 +1,176 @@
 import { describe, expect, it } from "vitest";
-
-// Buzz Challenge 월별 설정
-const MONTHS_CONFIG = {
-  janvier: { name: "Janvier", target: 31, startIndex: 0, endIndex: 31 },
-  fevrier: { name: "Février", target: 28, startIndex: 31, endIndex: 59 },
-  mars: { name: "Mars", target: 31, startIndex: 59, endIndex: 90 },
-} as const;
+import { buildMonthMap, MONTHS } from "@/lib/buzz-challenge";
 
 // 완료된 exercice 수에 따른 월별 진행 상황 계산
 function calculateMonthProgress(completed: number, monthIndex: number) {
-  const months = [
-    { target: 31, cumulative: 31 },
-    { target: 28, cumulative: 59 },
-    { target: 31, cumulative: 90 },
-  ];
+  const months = MONTHS.map((m, i) => ({
+    target: m.target,
+    cumulative: m.endIndex,
+    prevCumulative: i === 0 ? 0 : MONTHS[i - 1].endIndex,
+  }));
 
   const month = months[monthIndex];
-  const prevCumulative = monthIndex === 0 ? 0 : months[monthIndex - 1].cumulative;
-  const monthProgress = Math.max(0, Math.min(month.target, completed - prevCumulative));
+  const monthProgress = Math.max(0, Math.min(month.target, completed - month.prevCumulative));
   const isComplete = completed >= month.cumulative;
 
   return { monthProgress, isComplete };
 }
 
-// completedAt 기준 오름차순 정렬 함수
-function sortByCompletedAt<T extends { progress?: { completedAt?: Date | string | null } }>(
-  data: T[]
-): T[] {
-  return [...data].sort((a, b) => {
-    const dateA = a.progress?.completedAt ? new Date(a.progress.completedAt).getTime() : 0;
-    const dateB = b.progress?.completedAt ? new Date(b.progress.completedAt).getTime() : 0;
-    return dateA - dateB;
-  });
+// helper: generate exercises with sequential completedAt dates
+function makeExercises(count: number, startDate = "2026-01-01") {
+  const start = new Date(startDate).getTime();
+  return Array.from({ length: count }, (_, i) => ({
+    id: `ex-${i + 1}`,
+    completedAt: new Date(start + i * 86400000).toISOString(),
+  }));
 }
 
-describe("Buzz Challenge 월별 설정", () => {
+describe("MONTHS 설정", () => {
   it("1월은 1~31번째 (index 0~30)", () => {
-    expect(MONTHS_CONFIG.janvier.startIndex).toBe(0);
-    expect(MONTHS_CONFIG.janvier.endIndex).toBe(31);
-    expect(MONTHS_CONFIG.janvier.target).toBe(31);
+    const jan = MONTHS[0];
+    expect(jan.key).toBe("janvier");
+    expect(jan.startIndex).toBe(0);
+    expect(jan.endIndex).toBe(31);
+    expect(jan.target).toBe(31);
   });
 
   it("2월은 32~59번째 (index 31~58)", () => {
-    expect(MONTHS_CONFIG.fevrier.startIndex).toBe(31);
-    expect(MONTHS_CONFIG.fevrier.endIndex).toBe(59);
-    expect(MONTHS_CONFIG.fevrier.target).toBe(28);
+    const feb = MONTHS[1];
+    expect(feb.key).toBe("fevrier");
+    expect(feb.startIndex).toBe(31);
+    expect(feb.endIndex).toBe(59);
+    expect(feb.target).toBe(28);
   });
 
   it("3월은 60~90번째 (index 59~89)", () => {
-    expect(MONTHS_CONFIG.mars.startIndex).toBe(59);
-    expect(MONTHS_CONFIG.mars.endIndex).toBe(90);
-    expect(MONTHS_CONFIG.mars.target).toBe(31);
+    const mar = MONTHS[2];
+    expect(mar.key).toBe("mars");
+    expect(mar.startIndex).toBe(59);
+    expect(mar.endIndex).toBe(90);
+    expect(mar.target).toBe(31);
   });
 
   it("총 목표는 90개", () => {
-    const total =
-      MONTHS_CONFIG.janvier.target + MONTHS_CONFIG.fevrier.target + MONTHS_CONFIG.mars.target;
+    const total = MONTHS.reduce((sum, m) => sum + m.target, 0);
     expect(total).toBe(90);
+  });
+
+  it("월별 범위가 연속적 (gap 없음)", () => {
+    for (let i = 1; i < MONTHS.length; i++) {
+      expect(MONTHS[i].startIndex).toBe(MONTHS[i - 1].endIndex);
+    }
+  });
+});
+
+describe("buildMonthMap", () => {
+  it("빈 배열이면 빈 맵 반환", () => {
+    const map = buildMonthMap([]);
+    expect(map.size).toBe(0);
+  });
+
+  it("1개 exercise → janvier에 할당", () => {
+    const exercises = makeExercises(1);
+    const map = buildMonthMap(exercises);
+    expect(map.get("ex-1")).toBe("janvier");
+    expect(map.size).toBe(1);
+  });
+
+  it("31개 exercise → 모두 janvier", () => {
+    const exercises = makeExercises(31);
+    const map = buildMonthMap(exercises);
+    for (let i = 1; i <= 31; i++) {
+      expect(map.get(`ex-${i}`)).toBe("janvier");
+    }
+    expect(map.size).toBe(31);
+  });
+
+  it("32개 exercise → 31개 janvier + 1개 fevrier", () => {
+    const exercises = makeExercises(32);
+    const map = buildMonthMap(exercises);
+    expect(map.get("ex-31")).toBe("janvier");
+    expect(map.get("ex-32")).toBe("fevrier");
+  });
+
+  it("59개 exercise → 31 janvier + 28 fevrier", () => {
+    const exercises = makeExercises(59);
+    const map = buildMonthMap(exercises);
+    expect(map.get("ex-1")).toBe("janvier");
+    expect(map.get("ex-31")).toBe("janvier");
+    expect(map.get("ex-32")).toBe("fevrier");
+    expect(map.get("ex-59")).toBe("fevrier");
+  });
+
+  it("60개 exercise → janvier + fevrier + 1개 mars", () => {
+    const exercises = makeExercises(60);
+    const map = buildMonthMap(exercises);
+    expect(map.get("ex-59")).toBe("fevrier");
+    expect(map.get("ex-60")).toBe("mars");
+  });
+
+  it("90개 exercise → 전체 할당 완료", () => {
+    const exercises = makeExercises(90);
+    const map = buildMonthMap(exercises);
+    expect(map.size).toBe(90);
+
+    const janCount = [...map.values()].filter((v) => v === "janvier").length;
+    const febCount = [...map.values()].filter((v) => v === "fevrier").length;
+    const marCount = [...map.values()].filter((v) => v === "mars").length;
+    expect(janCount).toBe(31);
+    expect(febCount).toBe(28);
+    expect(marCount).toBe(31);
+  });
+
+  it("90개 초과 exercise → 90개만 할당, 나머지는 맵에 없음", () => {
+    const exercises = makeExercises(100);
+    const map = buildMonthMap(exercises);
+    expect(map.size).toBe(90);
+    expect(map.has("ex-90")).toBe(true);
+    expect(map.has("ex-91")).toBe(false);
+  });
+
+  it("completedAt 기준 오름차순 정렬 후 할당", () => {
+    const exercises = [
+      { id: "late", completedAt: "2026-03-01" },
+      { id: "early", completedAt: "2026-01-01" },
+      { id: "mid", completedAt: "2026-02-01" },
+    ];
+    const map = buildMonthMap(exercises);
+    // early가 첫 번째 → janvier
+    expect(map.get("early")).toBe("janvier");
+    expect(map.get("mid")).toBe("janvier");
+    expect(map.get("late")).toBe("janvier");
+  });
+
+  it("completedAt이 null이면 맨 앞으로 정렬 (0 처리)", () => {
+    const exercises = [
+      { id: "with-date", completedAt: "2026-01-15" },
+      { id: "no-date", completedAt: null },
+    ];
+    const map = buildMonthMap(exercises);
+    // null은 0으로 처리 → 맨 앞 → janvier
+    expect(map.get("no-date")).toBe("janvier");
+    expect(map.get("with-date")).toBe("janvier");
+  });
+
+  it("문자열 날짜와 Date 객체 모두 지원", () => {
+    const exercises = [
+      { id: "str", completedAt: "2026-01-01T00:00:00Z" },
+      { id: "date", completedAt: new Date("2026-01-02") },
+    ];
+    const map = buildMonthMap(exercises);
+    expect(map.get("str")).toBe("janvier");
+    expect(map.get("date")).toBe("janvier");
+  });
+
+  it("원본 배열을 변경하지 않음", () => {
+    const exercises = [
+      { id: "b", completedAt: "2026-02-01" },
+      { id: "a", completedAt: "2026-01-01" },
+    ];
+    const original = [...exercises];
+    buildMonthMap(exercises);
+    expect(exercises[0].id).toBe(original[0].id);
+    expect(exercises[1].id).toBe(original[1].id);
   });
 });
 
@@ -131,56 +245,5 @@ describe("월별 진행 상황 계산", () => {
       expect(monthProgress).toBe(31);
       expect(isComplete).toBe(true);
     });
-  });
-});
-
-describe("completedAt 기준 정렬", () => {
-  it("오름차순으로 정렬", () => {
-    const data = [
-      { id: "3", progress: { completedAt: new Date("2026-01-15") } },
-      { id: "1", progress: { completedAt: new Date("2026-01-01") } },
-      { id: "2", progress: { completedAt: new Date("2026-01-10") } },
-    ];
-
-    const sorted = sortByCompletedAt(data);
-
-    expect(sorted[0].id).toBe("1");
-    expect(sorted[1].id).toBe("2");
-    expect(sorted[2].id).toBe("3");
-  });
-
-  it("completedAt이 없는 항목은 맨 앞으로", () => {
-    const data = [
-      { id: "2", progress: { completedAt: new Date("2026-01-10") } },
-      { id: "1", progress: { completedAt: null } },
-      { id: "3", progress: { completedAt: new Date("2026-01-01") } },
-    ];
-
-    const sorted = sortByCompletedAt(data);
-
-    expect(sorted[0].id).toBe("1"); // null은 0으로 처리되어 맨 앞
-    expect(sorted[1].id).toBe("3");
-    expect(sorted[2].id).toBe("2");
-  });
-
-  it("월별 슬라이스가 올바르게 동작", () => {
-    // 35개의 exercice 생성 (1월 31개 + 2월 4개)
-    const data = Array.from({ length: 35 }, (_, i) => ({
-      id: `${i + 1}`,
-      progress: { completedAt: new Date(`2026-01-${String(i + 1).padStart(2, "0")}`) },
-    }));
-
-    const sorted = sortByCompletedAt(data);
-
-    // 1월 슬라이스 (0~31)
-    const janvier = sorted.slice(MONTHS_CONFIG.janvier.startIndex, MONTHS_CONFIG.janvier.endIndex);
-    expect(janvier.length).toBe(31);
-    expect(janvier[0].id).toBe("1");
-    expect(janvier[30].id).toBe("31");
-
-    // 2월 슬라이스 (31~59)
-    const fevrier = sorted.slice(MONTHS_CONFIG.fevrier.startIndex, MONTHS_CONFIG.fevrier.endIndex);
-    expect(fevrier.length).toBe(4); // 35개 중 31개 빼면 4개
-    expect(fevrier[0].id).toBe("32");
   });
 });
