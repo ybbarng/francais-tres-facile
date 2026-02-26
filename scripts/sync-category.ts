@@ -1,25 +1,30 @@
 import path from "node:path";
 import { PrismaLibSql } from "@prisma/adapter-libsql";
 import { PrismaClient } from "../src/generated/exercises/index.js";
-import { scrapeCategory, scrapeExerciseDetail } from "../src/lib/scraper.js";
-import type { CategoryInfo } from "../src/lib/scraper.js";
 import { generateShortId } from "../src/lib/id.js";
+import type { CategoryInfo } from "../src/lib/scraper.js";
+import { scrapeCategory, scrapeExerciseDetail } from "../src/lib/scraper.js";
 
 const categoryUrl = process.argv[2];
 if (!categoryUrl) {
   console.error("Usage: npx tsx scripts/sync-category.ts <category-url>");
-  console.error("Example: npx tsx scripts/sync-category.ts https://francaisfacile.rfi.fr/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/culture-a2/");
+  console.error(
+    "Example: npx tsx scripts/sync-category.ts https://francaisfacile.rfi.fr/fr/comprendre-actualit%C3%A9-fran%C3%A7ais/culture-a2/"
+  );
   process.exit(1);
 }
 
 // Extract category info from URL
 function extractFromUrl(url: string): CategoryInfo {
-  const sectionMatch = url.includes("comprendre-actualit") ? "comprendre-actualite" : "communiquer-quotidien";
+  const sectionMatch = url.includes("comprendre-actualit")
+    ? "comprendre-actualite"
+    : "communiquer-quotidien";
   const levelMatch = url.match(/-(?:a1|a2|b1|b2|c1c2)\/?$/i);
   const level = levelMatch ? levelMatch[0].replace(/[-/]/g, "").toUpperCase() : "A2";
   const categoryMatch = url.match(/\/([^/]+)-(?:a1|a2|b1|b2|c1c2)\/?$/i);
   const category = categoryMatch
-    ? decodeURIComponent(categoryMatch[1]).charAt(0).toUpperCase() + decodeURIComponent(categoryMatch[1]).slice(1)
+    ? decodeURIComponent(categoryMatch[1]).charAt(0).toUpperCase() +
+      decodeURIComponent(categoryMatch[1]).slice(1)
     : "Unknown";
 
   return { url, section: sectionMatch, level, category };
