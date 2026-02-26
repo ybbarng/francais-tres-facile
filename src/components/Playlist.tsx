@@ -82,12 +82,14 @@ export default function Playlist({ exercises }: PlaylistProps) {
     <div className="space-y-4">
       {/* Player - sticky at top */}
       <Card className="sticky top-0 z-10">
-        <CardContent className="pt-6">
+        <CardContent className="pt-4 pb-4">
           {currentExercise && (
             <AudioPlayer
               audioUrl={currentExercise.audioUrl}
               title={currentExercise.title}
               subtitle={`${currentExercise.level} · ${currentExercise.categories.map((c: { category: string }) => c.category).join(", ")}`}
+              thumbnailUrl={currentExercise.thumbnailUrl}
+              currentTrack={currentIndex + 1}
               playlistLength={exercises.length}
               shuffle={shuffle}
               repeat={repeat}

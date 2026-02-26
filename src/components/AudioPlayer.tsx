@@ -20,6 +20,8 @@ interface AudioPlayerProps {
   audioUrl: string | null;
   title: string;
   subtitle?: string;
+  thumbnailUrl?: string | null;
+  currentTrack?: number;
   playlistLength?: number;
   shuffle?: boolean;
   repeat?: RepeatMode;
@@ -30,10 +32,14 @@ interface AudioPlayerProps {
   onRepeatCycle?: () => void;
 }
 
+const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5];
+
 export default function AudioPlayer({
   audioUrl,
   title,
   subtitle,
+  thumbnailUrl,
+  currentTrack,
   playlistLength = 1,
   shuffle = false,
   repeat = "none",
@@ -91,7 +97,6 @@ export default function AudioPlayer({
     const currentSrc = audio.src;
     const newSrc = audioUrl;
 
-    // Only update if the source actually changed
     if (currentSrc !== newSrc) {
       audio.src = newSrc;
       setCurrentTime(0);
@@ -127,11 +132,14 @@ export default function AudioPlayer({
     setCurrentTime(time);
   };
 
-  const handleSpeedChange = (speed: number) => {
+  const cycleSpeed = () => {
+    const currentIdx = SPEEDS.indexOf(playbackRate);
+    const nextIdx = (currentIdx + 1) % SPEEDS.length;
+    const nextSpeed = SPEEDS[nextIdx];
     const audio = audioRef.current;
     if (!audio) return;
-    audio.playbackRate = speed;
-    setPlaybackRate(speed);
+    audio.playbackRate = nextSpeed;
+    setPlaybackRate(nextSpeed);
   };
 
   const skip = (seconds: number) => {
@@ -156,92 +164,129 @@ export default function AudioPlayer({
   };
 
   if (!audioUrl) {
-    return <div className="py-8 text-center text-muted-foreground">Aucun audio disponible.</div>;
+    return <div className="py-4 text-center text-muted-foreground">Aucun audio disponible.</div>;
   }
 
   return (
-    <div>
+    <div className="space-y-3">
       <audio ref={audioRef} src={audioUrl} preload="metadata" />
 
-      {/* Title */}
-      <div className="mb-6">
-        <h3 className="font-medium line-clamp-2">{title}</h3>
-        {subtitle && <p className="text-sm text-muted-foreground mt-1">{subtitle}</p>}
+      {/* Row 1: Thumbnail + Title/Subtitle + Track number + Speed */}
+      <div className="flex items-center gap-3">
+        {thumbnailUrl && (
+          <div className="w-12 h-12 rounded-md overflow-hidden bg-muted shrink-0">
+            <img src={thumbnailUrl} alt="" className="w-full h-full object-cover" />
+          </div>
+        )}
+        <div className="flex-1 min-w-0">
+          <h3 className="font-medium text-sm truncate">{title}</h3>
+          {subtitle && <p className="text-xs text-muted-foreground truncate">{subtitle}</p>}
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          {currentTrack !== undefined && hasMultipleTracks && (
+            <span className="text-xs text-muted-foreground">
+              {currentTrack} / {playlistLength}
+            </span>
+          )}
+          <Button
+            variant={playbackRate !== 1 ? "secondary" : "outline"}
+            size="sm"
+            onClick={cycleSpeed}
+            className="h-7 px-2 text-xs font-mono min-w-[3rem]"
+            title="Vitesse de lecture"
+          >
+            {playbackRate}x
+          </Button>
+        </div>
       </div>
 
-      {/* Progress bar */}
-      <div className="mb-6">
+      {/* Row 2: Progress bar + Time */}
+      <div>
         <input
           type="range"
           min={0}
           max={duration || 100}
           value={currentTime}
           onChange={handleSeek}
-          className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer
+          className="w-full h-1.5 bg-muted rounded-lg appearance-none cursor-pointer
                      [&::-webkit-slider-thumb]:appearance-none
-                     [&::-webkit-slider-thumb]:w-4
-                     [&::-webkit-slider-thumb]:h-4
+                     [&::-webkit-slider-thumb]:w-3
+                     [&::-webkit-slider-thumb]:h-3
                      [&::-webkit-slider-thumb]:bg-primary
                      [&::-webkit-slider-thumb]:rounded-full
                      [&::-webkit-slider-thumb]:shadow-md"
         />
-        <div className="flex justify-between text-xs text-muted-foreground mt-1">
+        <div className="flex justify-between text-xs text-muted-foreground mt-0.5">
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
         </div>
       </div>
 
-      {/* Main controls */}
-      <div className="flex items-center justify-center gap-2 mb-6">
-        {/* Shuffle - only for multiple tracks */}
+      {/* Row 3: All controls in one line */}
+      <div className="flex items-center justify-center gap-1">
+        {/* Shuffle */}
         {hasMultipleTracks && onShuffleToggle && (
           <Button
             variant="ghost"
             size="icon"
             onClick={onShuffleToggle}
-            className={shuffle ? "text-primary" : "text-muted-foreground"}
+            className={`h-8 w-8 ${shuffle ? "text-primary" : "text-muted-foreground"}`}
             title="Lecture aléatoire"
           >
-            <Shuffle className="h-5 w-5" />
+            <Shuffle className="h-4 w-4" />
           </Button>
         )}
 
-        {/* Previous / -10s */}
-        {hasMultipleTracks ? (
-          <Button variant="ghost" size="icon" onClick={handlePrevious} title="Piste précédente">
-            <SkipBack className="h-6 w-6" />
-          </Button>
-        ) : (
+        {/* Previous track */}
+        {hasMultipleTracks && (
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => skip(-10)}
-            title="-10 secondes"
-            className="text-muted-foreground hover:text-foreground"
+            onClick={handlePrevious}
+            title="Piste précédente"
+            className="h-8 w-8"
           >
-            <Rewind className="w-5 h-5" />
+            <SkipBack className="h-4 w-4" />
           </Button>
         )}
 
-        {/* Play/Pause */}
-        <Button onClick={togglePlay} size="icon" className="h-14 w-14 rounded-full">
-          {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6 ml-0.5" />}
+        {/* -10s */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => skip(-10)}
+          title="-10 secondes"
+          className="h-8 w-8 text-muted-foreground hover:text-foreground"
+        >
+          <Rewind className="h-4 w-4" />
         </Button>
 
-        {/* Next / +10s */}
-        {hasMultipleTracks ? (
-          <Button variant="ghost" size="icon" onClick={onNext} title="Piste suivante">
-            <SkipForward className="h-6 w-6" />
-          </Button>
-        ) : (
+        {/* Play/Pause */}
+        <Button onClick={togglePlay} size="icon" className="h-10 w-10 rounded-full">
+          {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4 ml-0.5" />}
+        </Button>
+
+        {/* +10s */}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => skip(10)}
+          title="+10 secondes"
+          className="h-8 w-8 text-muted-foreground hover:text-foreground"
+        >
+          <FastForward className="h-4 w-4" />
+        </Button>
+
+        {/* Next track */}
+        {hasMultipleTracks && (
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => skip(10)}
-            title="+10 secondes"
-            className="text-muted-foreground hover:text-foreground"
+            onClick={onNext}
+            title="Piste suivante"
+            className="h-8 w-8"
           >
-            <FastForward className="w-5 h-5" />
+            <SkipForward className="h-4 w-4" />
           </Button>
         )}
 
@@ -251,7 +296,7 @@ export default function AudioPlayer({
             variant="ghost"
             size="icon"
             onClick={onRepeatCycle}
-            className={repeat !== "none" ? "text-primary" : "text-muted-foreground"}
+            className={`h-8 w-8 ${repeat !== "none" ? "text-primary" : "text-muted-foreground"}`}
             title={
               repeat === "one"
                 ? "Répéter un titre"
@@ -260,51 +305,9 @@ export default function AudioPlayer({
                   : "Pas de répétition"
             }
           >
-            {repeat === "one" ? <Repeat1 className="h-5 w-5" /> : <Repeat className="h-5 w-5" />}
+            {repeat === "one" ? <Repeat1 className="h-4 w-4" /> : <Repeat className="h-4 w-4" />}
           </Button>
         )}
-      </div>
-
-      {/* Secondary controls for playlist mode: ±10s skip */}
-      {hasMultipleTracks && (
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => skip(-10)}
-            title="-10 secondes"
-            className="text-muted-foreground"
-          >
-            <Rewind className="w-4 h-4 mr-1" />
-            10s
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => skip(10)}
-            title="+10 secondes"
-            className="text-muted-foreground"
-          >
-            10s
-            <FastForward className="w-4 h-4 ml-1" />
-          </Button>
-        </div>
-      )}
-
-      {/* Speed control */}
-      <div className="flex items-center justify-center gap-2">
-        <span className="text-xs text-muted-foreground">Vitesse :</span>
-        {[0.5, 0.75, 1, 1.25, 1.5].map((speed) => (
-          <Button
-            key={speed}
-            variant={playbackRate === speed ? "default" : "outline"}
-            size="sm"
-            onClick={() => handleSpeedChange(speed)}
-            className="h-7 px-2 text-xs"
-          >
-            {speed}x
-          </Button>
-        ))}
       </div>
     </div>
   );
