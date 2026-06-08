@@ -44,3 +44,11 @@ next-env.d.ts
 /src/generated/
 *.db
 *.db-journal
+
+# shadowing pipeline cache
+/public/shadowing/audio/*/source.mp3
+/public/shadowing/audio/*/silence.mp3
+/public/shadowing/data/*_whisper.json
+/public/shadowing/data/*_silences.json
+/shadowing-pipeline/audio/
+/shadowing-pipeline/data/

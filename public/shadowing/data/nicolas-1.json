@@ -1,0 +1,772 @@
+{
+  "meta": {
+    "title": "Le Petit Nicolas — Chapitre 1",
+    "youtube_url": "https://youtu.be/3envXRFwxsI",
+    "audio_full": "audio/nicolas-1/full.mp3",
+    "duration": 404.89,
+    "source": "PDF (Episcopal Collegiate Summer Reading)"
+  },
+  "sentences": [
+    {
+      "text": "Un souvenir qu'on va chérir.",
+      "start": 25.4,
+      "end": 27.02,
+      "word_count": 5,
+      "audio_file": "audio/nicolas-1/sentences/001.mp3"
+    },
+    {
+      "text": "Ce matin, nous sommes tous arrivés à l'école bien contents, parce qu'on va prendre une photo de la classe qui sera pour nous un souvenir que nous allons chérir toute notre vie, comme nous l'a dit la maîtresse.",
+      "start": 32.72,
+      "end": 43.2,
+      "word_count": 38,
+      "audio_file": "audio/nicolas-1/sentences/002.mp3"
+    },
+    {
+      "text": "Elle nous a dit aussi de venir bien propres et bien coiffés.",
+      "start": 43.57,
+      "end": 46.505,
+      "word_count": 12,
+      "audio_file": "audio/nicolas-1/sentences/003.mp3"
+    },
+    {
+      "text": "C'est avec plein de brillantine sur la tête que je suis entré dans la cour de récréation.",
+      "start": 47.684,
+      "end": 51.083,
+      "word_count": 17,
+      "audio_file": "audio/nicolas-1/sentences/004.mp3"
+    },
+    {
+      "text": "Tous les copains étaient déjà là et la maîtresse était en train de gronder Geoffroy qui était venu habillé en martien.",
+      "start": 51.747,
+      "end": 57.213,
+      "word_count": 21,
+      "audio_file": "audio/nicolas-1/sentences/005.mp3"
+    },
+    {
+      "text": "Geoffroy a un papa très riche qui lui achète tous les jouets qu'il veut.",
+      "start": 57.908,
+      "end": 61.205,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/006.mp3"
+    },
+    {
+      "text": "Geoffroy disait à la maîtresse qu'il voulait absolument être photographié en martien et que sinon il s'en irait.",
+      "start": 62.407,
+      "end": 68.129,
+      "word_count": 18,
+      "audio_file": "audio/nicolas-1/sentences/007.mp3"
+    },
+    {
+      "text": "Le photographe était là, aussi, avec son appareil et la maîtresse lui a dit qu'il fallait faire vite, sinon, nous allions rater notre cours d'arithmétique.",
+      "start": 69.555,
+      "end": 76.555,
+      "word_count": 25,
+      "audio_file": "audio/nicolas-1/sentences/008.mp3"
+    },
+    {
+      "text": "Agnan, qui est le premier de la classe et le chouchou de la maîtresse, a dit que ce serait dommage de ne pas avoir arithmétique, parce qu'il aimait ça et qu'il avait bien fait tous ses problèmes.",
+      "start": 77.329,
+      "end": 85.204,
+      "word_count": 37,
+      "audio_file": "audio/nicolas-1/sentences/009.mp3"
+    },
+    {
+      "text": "Eudes, un copain qui est très fort, voulait donner un coup de poing sur le nez d'Agnan, mais Agnan a des lunettes et on ne peut pas taper sur lui aussi souvent qu'on le voudrait.",
+      "start": 85.854,
+      "end": 93.581,
+      "word_count": 35,
+      "audio_file": "audio/nicolas-1/sentences/010.mp3"
+    },
+    {
+      "text": "La maîtresse s'est mise à crier que nous étions insupportables et que si ça continuait il n'y aurait pas de photo et qu'on irait en classe.",
+      "start": 94.556,
+      "end": 101.5,
+      "word_count": 26,
+      "audio_file": "audio/nicolas-1/sentences/011.mp3"
+    },
+    {
+      "text": "Le photographe, alors, a dit :",
+      "start": 102.242,
+      "end": 103.462,
+      "word_count": 5,
+      "audio_file": "audio/nicolas-1/sentences/012.mp3"
+    },
+    {
+      "text": "«Allons, allons, allons, du calme, du calme.",
+      "start": 103.973,
+      "end": 106.564,
+      "word_count": 7,
+      "audio_file": "audio/nicolas-1/sentences/013.mp3"
+    },
+    {
+      "text": "Je sais comment il faut parler aux enfants, tout va se passer très bien.»",
+      "start": 107.061,
+      "end": 110.704,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/014.mp3"
+    },
+    {
+      "text": "Le photographe a décidé que nous devions nous mettre sur trois rangs;",
+      "start": 111.978,
+      "end": 114.997,
+      "word_count": 12,
+      "audio_file": "audio/nicolas-1/sentences/015.mp3"
+    },
+    {
+      "text": "le premier rang assis par terre, le deuxième, debout autour de la maîtresse qui serait assise sur une chaise et le troisième, debout sur des caisses.",
+      "start": 115.707,
+      "end": 123.887,
+      "word_count": 26,
+      "audio_file": "audio/nicolas-1/sentences/016.mp3"
+    },
+    {
+      "text": "Il a vraiment des bonnes idées, le photographe.",
+      "start": 124.322,
+      "end": 126.78,
+      "word_count": 8,
+      "audio_file": "audio/nicolas-1/sentences/017.mp3"
+    },
+    {
+      "text": "Les caisses, on est allés les chercher dans la cave de l'école.",
+      "start": 127.075,
+      "end": 130.254,
+      "word_count": 12,
+      "audio_file": "audio/nicolas-1/sentences/018.mp3"
+    },
+    {
+      "text": "On a bien rigolé, parce qu'il n'y avait pas beaucoup de lumière dans la cave et Rufus s'était mis un vieux sac sur la tête et il criait «Hou!",
+      "start": 130.652,
+      "end": 136.974,
+      "word_count": 29,
+      "audio_file": "audio/nicolas-1/sentences/019.mp3"
+    },
+    {
+      "text": "Je suis le fantôme.»",
+      "start": 138.609,
+      "end": 141.187,
+      "word_count": 4,
+      "audio_file": "audio/nicolas-1/sentences/020.mp3"
+    },
+    {
+      "text": "Et puis, on a vu arriver la maîtresse.",
+      "start": 141.839,
+      "end": 143.886,
+      "word_count": 8,
+      "audio_file": "audio/nicolas-1/sentences/021.mp3"
+    },
+    {
+      "text": "Elle n'avait pas l'air contente, alors nous sommes vite partis avec les caisses.",
+      "start": 144.299,
+      "end": 147.999,
+      "word_count": 13,
+      "audio_file": "audio/nicolas-1/sentences/022.mp3"
+    },
+    {
+      "text": "Le seul qui est resté, c'est Rufus.",
+      "start": 148.624,
+      "end": 150.797,
+      "word_count": 7,
+      "audio_file": "audio/nicolas-1/sentences/023.mp3"
+    },
+    {
+      "text": "Avec son sac, il ne voyait pas ce qui se passait et il a continué à crier «Hou!",
+      "start": 151.648,
+      "end": 155.112,
+      "word_count": 18,
+      "audio_file": "audio/nicolas-1/sentences/024.mp3"
+    },
+    {
+      "text": "Je suis le fantôme», et c'est la maîtresse qui lui a enlevé le sac.",
+      "start": 155.142,
+      "end": 157.996,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/025.mp3"
+    },
+    {
+      "text": "Il a été drôlement étonné, Rufus.",
+      "start": 158.026,
+      "end": 160.227,
+      "word_count": 6,
+      "audio_file": "audio/nicolas-1/sentences/026.mp3"
+    },
+    {
+      "text": "De retour dans la cour, la maîtresse a lâché l'oreille de Rufus et elle s'est frappé le front avec la main.",
+      "start": 161.195,
+      "end": 166.513,
+      "word_count": 21,
+      "audio_file": "audio/nicolas-1/sentences/027.mp3"
+    },
+    {
+      "text": "« Mais vous êtes tout noirs », elle a dit.",
+      "start": 167.924,
+      "end": 169.904,
+      "word_count": 8,
+      "audio_file": "audio/nicolas-1/sentences/028.mp3"
+    },
+    {
+      "text": "C'était vrai, en faisant les guignols dans la cave, on s'était un peu salis.",
+      "start": 170.37,
+      "end": 174.087,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/029.mp3"
+    },
+    {
+      "text": "La maîtresse n'était pas contente, mais le photographe lui a dit que ce n'était pas grave, on avait le temps de se laver pendant que lui disposait les caisses et la chaise pour la photo.",
+      "start": 175.088,
+      "end": 183.187,
+      "word_count": 35,
+      "audio_file": "audio/nicolas-1/sentences/030.mp3"
+    },
+    {
+      "text": "À part Agnan, le seul qui avait la figure propre, c'était Geoffroy, parce qu'il avait la tête dans son casque de martien, qui ressemble à un bocal.",
+      "start": 184.168,
+      "end": 191.37,
+      "word_count": 27,
+      "audio_file": "audio/nicolas-1/sentences/031.mp3"
+    },
+    {
+      "text": "«Vous voyez, a dit Geoffroy à la maîtresse, 3 s'ils étaient venus tous habillés comme moi, il n'y aurait pas d'histoires.»",
+      "start": 192.288,
+      "end": 197.76,
+      "word_count": 21,
+      "audio_file": "audio/nicolas-1/sentences/032.mp3"
+    },
+    {
+      "text": "J'ai vu que la maîtresse avait bien envie de tirer les oreilles de Geoffroy, mais il n'y avait pas de prise sur le bocal.",
+      "start": 198.581,
+      "end": 203.411,
+      "word_count": 24,
+      "audio_file": "audio/nicolas-1/sentences/033.mp3"
+    },
+    {
+      "text": "C'est une combine épatante, ce costume de martien!",
+      "start": 204.041,
+      "end": 206.504,
+      "word_count": 8,
+      "audio_file": "audio/nicolas-1/sentences/034.mp3"
+    },
+    {
+      "text": "Nous sommes revenus après nous être lavés et peignés.",
+      "start": 207.488,
+      "end": 209.634,
+      "word_count": 9,
+      "audio_file": "audio/nicolas-1/sentences/035.mp3"
+    },
+    {
+      "text": "On était bien un peu mouillés, mais le photographe a dit que ça ne faisait rien, que sur la photo ça ne se verrait pas.",
+      "start": 210.192,
+      "end": 215.676,
+      "word_count": 25,
+      "audio_file": "audio/nicolas-1/sentences/036.mp3"
+    },
+    {
+      "text": "«Bon, nous a dit le photographe, vous voulez faire plaisir à votre maîtresse?»",
+      "start": 216.934,
+      "end": 221.149,
+      "word_count": 13,
+      "audio_file": "audio/nicolas-1/sentences/037.mp3"
+    },
+    {
+      "text": "Nous avons répondu que oui, parce que nous l'aimons bien la maîtresse, elle est drôlement gentille quand nous ne la mettons pas en colère.",
+      "start": 221.626,
+      "end": 227.244,
+      "word_count": 24,
+      "audio_file": "audio/nicolas-1/sentences/038.mp3"
+    },
+    {
+      "text": "«Alors, a dit le photographe, vous allez sagement prendre vos places pour la photo.",
+      "start": 228.177,
+      "end": 232.86,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/039.mp3"
+    },
+    {
+      "text": "Les plus grands sur les caisses, les moyens debout, les petits assis.»",
+      "start": 233.249,
+      "end": 237.449,
+      "word_count": 12,
+      "audio_file": "audio/nicolas-1/sentences/040.mp3"
+    },
+    {
+      "text": "Nous on y est allés et le photographe était en train d'expliquer à la maîtresse qu'on obtenait tout des enfants quand on était patient, mais la maîtresse n'a pas pu l'écouter jusqu'au bout.",
+      "start": 238.647,
+      "end": 247.721,
+      "word_count": 33,
+      "audio_file": "audio/nicolas-1/sentences/041.mp3"
+    },
+    {
+      "text": "Elle a dû nous séparer, parce que nous voulions être tous sur les caisses.",
+      "start": 248.475,
+      "end": 251.724,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/042.mp3"
+    },
+    {
+      "text": "«Il y a un seul grand ici, c'est moi!» criait Eudes et il poussait ceux qui voulaient monter sur les caisses.",
+      "start": 252.753,
+      "end": 258.228,
+      "word_count": 21,
+      "audio_file": "audio/nicolas-1/sentences/043.mp3"
+    },
+    {
+      "text": "Comme Geoffroy insistait, Eudes lui a donné un coup de poing sur le bocal et il s'est fait très mal.",
+      "start": 259.047,
+      "end": 263.905,
+      "word_count": 20,
+      "audio_file": "audio/nicolas-1/sentences/044.mp3"
+    },
+    {
+      "text": "On a dû se mettre à plusieurs pour enlever le bocal de Geoffroy qui s'était coincé.",
+      "start": 264.289,
+      "end": 267.658,
+      "word_count": 16,
+      "audio_file": "audio/nicolas-1/sentences/045.mp3"
+    },
+    {
+      "text": "La maîtresse a dit qu'elle nous donnait un dernier avertissement, après ce serait l'arithmétique, alors, on s'est dit qu'il fallait se tenir tranquilles et on a commencé à s'installer.",
+      "start": 269.052,
+      "end": 276.92,
+      "word_count": 29,
+      "audio_file": "audio/nicolas-1/sentences/046.mp3"
+    },
+    {
+      "text": "Geoffroy s'est approché du photographe :",
+      "start": 278.177,
+      "end": 279.781,
+      "word_count": 5,
+      "audio_file": "audio/nicolas-1/sentences/047.mp3"
+    },
+    {
+      "text": "«C'est quoi, votre appareil?» il a demandé.",
+      "start": 280.902,
+      "end": 283.087,
+      "word_count": 7,
+      "audio_file": "audio/nicolas-1/sentences/048.mp3"
+    },
+    {
+      "text": "Le photographe a souri et il a dit :",
+      "start": 284.338,
+      "end": 286.012,
+      "word_count": 8,
+      "audio_file": "audio/nicolas-1/sentences/049.mp3"
+    },
+    {
+      "text": "« C'est une boîte d'où va sortir un petit oiseau, bonhomme.",
+      "start": 286.417,
+      "end": 289.172,
+      "word_count": 10,
+      "audio_file": "audio/nicolas-1/sentences/050.mp3"
+    },
+    {
+      "text": "Il est vieux votre engin, a dit Geoffroy, mon papa il m'en a donné un avec pare-soleil, objectif à courte focale, téléobjectif, et, bien sûr, des écrans... »",
+      "start": 289.78,
+      "end": 299.504,
+      "word_count": 27,
+      "audio_file": "audio/nicolas-1/sentences/051.mp3"
+    },
+    {
+      "text": "Le photographe a paru surpris, il a cessé de sourire et il a dit à Geoffroy de retourner à sa place.",
+      "start": 300.702,
+      "end": 305.808,
+      "word_count": 21,
+      "audio_file": "audio/nicolas-1/sentences/052.mp3"
+    },
+    {
+      "text": "«Est-ce que vous avez au moins une cellule photoélectrique? » a demandé Geoffroy.",
+      "start": 308.477,
+      "end": 312.076,
+      "word_count": 12,
+      "audio_file": "audio/nicolas-1/sentences/053.mp3"
+    },
+    {
+      "text": "«Pour la dernière fois, retourne à ta place! » a crié le photographe qui, tout d'un coup, avait l'air très nerveux.",
+      "start": 313.126,
+      "end": 318.513,
+      "word_count": 20,
+      "audio_file": "audio/nicolas-1/sentences/054.mp3"
+    },
+    {
+      "text": "On s'est installés.",
+      "start": 319.285,
+      "end": 320.056,
+      "word_count": 3,
+      "audio_file": "audio/nicolas-1/sentences/055.mp3"
+    },
+    {
+      "text": "Moi, j'étais assis par terre, à côté d'Alceste.",
+      "start": 321.04,
+      "end": 323.368,
+      "word_count": 8,
+      "audio_file": "audio/nicolas-1/sentences/056.mp3"
+    },
+    {
+      "text": "Alceste, c'est mon copain qui est très gros et qui mange tout le temps.",
+      "start": 323.911,
+      "end": 326.84,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/057.mp3"
+    },
+    {
+      "text": "Il était en train de mordre dans une tartine de confiture et le photographe lui a dit de cesser de manger, mais Alceste a répondu qu'il fallait bien qu'il se nourrisse.",
+      "start": 327.522,
+      "end": 335.189,
+      "word_count": 31,
+      "audio_file": "audio/nicolas-1/sentences/058.mp3"
+    },
+    {
+      "text": "«Lâche cette tartine! » a crié la maîtresse qui était assise juste derrière Alceste.",
+      "start": 336.303,
+      "end": 340.343,
+      "word_count": 13,
+      "audio_file": "audio/nicolas-1/sentences/059.mp3"
+    },
+    {
+      "text": "Ça l'a tellement surpris, Alceste, qu'il a laissé tomber la tartine sur sa chemise.",
+      "start": 341.2,
+      "end": 345.62,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/060.mp3"
+    },
+    {
+      "text": "«C'est gagné », a dit Alceste, en essayant de racler la confiture avec son pain.",
+      "start": 346.92,
+      "end": 351.563,
+      "word_count": 14,
+      "audio_file": "audio/nicolas-1/sentences/061.mp3"
+    },
+    {
+      "text": "La maîtresse a dit qu'il n'y avait plus qu'une chose à faire, c'était de mettre Alceste au dernier rang pour qu'on ne voie pas la tache sur sa chemise.",
+      "start": 352.879,
+      "end": 359.191,
+      "word_count": 29,
+      "audio_file": "audio/nicolas-1/sentences/062.mp3"
+    },
+    {
+      "text": "«Eudes, a dit la maîtresse, laissez votre place à votre camarade.",
+      "start": 360.244,
+      "end": 363.746,
+      "word_count": 11,
+      "audio_file": "audio/nicolas-1/sentences/063.mp3"
+    },
+    {
+      "text": "Ce n'est pas mon camarade, a répondu Eudes, il n'aura pas ma place et il n'a qu'à se mettre de dos à la photo, comme ça on ne verra pas la tache, ni sa grosse figure. »",
+      "start": 364.288,
+      "end": 374.001,
+      "word_count": 36,
+      "audio_file": "audio/nicolas-1/sentences/064.mp3"
+    },
+    {
+      "text": "La maîtresse s'est fâchée et elle a donné 4 comme punition à Eudes la conjugaison du verbe :",
+      "start": 375.339,
+      "end": 379.886,
+      "word_count": 17,
+      "audio_file": "audio/nicolas-1/sentences/065.mp3"
+    },
+    {
+      "text": "« Je ne dois pas refuser de céder ma place à un camarade qui a renversé sur sa chemise une tartine de confiture.»",
+      "start": 380.244,
+      "end": 385.626,
+      "word_count": 22,
+      "audio_file": "audio/nicolas-1/sentences/066.mp3"
+    },
+    {
+      "text": "Eudes n'a rien dit, il est descendu de sa caisse et il est venu vers le premier rang, tandis qu'Alceste allait vers le dernier rang.",
+      "start": 386.865,
+      "end": 394.056,
+      "word_count": 25,
+      "audio_file": "audio/nicolas-1/sentences/067.mp3"
+    },
+    {
+      "text": "Ça a fait un peu de désordre, surtout quand Eudes a croisé Alceste et lui a donné un coup de poing sur le nez.",
+      "start": 394.913,
+      "end": 400.343,
+      "word_count": 24,
+      "audio_file": "audio/nicolas-1/sentences/068.mp3"
+    },
+    {
+      "text": "Alceste a voulu donner un coup de pied à Eudes, mais Eudes a esquivé, il est très agile, et c'est Agnan qui a reçu le pied, heureusement, là où il n'a pas de lunettes.",
+      "start": 400.999,
+      "end": 409.439,
+      "word_count": 34,
+      "audio_file": "audio/nicolas-1/sentences/069.mp3"
+    },
+    {
+      "text": "Ça ne l'a pas empêché, Agnan, de se mettre à pleurer et à hurler qu'il ne voyait plus, que personne ne l'aimait et qu'il voulait mourir.",
+      "start": 410.164,
+      "end": 416.951,
+      "word_count": 26,
+      "audio_file": "audio/nicolas-1/sentences/070.mp3"
+    },
+    {
+      "text": "La maîtresse l'a consolé, l'a mouché, l'a repeigné et a puni Alceste, il doit écrire cent fois:",
+      "start": 417.81,
+      "end": 423.933,
+      "word_count": 17,
+      "audio_file": "audio/nicolas-1/sentences/071.mp3"
+    },
+    {
+      "text": "«Je ne dois pas battre un camarade qui ne me cherche pas noise et qui porte des lunettes.»",
+      "start": 424.33,
+      "end": 428.486,
+      "word_count": 18,
+      "audio_file": "audio/nicolas-1/sentences/072.mp3"
+    },
+    {
+      "text": "«C'est bien fait», a dit Agnan.",
+      "start": 429.577,
+      "end": 431.306,
+      "word_count": 6,
+      "audio_file": "audio/nicolas-1/sentences/073.mp3"
+    },
+    {
+      "text": "Alors, la maîtresse lui a donné des lignes à faire, à lui aussi.",
+      "start": 432.078,
+      "end": 434.834,
+      "word_count": 13,
+      "audio_file": "audio/nicolas-1/sentences/074.mp3"
+    },
+    {
+      "text": "Agnan, il a été tellement étonné qu'il n'a même pas pleuré.",
+      "start": 435.478,
+      "end": 438.889,
+      "word_count": 11,
+      "audio_file": "audio/nicolas-1/sentences/075.mp3"
+    },
+    {
+      "text": "La maîtresse a commencé à les distribuer drôlement, les punitions, on avait tous des tas de lignes à faire et finalement, la maîtresse nous a dit :",
+      "start": 439.809,
+      "end": 446.607,
+      "word_count": 26,
+      "audio_file": "audio/nicolas-1/sentences/076.mp3"
+    },
+    {
+      "text": "«Maintenant, vous allez vous décider à vous tenir tranquilles.",
+      "start": 447.442,
+      "end": 450.472,
+      "word_count": 9,
+      "audio_file": "audio/nicolas-1/sentences/077.mp3"
+    },
+    {
+      "text": "Si vous êtes très gentils, je lèverai toutes les punitions.",
+      "start": 450.835,
+      "end": 453.24,
+      "word_count": 10,
+      "audio_file": "audio/nicolas-1/sentences/078.mp3"
+    },
+    {
+      "text": "Alors, vous allez bien prendre la pose, faire un joli sourire et le monsieur va nous prendre une belle photographie!»",
+      "start": 454.255,
+      "end": 459.94,
+      "word_count": 20,
+      "audio_file": "audio/nicolas-1/sentences/079.mp3"
+    },
+    {
+      "text": "Comme nous ne voulions pas faire de la peine à la maîtresse, on a obéi.",
+      "start": 460.845,
+      "end": 464.004,
+      "word_count": 15,
+      "audio_file": "audio/nicolas-1/sentences/080.mp3"
+    },
+    {
+      "text": "Nous avons tous souri et on a pris la pose.",
+      "start": 464.412,
+      "end": 469.26,
+      "word_count": 10,
+      "audio_file": "audio/nicolas-1/sentences/081.mp3"
+    },
+    {
+      "text": "Mais, pour le souvenir que nous allions chérir toute notre vie, c'est raté, parce qu'on s'est aperçu que le photographe n'était plus là.",
+      "start": 470.67,
+      "end": 477.0,
+      "word_count": 23,
+      "audio_file": "audio/nicolas-1/sentences/082.mp3"
+    },
+    {
+      "text": "Il était parti, sans rien dire.",
+      "start": 477.03,
+      "end": 479.34,
+      "word_count": 6,
+      "audio_file": "audio/nicolas-1/sentences/083.mp3"
+    }
+  ],
+  "paragraphs": [
+    {
+      "text": "Un souvenir qu'on va chérir. Ce matin, nous sommes tous arrivés à l'école bien contents, parce qu'on va prendre une photo de la classe qui sera pour nous un souvenir que nous allons chérir toute notre vie, comme nous l'a dit la maîtresse. Elle nous a dit aussi de venir bien propres et bien coiffés. C'est avec plein de brillantine sur la tête que je suis entré dans la cour de récréation. Tous les copains étaient déjà là et la maîtresse était en train de gronder Geoffroy qui était venu habillé en martien.",
+      "start": 25.4,
+      "end": 57.213,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/001.mp3"
+    },
+    {
+      "text": "Geoffroy a un papa très riche qui lui achète tous les jouets qu'il veut. Geoffroy disait à la maîtresse qu'il voulait absolument être photographié en martien et que sinon il s'en irait. Le photographe était là, aussi, avec son appareil et la maîtresse lui a dit qu'il fallait faire vite, sinon, nous allions rater notre cours d'arithmétique. Agnan, qui est le premier de la classe et le chouchou de la maîtresse, a dit que ce serait dommage de ne pas avoir arithmétique, parce qu'il aimait ça et qu'il avait bien fait tous ses problèmes. Eudes, un copain qui est très fort, voulait donner un coup de poing sur le nez d'Agnan, mais Agnan a des lunettes et on ne peut pas taper sur lui aussi souvent qu'on le voudrait.",
+      "start": 57.908,
+      "end": 93.581,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/002.mp3"
+    },
+    {
+      "text": "La maîtresse s'est mise à crier que nous étions insupportables et que si ça continuait il n'y aurait pas de photo et qu'on irait en classe. Le photographe, alors, a dit : «Allons, allons, allons, du calme, du calme. Je sais comment il faut parler aux enfants, tout va se passer très bien.» Le photographe a décidé que nous devions nous mettre sur trois rangs;",
+      "start": 94.556,
+      "end": 114.997,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/003.mp3"
+    },
+    {
+      "text": "le premier rang assis par terre, le deuxième, debout autour de la maîtresse qui serait assise sur une chaise et le troisième, debout sur des caisses. Il a vraiment des bonnes idées, le photographe. Les caisses, on est allés les chercher dans la cave de l'école. On a bien rigolé, parce qu'il n'y avait pas beaucoup de lumière dans la cave et Rufus s'était mis un vieux sac sur la tête et il criait «Hou! Je suis le fantôme.»",
+      "start": 115.707,
+      "end": 141.187,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/004.mp3"
+    },
+    {
+      "text": "Et puis, on a vu arriver la maîtresse. Elle n'avait pas l'air contente, alors nous sommes vite partis avec les caisses. Le seul qui est resté, c'est Rufus. Avec son sac, il ne voyait pas ce qui se passait et il a continué à crier «Hou! Je suis le fantôme», et c'est la maîtresse qui lui a enlevé le sac.",
+      "start": 141.839,
+      "end": 157.996,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/005.mp3"
+    },
+    {
+      "text": "Il a été drôlement étonné, Rufus. De retour dans la cour, la maîtresse a lâché l'oreille de Rufus et elle s'est frappé le front avec la main. « Mais vous êtes tout noirs », elle a dit. C'était vrai, en faisant les guignols dans la cave, on s'était un peu salis. La maîtresse n'était pas contente, mais le photographe lui a dit que ce n'était pas grave, on avait le temps de se laver pendant que lui disposait les caisses et la chaise pour la photo.",
+      "start": 158.026,
+      "end": 183.187,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/006.mp3"
+    },
+    {
+      "text": "À part Agnan, le seul qui avait la figure propre, c'était Geoffroy, parce qu'il avait la tête dans son casque de martien, qui ressemble à un bocal. «Vous voyez, a dit Geoffroy à la maîtresse, 3 s'ils étaient venus tous habillés comme moi, il n'y aurait pas d'histoires.» J'ai vu que la maîtresse avait bien envie de tirer les oreilles de Geoffroy, mais il n'y avait pas de prise sur le bocal. C'est une combine épatante, ce costume de martien! Nous sommes revenus après nous être lavés et peignés.",
+      "start": 184.168,
+      "end": 209.634,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/007.mp3"
+    },
+    {
+      "text": "On était bien un peu mouillés, mais le photographe a dit que ça ne faisait rien, que sur la photo ça ne se verrait pas. «Bon, nous a dit le photographe, vous voulez faire plaisir à votre maîtresse?» Nous avons répondu que oui, parce que nous l'aimons bien la maîtresse, elle est drôlement gentille quand nous ne la mettons pas en colère. «Alors, a dit le photographe, vous allez sagement prendre vos places pour la photo. Les plus grands sur les caisses, les moyens debout, les petits assis.»",
+      "start": 210.192,
+      "end": 237.449,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/008.mp3"
+    },
+    {
+      "text": "Nous on y est allés et le photographe était en train d'expliquer à la maîtresse qu'on obtenait tout des enfants quand on était patient, mais la maîtresse n'a pas pu l'écouter jusqu'au bout. Elle a dû nous séparer, parce que nous voulions être tous sur les caisses. «Il y a un seul grand ici, c'est moi!» criait Eudes et il poussait ceux qui voulaient monter sur les caisses. Comme Geoffroy insistait, Eudes lui a donné un coup de poing sur le bocal et il s'est fait très mal. On a dû se mettre à plusieurs pour enlever le bocal de Geoffroy qui s'était coincé.",
+      "start": 238.647,
+      "end": 267.658,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/009.mp3"
+    },
+    {
+      "text": "La maîtresse a dit qu'elle nous donnait un dernier avertissement, après ce serait l'arithmétique, alors, on s'est dit qu'il fallait se tenir tranquilles et on a commencé à s'installer. Geoffroy s'est approché du photographe : «C'est quoi, votre appareil?» il a demandé. Le photographe a souri et il a dit : « C'est une boîte d'où va sortir un petit oiseau, bonhomme.",
+      "start": 269.052,
+      "end": 289.172,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/010.mp3"
+    },
+    {
+      "text": "Il est vieux votre engin, a dit Geoffroy, mon papa il m'en a donné un avec pare-soleil, objectif à courte focale, téléobjectif, et, bien sûr, des écrans... » Le photographe a paru surpris, il a cessé de sourire et il a dit à Geoffroy de retourner à sa place. «Est-ce que vous avez au moins une cellule photoélectrique? » a demandé Geoffroy. «Pour la dernière fois, retourne à ta place! » a crié le photographe qui, tout d'un coup, avait l'air très nerveux. On s'est installés.",
+      "start": 289.78,
+      "end": 320.056,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/011.mp3"
+    },
+    {
+      "text": "Moi, j'étais assis par terre, à côté d'Alceste. Alceste, c'est mon copain qui est très gros et qui mange tout le temps. Il était en train de mordre dans une tartine de confiture et le photographe lui a dit de cesser de manger, mais Alceste a répondu qu'il fallait bien qu'il se nourrisse. «Lâche cette tartine! » a crié la maîtresse qui était assise juste derrière Alceste. Ça l'a tellement surpris, Alceste, qu'il a laissé tomber la tartine sur sa chemise.",
+      "start": 321.04,
+      "end": 345.62,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/012.mp3"
+    },
+    {
+      "text": "«C'est gagné », a dit Alceste, en essayant de racler la confiture avec son pain. La maîtresse a dit qu'il n'y avait plus qu'une chose à faire, c'était de mettre Alceste au dernier rang pour qu'on ne voie pas la tache sur sa chemise. «Eudes, a dit la maîtresse, laissez votre place à votre camarade. Ce n'est pas mon camarade, a répondu Eudes, il n'aura pas ma place et il n'a qu'à se mettre de dos à la photo, comme ça on ne verra pas la tache, ni sa grosse figure. » La maîtresse s'est fâchée et elle a donné 4 comme punition à Eudes la conjugaison du verbe :",
+      "start": 346.92,
+      "end": 379.886,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/013.mp3"
+    },
+    {
+      "text": "« Je ne dois pas refuser de céder ma place à un camarade qui a renversé sur sa chemise une tartine de confiture.» Eudes n'a rien dit, il est descendu de sa caisse et il est venu vers le premier rang, tandis qu'Alceste allait vers le dernier rang. Ça a fait un peu de désordre, surtout quand Eudes a croisé Alceste et lui a donné un coup de poing sur le nez. Alceste a voulu donner un coup de pied à Eudes, mais Eudes a esquivé, il est très agile, et c'est Agnan qui a reçu le pied, heureusement, là où il n'a pas de lunettes. Ça ne l'a pas empêché, Agnan, de se mettre à pleurer et à hurler qu'il ne voyait plus, que personne ne l'aimait et qu'il voulait mourir.",
+      "start": 380.244,
+      "end": 416.951,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/014.mp3"
+    },
+    {
+      "text": "La maîtresse l'a consolé, l'a mouché, l'a repeigné et a puni Alceste, il doit écrire cent fois: «Je ne dois pas battre un camarade qui ne me cherche pas noise et qui porte des lunettes.» «C'est bien fait», a dit Agnan. Alors, la maîtresse lui a donné des lignes à faire, à lui aussi. Agnan, il a été tellement étonné qu'il n'a même pas pleuré.",
+      "start": 417.81,
+      "end": 438.889,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/015.mp3"
+    },
+    {
+      "text": "La maîtresse a commencé à les distribuer drôlement, les punitions, on avait tous des tas de lignes à faire et finalement, la maîtresse nous a dit : «Maintenant, vous allez vous décider à vous tenir tranquilles. Si vous êtes très gentils, je lèverai toutes les punitions. Alors, vous allez bien prendre la pose, faire un joli sourire et le monsieur va nous prendre une belle photographie!» Comme nous ne voulions pas faire de la peine à la maîtresse, on a obéi.",
+      "start": 439.809,
+      "end": 464.004,
+      "sentence_count": 5,
+      "audio_file": "audio/nicolas-1/paragraphs/016.mp3"
+    },
+    {
+      "text": "Nous avons tous souri et on a pris la pose. Mais, pour le souvenir que nous allions chérir toute notre vie, c'est raté, parce qu'on s'est aperçu que le photographe n'était plus là. Il était parti, sans rien dire.",
+      "start": 464.412,
+      "end": 479.34,
+      "sentence_count": 3,
+      "audio_file": "audio/nicolas-1/paragraphs/017.mp3"
+    }
+  ],
+  "segments": [
+    {
+      "text": "Un souvenir qu'on va chérir. Ce matin, nous sommes tous arrivés à l'école bien contents, parce qu'on va prendre une photo de la classe qui sera pour nous un souvenir que nous allons chérir toute notre vie, comme nous l'a dit la maîtresse. Elle nous a dit aussi de venir bien propres et bien coiffés. C'est avec plein de brillantine sur la tête que je suis entré dans la cour de récréation. Tous les copains étaient déjà là et la maîtresse était en train de gronder Geoffroy qui était venu habillé en martien. Geoffroy a un papa très riche qui lui achète tous les jouets qu'il veut. Geoffroy disait à la maîtresse qu'il voulait absolument être photographié en martien et que sinon il s'en irait. Le photographe était là, aussi, avec son appareil et la maîtresse lui a dit qu'il fallait faire vite, sinon, nous allions rater notre cours d'arithmétique. Agnan, qui est le premier de la classe et le chouchou de la maîtresse, a dit que ce serait dommage de ne pas avoir arithmétique, parce qu'il aimait ça et qu'il avait bien fait tous ses problèmes. Eudes, un copain qui est très fort, voulait donner un coup de poing sur le nez d'Agnan, mais Agnan a des lunettes et on ne peut pas taper sur lui aussi souvent qu'on le voudrait.",
+      "start": 25.4,
+      "end": 93.581,
+      "sentence_count": 10,
+      "audio_file": "audio/nicolas-1/segments/001.mp3"
+    },
+    {
+      "text": "La maîtresse s'est mise à crier que nous étions insupportables et que si ça continuait il n'y aurait pas de photo et qu'on irait en classe. Le photographe, alors, a dit : «Allons, allons, allons, du calme, du calme. Je sais comment il faut parler aux enfants, tout va se passer très bien.» Le photographe a décidé que nous devions nous mettre sur trois rangs; le premier rang assis par terre, le deuxième, debout autour de la maîtresse qui serait assise sur une chaise et le troisième, debout sur des caisses. Il a vraiment des bonnes idées, le photographe. Les caisses, on est allés les chercher dans la cave de l'école. On a bien rigolé, parce qu'il n'y avait pas beaucoup de lumière dans la cave et Rufus s'était mis un vieux sac sur la tête et il criait «Hou! Je suis le fantôme.» Et puis, on a vu arriver la maîtresse. Elle n'avait pas l'air contente, alors nous sommes vite partis avec les caisses. Le seul qui est resté, c'est Rufus. Avec son sac, il ne voyait pas ce qui se passait et il a continué à crier «Hou!",
+      "start": 94.556,
+      "end": 155.112,
+      "sentence_count": 14,
+      "audio_file": "audio/nicolas-1/segments/002.mp3"
+    },
+    {
+      "text": "Je suis le fantôme», et c'est la maîtresse qui lui a enlevé le sac. Il a été drôlement étonné, Rufus. De retour dans la cour, la maîtresse a lâché l'oreille de Rufus et elle s'est frappé le front avec la main. « Mais vous êtes tout noirs », elle a dit. C'était vrai, en faisant les guignols dans la cave, on s'était un peu salis. La maîtresse n'était pas contente, mais le photographe lui a dit que ce n'était pas grave, on avait le temps de se laver pendant que lui disposait les caisses et la chaise pour la photo. À part Agnan, le seul qui avait la figure propre, c'était Geoffroy, parce qu'il avait la tête dans son casque de martien, qui ressemble à un bocal. «Vous voyez, a dit Geoffroy à la maîtresse, 3 s'ils étaient venus tous habillés comme moi, il n'y aurait pas d'histoires.» J'ai vu que la maîtresse avait bien envie de tirer les oreilles de Geoffroy, mais il n'y avait pas de prise sur le bocal. C'est une combine épatante, ce costume de martien! Nous sommes revenus après nous être lavés et peignés. On était bien un peu mouillés, mais le photographe a dit que ça ne faisait rien, que sur la photo ça ne se verrait pas.",
+      "start": 155.142,
+      "end": 215.676,
+      "sentence_count": 12,
+      "audio_file": "audio/nicolas-1/segments/003.mp3"
+    },
+    {
+      "text": "«Bon, nous a dit le photographe, vous voulez faire plaisir à votre maîtresse?» Nous avons répondu que oui, parce que nous l'aimons bien la maîtresse, elle est drôlement gentille quand nous ne la mettons pas en colère. «Alors, a dit le photographe, vous allez sagement prendre vos places pour la photo. Les plus grands sur les caisses, les moyens debout, les petits assis.» Nous on y est allés et le photographe était en train d'expliquer à la maîtresse qu'on obtenait tout des enfants quand on était patient, mais la maîtresse n'a pas pu l'écouter jusqu'au bout. Elle a dû nous séparer, parce que nous voulions être tous sur les caisses. «Il y a un seul grand ici, c'est moi!» criait Eudes et il poussait ceux qui voulaient monter sur les caisses. Comme Geoffroy insistait, Eudes lui a donné un coup de poing sur le bocal et il s'est fait très mal. On a dû se mettre à plusieurs pour enlever le bocal de Geoffroy qui s'était coincé. La maîtresse a dit qu'elle nous donnait un dernier avertissement, après ce serait l'arithmétique, alors, on s'est dit qu'il fallait se tenir tranquilles et on a commencé à s'installer. Geoffroy s'est approché du photographe :",
+      "start": 216.934,
+      "end": 279.781,
+      "sentence_count": 11,
+      "audio_file": "audio/nicolas-1/segments/004.mp3"
+    },
+    {
+      "text": "«C'est quoi, votre appareil?» il a demandé. Le photographe a souri et il a dit : « C'est une boîte d'où va sortir un petit oiseau, bonhomme. Il est vieux votre engin, a dit Geoffroy, mon papa il m'en a donné un avec pare-soleil, objectif à courte focale, téléobjectif, et, bien sûr, des écrans... » Le photographe a paru surpris, il a cessé de sourire et il a dit à Geoffroy de retourner à sa place. «Est-ce que vous avez au moins une cellule photoélectrique? » a demandé Geoffroy. «Pour la dernière fois, retourne à ta place! » a crié le photographe qui, tout d'un coup, avait l'air très nerveux. On s'est installés. Moi, j'étais assis par terre, à côté d'Alceste. Alceste, c'est mon copain qui est très gros et qui mange tout le temps. Il était en train de mordre dans une tartine de confiture et le photographe lui a dit de cesser de manger, mais Alceste a répondu qu'il fallait bien qu'il se nourrisse. «Lâche cette tartine! » a crié la maîtresse qui était assise juste derrière Alceste. Ça l'a tellement surpris, Alceste, qu'il a laissé tomber la tartine sur sa chemise.",
+      "start": 280.902,
+      "end": 345.62,
+      "sentence_count": 13,
+      "audio_file": "audio/nicolas-1/segments/005.mp3"
+    },
+    {
+      "text": "«C'est gagné », a dit Alceste, en essayant de racler la confiture avec son pain. La maîtresse a dit qu'il n'y avait plus qu'une chose à faire, c'était de mettre Alceste au dernier rang pour qu'on ne voie pas la tache sur sa chemise. «Eudes, a dit la maîtresse, laissez votre place à votre camarade. Ce n'est pas mon camarade, a répondu Eudes, il n'aura pas ma place et il n'a qu'à se mettre de dos à la photo, comme ça on ne verra pas la tache, ni sa grosse figure. » La maîtresse s'est fâchée et elle a donné 4 comme punition à Eudes la conjugaison du verbe : « Je ne dois pas refuser de céder ma place à un camarade qui a renversé sur sa chemise une tartine de confiture.» Eudes n'a rien dit, il est descendu de sa caisse et il est venu vers le premier rang, tandis qu'Alceste allait vers le dernier rang. Ça a fait un peu de désordre, surtout quand Eudes a croisé Alceste et lui a donné un coup de poing sur le nez. Alceste a voulu donner un coup de pied à Eudes, mais Eudes a esquivé, il est très agile, et c'est Agnan qui a reçu le pied, heureusement, là où il n'a pas de lunettes.",
+      "start": 346.92,
+      "end": 409.439,
+      "sentence_count": 9,
+      "audio_file": "audio/nicolas-1/segments/006.mp3"
+    },
+    {
+      "text": "Ça ne l'a pas empêché, Agnan, de se mettre à pleurer et à hurler qu'il ne voyait plus, que personne ne l'aimait et qu'il voulait mourir. La maîtresse l'a consolé, l'a mouché, l'a repeigné et a puni Alceste, il doit écrire cent fois: «Je ne dois pas battre un camarade qui ne me cherche pas noise et qui porte des lunettes.» «C'est bien fait», a dit Agnan. Alors, la maîtresse lui a donné des lignes à faire, à lui aussi. Agnan, il a été tellement étonné qu'il n'a même pas pleuré. La maîtresse a commencé à les distribuer drôlement, les punitions, on avait tous des tas de lignes à faire et finalement, la maîtresse nous a dit : «Maintenant, vous allez vous décider à vous tenir tranquilles. Si vous êtes très gentils, je lèverai toutes les punitions. Alors, vous allez bien prendre la pose, faire un joli sourire et le monsieur va nous prendre une belle photographie!» Comme nous ne voulions pas faire de la peine à la maîtresse, on a obéi. Nous avons tous souri et on a pris la pose. Mais, pour le souvenir que nous allions chérir toute notre vie, c'est raté, parce qu'on s'est aperçu que le photographe n'était plus là.",
+      "start": 410.164,
+      "end": 477.0,
+      "sentence_count": 13,
+      "audio_file": "audio/nicolas-1/segments/007.mp3"
+    },
+    {
+      "text": "Il était parti, sans rien dire.",
+      "start": 477.03,
+      "end": 479.34,
+      "sentence_count": 1,
+      "audio_file": "audio/nicolas-1/segments/008.mp3"
+    }
+  ],
+  "full_text": "Un souvenir qu'on va chérir. Ce matin, nous sommes tous arrivés à l'école bien contents, parce qu'on va prendre une photo de la classe qui sera pour nous un souvenir que nous allons chérir toute notre vie, comme nous l'a dit la maîtresse. Elle nous a dit aussi de venir bien propres et bien coiffés. C'est avec plein de brillantine sur la tête que je suis entré dans la cour de récréation. Tous les copains étaient déjà là et la maîtresse était en train de gronder Geoffroy qui était venu habillé en martien. Geoffroy a un papa très riche qui lui achète tous les jouets qu'il veut. Geoffroy disait à la maîtresse qu'il voulait absolument être photographié en martien et que sinon il s'en irait. Le photographe était là, aussi, avec son appareil et la maîtresse lui a dit qu'il fallait faire vite, sinon, nous allions rater notre cours d'arithmétique. Agnan, qui est le premier de la classe et le chouchou de la maîtresse, a dit que ce serait dommage de ne pas avoir arithmétique, parce qu'il aimait ça et qu'il avait bien fait tous ses problèmes. Eudes, un copain qui est très fort, voulait donner un coup de poing sur le nez d'Agnan, mais Agnan a des lunettes et on ne peut pas taper sur lui aussi souvent qu'on le voudrait. La maîtresse s'est mise à crier que nous étions insupportables et que si ça continuait il n'y aurait pas de photo et qu'on irait en classe. Le photographe, alors, a dit : «Allons, allons, allons, du calme, du calme. Je sais comment il faut parler aux enfants, tout va se passer très bien.» Le photographe a décidé que nous devions nous mettre sur trois rangs; le premier rang assis par terre, le deuxième, debout autour de la maîtresse qui serait assise sur une chaise et le troisième, debout sur des caisses. Il a vraiment des bonnes idées, le photographe. Les caisses, on est allés les chercher dans la cave de l'école. On a bien rigolé, parce qu'il n'y avait pas beaucoup de lumière dans la cave et Rufus s'était mis un vieux sac sur la tête et il criait «Hou! Je suis le fantôme.» Et puis, on a vu arriver la maîtresse. Elle n'avait pas l'air contente, alors nous sommes vite partis avec les caisses. Le seul qui est resté, c'est Rufus. Avec son sac, il ne voyait pas ce qui se passait et il a continué à crier «Hou! Je suis le fantôme», et c'est la maîtresse qui lui a enlevé le sac. Il a été drôlement étonné, Rufus. De retour dans la cour, la maîtresse a lâché l'oreille de Rufus et elle s'est frappé le front avec la main. « Mais vous êtes tout noirs », elle a dit. C'était vrai, en faisant les guignols dans la cave, on s'était un peu salis. La maîtresse n'était pas contente, mais le photographe lui a dit que ce n'était pas grave, on avait le temps de se laver pendant que lui disposait les caisses et la chaise pour la photo. À part Agnan, le seul qui avait la figure propre, c'était Geoffroy, parce qu'il avait la tête dans son casque de martien, qui ressemble à un bocal. «Vous voyez, a dit Geoffroy à la maîtresse, 3 s'ils étaient venus tous habillés comme moi, il n'y aurait pas d'histoires.» J'ai vu que la maîtresse avait bien envie de tirer les oreilles de Geoffroy, mais il n'y avait pas de prise sur le bocal. C'est une combine épatante, ce costume de martien! Nous sommes revenus après nous être lavés et peignés. On était bien un peu mouillés, mais le photographe a dit que ça ne faisait rien, que sur la photo ça ne se verrait pas. «Bon, nous a dit le photographe, vous voulez faire plaisir à votre maîtresse?» Nous avons répondu que oui, parce que nous l'aimons bien la maîtresse, elle est drôlement gentille quand nous ne la mettons pas en colère. «Alors, a dit le photographe, vous allez sagement prendre vos places pour la photo. Les plus grands sur les caisses, les moyens debout, les petits assis.» Nous on y est allés et le photographe était en train d'expliquer à la maîtresse qu'on obtenait tout des enfants quand on était patient, mais la maîtresse n'a pas pu l'écouter jusqu'au bout. Elle a dû nous séparer, parce que nous voulions être tous sur les caisses. «Il y a un seul grand ici, c'est moi!» criait Eudes et il poussait ceux qui voulaient monter sur les caisses. Comme Geoffroy insistait, Eudes lui a donné un coup de poing sur le bocal et il s'est fait très mal. On a dû se mettre à plusieurs pour enlever le bocal de Geoffroy qui s'était coincé. La maîtresse a dit qu'elle nous donnait un dernier avertissement, après ce serait l'arithmétique, alors, on s'est dit qu'il fallait se tenir tranquilles et on a commencé à s'installer. Geoffroy s'est approché du photographe : «C'est quoi, votre appareil?» il a demandé. Le photographe a souri et il a dit : « C'est une boîte d'où va sortir un petit oiseau, bonhomme. Il est vieux votre engin, a dit Geoffroy, mon papa il m'en a donné un avec pare-soleil, objectif à courte focale, téléobjectif, et, bien sûr, des écrans... » Le photographe a paru surpris, il a cessé de sourire et il a dit à Geoffroy de retourner à sa place. «Est-ce que vous avez au moins une cellule photoélectrique? » a demandé Geoffroy. «Pour la dernière fois, retourne à ta place! » a crié le photographe qui, tout d'un coup, avait l'air très nerveux. On s'est installés. Moi, j'étais assis par terre, à côté d'Alceste. Alceste, c'est mon copain qui est très gros et qui mange tout le temps. Il était en train de mordre dans une tartine de confiture et le photographe lui a dit de cesser de manger, mais Alceste a répondu qu'il fallait bien qu'il se nourrisse. «Lâche cette tartine! » a crié la maîtresse qui était assise juste derrière Alceste. Ça l'a tellement surpris, Alceste, qu'il a laissé tomber la tartine sur sa chemise. «C'est gagné », a dit Alceste, en essayant de racler la confiture avec son pain. La maîtresse a dit qu'il n'y avait plus qu'une chose à faire, c'était de mettre Alceste au dernier rang pour qu'on ne voie pas la tache sur sa chemise. «Eudes, a dit la maîtresse, laissez votre place à votre camarade. Ce n'est pas mon camarade, a répondu Eudes, il n'aura pas ma place et il n'a qu'à se mettre de dos à la photo, comme ça on ne verra pas la tache, ni sa grosse figure. » La maîtresse s'est fâchée et elle a donné 4 comme punition à Eudes la conjugaison du verbe : « Je ne dois pas refuser de céder ma place à un camarade qui a renversé sur sa chemise une tartine de confiture.» Eudes n'a rien dit, il est descendu de sa caisse et il est venu vers le premier rang, tandis qu'Alceste allait vers le dernier rang. Ça a fait un peu de désordre, surtout quand Eudes a croisé Alceste et lui a donné un coup de poing sur le nez. Alceste a voulu donner un coup de pied à Eudes, mais Eudes a esquivé, il est très agile, et c'est Agnan qui a reçu le pied, heureusement, là où il n'a pas de lunettes. Ça ne l'a pas empêché, Agnan, de se mettre à pleurer et à hurler qu'il ne voyait plus, que personne ne l'aimait et qu'il voulait mourir. La maîtresse l'a consolé, l'a mouché, l'a repeigné et a puni Alceste, il doit écrire cent fois: «Je ne dois pas battre un camarade qui ne me cherche pas noise et qui porte des lunettes.» «C'est bien fait», a dit Agnan. Alors, la maîtresse lui a donné des lignes à faire, à lui aussi. Agnan, il a été tellement étonné qu'il n'a même pas pleuré. La maîtresse a commencé à les distribuer drôlement, les punitions, on avait tous des tas de lignes à faire et finalement, la maîtresse nous a dit : «Maintenant, vous allez vous décider à vous tenir tranquilles. Si vous êtes très gentils, je lèverai toutes les punitions. Alors, vous allez bien prendre la pose, faire un joli sourire et le monsieur va nous prendre une belle photographie!» Comme nous ne voulions pas faire de la peine à la maîtresse, on a obéi. Nous avons tous souri et on a pris la pose. Mais, pour le souvenir que nous allions chérir toute notre vie, c'est raté, parce qu'on s'est aperçu que le photographe n'était plus là. Il était parti, sans rien dire."
+}

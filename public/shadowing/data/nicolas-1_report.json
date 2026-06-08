@@ -1,0 +1,10 @@
+{
+  "total": 83,
+  "auto_fixes": 4,
+  "unresolved_issues": 0,
+  "issues": [],
+  "category_counts": {
+    "FALSE_POSITIVE": 7,
+    "OK": 76
+  }
+}

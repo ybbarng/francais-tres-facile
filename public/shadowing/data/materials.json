@@ -1,0 +1,16 @@
+{
+  "materials": [
+    {
+      "id": "nicolas-1",
+      "title": "Le Petit Nicolas — Chapitre 1",
+      "subtitle": "Un souvenir qu'on va chérir",
+      "author": "René Goscinny",
+      "duration_sec": 405,
+      "sentence_count": 83,
+      "paragraph_count": 17,
+      "segment_count": 8,
+      "source_url": "https://youtu.be/3envXRFwxsI",
+      "data_file": "data/nicolas-1.json"
+    }
+  ]
+}

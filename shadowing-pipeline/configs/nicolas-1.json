@@ -1,0 +1,20 @@
+{
+  "material_id": "nicolas-1",
+  "language": "fr",
+  "title": "Le Petit Nicolas — Chapitre 1",
+  "subtitle": "Un souvenir qu'on va chérir",
+  "author": "René Goscinny",
+  "source_url": "https://youtu.be/3envXRFwxsI",
+  "source_label": "PDF (Episcopal Collegiate Summer Reading)",
+  "audio_source": "/tmp/shadowing/nicolas-1-original.mp3",
+  "reference_text": "/tmp/shadowing/chapter1-body-clean.txt",
+  "title_text": "Un souvenir qu'on va chérir.",
+  "whisper_model": "/Users/ybbarng/.whisper-models/ggml-large-v3.bin",
+  "base_dir": "/Users/ybbarng/personal/projects/grammaire-francaise/shadowing",
+  "silence_sec": 0.3,
+  "segment_target_sec": 60,
+  "overrides": {
+    "1": { "start": 25.4, "end": 27.02 },
+    "2": { "start": 32.72 }
+  }
+}
