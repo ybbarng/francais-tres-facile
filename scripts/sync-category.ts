@@ -1,9 +1,9 @@
 import path from "node:path";
 import { PrismaLibSql } from "@prisma/adapter-libsql";
+import type { CategoryInfo } from "../src/features/exercises/lib/scraper.js";
+import { scrapeCategory, scrapeExerciseDetail } from "../src/features/exercises/lib/scraper.js";
 import { PrismaClient } from "../src/generated/exercises/index.js";
 import { generateShortId } from "../src/lib/id.js";
-import type { CategoryInfo } from "../src/lib/scraper.js";
-import { scrapeCategory, scrapeExerciseDetail } from "../src/lib/scraper.js";
 
 const categoryUrl = process.argv[2];
 if (!categoryUrl) {

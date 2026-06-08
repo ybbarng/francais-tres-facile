@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildMonthMap, MONTHS } from "@/lib/buzz-challenge";
+import { buildMonthMap, MONTHS } from "@/features/exercises/lib/buzz-challenge";
 
 // 완료된 exercice 수에 따른 월별 진행 상황 계산
 function calculateMonthProgress(completed: number, monthIndex: number) {

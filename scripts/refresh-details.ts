@@ -1,7 +1,7 @@
 import path from "node:path";
 import { PrismaLibSql } from "@prisma/adapter-libsql";
+import { scrapeExerciseDetail } from "../src/features/exercises/lib/scraper.js";
 import { PrismaClient } from "../src/generated/exercises/index.js";
-import { scrapeExerciseDetail } from "../src/lib/scraper.js";
 
 async function main() {
   const dbPath = path.join(process.cwd(), "data", "exercises.db");

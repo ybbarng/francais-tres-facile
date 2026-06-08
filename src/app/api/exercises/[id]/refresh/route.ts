@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { scrapeExerciseDetail } from "@/features/exercises/lib/scraper";
 import { verifyPasswordWithRateLimit } from "@/lib/auth";
 import { exerciseDb, progressDb } from "@/lib/db";
-import { scrapeExerciseDetail } from "@/lib/scraper";
 
 interface RouteParams {
   params: Promise<{ id: string }>;

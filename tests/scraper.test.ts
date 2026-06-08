@@ -1,8 +1,8 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { RFI_SECTIONS } from "@/lib/rfi-headers";
-import type { CategoryInfo } from "@/lib/scraper";
+import { RFI_SECTIONS } from "@/features/exercises/lib/rfi-headers";
+import type { CategoryInfo } from "@/features/exercises/lib/scraper";
 import {
   scrapeCategory,
   scrapeCategoryPage,
@@ -10,7 +10,7 @@ import {
   scrapeExerciseDetail,
   scrapeSectionCategories,
   scrapeSectionExercises,
-} from "@/lib/scraper";
+} from "@/features/exercises/lib/scraper";
 
 // Load mock HTML files
 const mockPage1 = readFileSync(join(__dirname, "mocks/rfi-societe-a2-page1.html"), "utf-8");

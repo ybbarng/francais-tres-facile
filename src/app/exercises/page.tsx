@@ -3,9 +3,9 @@
 import { RefreshCw } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import ExerciseList from "@/components/exercises/ExerciseList";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import ExerciseList from "@/features/exercises/components/ExerciseList";
 import { fetchWithAuth } from "@/lib/password";
 
 export default function ExercisesPage() {

@@ -14,14 +14,14 @@ import {
 import { useRouter } from "next/navigation";
 import { use, useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
-import AudioPlayer from "@/components/AudioPlayer";
-import H5PQuiz from "@/components/H5PQuiz";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
+import AudioPlayer from "@/features/exercises/components/AudioPlayer";
+import H5PQuiz from "@/features/exercises/components/H5PQuiz";
 import { fetchWithAuth } from "@/lib/password";
 import type { ExerciseWithProgress, ProgressInput } from "@/types";
 

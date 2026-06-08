@@ -1,8 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { scrapeAllExercises, scrapeSectionExercises } from "@/features/exercises/lib/scraper";
 import { verifyPasswordWithRateLimit } from "@/lib/auth";
 import { exerciseDb } from "@/lib/db";
 import { generateShortId } from "@/lib/id";
-import { scrapeAllExercises, scrapeSectionExercises } from "@/lib/scraper";
 import type { SyncResult } from "@/types";
 
 export async function POST(request: NextRequest) {

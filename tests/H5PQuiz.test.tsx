@@ -3,7 +3,7 @@
  */
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import H5PQuiz from "@/components/H5PQuiz";
+import H5PQuiz from "@/features/exercises/components/H5PQuiz";
 
 describe("H5PQuiz", () => {
   const defaultProps = {

@@ -2,7 +2,6 @@
 
 import { X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
-import Playlist from "@/components/Playlist";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,7 +13,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
-import { buildMonthMap, MONTHS } from "@/lib/buzz-challenge";
+import Playlist from "@/features/exercises/components/Playlist";
+import { buildMonthMap, MONTHS } from "@/features/exercises/lib/buzz-challenge";
 import type { ExerciseWithProgress } from "@/types";
 
 const SECTION_LABELS: Record<string, string> = {
