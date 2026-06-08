@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart3, BookOpen, CheckCircle, Home, Menu, Music, X } from "lucide-react";
+import { BarChart3, BookOpen, CheckCircle, Headphones, Home, Menu, Music, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -19,6 +19,7 @@ export default function Header() {
     { href: "/completed", label: "Terminés", icon: CheckCircle },
     { href: "/statistics", label: "Stats", icon: BarChart3 },
     { href: "/playlist", label: "Écoute", icon: Music },
+    { href: "/shadowing", label: "Shadowing", icon: Headphones },
   ];
 
   return (
