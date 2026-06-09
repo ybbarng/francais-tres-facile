@@ -23,9 +23,18 @@ export default function OfflineSaveButton({ materialId, updatedAt, urls }: Offli
     const pct =
       progress && progress.total > 0 ? Math.round((progress.done / progress.total) * 100) : 0;
     return (
-      <Button variant="secondary" size="sm" disabled className="gap-2">
-        <Loader2 className="h-4 w-4 animate-spin" />
-        저장 중 {progress ? `${progress.done}/${progress.total}` : ""} ({pct}%)
+      <Button
+        variant="secondary"
+        size="sm"
+        disabled
+        className="h-8 gap-1.5 px-2 text-xs"
+        title={
+          progress ? `오프라인 저장 중 ${progress.done}/${progress.total}` : "오프라인 저장 중"
+        }
+        aria-label="오프라인 저장 중"
+      >
+        <Loader2 className="h-3.5 w-3.5 animate-spin" />
+        <span className="font-mono">{pct}%</span>
       </Button>
     );
   }
@@ -34,15 +43,15 @@ export default function OfflineSaveButton({ materialId, updatedAt, urls }: Offli
     return (
       <Button
         variant="outline"
-        size="sm"
+        size="icon-sm"
         onClick={() => {
           if (confirm("이 자료의 오프라인 캐시를 지울까요?")) remove();
         }}
-        className="gap-2 text-green-700 dark:text-green-400"
-        title="오프라인 저장 해제"
+        className="text-green-700 dark:text-green-400"
+        title="오프라인 저장됨 (클릭해 해제)"
+        aria-label="오프라인 저장 해제"
       >
         <Check className="h-4 w-4" />
-        저장됨
       </Button>
     );
   }
@@ -51,14 +60,14 @@ export default function OfflineSaveButton({ materialId, updatedAt, urls }: Offli
     return (
       <Button
         variant="outline"
-        size="sm"
+        size="icon-sm"
         onClick={save}
         disabled={urls.length === 0}
-        className="gap-2 text-amber-700 dark:text-amber-400"
+        className="text-amber-700 dark:text-amber-400"
         title="새 버전이 있어요. 다시 받기"
+        aria-label="오프라인 캐시 업데이트"
       >
         <RefreshCw className="h-4 w-4" />
-        업데이트
       </Button>
     );
   }
@@ -66,14 +75,13 @@ export default function OfflineSaveButton({ materialId, updatedAt, urls }: Offli
   return (
     <Button
       variant="outline"
-      size="sm"
+      size="icon-sm"
       onClick={save}
       disabled={urls.length === 0 || status === "unknown"}
-      className="gap-2"
       title="오프라인에서도 듣기"
+      aria-label="오프라인 저장"
     >
       <Download className="h-4 w-4" />
-      오프라인 저장
     </Button>
   );
 }
