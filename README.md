@@ -63,6 +63,25 @@ pnpm test
 pnpm lint
 ```
 
+## 배포
+
+서버에서 한 줄이면 끝납니다.
+
+```bash
+./server
+```
+
+다음 단계를 순서대로 실행합니다:
+
+1. `git pull` — 최신 변경 받기
+2. `pnpm install` — 의존성 동기화
+3. `pnpm run prisma:generate` — Prisma 클라이언트 재생성
+4. `pnpm run migrate:progress` — `prisma/progress/migrations/*.sql` 멱등 적용 (Node로 실행, sqlite3 CLI 불필요)
+5. `pnpm run build` — Next.js 빌드
+6. `pm2 restart francais-tres-facile` (또는 첫 실행 시 `pm2 start ecosystem.config.js`)
+
+`exercises.db`는 서버에 별도로 scp 합니다.
+
 ## 기술 스택
 
 - **프레임워크**: Next.js 16 (App Router)
