@@ -18,3 +18,15 @@ model Progress {
   completedAt DateTime?
   hidden      Boolean   @default(false)
 }
+
+model ShadowingProgress {
+  id            String    @id @default(cuid())
+  materialId    String
+  unit          String
+  itemIndex     Int
+  playCount     Int       @default(0)
+  lastStudiedAt DateTime?
+
+  @@unique([materialId, unit, itemIndex])
+  @@index([materialId])
+}

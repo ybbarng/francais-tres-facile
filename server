@@ -12,6 +12,11 @@ pnpm install
 echo "🔧 Generating Prisma client..."
 pnpm run prisma:generate
 
+echo "🗄  Applying SQL migrations (idempotent)..."
+for sql in prisma/progress/migrations/*.sql; do
+  [ -f "$sql" ] && sqlite3 data/progress.db < "$sql"
+done
+
 echo "🔨 Building..."
 pnpm run build
 
