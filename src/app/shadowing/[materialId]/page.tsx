@@ -120,6 +120,8 @@ export default function MaterialPage({ params }: PageProps) {
     return relativeTimeKo(latest);
   }, [progressMap]);
 
+  const currentRecord = progressMap[progressKey(currentUnit, currentIndex)] ?? null;
+
   if (error) {
     return (
       <Card>
@@ -152,7 +154,7 @@ export default function MaterialPage({ params }: PageProps) {
             <p className="truncate text-xs text-muted-foreground">
               {summary.subtitle}
               {summary.subtitle && lastStudiedRelative && " · "}
-              {lastStudiedRelative && `마지막 학습 ${lastStudiedRelative}`}
+              {lastStudiedRelative && `자료 마지막 학습 ${lastStudiedRelative}`}
             </p>
           </div>
         </div>
@@ -195,7 +197,12 @@ export default function MaterialPage({ params }: PageProps) {
 
       <Card>
         <CardContent className="pt-6">
-          <ShadowingPlayer items={items} materialId={summary.id} onCountUp={handleCountUp} />
+          <ShadowingPlayer
+            items={items}
+            materialId={summary.id}
+            currentRecord={currentRecord}
+            onCountUp={handleCountUp}
+          />
         </CardContent>
       </Card>
 

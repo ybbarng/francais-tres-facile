@@ -15,10 +15,10 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { assetPath } from "../lib/assets";
-import { formatMinSec } from "../lib/format";
+import { formatMinSec, relativeTimeKo } from "../lib/format";
 import { STEPS } from "../lib/steps";
 import { useShadowingStore } from "../store/shadowing-store";
-import type { ShadowingPlayableItem } from "../types";
+import type { ShadowingPlayableItem, ShadowingProgressRecord } from "../types";
 import RecordingPanel from "./RecordingPanel";
 
 const SPEED_PRESETS = [0.5, 0.75, 1, 1.25];
@@ -26,10 +26,16 @@ const SPEED_PRESETS = [0.5, 0.75, 1, 1.25];
 interface ShadowingPlayerProps {
   items: ShadowingPlayableItem[];
   materialId: string;
+  currentRecord?: ShadowingProgressRecord | null;
   onCountUp?: () => void;
 }
 
-export default function ShadowingPlayer({ items, materialId, onCountUp }: ShadowingPlayerProps) {
+export default function ShadowingPlayer({
+  items,
+  materialId,
+  currentRecord,
+  onCountUp,
+}: ShadowingPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -198,8 +204,18 @@ export default function ShadowingPlayer({ items, materialId, onCountUp }: Shadow
                      [&::-webkit-slider-thumb]:rounded-full
                      [&::-webkit-slider-thumb]:bg-primary"
         />
-        <div className="mt-1 flex justify-between font-mono text-xs text-muted-foreground">
+        <div className="mt-1 flex items-center justify-between gap-2 font-mono text-xs text-muted-foreground">
           <span>{formatMinSec(currentTime)}</span>
+          {currentRecord && currentRecord.playCount > 0 && (
+            <span className="flex items-center gap-1.5 rounded-full bg-primary/10 px-2 py-0.5 font-sans text-primary">
+              <span className="font-semibold">×{currentRecord.playCount}</span>
+              {currentRecord.lastStudiedAt && (
+                <span className="text-primary/70">
+                  · {relativeTimeKo(currentRecord.lastStudiedAt)}
+                </span>
+              )}
+            </span>
+          )}
           <span>{formatMinSec(duration)}</span>
         </div>
       </div>
