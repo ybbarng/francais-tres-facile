@@ -188,8 +188,8 @@ export default function MaterialPage({ params }: PageProps) {
         </div>
       </div>
 
-      <Card>
-        <CardHeader className="pb-3">
+      <Card className="gap-3 py-4">
+        <CardHeader className="pb-0">
           <CardTitle className="text-base">① 학습 단위 선택</CardTitle>
         </CardHeader>
         <CardContent>
@@ -197,8 +197,8 @@ export default function MaterialPage({ params }: PageProps) {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader className="pb-3">
+      <Card className="gap-3 py-4">
+        <CardHeader className="pb-0">
           <CardTitle className="text-base">② 항목 선택</CardTitle>
         </CardHeader>
         <CardContent>
@@ -206,8 +206,8 @@ export default function MaterialPage({ params }: PageProps) {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader className="pb-3">
+      <Card className="gap-3 py-4">
+        <CardHeader className="pb-0">
           <CardTitle className="text-base">③ 학습 단계</CardTitle>
         </CardHeader>
         <CardContent>
@@ -215,8 +215,8 @@ export default function MaterialPage({ params }: PageProps) {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardContent className="pt-6">
+      <Card className="py-4">
+        <CardContent>
           <ShadowingPlayer
             items={items}
             materialId={summary.id}
