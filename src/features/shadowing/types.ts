@@ -43,3 +43,18 @@ export interface ShadowingPlayableItem {
   audioFile: string;
   duration: number;
 }
+
+export interface ShadowingProgressRecord {
+  id: string;
+  materialId: string;
+  unit: string;
+  itemIndex: number;
+  playCount: number;
+  lastStudiedAt: string | null;
+}
+
+export type ShadowingProgressMap = Record<string, ShadowingProgressRecord>;
+
+export function progressKey(unit: string, itemIndex: number): string {
+  return `${unit}:${itemIndex}`;
+}

@@ -3,13 +3,20 @@
 import { cn } from "@/lib/utils";
 import { previewText } from "../lib/format";
 import { useShadowingStore } from "../store/shadowing-store";
-import type { ShadowingPlayableItem } from "../types";
+import {
+  progressKey,
+  type ShadowingPlayableItem,
+  type ShadowingProgressMap,
+  type ShadowingUnit,
+} from "../types";
 
 interface ItemSelectorProps {
   items: ShadowingPlayableItem[];
+  progressMap?: ShadowingProgressMap;
+  unit: ShadowingUnit;
 }
 
-export default function ItemSelector({ items }: ItemSelectorProps) {
+export default function ItemSelector({ items, progressMap, unit }: ItemSelectorProps) {
   const currentIndex = useShadowingStore((s) => s.currentIndex);
   const setIndex = useShadowingStore((s) => s.setIndex);
 
@@ -21,6 +28,8 @@ export default function ItemSelector({ items }: ItemSelectorProps) {
     <div className="flex max-h-72 flex-col gap-1.5 overflow-y-auto pr-1">
       {items.map((it, i) => {
         const active = i === currentIndex;
+        const record = progressMap?.[progressKey(unit, i)];
+        const count = record?.playCount ?? 0;
         return (
           <button
             type="button"
@@ -34,7 +43,22 @@ export default function ItemSelector({ items }: ItemSelectorProps) {
             )}
           >
             <div className="flex items-center justify-between gap-3">
-              <strong className="text-sm">{it.label}</strong>
+              <div className="flex items-center gap-2">
+                <strong className="text-sm">{it.label}</strong>
+                {count > 0 && (
+                  <span
+                    className={cn(
+                      "rounded-full px-1.5 py-0.5 font-mono text-[10px] leading-none",
+                      active
+                        ? "bg-primary-foreground/20 text-primary-foreground"
+                        : "bg-primary/10 text-primary"
+                    )}
+                    title={`${count}회 들음`}
+                  >
+                    ×{count}
+                  </span>
+                )}
+              </div>
               <span
                 className={cn(
                   "shrink-0 font-mono text-xs",

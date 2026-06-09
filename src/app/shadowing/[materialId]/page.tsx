@@ -2,7 +2,7 @@
 
 import { ArrowLeft, HelpCircle } from "lucide-react";
 import Link from "next/link";
-import { use, useEffect, useMemo, useState } from "react";
+import { use, useCallback, useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -11,9 +11,17 @@ import ItemSelector from "@/features/shadowing/components/ItemSelector";
 import ShadowingPlayer from "@/features/shadowing/components/ShadowingPlayer";
 import StepBar from "@/features/shadowing/components/StepBar";
 import UnitTabs from "@/features/shadowing/components/UnitTabs";
+import { relativeTimeKo } from "@/features/shadowing/lib/format";
 import { buildItems } from "@/features/shadowing/lib/items";
 import { useShadowingStore } from "@/features/shadowing/store/shadowing-store";
-import type { ShadowingMaterial, ShadowingMaterialSummary } from "@/features/shadowing/types";
+import {
+  progressKey,
+  type ShadowingMaterial,
+  type ShadowingMaterialSummary,
+  type ShadowingProgressMap,
+  type ShadowingProgressRecord,
+} from "@/features/shadowing/types";
+import { fetchWithAuth } from "@/lib/password";
 
 interface PageProps {
   params: Promise<{ materialId: string }>;
@@ -27,11 +35,49 @@ export default function MaterialPage({ params }: PageProps) {
   const [helpOpen, setHelpOpen] = useState(false);
 
   const currentUnit = useShadowingStore((s) => s.currentUnit);
+  const currentIndex = useShadowingStore((s) => s.currentIndex);
   const reset = useShadowingStore((s) => s.reset);
+  const [progressMap, setProgressMap] = useState<ShadowingProgressMap>({});
 
   useEffect(() => {
     reset();
   }, [reset]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/api/shadowing/progress?materialId=${materialId}`)
+      .then((r) => r.json())
+      .then((data: { records: ShadowingProgressRecord[] }) => {
+        if (cancelled) return;
+        const map: ShadowingProgressMap = {};
+        for (const r of data.records) {
+          map[progressKey(r.unit, r.itemIndex)] = r;
+        }
+        setProgressMap(map);
+      })
+      .catch((e) => console.error("Failed to load shadowing progress", e));
+    return () => {
+      cancelled = true;
+    };
+  }, [materialId]);
+
+  const handleCountUp = useCallback(async () => {
+    try {
+      const res = await fetchWithAuth("/api/shadowing/progress", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ materialId, unit: currentUnit, itemIndex: currentIndex }),
+      });
+      if (!res.ok) return;
+      const record: ShadowingProgressRecord = await res.json();
+      setProgressMap((prev) => ({
+        ...prev,
+        [progressKey(record.unit, record.itemIndex)]: record,
+      }));
+    } catch (e) {
+      console.error("Failed to increment shadowing progress", e);
+    }
+  }, [materialId, currentUnit, currentIndex]);
 
   useEffect(() => {
     let cancelled = false;
@@ -65,6 +111,15 @@ export default function MaterialPage({ params }: PageProps) {
     return buildItems(material, currentUnit);
   }, [material, currentUnit]);
 
+  const lastStudiedRelative = useMemo(() => {
+    const latest = Object.values(progressMap)
+      .map((r) => r.lastStudiedAt)
+      .filter((s): s is string => !!s)
+      .sort()
+      .at(-1);
+    return relativeTimeKo(latest);
+  }, [progressMap]);
+
   if (error) {
     return (
       <Card>
@@ -94,9 +149,11 @@ export default function MaterialPage({ params }: PageProps) {
           </Button>
           <div className="min-w-0">
             <h1 className="truncate text-lg font-semibold">{summary.title}</h1>
-            {summary.subtitle && (
-              <p className="truncate text-xs text-muted-foreground">{summary.subtitle}</p>
-            )}
+            <p className="truncate text-xs text-muted-foreground">
+              {summary.subtitle}
+              {summary.subtitle && lastStudiedRelative && " · "}
+              {lastStudiedRelative && `마지막 학습 ${lastStudiedRelative}`}
+            </p>
           </div>
         </div>
         <Button
@@ -123,7 +180,7 @@ export default function MaterialPage({ params }: PageProps) {
           <CardTitle className="text-base">② 항목 선택</CardTitle>
         </CardHeader>
         <CardContent>
-          <ItemSelector items={items} />
+          <ItemSelector items={items} progressMap={progressMap} unit={currentUnit} />
         </CardContent>
       </Card>
 
@@ -138,7 +195,7 @@ export default function MaterialPage({ params }: PageProps) {
 
       <Card>
         <CardContent className="pt-6">
-          <ShadowingPlayer items={items} materialId={summary.id} />
+          <ShadowingPlayer items={items} materialId={summary.id} onCountUp={handleCountUp} />
         </CardContent>
       </Card>
 

@@ -26,9 +26,10 @@ const SPEED_PRESETS = [0.5, 0.75, 1, 1.25];
 interface ShadowingPlayerProps {
   items: ShadowingPlayableItem[];
   materialId: string;
+  onCountUp?: () => void;
 }
 
-export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerProps) {
+export default function ShadowingPlayer({ items, materialId, onCountUp }: ShadowingPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -74,6 +75,7 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
       audio.playbackRate = playbackRate;
     };
     const handleEnded = () => {
+      onCountUp?.();
       if (repeatOn) {
         repeatTimer = setTimeout(() => {
           audio.currentTime = 0;
@@ -99,7 +101,7 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
       audio.removeEventListener("play", handlePlay);
       audio.removeEventListener("pause", handlePause);
     };
-  }, [playbackRate, repeatOn]);
+  }, [playbackRate, repeatOn, onCountUp]);
 
   const audioSrc = item ? assetPath(item.audioFile) : "";
 
