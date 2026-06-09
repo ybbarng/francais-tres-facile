@@ -8,9 +8,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import HelpModal from "@/features/shadowing/components/HelpModal";
 import ItemSelector from "@/features/shadowing/components/ItemSelector";
+import OfflineSaveButton from "@/features/shadowing/components/OfflineSaveButton";
 import ShadowingPlayer from "@/features/shadowing/components/ShadowingPlayer";
 import StepBar from "@/features/shadowing/components/StepBar";
 import UnitTabs from "@/features/shadowing/components/UnitTabs";
+import { assetPath } from "@/features/shadowing/lib/assets";
 import { relativeTimeKo } from "@/features/shadowing/lib/format";
 import { buildItems } from "@/features/shadowing/lib/items";
 import { useShadowingStore } from "@/features/shadowing/store/shadowing-store";
@@ -122,6 +124,17 @@ export default function MaterialPage({ params }: PageProps) {
 
   const currentRecord = progressMap[progressKey(currentUnit, currentIndex)] ?? null;
 
+  const offlineUrls = useMemo(() => {
+    if (!summary || !material) return [];
+    const urls = new Set<string>();
+    urls.add(`/shadowing/${summary.data_file}`);
+    urls.add(assetPath(material.meta.audio_full));
+    for (const arr of [material.sentences, material.paragraphs, material.segments]) {
+      for (const it of arr) urls.add(assetPath(it.audio_file));
+    }
+    return Array.from(urls);
+  }, [summary, material]);
+
   if (error) {
     return (
       <Card>
@@ -158,14 +171,21 @@ export default function MaterialPage({ params }: PageProps) {
             </p>
           </div>
         </div>
-        <Button
-          variant="ghost"
-          size="icon-sm"
-          onClick={() => setHelpOpen(true)}
-          title="쉐도잉 방법"
-        >
-          <HelpCircle className="h-4 w-4" />
-        </Button>
+        <div className="flex items-center gap-2 shrink-0">
+          <OfflineSaveButton
+            materialId={summary.id}
+            updatedAt={summary.updatedAt}
+            urls={offlineUrls}
+          />
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={() => setHelpOpen(true)}
+            title="쉐도잉 방법"
+          >
+            <HelpCircle className="h-4 w-4" />
+          </Button>
+        </div>
       </div>
 
       <Card>
