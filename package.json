@@ -10,6 +10,7 @@
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
     "prisma:generate": "prisma generate --schema=prisma/exercises/schema.prisma && prisma generate --schema=prisma/progress/schema.prisma",
+    "migrate:progress": "npx tsx scripts/migrate-progress.ts",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
