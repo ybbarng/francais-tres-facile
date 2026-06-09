@@ -13,6 +13,7 @@ export interface ShadowingMaterialSummary {
   segment_count: number;
   source_url: string;
   data_file: string;
+  updatedAt: string;
 }
 
 export interface ShadowingItem {
