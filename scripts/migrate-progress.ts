@@ -22,12 +22,19 @@ async function main() {
     const sql = readFileSync(fullPath, "utf-8");
     const statements = sql
       .split(";")
-      .map((s) => s.trim())
-      .filter((s) => s.length > 0 && !s.startsWith("--"));
+      .map((s) =>
+        s
+          .split("\n")
+          .map((line) => line.trim())
+          .filter((line) => line.length > 0 && !line.startsWith("--"))
+          .join("\n")
+          .trim()
+      )
+      .filter((s) => s.length > 0);
     for (const stmt of statements) {
       await client.execute(stmt);
     }
-    console.log(`✓ applied ${file}`);
+    console.log(`✓ applied ${file} (${statements.length} statements)`);
   }
 }
 
