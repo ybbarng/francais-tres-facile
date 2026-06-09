@@ -3,6 +3,15 @@ set -e
 
 cd "$(dirname "$0")"
 
+# 1) DB 안전: 배포 직전 progress.db 백업, 최근 14개만 유지
+if [ -f data/progress.db ]; then
+  TS=$(date +%Y%m%d-%H%M%S)
+  cp data/progress.db "data/progress.db.bak.$TS"
+  echo "🗃  Backed up progress.db → progress.db.bak.$TS"
+  # ls -t는 새 것 → 옛 것 순. tail -n +15부터가 오래된 것
+  ls -1t data/progress.db.bak.* 2>/dev/null | tail -n +15 | xargs -r rm -f
+fi
+
 echo "📥 Pulling latest changes..."
 git pull
 
@@ -21,4 +30,13 @@ pnpm run build
 echo "🔄 Restarting pm2..."
 pm2 restart francais-tres-facile || pm2 start ecosystem.config.js
 
-echo "✅ Deploy complete!"
+# 6) 헬스체크 — pm2가 새 빌드 띄울 시간 잠깐 확보 후 200 응답 확인
+sleep 3
+HEALTH_URL="${HEALTH_URL:-http://localhost:3101/api/progress}"
+CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 "$HEALTH_URL" || echo "000")
+if [ "$CODE" = "200" ]; then
+  echo "✅ Deploy complete! (health $CODE)"
+else
+  echo "❌ Health check failed: $HEALTH_URL → $CODE"
+  exit 1
+fi
