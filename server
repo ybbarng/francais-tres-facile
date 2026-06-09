@@ -3,6 +3,11 @@ set -e
 
 cd "$(dirname "$0")"
 
+# 비대화형 셸(GitHub Actions SSH 등)에서도 nvm 환경 로드
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+# shellcheck disable=SC1090,SC1091
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 # 1) DB 안전: 배포 직전 progress.db 백업, 최근 14개만 유지
 if [ -f data/progress.db ]; then
   TS=$(date +%Y%m%d-%H%M%S)
