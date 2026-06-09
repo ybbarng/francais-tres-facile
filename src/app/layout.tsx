@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import { ThemedToaster } from "@/components/ThemedToaster";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -60,6 +61,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <ThemedToaster />
+          <ServiceWorkerRegister />
         </ThemeProvider>
       </body>
     </html>
