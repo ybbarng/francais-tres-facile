@@ -66,6 +66,8 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
     const audio = audioRef.current;
     if (!audio) return;
 
+    let repeatTimer: ReturnType<typeof setTimeout> | null = null;
+
     const handleTime = () => setCurrentTime(audio.currentTime);
     const handleMeta = () => {
       setDuration(audio.duration);
@@ -73,8 +75,10 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
     };
     const handleEnded = () => {
       if (repeatOn) {
-        audio.currentTime = 0;
-        audio.play();
+        repeatTimer = setTimeout(() => {
+          audio.currentTime = 0;
+          audio.play();
+        }, 600);
         return;
       }
       setIsPlaying(false);
@@ -88,6 +92,7 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
     audio.addEventListener("play", handlePlay);
     audio.addEventListener("pause", handlePause);
     return () => {
+      if (repeatTimer) clearTimeout(repeatTimer);
       audio.removeEventListener("timeupdate", handleTime);
       audio.removeEventListener("loadedmetadata", handleMeta);
       audio.removeEventListener("ended", handleEnded);
@@ -96,12 +101,17 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
     };
   }, [playbackRate, repeatOn]);
 
+  const audioSrc = item ? assetPath(item.audioFile) : "";
+
   useEffect(() => {
     const audio = audioRef.current;
-    if (!audio) return;
+    if (!audio || !audioSrc) return;
+    audio.pause();
+    audio.currentTime = 0;
     setCurrentTime(0);
     setDuration(0);
-  }, []);
+    setIsPlaying(false);
+  }, [audioSrc]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -138,8 +148,6 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
     return <p className="text-sm text-muted-foreground">선택된 항목이 없습니다.</p>;
   }
 
-  const audioSrc = assetPath(item.audioFile);
-
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -173,17 +181,6 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
     <div className="space-y-4">
       <audio ref={audioRef} src={audioSrc} preload="auto" />
 
-      <div className="rounded-lg bg-muted/50 p-5">
-        <p
-          className={cn(
-            "text-base leading-relaxed transition-all sm:text-lg",
-            !subtitleOn && "select-none opacity-40 blur-sm"
-          )}
-        >
-          {item.text}
-        </p>
-      </div>
-
       <div>
         <input
           type="range"
@@ -206,30 +203,46 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-2">
-        <Button onClick={restart} variant="ghost" size="icon" title="처음으로 (R)">
+        <Button
+          onClick={restart}
+          variant="outline"
+          size="icon"
+          title="처음으로 (R)"
+          aria-label="처음으로"
+        >
           <RotateCcw className="h-4 w-4" />
         </Button>
 
-        <Button onClick={togglePlay} size="icon" className="h-11 w-11 rounded-full">
+        <Button
+          onClick={togglePlay}
+          size="icon"
+          className="h-11 w-11 rounded-full"
+          title={isPlaying ? "일시정지 (Space)" : "재생 (Space)"}
+          aria-label={isPlaying ? "일시정지" : "재생"}
+        >
           {isPlaying ? <Pause className="h-5 w-5" /> : <Play className="ml-0.5 h-5 w-5" />}
         </Button>
 
         <Button
           onClick={toggleRepeat}
-          variant="ghost"
+          variant={repeatOn ? "secondary" : "outline"}
           size="icon"
-          className={cn(repeatOn ? "text-primary" : "text-muted-foreground")}
-          title="반복 (L)"
+          className={cn(repeatOn && "ring-2 ring-primary/40 text-primary")}
+          title={repeatOn ? "반복 켜짐 (L)" : "반복 꺼짐 (L)"}
+          aria-pressed={repeatOn}
+          aria-label="반복 토글"
         >
           <Repeat className="h-4 w-4" />
         </Button>
 
         <Button
           onClick={() => setSubtitleOn(!subtitleOn)}
-          variant="ghost"
+          variant={subtitleOn ? "secondary" : "outline"}
           size="icon"
-          className={cn(subtitleOn ? "text-primary" : "text-muted-foreground")}
-          title="자막 토글 (S)"
+          className={cn(subtitleOn && "ring-2 ring-primary/40 text-primary")}
+          title={subtitleOn ? "자막 켜짐 (S)" : "자막 꺼짐 (S)"}
+          aria-pressed={subtitleOn}
+          aria-label="자막 토글"
         >
           {subtitleOn ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
         </Button>
@@ -240,6 +253,8 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
               variant={playbackRate !== 1 ? "secondary" : "outline"}
               size="sm"
               className="font-mono text-xs"
+              title="재생 속도"
+              aria-label="재생 속도"
             >
               {playbackRate}x
             </Button>
@@ -262,16 +277,14 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
         </Popover>
       </div>
 
-      {currentStep === 5 && (
-        <RecordingPanel
-          audioRef={audioRef}
-          recordingKey={`${currentUnit}_${currentIndex}`}
-          materialId={materialId}
-        />
-      )}
-
       <div className="flex items-center justify-between border-t border-border pt-3">
-        <Button onClick={goPrev} variant="outline" size="sm" disabled={currentIndex === 0}>
+        <Button
+          onClick={goPrev}
+          variant="outline"
+          size="sm"
+          disabled={currentIndex === 0}
+          title="이전 항목 (←)"
+        >
           <ChevronLeft className="h-4 w-4" />
           이전
         </Button>
@@ -283,11 +296,31 @@ export default function ShadowingPlayer({ items, materialId }: ShadowingPlayerPr
           variant="outline"
           size="sm"
           disabled={currentIndex >= items.length - 1}
+          title="다음 항목 (→)"
         >
           다음
           <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
+
+      <div className="rounded-lg bg-muted/50 p-5">
+        <p
+          className={cn(
+            "text-base leading-relaxed transition-all sm:text-lg",
+            !subtitleOn && "select-none opacity-40 blur-sm"
+          )}
+        >
+          {item.text}
+        </p>
+      </div>
+
+      {currentStep === 5 && (
+        <RecordingPanel
+          audioRef={audioRef}
+          recordingKey={`${currentUnit}_${currentIndex}`}
+          materialId={materialId}
+        />
+      )}
     </div>
   );
 }
