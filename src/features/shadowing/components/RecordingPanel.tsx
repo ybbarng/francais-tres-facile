@@ -76,10 +76,14 @@ export default function RecordingPanel({
     const original = audioRef.current;
     const blob = recordings[recordingKey];
     if (!original || !blob) return;
+    // 비교 재생은 ended를 기다리기 때문에 loop를 잠깐 꺼둔다.
+    const prevLoop = original.loop;
+    original.loop = false;
     original.currentTime = 0;
     try {
       await original.play();
     } catch {
+      original.loop = prevLoop;
       return;
     }
     await new Promise<void>((resolve) => {
@@ -89,6 +93,7 @@ export default function RecordingPanel({
       };
       original.addEventListener("ended", onEnded);
     });
+    original.loop = prevLoop;
     await new Promise((r) => setTimeout(r, 500));
     playRecording();
   }, [audioRef, recordings, recordingKey, playRecording]);

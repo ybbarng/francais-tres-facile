@@ -26,10 +26,11 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json();
-    const { materialId, unit, itemIndex } = body as {
+    const { materialId, unit, itemIndex, count } = body as {
       materialId?: string;
       unit?: string;
       itemIndex?: number;
+      count?: number;
     };
 
     if (!materialId || !unit || typeof itemIndex !== "number") {
@@ -42,20 +43,23 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: `invalid unit: ${unit}` }, { status: 400 });
     }
 
+    // 화면이 꺼져 있던 동안을 시간으로 되짚으면 한 번에 여러 번 올라갈 수 있다. 너무 크게 올라가지 않도록 상한을 둔다.
+    const inc = typeof count === "number" && count > 1 ? Math.min(Math.floor(count), 1000) : 1;
+
     const now = new Date();
     const record = await progressDb.shadowingProgress.upsert({
       where: {
         materialId_unit_itemIndex: { materialId, unit, itemIndex },
       },
       update: {
-        playCount: { increment: 1 },
+        playCount: { increment: inc },
         lastStudiedAt: now,
       },
       create: {
         materialId,
         unit,
         itemIndex,
-        playCount: 1,
+        playCount: inc,
         lastStudiedAt: now,
       },
     });

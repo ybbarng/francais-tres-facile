@@ -63,23 +63,26 @@ export default function MaterialPage({ params }: PageProps) {
     };
   }, [materialId]);
 
-  const handleCountUp = useCallback(async () => {
-    try {
-      const res = await fetchWithAuth("/api/shadowing/progress", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ materialId, unit: currentUnit, itemIndex: currentIndex }),
-      });
-      if (!res.ok) return;
-      const record: ShadowingProgressRecord = await res.json();
-      setProgressMap((prev) => ({
-        ...prev,
-        [progressKey(record.unit, record.itemIndex)]: record,
-      }));
-    } catch (e) {
-      console.error("Failed to increment shadowing progress", e);
-    }
-  }, [materialId, currentUnit, currentIndex]);
+  const handleCountUp = useCallback(
+    async (count = 1) => {
+      try {
+        const res = await fetchWithAuth("/api/shadowing/progress", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ materialId, unit: currentUnit, itemIndex: currentIndex, count }),
+        });
+        if (!res.ok) return;
+        const record: ShadowingProgressRecord = await res.json();
+        setProgressMap((prev) => ({
+          ...prev,
+          [progressKey(record.unit, record.itemIndex)]: record,
+        }));
+      } catch (e) {
+        console.error("Failed to increment shadowing progress", e);
+      }
+    },
+    [materialId, currentUnit, currentIndex]
+  );
 
   useEffect(() => {
     let cancelled = false;

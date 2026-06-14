@@ -27,7 +27,7 @@ interface ShadowingPlayerProps {
   items: ShadowingPlayableItem[];
   materialId: string;
   currentRecord?: ShadowingProgressRecord | null;
-  onCountUp?: () => void;
+  onCountUp?: (count?: number) => void;
 }
 
 export default function ShadowingPlayer({
@@ -37,6 +37,8 @@ export default function ShadowingPlayer({
   onCountUp,
 }: ShadowingPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const lastTimeRef = useRef(0);
+  const hiddenAtRef = useRef<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -69,26 +71,32 @@ export default function ShadowingPlayer({
     if (audio) audio.playbackRate = stepConfig.speed;
   }, [stepConfig.subtitle, stepConfig.speed, setSubtitleOn]);
 
+  // 반복은 audio 요소의 loop에 맡긴다. 화면이 꺼져도 OS가 재생을 계속 돌려준다.
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) audio.loop = repeatOn;
+  }, [repeatOn]);
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    let repeatTimer: ReturnType<typeof setTimeout> | null = null;
-
-    const handleTime = () => setCurrentTime(audio.currentTime);
+    const handleTime = () => {
+      const t = audio.currentTime;
+      // 끝까지 갔다가 처음으로 되돌아간 순간을 잡아 한 번 센다 (화면이 켜져 있을 때만 잡힌다).
+      if (repeatOn && audio.duration && lastTimeRef.current > audio.duration - 0.7 && t < 0.7) {
+        onCountUp?.();
+      }
+      lastTimeRef.current = t;
+      setCurrentTime(t);
+    };
     const handleMeta = () => {
       setDuration(audio.duration);
       audio.playbackRate = playbackRate;
     };
     const handleEnded = () => {
+      // 반복이 꺼져 있을 때만 여기로 온다. loop가 켜져 있으면 ended가 아예 생기지 않는다.
       onCountUp?.();
-      if (repeatOn) {
-        repeatTimer = setTimeout(() => {
-          audio.currentTime = 0;
-          audio.play();
-        }, 600);
-        return;
-      }
       setIsPlaying(false);
     };
     const handlePlay = () => setIsPlaying(true);
@@ -100,7 +108,6 @@ export default function ShadowingPlayer({
     audio.addEventListener("play", handlePlay);
     audio.addEventListener("pause", handlePause);
     return () => {
-      if (repeatTimer) clearTimeout(repeatTimer);
       audio.removeEventListener("timeupdate", handleTime);
       audio.removeEventListener("loadedmetadata", handleMeta);
       audio.removeEventListener("ended", handleEnded);
@@ -109,6 +116,28 @@ export default function ShadowingPlayer({
     };
   }, [playbackRate, repeatOn, onCountUp]);
 
+  // 화면이 꺼져 있던 동안 흐른 시간으로 몇 바퀴 돌았는지 되짚어 카운트에 더해준다.
+  useEffect(() => {
+    const onVisibility = () => {
+      const audio = audioRef.current;
+      if (!audio) return;
+      if (document.visibilityState === "hidden") {
+        hiddenAtRef.current = repeatOn && !audio.paused ? performance.now() : null;
+        return;
+      }
+      const startedAt = hiddenAtRef.current;
+      hiddenAtRef.current = null;
+      if (startedAt == null || !repeatOn || !audio.duration) return;
+      const elapsed = (performance.now() - startedAt) / 1000;
+      const period = audio.duration / (audio.playbackRate || 1);
+      const loops = Math.floor(elapsed / period);
+      if (loops > 0) onCountUp?.(loops);
+      lastTimeRef.current = audio.currentTime;
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, [repeatOn, onCountUp]);
+
   const audioSrc = item ? assetPath(item.audioFile) : "";
 
   useEffect(() => {
@@ -116,6 +145,7 @@ export default function ShadowingPlayer({
     if (!audio || !audioSrc) return;
     audio.pause();
     audio.currentTime = 0;
+    lastTimeRef.current = 0;
     setCurrentTime(0);
     setDuration(0);
     setIsPlaying(false);
@@ -135,6 +165,7 @@ export default function ShadowingPlayer({
         const audio = audioRef.current;
         if (!audio) return;
         audio.currentTime = 0;
+        lastTimeRef.current = 0;
         audio.play();
       } else if (e.code === "KeyS") {
         setSubtitleOn(!subtitleOn);
@@ -167,6 +198,7 @@ export default function ShadowingPlayer({
     const audio = audioRef.current;
     if (!audio) return;
     audio.currentTime = 0;
+    lastTimeRef.current = 0;
     audio.play();
   };
 
@@ -175,6 +207,7 @@ export default function ShadowingPlayer({
     if (!audio) return;
     const t = Number.parseFloat(e.target.value);
     audio.currentTime = t;
+    lastTimeRef.current = t;
     setCurrentTime(t);
   };
 
