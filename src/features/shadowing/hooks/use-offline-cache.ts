@@ -102,7 +102,7 @@ export function useOfflineCache({
 
     navigator.serviceWorker.addEventListener("message", onMessage);
 
-    // SW controller가 아직 없을 수 있으니 ready 이후 재요청
+    // 서비스워커가 아직 준비 안 됐을 수 있으니 ready된 뒤 다시 요청한다.
     navigator.serviceWorker.ready.then(() => {
       requestStatus();
     });
@@ -112,7 +112,7 @@ export function useOfflineCache({
     };
   }, [materialId, requestStatus]);
 
-  // updatedAt이 바뀌면 status 다시
+  // updatedAt이 바뀌면 status를 다시 가져온다.
   useEffect(() => {
     requestStatus();
   }, [requestStatus]);
