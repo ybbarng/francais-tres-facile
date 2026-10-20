@@ -65,20 +65,10 @@ pnpm lint
 
 ## 배포
 
-`main`에 push 하면 GitHub Actions가 자동으로 서버의 `./server`를 SSH로 돌립니다. 수동 배포는 서버에서 `./server` 한 줄.
+byb.kr 서버에서 Docker 컨테이너로 돕니다(nginx → Traefik → ftf). `main`에 push 하면 GitHub Actions가
+이미지를 빌드해 GHCR에 올리고 서버에 배포합니다. 배포 전 `progress.db` 백업, 멱등 마이그레이션, 헬스체크(`/api/progress`)를 거칩니다.
 
-`./server`가 순서대로 하는 일:
-
-1. **`progress.db` 자동 백업** — `data/progress.db.bak.<timestamp>` (최근 14개 유지)
-2. `git pull`
-3. `pnpm install`
-4. `pnpm run prisma:generate`
-5. `pnpm run migrate:progress` — 멱등 SQL 적용 (sqlite3 CLI 불필요)
-6. `pnpm run build`
-7. `pm2 restart francais-tres-facile` (첫 실행 시 `pm2 start ecosystem.config.js`)
-8. **헬스체크** — `/api/progress`가 200 응답해야 통과
-
-자동 배포 셋업과 DB 안전 정책 자세한 내용은 [docs/DEPLOY.md](docs/DEPLOY.md).
+배포 흐름과 DB 안전 정책 자세한 내용은 [docs/DEPLOY.md](docs/DEPLOY.md).
 
 ## 기술 스택
 
