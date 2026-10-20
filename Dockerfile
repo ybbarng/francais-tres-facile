@@ -13,7 +13,9 @@ FROM node:24-bookworm-slim AS base
 RUN apt-get update && apt-get install -y --no-install-recommends openssl ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 ENV PNPM_HOME=/pnpm PATH=/pnpm:$PATH
-RUN corepack enable
+# package.json 에 packageManager 가 없어 corepack 이 최신 pnpm 을 깐다. 최신판은 package.json 의
+# pnpm.onlyBuiltDependencies 를 읽지 않아 설치가 멈추므로 서버에서 쓰던 버전으로 고정한다.
+RUN corepack enable && corepack prepare pnpm@10.28.2 --activate
 WORKDIR /app
 
 # 의존성 — lockfile 이 바뀔 때만 다시 받는다
