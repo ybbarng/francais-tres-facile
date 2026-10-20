@@ -17,7 +17,6 @@
     "sync": "npx tsx scripts/sync.ts",
     "sync:full": "npx tsx scripts/sync.ts full",
     "sync:h5p": "npx tsx scripts/sync.ts update-h5p",
-    "server": "./server",
     "prepare": "command -v git >/dev/null 2>&1 || exit 0 && lefthook install"
   },
   "pnpm": {

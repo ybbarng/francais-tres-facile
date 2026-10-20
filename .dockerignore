@@ -1,0 +1,14 @@
+# 이미지에 넣지 않는 것 — 비밀값·DB·로컬 산출물
+.env*
+data/
+*.db
+*.db-journal
+*.db.bak.*
+node_modules/
+.next/
+src/generated/
+coverage/
+.git/
+.claude/
+*.tsbuildinfo
+shadowing-pipeline/data/

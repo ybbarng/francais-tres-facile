@@ -1,66 +1,59 @@
 # 배포
 
-`main` 브랜치에 push 하면 GitHub Actions가 자동으로 서버의 `./server`를 SSH로 실행해 빌드·재시작까지 수행한다. 수동으로는 서버에 접속해 `./server`만 실행하면 된다.
+`ftf.byb.kr` → byb.kr 서버 → nginx(TLS) → Traefik → `ftf` 컨테이너. (2026-10-20 pm2 에서 옮김)
+
+- 서버를 돌리는 설정(compose·배포 스크립트)은 **`ybbarng/servers` 저장소의 `byb.kr/apps/ftf/`** 에 있다.
+  이 저장소는 앱 코드와 이미지 빌드만 맡는다.
+- `main` 에 push 하면 `.github/workflows/image.yml` 이
+  1. 이미지 두 개를 빌드해 GHCR 에 올리고
+     - `ghcr.io/ybbarng/francais-tres-facile` — 앱 (`Dockerfile` 의 `runner`, Next standalone)
+     - `ghcr.io/ybbarng/francais-tres-facile-tools` — `progress.db` 마이그레이션 (`tools`)
+  2. 배포 키로 서버에 SSH 접속해 `deploy <sha>` 를 보낸다.
+- 서버에서 빌드하지 않는다. `docs/` 와 `*.md` 만 바뀐 push 는 빌드·배포를 건너뛴다.
+
+## 서버에서 일어나는 일 (`servers/byb.kr/apps/ftf/deploy.sh`)
+
+1. `progress.db` 백업 (`~/data/ftf/progress.db.bak.*`, 최근 14개)
+2. 이미지 받기 — 그 실행의 `GITHUB_TOKEN` 을 SSH 표준입력으로 받아 임시로만 쓰고 지운다.
+   서버에 오래 남는 토큰은 없다(classic PAT 는 회사 조직까지 읽을 수 있어서 쓰지 않는다).
+3. `tools` 컨테이너로 [`ops/release.sh`](../ops/release.sh) — `prisma/progress/migrations/*.sql` 적용(멱등)
+4. 앱 컨테이너 교체, 헬스체크(`/api/progress` 200), 지난 이미지 정리
+
+헬스체크가 실패하면 워크플로가 실패로 끝난다. DB 는 1번에서 백업돼 있다.
 
 ## DB 안전 정책
 
-`./server`가 매 실행마다 다음을 보장한다:
+- DB 두 개는 서버의 `~/data/ftf/` 에 있고 컨테이너의 `/app/data` 로 붙는다(`src/lib/db.ts` 가 `process.cwd()/data` 를 읽는다).
+- **멱등 마이그레이션** — `prisma/progress/migrations/*.sql` 은 `CREATE TABLE IF NOT EXISTS` 같은 무해한 SQL 만. 새 마이그레이션도 이 원칙을 지킨다.
+- `exercises.db` 는 앱의 동기화(`/api/sync`)로 채워지므로 배포에서 건드리지 않는다.
 
-1. **자동 백업** — 첫 단계에서 `data/progress.db`를 `data/progress.db.bak.<YYYYMMDD-HHMMSS>`로 복사한다. 최근 14개만 유지하고 그 이상은 삭제.
-2. **멱등 마이그레이션** — `prisma/progress/migrations/*.sql`은 `CREATE TABLE IF NOT EXISTS` 등 무해한 SQL만. 새 마이그를 추가할 때도 이 원칙 유지.
-3. **빌드 실패 시 안전** — `set -e`라 어디서 실패해도 `pm2 reload`까지 안 감 → 옛 프로세스가 계속 서빙. 사이트는 다운되지 않음.
-4. **헬스체크** — 마지막에 `${HEALTH_URL:-http://localhost:3101/api/progress}`로 200 확인. 실패하면 워크플로가 빨갛게.
-
-`exercises.db`는 `./sync` 흐름에서 별도 관리하므로 자동 배포에서 건드리지 않는다.
-
-## 자동 배포 셋업 (최초 1회)
-
-GitHub Settings → Secrets and variables → Actions → "New repository secret"에서 다섯 개 등록:
-
-| 이름 | 값 | 예 |
-|---|---|---|
-| `SERVER_HOST` | 서버 호스트 또는 IP | `ftf.byb.kr` 또는 IP |
-| `SERVER_USER` | SSH 사용자 | `ybbarng` |
-| `SERVER_SSH_KEY` | private key 전문 (PEM) | `-----BEGIN OPENSSH PRIVATE KEY-----\n...` |
-| `SERVER_PORT` | SSH 포트 (기본 22면 생략 가능) | `22` |
-| `SERVER_PATH` | 서버의 ftf 디렉토리 절대 경로 | `/home/ybbarng/francais-tres-facile` |
-
-### SSH 키 만들기 (선택)
-
-기존 키 재사용해도 되지만, 배포 전용 키를 새로 만들어 격리하는 게 안전:
+## 손으로 해야 할 때 (서버에서)
 
 ```bash
-# 로컬에서
-ssh-keygen -t ed25519 -f ~/.ssh/ftf-deploy -C "github-actions-deploy" -N ""
-
-# 공개키를 서버 authorized_keys에 추가
-ssh-copy-id -i ~/.ssh/ftf-deploy.pub user@host
-
-# private 키를 GitHub Secret SERVER_SSH_KEY에 통째로 (-----BEGIN/END 포함) 붙여넣기
-cat ~/.ssh/ftf-deploy
+cd ~/servers/byb.kr/apps/ftf
+docker compose ps
+docker compose logs --tail 100 ftf
+# 이미 받아 둔 이미지로 다시 배포
+SSH_ORIGINAL_COMMAND="deploy $(docker images --format '{{.Tag}}' ghcr.io/ybbarng/francais-tres-facile | grep -v latest | head -1)" ./deploy.sh </dev/null
 ```
 
-## 동작 흐름
-
-1. `main`에 push → GitHub Actions trigger
-2. workflow가 SSH로 서버 접속 → `cd $SERVER_PATH && ./server` 실행
-3. `./server`가:
-   - progress.db 백업
-   - git pull → pnpm install → prisma generate → migrate → build → pm2 restart
-   - 헬스체크 OK 확인
-4. 실패하면 Actions 탭에 빨갛게, 사이트는 옛 빌드로 계속 동작
-
-## 롤백
-
-빌드 자체가 망가져 옛 프로세스도 못 살리는 상황은 `set -e`로 막혀 있지만, 데이터에 문제가 생긴 경우 백업으로 복원:
+## 롤백 (데이터)
 
 ```bash
 # 서버에서
-ls -t data/progress.db.bak.* | head    # 최근 백업 확인
-cp data/progress.db.bak.<TS> data/progress.db
-pm2 reload francais-tres-facile
+ls -t ~/data/ftf/progress.db.bak.* | head    # 최근 백업 확인
+cd ~/servers/byb.kr/apps/ftf && docker compose stop ftf
+cp ~/data/ftf/progress.db.bak.<TS> ~/data/ftf/progress.db
+docker compose start ftf
 ```
 
-## 수동 트리거
+## 키와 시크릿
 
-GitHub Actions UI → "Deploy to server" workflow → "Run workflow" 버튼으로 푸시 없이도 재배포 가능.
+GitHub → Settings → Secrets and variables → Actions:
+
+| 이름 | 값 |
+|---|---|
+| `SERVER_HOST` / `SERVER_USER` / `SERVER_PORT` | `byb.kr` / `ybbarng` / (22 면 생략) |
+| `SERVER_SSH_KEY` | 배포 키. 서버 `authorized_keys` 에서 `command="/home/ybbarng/servers/byb.kr/apps/ftf/deploy.sh"` 로 묶여 있어 새어도 배포 말고는 할 수 없다 |
+
+`SERVER_PATH` 는 더 쓰지 않는다. 서버에만 있는 값(`ADMIN_PASSWORD`)은 `servers/byb.kr/apps/ftf/.env` 에 있다.
