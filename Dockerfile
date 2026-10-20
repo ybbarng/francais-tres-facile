@@ -34,7 +34,7 @@ RUN pnpm run prisma:generate && pnpm run build
 # 도구 — 빌드 단계를 그대로 쓴다
 FROM build AS tools
 ENV NODE_ENV=production
-CMD ["node_modules/.bin/tsx", "scripts/migrate-progress.ts"]
+CMD ["node", "scripts/migrate-progress.ts"]
 
 # 실행 — standalone 출력 + 정적 파일
 FROM node:24-bookworm-slim AS runner
