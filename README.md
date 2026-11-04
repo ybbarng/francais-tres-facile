@@ -77,4 +77,4 @@ byb.kr 서버에서 Docker 컨테이너로 돕니다(nginx → Traefik → ftf).
 - **스타일링**: Tailwind CSS
 - **데이터베이스**: SQLite + Prisma ORM
 - **테스트**: Vitest + React Testing Library
-- **크롤링**: Cheerio + Playwright (H5P 추출)
+- **크롤링**: Cheerio
