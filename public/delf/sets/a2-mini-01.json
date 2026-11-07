@@ -1,0 +1,209 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-01",
+  "level": "A2",
+  "kind": "mini",
+  "title": "Retour de vacances",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre un document. Lisez d'abord les questions. Vous allez entendre le document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous entendez ce message sur votre répondeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Julie",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Salut Karim, c'est Julie. Ça y est, je suis rentrée de Bretagne hier soir ! On est restés dix jours à Saint-Malo, chez ma tante. Il a fait un peu froid, mais on a fait beaucoup de vélo et on a mangé des crêpes tous les jours ! Dis, tu veux venir voir les photos samedi ? Je fais un petit dîner à vingt heures, avec Léa et Antoine. Tu peux apporter un dessert, si tu veux. Rappelle-moi au zéro six, vingt-quatre, dix-huit, trente-deux, quinze. Bisous !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Julie est restée en Bretagne…",
+              "options": [
+                { "id": "a", "text": "une semaine." },
+                { "id": "b", "text": "dix jours." },
+                { "id": "c", "text": "deux semaines." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« On est restés dix jours à Saint-Malo » 라고 말한다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Pendant les vacances, quel temps a-t-il fait ?",
+              "options": [
+                { "id": "a", "text": "Il a fait très chaud." },
+                { "id": "b", "text": "Il a fait un peu froid." },
+                { "id": "c", "text": "Il a neigé." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Il a fait un peu froid » 라고 말한다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pendant les vacances, Julie a fait beaucoup de…",
+              "options": [
+                { "id": "a", "text": "vélo." },
+                { "id": "b", "text": "bateau." },
+                { "id": "c", "text": "natation." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« on a fait beaucoup de vélo » 라고 말한다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Samedi, le dîner chez Julie commence à…",
+              "options": [
+                { "id": "a", "text": "19 h." },
+                { "id": "b", "text": "20 h." },
+                { "id": "c", "text": "21 h." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je fais un petit dîner à vingt heures » 라고 말한다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Julie propose à Karim d'apporter…",
+              "options": [
+                { "id": "a", "text": "des boissons." },
+                { "id": "b", "text": "un dessert." },
+                { "id": "c", "text": "ses photos." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Tu peux apporter un dessert, si tu veux » 라고 말한다. 사진은 Julie가 보여 주는 것이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous recevez ce courriel d'une collègue.",
+          "title": "Objet : Bonjour de Nice !",
+          "text": "Bonjour Marc,\n\nJe t'écris de Nice ! Je suis arrivée lundi avec mon frère Hugo. Nous avons loué un petit appartement près de la mer, à cinq minutes de la plage. Le matin, on se baigne et l'après-midi, on visite la ville. Hier, nous avons pris le train pour aller à Monaco : c'était très beau, mais tout est cher là-bas !\n\nLa cuisine d'ici est délicieuse. J'ai goûté la socca, une spécialité de Nice, et j'ai adoré.\n\nJe rentre à Paris dimanche prochain et je reprends le travail le mardi 2 septembre. Est-ce que tu peux arroser mes plantes au bureau jusqu'à mon retour ? Merci beaucoup !\n\nÀ bientôt,\nSophie",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Sophie est en vacances avec…",
+              "options": [
+                { "id": "a", "text": "une amie." },
+                { "id": "b", "text": "son frère." },
+                { "id": "c", "text": "ses parents." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je suis arrivée lundi avec mon frère Hugo » 라고 쓴다."
+            },
+            {
+              "id": "q7",
+              "type": "truefalse",
+              "prompt": "L'appartement de Sophie est loin de la plage.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« à cinq minutes de la plage » 이므로 가깝다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Pour aller à Monaco, Sophie et Hugo ont pris…",
+              "options": [
+                { "id": "a", "text": "le bus." },
+                { "id": "b", "text": "la voiture." },
+                { "id": "c", "text": "le train." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« nous avons pris le train pour aller à Monaco » 라고 쓴다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Qu'est-ce que Sophie pense de Monaco ?",
+              "options": [
+                { "id": "a", "text": "C'est beau, mais c'est cher." },
+                { "id": "b", "text": "C'est petit et ennuyeux." },
+                { "id": "c", "text": "C'est moins beau que Nice." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« c'était très beau, mais tout est cher là-bas » 라고 쓴다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Sophie demande à Marc…",
+              "options": [
+                { "id": "a", "text": "de venir à Nice." },
+                { "id": "b", "text": "d'arroser ses plantes." },
+                { "id": "c", "text": "d'aller la chercher à la gare." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Est-ce que tu peux arroser mes plantes au bureau jusqu'à mon retour ? » 라고 부탁한다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Vous êtes rentré(e) de vacances. Vous écrivez un message à un(e) ami(e) français(e) pour raconter vos vacances : où vous êtes allé(e), avec qui, ce que vous avez fait et ce que vous avez aimé. (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 1.5
+            },
+            { "criterion": "Capacité à raconter et à décrire un événement passé", "points": 3 },
+            { "criterion": "Lexique et orthographe lexicale", "points": 2 },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale (passé composé, accords)",
+              "points": 2
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs simples : et, mais, puis, parce que)",
+              "points": 1.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}

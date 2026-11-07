@@ -1,0 +1,242 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-03",
+  "level": "A2",
+  "kind": "mini",
+  "title": "Projets pour le week-end",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 5,
+      "instructions": "Vous allez entendre deux documents. Pour chaque document, lisez d'abord les questions. Vous allez entendre chaque document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez la météo à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Présentateur",
+                "voice": "Jacques",
+                "text": "Voici la météo pour ce week-end. Samedi, il va faire beau sur toute la région, avec vingt-deux degrés l'après-midi. Attention, dimanche, le temps va changer : il va pleuvoir dès le matin et le vent va être fort sur la côte. Les températures vont baisser : seulement quinze degrés. Si vous voulez sortir, profitez de samedi !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Samedi après-midi, il va faire…",
+              "options": [
+                { "id": "a", "text": "15 degrés." },
+                { "id": "b", "text": "22 degrés." },
+                { "id": "c", "text": "25 degrés." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Samedi, il va faire beau […] avec vingt-deux degrés l'après-midi » 라고 말한다. 15도는 일요일이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Dimanche, il va…",
+              "options": [
+                { "id": "a", "text": "faire beau." },
+                { "id": "b", "text": "pleuvoir." },
+                { "id": "c", "text": "neiger." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« dimanche […] il va pleuvoir dès le matin » 라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Vous entendez une conversation entre deux amis, Clara et Hugo.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Clara",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Hugo, qu'est-ce que tu fais ce week-end ?"
+              },
+              {
+                "speaker": "Hugo",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Samedi après-midi, je vais jouer au tennis avec mon frère. Et dimanche, je vais rester à la maison. Et toi ?"
+              },
+              {
+                "speaker": "Clara",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Moi, je voudrais faire une randonnée dans la forêt de Fontainebleau. Tu veux venir ?"
+              },
+              {
+                "speaker": "Hugo",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Dimanche ? Mais il va pleuvoir dimanche !"
+              },
+              {
+                "speaker": "Clara",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Non, samedi ! On part le matin et on rentre vers dix-sept heures."
+              },
+              {
+                "speaker": "Hugo",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "D'accord, je vais annuler le tennis avec mon frère. On prend ma voiture ?"
+              },
+              {
+                "speaker": "Clara",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Non, on prend le train, c'est plus simple. Rendez-vous à la gare de Lyon à huit heures et demie."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Au début, qu'est-ce que Hugo voulait faire samedi après-midi ?",
+              "options": [
+                { "id": "a", "text": "Faire une randonnée." },
+                { "id": "b", "text": "Jouer au tennis." },
+                { "id": "c", "text": "Rester à la maison." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Samedi après-midi, je vais jouer au tennis avec mon frère » 라고 말한다. 집에 있는 것은 일요일 계획이다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Pour aller dans la forêt, Clara et Hugo vont prendre…",
+              "options": [
+                { "id": "a", "text": "la voiture de Hugo." },
+                { "id": "b", "text": "le train." },
+                { "id": "c", "text": "le vélo." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "Hugo가 차를 제안하지만 Clara가 « Non, on prend le train » 이라고 답한다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Clara et Hugo ont rendez-vous à la gare à…",
+              "options": [
+                { "id": "a", "text": "8 h 30." },
+                { "id": "b", "text": "9 h 30." },
+                { "id": "c", "text": "17 h." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Rendez-vous à la gare de Lyon à huit heures et demie » 라고 말한다. 17시는 돌아오는 시간이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez ce programme sur le site de l'office de tourisme.",
+          "title": "Ce week-end à Annecy",
+          "text": "• Samedi, de 8 h à 13 h : grand marché des producteurs, place Saint-François. Fromages, fruits et miel de la région.\n\n• Samedi, 15 h : visite guidée de la vieille ville (1 h 30). Départ devant l'office de tourisme. Prix : 8 euros, gratuit pour les moins de 12 ans.\n\n• Samedi, 21 h : concert de jazz gratuit au bord du lac. En cas de pluie, le concert a lieu à la salle Pierre-Lamy.\n\n• Dimanche, 10 h : tour du lac à vélo (40 km). Inscription obligatoire avant vendredi à l'office de tourisme. Vélos non fournis.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Vous voulez acheter du fromage. Vous allez…",
+              "options": [
+                { "id": "a", "text": "place Saint-François, samedi matin." },
+                { "id": "b", "text": "à l'office de tourisme, samedi après-midi." },
+                { "id": "c", "text": "au bord du lac, samedi soir." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Samedi, de 8 h à 13 h : grand marché des producteurs, place Saint-François. Fromages… » 이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Pour un enfant de 8 ans, la visite guidée coûte…",
+              "options": [
+                { "id": "a", "text": "0 euro." },
+                { "id": "b", "text": "4 euros." },
+                { "id": "c", "text": "8 euros." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« gratuit pour les moins de 12 ans » 이므로 8살은 무료다."
+            },
+            {
+              "id": "q8",
+              "type": "truefalse",
+              "prompt": "S'il pleut samedi soir, il n'y a pas de concert.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« En cas de pluie, le concert a lieu à la salle Pierre-Lamy » 이므로 장소만 바뀐다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Pour le tour du lac à vélo, il faut…",
+              "options": [
+                { "id": "a", "text": "s'inscrire avant vendredi." },
+                { "id": "b", "text": "louer un vélo à l'office de tourisme." },
+                { "id": "c", "text": "payer 40 euros." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Inscription obligatoire avant vendredi » 라고 쓴다. 자전거는 « non fournis », 40은 거리(km)다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Un(e) ami(e) français(e) vous propose de passer le week-end prochain ensemble. Vous lui répondez : vous acceptez et vous proposez un programme pour samedi et dimanche (activités, horaires, lieu de rendez-vous). (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (accepter, programme des deux jours, nombre de mots)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Capacité à proposer et à organiser (futur proche, heures, lieux)",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale (loisirs, temps, moments de la journée)",
+              "points": 2
+            },
+            { "criterion": "Morphosyntaxe et orthographe grammaticale", "points": 2 },
+            { "criterion": "Cohérence, cohésion et formules du message", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-04",
+  "level": "A2",
+  "kind": "mini",
+  "title": "Un travail pour l'été",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre un document. Lisez d'abord les questions. Vous allez entendre le document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous avez envoyé votre CV au Café des Arts. Vous entendez ce message sur votre répondeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Mme Garnier",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bonjour, ici madame Garnier, du Café des Arts. J'ai bien reçu votre CV, merci. Je voudrais vous rencontrer pour un entretien. Est-ce que vous êtes libre le jeudi douze juin, à dix heures ? L'entretien va durer environ trente minutes. Venez directement au café, au quatorze, rue du Port. Si jeudi n'est pas possible pour vous, appelez-moi avant mercredi soir au zéro quatre, quatre-vingt-onze, cinquante-six, vingt, zéro huit. À bientôt !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Mme Garnier appelle pour…",
+              "options": [
+                { "id": "a", "text": "proposer un entretien." },
+                { "id": "b", "text": "refuser votre candidature." },
+                { "id": "c", "text": "demander un autre CV." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Je voudrais vous rencontrer pour un entretien » 라고 말한다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "L'entretien a lieu…",
+              "options": [
+                { "id": "a", "text": "le mercredi 11 juin." },
+                { "id": "b", "text": "le jeudi 12 juin." },
+                { "id": "c", "text": "le jeudi 14 juin." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« le jeudi douze juin, à dix heures » 라고 말한다. 14는 주소 번지, 수요일은 전화할 기한이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "L'entretien va durer environ…",
+              "options": [
+                { "id": "a", "text": "10 minutes." },
+                { "id": "b", "text": "30 minutes." },
+                { "id": "c", "text": "une heure." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« L'entretien va durer environ trente minutes » 라고 말한다. 10은 시각(10시)이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cette offre d'emploi.",
+          "title": "Le Café des Arts recrute !",
+          "text": "Nous cherchons un serveur ou une serveuse pour l'été, du 1er juillet au 31 août.\n\nHoraires : du mercredi au dimanche, de 17 h à 23 h. Le lundi et le mardi sont libres.\n\nProfil : vous êtes souriant(e) et dynamique. Vous parlez anglais, car nos clients sont souvent des touristes. Une première expérience dans un restaurant est un plus, mais ce n'est pas obligatoire.\n\nSalaire : 12 euros de l'heure + repas du soir offert.\n\nEnvoyez votre CV et une courte lettre à Mme Garnier : recrutement@cafedesarts.fr. Les entretiens ont lieu la semaine du 9 juin.",
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Ce travail dure…",
+              "options": [
+                { "id": "a", "text": "toute l'année." },
+                { "id": "b", "text": "deux mois." },
+                { "id": "c", "text": "deux semaines." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« pour l'été, du 1er juillet au 31 août » 이므로 7·8월 두 달이다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Le serveur ou la serveuse travaille…",
+              "options": [
+                { "id": "a", "text": "deux jours par semaine." },
+                { "id": "b", "text": "cinq jours par semaine." },
+                { "id": "c", "text": "sept jours par semaine." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« du mercredi au dimanche » 는 수·목·금·토·일 닷새다. 월·화 이틀은 쉬는 날이다."
+            },
+            {
+              "id": "q6",
+              "type": "truefalse",
+              "prompt": "Pour ce poste, il faut avoir déjà travaillé dans un restaurant.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Une première expérience […] est un plus, mais ce n'est pas obligatoire » 라고 쓴다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Pourquoi faut-il parler anglais ?",
+              "options": [
+                { "id": "a", "text": "Le patron est anglais." },
+                { "id": "b", "text": "Il y a souvent des clients touristes." },
+                { "id": "c", "text": "Les menus sont en anglais." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Vous parlez anglais, car nos clients sont souvent des touristes » 라고 쓴다."
+            },
+            {
+              "id": "q8",
+              "type": "multi",
+              "prompt": "Qu'est-ce qu'il faut envoyer ? (deux réponses)",
+              "options": [
+                { "id": "a", "text": "Un CV." },
+                { "id": "b", "text": "Une lettre." },
+                { "id": "c", "text": "Une photo." },
+                { "id": "d", "text": "Un diplôme." }
+              ],
+              "answer": ["a", "b"],
+              "points": 1,
+              "explanation": "« Envoyez votre CV et une courte lettre » 라고 쓴다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Vous avez lu l'offre d'emploi du Café des Arts. Vous écrivez un court courriel à Mme Garnier pour présenter votre candidature : vous vous présentez, vous parlez de votre expérience et vous expliquez pourquoi ce travail vous intéresse. (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (présentation, expérience, motivation, nombre de mots)",
+              "points": 1.5
+            },
+            { "criterion": "Capacité à se présenter et à parler de son expérience", "points": 3 },
+            {
+              "criterion": "Lexique et orthographe lexicale (travail, qualités, langues)",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale (présent, passé composé)",
+              "points": 2
+            },
+            {
+              "criterion": "Registre formel et formules du courriel (Madame, Cordialement, vouvoiement)",
+              "points": 1.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}
