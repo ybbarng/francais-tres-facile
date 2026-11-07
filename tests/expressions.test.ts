@@ -40,6 +40,25 @@ describe("parseExpressions", () => {
     expect(data.expressions.map((e) => e.id)).toEqual(["E01", "E02"]);
   });
 
+  it("원본에 새로 더한 선택 필드(contexts, deepSessions)는 거부하지 않는다", () => {
+    const extended = {
+      ...sample,
+      deepSessions: [{ session: 28, ids: ["E82", "E83"] }],
+      expressions: sample.expressions.map((e) => ({
+        ...e,
+        contexts: [
+          {
+            cue: "Je parle trop vite ?",
+            cueKo: "내가 너무 빨리 말해?",
+            reply: "Oui, plus lentement, s'il te plaît.",
+            replyKo: "응, 좀 더 천천히 말해 줘.",
+          },
+        ],
+      })),
+    };
+    expect(parseExpressions(extended).expressions).toHaveLength(sample.expressions.length);
+  });
+
   it("schema 가 다르면 던진다", () => {
     expect(() => parseExpressions({ ...valid, schema: "study-french/expressions@2" })).toThrow();
   });
