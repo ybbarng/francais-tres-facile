@@ -1,0 +1,257 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-02",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Une ville sans voitures ?",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez un reportage sur une radio régionale.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "À Valmont, la mairie a décidé de fermer à la circulation automobile une grande partie du centre-ville le samedi. Une mesure qui ne fait pas l'unanimité. Claire Martin, vous êtes adjointe au maire chargée des mobilités. Pourquoi cette décision ?"
+              },
+              {
+                "speaker": "Claire Martin",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Notre objectif est double. D'abord, réduire la pollution : la qualité de l'air dans le centre est l'une des plus mauvaises de la région. Ensuite, rendre l'espace aux piétons et aux cyclistes. Le samedi, c'est le jour où les familles viennent en ville ; nous voulons qu'elles puissent se promener en toute sécurité."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Mais certains commerçants s'inquiètent..."
+              },
+              {
+                "speaker": "Claire Martin",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Je les comprends. Mais les expériences menées dans d'autres villes montrent que les piétons dépensent davantage que les automobilistes, parce qu'ils reviennent plus souvent. Cela dit, nous ferons un bilan dans six mois, et si les chiffres sont mauvais, nous adapterons le dispositif."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Jean-Paul Rivière, lui, tient un magasin de chaussures rue du Marché."
+              },
+              {
+                "speaker": "Jean-Paul Rivière",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Moi, je ne suis pas contre le vélo, au contraire. Ce que je reproche à la mairie, c'est de ne pas nous avoir consultés. Une partie de ma clientèle vient de la campagne, où il n'y a pas de bus. Ces gens-là, s'ils ne peuvent pas se garer, ils iront au centre commercial. Il aurait fallu créer des parkings à l'entrée de la ville, avec des navettes gratuites, avant de fermer les rues."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Quelle mesure la mairie de Valmont a-t-elle prise ?",
+              "options": [
+                { "id": "a", "text": "Rendre les bus gratuits le week-end." },
+                {
+                  "id": "b",
+                  "text": "Interdire les voitures dans une grande partie du centre le samedi."
+                },
+                { "id": "c", "text": "Interdire les vélos dans les rues commerçantes." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« la mairie a décidé de fermer à la circulation automobile une grande partie du centre-ville le samedi »."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Pourquoi la mesure s'applique-t-elle le samedi ?",
+              "options": [
+                { "id": "a", "text": "C'est le jour où les familles viennent en ville." },
+                { "id": "b", "text": "C'est le jour où la pollution est la plus forte." },
+                { "id": "c", "text": "C'est le jour où les magasins sont fermés." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Le samedi, c'est le jour où les familles viennent en ville » — 오염 이야기는 도심 대기질 일반에 관한 것이지 토요일 이야기가 아니다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pour rassurer les commerçants, Claire Martin affirme que les piétons...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "viennent moins souvent mais dépensent plus à chaque visite."
+                },
+                { "id": "b", "text": "font surtout leurs achats en ligne." },
+                { "id": "c", "text": "dépensent davantage, car ils reviennent plus souvent." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les piétons dépensent davantage que les automobilistes, parce qu'ils reviennent plus souvent » — a는 이유를 거꾸로 뒤집은 보기다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Que prévoit la mairie pour la suite ?",
+              "options": [
+                { "id": "a", "text": "Étendre la mesure à toute la semaine." },
+                { "id": "b", "text": "Faire un bilan dans six mois et adapter si nécessaire." },
+                { "id": "c", "text": "Indemniser les commerçants touchés." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« nous ferons un bilan dans six mois, et si les chiffres sont mauvais, nous adapterons le dispositif »."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Que reproche Jean-Paul Rivière à la mairie ?",
+              "options": [
+                { "id": "a", "text": "De ne pas avoir demandé l'avis des commerçants." },
+                { "id": "b", "text": "De favoriser les cyclistes." },
+                { "id": "c", "text": "D'avoir supprimé des lignes de bus." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Ce que je reproche à la mairie, c'est de ne pas nous avoir consultés. » 자전거에는 「je ne suis pas contre le vélo」라고 해서 b는 틀리다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Selon lui, qu'aurait-il fallu faire avant de fermer les rues ?",
+              "options": [
+                { "id": "a", "text": "Construire de nouvelles pistes cyclables." },
+                { "id": "b", "text": "Ouvrir un centre commercial en périphérie." },
+                {
+                  "id": "c",
+                  "text": "Créer des parkings à l'entrée de la ville reliés au centre par des navettes gratuites."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Il aurait fallu créer des parkings à l'entrée de la ville, avec des navettes gratuites, avant de fermer les rues. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet éditorial dans un quotidien.",
+          "title": "Trottinettes en libre-service : la fin d'une époque ?",
+          "text": "Il y a quelques années encore, elles envahissaient les trottoirs de nombreuses villes européennes. Aujourd'hui, les trottinettes électriques en libre-service reculent. Plusieurs municipalités ont décidé de ne pas renouveler les contrats des opérateurs, invoquant des problèmes de sécurité et de stationnement anarchique.\n\nLes défenseurs de ce mode de transport dénoncent une décision précipitée. Selon eux, les trottinettes ont permis à de nombreux citadins de renoncer à la voiture pour les trajets courts. L'argument ne résiste pourtant pas à l'examen : les enquêtes menées auprès des utilisateurs montrent que les trottinettes ont surtout remplacé la marche et les transports en commun, et non la voiture. Leur bilan écologique est donc bien moins favorable qu'on ne l'a prétendu, d'autant que leur durée de vie, à leurs débuts, ne dépassait guère quelques mois.\n\nFaut-il pour autant s'en réjouir ? Pas tout à fait. Ce recul révèle surtout l'incapacité des villes à penser le partage de l'espace public. Plutôt que d'interdire, elles auraient pu imposer des zones de stationnement obligatoires et limiter la vitesse, comme l'ont fait avec succès d'autres capitales. Interdire est toujours plus simple qu'organiser ; ce n'est pas forcément plus efficace.",
+          "questions": [
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Pourquoi plusieurs villes ont-elles mis fin aux trottinettes en libre-service ?",
+              "options": [
+                { "id": "a", "text": "En raison de problèmes de sécurité et de stationnement." },
+                { "id": "b", "text": "Parce qu'elles coûtaient trop cher aux villes." },
+                { "id": "c", "text": "Faute d'utilisateurs suffisants." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« invoquant des problèmes de sécurité et de stationnement anarchique »."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "D'après les enquêtes, les trottinettes ont surtout remplacé...",
+              "options": [
+                { "id": "a", "text": "la voiture." },
+                { "id": "b", "text": "le vélo personnel." },
+                { "id": "c", "text": "la marche et les transports en commun." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les trottinettes ont surtout remplacé la marche et les transports en commun, et non la voiture »."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Pour l'auteur, l'argument écologique avancé par les défenseurs des trottinettes est...",
+              "options": [
+                { "id": "a", "text": "parfaitement justifié." },
+                { "id": "b", "text": "exagéré." },
+                { "id": "c", "text": "impossible à vérifier." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« L'argument ne résiste pourtant pas à l'examen » 그리고 « Leur bilan écologique est donc bien moins favorable qu'on ne l'a prétendu » — 과장되었다고 본다. 조사 결과로 확인했으니 c도 아니다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Quelle est la position de l'auteur sur la décision des villes ?",
+              "options": [
+                { "id": "a", "text": "Il regrette qu'elles aient interdit au lieu d'organiser." },
+                { "id": "b", "text": "Il l'approuve sans réserve." },
+                { "id": "c", "text": "Il demande le retour des trottinettes sans aucune règle." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Faut-il pour autant s'en réjouir ? Pas tout à fait. » « Plutôt que d'interdire, elles auraient pu imposer des zones de stationnement obligatoires et limiter la vitesse » — 금지보다 규칙을 만들었어야 했다고 본다."
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "La dernière phrase du texte signifie que...",
+              "options": [
+                { "id": "a", "text": "l'interdiction est toujours la solution la plus efficace." },
+                { "id": "b", "text": "il est impossible d'organiser l'espace public." },
+                {
+                  "id": "c",
+                  "text": "la solution la plus facile n'est pas forcément la meilleure."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Interdire est toujours plus simple qu'organiser ; ce n'est pas forcément plus efficace. » 쉬운 해법이 꼭 좋은 해법은 아니라는 뜻이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Le conseil municipal de votre ville propose de rendre les transports en commun gratuits pour tous, en les finançant par une hausse des impôts locaux. Vous écrivez au courrier des lecteurs du journal local pour donner votre opinion sur ce projet. Vous présentez au moins deux arguments et un exemple. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, destinataire, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

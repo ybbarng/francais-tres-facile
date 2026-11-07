@@ -1,0 +1,263 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-07",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Le sport, une affaire d'argent ?",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview dans une émission sportive à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Pendant que les grands clubs de football dépensent des centaines de millions d'euros pour recruter des joueurs, les petits clubs amateurs, eux, ont de plus en plus de mal à boucler leur budget. C'est le cas du club de football de Valmont, dont le président, Gérard Pons, est avec nous. Monsieur Pons, quelle est votre situation ?"
+              },
+              {
+                "speaker": "Gérard Pons",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Difficile. Nous avons trois cents licenciés, dont deux cents enfants. Notre budget dépend pour moitié des subventions de la mairie, et cette année, elles ont baissé de vingt pour cent. En même temps, les frais augmentent : les déplacements, l'entretien du terrain, les équipements..."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Vous avez augmenté le prix de la licence ?"
+              },
+              {
+                "speaker": "Gérard Pons",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "On y a été obligés, oui, de quinze euros. Ça paraît peu, mais pour certaines familles, surtout celles qui ont plusieurs enfants, c'est beaucoup. Et ce qui me fait mal, c'est que le sport devrait être accessible à tous. Pour certains gamins du quartier, le club, c'est le seul endroit où ils trouvent un cadre."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Le football professionnel ne pourrait-il pas aider davantage le football amateur ?"
+              },
+              {
+                "speaker": "Gérard Pons",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Il le fait déjà un peu : une petite partie des droits télévisés est reversée aux clubs amateurs. Mais quand on voit les sommes en jeu, c'est une goutte d'eau. Je ne demande pas la charité. Je demande simplement que ceux qui profitent du succès du football se souviennent que tous les grands joueurs ont commencé dans un petit club comme le nôtre."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Combien d'enfants le club compte-t-il parmi ses licenciés ?",
+              "options": [
+                { "id": "a", "text": "Cent." },
+                { "id": "b", "text": "Deux cents." },
+                { "id": "c", "text": "Trois cents." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Nous avons trois cents licenciés, dont deux cents enfants. » 300은 전체 회원 수다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Quelle difficulté le club rencontre-t-il cette année ?",
+              "options": [
+                { "id": "a", "text": "Une baisse des subventions de la mairie." },
+                { "id": "b", "text": "Une baisse du nombre de licenciés." },
+                { "id": "c", "text": "La fermeture de son terrain." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« cette année, elles ont baissé de vingt pour cent » — 시청 보조금이 20퍼센트 줄었다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Que pense le président de la hausse du prix de la licence ?",
+              "options": [
+                { "id": "a", "text": "Elle ne pose aucun problème aux familles." },
+                { "id": "b", "text": "Il aurait voulu l'augmenter davantage." },
+                { "id": "c", "text": "Il regrette qu'elle pèse sur certaines familles." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« pour certaines familles, surtout celles qui ont plusieurs enfants, c'est beaucoup. Et ce qui me fait mal... »"
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Pour certains enfants du quartier, le club représente...",
+              "options": [
+                { "id": "a", "text": "un cadre qu'ils ne trouvent nulle part ailleurs." },
+                { "id": "b", "text": "un moyen de devenir footballeur professionnel." },
+                { "id": "c", "text": "une activité imposée par l'école." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« le club, c'est le seul endroit où ils trouvent un cadre »."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Que dit-il de l'aide du football professionnel au football amateur ?",
+              "options": [
+                { "id": "a", "text": "Elle n'existe pas." },
+                { "id": "b", "text": "Elle existe, mais elle est très insuffisante." },
+                { "id": "c", "text": "Elle est trop importante." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Il le fait déjà un peu ... c'est une goutte d'eau » — 있긴 하지만 아주 적다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Par sa dernière phrase, le président veut rappeler que...",
+              "options": [
+                { "id": "a", "text": "son club a formé plusieurs champions." },
+                {
+                  "id": "b",
+                  "text": "le football professionnel doit beaucoup aux clubs amateurs."
+                },
+                {
+                  "id": "c",
+                  "text": "les grands joueurs devraient revenir jouer dans leur premier club."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« tous les grands joueurs ont commencé dans un petit club comme le nôtre » — 프로 축구가 아마추어 클럽 덕을 보고 있다는 뜻이다. 자기 클럽이 챔피언을 길렀다고는 말하지 않았다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine d'actualité.",
+          "title": "Accueillir les Jeux olympiques : une bonne affaire ?",
+          "text": "Il fut un temps où les villes se battaient pour accueillir les Jeux olympiques. Ce temps semble révolu. Ces dernières années, plusieurs métropoles ont retiré leur candidature, souvent après un vote ou une consultation de leurs habitants. En cause : des coûts jugés excessifs et des bénéfices incertains.\n\nLes partisans des grands événements sportifs mettent en avant leurs retombées : l'afflux de visiteurs, la création d'emplois, la modernisation des transports, sans oublier le prestige international. Les économistes sont plus réservés. Les études qu'ils ont menées montrent que les budgets prévus sont presque toujours dépassés, parfois dans des proportions considérables, et que les bénéfices touristiques sont souvent surestimés : pendant les Jeux, de nombreux touristes habituels évitent la ville hôte, par crainte de la foule et de la hausse des prix.\n\nLe problème le plus visible reste celui des équipements. Stades, piscines, villages olympiques : construits à grands frais, certains sont à peine utilisés une fois la compétition terminée et coûtent cher à entretenir.\n\nConscient de ces critiques, le Comité international olympique encourage désormais les villes candidates à utiliser au maximum des installations existantes ou temporaires. Une évolution saluée par beaucoup, même si certains doutent qu'elle suffise à convaincre des citoyens devenus méfiants.",
+          "questions": [
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Pourquoi plusieurs villes ont-elles retiré leur candidature ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Parce que le Comité international olympique les avait refusées."
+                },
+                {
+                  "id": "b",
+                  "text": "En raison de coûts jugés excessifs et de bénéfices incertains."
+                },
+                { "id": "c", "text": "Parce qu'elles manquaient de stades." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« En cause : des coûts jugés excessifs et des bénéfices incertains. »"
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Que montrent les études des économistes ?",
+              "options": [
+                { "id": "a", "text": "Les dépenses sont en général inférieures aux prévisions." },
+                { "id": "b", "text": "Les Jeux attirent toujours plus de touristes que prévu." },
+                { "id": "c", "text": "Les budgets prévus sont presque toujours dépassés." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les budgets prévus sont presque toujours dépassés »."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Pourquoi les bénéfices touristiques sont-ils souvent surestimés ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Une partie des touristes habituels évite la ville pendant les Jeux."
+                },
+                { "id": "b", "text": "Les hôtels ferment pendant la compétition." },
+                { "id": "c", "text": "Les billets sont trop chers pour les touristes." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« pendant les Jeux, de nombreux touristes habituels évitent la ville hôte, par crainte de la foule et de la hausse des prix »."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Quel problème posent certains équipements après les Jeux ?",
+              "options": [
+                { "id": "a", "text": "Ils sont détruits dès la fin de la compétition." },
+                { "id": "b", "text": "Ils sont peu utilisés et coûteux à entretenir." },
+                { "id": "c", "text": "Ils sont réservés aux athlètes professionnels." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« certains sont à peine utilisés une fois la compétition terminée et coûtent cher à entretenir »."
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "Comment l'article présente-t-il la nouvelle orientation du Comité international olympique ?",
+              "options": [
+                { "id": "a", "text": "Comme la solution définitive au problème." },
+                { "id": "b", "text": "Comme une mesure inutile que personne n'approuve." },
+                {
+                  "id": "c",
+                  "text": "Comme une évolution bien accueillie, mais dont l'effet reste incertain."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Une évolution saluée par beaucoup, même si certains doutent qu'elle suffise à convaincre des citoyens devenus méfiants. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Votre municipalité propose de réduire les subventions accordées aux clubs sportifs amateurs pour financer la rénovation du stade de l'équipe professionnelle de la ville. Vous écrivez au courrier des lecteurs du journal local pour donner votre opinion. Vous présentez au moins deux arguments et un exemple. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, destinataire, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

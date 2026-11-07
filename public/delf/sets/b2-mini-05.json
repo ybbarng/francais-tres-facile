@@ -1,0 +1,241 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-05",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Halte au gaspillage alimentaire",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview dans une émission de radio consacrée à l'alimentation.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Dans les cantines scolaires, une part importante des repas servis finit à la poubelle. Dans un collège de Rennes, le chef cuisinier, Karim Haddad, a réussi à réduire ce gaspillage de moitié en un an. Karim Haddad, quel est votre secret ?"
+              },
+              {
+                "speaker": "Karim Haddad",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Il n'y a pas de secret, il y a plusieurs petites choses. La première, ça a été de peser chaque jour ce qui revenait dans les assiettes. Tant qu'on ne mesure pas, on ne se rend pas compte. Quand on a vu qu'on jetait près de quarante kilos de nourriture par jour, toute l'équipe a été choquée."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Et ensuite ?"
+              },
+              {
+                "speaker": "Karim Haddad",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Ensuite, on a demandé aux élèves de choisir la taille de leur portion : petite faim ou grande faim. Avant, on servait tout le monde de la même façon, et forcément, les plus jeunes laissaient la moitié de leur assiette. Et puis on a retravaillé certaines recettes. Les légumes, par exemple, étaient souvent trop cuits ; on les prépare maintenant autrement, et il en reste beaucoup moins."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Les élèves ont joué le jeu ?"
+              },
+              {
+                "speaker": "Karim Haddad",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Oui, d'autant plus qu'on les a associés au projet : un groupe d'élèves volontaires participe à l'élaboration des menus une fois par mois. Et ce qui est intéressant, c'est que l'argent économisé nous a permis d'acheter davantage de produits locaux, sans augmenter le prix du repas."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Quel résultat Karim Haddad a-t-il obtenu ?",
+              "options": [
+                { "id": "a", "text": "Il a supprimé tout gaspillage." },
+                { "id": "b", "text": "Il a réduit le gaspillage de moitié en un an." },
+                { "id": "c", "text": "Il a réduit le gaspillage de quarante kilos par semaine." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« a réussi à réduire ce gaspillage de moitié en un an ». 40킬로그램은 처음에 하루에 버리던 양이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Quelle a été la première mesure prise ?",
+              "options": [
+                { "id": "a", "text": "Peser chaque jour les restes." },
+                { "id": "b", "text": "Réduire toutes les portions." },
+                { "id": "c", "text": "Supprimer les légumes du menu." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« La première, ça a été de peser chaque jour ce qui revenait dans les assiettes. »"
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pourquoi a-t-on proposé deux tailles de portion ?",
+              "options": [
+                { "id": "a", "text": "Pour faire payer davantage les grandes portions." },
+                { "id": "b", "text": "Parce que les parents l'avaient demandé." },
+                { "id": "c", "text": "Parce que les plus jeunes ne finissaient pas leur assiette." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« on servait tout le monde de la même façon, et forcément, les plus jeunes laissaient la moitié de leur assiette »."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Comment les élèves participent-ils au projet ?",
+              "options": [
+                { "id": "a", "text": "Certains participent à l'élaboration des menus." },
+                { "id": "b", "text": "Ils pèsent eux-mêmes les restes." },
+                { "id": "c", "text": "Ils aident à servir les repas." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« un groupe d'élèves volontaires participe à l'élaboration des menus une fois par mois »."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Grâce à l'argent économisé, la cantine a pu...",
+              "options": [
+                { "id": "a", "text": "baisser le prix du repas." },
+                { "id": "b", "text": "acheter davantage de produits locaux." },
+                { "id": "c", "text": "embaucher un cuisinier supplémentaire." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« l'argent économisé nous a permis d'acheter davantage de produits locaux, sans augmenter le prix du repas » — 가격은 그대로라서 a는 틀리다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine de consommateurs.",
+          "title": "« À consommer de préférence avant » : une mention mal comprise",
+          "text": "Chaque année en France, des millions de tonnes de nourriture finissent à la poubelle. Une partie de ce gaspillage s'explique par une confusion très répandue entre deux mentions que l'on trouve sur les emballages.\n\nLa première, « à consommer jusqu'au », indique une date limite de consommation. Elle concerne les produits frais, comme la viande, le poisson ou certains produits laitiers, et doit être respectée : une fois cette date passée, le produit peut présenter un risque pour la santé.\n\nLa seconde, « à consommer de préférence avant », est d'une tout autre nature. Il s'agit d'une date de durabilité minimale, que l'on trouve sur les pâtes, le riz, les biscuits ou le café. Une fois cette date dépassée, le produit peut perdre un peu de son goût ou de sa texture, mais il ne présente pas de danger s'il a été conservé correctement. Pourtant, selon plusieurs enquêtes, de nombreux consommateurs jettent ces produits dès que la date est atteinte.\n\nPour lutter contre ce gaspillage, certains fabricants ont ajouté sur leurs emballages une mention complémentaire invitant les consommateurs à observer, sentir et goûter le produit avant de le jeter. Des associations vont plus loin et réclament la suppression pure et simple de la date de durabilité minimale sur les produits secs, qui peuvent se conserver pendant des mois, voire des années. Les industriels s'y opposent, estimant que cette date garantit au consommateur une qualité optimale.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Selon l'article, une partie du gaspillage alimentaire s'explique par...",
+              "options": [
+                { "id": "a", "text": "le prix trop élevé des produits frais." },
+                { "id": "b", "text": "l'absence de date sur certains emballages." },
+                {
+                  "id": "c",
+                  "text": "une confusion entre deux mentions figurant sur les emballages."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Une partie de ce gaspillage s'explique par une confusion très répandue entre deux mentions que l'on trouve sur les emballages. »"
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "La mention « à consommer jusqu'au »...",
+              "options": [
+                { "id": "a", "text": "doit être respectée pour des raisons de santé." },
+                { "id": "b", "text": "concerne surtout les produits secs." },
+                { "id": "c", "text": "signale seulement une possible perte de goût." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« doit être respectée : une fois cette date passée, le produit peut présenter un risque pour la santé »."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Un paquet de riz dont la date « de préférence avant » est dépassée...",
+              "options": [
+                { "id": "a", "text": "doit être jeté immédiatement." },
+                { "id": "b", "text": "peut être consommé s'il a été bien conservé." },
+                { "id": "c", "text": "présente un risque pour la santé." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "쌀은 최소 보존 기한 품목이고 « il ne présente pas de danger s'il a été conservé correctement »."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "La mention ajoutée par certains fabricants invite les consommateurs à...",
+              "options": [
+                { "id": "a", "text": "jeter les produits plus tôt." },
+                { "id": "b", "text": "conserver les produits au réfrigérateur." },
+                { "id": "c", "text": "vérifier eux-mêmes l'état du produit avant de le jeter." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« invitant les consommateurs à observer, sentir et goûter le produit avant de le jeter »."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "À propos de la suppression de la date de durabilité minimale sur les produits secs...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "les associations la réclament, les industriels la refusent."
+                },
+                {
+                  "id": "b",
+                  "text": "les industriels la réclament, les associations la refusent."
+                },
+                { "id": "c", "text": "associations et industriels sont d'accord." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Des associations ... réclament la suppression pure et simple ... Les industriels s'y opposent »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Le restaurant universitaire de votre établissement jette chaque jour une grande quantité de nourriture. Vous écrivez un court article pour le journal des étudiants dans lequel vous proposez des solutions et expliquez pourquoi elles seraient efficaces. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (article, propositions, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

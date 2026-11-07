@@ -1,0 +1,258 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-01",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Le télétravail, et après ?",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview dans une émission de radio consacrée au monde du travail.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bonjour et bienvenue dans notre émission. Plusieurs années après la généralisation du télétravail, où en sommes-nous ? J'en parle avec Marc Delorme, sociologue. Marc Delorme, bonjour."
+              },
+              { "speaker": "Marc Delorme", "voice": "Thomas", "text": "Bonjour." },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Le télétravail est-il devenu la norme ?"
+              },
+              {
+                "speaker": "Marc Delorme",
+                "voice": "Thomas",
+                "text": "Pas vraiment. On a beaucoup dit que le bureau allait disparaître, mais ce n'est pas ce qu'on observe. Aujourd'hui, environ un salarié sur quatre télétravaille au moins un jour par semaine, et la grande majorité d'entre eux ne souhaitent pas travailler à domicile tous les jours. Le modèle dominant, c'est l'hybride : deux jours à la maison, trois jours au bureau."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Qu'est-ce qui retient les salariés de passer au télétravail complet ?"
+              },
+              {
+                "speaker": "Marc Delorme",
+                "voice": "Thomas",
+                "text": "Principalement l'isolement. Les gens apprécient de ne plus perdre une heure dans les transports, c'est indéniable. Mais beaucoup m'expliquent que les échanges informels avec leurs collègues, à la machine à café par exemple, leur manquent. Et c'est souvent là que naissent les idées nouvelles."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Et du côté des entreprises ?"
+              },
+              {
+                "speaker": "Marc Delorme",
+                "voice": "Thomas",
+                "text": "Les entreprises, elles, ont d'abord été méfiantes : elles craignaient que leurs employés travaillent moins. Or, les études montrent plutôt l'inverse. Le vrai problème est ailleurs : bien qu'ils soient souvent plus productifs, les télétravailleurs ont tendance à ne plus déconnecter. Ils répondent à leurs courriels le soir, le week-end... C'est pourquoi je plaide pour que le droit à la déconnexion soit réellement appliqué, et pas seulement inscrit dans la loi, comme c'est le cas aujourd'hui."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Merci, Marc Delorme."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Selon Marc Delorme, aujourd'hui, le télétravail...",
+              "options": [
+                { "id": "a", "text": "est refusé par la plupart des entreprises." },
+                { "id": "b", "text": "a remplacé le bureau pour la majorité des salariés." },
+                {
+                  "id": "c",
+                  "text": "concerne environ un quart des salariés au moins un jour par semaine."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« environ un salarié sur quatre télétravaille au moins un jour par semaine » — 네 명 중 한 명, 곧 4분의 1이다. 「ce n'est pas ce qu'on observe」라고 해서 사무실이 사라졌다는 b는 틀리다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Quel est le modèle le plus répandu aujourd'hui ?",
+              "options": [
+                { "id": "a", "text": "Deux jours à la maison et trois jours au bureau." },
+                { "id": "b", "text": "Trois jours à la maison et deux jours au bureau." },
+                { "id": "c", "text": "Le télétravail tous les jours de la semaine." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Le modèle dominant, c'est l'hybride : deux jours à la maison, trois jours au bureau. » 집 이틀, 사무실 사흘이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Selon le sociologue, ce qui manque surtout aux télétravailleurs, ce sont...",
+              "options": [
+                { "id": "a", "text": "les trajets entre le domicile et le bureau." },
+                { "id": "b", "text": "le matériel et les équipements du bureau." },
+                { "id": "c", "text": "les échanges spontanés avec leurs collègues." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les échanges informels avec leurs collègues, à la machine à café par exemple, leur manquent » — 동료와의 비공식 대화가 그립다고 한다. 이동 시간은 오히려 「ne plus perdre une heure dans les transports」라며 좋게 여긴다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Au départ, quelle était l'attitude des entreprises face au télétravail ?",
+              "options": [
+                { "id": "a", "text": "Elles l'encourageaient fortement." },
+                { "id": "b", "text": "Elles craignaient que leurs salariés travaillent moins." },
+                {
+                  "id": "c",
+                  "text": "Elles y voyaient surtout un moyen de réduire leurs dépenses."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Les entreprises, elles, ont d'abord été méfiantes : elles craignaient que leurs employés travaillent moins. » 처음에는 일을 덜 할까 걱정했다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Que souhaite Marc Delorme à propos du droit à la déconnexion ?",
+              "options": [
+                { "id": "a", "text": "Qu'il soit enfin inscrit dans la loi." },
+                { "id": "b", "text": "Qu'il soit réellement respecté dans la pratique." },
+                {
+                  "id": "c",
+                  "text": "Qu'il soit supprimé, puisque les télétravailleurs sont plus productifs."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« je plaide pour que le droit à la déconnexion soit réellement appliqué, et pas seulement inscrit dans la loi, comme c'est le cas aujourd'hui » — 이미 법에 있으니 a는 틀리고, 실제로 지켜지기를 바란다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine économique.",
+          "title": "Bureaux : comment faire revenir les salariés ?",
+          "text": "Depuis la fin des confinements, de nombreuses entreprises constatent que leurs locaux restent à moitié vides. Certaines directions ont tenté d'imposer un retour au bureau cinq jours sur cinq ; la plupart y ont renoncé face au mécontentement de leurs équipes, voire à des démissions.\n\nD'autres ont choisi une stratégie différente : plutôt que d'obliger, convaincre. À Lyon, une société de logiciels a ainsi entièrement réaménagé ses espaces. Les bureaux individuels ont été remplacés par des salles de réunion, des espaces calmes et une cuisine partagée. « Nos collaborateurs ne viennent plus pour faire ce qu'ils peuvent faire chez eux, mais pour travailler ensemble », explique sa directrice des ressources humaines.\n\nCette évolution n'est pas sans conséquences. Si les salariés gagnent en liberté, ils perdent souvent leur place attitrée : comme ils ne sont jamais tous présents le même jour, de nombreuses entreprises ne prévoient plus un bureau par personne. Les postes de travail sont partagés, et chacun s'installe là où il trouve de la place. Une pratique que certains vivent mal. « Je ne me sens plus vraiment chez moi au bureau », confie un comptable parisien.\n\nPour les spécialistes de l'immobilier, la tendance est durable. Les entreprises réduisent leurs surfaces, ce qui leur permet de réaliser des économies considérables. Encore faut-il que ces économies soient réinvesties dans la qualité des espaces restants. Faute de quoi, préviennent-ils, le bureau risque de devenir un lieu que l'on fréquente par obligation plutôt que par envie.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Les entreprises qui ont voulu imposer un retour au bureau tous les jours...",
+              "options": [
+                { "id": "a", "text": "ont dû agrandir leurs locaux." },
+                { "id": "b", "text": "ont, pour la plupart, abandonné cette idée." },
+                { "id": "c", "text": "ont obtenu l'accord de leurs salariés." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« la plupart y ont renoncé face au mécontentement de leurs équipes » — 대부분 포기했다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "L'entreprise lyonnaise a réaménagé ses locaux pour...",
+              "options": [
+                { "id": "a", "text": "favoriser le travail en commun." },
+                { "id": "b", "text": "accueillir davantage de salariés." },
+                { "id": "c", "text": "créer plus de bureaux individuels." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Nos collaborateurs ne viennent plus pour faire ce qu'ils peuvent faire chez eux, mais pour travailler ensemble » — 함께 일하기 위한 공간이다. 개인 사무실은 오히려 없앴다(« Les bureaux individuels ont été remplacés »)."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Pourquoi de nombreuses entreprises ne prévoient-elles plus un bureau par personne ?",
+              "options": [
+                { "id": "a", "text": "Parce que les salariés l'ont demandé." },
+                { "id": "b", "text": "Parce que la loi l'interdit désormais." },
+                {
+                  "id": "c",
+                  "text": "Parce que les salariés ne sont jamais tous présents le même jour."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« comme ils ne sont jamais tous présents le même jour, de nombreuses entreprises ne prévoient plus un bureau par personne » — 모두가 같은 날 출근하지 않기 때문이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Qu'exprime le comptable parisien ?",
+              "options": [
+                { "id": "a", "text": "Sa satisfaction de pouvoir changer de place." },
+                { "id": "b", "text": "Un sentiment de ne plus avoir sa place au bureau." },
+                { "id": "c", "text": "Son indifférence face à ces changements." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je ne me sens plus vraiment chez moi au bureau » 그리고 앞 문장 « Une pratique que certains vivent mal » — 자기 자리를 잃은 상실감이다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Selon les spécialistes de l'immobilier, la réduction des surfaces de bureaux...",
+              "options": [
+                { "id": "a", "text": "est une mode qui ne durera pas." },
+                { "id": "b", "text": "va obliger les salariés à revenir plus souvent." },
+                {
+                  "id": "c",
+                  "text": "ne sera positive que si les économies servent à améliorer les espaces."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Encore faut-il que ces économies soient réinvesties dans la qualité des espaces restants. Faute de quoi... » — 절약한 돈을 공간의 질에 다시 써야 한다는 조건이다. 「la tendance est durable」이라 a는 틀리다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "La direction de votre entreprise envisage de supprimer complètement le télétravail à partir de l'année prochaine. Vous écrivez un courriel au directeur pour lui donner votre avis sur ce projet. Vous présentez au moins deux arguments et un exemple concret. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (destinataire, registre formel, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-06",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Apprendre une langue à l'âge adulte",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview dans une émission de radio consacrée aux sciences.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "On entend souvent dire qu'après un certain âge, il est trop tard pour apprendre une langue étrangère. Est-ce vrai ? Nous posons la question à Paul Lefèvre, chercheur en linguistique."
+              },
+              {
+                "speaker": "Paul Lefèvre",
+                "voice": "Jacques",
+                "text": "C'est une idée reçue qui a la vie dure, mais elle est en grande partie fausse. Ce qui est vrai, c'est que les enfants ont un avantage pour la prononciation : un adulte qui commence une langue à quarante ans gardera très probablement un accent. Mais pour le reste, le vocabulaire, la grammaire, les adultes apprennent souvent plus vite que les enfants, parce qu'ils savent analyser, comparer avec leur propre langue, organiser leur travail."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Alors, pourquoi tant d'adultes ont-ils l'impression d'échouer ?"
+              },
+              {
+                "speaker": "Paul Lefèvre",
+                "voice": "Jacques",
+                "text": "Pour deux raisons principalement. D'abord le temps : un enfant en immersion entend la langue plusieurs heures par jour, alors qu'un adulte suit souvent une heure de cours par semaine, ce qui est très peu. Ensuite, la peur du ridicule. Les adultes ont peur de se tromper, alors ils parlent peu, et sans pratique, on ne progresse pas."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Quel conseil donneriez-vous à nos auditeurs ?"
+              },
+              {
+                "speaker": "Paul Lefèvre",
+                "voice": "Jacques",
+                "text": "Mieux vaut un quart d'heure par jour qu'une heure et demie le samedi. La régularité compte plus que la durée. Et il faut accepter de faire des erreurs : c'est en se trompant qu'on apprend. Je dis souvent à mes étudiants : votre accent n'est pas un défaut, c'est une partie de votre histoire."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Pour Paul Lefèvre, l'idée qu'il est trop tard pour apprendre une langue à l'âge adulte est...",
+              "options": [
+                { "id": "a", "text": "tout à fait juste." },
+                { "id": "b", "text": "en grande partie fausse." },
+                { "id": "c", "text": "juste uniquement pour la grammaire." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« C'est une idée reçue qui a la vie dure, mais elle est en grande partie fausse. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Dans quel domaine les enfants ont-ils un avantage ?",
+              "options": [
+                { "id": "a", "text": "La prononciation." },
+                { "id": "b", "text": "Le vocabulaire." },
+                { "id": "c", "text": "La grammaire." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« les enfants ont un avantage pour la prononciation » — 어휘와 문법은 어른이 더 빨리 배운다고 한다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pourquoi les adultes apprennent-ils parfois plus vite que les enfants ?",
+              "options": [
+                { "id": "a", "text": "Parce qu'ils ont plus de temps libre." },
+                { "id": "b", "text": "Parce qu'ils n'ont pas peur de se tromper." },
+                {
+                  "id": "c",
+                  "text": "Parce qu'ils savent analyser et organiser leur apprentissage."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« parce qu'ils savent analyser, comparer avec leur propre langue, organiser leur travail » — 오히려 「Les adultes ont peur de se tromper」라서 b는 틀리다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Parmi les causes d'échec chez l'adulte, le chercheur cite...",
+              "options": [
+                { "id": "a", "text": "le prix des cours et le manque de professeurs." },
+                { "id": "b", "text": "le manque d'exposition à la langue et la peur du ridicule." },
+                { "id": "c", "text": "une moins bonne mémoire et la fatigue." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« D'abord le temps : ... une heure de cours par semaine, ce qui est très peu. Ensuite, la peur du ridicule. »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Que recommande Paul Lefèvre ?",
+              "options": [
+                { "id": "a", "text": "Pratiquer un peu chaque jour." },
+                { "id": "b", "text": "Suivre un long cours une fois par semaine." },
+                { "id": "c", "text": "Corriger son accent en priorité." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Mieux vaut un quart d'heure par jour qu'une heure et demie le samedi. La régularité compte plus que la durée. » 억양은 「n'est pas un défaut」라고 해서 c는 틀리다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine consacré à l'éducation.",
+          "title": "Applications de langues : jouer, est-ce apprendre ?",
+          "text": "Elles promettent d'apprendre une langue en quelques minutes par jour, depuis son téléphone. Les applications d'apprentissage des langues comptent aujourd'hui des centaines de millions d'utilisateurs dans le monde. Leur recette : des exercices courts, des points à gagner, des séries de jours consécutifs à ne pas interrompre. Autant de mécanismes empruntés aux jeux vidéo, qui incitent l'utilisateur à revenir chaque jour.\n\nLes enseignants reconnaissent volontiers l'intérêt de ces outils pour mémoriser du vocabulaire ou se familiariser avec une langue nouvelle. Mais ils en soulignent aussi les limites. La plupart des exercices consistent à reconnaître ou à traduire des phrases isolées ; rares sont ceux qui obligent l'apprenant à produire un discours personnel ou à réagir dans une vraie conversation. Or, c'est précisément cette capacité qui distingue celui qui connaît une langue de celui qui la parle.\n\nIl existe aussi un risque plus subtil. À force de vouloir conserver sa série de jours, l'utilisateur peut finir par choisir les leçons les plus faciles, uniquement pour ne pas perdre ses points. Le jeu, qui devait servir l'apprentissage, devient alors une fin en soi.\n\nFaut-il pour autant abandonner ces applications ? Certainement pas, répondent les spécialistes, à condition de les considérer comme un complément. Une application peut entretenir la motivation au quotidien ; elle ne remplacera pas, en revanche, l'échange avec des personnes réelles.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Les points et les séries de jours consécutifs servent à...",
+              "options": [
+                { "id": "a", "text": "évaluer le niveau officiel de l'utilisateur." },
+                { "id": "b", "text": "remplacer le professeur." },
+                { "id": "c", "text": "inciter l'utilisateur à revenir chaque jour." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Autant de mécanismes empruntés aux jeux vidéo, qui incitent l'utilisateur à revenir chaque jour. »"
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Selon les enseignants, ces applications sont utiles pour...",
+              "options": [
+                { "id": "a", "text": "mémoriser du vocabulaire." },
+                { "id": "b", "text": "apprendre à tenir une conversation." },
+                { "id": "c", "text": "préparer un exposé oral." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Les enseignants reconnaissent volontiers l'intérêt de ces outils pour mémoriser du vocabulaire »."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Quelle limite les enseignants soulignent-ils ?",
+              "options": [
+                { "id": "a", "text": "Les exercices sont trop longs." },
+                {
+                  "id": "b",
+                  "text": "Les exercices font rarement produire un discours personnel."
+                },
+                { "id": "c", "text": "Les applications coûtent trop cher." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« rares sont ceux qui obligent l'apprenant à produire un discours personnel ou à réagir dans une vraie conversation »."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Quel est le « risque plus subtil » évoqué dans l'article ?",
+              "options": [
+                { "id": "a", "text": "L'utilisateur se décourage trop vite." },
+                {
+                  "id": "b",
+                  "text": "L'utilisateur choisit des leçons faciles pour ne pas perdre ses points."
+                },
+                { "id": "c", "text": "L'utilisateur passe trop de temps sur son téléphone." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« l'utilisateur peut finir par choisir les leçons les plus faciles, uniquement pour ne pas perdre ses points »."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Quelle est la conclusion des spécialistes ?",
+              "options": [
+                { "id": "a", "text": "Ces applications suffisent pour parler couramment." },
+                { "id": "b", "text": "Il faut les abandonner." },
+                {
+                  "id": "c",
+                  "text": "Elles peuvent compléter l'apprentissage, mais pas remplacer les échanges réels."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« à condition de les considérer comme un complément ... elle ne remplacera pas, en revanche, l'échange avec des personnes réelles »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "La direction de votre université envisage de supprimer les cours obligatoires de langue étrangère, en estimant que la traduction automatique les rend inutiles. Vous écrivez au président de l'université pour défendre votre point de vue. Vous présentez au moins deux arguments et un exemple. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (lettre formelle, destinataire, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

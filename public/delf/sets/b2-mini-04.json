@@ -1,0 +1,250 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-04",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Trop de touristes ?",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez un reportage dans une émission de radio consacrée au voyage.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Avec ses ruelles fleuries et sa vue sur la mer, le village de Saint-Aurel accueille chaque été près de deux millions de visiteurs, pour seulement huit cents habitants. Cette année, la commune a décidé d'agir. Son maire, Henri Castel, nous explique."
+              },
+              {
+                "speaker": "Henri Castel",
+                "voice": "Jacques",
+                "text": "Nous ne sommes pas contre le tourisme, il fait vivre le village. Mais en juillet et en août, la situation était devenue invivable : des embouteillages dès huit heures du matin, des déchets partout, et des habitants qui n'osaient plus sortir de chez eux. Alors, à partir de cet été, l'accès au centre historique sera limité à quatre mille personnes par jour, sur réservation gratuite."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Gratuite ? Vous auriez pu faire payer l'entrée, comme à Venise."
+              },
+              {
+                "speaker": "Henri Castel",
+                "voice": "Jacques",
+                "text": "Nous y avons pensé, et nous avons refusé. Faire payer, c'est réserver le village à ceux qui en ont les moyens. Notre but n'est pas de gagner de l'argent, c'est de mieux répartir les visiteurs dans l'année. D'ailleurs, beaucoup de gens viennent ici en août par habitude, alors que le village est tout aussi beau en mai ou en octobre."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Et les commerçants, comment réagissent-ils ?"
+              },
+              {
+                "speaker": "Henri Castel",
+                "voice": "Jacques",
+                "text": "Au début, certains craignaient de perdre des clients. Mais les restaurateurs m'ont fait remarquer une chose intéressante : les touristes qui réservent restent plus longtemps et consomment davantage que ceux qui traversaient le village en une heure. Donc, pour l'instant, l'accueil est plutôt favorable."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Selon le maire, quelle était la situation du village en été ?",
+              "options": [
+                { "id": "a", "text": "Les touristes étaient moins nombreux que prévu." },
+                { "id": "b", "text": "Les habitants avaient du mal à vivre normalement." },
+                { "id": "c", "text": "Les commerces manquaient de personnel." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« la situation était devenue invivable : ... des habitants qui n'osaient plus sortir de chez eux »."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Quelle mesure la commune a-t-elle adoptée ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Une limite de quatre mille visiteurs par jour, sur réservation."
+                },
+                { "id": "b", "text": "Une entrée payante pour le centre historique." },
+                { "id": "c", "text": "L'interdiction des voitures en juillet et en août." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« l'accès au centre historique sera limité à quatre mille personnes par jour, sur réservation gratuite »."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pourquoi le maire a-t-il refusé de faire payer l'entrée ?",
+              "options": [
+                { "id": "a", "text": "Parce que la loi l'interdit." },
+                { "id": "b", "text": "Parce que cela rapporterait trop peu." },
+                {
+                  "id": "c",
+                  "text": "Pour ne pas réserver le village aux visiteurs les plus aisés."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Faire payer, c'est réserver le village à ceux qui en ont les moyens. »"
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Quel est l'objectif principal de la mesure ?",
+              "options": [
+                { "id": "a", "text": "Augmenter les recettes de la commune." },
+                { "id": "b", "text": "Mieux répartir les visiteurs au cours de l'année." },
+                { "id": "c", "text": "Attirer une clientèle plus riche." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Notre but n'est pas de gagner de l'argent, c'est de mieux répartir les visiteurs dans l'année. »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "D'après les restaurateurs, les touristes qui réservent...",
+              "options": [
+                { "id": "a", "text": "se plaignent du système." },
+                { "id": "b", "text": "vont moins souvent au restaurant." },
+                { "id": "c", "text": "restent plus longtemps et dépensent davantage." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les touristes qui réservent restent plus longtemps et consomment davantage »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine de voyage.",
+          "title": "Le tourisme de la dernière chance",
+          "text": "Voir les glaciers des Alpes avant qu'ils ne fondent, plonger sur la Grande Barrière de corail avant qu'elle ne blanchisse complètement : un nombre croissant de voyageurs choisissent leur destination précisément parce qu'elle est menacée. Les chercheurs ont donné un nom à ce phénomène : le « tourisme de la dernière chance ».\n\nLe paradoxe saute aux yeux. Pour admirer des paysages menacés par le réchauffement climatique, ces touristes prennent souvent l'avion, contribuant ainsi au problème qu'ils déplorent. Certains d'entre eux en ont d'ailleurs conscience, mais estiment que leur voyage, à lui seul, ne changera rien à l'échelle de la planète.\n\nLes professionnels du tourisme, eux, défendent une autre lecture. Selon eux, voir de ses propres yeux un glacier qui recule peut provoquer une prise de conscience bien plus forte que n'importe quel reportage. Plusieurs sites ont ainsi mis en place des parcours pédagogiques qui expliquent aux visiteurs l'évolution du paysage au cours du dernier siècle.\n\nReste à savoir si cette émotion se traduit par des changements concrets une fois rentré chez soi. Les rares études sur la question invitent à la prudence : si les visiteurs déclarent souvent vouloir modifier leurs habitudes, peu d'entre eux le font réellement dans les mois qui suivent.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le « tourisme de la dernière chance » consiste à...",
+              "options": [
+                { "id": "a", "text": "partir en vacances à la dernière minute." },
+                { "id": "b", "text": "visiter des lieux menacés de disparaître." },
+                { "id": "c", "text": "voyager le moins possible." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« un nombre croissant de voyageurs choisissent leur destination précisément parce qu'elle est menacée »."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Quel paradoxe l'article souligne-t-il ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ces touristes aggravent, en voyageant, le problème qui menace ces lieux."
+                },
+                { "id": "b", "text": "Ces lieux sont plus visités en hiver qu'en été." },
+                { "id": "c", "text": "Ces touristes refusent de prendre l'avion." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« ces touristes prennent souvent l'avion, contribuant ainsi au problème qu'ils déplorent »."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Que pensent certains de ces touristes de leur propre voyage ?",
+              "options": [
+                { "id": "a", "text": "Ils ignorent totalement son impact." },
+                { "id": "b", "text": "Ils regrettent de l'avoir fait." },
+                {
+                  "id": "c",
+                  "text": "Ils jugent qu'il n'a pas de conséquence à l'échelle mondiale."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Certains d'entre eux en ont d'ailleurs conscience, mais estiment que leur voyage, à lui seul, ne changera rien à l'échelle de la planète. » 영향을 알고는 있으므로 a는 틀리다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Selon les professionnels du tourisme, ces visites peuvent...",
+              "options": [
+                { "id": "a", "text": "provoquer une forte prise de conscience." },
+                { "id": "b", "text": "ralentir la fonte des glaciers." },
+                { "id": "c", "text": "remplacer les reportages à la télévision." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« voir de ses propres yeux un glacier qui recule peut provoquer une prise de conscience bien plus forte que n'importe quel reportage »."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Que montrent les études citées à la fin de l'article ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "La plupart des visiteurs changent durablement leurs habitudes."
+                },
+                {
+                  "id": "b",
+                  "text": "Les bonnes intentions des visiteurs se concrétisent rarement."
+                },
+                { "id": "c", "text": "Les visiteurs ne sont pas touchés par ce qu'ils voient." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« si les visiteurs déclarent souvent vouloir modifier leurs habitudes, peu d'entre eux le font réellement »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "La ville où vous habitez, très touristique, envisage de faire payer un droit d'entrée aux visiteurs qui viennent pour la journée. Vous écrivez au maire pour lui faire part de votre position sur ce projet. Vous présentez au moins deux arguments et un exemple. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (lettre formelle, destinataire, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

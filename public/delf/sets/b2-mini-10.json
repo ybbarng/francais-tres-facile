@@ -1,0 +1,238 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-10",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Se loger en ville",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview dans une émission de radio consacrée à la vie quotidienne.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Trouver un logement quand on est étudiant dans une grande ville relève parfois du parcours du combattant. Une solution se développe : la cohabitation entre générations. Didier Morel dirige une association qui met en relation des étudiants et des personnes âgées. Didier Morel, comment ça fonctionne ?"
+              },
+              {
+                "speaker": "Didier Morel",
+                "voice": "Thomas",
+                "text": "Le principe est simple : une personne âgée qui vit seule et qui a une chambre libre accueille un étudiant. En échange d'un loyer très modéré, parfois même sans loyer, l'étudiant s'engage à être présent certains soirs et à rendre de petits services : faire quelques courses, aider avec l'ordinateur... Attention, ce n'est pas une aide à domicile : l'étudiant n'est pas là pour faire le ménage ni pour donner des soins."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Qui sont les personnes âgées qui choisissent cette formule ?"
+              },
+              {
+                "speaker": "Didier Morel",
+                "voice": "Thomas",
+                "text": "Souvent des personnes qui ont perdu leur conjoint et qui se sentent seules dans un grand appartement. Ce qu'elles recherchent avant tout, ce n'est pas l'argent, c'est une présence. Leurs enfants, qui habitent parfois loin, sont d'ailleurs souvent rassurés de savoir que quelqu'un est là."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Et ça se passe toujours bien ?"
+              },
+              {
+                "speaker": "Didier Morel",
+                "voice": "Thomas",
+                "text": "Dans la grande majorité des cas, oui. Mais c'est justement parce que nous préparons chaque rencontre avec soin. Nous recevons longuement les deux personnes, nous vérifions que leurs habitudes sont compatibles. Quelqu'un qui se couche à vingt et une heures et un étudiant qui rentre à minuit, ça ne marche pas. Et nous restons disponibles en cas de difficulté pendant toute l'année."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Dans cette formule, l'étudiant...",
+              "options": [
+                { "id": "a", "text": "paie un loyer comparable à celui du marché." },
+                {
+                  "id": "b",
+                  "text": "paie peu ou pas de loyer, en échange d'une présence et de petits services."
+                },
+                { "id": "c", "text": "est salarié comme aide à domicile." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« En échange d'un loyer très modéré, parfois même sans loyer, l'étudiant s'engage à être présent certains soirs et à rendre de petits services »."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Selon Didier Morel, laquelle de ces tâches ne fait PAS partie du rôle de l'étudiant ?",
+              "options": [
+                { "id": "a", "text": "Faire quelques courses." },
+                { "id": "b", "text": "Aider à utiliser l'ordinateur." },
+                { "id": "c", "text": "Faire le ménage." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« l'étudiant n'est pas là pour faire le ménage ni pour donner des soins » — 장보기와 컴퓨터 돕기는 할 일로 나온다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Ce que les personnes âgées recherchent avant tout, c'est...",
+              "options": [
+                { "id": "a", "text": "une présence." },
+                { "id": "b", "text": "un revenu supplémentaire." },
+                { "id": "c", "text": "une aide pour les soins." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Ce qu'elles recherchent avant tout, ce n'est pas l'argent, c'est une présence. »"
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Comment réagissent souvent les enfants de ces personnes âgées ?",
+              "options": [
+                { "id": "a", "text": "Ils s'y opposent." },
+                { "id": "b", "text": "Ils sont rassurés." },
+                { "id": "c", "text": "Ils préfèrent une maison de retraite." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Leurs enfants ... sont d'ailleurs souvent rassurés de savoir que quelqu'un est là. »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "À quoi Didier Morel attribue-t-il la réussite de ces cohabitations ?",
+              "options": [
+                { "id": "a", "text": "Au prix très bas du loyer." },
+                { "id": "b", "text": "À l'âge des étudiants choisis." },
+                { "id": "c", "text": "À la préparation soignée de chaque rencontre." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« c'est justement parce que nous préparons chaque rencontre avec soin »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un quotidien.",
+          "title": "Encadrer les loyers : remède ou illusion ?",
+          "text": "Dans plusieurs grandes villes françaises, les loyers ne peuvent plus être fixés librement. Un dispositif d'encadrement impose aux propriétaires de respecter un loyer de référence, calculé selon le quartier, la taille et l'ancienneté du logement. Objectif affiché : permettre aux classes moyennes de continuer à habiter dans les centres-villes.\n\nPour ses défenseurs, la mesure a fait ses preuves. Dans les villes concernées, la hausse des loyers aurait été freinée, et les abus les plus flagrants, comme des chambres minuscules louées à des prix exorbitants, seraient devenus plus rares. Ils reconnaissent toutefois qu'une partie importante des propriétaires ne respecte pas encore les règles, les locataires hésitant souvent à faire valoir leurs droits par crainte de perdre leur logement.\n\nLes opposants, eux, dénoncent un effet pervers. Découragés par des loyers qu'ils jugent trop bas, certains propriétaires préféreraient vendre leur bien ou le louer aux touristes, ce qui réduirait encore le nombre de logements disponibles pour les habitants. L'encadrement, selon eux, traite le symptôme sans s'attaquer à la cause : le manque de logements.\n\nSur ce dernier point, les deux camps se rejoignent. Quelle que soit l'efficacité de l'encadrement, aucune politique ne pourra durablement faire baisser les prix si l'on ne construit pas davantage, notamment des logements sociaux.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le loyer de référence est calculé en fonction...",
+              "options": [
+                { "id": "a", "text": "des revenus du locataire." },
+                { "id": "b", "text": "du quartier, de la taille et de l'ancienneté du logement." },
+                { "id": "c", "text": "du prix d'achat du logement." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« un loyer de référence, calculé selon le quartier, la taille et l'ancienneté du logement »."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Selon ses défenseurs, l'encadrement des loyers...",
+              "options": [
+                { "id": "a", "text": "a freiné la hausse des loyers." },
+                { "id": "b", "text": "est respecté par tous les propriétaires." },
+                { "id": "c", "text": "a fait fortement baisser tous les loyers." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« la hausse des loyers aurait été freinée » — 「une partie importante des propriétaires ne respecte pas encore les règles」라서 b는 틀리다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Pourquoi de nombreux locataires ne font-ils pas valoir leurs droits ?",
+              "options": [
+                { "id": "a", "text": "Ils ne connaissent pas la loi." },
+                { "id": "b", "text": "Les démarches sont trop coûteuses." },
+                { "id": "c", "text": "Ils craignent de perdre leur logement." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les locataires hésitant souvent à faire valoir leurs droits par crainte de perdre leur logement »."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Quel « effet pervers » les opposants dénoncent-ils ?",
+              "options": [
+                { "id": "a", "text": "Les loyers augmenteraient plus vite qu'avant." },
+                {
+                  "id": "b",
+                  "text": "Des propriétaires retireraient leur logement de la location aux habitants."
+                },
+                { "id": "c", "text": "Les locataires quitteraient les centres-villes." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« certains propriétaires préféreraient vendre leur bien ou le louer aux touristes, ce qui réduirait encore le nombre de logements disponibles pour les habitants »."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Sur quel point les défenseurs et les opposants sont-ils d'accord ?",
+              "options": [
+                { "id": "a", "text": "Il faut construire davantage de logements." },
+                { "id": "b", "text": "Il faut supprimer l'encadrement." },
+                { "id": "c", "text": "Il faut interdire la location aux touristes." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Sur ce dernier point, les deux camps se rejoignent ... si l'on ne construit pas davantage »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Dans votre ville, de nombreux appartements sont loués aux touristes plutôt qu'aux habitants. La mairie envisage de limiter fortement ce type de location. Vous écrivez au maire pour lui donner votre avis sur ce projet. Vous présentez au moins deux arguments et un exemple. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (lettre formelle, destinataire, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

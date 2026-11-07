@@ -1,0 +1,251 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-03",
+  "level": "B2",
+  "kind": "mini",
+  "title": "L'intelligence artificielle et nos métiers",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview dans une émission de radio consacrée à l'avenir des métiers.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Dans notre série sur les métiers face à l'intelligence artificielle, nous recevons aujourd'hui Nadia Benali, traductrice depuis quinze ans. Nadia Benali, votre métier est souvent cité parmi les plus menacés. Vous avez peur ?"
+              },
+              {
+                "speaker": "Nadia Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Peur, non. Inquiète, un peu. Il est vrai que la traduction automatique a fait des progrès spectaculaires. Pour des textes simples, comme un mode d'emploi, elle donne aujourd'hui des résultats tout à fait corrects. Du coup, certains clients ne font plus appel à nous pour ce type de travail, et mes revenus ont baissé d'environ un tiers en deux ans."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Alors, comment vous adaptez-vous ?"
+              },
+              {
+                "speaker": "Nadia Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Je me suis spécialisée. Je traduis maintenant surtout des contrats et des textes littéraires, là où la moindre erreur, la moindre nuance compte. Et puis, de plus en plus, on me demande de relire et de corriger des traductions faites par la machine. C'est ce qu'on appelle la post-édition."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "C'est un travail intéressant ?"
+              },
+              {
+                "speaker": "Nadia Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Franchement, moins que la traduction elle-même. On a l'impression de réparer le travail de quelqu'un d'autre. Et le pire, c'est que les clients paient la post-édition beaucoup moins cher, alors qu'elle demande parfois autant de temps qu'une traduction complète."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Que conseilleriez-vous à un jeune qui veut devenir traducteur ?"
+              },
+              {
+                "speaker": "Nadia Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "De ne pas renoncer, mais de ne pas être naïf non plus. Il faudra maîtriser ces outils plutôt que de les ignorer, et surtout développer une expertise dans un domaine précis : le droit, la médecine... C'est cette expertise que la machine ne remplace pas encore."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Comment Nadia Benali se sent-elle face à l'intelligence artificielle ?",
+              "options": [
+                { "id": "a", "text": "Elle est terrifiée." },
+                { "id": "b", "text": "Elle est tout à fait sereine." },
+                { "id": "c", "text": "Elle est un peu inquiète." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Peur, non. Inquiète, un peu. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "En deux ans, ses revenus...",
+              "options": [
+                { "id": "a", "text": "ont baissé d'environ un tiers." },
+                { "id": "b", "text": "ont diminué de moitié." },
+                { "id": "c", "text": "sont restés stables." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« mes revenus ont baissé d'environ un tiers en deux ans »."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pour s'adapter, Nadia Benali s'est spécialisée dans...",
+              "options": [
+                { "id": "a", "text": "les modes d'emploi." },
+                { "id": "b", "text": "les contrats et les textes littéraires." },
+                { "id": "c", "text": "le développement d'outils de traduction." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je traduis maintenant surtout des contrats et des textes littéraires » — 사용 설명서는 기계가 이미 잘 하는 일로 나온다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Que pense-t-elle de la post-édition ?",
+              "options": [
+                { "id": "a", "text": "C'est plus passionnant que la traduction." },
+                { "id": "b", "text": "C'est un travail rapide et bien payé." },
+                {
+                  "id": "c",
+                  "text": "C'est moins intéressant, et mal payé par rapport au temps qu'elle demande."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« moins que la traduction elle-même » « les clients paient la post-édition beaucoup moins cher, alors qu'elle demande parfois autant de temps qu'une traduction complète »."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Quel conseil donne-t-elle aux futurs traducteurs ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Maîtriser les outils et se spécialiser dans un domaine précis."
+                },
+                { "id": "b", "text": "Choisir un autre métier." },
+                { "id": "c", "text": "Refuser d'utiliser les outils automatiques." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Il faudra maîtriser ces outils plutôt que de les ignorer, et surtout développer une expertise dans un domaine précis » — 「De ne pas renoncer」라 b는 틀리다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article sur un site d'information.",
+          "title": "Recrutement : quand l'algorithme trie les CV",
+          "text": "De plus en plus d'entreprises confient à des logiciels d'intelligence artificielle la première étape du recrutement : la lecture des candidatures. Le principe est simple : l'outil analyse des centaines de CV en quelques minutes et ne retient que ceux qui correspondent le mieux au poste. Pour les services de ressources humaines, submergés de candidatures, le gain de temps est considérable.\n\nCes outils sont souvent présentés comme plus objectifs que les recruteurs humains, qui seraient influencés par leurs préjugés. La réalité est plus nuancée. Un algorithme apprend à partir des recrutements passés ; si ceux-ci étaient discriminatoires, il reproduira les mêmes biais, mais de manière invisible. Une grande entreprise américaine a ainsi dû abandonner son logiciel après avoir découvert qu'il écartait systématiquement les candidatures de femmes.\n\nFaut-il pour autant renoncer à ces technologies ? La plupart des spécialistes ne le pensent pas. Ils réclament en revanche davantage de transparence : les candidats devraient être informés qu'une machine a évalué leur dossier et pouvoir demander qu'un humain le réexamine. C'est d'ailleurs dans cet esprit que la réglementation européenne encadre désormais les systèmes jugés « à haut risque », dont font partie les outils de recrutement.\n\nReste une question que la loi ne réglera pas : celle de la confiance. Un candidat refusé par un recruteur peut au moins espérer une explication. Refusé par un algorithme, il risque de ne jamais savoir pourquoi.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Pourquoi les entreprises utilisent-elles ces logiciels ?",
+              "options": [
+                { "id": "a", "text": "Pour recruter davantage de femmes." },
+                { "id": "b", "text": "Pour gagner du temps dans le tri des candidatures." },
+                { "id": "c", "text": "Pour supprimer des postes de recruteurs." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Pour les services de ressources humaines, submergés de candidatures, le gain de temps est considérable. »"
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Selon l'article, pourquoi l'objectivité des algorithmes est-elle discutable ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ils peuvent reproduire les discriminations des recrutements passés."
+                },
+                { "id": "b", "text": "Ils lisent mal les CV." },
+                { "id": "c", "text": "Ils sont trop lents." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Un algorithme apprend à partir des recrutements passés ; si ceux-ci étaient discriminatoires, il reproduira les mêmes biais »."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "L'exemple de l'entreprise américaine sert à montrer que...",
+              "options": [
+                { "id": "a", "text": "les femmes envoient moins de candidatures." },
+                { "id": "b", "text": "les logiciels font gagner beaucoup de temps." },
+                { "id": "c", "text": "un algorithme peut être discriminatoire." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« il écartait systématiquement les candidatures de femmes » — 알고리즘이 차별할 수 있다는 예시다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Que demandent la plupart des spécialistes ?",
+              "options": [
+                { "id": "a", "text": "L'interdiction de ces outils." },
+                { "id": "b", "text": "Le remplacement complet des recruteurs par des machines." },
+                { "id": "c", "text": "Plus de transparence envers les candidats." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« La plupart des spécialistes ne le pensent pas. Ils réclament en revanche davantage de transparence » — 금지는 원하지 않는다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "D'après la conclusion, un candidat refusé par un algorithme...",
+              "options": [
+                { "id": "a", "text": "risque de ne jamais connaître les raisons du refus." },
+                { "id": "b", "text": "reçoit automatiquement une explication détaillée." },
+                { "id": "c", "text": "peut plus facilement porter plainte." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Refusé par un algorithme, il risque de ne jamais savoir pourquoi. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Sur un forum consacré à l'éducation, un internaute affirme : « Grâce à l'intelligence artificielle, les élèves n'auront bientôt plus besoin d'apprendre à rédiger. » Vous réagissez sur ce forum en donnant votre opinion, appuyée sur au moins deux arguments et un exemple. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (réaction à l'affirmation, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}

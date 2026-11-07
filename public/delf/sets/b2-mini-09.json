@@ -1,0 +1,244 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-mini-09",
+  "level": "B2",
+  "kind": "mini",
+  "title": "Peut-on encore croire l'information ?",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une minute pour commencer à répondre. Après la seconde écoute, vous aurez encore une minute pour compléter vos réponses. Choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview dans une émission de radio consacrée aux médias.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Animateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Les sondages le confirment chaque année : la confiance des Français dans les médias reste très faible. Pour en parler, nous recevons Sophie Garnier, journaliste dans une cellule de vérification des faits. Sophie Garnier, comment expliquez-vous cette défiance ?"
+              },
+              {
+                "speaker": "Sophie Garnier",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Il y a plusieurs raisons. D'abord, beaucoup de gens ont le sentiment que les journalistes appartiennent à un milieu social éloigné du leur et ne parlent pas de leurs préoccupations. Ce reproche n'est pas totalement injustifié, il faut le reconnaître. Ensuite, les réseaux sociaux ont brouillé les repères : une rumeur partagée par un ami inspire parfois plus confiance qu'un article vérifié."
+              },
+              {
+                "speaker": "Animateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Votre travail, c'est justement de vérifier les informations qui circulent. Est-ce que ça marche ?"
+              },
+              {
+                "speaker": "Sophie Garnier",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "En partie. Le problème, c'est qu'une fausse information circule beaucoup plus vite que sa correction. Quand nous publions notre vérification, la rumeur a souvent déjà été vue des millions de fois. Et les personnes qui y ont cru ne lisent généralement pas notre démenti."
+              },
+              {
+                "speaker": "Animateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Alors, que faire ?"
+              },
+              {
+                "speaker": "Sophie Garnier",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Je crois beaucoup à l'éducation aux médias, dès l'école. Apprendre aux jeunes à se demander qui a écrit un texte, dans quel but, à partir de quelles sources. Il ne s'agit pas de leur dire quoi penser, mais de leur donner les moyens de juger par eux-mêmes. Et nous, journalistes, nous devons être plus transparents sur notre manière de travailler, et reconnaître nos erreurs quand nous en faisons."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Que pense Sophie Garnier du reproche selon lequel les journalistes seraient éloignés des préoccupations du public ?",
+              "options": [
+                { "id": "a", "text": "Elle le juge complètement faux." },
+                { "id": "b", "text": "Elle estime qu'il est en partie fondé." },
+                { "id": "c", "text": "Elle pense qu'il vise seulement les réseaux sociaux." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Ce reproche n'est pas totalement injustifié, il faut le reconnaître. » — 어느 정도는 맞다고 인정한다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Selon elle, à cause des réseaux sociaux...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "une rumeur partagée par un proche peut sembler plus crédible qu'un article vérifié."
+                },
+                { "id": "b", "text": "les gens ne partagent plus que des articles vérifiés." },
+                { "id": "c", "text": "les journaux ont perdu tous leurs lecteurs." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« une rumeur partagée par un ami inspire parfois plus confiance qu'un article vérifié »."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Quelle est la principale limite de la vérification des faits ?",
+              "options": [
+                { "id": "a", "text": "Elle coûte trop cher aux rédactions." },
+                { "id": "b", "text": "Les journalistes qui la font se trompent souvent." },
+                {
+                  "id": "c",
+                  "text": "La correction arrive trop tard et touche peu ceux qui ont cru la rumeur."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« une fausse information circule beaucoup plus vite que sa correction ... les personnes qui y ont cru ne lisent généralement pas notre démenti »."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Pour elle, l'éducation aux médias consiste à...",
+              "options": [
+                { "id": "a", "text": "dire aux élèves quelles sources ils doivent croire." },
+                { "id": "b", "text": "donner aux jeunes les moyens de juger par eux-mêmes." },
+                { "id": "c", "text": "interdire les réseaux sociaux à l'école." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Il ne s'agit pas de leur dire quoi penser, mais de leur donner les moyens de juger par eux-mêmes. » 그래서 a는 틀리다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Selon elle, que doivent faire les journalistes ?",
+              "options": [
+                { "id": "a", "text": "Quitter les réseaux sociaux." },
+                { "id": "b", "text": "Publier plus vite que les rumeurs." },
+                { "id": "c", "text": "Être plus transparents et reconnaître leurs erreurs." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« nous devons être plus transparents sur notre manière de travailler, et reconnaître nos erreurs »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en choisissant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine de société.",
+          "title": "Ces citoyens qui fuient l'actualité",
+          "text": "Ils ne regardent plus le journal télévisé, ont désactivé les notifications de leur téléphone et évitent soigneusement les conversations sur la politique. De plus en plus de personnes déclarent éviter volontairement l'actualité, au moins de temps en temps. Les chercheurs parlent d'« évitement de l'information ».\n\nContrairement à ce que l'on pourrait croire, ce comportement ne traduit pas forcément un désintérêt pour le monde. Interrogés sur leurs raisons, beaucoup expliquent au contraire que l'actualité les affecte trop : guerres, catastrophes climatiques, crises économiques... Le flot continu de mauvaises nouvelles provoque chez eux anxiété et sentiment d'impuissance. D'autres évoquent la lassitude face à des sujets répétés jusqu'à l'épuisement.\n\nCe phénomène inquiète les rédactions, et pas seulement pour des raisons économiques. Une démocratie suppose des citoyens informés, capables de débattre des grandes questions collectives. Si une partie croissante de la population se détourne de l'information, le débat public risque de s'appauvrir.\n\nCertains médias tentent de réagir en développant le « journalisme de solutions » : sans cacher les problèmes, ils présentent aussi des initiatives qui tentent d'y répondre. Une approche qui séduit une partie du public, mais que d'autres journalistes regardent avec méfiance, craignant qu'elle ne glisse vers une vision trop optimiste de la réalité.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "L'« évitement de l'information » désigne le fait de...",
+              "options": [
+                { "id": "a", "text": "ne pas avoir accès aux médias." },
+                { "id": "b", "text": "ne lire que des médias étrangers." },
+                { "id": "c", "text": "éviter volontairement de s'informer." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« De plus en plus de personnes déclarent éviter volontairement l'actualité »."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Selon l'article, ce comportement...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "s'explique souvent par le fait que l'actualité affecte trop ces personnes."
+                },
+                { "id": "b", "text": "prouve que ces personnes ne s'intéressent pas au monde." },
+                { "id": "c", "text": "concerne uniquement les jeunes." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« ce comportement ne traduit pas forcément un désintérêt pour le monde ... beaucoup expliquent au contraire que l'actualité les affecte trop »."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Au-delà de l'aspect économique, pourquoi ce phénomène inquiète-t-il les rédactions ?",
+              "options": [
+                { "id": "a", "text": "Il fait baisser le nombre de journalistes." },
+                { "id": "b", "text": "Il menace la qualité du débat démocratique." },
+                { "id": "c", "text": "Il favorise la publicité au détriment de l'information." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Une démocratie suppose des citoyens informés ... le débat public risque de s'appauvrir. »"
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Le « journalisme de solutions » consiste à...",
+              "options": [
+                { "id": "a", "text": "ne parler que de bonnes nouvelles." },
+                { "id": "b", "text": "laisser le public choisir les sujets traités." },
+                {
+                  "id": "c",
+                  "text": "présenter les problèmes accompagnés d'initiatives qui y répondent."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« sans cacher les problèmes, ils présentent aussi des initiatives qui tentent d'y répondre » — 문제를 감추지 않으므로 a는 틀리다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Que craignent certains journalistes à propos du journalisme de solutions ?",
+              "options": [
+                { "id": "a", "text": "Qu'il donne une image trop optimiste de la réalité." },
+                { "id": "b", "text": "Qu'il coûte trop cher à produire." },
+                { "id": "c", "text": "Qu'il fasse fuir les lecteurs." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« craignant qu'elle ne glisse vers une vision trop optimiste de la réalité »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 8,
+      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Un magazine pose à ses lecteurs la question suivante : « Faut-il encore payer pour s'informer ? » Vous envoyez une contribution pour la rubrique « Débat » de ce magazine. Vous présentez au moins deux arguments et un exemple. (120 à 150 mots)",
+          "minWords": 120,
+          "maxWords": 150,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (réponse à la question, longueur)",
+              "points": 2
+            },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
+            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
+            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
+            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 미니 초안. 독립 풀이 확인 전."
+  }
+}
