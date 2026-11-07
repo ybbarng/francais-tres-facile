@@ -6,6 +6,7 @@ import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { parseArgs } from "node:util";
+import { normalizeHeard } from "./delf-asr-normalize.ts";
 import {
   DEFAULT_AUDIO_DIR,
   DEFAULT_SETS_DIR,
@@ -134,7 +135,7 @@ async function main() {
         }
         const expected = normalizeWords(d.audio.script.map((l) => l.text).join(" "));
         const heardText = await transcribe(mp3);
-        const heard = normalizeWords(heardText);
+        const heard = normalizeWords(normalizeHeard(heardText));
         const { same, spans } = diffWords(expected, heard);
         const ratio = expected.length === 0 ? 1 : same / expected.length;
         const ok = ratio >= minRatio;
