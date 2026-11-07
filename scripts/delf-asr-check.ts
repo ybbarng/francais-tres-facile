@@ -133,7 +133,10 @@ async function main() {
           );
           continue;
         }
-        const expected = normalizeWords(d.audio.script.map((l) => l.text).join(" "));
+        // 대본에 숫자로 적은 곳(A1 일부)도 받아쓰기와 같은 모양으로 맞춘다
+        const expected = normalizeWords(
+          normalizeHeard(d.audio.script.map((l) => l.text).join(" "))
+        );
         const heardText = await transcribe(mp3);
         const heard = normalizeWords(normalizeHeard(heardText));
         const { same, spans } = diffWords(expected, heard);
