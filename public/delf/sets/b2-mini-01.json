@@ -21,7 +21,11 @@
                 "voice": "Sandy (프랑스어(프랑스))",
                 "text": "Bonjour et bienvenue dans notre émission. Plusieurs années après la généralisation du télétravail, où en sommes-nous ? J'en parle avec Marc Delorme, sociologue. Marc Delorme, bonjour."
               },
-              { "speaker": "Marc Delorme", "voice": "Thomas", "text": "Bonjour." },
+              {
+                "speaker": "Marc Delorme",
+                "voice": "Thomas",
+                "text": "Bonjour."
+              },
               {
                 "speaker": "Journaliste",
                 "voice": "Sandy (프랑스어(프랑스))",
@@ -30,7 +34,7 @@
               {
                 "speaker": "Marc Delorme",
                 "voice": "Thomas",
-                "text": "Pas vraiment. On a beaucoup dit que le bureau allait disparaître, mais ce n'est pas ce qu'on observe. Aujourd'hui, environ un salarié sur quatre télétravaille au moins un jour par semaine, et la grande majorité d'entre eux ne souhaitent pas travailler à domicile tous les jours. Le modèle dominant, c'est l'hybride : deux jours à la maison, trois jours au bureau."
+                "text": "Pas vraiment. On a beaucoup dit que le bureau allait disparaître, mais ce n'est pas ce qu'on observe. Aujourd'hui, environ un salarié sur cinq télétravaille, au moins de temps en temps, et la grande majorité d'entre eux ne souhaitent pas travailler à domicile tous les jours. Le modèle dominant, c'est l'hybride : deux jours à la maison, trois jours au bureau."
               },
               {
                 "speaker": "Journaliste",
@@ -65,38 +69,62 @@
               "type": "choice",
               "prompt": "Selon Marc Delorme, aujourd'hui, le télétravail...",
               "options": [
-                { "id": "a", "text": "est refusé par la plupart des entreprises." },
-                { "id": "b", "text": "a remplacé le bureau pour la majorité des salariés." },
+                {
+                  "id": "a",
+                  "text": "est devenu la règle pour la majorité des salariés, au moins deux jours par semaine."
+                },
+                {
+                  "id": "b",
+                  "text": "a fait disparaître le bureau dans la plupart des entreprises qui l'ont adopté."
+                },
                 {
                   "id": "c",
-                  "text": "concerne environ un quart des salariés au moins un jour par semaine."
+                  "text": "reste l'affaire d'une minorité de salariés, qui le pratiquent rarement à plein temps."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« environ un salarié sur quatre télétravaille au moins un jour par semaine » — 네 명 중 한 명, 곧 4분의 1이다. 「ce n'est pas ce qu'on observe」라고 해서 사무실이 사라졌다는 b는 틀리다."
+              "explanation": "« environ un salarié sur cinq télétravaille, au moins de temps en temps, et la grande majorité d'entre eux ne souhaitent pas travailler à domicile tous les jours » — 다섯 명 중 한 명이니 소수이고, 대부분 매일 재택을 원하지 않는다. 「ce n'est pas ce qu'on observe」라고 해서 사무실이 사라졌다는 b는 틀리고, 「deux jours」는 재택하는 사람들의 방식일 뿐 다수 직원 이야기가 아니라 a도 틀리다."
             },
             {
               "id": "q2",
               "type": "choice",
               "prompt": "Quel est le modèle le plus répandu aujourd'hui ?",
               "options": [
-                { "id": "a", "text": "Deux jours à la maison et trois jours au bureau." },
-                { "id": "b", "text": "Trois jours à la maison et deux jours au bureau." },
-                { "id": "c", "text": "Le télétravail tous les jours de la semaine." }
+                {
+                  "id": "a",
+                  "text": "Les salariés passent la plus grande partie de la semaine sur leur lieu de travail."
+                },
+                {
+                  "id": "b",
+                  "text": "Les salariés passent la plus grande partie de la semaine à travailler chez eux."
+                },
+                {
+                  "id": "c",
+                  "text": "Les salariés partagent leur semaine à parts égales entre la maison et le bureau."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Le modèle dominant, c'est l'hybride : deux jours à la maison, trois jours au bureau. » 집 이틀, 사무실 사흘이다."
+              "explanation": "« Le modèle dominant, c'est l'hybride : deux jours à la maison, trois jours au bureau. » 닷새 가운데 사흘을 사무실에서 보내니 대부분을 직장에서 보낸다. b는 날수를 거꾸로 바꿨고, 2대 3이라 똑같이 나눈다는 c도 틀리다."
             },
             {
               "id": "q3",
               "type": "choice",
               "prompt": "Selon le sociologue, ce qui manque surtout aux télétravailleurs, ce sont...",
               "options": [
-                { "id": "a", "text": "les trajets entre le domicile et le bureau." },
-                { "id": "b", "text": "le matériel et les équipements du bureau." },
-                { "id": "c", "text": "les échanges spontanés avec leurs collègues." }
+                {
+                  "id": "a",
+                  "text": "les trajets entre le domicile et le bureau."
+                },
+                {
+                  "id": "b",
+                  "text": "le matériel et les équipements du bureau."
+                },
+                {
+                  "id": "c",
+                  "text": "les échanges spontanés avec leurs collègues."
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -107,27 +135,39 @@
               "type": "choice",
               "prompt": "Au départ, quelle était l'attitude des entreprises face au télétravail ?",
               "options": [
-                { "id": "a", "text": "Elles l'encourageaient fortement." },
-                { "id": "b", "text": "Elles craignaient que leurs salariés travaillent moins." },
+                {
+                  "id": "a",
+                  "text": "Elles comptaient sur lui pour rendre leurs équipes plus productives."
+                },
+                {
+                  "id": "b",
+                  "text": "Elles doutaient que leurs salariés restent aussi efficaces à distance."
+                },
                 {
                   "id": "c",
-                  "text": "Elles y voyaient surtout un moyen de réduire leurs dépenses."
+                  "text": "Elles y voyaient surtout un moyen de réduire leurs frais de locaux."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Les entreprises, elles, ont d'abord été méfiantes : elles craignaient que leurs employés travaillent moins. » 처음에는 일을 덜 할까 걱정했다."
+              "explanation": "« Les entreprises, elles, ont d'abord été méfiantes : elles craignaient que leurs employés travaillent moins. » 처음에는 집에서 일하면 덜 일할까 의심했다. 생산성이 오른 것은 「les études montrent plutôt l'inverse」처럼 나중에 확인된 결과라 a는 틀리다."
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "Que souhaite Marc Delorme à propos du droit à la déconnexion ?",
               "options": [
-                { "id": "a", "text": "Qu'il soit enfin inscrit dans la loi." },
-                { "id": "b", "text": "Qu'il soit réellement respecté dans la pratique." },
+                {
+                  "id": "a",
+                  "text": "Qu'il soit enfin inscrit dans la loi, où il ne figure pas encore."
+                },
+                {
+                  "id": "b",
+                  "text": "Que ce droit, déjà prévu par les textes, devienne une réalité au quotidien."
+                },
                 {
                   "id": "c",
-                  "text": "Qu'il soit supprimé, puisque les télétravailleurs sont plus productifs."
+                  "text": "Qu'il soit assoupli, puisque les télétravailleurs sont plus productifs."
                 }
               ],
               "answer": ["b"],
@@ -154,51 +194,84 @@
               "type": "choice",
               "prompt": "Les entreprises qui ont voulu imposer un retour au bureau tous les jours...",
               "options": [
-                { "id": "a", "text": "ont dû agrandir leurs locaux." },
-                { "id": "b", "text": "ont, pour la plupart, abandonné cette idée." },
-                { "id": "c", "text": "ont obtenu l'accord de leurs salariés." }
+                {
+                  "id": "a",
+                  "text": "ont obtenu gain de cause malgré quelques démissions."
+                },
+                {
+                  "id": "b",
+                  "text": "ont, pour la plupart, fini par revenir sur leur décision."
+                },
+                {
+                  "id": "c",
+                  "text": "ont imposé un retour progressif, sur plusieurs mois."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« la plupart y ont renoncé face au mécontentement de leurs équipes » — 대부분 포기했다."
+              "explanation": "« la plupart y ont renoncé face au mécontentement de leurs équipes, voire à des démissions » — 대부분 포기했다. 사직이 나온 것은 맞지만 그 때문에 물러섰으니 a는 틀리다."
             },
             {
               "id": "q7",
               "type": "choice",
               "prompt": "L'entreprise lyonnaise a réaménagé ses locaux pour...",
               "options": [
-                { "id": "a", "text": "favoriser le travail en commun." },
-                { "id": "b", "text": "accueillir davantage de salariés." },
-                { "id": "c", "text": "créer plus de bureaux individuels." }
+                {
+                  "id": "a",
+                  "text": "favoriser la collaboration entre les membres des équipes."
+                },
+                {
+                  "id": "b",
+                  "text": "pouvoir accueillir un plus grand nombre de salariés."
+                },
+                {
+                  "id": "c",
+                  "text": "offrir à chacun un poste individuel au calme."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Nos collaborateurs ne viennent plus pour faire ce qu'ils peuvent faire chez eux, mais pour travailler ensemble » — 함께 일하기 위한 공간이다. 개인 사무실은 오히려 없앴다(« Les bureaux individuels ont été remplacés »)."
+              "explanation": "« Nos collaborateurs ne viennent plus pour faire ce qu'ils peuvent faire chez eux, mais pour travailler ensemble » — 함께 일하기 위한 공간이다. 조용한 공간(« des espaces calmes »)은 있지만 개인 자리는 오히려 없앴다(« Les bureaux individuels ont été remplacés »)라서 c는 틀리다."
             },
             {
               "id": "q8",
               "type": "choice",
               "prompt": "Pourquoi de nombreuses entreprises ne prévoient-elles plus un bureau par personne ?",
               "options": [
-                { "id": "a", "text": "Parce que les salariés l'ont demandé." },
-                { "id": "b", "text": "Parce que la loi l'interdit désormais." },
+                {
+                  "id": "a",
+                  "text": "Parce que les salariés préfèrent changer de place chaque jour."
+                },
+                {
+                  "id": "b",
+                  "text": "Parce que ces entreprises ont fortement réduit leurs effectifs."
+                },
                 {
                   "id": "c",
-                  "text": "Parce que les salariés ne sont jamais tous présents le même jour."
+                  "text": "Parce qu'une partie du personnel est toujours absente des locaux."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« comme ils ne sont jamais tous présents le même jour, de nombreuses entreprises ne prévoient plus un bureau par personne » — 모두가 같은 날 출근하지 않기 때문이다."
+              "explanation": "« comme ils ne sont jamais tous présents le même jour, de nombreuses entreprises ne prévoient plus un bureau par personne » — 언제나 일부는 출근하지 않기 때문이다. 자리를 바꾸는 것은 결과이고, 오히려 « Une pratique que certains vivent mal »이라 a는 틀리다."
             },
             {
               "id": "q9",
               "type": "choice",
               "prompt": "Qu'exprime le comptable parisien ?",
               "options": [
-                { "id": "a", "text": "Sa satisfaction de pouvoir changer de place." },
-                { "id": "b", "text": "Un sentiment de ne plus avoir sa place au bureau." },
-                { "id": "c", "text": "Son indifférence face à ces changements." }
+                {
+                  "id": "a",
+                  "text": "Sa satisfaction de pouvoir changer de place."
+                },
+                {
+                  "id": "b",
+                  "text": "Un sentiment de ne plus avoir sa place au bureau."
+                },
+                {
+                  "id": "c",
+                  "text": "Son indifférence face à ces changements."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -209,16 +282,22 @@
               "type": "choice",
               "prompt": "Selon les spécialistes de l'immobilier, la réduction des surfaces de bureaux...",
               "options": [
-                { "id": "a", "text": "est une mode qui ne durera pas." },
-                { "id": "b", "text": "va obliger les salariés à revenir plus souvent." },
+                {
+                  "id": "a",
+                  "text": "est une tendance passagère, liée à la sortie des confinements."
+                },
+                {
+                  "id": "b",
+                  "text": "suffira à elle seule à rendre le bureau plus attirant."
+                },
                 {
                   "id": "c",
-                  "text": "ne sera positive que si les économies servent à améliorer les espaces."
+                  "text": "ne sera bénéfique que si l'argent économisé améliore les lieux."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« Encore faut-il que ces économies soient réinvesties dans la qualité des espaces restants. Faute de quoi... » — 절약한 돈을 공간의 질에 다시 써야 한다는 조건이다. 「la tendance est durable」이라 a는 틀리다."
+              "explanation": "« Encore faut-il que ces économies soient réinvesties dans la qualité des espaces restants. Faute de quoi... » — 절약한 돈을 공간의 질에 다시 써야 한다는 조건이다. 「la tendance est durable」이라 a는 틀리고, 조건 없이는 오히려 « par obligation plutôt que par envie »가 된다고 하니 b도 틀리다."
             }
           ]
         }
@@ -240,10 +319,22 @@
               "criterion": "Respect de la consigne (destinataire, registre formel, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]

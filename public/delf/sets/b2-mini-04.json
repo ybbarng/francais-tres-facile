@@ -19,7 +19,7 @@
               {
                 "speaker": "Journaliste",
                 "voice": "Sandy (프랑스어(프랑스))",
-                "text": "Avec ses ruelles fleuries et sa vue sur la mer, le village de Saint-Aurel accueille chaque été près de deux millions de visiteurs, pour seulement huit cents habitants. Cette année, la commune a décidé d'agir. Son maire, Henri Castel, nous explique."
+                "text": "Avec ses ruelles fleuries et sa vue sur la mer, le village de Saint-Aurel accueille chaque été près d'un demi-million de visiteurs, pour seulement huit cents habitants. Cette année, la commune a décidé d'agir. Son maire, Henri Castel, nous explique."
               },
               {
                 "speaker": "Henri Castel",
@@ -54,13 +54,22 @@
               "type": "choice",
               "prompt": "Selon le maire, quelle était la situation du village en été ?",
               "options": [
-                { "id": "a", "text": "Les touristes étaient moins nombreux que prévu." },
-                { "id": "b", "text": "Les habitants avaient du mal à vivre normalement." },
-                { "id": "c", "text": "Les commerces manquaient de personnel." }
+                {
+                  "id": "a",
+                  "text": "Le tourisme menaçait de faire fermer les commerces du village."
+                },
+                {
+                  "id": "b",
+                  "text": "La vie quotidienne des habitants était devenue très pénible."
+                },
+                {
+                  "id": "c",
+                  "text": "Les visiteurs se plaignaient du manque de places de parking."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« la situation était devenue invivable : ... des habitants qui n'osaient plus sortir de chez eux »."
+              "explanation": "« la situation était devenue invivable : des embouteillages dès huit heures du matin, des déchets partout, et des habitants qui n'osaient plus sortir de chez eux ». 교통 체증은 나오지만 방문객이 주차 불평을 했다는 말은 없다(c)."
             },
             {
               "id": "q2",
@@ -69,56 +78,86 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Une limite de quatre mille visiteurs par jour, sur réservation."
+                  "text": "Un nombre maximal d'entrées quotidiennes, à réserver sans frais."
                 },
-                { "id": "b", "text": "Une entrée payante pour le centre historique." },
-                { "id": "c", "text": "L'interdiction des voitures en juillet et en août." }
+                {
+                  "id": "b",
+                  "text": "Un droit d'entrée payant pour accéder au centre historique."
+                },
+                {
+                  "id": "c",
+                  "text": "Un accès au centre réservé aux visiteurs qui dorment au village."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« l'accès au centre historique sera limité à quatre mille personnes par jour, sur réservation gratuite »."
+              "explanation": "« l'accès au centre historique sera limité à quatre mille personnes par jour, sur réservation gratuite ». 입장료는 기자가 꺼낸 생각이고 시장이 거절했다(b)."
             },
             {
               "id": "q3",
               "type": "choice",
               "prompt": "Pourquoi le maire a-t-il refusé de faire payer l'entrée ?",
               "options": [
-                { "id": "a", "text": "Parce que la loi l'interdit." },
-                { "id": "b", "text": "Parce que cela rapporterait trop peu." },
+                {
+                  "id": "a",
+                  "text": "Parce que Venise a abandonné ce système, jugé inefficace."
+                },
+                {
+                  "id": "b",
+                  "text": "Parce que la recette ne couvrirait pas le coût du dispositif."
+                },
                 {
                   "id": "c",
-                  "text": "Pour ne pas réserver le village aux visiteurs les plus aisés."
+                  "text": "Parce que le village doit rester accessible à tous les budgets."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« Faire payer, c'est réserver le village à ceux qui en ont les moyens. »"
+              "explanation": "« Faire payer, c'est réserver le village à ceux qui en ont les moyens. » 돈이 있는 사람만 오게 되니 거절했다. 베네치아가 그만뒀다는 말이나 비용 계산은 없다."
             },
             {
               "id": "q4",
               "type": "choice",
               "prompt": "Quel est l'objectif principal de la mesure ?",
               "options": [
-                { "id": "a", "text": "Augmenter les recettes de la commune." },
-                { "id": "b", "text": "Mieux répartir les visiteurs au cours de l'année." },
-                { "id": "c", "text": "Attirer une clientèle plus riche." }
+                {
+                  "id": "a",
+                  "text": "Faire gagner de l'argent à la commune sans faire fuir les touristes."
+                },
+                {
+                  "id": "b",
+                  "text": "Inciter une partie des visiteurs à venir hors de la haute saison."
+                },
+                {
+                  "id": "c",
+                  "text": "Faire baisser durablement le nombre total de touristes au village."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Notre but n'est pas de gagner de l'argent, c'est de mieux répartir les visiteurs dans l'année. »"
+              "explanation": "« Notre but n'est pas de gagner de l'argent, c'est de mieux répartir les visiteurs dans l'année. D'ailleurs, beaucoup de gens viennent ici en août par habitude, alors que le village est tout aussi beau en mai ou en octobre. » 성수기를 피해 오게 하려는 것이다. 「Nous ne sommes pas contre le tourisme」라서 관광객 수 자체를 줄이려는 c는 틀리다."
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "D'après les restaurateurs, les touristes qui réservent...",
               "options": [
-                { "id": "a", "text": "se plaignent du système." },
-                { "id": "b", "text": "vont moins souvent au restaurant." },
-                { "id": "c", "text": "restent plus longtemps et dépensent davantage." }
+                {
+                  "id": "a",
+                  "text": "viennent moins nombreux, mais à des heures plus calmes."
+                },
+                {
+                  "id": "b",
+                  "text": "passent moins de temps au village, mais y reviennent plus souvent."
+                },
+                {
+                  "id": "c",
+                  "text": "s'attardent davantage et laissent plus d'argent sur place."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« les touristes qui réservent restent plus longtemps et consomment davantage »."
+              "explanation": "« les touristes qui réservent restent plus longtemps et consomment davantage que ceux qui traversaient le village en une heure » — 더 오래 머물고 더 많이 쓴다."
             }
           ]
         }
@@ -140,9 +179,18 @@
               "type": "choice",
               "prompt": "Le « tourisme de la dernière chance » consiste à...",
               "options": [
-                { "id": "a", "text": "partir en vacances à la dernière minute." },
-                { "id": "b", "text": "visiter des lieux menacés de disparaître." },
-                { "id": "c", "text": "voyager le moins possible." }
+                {
+                  "id": "a",
+                  "text": "partir en vacances à la dernière minute."
+                },
+                {
+                  "id": "b",
+                  "text": "visiter des lieux menacés de disparaître."
+                },
+                {
+                  "id": "c",
+                  "text": "voyager le moins possible."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -155,43 +203,64 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Ces touristes aggravent, en voyageant, le problème qui menace ces lieux."
+                  "text": "En voyageant, ces touristes aggravent ce qui menace ces lieux."
                 },
-                { "id": "b", "text": "Ces lieux sont plus visités en hiver qu'en été." },
-                { "id": "c", "text": "Ces touristes refusent de prendre l'avion." }
+                {
+                  "id": "b",
+                  "text": "Ces touristes ignorent tout des menaces qui pèsent sur ces lieux."
+                },
+                {
+                  "id": "c",
+                  "text": "Ces lieux attirent d'autant plus qu'on en limite l'accès."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« ces touristes prennent souvent l'avion, contribuant ainsi au problème qu'ils déplorent »."
+              "explanation": "« ces touristes prennent souvent l'avion, contribuant ainsi au problème qu'ils déplorent ». 위협 때문에 그곳을 고르니 위협을 모른다는 b는 틀리다."
             },
             {
               "id": "q8",
               "type": "choice",
               "prompt": "Que pensent certains de ces touristes de leur propre voyage ?",
               "options": [
-                { "id": "a", "text": "Ils ignorent totalement son impact." },
-                { "id": "b", "text": "Ils regrettent de l'avoir fait." },
+                {
+                  "id": "a",
+                  "text": "Ils pensent compenser son impact par leurs gestes écologiques."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils n'ont pas conscience de sa contribution au réchauffement."
+                },
                 {
                   "id": "c",
-                  "text": "Ils jugent qu'il n'a pas de conséquence à l'échelle mondiale."
+                  "text": "Ils estiment que, pris isolément, il ne pèse guère sur le climat."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« Certains d'entre eux en ont d'ailleurs conscience, mais estiment que leur voyage, à lui seul, ne changera rien à l'échelle de la planète. » 영향을 알고는 있으므로 a는 틀리다."
+              "explanation": "« Certains d'entre eux en ont d'ailleurs conscience, mais estiment que leur voyage, à lui seul, ne changera rien à l'échelle de la planète. » 영향을 알고는 있으므로 b는 틀리고, 상쇄한다는 말은 없다(a)."
             },
             {
               "id": "q9",
               "type": "choice",
               "prompt": "Selon les professionnels du tourisme, ces visites peuvent...",
               "options": [
-                { "id": "a", "text": "provoquer une forte prise de conscience." },
-                { "id": "b", "text": "ralentir la fonte des glaciers." },
-                { "id": "c", "text": "remplacer les reportages à la télévision." }
+                {
+                  "id": "a",
+                  "text": "toucher les visiteurs plus profondément qu'un documentaire."
+                },
+                {
+                  "id": "b",
+                  "text": "financer la protection des sites les plus menacés."
+                },
+                {
+                  "id": "c",
+                  "text": "convaincre les visiteurs de renoncer définitivement à l'avion."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« voir de ses propres yeux un glacier qui recule peut provoquer une prise de conscience bien plus forte que n'importe quel reportage »."
+              "explanation": "« voir de ses propres yeux un glacier qui recule peut provoquer une prise de conscience bien plus forte que n'importe quel reportage ». 실제로 습관이 바뀌는지는 마지막 문단이 의심한다(c)."
             },
             {
               "id": "q10",
@@ -200,17 +269,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "La plupart des visiteurs changent durablement leurs habitudes."
+                  "text": "Les visiteurs changent leurs habitudes, mais seulement quelques mois."
                 },
                 {
                   "id": "b",
-                  "text": "Les bonnes intentions des visiteurs se concrétisent rarement."
+                  "text": "Les visiteurs annoncent des changements qu'ils appliquent rarement."
                 },
-                { "id": "c", "text": "Les visiteurs ne sont pas touchés par ce qu'ils voient." }
+                {
+                  "id": "c",
+                  "text": "Les visiteurs sont moins émus sur place qu'ils ne l'imaginaient."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« si les visiteurs déclarent souvent vouloir modifier leurs habitudes, peu d'entre eux le font réellement »."
+              "explanation": "« si les visiteurs déclarent souvent vouloir modifier leurs habitudes, peu d'entre eux le font réellement dans les mois qui suivent ». 몇 달은 바꾼다는 a는 거꾸로다. 바꾸는 사람이 적다."
             }
           ]
         }
@@ -232,10 +304,22 @@
               "criterion": "Respect de la consigne (lettre formelle, destinataire, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]

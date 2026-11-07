@@ -54,65 +54,110 @@
               "type": "choice",
               "prompt": "Quel résultat Karim Haddad a-t-il obtenu ?",
               "options": [
-                { "id": "a", "text": "Il a supprimé tout gaspillage." },
-                { "id": "b", "text": "Il a réduit le gaspillage de moitié en un an." },
-                { "id": "c", "text": "Il a réduit le gaspillage de quarante kilos par semaine." }
+                {
+                  "id": "a",
+                  "text": "Il a fait disparaître presque tous les restes en quelques mois."
+                },
+                {
+                  "id": "b",
+                  "text": "Il a divisé par deux la quantité de nourriture jetée en un an."
+                },
+                {
+                  "id": "c",
+                  "text": "Il a ramené les déchets de la cantine à quarante kilos par jour."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« a réussi à réduire ce gaspillage de moitié en un an ». 40킬로그램은 처음에 하루에 버리던 양이다."
+              "explanation": "« a réussi à réduire ce gaspillage de moitié en un an » — 절반으로 줄였다. 40킬로그램은 처음에 하루에 버리던 양(« on jetait près de quarante kilos de nourriture par jour »)이라 c는 틀리다."
             },
             {
               "id": "q2",
               "type": "choice",
               "prompt": "Quelle a été la première mesure prise ?",
               "options": [
-                { "id": "a", "text": "Peser chaque jour les restes." },
-                { "id": "b", "text": "Réduire toutes les portions." },
-                { "id": "c", "text": "Supprimer les légumes du menu." }
+                {
+                  "id": "a",
+                  "text": "Mesurer précisément ce que les élèves laissaient dans leur assiette."
+                },
+                {
+                  "id": "b",
+                  "text": "Réduire la taille de toutes les portions servies aux élèves."
+                },
+                {
+                  "id": "c",
+                  "text": "Interroger les élèves sur les plats qu'ils n'aimaient pas."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« La première, ça a été de peser chaque jour ce qui revenait dans les assiettes. »"
+              "explanation": "« La première, ça a été de peser chaque jour ce qui revenait dans les assiettes. Tant qu'on ne mesure pas, on ne se rend pas compte. » 양을 줄인 것이 아니라 크기를 고르게 했다(b가 아니다)."
             },
             {
               "id": "q3",
               "type": "choice",
               "prompt": "Pourquoi a-t-on proposé deux tailles de portion ?",
               "options": [
-                { "id": "a", "text": "Pour faire payer davantage les grandes portions." },
-                { "id": "b", "text": "Parce que les parents l'avaient demandé." },
-                { "id": "c", "text": "Parce que les plus jeunes ne finissaient pas leur assiette." }
+                {
+                  "id": "a",
+                  "text": "Pour pouvoir faire payer davantage les grandes portions."
+                },
+                {
+                  "id": "b",
+                  "text": "Parce que les élèves les plus âgés réclamaient plus à manger."
+                },
+                {
+                  "id": "c",
+                  "text": "Parce qu'une portion unique ne convenait pas aux plus jeunes."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« on servait tout le monde de la même façon, et forcément, les plus jeunes laissaient la moitié de leur assiette »."
+              "explanation": "« Avant, on servait tout le monde de la même façon, et forcément, les plus jeunes laissaient la moitié de leur assiette. » 모두에게 같은 양을 주니 어린 학생들이 남겼다."
             },
             {
               "id": "q4",
               "type": "choice",
               "prompt": "Comment les élèves participent-ils au projet ?",
               "options": [
-                { "id": "a", "text": "Certains participent à l'élaboration des menus." },
-                { "id": "b", "text": "Ils pèsent eux-mêmes les restes." },
-                { "id": "c", "text": "Ils aident à servir les repas." }
+                {
+                  "id": "a",
+                  "text": "Des volontaires aident à composer les menus chaque mois."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils pèsent eux-mêmes les restes à la fin de chaque repas."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils choisissent chaque jour les légumes servis à la cantine."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« un groupe d'élèves volontaires participe à l'élaboration des menus une fois par mois »."
+              "explanation": "« un groupe d'élèves volontaires participe à l'élaboration des menus une fois par mois ». 남은 음식을 다는 것은 조리팀이 한 일이다(b)."
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "Grâce à l'argent économisé, la cantine a pu...",
               "options": [
-                { "id": "a", "text": "baisser le prix du repas." },
-                { "id": "b", "text": "acheter davantage de produits locaux." },
-                { "id": "c", "text": "embaucher un cuisinier supplémentaire." }
+                {
+                  "id": "a",
+                  "text": "proposer des repas moins chers aux familles des élèves."
+                },
+                {
+                  "id": "b",
+                  "text": "se fournir davantage auprès de producteurs proches, au même prix."
+                },
+                {
+                  "id": "c",
+                  "text": "embaucher un cuisinier de plus pour retravailler les recettes."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« l'argent économisé nous a permis d'acheter davantage de produits locaux, sans augmenter le prix du repas » — 가격은 그대로라서 a는 틀리다."
+              "explanation": "« l'argent économisé nous a permis d'acheter davantage de produits locaux, sans augmenter le prix du repas » — 값은 그대로이니 a는 틀리다."
             }
           ]
         }
@@ -134,11 +179,17 @@
               "type": "choice",
               "prompt": "Selon l'article, une partie du gaspillage alimentaire s'explique par...",
               "options": [
-                { "id": "a", "text": "le prix trop élevé des produits frais." },
-                { "id": "b", "text": "l'absence de date sur certains emballages." },
+                {
+                  "id": "a",
+                  "text": "le prix trop élevé des produits frais."
+                },
+                {
+                  "id": "b",
+                  "text": "l'absence de date sur les produits secs."
+                },
                 {
                   "id": "c",
-                  "text": "une confusion entre deux mentions figurant sur les emballages."
+                  "text": "une confusion fréquente entre deux mentions."
                 }
               ],
               "answer": ["c"],
@@ -150,9 +201,18 @@
               "type": "choice",
               "prompt": "La mention « à consommer jusqu'au »...",
               "options": [
-                { "id": "a", "text": "doit être respectée pour des raisons de santé." },
-                { "id": "b", "text": "concerne surtout les produits secs." },
-                { "id": "c", "text": "signale seulement une possible perte de goût." }
+                {
+                  "id": "a",
+                  "text": "doit être respectée pour des raisons de santé."
+                },
+                {
+                  "id": "b",
+                  "text": "concerne surtout les produits secs."
+                },
+                {
+                  "id": "c",
+                  "text": "signale seulement une possible perte de goût."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -163,22 +223,40 @@
               "type": "choice",
               "prompt": "Un paquet de riz dont la date « de préférence avant » est dépassée...",
               "options": [
-                { "id": "a", "text": "doit être jeté immédiatement." },
-                { "id": "b", "text": "peut être consommé s'il a été bien conservé." },
-                { "id": "c", "text": "présente un risque pour la santé." }
+                {
+                  "id": "a",
+                  "text": "conserve exactement le même goût qu'avant cette date."
+                },
+                {
+                  "id": "b",
+                  "text": "peut être consommé s'il a été bien conservé."
+                },
+                {
+                  "id": "c",
+                  "text": "présente un risque pour la santé."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "쌀은 최소 보존 기한 품목이고 « il ne présente pas de danger s'il a été conservé correctement »."
+              "explanation": "쌀은 최소 보존 기한 품목이고 « il ne présente pas de danger s'il a été conservé correctement ». 다만 « le produit peut perdre un peu de son goût ou de sa texture »라서 a도 틀리다."
             },
             {
               "id": "q9",
               "type": "choice",
               "prompt": "La mention ajoutée par certains fabricants invite les consommateurs à...",
               "options": [
-                { "id": "a", "text": "jeter les produits plus tôt." },
-                { "id": "b", "text": "conserver les produits au réfrigérateur." },
-                { "id": "c", "text": "vérifier eux-mêmes l'état du produit avant de le jeter." }
+                {
+                  "id": "a",
+                  "text": "jeter le produit dès que la date est atteinte."
+                },
+                {
+                  "id": "b",
+                  "text": "garder le produit au réfrigérateur après ouverture."
+                },
+                {
+                  "id": "c",
+                  "text": "juger par eux-mêmes si le produit est encore bon."
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -197,7 +275,10 @@
                   "id": "b",
                   "text": "les industriels la réclament, les associations la refusent."
                 },
-                { "id": "c", "text": "associations et industriels sont d'accord." }
+                {
+                  "id": "c",
+                  "text": "associations et industriels sont d'accord."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -210,11 +291,11 @@
     {
       "area": "PE",
       "minutes": 8,
-      "instructions": "Rédigez un texte argumenté. Vous exprimez clairement votre position et vous la justifiez par des arguments et au moins un exemple.",
+      "instructions": "Rédigez un texte argumenté. Vous présentez clairement vos propositions et vous les justifiez par des arguments et au moins un exemple.",
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Le restaurant universitaire de votre établissement jette chaque jour une grande quantité de nourriture. Vous écrivez un court article pour le journal des étudiants dans lequel vous proposez des solutions et expliquez pourquoi elles seraient efficaces. (120 à 150 mots)",
+          "prompt": "Le restaurant universitaire de votre établissement jette chaque jour une grande quantité de nourriture. Vous écrivez un court article pour le journal des étudiants. Vous proposez au moins deux solutions, vous expliquez pourquoi elles seraient efficaces et vous donnez un exemple. (120 à 150 mots)",
           "minWords": 120,
           "maxWords": 150,
           "points": 10,
@@ -223,10 +304,22 @@
               "criterion": "Respect de la consigne (article, propositions, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Pertinence des propositions et justification de leur efficacité",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]

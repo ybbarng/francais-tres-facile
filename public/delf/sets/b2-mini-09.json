@@ -54,13 +54,22 @@
               "type": "choice",
               "prompt": "Que pense Sophie Garnier du reproche selon lequel les journalistes seraient éloignés des préoccupations du public ?",
               "options": [
-                { "id": "a", "text": "Elle le juge complètement faux." },
-                { "id": "b", "text": "Elle estime qu'il est en partie fondé." },
-                { "id": "c", "text": "Elle pense qu'il vise seulement les réseaux sociaux." }
+                {
+                  "id": "a",
+                  "text": "Elle le rejette, car les journalistes viennent de tous les milieux."
+                },
+                {
+                  "id": "b",
+                  "text": "Elle admet qu'il n'est pas dépourvu de fondement."
+                },
+                {
+                  "id": "c",
+                  "text": "Elle le juge exagéré, la faute revenant surtout aux réseaux sociaux."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Ce reproche n'est pas totalement injustifié, il faut le reconnaître. » — 어느 정도는 맞다고 인정한다."
+              "explanation": "« Ce reproche n'est pas totalement injustifié, il faut le reconnaître. » — 어느 정도는 맞다고 인정한다. 소셜 미디어는 따로 드는 두 번째 이유(« Ensuite, les réseaux sociaux... »)라서 c는 틀리다."
             },
             {
               "id": "q2",
@@ -69,10 +78,16 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "une rumeur partagée par un proche peut sembler plus crédible qu'un article vérifié."
+                  "text": "on se fie parfois davantage à un proche qu'à un média sérieux."
                 },
-                { "id": "b", "text": "les gens ne partagent plus que des articles vérifiés." },
-                { "id": "c", "text": "les journaux ont perdu tous leurs lecteurs." }
+                {
+                  "id": "b",
+                  "text": "les gens vérifient mieux les informations qu'ils partagent."
+                },
+                {
+                  "id": "c",
+                  "text": "les articles vérifiés sont de moins en moins partagés."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -83,11 +98,17 @@
               "type": "choice",
               "prompt": "Quelle est la principale limite de la vérification des faits ?",
               "options": [
-                { "id": "a", "text": "Elle coûte trop cher aux rédactions." },
-                { "id": "b", "text": "Les journalistes qui la font se trompent souvent." },
+                {
+                  "id": "a",
+                  "text": "Elle coûte trop cher aux rédactions qui la pratiquent."
+                },
+                {
+                  "id": "b",
+                  "text": "Les vérificateurs commettent eux-mêmes trop d'erreurs."
+                },
                 {
                   "id": "c",
-                  "text": "La correction arrive trop tard et touche peu ceux qui ont cru la rumeur."
+                  "text": "Elle arrive tard et atteint rarement ceux qui ont été trompés."
                 }
               ],
               "answer": ["c"],
@@ -99,26 +120,44 @@
               "type": "choice",
               "prompt": "Pour elle, l'éducation aux médias consiste à...",
               "options": [
-                { "id": "a", "text": "dire aux élèves quelles sources ils doivent croire." },
-                { "id": "b", "text": "donner aux jeunes les moyens de juger par eux-mêmes." },
-                { "id": "c", "text": "interdire les réseaux sociaux à l'école." }
+                {
+                  "id": "a",
+                  "text": "indiquer aux élèves les sources auxquelles ils peuvent se fier."
+                },
+                {
+                  "id": "b",
+                  "text": "aider les jeunes à se forger leur propre avis sur ce qu'ils lisent."
+                },
+                {
+                  "id": "c",
+                  "text": "apprendre aux élèves à se passer des réseaux sociaux."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Il ne s'agit pas de leur dire quoi penser, mais de leur donner les moyens de juger par eux-mêmes. » 그래서 a는 틀리다."
+              "explanation": "« Il ne s'agit pas de leur dire quoi penser, mais de leur donner les moyens de juger par eux-mêmes. » 믿을 출처를 정해 주는 것이 아니라서 a는 틀리다."
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "Selon elle, que doivent faire les journalistes ?",
               "options": [
-                { "id": "a", "text": "Quitter les réseaux sociaux." },
-                { "id": "b", "text": "Publier plus vite que les rumeurs." },
-                { "id": "c", "text": "Être plus transparents et reconnaître leurs erreurs." }
+                {
+                  "id": "a",
+                  "text": "Réagir plus vite que les rumeurs sur les réseaux sociaux."
+                },
+                {
+                  "id": "b",
+                  "text": "Choisir des sujets plus proches des préoccupations du public."
+                },
+                {
+                  "id": "c",
+                  "text": "Expliquer leurs méthodes et admettre quand ils se trompent."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« nous devons être plus transparents sur notre manière de travailler, et reconnaître nos erreurs »."
+              "explanation": "« nous, journalistes, nous devons être plus transparents sur notre manière de travailler, et reconnaître nos erreurs quand nous en faisons ». 정정이 늦다는 것은 한계로 말했을 뿐 해법으로 들지 않았다(a)."
             }
           ]
         }
@@ -140,9 +179,18 @@
               "type": "choice",
               "prompt": "L'« évitement de l'information » désigne le fait de...",
               "options": [
-                { "id": "a", "text": "ne pas avoir accès aux médias." },
-                { "id": "b", "text": "ne lire que des médias étrangers." },
-                { "id": "c", "text": "éviter volontairement de s'informer." }
+                {
+                  "id": "a",
+                  "text": "ne plus avoir accès aux médias traditionnels."
+                },
+                {
+                  "id": "b",
+                  "text": "ne s'informer que par les réseaux sociaux."
+                },
+                {
+                  "id": "c",
+                  "text": "se tenir à l'écart des nouvelles par choix."
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -155,23 +203,38 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "s'explique souvent par le fait que l'actualité affecte trop ces personnes."
+                  "text": "est souvent lié au poids émotionnel des nouvelles."
                 },
-                { "id": "b", "text": "prouve que ces personnes ne s'intéressent pas au monde." },
-                { "id": "c", "text": "concerne uniquement les jeunes." }
+                {
+                  "id": "b",
+                  "text": "révèle avant tout un manque d'intérêt pour le monde."
+                },
+                {
+                  "id": "c",
+                  "text": "concerne surtout les personnes les plus jeunes."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« ce comportement ne traduit pas forcément un désintérêt pour le monde ... beaucoup expliquent au contraire que l'actualité les affecte trop »."
+              "explanation": "« ce comportement ne traduit pas forcément un désintérêt pour le monde ... beaucoup expliquent au contraire que l'actualité les affecte trop » « anxiété et sentiment d'impuissance »."
             },
             {
               "id": "q8",
               "type": "choice",
               "prompt": "Au-delà de l'aspect économique, pourquoi ce phénomène inquiète-t-il les rédactions ?",
               "options": [
-                { "id": "a", "text": "Il fait baisser le nombre de journalistes." },
-                { "id": "b", "text": "Il menace la qualité du débat démocratique." },
-                { "id": "c", "text": "Il favorise la publicité au détriment de l'information." }
+                {
+                  "id": "a",
+                  "text": "Il fait baisser le nombre de journalistes."
+                },
+                {
+                  "id": "b",
+                  "text": "Il menace la qualité du débat démocratique."
+                },
+                {
+                  "id": "c",
+                  "text": "Il favorise la publicité au détriment de l'information."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -182,11 +245,17 @@
               "type": "choice",
               "prompt": "Le « journalisme de solutions » consiste à...",
               "options": [
-                { "id": "a", "text": "ne parler que de bonnes nouvelles." },
-                { "id": "b", "text": "laisser le public choisir les sujets traités." },
+                {
+                  "id": "a",
+                  "text": "ne retenir que les nouvelles positives."
+                },
+                {
+                  "id": "b",
+                  "text": "laisser les lecteurs choisir les sujets traités."
+                },
                 {
                   "id": "c",
-                  "text": "présenter les problèmes accompagnés d'initiatives qui y répondent."
+                  "text": "montrer aussi ce qui est tenté face aux problèmes."
                 }
               ],
               "answer": ["c"],
@@ -198,13 +267,22 @@
               "type": "choice",
               "prompt": "Que craignent certains journalistes à propos du journalisme de solutions ?",
               "options": [
-                { "id": "a", "text": "Qu'il donne une image trop optimiste de la réalité." },
-                { "id": "b", "text": "Qu'il coûte trop cher à produire." },
-                { "id": "c", "text": "Qu'il fasse fuir les lecteurs." }
+                {
+                  "id": "a",
+                  "text": "Qu'il finisse par montrer le monde sous un jour trop favorable."
+                },
+                {
+                  "id": "b",
+                  "text": "Qu'il demande trop de moyens aux rédactions."
+                },
+                {
+                  "id": "c",
+                  "text": "Qu'il éloigne une partie du public de l'information."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« craignant qu'elle ne glisse vers une vision trop optimiste de la réalité »."
+              "explanation": "« craignant qu'elle ne glisse vers une vision trop optimiste de la réalité ». 오히려 « Une approche qui séduit une partie du public »라서 c는 틀리다."
             }
           ]
         }
@@ -226,10 +304,22 @@
               "criterion": "Respect de la consigne (réponse à la question, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]

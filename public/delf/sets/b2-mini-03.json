@@ -24,7 +24,7 @@
               {
                 "speaker": "Nadia Benali",
                 "voice": "Flo (프랑스어(프랑스))",
-                "text": "Peur, non. Inquiète, un peu. Il est vrai que la traduction automatique a fait des progrès spectaculaires. Pour des textes simples, comme un mode d'emploi, elle donne aujourd'hui des résultats tout à fait corrects. Du coup, certains clients ne font plus appel à nous pour ce type de travail, et mes revenus ont baissé d'environ un tiers en deux ans."
+                "text": "Peur, non. Mais je suis un peu inquiète, je l'avoue. Il est vrai que la traduction automatique a fait des progrès spectaculaires. Pour des textes simples, comme un mode d'emploi, elle donne aujourd'hui des résultats tout à fait corrects. Du coup, certains clients ne font plus appel à nous pour ce type de travail, et mes revenus ont baissé d'environ un tiers en deux ans."
               },
               {
                 "speaker": "Journaliste",
@@ -64,55 +64,88 @@
               "type": "choice",
               "prompt": "Comment Nadia Benali se sent-elle face à l'intelligence artificielle ?",
               "options": [
-                { "id": "a", "text": "Elle est terrifiée." },
-                { "id": "b", "text": "Elle est tout à fait sereine." },
-                { "id": "c", "text": "Elle est un peu inquiète." }
+                {
+                  "id": "a",
+                  "text": "Elle craint de perdre son métier très rapidement."
+                },
+                {
+                  "id": "b",
+                  "text": "Elle reste confiante, car la machine fait encore trop d'erreurs."
+                },
+                {
+                  "id": "c",
+                  "text": "Elle éprouve une certaine inquiétude, sans être alarmée."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« Peur, non. Inquiète, un peu. »"
+              "explanation": "« Peur, non. Mais je suis un peu inquiète, je l'avoue. » 두렵지는 않지만 조금 걱정한다. 단순한 글에서는 기계가 « des résultats tout à fait corrects »를 낸다고 인정하니 b도 틀리다."
             },
             {
               "id": "q2",
               "type": "choice",
               "prompt": "En deux ans, ses revenus...",
               "options": [
-                { "id": "a", "text": "ont baissé d'environ un tiers." },
-                { "id": "b", "text": "ont diminué de moitié." },
-                { "id": "c", "text": "sont restés stables." }
+                {
+                  "id": "a",
+                  "text": "ont reculé de près d'un tiers, certains clients se passant d'elle."
+                },
+                {
+                  "id": "b",
+                  "text": "ont chuté de moitié, surtout pour les textes littéraires."
+                },
+                {
+                  "id": "c",
+                  "text": "sont restés stables, grâce aux travaux de post-édition."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« mes revenus ont baissé d'environ un tiers en deux ans »."
+              "explanation": "« certains clients ne font plus appel à nous pour ce type de travail, et mes revenus ont baissé d'environ un tiers en deux ans » — 3분의 1쯤 줄었다. 문학 번역은 오히려 지금 맡는 일이다."
             },
             {
               "id": "q3",
               "type": "choice",
               "prompt": "Pour s'adapter, Nadia Benali s'est spécialisée dans...",
               "options": [
-                { "id": "a", "text": "les modes d'emploi." },
-                { "id": "b", "text": "les contrats et les textes littéraires." },
-                { "id": "c", "text": "le développement d'outils de traduction." }
+                {
+                  "id": "a",
+                  "text": "les textes techniques simples, comme les modes d'emploi."
+                },
+                {
+                  "id": "b",
+                  "text": "des textes où la précision et les nuances sont décisives."
+                },
+                {
+                  "id": "c",
+                  "text": "les textes médicaux, que la machine ne sait pas traduire."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Je traduis maintenant surtout des contrats et des textes littéraires » — 사용 설명서는 기계가 이미 잘 하는 일로 나온다."
+              "explanation": "« Je traduis maintenant surtout des contrats et des textes littéraires, là où la moindre erreur, la moindre nuance compte. » 사용 설명서는 기계가 이미 잘 하는 일로 나오고(a), 의학은 젊은 번역가에게 권하는 분야의 예일 뿐 자신이 맡는 일이 아니다(c)."
             },
             {
               "id": "q4",
               "type": "choice",
               "prompt": "Que pense-t-elle de la post-édition ?",
               "options": [
-                { "id": "a", "text": "C'est plus passionnant que la traduction." },
-                { "id": "b", "text": "C'est un travail rapide et bien payé." },
+                {
+                  "id": "a",
+                  "text": "C'est un travail plus stimulant, mais encore mal rémunéré."
+                },
+                {
+                  "id": "b",
+                  "text": "C'est un travail plus rapide, donc rentable malgré des tarifs bas."
+                },
                 {
                   "id": "c",
-                  "text": "C'est moins intéressant, et mal payé par rapport au temps qu'elle demande."
+                  "text": "C'est un travail moins gratifiant, et peu payé pour l'effort fourni."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« moins que la traduction elle-même » « les clients paient la post-édition beaucoup moins cher, alors qu'elle demande parfois autant de temps qu'une traduction complète »."
+              "explanation": "« Franchement, moins que la traduction elle-même. » « les clients paient la post-édition beaucoup moins cher, alors qu'elle demande parfois autant de temps qu'une traduction complète » — 덜 재미있고 드는 시간에 비해 돈이 적다. 번역만큼 시간이 걸리기도 하니 b의 「plus rapide」도 틀리다."
             },
             {
               "id": "q5",
@@ -121,14 +154,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Maîtriser les outils et se spécialiser dans un domaine précis."
+                  "text": "Apprendre à se servir des machines et devenir expert d'un domaine."
                 },
-                { "id": "b", "text": "Choisir un autre métier." },
-                { "id": "c", "text": "Refuser d'utiliser les outils automatiques." }
+                {
+                  "id": "b",
+                  "text": "Se tourner vers un autre métier, moins exposé à l'automatisation."
+                },
+                {
+                  "id": "c",
+                  "text": "Se consacrer à la traduction littéraire, que la machine évite."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Il faudra maîtriser ces outils plutôt que de les ignorer, et surtout développer une expertise dans un domaine précis » — 「De ne pas renoncer」라 b는 틀리다."
+              "explanation": "« Il faudra maîtriser ces outils plutôt que de les ignorer, et surtout développer une expertise dans un domaine précis » — 「De ne pas renoncer」라 b는 틀리고, 권하는 분야는 « le droit, la médecine »이지 문학이 아니다."
             }
           ]
         }
@@ -143,20 +182,29 @@
           "id": "doc2",
           "context": "Vous lisez cet article sur un site d'information.",
           "title": "Recrutement : quand l'algorithme trie les CV",
-          "text": "De plus en plus d'entreprises confient à des logiciels d'intelligence artificielle la première étape du recrutement : la lecture des candidatures. Le principe est simple : l'outil analyse des centaines de CV en quelques minutes et ne retient que ceux qui correspondent le mieux au poste. Pour les services de ressources humaines, submergés de candidatures, le gain de temps est considérable.\n\nCes outils sont souvent présentés comme plus objectifs que les recruteurs humains, qui seraient influencés par leurs préjugés. La réalité est plus nuancée. Un algorithme apprend à partir des recrutements passés ; si ceux-ci étaient discriminatoires, il reproduira les mêmes biais, mais de manière invisible. Une grande entreprise américaine a ainsi dû abandonner son logiciel après avoir découvert qu'il écartait systématiquement les candidatures de femmes.\n\nFaut-il pour autant renoncer à ces technologies ? La plupart des spécialistes ne le pensent pas. Ils réclament en revanche davantage de transparence : les candidats devraient être informés qu'une machine a évalué leur dossier et pouvoir demander qu'un humain le réexamine. C'est d'ailleurs dans cet esprit que la réglementation européenne encadre désormais les systèmes jugés « à haut risque », dont font partie les outils de recrutement.\n\nReste une question que la loi ne réglera pas : celle de la confiance. Un candidat refusé par un recruteur peut au moins espérer une explication. Refusé par un algorithme, il risque de ne jamais savoir pourquoi.",
+          "text": "De plus en plus d'entreprises confient à des logiciels d'intelligence artificielle la première étape du recrutement : la lecture des candidatures. Le principe est simple : l'outil analyse des centaines de CV en quelques minutes et ne retient que ceux qui correspondent le mieux au poste. Pour les services de ressources humaines, submergés de candidatures, le gain de temps est considérable.\n\nCes outils sont souvent présentés comme plus objectifs que les recruteurs humains, qui seraient influencés par leurs préjugés. La réalité est plus nuancée. Un algorithme apprend à partir des recrutements passés ; si ceux-ci étaient discriminatoires, il reproduira les mêmes biais, mais de manière invisible. Une grande entreprise américaine a ainsi dû abandonner son logiciel après avoir découvert qu'il écartait systématiquement les candidatures de femmes.\n\nFaut-il pour autant renoncer à ces technologies ? La plupart des spécialistes ne le pensent pas. Ils réclament en revanche davantage de transparence : les candidats devraient être informés qu'une machine a évalué leur dossier et pouvoir demander qu'un humain le réexamine. C'est d'ailleurs dans cet esprit que la réglementation européenne range désormais les outils de recrutement parmi les systèmes « à haut risque », qui doivent être encadrés plus strictement.\n\nReste une question que la loi ne réglera pas : celle de la confiance. Un candidat refusé par un recruteur peut au moins espérer une explication. Refusé par un algorithme, il risque de ne jamais savoir pourquoi.",
           "questions": [
             {
               "id": "q6",
               "type": "choice",
               "prompt": "Pourquoi les entreprises utilisent-elles ces logiciels ?",
               "options": [
-                { "id": "a", "text": "Pour recruter davantage de femmes." },
-                { "id": "b", "text": "Pour gagner du temps dans le tri des candidatures." },
-                { "id": "c", "text": "Pour supprimer des postes de recruteurs." }
+                {
+                  "id": "a",
+                  "text": "Pour recruter des profils plus variés qu'auparavant."
+                },
+                {
+                  "id": "b",
+                  "text": "Pour traiter rapidement un très grand nombre de candidatures."
+                },
+                {
+                  "id": "c",
+                  "text": "Pour se passer complètement des recruteurs humains."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Pour les services de ressources humaines, submergés de candidatures, le gain de temps est considérable. »"
+              "explanation": "« l'outil analyse des centaines de CV en quelques minutes » « Pour les services de ressources humaines, submergés de candidatures, le gain de temps est considérable. » 기계는 첫 단계만 맡으니 c는 틀리다."
             },
             {
               "id": "q7",
@@ -165,49 +213,82 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Ils peuvent reproduire les discriminations des recrutements passés."
+                  "text": "Ils s'appuient sur d'anciennes décisions qui pouvaient être injustes."
                 },
-                { "id": "b", "text": "Ils lisent mal les CV." },
-                { "id": "c", "text": "Ils sont trop lents." }
+                {
+                  "id": "b",
+                  "text": "Ils sont programmés par des recruteurs qui ont leurs propres préjugés."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils ne savent pas tenir compte de l'expérience des candidats."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Un algorithme apprend à partir des recrutements passés ; si ceux-ci étaient discriminatoires, il reproduira les mêmes biais »."
+              "explanation": "« Un algorithme apprend à partir des recrutements passés ; si ceux-ci étaient discriminatoires, il reproduira les mêmes biais ». 편견은 사람 채용 담당자에 관해 나온 말이고, 알고리즘의 문제는 지난 채용을 배운다는 데 있다(b가 아니다)."
             },
             {
               "id": "q8",
               "type": "choice",
               "prompt": "L'exemple de l'entreprise américaine sert à montrer que...",
               "options": [
-                { "id": "a", "text": "les femmes envoient moins de candidatures." },
-                { "id": "b", "text": "les logiciels font gagner beaucoup de temps." },
-                { "id": "c", "text": "un algorithme peut être discriminatoire." }
+                {
+                  "id": "a",
+                  "text": "les femmes postulent moins souvent que les hommes à ces offres."
+                },
+                {
+                  "id": "b",
+                  "text": "les logiciels sont incapables de lire certains types de CV."
+                },
+                {
+                  "id": "c",
+                  "text": "un outil réputé neutre peut écarter des candidats injustement."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« il écartait systématiquement les candidatures de femmes » — 알고리즘이 차별할 수 있다는 예시다."
+              "explanation": "« il écartait systématiquement les candidatures de femmes » — 객관적이라던 도구도 차별할 수 있다는 예시다. 여성 지원이 적다는 말은 없다."
             },
             {
               "id": "q9",
               "type": "choice",
               "prompt": "Que demandent la plupart des spécialistes ?",
               "options": [
-                { "id": "a", "text": "L'interdiction de ces outils." },
-                { "id": "b", "text": "Le remplacement complet des recruteurs par des machines." },
-                { "id": "c", "text": "Plus de transparence envers les candidats." }
+                {
+                  "id": "a",
+                  "text": "Que l'on cesse d'utiliser ces logiciels pour recruter."
+                },
+                {
+                  "id": "b",
+                  "text": "Que des recruteurs vérifient systématiquement chaque CV écarté."
+                },
+                {
+                  "id": "c",
+                  "text": "Que les candidats sachent qu'une machine les a évalués."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« La plupart des spécialistes ne le pensent pas. Ils réclament en revanche davantage de transparence » — 금지는 원하지 않는다."
+              "explanation": "« Ils réclament en revanche davantage de transparence : les candidats devraient être informés qu'une machine a évalué leur dossier et pouvoir demander qu'un humain le réexamine. » 사람이 다시 보는 것은 지원자가 요청할 때이지 모든 서류가 아니라 b는 틀리다. 금지는 원하지 않는다(« La plupart des spécialistes ne le pensent pas »)."
             },
             {
               "id": "q10",
               "type": "choice",
               "prompt": "D'après la conclusion, un candidat refusé par un algorithme...",
               "options": [
-                { "id": "a", "text": "risque de ne jamais connaître les raisons du refus." },
-                { "id": "b", "text": "reçoit automatiquement une explication détaillée." },
-                { "id": "c", "text": "peut plus facilement porter plainte." }
+                {
+                  "id": "a",
+                  "text": "risque de rester sans explication sur ce refus."
+                },
+                {
+                  "id": "b",
+                  "text": "peut toujours exiger de connaître les critères de l'outil."
+                },
+                {
+                  "id": "c",
+                  "text": "a plus de chances d'être traité équitablement."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -233,10 +314,22 @@
               "criterion": "Respect de la consigne (réaction à l'affirmation, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]

@@ -54,64 +54,106 @@
               "type": "choice",
               "prompt": "Pour Paul Lefèvre, l'idée qu'il est trop tard pour apprendre une langue à l'âge adulte est...",
               "options": [
-                { "id": "a", "text": "tout à fait juste." },
-                { "id": "b", "text": "en grande partie fausse." },
-                { "id": "c", "text": "juste uniquement pour la grammaire." }
+                {
+                  "id": "a",
+                  "text": "fondée, puisque les adultes gardent presque toujours un accent."
+                },
+                {
+                  "id": "b",
+                  "text": "largement erronée, même si elle contient une part de vérité."
+                },
+                {
+                  "id": "c",
+                  "text": "exacte pour le vocabulaire, mais pas pour la prononciation."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« C'est une idée reçue qui a la vie dure, mais elle est en grande partie fausse. »"
+              "explanation": "« C'est une idée reçue qui a la vie dure, mais elle est en grande partie fausse. Ce qui est vrai, c'est que les enfants ont un avantage pour la prononciation » — 대부분 틀렸지만 발음에서는 맞는 부분이 있다. 억양은 맞는 부분일 뿐 생각 전체를 뒷받침하지 않아 a는 틀리고, c는 어휘와 발음을 거꾸로 바꿨다."
             },
             {
               "id": "q2",
               "type": "choice",
               "prompt": "Dans quel domaine les enfants ont-ils un avantage ?",
               "options": [
-                { "id": "a", "text": "La prononciation." },
-                { "id": "b", "text": "Le vocabulaire." },
-                { "id": "c", "text": "La grammaire." }
+                {
+                  "id": "a",
+                  "text": "La façon de prononcer les sons de la langue."
+                },
+                {
+                  "id": "b",
+                  "text": "La mémorisation rapide de mots nouveaux."
+                },
+                {
+                  "id": "c",
+                  "text": "La maîtrise des règles de grammaire."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« les enfants ont un avantage pour la prononciation » — 어휘와 문법은 어른이 더 빨리 배운다고 한다."
+              "explanation": "« les enfants ont un avantage pour la prononciation » — 어휘와 문법은 어른이 더 빨리 배운다고 한다(« pour le reste, le vocabulaire, la grammaire, les adultes apprennent souvent plus vite »)."
             },
             {
               "id": "q3",
               "type": "choice",
-              "prompt": "Pourquoi les adultes apprennent-ils parfois plus vite que les enfants ?",
+              "prompt": "Pour le vocabulaire et la grammaire, pourquoi les adultes apprennent-ils souvent plus vite que les enfants ?",
               "options": [
-                { "id": "a", "text": "Parce qu'ils ont plus de temps libre." },
-                { "id": "b", "text": "Parce qu'ils n'ont pas peur de se tromper." },
+                {
+                  "id": "a",
+                  "text": "Parce qu'ils consacrent plus d'heures à l'étude que les enfants."
+                },
+                {
+                  "id": "b",
+                  "text": "Parce qu'ils osent davantage parler, quitte à se tromper."
+                },
                 {
                   "id": "c",
-                  "text": "Parce qu'ils savent analyser et organiser leur apprentissage."
+                  "text": "Parce qu'ils savent réfléchir sur la langue et s'organiser."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« parce qu'ils savent analyser, comparer avec leur propre langue, organiser leur travail » — 오히려 「Les adultes ont peur de se tromper」라서 b는 틀리다."
+              "explanation": "« parce qu'ils savent analyser, comparer avec leur propre langue, organiser leur travail » — 오히려 「Les adultes ont peur de se tromper」라서 b는 틀리고, 「une heure de cours par semaine, ce qui est très peu」라서 a도 틀리다."
             },
             {
               "id": "q4",
               "type": "choice",
               "prompt": "Parmi les causes d'échec chez l'adulte, le chercheur cite...",
               "options": [
-                { "id": "a", "text": "le prix des cours et le manque de professeurs." },
-                { "id": "b", "text": "le manque d'exposition à la langue et la peur du ridicule." },
-                { "id": "c", "text": "une moins bonne mémoire et la fatigue." }
+                {
+                  "id": "a",
+                  "text": "un emploi du temps trop chargé et une mémoire moins efficace."
+                },
+                {
+                  "id": "b",
+                  "text": "trop peu de contact avec la langue et la crainte de mal faire."
+                },
+                {
+                  "id": "c",
+                  "text": "des cours trop espacés et un accent impossible à corriger."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« D'abord le temps : ... une heure de cours par semaine, ce qui est très peu. Ensuite, la peur du ridicule. »"
+              "explanation": "« D'abord le temps : ... un adulte suit souvent une heure de cours par semaine, ce qui est très peu. Ensuite, la peur du ridicule. » 억양은 실패 원인으로 들지 않았고 오히려 « votre accent n'est pas un défaut »라고 하니 c는 틀리다."
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "Que recommande Paul Lefèvre ?",
               "options": [
-                { "id": "a", "text": "Pratiquer un peu chaque jour." },
-                { "id": "b", "text": "Suivre un long cours une fois par semaine." },
-                { "id": "c", "text": "Corriger son accent en priorité." }
+                {
+                  "id": "a",
+                  "text": "S'exercer chaque jour, même brièvement, plutôt que longtemps une fois."
+                },
+                {
+                  "id": "b",
+                  "text": "Regrouper son travail en une longue séance chaque semaine."
+                },
+                {
+                  "id": "c",
+                  "text": "Corriger son accent avant de chercher à parler davantage."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -137,74 +179,110 @@
               "type": "choice",
               "prompt": "Les points et les séries de jours consécutifs servent à...",
               "options": [
-                { "id": "a", "text": "évaluer le niveau officiel de l'utilisateur." },
-                { "id": "b", "text": "remplacer le professeur." },
-                { "id": "c", "text": "inciter l'utilisateur à revenir chaque jour." }
+                {
+                  "id": "a",
+                  "text": "mesurer le niveau réel de l'utilisateur dans la langue."
+                },
+                {
+                  "id": "b",
+                  "text": "récompenser l'utilisateur qui choisit les leçons difficiles."
+                },
+                {
+                  "id": "c",
+                  "text": "donner à l'utilisateur l'habitude d'une pratique quotidienne."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« Autant de mécanismes empruntés aux jeux vidéo, qui incitent l'utilisateur à revenir chaque jour. »"
+              "explanation": "« Autant de mécanismes empruntés aux jeux vidéo, qui incitent l'utilisateur à revenir chaque jour. » 오히려 점수를 지키려고 쉬운 수업을 고르게 된다고 하니 b는 틀리다."
             },
             {
               "id": "q7",
               "type": "choice",
               "prompt": "Selon les enseignants, ces applications sont utiles pour...",
               "options": [
-                { "id": "a", "text": "mémoriser du vocabulaire." },
-                { "id": "b", "text": "apprendre à tenir une conversation." },
-                { "id": "c", "text": "préparer un exposé oral." }
+                {
+                  "id": "a",
+                  "text": "retenir des mots nouveaux et découvrir une langue."
+                },
+                {
+                  "id": "b",
+                  "text": "apprendre à tenir une véritable conversation."
+                },
+                {
+                  "id": "c",
+                  "text": "préparer une présentation orale personnelle."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Les enseignants reconnaissent volontiers l'intérêt de ces outils pour mémoriser du vocabulaire »."
+              "explanation": "« Les enseignants reconnaissent volontiers l'intérêt de ces outils pour mémoriser du vocabulaire ou se familiariser avec une langue nouvelle. » 대화는 바로 그 한계로 나온다."
             },
             {
               "id": "q8",
               "type": "choice",
               "prompt": "Quelle limite les enseignants soulignent-ils ?",
               "options": [
-                { "id": "a", "text": "Les exercices sont trop longs." },
+                {
+                  "id": "a",
+                  "text": "Les exercices sont trop longs pour une pratique quotidienne."
+                },
                 {
                   "id": "b",
-                  "text": "Les exercices font rarement produire un discours personnel."
+                  "text": "Les exercices amènent rarement l'apprenant à s'exprimer librement."
                 },
-                { "id": "c", "text": "Les applications coûtent trop cher." }
+                {
+                  "id": "c",
+                  "text": "Les exercices de traduction y sont trop peu nombreux."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« rares sont ceux qui obligent l'apprenant à produire un discours personnel ou à réagir dans une vraie conversation »."
+              "explanation": "« rares sont ceux qui obligent l'apprenant à produire un discours personnel ou à réagir dans une vraie conversation ». 번역 연습은 오히려 대부분이다(« La plupart des exercices consistent à reconnaître ou à traduire des phrases isolées »)."
             },
             {
               "id": "q9",
               "type": "choice",
               "prompt": "Quel est le « risque plus subtil » évoqué dans l'article ?",
               "options": [
-                { "id": "a", "text": "L'utilisateur se décourage trop vite." },
+                {
+                  "id": "a",
+                  "text": "L'utilisateur se lasse du jeu au bout de quelques semaines."
+                },
                 {
                   "id": "b",
-                  "text": "L'utilisateur choisit des leçons faciles pour ne pas perdre ses points."
+                  "text": "L'utilisateur fait passer son score avant ses progrès."
                 },
-                { "id": "c", "text": "L'utilisateur passe trop de temps sur son téléphone." }
+                {
+                  "id": "c",
+                  "text": "L'utilisateur passe trop de temps sur son téléphone."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« l'utilisateur peut finir par choisir les leçons les plus faciles, uniquement pour ne pas perdre ses points »."
+              "explanation": "« l'utilisateur peut finir par choisir les leçons les plus faciles, uniquement pour ne pas perdre ses points. Le jeu, qui devait servir l'apprentissage, devient alors une fin en soi. »"
             },
             {
               "id": "q10",
               "type": "choice",
               "prompt": "Quelle est la conclusion des spécialistes ?",
               "options": [
-                { "id": "a", "text": "Ces applications suffisent pour parler couramment." },
-                { "id": "b", "text": "Il faut les abandonner." },
+                {
+                  "id": "a",
+                  "text": "Elles suffisent pour parler, à condition de s'en servir chaque jour."
+                },
+                {
+                  "id": "b",
+                  "text": "Il vaut mieux les abandonner au profit de cours avec un professeur."
+                },
                 {
                   "id": "c",
-                  "text": "Elles peuvent compléter l'apprentissage, mais pas remplacer les échanges réels."
+                  "text": "Elles ont leur place, à côté d'échanges avec de vrais interlocuteurs."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« à condition de les considérer comme un complément ... elle ne remplacera pas, en revanche, l'échange avec des personnes réelles »."
+              "explanation": "« à condition de les considérer comme un complément ... elle ne remplacera pas, en revanche, l'échange avec des personnes réelles ». 「Certainement pas」라고 버리지 말라 하니 b는 틀리다."
             }
           ]
         }
@@ -226,10 +304,22 @@
               "criterion": "Respect de la consigne (lettre formelle, destinataire, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]

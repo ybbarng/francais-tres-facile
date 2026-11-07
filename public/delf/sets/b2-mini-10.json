@@ -54,38 +54,62 @@
               "type": "choice",
               "prompt": "Dans cette formule, l'étudiant...",
               "options": [
-                { "id": "a", "text": "paie un loyer comparable à celui du marché." },
+                {
+                  "id": "a",
+                  "text": "verse un loyer proche des prix du marché, sans autre obligation."
+                },
                 {
                   "id": "b",
-                  "text": "paie peu ou pas de loyer, en échange d'une présence et de petits services."
+                  "text": "est logé à bas prix, contre un peu de compagnie et quelques services."
                 },
-                { "id": "c", "text": "est salarié comme aide à domicile." }
+                {
+                  "id": "c",
+                  "text": "est rémunéré pour aider la personne âgée dans sa vie quotidienne."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« En échange d'un loyer très modéré, parfois même sans loyer, l'étudiant s'engage à être présent certains soirs et à rendre de petits services »."
+              "explanation": "« En échange d'un loyer très modéré, parfois même sans loyer, l'étudiant s'engage à être présent certains soirs et à rendre de petits services ». 「ce n'est pas une aide à domicile」라서 c는 틀리다."
             },
             {
               "id": "q2",
               "type": "choice",
               "prompt": "Selon Didier Morel, laquelle de ces tâches ne fait PAS partie du rôle de l'étudiant ?",
               "options": [
-                { "id": "a", "text": "Faire quelques courses." },
-                { "id": "b", "text": "Aider à utiliser l'ordinateur." },
-                { "id": "c", "text": "Faire le ménage." }
+                {
+                  "id": "a",
+                  "text": "Faire quelques courses pour elle."
+                },
+                {
+                  "id": "b",
+                  "text": "L'aider à se servir de l'ordinateur."
+                },
+                {
+                  "id": "c",
+                  "text": "Assurer l'entretien du logement."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« l'étudiant n'est pas là pour faire le ménage ni pour donner des soins » — 장보기와 컴퓨터 돕기는 할 일로 나온다."
+              "explanation": "« l'étudiant n'est pas là pour faire le ménage ni pour donner des soins » — 집 청소는 할 일이 아니다. 장보기와 컴퓨터 돕기는 할 일로 나온다."
             },
             {
               "id": "q3",
               "type": "choice",
               "prompt": "Ce que les personnes âgées recherchent avant tout, c'est...",
               "options": [
-                { "id": "a", "text": "une présence." },
-                { "id": "b", "text": "un revenu supplémentaire." },
-                { "id": "c", "text": "une aide pour les soins." }
+                {
+                  "id": "a",
+                  "text": "quelqu'un à leurs côtés."
+                },
+                {
+                  "id": "b",
+                  "text": "un complément de revenus."
+                },
+                {
+                  "id": "c",
+                  "text": "une aide pour les soins."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -96,26 +120,44 @@
               "type": "choice",
               "prompt": "Comment réagissent souvent les enfants de ces personnes âgées ?",
               "options": [
-                { "id": "a", "text": "Ils s'y opposent." },
-                { "id": "b", "text": "Ils sont rassurés." },
-                { "id": "c", "text": "Ils préfèrent une maison de retraite." }
+                {
+                  "id": "a",
+                  "text": "Ils craignent que leur parent soit dérangé."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils se sentent moins inquiets pour leur parent."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils préféreraient une maison de retraite."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Leurs enfants ... sont d'ailleurs souvent rassurés de savoir que quelqu'un est là. »"
+              "explanation": "« Leurs enfants, qui habitent parfois loin, sont d'ailleurs souvent rassurés de savoir que quelqu'un est là. »"
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "À quoi Didier Morel attribue-t-il la réussite de ces cohabitations ?",
               "options": [
-                { "id": "a", "text": "Au prix très bas du loyer." },
-                { "id": "b", "text": "À l'âge des étudiants choisis." },
-                { "id": "c", "text": "À la préparation soignée de chaque rencontre." }
+                {
+                  "id": "a",
+                  "text": "Au loyer très bas demandé aux étudiants."
+                },
+                {
+                  "id": "b",
+                  "text": "Au fait que les étudiants rentrent tôt le soir."
+                },
+                {
+                  "id": "c",
+                  "text": "Au soin avec lequel chaque binôme est formé."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« c'est justement parce que nous préparons chaque rencontre avec soin »."
+              "explanation": "« c'est justement parce que nous préparons chaque rencontre avec soin. Nous recevons longuement les deux personnes, nous vérifions que leurs habitudes sont compatibles. » 늦게 들어오는 학생 이야기는 맞지 않는 짝의 예일 뿐이다(b)."
             }
           ]
         }
@@ -130,29 +172,47 @@
           "id": "doc2",
           "context": "Vous lisez cet article dans un quotidien.",
           "title": "Encadrer les loyers : remède ou illusion ?",
-          "text": "Dans plusieurs grandes villes françaises, les loyers ne peuvent plus être fixés librement. Un dispositif d'encadrement impose aux propriétaires de respecter un loyer de référence, calculé selon le quartier, la taille et l'ancienneté du logement. Objectif affiché : permettre aux classes moyennes de continuer à habiter dans les centres-villes.\n\nPour ses défenseurs, la mesure a fait ses preuves. Dans les villes concernées, la hausse des loyers aurait été freinée, et les abus les plus flagrants, comme des chambres minuscules louées à des prix exorbitants, seraient devenus plus rares. Ils reconnaissent toutefois qu'une partie importante des propriétaires ne respecte pas encore les règles, les locataires hésitant souvent à faire valoir leurs droits par crainte de perdre leur logement.\n\nLes opposants, eux, dénoncent un effet pervers. Découragés par des loyers qu'ils jugent trop bas, certains propriétaires préféreraient vendre leur bien ou le louer aux touristes, ce qui réduirait encore le nombre de logements disponibles pour les habitants. L'encadrement, selon eux, traite le symptôme sans s'attaquer à la cause : le manque de logements.\n\nSur ce dernier point, les deux camps se rejoignent. Quelle que soit l'efficacité de l'encadrement, aucune politique ne pourra durablement faire baisser les prix si l'on ne construit pas davantage, notamment des logements sociaux.",
+          "text": "Depuis quelques années, plusieurs grandes villes françaises expérimentent l'encadrement des loyers. Ce dispositif impose aux propriétaires de respecter un loyer de référence, calculé notamment selon le quartier, le nombre de pièces et l'époque de construction du logement. Objectif affiché : permettre aux classes moyennes de continuer à habiter dans les centres-villes.\n\nPour ses défenseurs, la mesure a fait ses preuves. Dans les villes concernées, la hausse des loyers aurait été freinée, et les abus les plus flagrants, comme des chambres minuscules louées à des prix exorbitants, seraient devenus plus rares. Ils reconnaissent toutefois qu'une partie importante des propriétaires ne respecte pas encore les règles, les locataires hésitant souvent à faire valoir leurs droits par crainte de perdre leur logement.\n\nLes opposants, eux, dénoncent un effet pervers. Découragés par des loyers qu'ils jugent trop bas, certains propriétaires préféreraient vendre leur bien ou le louer aux touristes, ce qui réduirait encore le nombre de logements disponibles pour les habitants. L'encadrement, selon eux, traite le symptôme sans s'attaquer à la cause : le manque de logements.\n\nSur ce dernier point, les deux camps se rejoignent. Quelle que soit l'efficacité de l'encadrement, aucune politique ne pourra durablement faire baisser les prix si l'on ne construit pas davantage, notamment des logements sociaux.",
           "questions": [
             {
               "id": "q6",
               "type": "choice",
               "prompt": "Le loyer de référence est calculé en fonction...",
               "options": [
-                { "id": "a", "text": "des revenus du locataire." },
-                { "id": "b", "text": "du quartier, de la taille et de l'ancienneté du logement." },
-                { "id": "c", "text": "du prix d'achat du logement." }
+                {
+                  "id": "a",
+                  "text": "des revenus déclarés par le locataire."
+                },
+                {
+                  "id": "b",
+                  "text": "du quartier et des caractéristiques du logement."
+                },
+                {
+                  "id": "c",
+                  "text": "du prix auquel le propriétaire a acheté le bien."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« un loyer de référence, calculé selon le quartier, la taille et l'ancienneté du logement »."
+              "explanation": "« un loyer de référence, calculé notamment selon le quartier, le nombre de pièces et l'époque de construction du logement »."
             },
             {
               "id": "q7",
               "type": "choice",
               "prompt": "Selon ses défenseurs, l'encadrement des loyers...",
               "options": [
-                { "id": "a", "text": "a freiné la hausse des loyers." },
-                { "id": "b", "text": "est respecté par tous les propriétaires." },
-                { "id": "c", "text": "a fait fortement baisser tous les loyers." }
+                {
+                  "id": "a",
+                  "text": "a ralenti l'augmentation des loyers."
+                },
+                {
+                  "id": "b",
+                  "text": "est désormais respecté par presque tous les propriétaires."
+                },
+                {
+                  "id": "c",
+                  "text": "a fait baisser les loyers dans tous les quartiers."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -163,9 +223,18 @@
               "type": "choice",
               "prompt": "Pourquoi de nombreux locataires ne font-ils pas valoir leurs droits ?",
               "options": [
-                { "id": "a", "text": "Ils ne connaissent pas la loi." },
-                { "id": "b", "text": "Les démarches sont trop coûteuses." },
-                { "id": "c", "text": "Ils craignent de perdre leur logement." }
+                {
+                  "id": "a",
+                  "text": "Ils ignorent en général l'existence de la loi."
+                },
+                {
+                  "id": "b",
+                  "text": "Les démarches leur coûteraient trop cher."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils redoutent de devoir quitter leur appartement."
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -176,12 +245,18 @@
               "type": "choice",
               "prompt": "Quel « effet pervers » les opposants dénoncent-ils ?",
               "options": [
-                { "id": "a", "text": "Les loyers augmenteraient plus vite qu'avant." },
+                {
+                  "id": "a",
+                  "text": "Les loyers augmenteraient plus vite qu'avant."
+                },
                 {
                   "id": "b",
-                  "text": "Des propriétaires retireraient leur logement de la location aux habitants."
+                  "text": "Moins de logements seraient proposés aux habitants."
                 },
-                { "id": "c", "text": "Les locataires quitteraient les centres-villes." }
+                {
+                  "id": "c",
+                  "text": "Les locataires quitteraient les centres-villes."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -192,13 +267,22 @@
               "type": "choice",
               "prompt": "Sur quel point les défenseurs et les opposants sont-ils d'accord ?",
               "options": [
-                { "id": "a", "text": "Il faut construire davantage de logements." },
-                { "id": "b", "text": "Il faut supprimer l'encadrement." },
-                { "id": "c", "text": "Il faut interdire la location aux touristes." }
+                {
+                  "id": "a",
+                  "text": "Seule une offre de logements plus large fera baisser les prix."
+                },
+                {
+                  "id": "b",
+                  "text": "L'encadrement devrait être supprimé à plus ou moins long terme."
+                },
+                {
+                  "id": "c",
+                  "text": "La location de logements aux touristes devrait être interdite."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Sur ce dernier point, les deux camps se rejoignent ... si l'on ne construit pas davantage »."
+              "explanation": "« Sur ce dernier point, les deux camps se rejoignent. ... aucune politique ne pourra durablement faire baisser les prix si l'on ne construit pas davantage » — 더 지어야 한다는 데 두 쪽이 같다."
             }
           ]
         }
@@ -220,10 +304,22 @@
               "criterion": "Respect de la consigne (lettre formelle, destinataire, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]

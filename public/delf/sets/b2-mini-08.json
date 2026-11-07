@@ -19,7 +19,7 @@
               {
                 "speaker": "Journaliste",
                 "voice": "Thomas",
-                "text": "À Belcastel, petit village de cinq cents habitants, la dernière épicerie a fermé il y a trois ans. Depuis le mois dernier, le village a de nouveau un commerce, grâce à une initiative originale. Élodie Mercier en est la gérante."
+                "text": "À Saint-Ombrel, petit village de cinq cents habitants, la dernière épicerie a fermé il y a trois ans. Depuis le mois dernier, le village a de nouveau un commerce, grâce à une initiative originale. Élodie Mercier en est la gérante."
               },
               {
                 "speaker": "Élodie Mercier",
@@ -54,35 +54,62 @@
               "type": "choice",
               "prompt": "Qu'est-ce qui a permis à Élodie Mercier d'ouvrir son commerce ?",
               "options": [
-                { "id": "a", "text": "Elle a hérité du bâtiment." },
-                { "id": "b", "text": "La commune lui loue le local à un prix très bas." },
-                { "id": "c", "text": "Un supermarché l'a aidée financièrement." }
+                {
+                  "id": "a",
+                  "text": "Elle a pu acheter le bâtiment grâce à une aide de la commune."
+                },
+                {
+                  "id": "b",
+                  "text": "La commune met un local à sa disposition pour un loyer modeste."
+                },
+                {
+                  "id": "c",
+                  "text": "Un supermarché voisin a financé les travaux du magasin."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« c'est la commune qui a racheté le bâtiment et qui me le loue à un prix très bas. Sans ça, je n'aurais jamais pu m'installer »."
+              "explanation": "« c'est la commune qui a racheté le bâtiment et qui me le loue à un prix très bas. Sans ça, je n'aurais jamais pu m'installer ». 건물을 산 것은 마을이지 엘로디가 아니라 a는 틀리다."
             },
             {
               "id": "q2",
               "type": "choice",
               "prompt": "D'où vient le pain vendu dans le magasin ?",
               "options": [
-                { "id": "a", "text": "D'une boulangerie du village voisin." },
-                { "id": "b", "text": "Elle le fait elle-même." },
-                { "id": "c", "text": "Du supermarché." }
+                {
+                  "id": "a",
+                  "text": "D'un artisan installé dans une commune proche."
+                },
+                {
+                  "id": "b",
+                  "text": "D'une des fermes situées autour du village."
+                },
+                {
+                  "id": "c",
+                  "text": "Du supermarché situé à vingt kilomètres."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« du pain qui vient de la boulangerie du village voisin »."
+              "explanation": "« du pain qui vient de la boulangerie du village voisin ». 근처 농장에서 오는 것은 다른 농산물(« des produits des fermes alentour »)이다."
             },
             {
               "id": "q3",
               "type": "choice",
               "prompt": "Pour qui ce commerce est-il « essentiel », selon elle ?",
               "options": [
-                { "id": "a", "text": "Pour les touristes de passage." },
-                { "id": "b", "text": "Pour les agriculteurs de la région." },
-                { "id": "c", "text": "Pour les personnes âgées qui ne conduisent plus." }
+                {
+                  "id": "a",
+                  "text": "Pour les touristes de passage dans la région."
+                },
+                {
+                  "id": "b",
+                  "text": "Pour les agriculteurs qui y vendent leurs produits."
+                },
+                {
+                  "id": "c",
+                  "text": "Pour les habitants âgés qui ne peuvent plus prendre la voiture."
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -93,24 +120,39 @@
               "type": "choice",
               "prompt": "Comment les habitants utilisent-ils le magasin ?",
               "options": [
-                { "id": "a", "text": "Ils y font toutes leurs courses." },
-                { "id": "b", "text": "Ils y achètent surtout ce qui leur manque." },
-                { "id": "c", "text": "Ils n'y viennent presque jamais." }
+                {
+                  "id": "a",
+                  "text": "Ils y font l'essentiel de leurs achats de la semaine."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils y complètent leurs courses et y viennent pour bavarder."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils y viennent presque uniquement pour le point poste."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« les gens continuent à faire leurs grosses courses au supermarché ... Chez moi, ils viennent pour ce qui leur manque »."
+              "explanation": "« les gens continuent à faire leurs grosses courses au supermarché ... Chez moi, ils viennent pour ce qui leur manque, pour le pain, pour discuter »."
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "Quel est son objectif pour l'année qui vient ?",
               "options": [
-                { "id": "a", "text": "Baisser ses prix au niveau du supermarché." },
-                { "id": "b", "text": "Ouvrir un second magasin." },
+                {
+                  "id": "a",
+                  "text": "Aligner ses prix sur ceux des grandes surfaces voisines."
+                },
+                {
+                  "id": "b",
+                  "text": "Attirer davantage de clients des villages voisins."
+                },
                 {
                   "id": "c",
-                  "text": "Que chaque foyer dépense chez elle une vingtaine d'euros de plus par mois."
+                  "text": "Que chaque foyer du village dépense un peu plus chez elle."
                 }
               ],
               "answer": ["c"],
@@ -130,58 +172,91 @@
           "id": "doc2",
           "context": "Vous lisez cet article dans un quotidien national.",
           "title": "Librairies indépendantes : la résistance",
-          "text": "On les disait condamnées. Face à la concurrence des grandes plateformes de vente en ligne, capables de livrer n'importe quel livre en vingt-quatre heures, les librairies indépendantes semblaient vouées à disparaître. Pourtant, en France, elles résistent mieux que prévu, et certaines ouvrent même de nouvelles boutiques.\n\nCe succès relatif tient d'abord à la loi. Depuis plus de quarante ans, le prix du livre est fixé par l'éditeur, ce qui empêche les grandes enseignes de casser les prix. Plus récemment, une loi a imposé un tarif minimum pour la livraison des livres achetés en ligne, afin que les plateformes ne puissent plus offrir les frais de port.\n\nMais la loi n'explique pas tout. Les libraires ont compris qu'ils ne pouvaient gagner ni sur le terrain de la rapidité ni sur celui du choix. Ils ont donc misé sur ce que les algorithmes ne savent pas offrir : le conseil personnalisé, la découverte d'auteurs inconnus, les rencontres et les ateliers. La librairie devient un lieu de vie autant qu'un magasin.\n\nCette réussite reste toutefois fragile. Les marges des libraires sont parmi les plus faibles du commerce de détail, et la hausse des loyers en centre-ville menace de nombreuses boutiques. Pour beaucoup d'entre eux, l'avenir dépendra moins de leur capacité à séduire les lecteurs que de leur capacité à payer leur loyer.",
+          "text": "On les disait condamnées. Face à la concurrence des grandes plateformes de vente en ligne, capables de livrer n'importe quel livre en vingt-quatre heures, les librairies indépendantes semblaient vouées à disparaître. Pourtant, en France, elles résistent mieux que prévu, et certaines ouvrent même de nouvelles boutiques.\n\nCe succès relatif tient d'abord à la loi. Depuis plus de quarante ans, le prix du livre est fixé par l'éditeur, ce qui empêche les grandes enseignes de casser les prix. Plus récemment, une loi a imposé un tarif minimum pour la livraison des livres achetés en ligne, afin que les plateformes ne puissent plus livrer gratuitement les petites commandes.\n\nMais la loi n'explique pas tout. Les libraires ont compris qu'ils ne pouvaient gagner ni sur le terrain de la rapidité ni sur celui du choix. Ils ont donc misé sur ce que les algorithmes ne savent pas offrir : le conseil personnalisé, la découverte d'auteurs inconnus, les rencontres et les ateliers. La librairie devient un lieu de vie autant qu'un magasin.\n\nCette réussite reste toutefois fragile. Les marges des libraires sont parmi les plus faibles du commerce de détail, et la hausse des loyers en centre-ville menace de nombreuses boutiques. Pour beaucoup d'entre eux, l'avenir dépendra moins de leur capacité à séduire les lecteurs que de leur capacité à payer leur loyer.",
           "questions": [
             {
               "id": "q6",
               "type": "choice",
               "prompt": "Selon l'article, les librairies indépendantes en France...",
               "options": [
-                { "id": "a", "text": "ont presque toutes disparu." },
-                { "id": "b", "text": "résistent mieux que prévu." },
-                { "id": "c", "text": "vendent désormais surtout en ligne." }
+                {
+                  "id": "a",
+                  "text": "ont presque toutes fermé face aux plateformes."
+                },
+                {
+                  "id": "b",
+                  "text": "se maintiennent, contrairement à ce qu'on annonçait."
+                },
+                {
+                  "id": "c",
+                  "text": "vendent désormais l'essentiel de leurs livres en ligne."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Pourtant, en France, elles résistent mieux que prévu »."
+              "explanation": "« On les disait condamnées. ... Pourtant, en France, elles résistent mieux que prévu »."
             },
             {
               "id": "q7",
               "type": "choice",
               "prompt": "Le fait que le prix du livre soit fixé par l'éditeur...",
               "options": [
-                { "id": "a", "text": "empêche les grandes enseignes de casser les prix." },
-                { "id": "b", "text": "permet aux libraires de choisir leurs propres prix." },
-                { "id": "c", "text": "permet aux plateformes d'offrir la livraison." }
+                {
+                  "id": "a",
+                  "text": "évite aux libraires une guerre des prix avec les grandes enseignes."
+                },
+                {
+                  "id": "b",
+                  "text": "permet à chaque libraire de fixer librement ses propres prix."
+                },
+                {
+                  "id": "c",
+                  "text": "oblige les plateformes à faire payer la livraison."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« le prix du livre est fixé par l'éditeur, ce qui empêche les grandes enseignes de casser les prix »."
+              "explanation": "« le prix du livre est fixé par l'éditeur, ce qui empêche les grandes enseignes de casser les prix ». 배송비는 다른, 더 최근의 법(« Plus récemment, une loi... »)이라 c는 틀리다."
             },
             {
               "id": "q8",
               "type": "choice",
               "prompt": "Pourquoi une loi a-t-elle imposé un tarif minimum de livraison ?",
               "options": [
-                { "id": "a", "text": "Pour réduire la pollution liée aux livraisons." },
-                { "id": "b", "text": "Pour financer directement les librairies." },
+                {
+                  "id": "a",
+                  "text": "Pour limiter la pollution causée par les livraisons à domicile."
+                },
+                {
+                  "id": "b",
+                  "text": "Pour reverser une partie des frais de port aux libraires."
+                },
                 {
                   "id": "c",
-                  "text": "Pour que les plateformes ne puissent plus livrer gratuitement."
+                  "text": "Pour que les petits achats en ligne ne soient plus livrés sans frais."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« afin que les plateformes ne puissent plus offrir les frais de port »."
+              "explanation": "« afin que les plateformes ne puissent plus livrer gratuitement les petites commandes »."
             },
             {
               "id": "q9",
               "type": "choice",
               "prompt": "Sur quoi les libraires ont-ils choisi de miser ?",
               "options": [
-                { "id": "a", "text": "Sur une livraison plus rapide que celle des plateformes." },
-                { "id": "b", "text": "Sur le conseil et les animations." },
-                { "id": "c", "text": "Sur un choix de livres plus large." }
+                {
+                  "id": "a",
+                  "text": "Sur une livraison plus rapide que celle des plateformes."
+                },
+                {
+                  "id": "b",
+                  "text": "Sur le conseil et les animations."
+                },
+                {
+                  "id": "c",
+                  "text": "Sur un choix de livres plus large."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -192,13 +267,22 @@
               "type": "choice",
               "prompt": "D'après la conclusion, quelle est la principale menace pour de nombreux libraires ?",
               "options": [
-                { "id": "a", "text": "Le coût des loyers." },
-                { "id": "b", "text": "Le manque de lecteurs." },
-                { "id": "c", "text": "La concurrence des bibliothèques." }
+                {
+                  "id": "a",
+                  "text": "Le prix de location de leurs boutiques."
+                },
+                {
+                  "id": "b",
+                  "text": "La difficulté à attirer de nouveaux lecteurs."
+                },
+                {
+                  "id": "c",
+                  "text": "La concurrence des plateformes en ligne."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« l'avenir dépendra moins de leur capacité à séduire les lecteurs que de leur capacité à payer leur loyer »."
+              "explanation": "« l'avenir dépendra moins de leur capacité à séduire les lecteurs que de leur capacité à payer leur loyer » — 독자보다 임대료가 문제다."
             }
           ]
         }
@@ -220,10 +304,22 @@
               "criterion": "Respect de la consigne (type de texte, destinataire, longueur)",
               "points": 2
             },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 3 },
-            { "criterion": "Cohérence et cohésion (articulateurs logiques)", "points": 2 },
-            { "criterion": "Lexique (étendue et maîtrise)", "points": 1.5 },
-            { "criterion": "Morphosyntaxe (choix des formes, phrases complexes)", "points": 1.5 }
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (articulateurs logiques)",
+              "points": 2
+            },
+            {
+              "criterion": "Lexique (étendue et maîtrise)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Morphosyntaxe (choix des formes, phrases complexes)",
+              "points": 1.5
+            }
           ]
         }
       ]
