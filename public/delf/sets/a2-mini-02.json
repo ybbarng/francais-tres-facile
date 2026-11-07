@@ -67,10 +67,10 @@
               "prompt": "Le nouvel appartement de Nadia a…",
               "options": [
                 { "id": "a", "text": "deux pièces et un jardin." },
-                { "id": "b", "text": "trois pièces et un balcon." },
-                { "id": "c", "text": "trois pièces et un garage." }
+                { "id": "b", "text": "trois pièces et un garage." },
+                { "id": "c", "text": "trois pièces et un balcon." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« il y a trois pièces et un balcon » 라고 말한다."
             },
@@ -165,10 +165,10 @@
               "prompt": "Pour contacter M. Lefèvre, il faut…",
               "options": [
                 { "id": "a", "text": "téléphoner." },
-                { "id": "b", "text": "écrire un courriel." },
-                { "id": "c", "text": "aller à l'agence." }
+                { "id": "b", "text": "aller à l'agence." },
+                { "id": "c", "text": "écrire un courriel." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Contactez M. Lefèvre par courriel » 라고 쓴다."
             },

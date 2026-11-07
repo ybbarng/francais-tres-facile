@@ -84,10 +84,10 @@
               "prompt": "Ce travail dure…",
               "options": [
                 { "id": "a", "text": "toute l'année." },
-                { "id": "b", "text": "deux mois." },
-                { "id": "c", "text": "deux semaines." }
+                { "id": "b", "text": "deux semaines." },
+                { "id": "c", "text": "deux mois." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« pour l'été, du 1er juillet au 31 août » 이므로 7·8월 두 달이다."
             },
@@ -118,11 +118,11 @@
               "type": "choice",
               "prompt": "Pourquoi faut-il parler anglais ?",
               "options": [
-                { "id": "a", "text": "Le patron est anglais." },
-                { "id": "b", "text": "Il y a souvent des clients touristes." },
+                { "id": "a", "text": "Il y a souvent des clients touristes." },
+                { "id": "b", "text": "Le patron est anglais." },
                 { "id": "c", "text": "Les menus sont en anglais." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« Vous parlez anglais, car nos clients sont souvent des touristes » 라고 쓴다."
             },
@@ -131,12 +131,12 @@
               "type": "multi",
               "prompt": "Qu'est-ce qu'il faut envoyer ? (deux réponses)",
               "options": [
-                { "id": "a", "text": "Un CV." },
-                { "id": "b", "text": "Une lettre." },
-                { "id": "c", "text": "Une photo." },
-                { "id": "d", "text": "Un diplôme." }
+                { "id": "a", "text": "Une photo." },
+                { "id": "b", "text": "Un diplôme." },
+                { "id": "c", "text": "Un CV." },
+                { "id": "d", "text": "Une lettre." }
               ],
-              "answer": ["a", "b"],
+              "answer": ["c", "d"],
               "points": 1,
               "explanation": "« Envoyez votre CV et une courte lettre » 라고 쓴다."
             }

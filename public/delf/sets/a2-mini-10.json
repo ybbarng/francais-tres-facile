@@ -80,11 +80,11 @@
               "type": "choice",
               "prompt": "Pourquoi Camille a-t-elle arrêté cette activité ?",
               "options": [
-                { "id": "a", "text": "Elle était fatiguée d'apprendre des textes." },
-                { "id": "b", "text": "Les cours étaient trop chers." },
-                { "id": "c", "text": "Elle n'avait pas le temps." }
+                { "id": "a", "text": "Les cours étaient trop chers." },
+                { "id": "b", "text": "Elle n'avait pas le temps." },
+                { "id": "c", "text": "Elle était fatiguée d'apprendre des textes." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« j'étais fatiguée d'apprendre des textes par cœur » 라고 말한다."
             },

@@ -43,10 +43,10 @@
               "prompt": "Dimanche, il va…",
               "options": [
                 { "id": "a", "text": "faire beau." },
-                { "id": "b", "text": "pleuvoir." },
-                { "id": "c", "text": "neiger." }
+                { "id": "b", "text": "neiger." },
+                { "id": "c", "text": "pleuvoir." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« dimanche […] il va pleuvoir dès le matin » 라고 말한다."
             }
@@ -114,11 +114,11 @@
               "type": "choice",
               "prompt": "Pour aller dans la forêt, Clara et Hugo vont prendre…",
               "options": [
-                { "id": "a", "text": "la voiture d'Hugo." },
-                { "id": "b", "text": "le train." },
+                { "id": "a", "text": "le train." },
+                { "id": "b", "text": "la voiture d'Hugo." },
                 { "id": "c", "text": "le vélo." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "Hugo가 차를 제안하지만 Clara가 « Non, on prend le train » 이라고 답한다."
             },
@@ -155,11 +155,11 @@
               "type": "choice",
               "prompt": "Vous voulez acheter du fromage. Vous allez…",
               "options": [
-                { "id": "a", "text": "place Saint-François, samedi matin." },
-                { "id": "b", "text": "à l'office de tourisme, samedi après-midi." },
-                { "id": "c", "text": "au bord du lac, samedi soir." }
+                { "id": "a", "text": "à l'office de tourisme, samedi après-midi." },
+                { "id": "b", "text": "au bord du lac, samedi soir." },
+                { "id": "c", "text": "place Saint-François, samedi matin." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Samedi, de 8 h à 13 h : grand marché des producteurs, place Saint-François. Fromages… » 이다."
             },
@@ -190,11 +190,11 @@
               "type": "choice",
               "prompt": "Pour le tour du lac à vélo, il faut…",
               "options": [
-                { "id": "a", "text": "s'inscrire avant vendredi." },
-                { "id": "b", "text": "louer un vélo à l'office de tourisme." },
+                { "id": "a", "text": "louer un vélo à l'office de tourisme." },
+                { "id": "b", "text": "s'inscrire avant vendredi." },
                 { "id": "c", "text": "payer 40 euros." }
               ],
-              "answer": ["a"],
+              "answer": ["b"],
               "points": 1,
               "explanation": "« Inscription obligatoire avant vendredi » 라고 쓴다. 자전거는 « non fournis », 40은 거리(km)다."
             }

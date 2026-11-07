@@ -85,10 +85,10 @@
               "prompt": "Le bus ne s'arrête pas à l'Hôtel de Ville à cause…",
               "options": [
                 { "id": "a", "text": "d'une grève." },
-                { "id": "b", "text": "de travaux." },
-                { "id": "c", "text": "d'une fête." }
+                { "id": "b", "text": "d'une fête." },
+                { "id": "c", "text": "de travaux." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« À cause de travaux » 라고 말한다."
             },

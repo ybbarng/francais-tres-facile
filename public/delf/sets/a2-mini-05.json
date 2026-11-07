@@ -43,10 +43,10 @@
               "prompt": "À 19 heures, il y a…",
               "options": [
                 { "id": "a", "text": "des jeux pour les enfants." },
-                { "id": "b", "text": "un grand repas." },
-                { "id": "c", "text": "un bal." }
+                { "id": "b", "text": "un bal." },
+                { "id": "c", "text": "un grand repas." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« un grand repas à dix-neuf heures » 라고 말한다. 무도회는 21시부터다."
             },
@@ -96,11 +96,11 @@
               "type": "choice",
               "prompt": "Pendant la journée portes ouvertes, les visiteurs peuvent…",
               "options": [
-                { "id": "a", "text": "essayer des instruments." },
-                { "id": "b", "text": "acheter des instruments." },
-                { "id": "c", "text": "avoir un mois de cours gratuit." }
+                { "id": "a", "text": "acheter des instruments." },
+                { "id": "b", "text": "avoir un mois de cours gratuit." },
+                { "id": "c", "text": "essayer des instruments." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« vous pouvez les essayer gratuitement » 이라고 쓴다. 무료인 것은 악기 체험이지 수업이 아니다."
             },

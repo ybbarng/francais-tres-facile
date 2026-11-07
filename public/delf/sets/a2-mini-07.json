@@ -30,10 +30,10 @@
               "prompt": "Aujourd'hui, les manteaux sont…",
               "options": [
                 { "id": "a", "text": "à moins 30 %." },
-                { "id": "b", "text": "à moins 50 %." },
-                { "id": "c", "text": "au prix normal." }
+                { "id": "b", "text": "au prix normal." },
+                { "id": "c", "text": "à moins 50 %." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Moins cinquante pour cent sur tous les manteaux » 라고 말한다. 30%는 신발이다."
             },
@@ -127,11 +127,11 @@
               "type": "choice",
               "prompt": "La sœur d'Ahmed peut échanger le pull…",
               "options": [
-                { "id": "a", "text": "pendant quinze jours." },
-                { "id": "b", "text": "pendant trente jours." },
+                { "id": "a", "text": "pendant trente jours." },
+                { "id": "b", "text": "pendant quinze jours." },
                 { "id": "c", "text": "sans le ticket de caisse." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« votre sœur peut l'échanger pendant trente jours, avec le ticket de caisse » 라고 말한다."
             }
@@ -155,11 +155,11 @@
               "type": "choice",
               "prompt": "Mme Dupuis a acheté…",
               "options": [
-                { "id": "a", "text": "une robe et deux tee-shirts." },
-                { "id": "b", "text": "deux robes et un tee-shirt." },
-                { "id": "c", "text": "une robe et un tee-shirt." }
+                { "id": "a", "text": "deux robes et un tee-shirt." },
+                { "id": "b", "text": "une robe et un tee-shirt." },
+                { "id": "c", "text": "une robe et deux tee-shirts." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« 1 robe rouge » 와 « 2 tee-shirts blancs » 를 샀다."
             },
@@ -181,11 +181,11 @@
               "type": "choice",
               "prompt": "Si Mme Dupuis n'est pas chez elle, le colis va être…",
               "options": [
-                { "id": "a", "text": "renvoyé au magasin." },
-                { "id": "b", "text": "à la boulangerie Martin." },
+                { "id": "a", "text": "à la boulangerie Martin." },
+                { "id": "b", "text": "renvoyé au magasin." },
                 { "id": "c", "text": "chez sa voisine." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« le livreur va laisser le colis à la boulangerie Martin » 이라고 쓴다."
             },

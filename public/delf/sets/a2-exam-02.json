@@ -85,10 +85,10 @@
               "prompt": "Les cours reprennent…",
               "options": [
                 { "id": "a", "text": "jeudi." },
-                { "id": "b", "text": "vendredi." },
-                { "id": "c", "text": "lundi." }
+                { "id": "b", "text": "lundi." },
+                { "id": "c", "text": "vendredi." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Les cours vont reprendre normalement vendredi matin » 이라고 말한다. 목요일은 문을 닫는 날이다."
             }
@@ -113,11 +113,11 @@
               "type": "choice",
               "prompt": "Le prix comprend…",
               "options": [
-                { "id": "a", "text": "seulement l'avion." },
-                { "id": "b", "text": "l'avion et l'hôtel." },
+                { "id": "a", "text": "l'avion et l'hôtel." },
+                { "id": "b", "text": "seulement l'avion." },
                 { "id": "c", "text": "l'hôtel et les repas." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« avion et hôtel compris » 라고 말한다."
             },
@@ -168,12 +168,12 @@
               "type": "multi",
               "prompt": "Qu'est-ce qu'Hélène demande à M. Garcia ? (deux réponses)",
               "options": [
-                { "id": "a", "text": "Prendre son courrier." },
-                { "id": "b", "text": "Donner à manger à son chat." },
-                { "id": "c", "text": "Arroser ses plantes." },
-                { "id": "d", "text": "Aller chercher sa fille." }
+                { "id": "a", "text": "Arroser ses plantes." },
+                { "id": "b", "text": "Aller chercher sa fille." },
+                { "id": "c", "text": "Prendre son courrier." },
+                { "id": "d", "text": "Donner à manger à son chat." }
               ],
-              "answer": ["a", "b"],
+              "answer": ["c", "d"],
               "points": 1,
               "explanation": "« prendre mon courrier » 와 « donner à manger à mon chat » 을 부탁한다. 화분 이야기는 없다."
             },
@@ -183,10 +183,10 @@
               "prompt": "M. Garcia peut trouver la clé…",
               "options": [
                 { "id": "a", "text": "dans la boîte aux lettres." },
-                { "id": "b", "text": "chez la gardienne." },
-                { "id": "c", "text": "chez la fille d'Hélène." }
+                { "id": "b", "text": "chez la fille d'Hélène." },
+                { "id": "c", "text": "chez la gardienne." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Je vais laisser la clé chez la gardienne ce soir » 라고 말한다."
             }
@@ -224,11 +224,11 @@
               "type": "choice",
               "prompt": "Benoît choisit le cinéma Rex parce que…",
               "options": [
-                { "id": "a", "text": "il est plus près." },
-                { "id": "b", "text": "il est moins cher." },
+                { "id": "a", "text": "il est moins cher." },
+                { "id": "b", "text": "il est plus près." },
                 { "id": "c", "text": "le film est meilleur." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« on va au cinéma Rex, pas au Gaumont, parce que c'est moins cher » 라고 말한다."
             },
@@ -237,11 +237,11 @@
               "type": "choice",
               "prompt": "Après le film, Benoît propose de…",
               "options": [
-                { "id": "a", "text": "manger une pizza." },
-                { "id": "b", "text": "boire un verre." },
-                { "id": "c", "text": "aller chez lui." }
+                { "id": "a", "text": "boire un verre." },
+                { "id": "b", "text": "aller chez lui." },
+                { "id": "c", "text": "manger une pizza." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« après le film, on peut manger une pizza » 라고 말한다."
             }
@@ -311,11 +311,11 @@
               "type": "choice",
               "prompt": "Lucas est parti de…",
               "options": [
-                { "id": "a", "text": "Paris." },
-                { "id": "b", "text": "Lille." },
+                { "id": "a", "text": "Lille." },
+                { "id": "b", "text": "Paris." },
                 { "id": "c", "text": "Marseille." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1.5,
               "explanation": "« je suis parti de Lille au mois de mai » 라고 말한다. 파리는 예전 직장, 마르세유는 도착지다."
             },
@@ -337,11 +337,11 @@
               "type": "choice",
               "prompt": "Avant le voyage, Lucas…",
               "options": [
-                { "id": "a", "text": "travaillait dans un bureau." },
-                { "id": "b", "text": "était étudiant." },
-                { "id": "c", "text": "était professeur de sport." }
+                { "id": "a", "text": "était étudiant." },
+                { "id": "b", "text": "était professeur de sport." },
+                { "id": "c", "text": "travaillait dans un bureau." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1.5,
               "explanation": "« Avant, j'ai travaillé cinq ans dans un bureau, à Paris » 라고 말한다."
             },
@@ -377,11 +377,11 @@
               "type": "choice",
               "prompt": "Maintenant, Lucas va…",
               "options": [
-                { "id": "a", "text": "écrire un livre." },
-                { "id": "b", "text": "retourner travailler à Paris." },
-                { "id": "c", "text": "traverser l'Espagne cette année." }
+                { "id": "a", "text": "retourner travailler à Paris." },
+                { "id": "b", "text": "traverser l'Espagne cette année." },
+                { "id": "c", "text": "écrire un livre." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1.5,
               "explanation": "« Je vais écrire un livre sur mon voyage » 라고 말한다. 스페인은 « l'année prochaine » 계획이다."
             }
@@ -622,11 +622,11 @@
               "type": "choice",
               "prompt": "Mme Perrin peut aller chercher sa carte…",
               "options": [
-                { "id": "a", "text": "le lundi." },
-                { "id": "b", "text": "le mardi ou le vendredi." },
+                { "id": "a", "text": "le mardi ou le vendredi." },
+                { "id": "b", "text": "le lundi." },
                 { "id": "c", "text": "le jeudi 5 février." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« vous pouvez venir la chercher à la bibliothèque le mardi ou le vendredi » 라고 쓴다."
             },
@@ -649,10 +649,10 @@
               "prompt": "À la librairie Le Marque-Page, Mme Perrin a…",
               "options": [
                 { "id": "a", "text": "un livre gratuit." },
-                { "id": "b", "text": "une réduction." },
-                { "id": "c", "text": "une invitation à une rencontre." }
+                { "id": "b", "text": "une invitation à une rencontre." },
+                { "id": "c", "text": "une réduction." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Vous avez aussi une réduction de 10 % à la librairie Le Marque-Page » 라고 쓴다."
             },
@@ -675,10 +675,10 @@
               "prompt": "L'association cherche des bénévoles pour…",
               "options": [
                 { "id": "a", "text": "ranger les livres." },
-                { "id": "b", "text": "lire des histoires aux enfants." },
-                { "id": "c", "text": "organiser les rencontres." }
+                { "id": "b", "text": "organiser les rencontres." },
+                { "id": "c", "text": "lire des histoires aux enfants." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« des bénévoles pour lire des histoires aux enfants le mercredi matin » 이라고 쓴다."
             },
@@ -721,11 +721,11 @@
               "type": "choice",
               "prompt": "Juste après les œufs, on ajoute…",
               "options": [
-                { "id": "a", "text": "le lait." },
-                { "id": "b", "text": "le beurre fondu." },
-                { "id": "c", "text": "la farine." }
+                { "id": "a", "text": "le beurre fondu." },
+                { "id": "b", "text": "la farine." },
+                { "id": "c", "text": "le lait." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1.5,
               "explanation": "2단계 « Ajoutez les œufs » 다음 3단계가 « Versez le lait petit à petit » 이다. 버터는 4단계, 밀가루는 1단계다."
             },
@@ -769,10 +769,10 @@
               "prompt": "Dans le covoiturage, les passagers…",
               "options": [
                 { "id": "a", "text": "conduisent chacun à son tour." },
-                { "id": "b", "text": "paient une partie du prix du voyage." },
-                { "id": "c", "text": "voyagent gratuitement." }
+                { "id": "b", "text": "voyagent gratuitement." },
+                { "id": "c", "text": "paient une partie du prix du voyage." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Les passagers paient une partie de l'essence et de l'autoroute » 라고 쓴다."
             },
@@ -808,10 +808,10 @@
               "prompt": "Élodie va chez ses parents…",
               "options": [
                 { "id": "a", "text": "tous les week-ends." },
-                { "id": "b", "text": "un week-end sur deux." },
-                { "id": "c", "text": "une fois par mois." }
+                { "id": "b", "text": "une fois par mois." },
+                { "id": "c", "text": "un week-end sur deux." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Elle rentre chez ses parents, à Toulouse, un week-end sur deux » 라고 쓴다."
             },
@@ -842,11 +842,11 @@
               "type": "choice",
               "prompt": "Pendant un trajet, Élodie a rencontré un musicien. Il…",
               "options": [
-                { "id": "a", "text": "l'a invitée à son concert." },
-                { "id": "b", "text": "lui a donné un CD." },
+                { "id": "a", "text": "lui a donné un CD." },
+                { "id": "b", "text": "l'a invitée à son concert." },
                 { "id": "c", "text": "a annulé le trajet au dernier moment." }
               ],
-              "answer": ["a"],
+              "answer": ["b"],
               "points": 1,
               "explanation": "« Une fois, j'ai voyagé avec un musicien et il m'a invitée à son concert ! » 라고 말한다. 마지막 순간에 취소하는 것은 카풀의 문제로 든 일반적인 예다."
             }

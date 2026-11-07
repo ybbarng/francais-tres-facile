@@ -42,11 +42,11 @@
               "type": "choice",
               "prompt": "Pendant les vacances, quel temps a-t-il fait ?",
               "options": [
-                { "id": "a", "text": "Il a fait très chaud." },
-                { "id": "b", "text": "Il n'a pas fait très chaud." },
+                { "id": "a", "text": "Il n'a pas fait très chaud." },
+                { "id": "b", "text": "Il a fait très chaud." },
                 { "id": "c", "text": "Il a plu tous les jours." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« Il a fait un peu froid » 라고 말한다. 조금 추웠으니 그리 덥지 않았다는 뜻이다."
             },
@@ -55,11 +55,11 @@
               "type": "choice",
               "prompt": "Pendant les vacances, Julie a fait beaucoup de…",
               "options": [
-                { "id": "a", "text": "vélo." },
-                { "id": "b", "text": "bateau." },
-                { "id": "c", "text": "natation." }
+                { "id": "a", "text": "bateau." },
+                { "id": "b", "text": "natation." },
+                { "id": "c", "text": "vélo." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« on a fait beaucoup de vélo » 라고 말한다."
             },
@@ -81,11 +81,11 @@
               "type": "choice",
               "prompt": "Julie propose à Karim d'apporter…",
               "options": [
-                { "id": "a", "text": "des boissons." },
-                { "id": "b", "text": "un dessert." },
+                { "id": "a", "text": "un dessert." },
+                { "id": "b", "text": "des boissons." },
                 { "id": "c", "text": "ses photos." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« Tu peux apporter un dessert, si tu veux » 라고 말한다. 사진은 Julie가 보여 주는 것이다."
             }
@@ -110,10 +110,10 @@
               "prompt": "Sophie est en vacances avec…",
               "options": [
                 { "id": "a", "text": "une amie." },
-                { "id": "b", "text": "son frère." },
-                { "id": "c", "text": "ses parents." }
+                { "id": "b", "text": "ses parents." },
+                { "id": "c", "text": "son frère." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Je suis arrivée lundi avec mon frère Hugo » 라고 쓴다."
             },
@@ -131,11 +131,11 @@
               "type": "choice",
               "prompt": "Pour aller à Monaco, Sophie et Hugo ont pris…",
               "options": [
-                { "id": "a", "text": "le bus." },
-                { "id": "b", "text": "la voiture." },
-                { "id": "c", "text": "le train." }
+                { "id": "a", "text": "le train." },
+                { "id": "b", "text": "le bus." },
+                { "id": "c", "text": "la voiture." }
               ],
-              "answer": ["c"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« nous avons pris le train pour aller à Monaco » 라고 쓴다."
             },
@@ -144,11 +144,11 @@
               "type": "choice",
               "prompt": "Qu'est-ce que Sophie a adoré ?",
               "options": [
-                { "id": "a", "text": "La socca, une spécialité de Nice." },
-                { "id": "b", "text": "Les magasins de Monaco." },
+                { "id": "a", "text": "Les magasins de Monaco." },
+                { "id": "b", "text": "La socca, une spécialité de Nice." },
                 { "id": "c", "text": "La plage de Monaco." }
               ],
-              "answer": ["a"],
+              "answer": ["b"],
               "points": 1,
               "explanation": "« J'ai goûté la socca, une spécialité de Nice, et j'ai adoré » 라고 쓴다. Monaco 는 « c'était très beau, mais tout est cher » 라고만 했고, 가게나 해변 이야기는 없다."
             },
@@ -158,10 +158,10 @@
               "prompt": "Sophie demande à Marc…",
               "options": [
                 { "id": "a", "text": "de venir à Nice." },
-                { "id": "b", "text": "d'arroser ses plantes." },
-                { "id": "c", "text": "d'aller la chercher à la gare." }
+                { "id": "b", "text": "d'aller la chercher à la gare." },
+                { "id": "c", "text": "d'arroser ses plantes." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Est-ce que tu peux arroser mes plantes au bureau jusqu'à mon retour ? » 라고 부탁한다."
             }

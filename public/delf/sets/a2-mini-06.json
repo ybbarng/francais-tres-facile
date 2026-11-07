@@ -68,11 +68,11 @@
               "type": "choice",
               "prompt": "Elle est malade depuis…",
               "options": [
-                { "id": "a", "text": "hier soir." },
-                { "id": "b", "text": "trois jours." },
+                { "id": "a", "text": "trois jours." },
+                { "id": "b", "text": "hier soir." },
                 { "id": "c", "text": "six jours." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« J'ai mal à la gorge depuis trois jours » 라고 말한다. 어제저녁은 열이 난 때이고, 6일은 약 먹는 기간이다."
             },
@@ -95,10 +95,10 @@
               "prompt": "Le médecin dit à Mme Roux…",
               "options": [
                 { "id": "a", "text": "d'aller travailler demain." },
-                { "id": "b", "text": "de rester à la maison jusqu'à jeudi." },
-                { "id": "c", "text": "de revenir le voir jeudi." }
+                { "id": "b", "text": "de revenir le voir jeudi." },
+                { "id": "c", "text": "de rester à la maison jusqu'à jeudi." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« restez à la maison jusqu'à jeudi » 라고 말한다. 다시 오라는 것은 토요일에도 열이 날 때다."
             }

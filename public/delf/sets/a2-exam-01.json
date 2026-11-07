@@ -30,10 +30,10 @@
               "prompt": "Le vol pour Marseille de 14 h 40…",
               "options": [
                 { "id": "a", "text": "est en retard." },
-                { "id": "b", "text": "est annulé." },
-                { "id": "c", "text": "part plus tôt." }
+                { "id": "b", "text": "part plus tôt." },
+                { "id": "c", "text": "est annulé." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« le vol à destination de Marseille, prévu à quatorze heures quarante, est annulé » 라고 말한다."
             },
@@ -42,11 +42,11 @@
               "type": "choice",
               "prompt": "Les passagers doivent aller…",
               "options": [
-                { "id": "a", "text": "au comptoir 12." },
-                { "id": "b", "text": "à la porte 12." },
-                { "id": "c", "text": "au comptoir 18." }
+                { "id": "a", "text": "à la porte 12." },
+                { "id": "b", "text": "au comptoir 18." },
+                { "id": "c", "text": "au comptoir 12." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« se présenter au comptoir numéro douze » 라고 말한다. 18은 다음 비행기 시각이다."
             }
@@ -84,11 +84,11 @@
               "type": "choice",
               "prompt": "Ce dimanche, le magasin est ouvert…",
               "options": [
-                { "id": "a", "text": "toute la journée." },
-                { "id": "b", "text": "le matin." },
+                { "id": "a", "text": "le matin." },
+                { "id": "b", "text": "toute la journée." },
                 { "id": "c", "text": "l'après-midi." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« ouvert ce dimanche, de neuf heures à treize heures » 이므로 오전만 연다."
             }
@@ -127,10 +127,10 @@
               "prompt": "L'entrée du musée est gratuite…",
               "options": [
                 { "id": "a", "text": "tous les dimanches." },
-                { "id": "b", "text": "le premier dimanche du mois." },
-                { "id": "c", "text": "après 18 h 30." }
+                { "id": "b", "text": "après 18 h 30." },
+                { "id": "c", "text": "le premier dimanche du mois." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« l'entrée du musée est gratuite le premier dimanche de chaque mois » 라고 말한다. 18시 30분은 기념품점이 닫는 시각이다."
             }
@@ -155,11 +155,11 @@
               "type": "choice",
               "prompt": "Romain téléphone pour parler…",
               "options": [
-                { "id": "a", "text": "d'une fête." },
-                { "id": "b", "text": "d'un cadeau." },
+                { "id": "a", "text": "d'un cadeau." },
+                { "id": "b", "text": "d'une fête." },
                 { "id": "c", "text": "d'un voyage." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« Je t'appelle pour le cadeau d'anniversaire de Lucie » 라고 말한다."
             },
@@ -169,10 +169,10 @@
               "prompt": "Finalement, Romain propose…",
               "options": [
                 { "id": "a", "text": "un week-end dans un spa." },
-                { "id": "b", "text": "deux places de concert." },
-                { "id": "c", "text": "un dîner au restaurant." }
+                { "id": "b", "text": "un dîner au restaurant." },
+                { "id": "c", "text": "deux places de concert." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "스파는 « c'est trop cher » 라서 « je propose deux places pour un concert » 라고 말한다."
             },
@@ -236,11 +236,11 @@
               "type": "choice",
               "prompt": "On peut appeler le secrétariat…",
               "options": [
-                { "id": "a", "text": "le matin, en semaine." },
-                { "id": "b", "text": "l'après-midi, en semaine." },
-                { "id": "c", "text": "le samedi matin." }
+                { "id": "a", "text": "l'après-midi, en semaine." },
+                { "id": "b", "text": "le samedi matin." },
+                { "id": "c", "text": "le matin, en semaine." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« du lundi au vendredi, entre huit heures et midi » 이므로 평일 오전이다."
             }
@@ -361,12 +361,12 @@
               "type": "multi",
               "prompt": "Qui vient au jardin ? (deux réponses)",
               "options": [
-                { "id": "a", "text": "Des étudiants." },
-                { "id": "b", "text": "Des retraités." },
-                { "id": "c", "text": "Des touristes." },
-                { "id": "d", "text": "Des commerçants." }
+                { "id": "a", "text": "Des touristes." },
+                { "id": "b", "text": "Des commerçants." },
+                { "id": "c", "text": "Des étudiants." },
+                { "id": "d", "text": "Des retraités." }
               ],
-              "answer": ["a", "b"],
+              "answer": ["c", "d"],
               "points": 1.5,
               "explanation": "« Tout le monde : des familles, des étudiants, des retraités » 라고 말한다. 관광객과 상인은 나오지 않는다."
             }
@@ -636,10 +636,10 @@
               "prompt": "Claire travaille…",
               "options": [
                 { "id": "a", "text": "dans une école." },
-                { "id": "b", "text": "dans un hôpital." },
-                { "id": "c", "text": "dans un hôtel." }
+                { "id": "b", "text": "dans un hôtel." },
+                { "id": "c", "text": "dans un hôpital." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Mon nouveau travail à l'hôpital » 이라고 쓴다."
             },
@@ -683,11 +683,11 @@
               "type": "choice",
               "prompt": "Claire propose à Marion…",
               "options": [
-                { "id": "a", "text": "de venir la voir en mars." },
-                { "id": "b", "text": "de lui téléphoner ce week-end." },
-                { "id": "c", "text": "de lui envoyer un manteau." }
+                { "id": "a", "text": "de lui téléphoner ce week-end." },
+                { "id": "b", "text": "de lui envoyer un manteau." },
+                { "id": "c", "text": "de venir la voir en mars." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Tu veux venir me voir ? En mars, j'ai deux semaines de vacances » 라고 쓴다."
             }
@@ -774,11 +774,11 @@
               "type": "choice",
               "prompt": "Au Café Répare, on peut…",
               "options": [
-                { "id": "a", "text": "acheter des objets d'occasion." },
-                { "id": "b", "text": "réparer des objets cassés." },
+                { "id": "a", "text": "réparer des objets cassés." },
+                { "id": "b", "text": "acheter des objets d'occasion." },
                 { "id": "c", "text": "vendre ses vieux objets." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
               "explanation": "« On vient avec une lampe, un grille-pain ou un vélo cassé, et des bénévoles aident à le réparer » 라고 쓴다."
             },
@@ -788,10 +788,10 @@
               "prompt": "Avant, quand un objet était cassé, Mathieu…",
               "options": [
                 { "id": "a", "text": "le réparait lui-même." },
-                { "id": "b", "text": "le jetait." },
-                { "id": "c", "text": "le donnait à un ami." }
+                { "id": "b", "text": "le donnait à un ami." },
+                { "id": "c", "text": "le jetait." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Avant, quand un objet ne marchait plus, je le jetais » 라고 말한다."
             },

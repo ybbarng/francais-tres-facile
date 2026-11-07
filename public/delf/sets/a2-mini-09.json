@@ -77,11 +77,11 @@
               "type": "choice",
               "prompt": "Le supermarché est…",
               "options": [
-                { "id": "a", "text": "à côté de la pharmacie." },
-                { "id": "b", "text": "sur la place de l'église." },
+                { "id": "a", "text": "sur la place de l'église." },
+                { "id": "b", "text": "à côté de la pharmacie." },
                 { "id": "c", "text": "derrière l'école." }
               ],
-              "answer": ["a"],
+              "answer": ["b"],
               "points": 1,
               "explanation": "« au bout de la rue, à côté de la pharmacie » 라고 말한다. 교회 광장은 시장, 학교 뒤는 수영장이다."
             },
@@ -90,11 +90,11 @@
               "type": "choice",
               "prompt": "Le marché a lieu…",
               "options": [
-                { "id": "a", "text": "le mercredi et le samedi matin." },
-                { "id": "b", "text": "le dimanche matin." },
-                { "id": "c", "text": "tous les jours, sauf le lundi." }
+                { "id": "a", "text": "le dimanche matin." },
+                { "id": "b", "text": "tous les jours, sauf le lundi." },
+                { "id": "c", "text": "le mercredi et le samedi matin." }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« un marché le mercredi et le samedi matin » 이라고 말한다."
             },
@@ -154,10 +154,10 @@
               "prompt": "Pour Antoine, le problème du quartier, c'est…",
               "options": [
                 { "id": "a", "text": "le bruit." },
-                { "id": "b", "text": "les rues qui montent." },
-                { "id": "c", "text": "le prix des loyers." }
+                { "id": "b", "text": "le prix des loyers." },
+                { "id": "c", "text": "les rues qui montent." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "« Le seul problème, ce sont les rues qui montent ! » 이라고 쓴다. 소음과 집세는 예전 동네의 문제다."
             },
