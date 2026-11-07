@@ -1,0 +1,915 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-exam-01",
+  "level": "A2",
+  "kind": "exam",
+  "title": "Épreuve complète A2 – Sujet 1",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 25,
+      "instructions": "Cette épreuve comporte quatre exercices. Vous allez entendre plusieurs documents. Pour chaque document, vous avez d'abord le temps de lire les questions. Vous entendez chaque document deux fois. Répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Exercice 1 – Document 1. Vous êtes à l'aéroport. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Thomas",
+                "text": "Mesdames et messieurs, à cause du mauvais temps, le vol à destination de Marseille, prévu à quatorze heures quarante, est annulé. Les passagers de ce vol doivent se présenter au comptoir numéro douze pour changer leur billet. Le prochain vol pour Marseille part à dix-huit heures. Merci de votre compréhension."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Le vol pour Marseille de 14 h 40…",
+              "options": [
+                { "id": "a", "text": "est en retard." },
+                { "id": "b", "text": "est annulé." },
+                { "id": "c", "text": "part plus tôt." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« le vol à destination de Marseille, prévu à quatorze heures quarante, est annulé » 라고 말한다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Les passagers doivent aller…",
+              "options": [
+                { "id": "a", "text": "au comptoir 12." },
+                { "id": "b", "text": "à la porte 12." },
+                { "id": "c", "text": "au comptoir 18." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« se présenter au comptoir numéro douze » 라고 말한다. 18은 다음 비행기 시각이다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Exercice 1 – Document 2. Vous êtes au supermarché. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Chers clients, profitez de notre offre du jour au rayon fruits et légumes : les fraises sont à deux euros cinquante la barquette, au lieu de quatre euros. Et au rayon café, pour deux paquets achetés, le troisième est offert. Nous vous rappelons que votre magasin est ouvert ce dimanche, de neuf heures à treize heures."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Aujourd'hui, une barquette de fraises coûte…",
+              "options": [
+                { "id": "a", "text": "2,50 euros." },
+                { "id": "b", "text": "3 euros." },
+                { "id": "c", "text": "4 euros." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« les fraises sont à deux euros cinquante la barquette, au lieu de quatre euros » 라고 말한다. 4유로는 원래 가격이다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Ce dimanche, le magasin est ouvert…",
+              "options": [
+                { "id": "a", "text": "toute la journée." },
+                { "id": "b", "text": "le matin." },
+                { "id": "c", "text": "l'après-midi." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« ouvert ce dimanche, de neuf heures à treize heures » 이므로 오전만 연다."
+            }
+          ]
+        },
+        {
+          "id": "doc3",
+          "context": "Exercice 1 – Document 3. Vous visitez un musée. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Jacques",
+                "text": "Mesdames et messieurs, le musée va fermer dans quinze minutes. Merci de vous diriger vers la sortie. La boutique du musée reste ouverte jusqu'à dix-huit heures trente. Nous vous rappelons que l'entrée du musée est gratuite le premier dimanche de chaque mois. Merci de votre visite et à bientôt."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Le musée va fermer dans…",
+              "options": [
+                { "id": "a", "text": "5 minutes." },
+                { "id": "b", "text": "15 minutes." },
+                { "id": "c", "text": "30 minutes." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« le musée va fermer dans quinze minutes » 라고 말한다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "L'entrée du musée est gratuite…",
+              "options": [
+                { "id": "a", "text": "tous les dimanches." },
+                { "id": "b", "text": "le premier dimanche du mois." },
+                { "id": "c", "text": "après 18 h 30." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« l'entrée du musée est gratuite le premier dimanche de chaque mois » 라고 말한다. 18시 30분은 기념품점이 닫는 시각이다."
+            }
+          ]
+        },
+        {
+          "id": "doc4",
+          "context": "Exercice 2 – Document 1. Vous entendez ce message sur votre répondeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Romain",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Salut Emma, c'est Romain. Je t'appelle pour le cadeau d'anniversaire de Lucie. Avec les autres, on a pensé à un week-end dans un spa, mais ça coûte cent quatre-vingts euros, c'est trop cher. Alors je propose deux places pour un concert : ça fait quatre-vingt-dix euros pour nous six, donc quinze euros chacun. Tu es d'accord ? Je vais acheter les billets demain matin, alors réponds-moi ce soir, par texto si tu veux. Merci, salut !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Romain téléphone pour parler…",
+              "options": [
+                { "id": "a", "text": "d'une fête." },
+                { "id": "b", "text": "d'un cadeau." },
+                { "id": "c", "text": "d'un voyage." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je t'appelle pour le cadeau d'anniversaire de Lucie » 라고 말한다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Finalement, Romain propose…",
+              "options": [
+                { "id": "a", "text": "un week-end dans un spa." },
+                { "id": "b", "text": "deux places de concert." },
+                { "id": "c", "text": "un dîner au restaurant." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "스파는 « c'est trop cher » 라서 « je propose deux places pour un concert » 라고 말한다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Chaque personne va payer…",
+              "options": [
+                { "id": "a", "text": "15 euros." },
+                { "id": "b", "text": "90 euros." },
+                { "id": "c", "text": "180 euros." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« quatre-vingt-dix euros pour nous six, donc quinze euros chacun » 이라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc5",
+          "context": "Exercice 2 – Document 2. Vous entendez ce message sur votre répondeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Secrétaire",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bonjour, ici le cabinet du docteur Morel, dentiste. Ce message est pour monsieur Petit. Votre rendez-vous de vendredi, à neuf heures, est annulé, parce que le docteur est malade. Nous vous proposons un nouveau rendez-vous le lundi dix-sept, à onze heures trente. Si cette date ne vous convient pas, rappelez le secrétariat, du lundi au vendredi, entre huit heures et midi. Merci, au revoir."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Pourquoi le rendez-vous de vendredi est-il annulé ?",
+              "options": [
+                { "id": "a", "text": "Le dentiste est malade." },
+                { "id": "b", "text": "Le cabinet est fermé pour travaux." },
+                { "id": "c", "text": "M. Petit a oublié son rendez-vous." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« parce que le docteur est malade » 라고 말한다."
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "Le nouveau rendez-vous est proposé…",
+              "options": [
+                { "id": "a", "text": "le vendredi à 9 h." },
+                { "id": "b", "text": "le lundi 17 à 11 h 30." },
+                { "id": "c", "text": "le lundi 11 à 17 h 30." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« le lundi dix-sept, à onze heures trente » 라고 말한다. 금요일 9시는 취소된 예약이다."
+            },
+            {
+              "id": "q12",
+              "type": "choice",
+              "prompt": "On peut appeler le secrétariat…",
+              "options": [
+                { "id": "a", "text": "le matin, en semaine." },
+                { "id": "b", "text": "l'après-midi, en semaine." },
+                { "id": "c", "text": "le samedi matin." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« du lundi au vendredi, entre huit heures et midi » 이므로 평일 오전이다."
+            }
+          ]
+        },
+        {
+          "id": "doc6",
+          "context": "Exercice 3. Vous écoutez une émission à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Bonjour Martine Leroy. Vous avez créé un jardin partagé dans votre quartier, à Nantes. Qu'est-ce que c'est, exactement ?"
+              },
+              {
+                "speaker": "Martine",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour ! C'est un jardin où les habitants cultivent ensemble des légumes, des fruits et des fleurs. Nous avons commencé il y a deux ans, avec seulement six personnes. Aujourd'hui, nous sommes quarante !"
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Et qui vient au jardin ?"
+              },
+              {
+                "speaker": "Martine",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Tout le monde : des familles, des étudiants, des retraités. Et le mercredi après-midi, nous faisons un atelier pour les enfants de l'école d'à côté."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Vous vendez vos légumes ?"
+              },
+              {
+                "speaker": "Martine",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Non, jamais. On partage tout entre les membres. Et en septembre, on organise une grande soupe pour tout le quartier."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Comment est-ce qu'on peut participer ?"
+              },
+              {
+                "speaker": "Martine",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "C'est simple : il faut payer dix euros par an et venir au moins une fois par semaine. Le jardin est ouvert tous les jours, de huit heures à vingt heures."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q13",
+              "type": "choice",
+              "prompt": "Au début, combien de personnes participaient au jardin ?",
+              "options": [
+                { "id": "a", "text": "Deux." },
+                { "id": "b", "text": "Six." },
+                { "id": "c", "text": "Quarante." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« Nous avons commencé il y a deux ans, avec seulement six personnes » 라고 말한다. 2는 햇수, 40은 지금 인원이다."
+            },
+            {
+              "id": "q14",
+              "type": "choice",
+              "prompt": "Le mercredi après-midi, au jardin, il y a…",
+              "options": [
+                { "id": "a", "text": "un atelier pour les enfants." },
+                { "id": "b", "text": "une réunion des retraités." },
+                { "id": "c", "text": "une vente de légumes." }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« le mercredi après-midi, nous faisons un atelier pour les enfants de l'école d'à côté » 라고 말한다."
+            },
+            {
+              "id": "q15",
+              "type": "truefalse",
+              "prompt": "Les membres du jardin vendent leurs légumes.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1.5,
+              "explanation": "« Non, jamais. On partage tout entre les membres » 라고 말한다."
+            },
+            {
+              "id": "q16",
+              "type": "choice",
+              "prompt": "En septembre, le jardin organise…",
+              "options": [
+                { "id": "a", "text": "un concert." },
+                { "id": "b", "text": "une grande soupe pour le quartier." },
+                { "id": "c", "text": "une vente de fleurs." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« en septembre, on organise une grande soupe pour tout le quartier » 라고 말한다."
+            },
+            {
+              "id": "q17",
+              "type": "choice",
+              "prompt": "Pour participer, il faut payer…",
+              "options": [
+                { "id": "a", "text": "8 euros par an." },
+                { "id": "b", "text": "10 euros par an." },
+                { "id": "c", "text": "20 euros par an." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« il faut payer dix euros par an » 라고 말한다. 8과 20은 여는 시각이다."
+            },
+            {
+              "id": "q18",
+              "type": "multi",
+              "prompt": "Pour être membre du jardin, qu'est-ce qu'il faut faire ? (deux réponses)",
+              "options": [
+                { "id": "a", "text": "Payer une somme chaque année." },
+                { "id": "b", "text": "Venir au moins une fois par semaine." },
+                { "id": "c", "text": "Habiter dans la rue du jardin." },
+                { "id": "d", "text": "Avoir des enfants." }
+              ],
+              "answer": ["a", "b"],
+              "points": 1.5,
+              "explanation": "« il faut payer dix euros par an et venir au moins une fois par semaine » 라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc7",
+          "context": "Exercice 4 – Dialogue 1. Vous allez entendre quatre petits dialogues. Pour chaque dialogue, choisissez la situation qui correspond.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Homme",
+                "voice": "Thomas",
+                "text": "Pardon, madame, la poste, c'est loin d'ici ?"
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Grandma (프랑스어(프랑스))",
+                "text": "Non, pas du tout. Vous prenez la deuxième rue à gauche, et c'est en face de la banque."
+              },
+              { "speaker": "Homme", "voice": "Thomas", "text": "Merci beaucoup !" }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q19",
+              "type": "choice",
+              "prompt": "Dialogue 1 : dans cette situation, la personne veut…",
+              "options": [
+                { "id": "a", "text": "demander son chemin." },
+                { "id": "b", "text": "réserver une table au restaurant." },
+                { "id": "c", "text": "acheter un billet de train." },
+                { "id": "d", "text": "se plaindre d'un produit." },
+                { "id": "e", "text": "accepter une invitation." },
+                { "id": "f", "text": "annuler un rendez-vous." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« la poste, c'est loin d'ici ? » 에 « la deuxième rue à gauche » 라고 길을 알려 준다."
+            }
+          ]
+        },
+        {
+          "id": "doc8",
+          "context": "Exercice 4 – Dialogue 2.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Femme",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Restaurant Le Lys, bonjour."
+              },
+              {
+                "speaker": "Homme",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Bonjour, je voudrais une table pour quatre personnes, samedi soir, vers vingt heures."
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "C'est noté. À quel nom, s'il vous plaît ?"
+              },
+              { "speaker": "Homme", "voice": "Eddy (프랑스어(프랑스))", "text": "Moreau." }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q20",
+              "type": "choice",
+              "prompt": "Dialogue 2 : dans cette situation, la personne veut…",
+              "options": [
+                { "id": "a", "text": "demander son chemin." },
+                { "id": "b", "text": "réserver une table au restaurant." },
+                { "id": "c", "text": "acheter un billet de train." },
+                { "id": "d", "text": "se plaindre d'un produit." },
+                { "id": "e", "text": "accepter une invitation." },
+                { "id": "f", "text": "annuler un rendez-vous." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Restaurant Le Lys » 에 전화해 « je voudrais une table pour quatre personnes » 라고 한다."
+            }
+          ]
+        },
+        {
+          "id": "doc9",
+          "context": "Exercice 4 – Dialogue 3.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Client",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Excusez-moi, j'ai acheté cet ordinateur ici la semaine dernière, et il ne marche plus. L'écran reste noir."
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Ah, je suis désolée, monsieur. Vous avez le ticket de caisse ? On va regarder ça."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q21",
+              "type": "choice",
+              "prompt": "Dialogue 3 : dans cette situation, la personne veut…",
+              "options": [
+                { "id": "a", "text": "demander son chemin." },
+                { "id": "b", "text": "réserver une table au restaurant." },
+                { "id": "c", "text": "acheter un billet de train." },
+                { "id": "d", "text": "se plaindre d'un produit." },
+                { "id": "e", "text": "accepter une invitation." },
+                { "id": "f", "text": "annuler un rendez-vous." }
+              ],
+              "answer": ["d"],
+              "points": 1,
+              "explanation": "« j'ai acheté cet ordinateur […] et il ne marche plus » 라고 산 물건의 문제를 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc10",
+          "context": "Exercice 4 – Dialogue 4.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Tu viens dîner à la maison vendredi ? On fait une raclette avec des amis."
+              },
+              {
+                "speaker": "Homme",
+                "voice": "Jacques",
+                "text": "Avec plaisir ! J'apporte le fromage ou le vin ?"
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Le vin, c'est parfait !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q22",
+              "type": "choice",
+              "prompt": "Dialogue 4 : dans cette situation, la personne veut…",
+              "options": [
+                { "id": "a", "text": "demander son chemin." },
+                { "id": "b", "text": "réserver une table au restaurant." },
+                { "id": "c", "text": "acheter un billet de train." },
+                { "id": "d", "text": "se plaindre d'un produit." },
+                { "id": "e", "text": "accepter une invitation." },
+                { "id": "f", "text": "annuler un rendez-vous." }
+              ],
+              "answer": ["e"],
+              "points": 1,
+              "explanation": "« Tu viens dîner à la maison vendredi ? » 에 « Avec plaisir ! » 라고 초대를 받아들인다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 30,
+      "instructions": "Cette épreuve comporte quatre exercices. Lisez les documents et répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc11",
+          "context": "Exercice 1. Vous cherchez un logement pour des vacances. Vous lisez ces annonces. Pour chaque personne, choisissez l'annonce qui correspond.",
+          "title": "Locations de vacances",
+          "text": "A. Gîte à la campagne, en Auvergne. 3 chambres, grand jardin, très calme. Idéal pour les familles. Animaux acceptés. 600 euros la semaine.\n\nB. Studio au centre de Nice, à 200 mètres de la plage. Pour 2 personnes. Pas d'animaux. 450 euros la semaine.\n\nC. Chalet à la montagne, dans les Alpes. 4 chambres, à 5 minutes des pistes de ski. Disponible de décembre à avril. Animaux non acceptés. 1 200 euros la semaine.\n\nD. Chambre chez l'habitant à Paris, près de la tour Eiffel. Petit déjeuner compris. 70 euros la nuit, minimum 2 nuits.\n\nE. Maison au bord de la mer, en Bretagne. 2 chambres, terrasse avec vue. Location au mois seulement : 2 000 euros le mois.\n\nF. Appartement à Lyon, 1 chambre, près de la gare. Parking gratuit. 80 euros la nuit.",
+          "questions": [
+            {
+              "id": "q23",
+              "type": "choice",
+              "prompt": "Thomas et Julie partent à deux pendant une semaine. Ils veulent aller à la plage tous les jours.",
+              "options": [
+                { "id": "a", "text": "Annonce A" },
+                { "id": "b", "text": "Annonce B" },
+                { "id": "c", "text": "Annonce C" },
+                { "id": "d", "text": "Annonce D" },
+                { "id": "e", "text": "Annonce E" },
+                { "id": "f", "text": "Annonce F" }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "B « à 200 mètres de la plage. Pour 2 personnes […] 450 euros la semaine » 이다. E도 바닷가지만 « Location au mois seulement » 이라 일주일은 안 된다."
+            },
+            {
+              "id": "q24",
+              "type": "choice",
+              "prompt": "La famille Benali (deux enfants et un chien) veut passer une semaine au calme, à la campagne.",
+              "options": [
+                { "id": "a", "text": "Annonce A" },
+                { "id": "b", "text": "Annonce B" },
+                { "id": "c", "text": "Annonce C" },
+                { "id": "d", "text": "Annonce D" },
+                { "id": "e", "text": "Annonce E" },
+                { "id": "f", "text": "Annonce F" }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "A « Gîte à la campagne […] très calme. Idéal pour les familles. Animaux acceptés » 이다. C는 산이고 « Animaux non acceptés » 다."
+            },
+            {
+              "id": "q25",
+              "type": "choice",
+              "prompt": "Kenji visite Paris pendant un week-end. Il veut prendre son petit déjeuner sur place.",
+              "options": [
+                { "id": "a", "text": "Annonce A" },
+                { "id": "b", "text": "Annonce B" },
+                { "id": "c", "text": "Annonce C" },
+                { "id": "d", "text": "Annonce D" },
+                { "id": "e", "text": "Annonce E" },
+                { "id": "f", "text": "Annonce F" }
+              ],
+              "answer": ["d"],
+              "points": 1.5,
+              "explanation": "D « Chambre chez l'habitant à Paris […] Petit déjeuner compris […] minimum 2 nuits » 이다. 주말 이틀 밤이면 조건에 맞는다."
+            },
+            {
+              "id": "q26",
+              "type": "choice",
+              "prompt": "M. et Mme Martin veulent faire du ski en février avec leurs trois enfants.",
+              "options": [
+                { "id": "a", "text": "Annonce A" },
+                { "id": "b", "text": "Annonce B" },
+                { "id": "c", "text": "Annonce C" },
+                { "id": "d", "text": "Annonce D" },
+                { "id": "e", "text": "Annonce E" },
+                { "id": "f", "text": "Annonce F" }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "C « Chalet à la montagne […] 4 chambres, à 5 minutes des pistes de ski. Disponible de décembre à avril » 이다."
+            }
+          ]
+        },
+        {
+          "id": "doc12",
+          "context": "Exercice 2. Vous recevez ce courriel d'une amie.",
+          "title": "Objet : Nouvelles de Montréal",
+          "text": "Salut Marion,\n\nÇa fait déjà trois mois que je suis à Montréal ! Pardon, je ne t'ai pas écrit avant : j'ai eu beaucoup de travail.\n\nMon nouveau travail à l'hôpital me plaît beaucoup. Mes collègues sont très sympas et je parle anglais et français tous les jours. Par contre, les horaires sont difficiles : je commence souvent à six heures du matin.\n\nJ'habite dans un petit appartement avec une colocataire, Jessica. Elle est canadienne et elle m'aide beaucoup. Le week-end dernier, nous sommes allées à Québec en bus : la vieille ville est magnifique !\n\nLe plus difficile, c'est le froid : en ce moment, il fait moins quinze degrés ! J'ai dû acheter un très gros manteau.\n\nTu veux venir me voir ? En mars, j'ai deux semaines de vacances. Tu peux dormir chez moi, Jessica est d'accord.\n\nGros bisous,\nClaire",
+          "questions": [
+            {
+              "id": "q27",
+              "type": "choice",
+              "prompt": "Claire habite à Montréal depuis…",
+              "options": [
+                { "id": "a", "text": "deux semaines." },
+                { "id": "b", "text": "trois mois." },
+                { "id": "c", "text": "un an." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Ça fait déjà trois mois que je suis à Montréal » 라고 쓴다. 2주는 3월 휴가 기간이다."
+            },
+            {
+              "id": "q28",
+              "type": "choice",
+              "prompt": "Claire travaille…",
+              "options": [
+                { "id": "a", "text": "dans une école." },
+                { "id": "b", "text": "dans un hôpital." },
+                { "id": "c", "text": "dans un hôtel." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Mon nouveau travail à l'hôpital » 이라고 쓴다."
+            },
+            {
+              "id": "q29",
+              "type": "choice",
+              "prompt": "Dans son travail, qu'est-ce qui est difficile pour Claire ?",
+              "options": [
+                { "id": "a", "text": "Les collègues." },
+                { "id": "b", "text": "Les horaires." },
+                { "id": "c", "text": "La langue." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« les horaires sont difficiles : je commence souvent à six heures du matin » 라고 쓴다."
+            },
+            {
+              "id": "q30",
+              "type": "truefalse",
+              "prompt": "Jessica, la colocataire de Claire, est française.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Elle est canadienne » 라고 쓴다."
+            },
+            {
+              "id": "q31",
+              "type": "choice",
+              "prompt": "Le week-end dernier, Claire est allée…",
+              "options": [
+                { "id": "a", "text": "à Québec." },
+                { "id": "b", "text": "à Toronto." },
+                { "id": "c", "text": "à New York." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Le week-end dernier, nous sommes allées à Québec en bus » 라고 쓴다."
+            },
+            {
+              "id": "q32",
+              "type": "choice",
+              "prompt": "Claire propose à Marion…",
+              "options": [
+                { "id": "a", "text": "de venir la voir en mars." },
+                { "id": "b", "text": "de lui téléphoner ce week-end." },
+                { "id": "c", "text": "de lui envoyer un manteau." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Tu veux venir me voir ? En mars, j'ai deux semaines de vacances » 라고 쓴다."
+            }
+          ]
+        },
+        {
+          "id": "doc13",
+          "context": "Exercice 3. Vous voulez aller à la piscine. Vous lisez ce document.",
+          "title": "Piscine municipale Jean-Bouin – Informations pratiques",
+          "text": "Horaires\nDu lundi au vendredi : de 7 h à 9 h et de 12 h à 20 h.\nSamedi et dimanche : de 9 h à 18 h.\nFermeture le 1er mai et le 25 décembre.\n\nTarifs\nAdultes : 4 euros. Enfants (moins de 12 ans) : 2 euros. Carte de 10 entrées : 35 euros.\n\nRègles\n– Le bonnet de bain est obligatoire.\n– Les shorts sont interdits : les hommes doivent porter un maillot de bain.\n– Les enfants de moins de 8 ans doivent venir avec un adulte.\n– Il est interdit de manger au bord du bassin.\n\nCours de natation\nPour les enfants : le mercredi après-midi. Pour les adultes : le mardi et le jeudi à 19 h. Inscription à l'accueil.",
+          "questions": [
+            {
+              "id": "q33",
+              "type": "truefalse",
+              "prompt": "On peut aller nager le mardi à 10 heures.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1.5,
+              "explanation": "평일은 « de 7 h à 9 h et de 12 h à 20 h » 이라 오전 10시에는 닫혀 있다."
+            },
+            {
+              "id": "q34",
+              "type": "choice",
+              "prompt": "La carte de 10 entrées coûte…",
+              "options": [
+                { "id": "a", "text": "4 euros." },
+                { "id": "b", "text": "35 euros." },
+                { "id": "c", "text": "40 euros." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« Carte de 10 entrées : 35 euros » 라고 쓴다. 40유로는 한 번 4유로×10의 값으로 만든 함정이다."
+            },
+            {
+              "id": "q35",
+              "type": "multi",
+              "prompt": "Qu'est-ce qui est obligatoire à la piscine ? (deux réponses)",
+              "options": [
+                { "id": "a", "text": "Le bonnet de bain." },
+                { "id": "b", "text": "Le maillot de bain pour les hommes." },
+                { "id": "c", "text": "La carte de 10 entrées." },
+                { "id": "d", "text": "L'inscription à un cours de natation." }
+              ],
+              "answer": ["a", "b"],
+              "points": 1.5,
+              "explanation": "« Le bonnet de bain est obligatoire » 와 « les hommes doivent porter un maillot de bain » 이다."
+            },
+            {
+              "id": "q36",
+              "type": "choice",
+              "prompt": "Votre fille a 6 ans. Elle peut aller à la piscine…",
+              "options": [
+                { "id": "a", "text": "seule." },
+                { "id": "b", "text": "avec un adulte." },
+                { "id": "c", "text": "seulement le mercredi." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« Les enfants de moins de 8 ans doivent venir avec un adulte » 라고 쓴다."
+            }
+          ]
+        },
+        {
+          "id": "doc14",
+          "context": "Exercice 4. Vous lisez cet article dans un journal régional.",
+          "title": "À Grenoble, un café où l'on répare tout",
+          "text": "À Grenoble, un café un peu spécial a ouvert en janvier : le « Café Répare ». Ici, on ne vient pas seulement boire un thé. On vient avec une lampe, un grille-pain ou un vélo cassé, et des bénévoles aident à le réparer.\n\n« Avant, quand un objet ne marchait plus, je le jetais et j'en achetais un nouveau, explique Mathieu, 34 ans. Ici, j'ai appris à réparer ma machine à café. Ça m'a pris une heure, et ça ne m'a rien coûté ! »\n\nLes bénévoles sont souvent des retraités : électriciens, couturières ou mécaniciens. Ils ne font pas le travail à la place des visiteurs : ils expliquent, et les visiteurs réparent eux-mêmes.\n\nLe café est ouvert le premier et le troisième samedi de chaque mois, de 14 h à 18 h. La réparation est gratuite, mais on peut donner un peu d'argent pour acheter des outils.\n\nDepuis janvier, les bénévoles et les visiteurs ont réparé plus de 300 objets. L'objectif : produire moins de déchets et créer des liens entre les habitants.",
+          "questions": [
+            {
+              "id": "q37",
+              "type": "choice",
+              "prompt": "Le Café Répare a ouvert…",
+              "options": [
+                { "id": "a", "text": "en janvier." },
+                { "id": "b", "text": "en mars." },
+                { "id": "c", "text": "en septembre." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« un café un peu spécial a ouvert en janvier » 라고 쓴다."
+            },
+            {
+              "id": "q38",
+              "type": "choice",
+              "prompt": "Au Café Répare, on peut…",
+              "options": [
+                { "id": "a", "text": "acheter des objets d'occasion." },
+                { "id": "b", "text": "réparer des objets cassés." },
+                { "id": "c", "text": "vendre ses vieux objets." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« On vient avec une lampe, un grille-pain ou un vélo cassé, et des bénévoles aident à le réparer » 라고 쓴다."
+            },
+            {
+              "id": "q39",
+              "type": "choice",
+              "prompt": "Avant, quand un objet était cassé, Mathieu…",
+              "options": [
+                { "id": "a", "text": "le réparait lui-même." },
+                { "id": "b", "text": "le jetait." },
+                { "id": "c", "text": "le donnait à un ami." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Avant, quand un objet ne marchait plus, je le jetais » 라고 말한다."
+            },
+            {
+              "id": "q40",
+              "type": "choice",
+              "prompt": "Combien Mathieu a-t-il payé pour réparer sa machine à café ?",
+              "options": [
+                { "id": "a", "text": "Rien." },
+                { "id": "b", "text": "Un peu d'argent pour les outils." },
+                { "id": "c", "text": "Le prix d'une machine neuve." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« ça ne m'a rien coûté ! » 라고 말한다. 공구를 위한 기부는 할 수도 있다는 일반 안내일 뿐이다."
+            },
+            {
+              "id": "q41",
+              "type": "truefalse",
+              "prompt": "Les bénévoles réparent les objets à la place des visiteurs.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Ils ne font pas le travail à la place des visiteurs : ils expliquent, et les visiteurs réparent eux-mêmes » 라고 쓴다."
+            },
+            {
+              "id": "q42",
+              "type": "choice",
+              "prompt": "Le café est ouvert…",
+              "options": [
+                { "id": "a", "text": "tous les samedis." },
+                { "id": "b", "text": "deux samedis par mois." },
+                { "id": "c", "text": "tous les jours, de 14 h à 18 h." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« le premier et le troisième samedi de chaque mois » 이므로 한 달에 토요일 두 번이다."
+            },
+            {
+              "id": "q43",
+              "type": "choice",
+              "prompt": "Selon l'article, un des objectifs du café est de…",
+              "options": [
+                { "id": "a", "text": "gagner de l'argent." },
+                { "id": "b", "text": "produire moins de déchets." },
+                { "id": "c", "text": "former des électriciens." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« L'objectif : produire moins de déchets et créer des liens entre les habitants » 라고 쓴다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 45,
+      "instructions": "Cette épreuve comporte deux exercices. Écrivez au moins 60 mots pour chaque texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Exercice 1. Vous avez participé à une fête (un anniversaire, un mariage, une fête de quartier…). Vous écrivez un message à un(e) ami(e) pour lui raconter cette journée : où c'était, avec qui, ce que vous avez fait, et ce que vous en avez pensé. (60 mots minimum)",
+          "minWords": 60,
+          "maxWords": 80,
+          "points": 13,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, sujet, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à raconter et à décrire (événements, lieux, personnes)",
+              "points": 4
+            },
+            { "criterion": "Capacité à donner ses impressions", "points": 2 },
+            { "criterion": "Lexique et orthographe lexicale", "points": 2 },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale (passé composé, imparfait, accords)",
+              "points": 2.5
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs simples, ordre du récit)",
+              "points": 1.5
+            }
+          ]
+        },
+        {
+          "id": "w2",
+          "prompt": "Exercice 2. Vous recevez ce message de votre collègue Laura :\n\n« Salut ! Samedi prochain, je fais un pique-nique au parc pour fêter mon nouveau travail. Tu viens ? Dis-moi aussi si tu peux apporter quelque chose. Bises, Laura »\n\nVous répondez à Laura : vous la remerciez et vous la félicitez, vous ne pouvez pas venir et vous expliquez pourquoi, puis vous proposez une autre idée pour fêter ça ensemble. (60 mots minimum)",
+          "minWords": 60,
+          "maxWords": 80,
+          "points": 12,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, sujet, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Correction sociolinguistique (formules d'appel et de congé, registre adapté)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à interagir (remercier, féliciter, refuser, expliquer, proposer)",
+              "points": 4
+            },
+            { "criterion": "Lexique et orthographe lexicale", "points": 2 },
+            { "criterion": "Morphosyntaxe et orthographe grammaticale", "points": 2.5 },
+            { "criterion": "Cohérence et cohésion", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}

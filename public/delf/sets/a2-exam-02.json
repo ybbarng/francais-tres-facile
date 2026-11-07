@@ -1,0 +1,922 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-exam-02",
+  "level": "A2",
+  "kind": "exam",
+  "title": "Épreuve complète A2 – Sujet 2",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 25,
+      "instructions": "Cette épreuve comporte quatre exercices. Vous allez entendre plusieurs documents. Pour chaque document, vous avez d'abord le temps de lire les questions. Vous entendez chaque document deux fois. Répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Exercice 1 – Document 1. Vous êtes dans un train. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Jacques",
+                "text": "Mesdames et messieurs, bienvenue à bord de ce train à destination de Strasbourg. Nous allons arriver à Strasbourg à seize heures dix. Prochain arrêt : Nancy, dans vingt-cinq minutes. Le bar se trouve dans la voiture numéro quatre. Nous vous rappelons qu'il est interdit de fumer dans le train. Bon voyage !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Le train va arriver à Strasbourg à…",
+              "options": [
+                { "id": "a", "text": "14 h 10." },
+                { "id": "b", "text": "16 h 10." },
+                { "id": "c", "text": "16 h 25." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Nous allons arriver à Strasbourg à seize heures dix » 라고 말한다. 25분은 Nancy까지 남은 시간이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Le bar est dans la voiture…",
+              "options": [
+                { "id": "a", "text": "2." },
+                { "id": "b", "text": "4." },
+                { "id": "c", "text": "8." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Le bar se trouve dans la voiture numéro quatre » 라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Exercice 1 – Document 2. Vous entendez ce message à la radio locale.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Information aux parents : à cause de la neige, l'école Jules-Ferry est fermée demain, jeudi. Les cours vont reprendre normalement vendredi matin. Pour plus d'informations, consultez le site internet de la mairie."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pourquoi l'école est-elle fermée ?",
+              "options": [
+                { "id": "a", "text": "À cause de la neige." },
+                { "id": "b", "text": "À cause d'une grève." },
+                { "id": "c", "text": "À cause de travaux." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« à cause de la neige, l'école Jules-Ferry est fermée demain » 라고 말한다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Les cours reprennent…",
+              "options": [
+                { "id": "a", "text": "jeudi." },
+                { "id": "b", "text": "vendredi." },
+                { "id": "c", "text": "lundi." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Les cours vont reprendre normalement vendredi matin » 이라고 말한다. 목요일은 문을 닫는 날이다."
+            }
+          ]
+        },
+        {
+          "id": "doc3",
+          "context": "Exercice 1 – Document 3. Vous entendez cette publicité à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Publicité",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Envie de soleil ? Avec Évasion Voyages, partez une semaine en Grèce, avion et hôtel compris, pour seulement quatre cent quatre-vingt-dix-neuf euros par personne ! Offre valable jusqu'au trente avril. Réservez vite dans votre agence ou sur notre site internet !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Le prix comprend…",
+              "options": [
+                { "id": "a", "text": "seulement l'avion." },
+                { "id": "b", "text": "l'avion et l'hôtel." },
+                { "id": "c", "text": "l'hôtel et les repas." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« avion et hôtel compris » 라고 말한다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le voyage coûte, par personne…",
+              "options": [
+                { "id": "a", "text": "399 euros." },
+                { "id": "b", "text": "499 euros." },
+                { "id": "c", "text": "599 euros." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« quatre cent quatre-vingt-dix-neuf euros par personne » 는 499유로다."
+            }
+          ]
+        },
+        {
+          "id": "doc4",
+          "context": "Exercice 2 – Document 1. Vous entendez ce message sur votre répondeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Hélène",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Bonjour monsieur Garcia, c'est Hélène Lambert, votre voisine du premier étage. Je pars en vacances demain pour deux semaines, chez ma fille, à Toulouse. Est-ce que vous pouvez prendre mon courrier dans ma boîte aux lettres ? Et, si possible, donner à manger à mon chat, Minou, une fois par jour. Je vais laisser la clé chez la gardienne ce soir. Je rentre le samedi vingt-deux. Merci beaucoup, je vais vous rapporter du chocolat !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Hélène part en vacances…",
+              "options": [
+                { "id": "a", "text": "une semaine." },
+                { "id": "b", "text": "deux semaines." },
+                { "id": "c", "text": "un mois." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je pars en vacances demain pour deux semaines » 라고 말한다."
+            },
+            {
+              "id": "q8",
+              "type": "multi",
+              "prompt": "Qu'est-ce qu'Hélène demande à M. Garcia ? (deux réponses)",
+              "options": [
+                { "id": "a", "text": "Prendre son courrier." },
+                { "id": "b", "text": "Donner à manger à son chat." },
+                { "id": "c", "text": "Arroser ses plantes." },
+                { "id": "d", "text": "Aller chercher sa fille." }
+              ],
+              "answer": ["a", "b"],
+              "points": 1,
+              "explanation": "« prendre mon courrier » 와 « donner à manger à mon chat » 을 부탁한다. 화분 이야기는 없다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "M. Garcia peut trouver la clé…",
+              "options": [
+                { "id": "a", "text": "dans la boîte aux lettres." },
+                { "id": "b", "text": "chez la gardienne." },
+                { "id": "c", "text": "chez la fille d'Hélène." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je vais laisser la clé chez la gardienne ce soir » 라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc5",
+          "context": "Exercice 2 – Document 2. Vous entendez ce message sur votre répondeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Benoît",
+                "voice": "Thomas",
+                "text": "Allô Sarah, c'est Benoît. Écoute, pour le cinéma ce soir, il y a un petit changement. Le film commence à vingt heures quinze, et pas à vingt et une heures. Alors on se retrouve devant le cinéma à dix-neuf heures quarante-cinq. Et on va au cinéma Rex, pas au Gaumont, parce que c'est moins cher : sept euros la place. Si tu veux, après le film, on peut manger une pizza. Rappelle-moi !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Le film commence à…",
+              "options": [
+                { "id": "a", "text": "19 h 45." },
+                { "id": "b", "text": "20 h 15." },
+                { "id": "c", "text": "21 h." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Le film commence à vingt heures quinze, et pas à vingt et une heures » 라고 말한다. 19시 45분은 만나는 시각이다."
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "Benoît choisit le cinéma Rex parce que…",
+              "options": [
+                { "id": "a", "text": "il est plus près." },
+                { "id": "b", "text": "il est moins cher." },
+                { "id": "c", "text": "le film est meilleur." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« on va au cinéma Rex, pas au Gaumont, parce que c'est moins cher » 라고 말한다."
+            },
+            {
+              "id": "q12",
+              "type": "choice",
+              "prompt": "Après le film, Benoît propose de…",
+              "options": [
+                { "id": "a", "text": "manger une pizza." },
+                { "id": "b", "text": "boire un verre." },
+                { "id": "c", "text": "aller chez lui." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« après le film, on peut manger une pizza » 라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc6",
+          "context": "Exercice 3. Vous écoutez une émission à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bonjour Lucas. Vous avez vingt-six ans et vous venez de faire le tour de la France à vélo. Racontez-nous !"
+              },
+              {
+                "speaker": "Lucas",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Bonjour ! Oui, je suis parti de Lille au mois de mai, et je suis arrivé à Marseille fin août. J'ai fait environ quatre mille kilomètres en quatre mois."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Pourquoi ce voyage ?"
+              },
+              {
+                "speaker": "Lucas",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Avant, j'ai travaillé cinq ans dans un bureau, à Paris. J'étais fatigué de cette vie. J'avais envie de découvrir mon pays autrement, lentement."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Où est-ce que vous dormiez ?"
+              },
+              {
+                "speaker": "Lucas",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Souvent sous ma tente, dans des campings. Mais plusieurs fois, des gens m'ont invité à dormir chez eux. Les Français sont très accueillants !"
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Quel a été le moment le plus difficile ?"
+              },
+              {
+                "speaker": "Lucas",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Les Pyrénées ! Les montagnes à vélo, c'est très dur. Et une semaine, il a plu tous les jours."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Et maintenant, quels sont vos projets ?"
+              },
+              {
+                "speaker": "Lucas",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Je vais écrire un livre sur mon voyage. Et l'année prochaine, je voudrais traverser l'Espagne."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q13",
+              "type": "choice",
+              "prompt": "Lucas est parti de…",
+              "options": [
+                { "id": "a", "text": "Paris." },
+                { "id": "b", "text": "Lille." },
+                { "id": "c", "text": "Marseille." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« je suis parti de Lille au mois de mai » 라고 말한다. 파리는 예전 직장, 마르세유는 도착지다."
+            },
+            {
+              "id": "q14",
+              "type": "choice",
+              "prompt": "Le voyage a duré…",
+              "options": [
+                { "id": "a", "text": "quatre semaines." },
+                { "id": "b", "text": "quatre mois." },
+                { "id": "c", "text": "cinq mois." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« J'ai fait environ quatre mille kilomètres en quatre mois » 라고 말한다."
+            },
+            {
+              "id": "q15",
+              "type": "choice",
+              "prompt": "Avant le voyage, Lucas…",
+              "options": [
+                { "id": "a", "text": "travaillait dans un bureau." },
+                { "id": "b", "text": "était étudiant." },
+                { "id": "c", "text": "était professeur de sport." }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« Avant, j'ai travaillé cinq ans dans un bureau, à Paris » 라고 말한다."
+            },
+            {
+              "id": "q16",
+              "type": "multi",
+              "prompt": "Pendant son voyage, où est-ce que Lucas a dormi ? (deux réponses)",
+              "options": [
+                { "id": "a", "text": "Sous sa tente." },
+                { "id": "b", "text": "Chez des gens." },
+                { "id": "c", "text": "À l'hôtel." },
+                { "id": "d", "text": "Dans sa voiture." }
+              ],
+              "answer": ["a", "b"],
+              "points": 1.5,
+              "explanation": "« Souvent sous ma tente » 그리고 « des gens m'ont invité à dormir chez eux » 라고 말한다. 호텔은 나오지 않는다."
+            },
+            {
+              "id": "q17",
+              "type": "choice",
+              "prompt": "Pour Lucas, le moment le plus difficile, c'était…",
+              "options": [
+                { "id": "a", "text": "la traversée des Pyrénées." },
+                { "id": "b", "text": "l'arrivée à Marseille." },
+                { "id": "c", "text": "les nuits sous la tente." }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« Quel a été le moment le plus difficile ? » 에 « Les Pyrénées ! » 라고 답한다."
+            },
+            {
+              "id": "q18",
+              "type": "choice",
+              "prompt": "Maintenant, Lucas va…",
+              "options": [
+                { "id": "a", "text": "écrire un livre." },
+                { "id": "b", "text": "retourner travailler à Paris." },
+                { "id": "c", "text": "traverser l'Espagne cette année." }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« Je vais écrire un livre sur mon voyage » 라고 말한다. 스페인은 « l'année prochaine » 계획이다."
+            }
+          ]
+        },
+        {
+          "id": "doc7",
+          "context": "Exercice 4 – Dialogue 1. Vous allez entendre quatre petits dialogues. Pour chaque dialogue, choisissez la situation qui correspond.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Homme",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Bonjour, je voudrais voir le docteur Lemoine. C'est possible cette semaine ?"
+              },
+              {
+                "speaker": "Secrétaire",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Oui, mercredi à quinze heures, ça vous va ?"
+              },
+              { "speaker": "Homme", "voice": "Eddy (프랑스어(프랑스))", "text": "Parfait, merci." }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q19",
+              "type": "choice",
+              "prompt": "Dialogue 1 : dans cette situation, une personne…",
+              "options": [
+                { "id": "a", "text": "commande un repas." },
+                { "id": "b", "text": "demande un renseignement à la gare." },
+                { "id": "c", "text": "prend rendez-vous chez le médecin." },
+                { "id": "d", "text": "refuse une invitation." },
+                { "id": "e", "text": "félicite quelqu'un." },
+                { "id": "f", "text": "achète un vêtement." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« je voudrais voir le docteur Lemoine » 에 « mercredi à quinze heures, ça vous va ? » 라고 진료 예약을 잡는다."
+            }
+          ]
+        },
+        {
+          "id": "doc8",
+          "context": "Exercice 4 – Dialogue 2.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Femme",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bravo ! Tu as eu ton permis de conduire du premier coup !"
+              },
+              {
+                "speaker": "Homme",
+                "voice": "Thomas",
+                "text": "Merci ! Je suis tellement content !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q20",
+              "type": "choice",
+              "prompt": "Dialogue 2 : dans cette situation, une personne…",
+              "options": [
+                { "id": "a", "text": "commande un repas." },
+                { "id": "b", "text": "demande un renseignement à la gare." },
+                { "id": "c", "text": "prend rendez-vous chez le médecin." },
+                { "id": "d", "text": "refuse une invitation." },
+                { "id": "e", "text": "félicite quelqu'un." },
+                { "id": "f", "text": "achète un vêtement." }
+              ],
+              "answer": ["e"],
+              "points": 1,
+              "explanation": "« Bravo ! Tu as eu ton permis de conduire » 라고 축하한다."
+            }
+          ]
+        },
+        {
+          "id": "doc9",
+          "context": "Exercice 4 – Dialogue 3.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              { "speaker": "Serveur", "voice": "Jacques", "text": "Vous avez choisi, madame ?" },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Oui, je vais prendre le poulet avec des frites, et une carafe d'eau, s'il vous plaît."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q21",
+              "type": "choice",
+              "prompt": "Dialogue 3 : dans cette situation, une personne…",
+              "options": [
+                { "id": "a", "text": "commande un repas." },
+                { "id": "b", "text": "demande un renseignement à la gare." },
+                { "id": "c", "text": "prend rendez-vous chez le médecin." },
+                { "id": "d", "text": "refuse une invitation." },
+                { "id": "e", "text": "félicite quelqu'un." },
+                { "id": "f", "text": "achète un vêtement." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« je vais prendre le poulet avec des frites » 라고 음식을 주문한다."
+            }
+          ]
+        },
+        {
+          "id": "doc10",
+          "context": "Exercice 4 – Dialogue 4.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Homme",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "On va au restaurant samedi soir avec Paul et Inès. Tu viens avec nous ?"
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Oh, c'est gentil, mais samedi, je ne peux pas : je travaille. Une autre fois !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q22",
+              "type": "choice",
+              "prompt": "Dialogue 4 : dans cette situation, une personne…",
+              "options": [
+                { "id": "a", "text": "commande un repas." },
+                { "id": "b", "text": "demande un renseignement à la gare." },
+                { "id": "c", "text": "prend rendez-vous chez le médecin." },
+                { "id": "d", "text": "refuse une invitation." },
+                { "id": "e", "text": "félicite quelqu'un." },
+                { "id": "f", "text": "achète un vêtement." }
+              ],
+              "answer": ["d"],
+              "points": 1,
+              "explanation": "« Tu viens avec nous ? » 에 « samedi, je ne peux pas : je travaille » 라고 거절한다. 식당이 나오지만 주문하는 장면은 아니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 30,
+      "instructions": "Cette épreuve comporte quatre exercices. Lisez les documents et répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc11",
+          "context": "Exercice 1. Vous lisez le programme des sorties du week-end dans votre ville. Pour chaque personne, choisissez la sortie qui correspond.",
+          "title": "Sorties du week-end",
+          "text": "A. Musée des Beaux-Arts : exposition « Peintres de la mer ». Tous les jours sauf le mardi, de 10 h à 18 h. 9 euros.\n\nB. Parc des Oiseaux : promenade en famille au milieu de 3 000 oiseaux. Ouvert le week-end. Enfants : 6 euros, adultes : 12 euros. Tables de pique-nique à l'entrée.\n\nC. Théâtre du Rond-Point : Le Malade imaginaire, une pièce classique de Molière. Samedi à 20 h 30. 25 euros.\n\nD. Stade municipal : match de football. Dimanche à 15 h. À partir de 15 euros.\n\nE. Salle Apollo : concert de rock avec le groupe Les Fous du Volant. Samedi à 22 h. 30 euros. Interdit aux moins de 16 ans.\n\nF. Atelier de cuisine japonaise chez Yumi : samedi, de 10 h à 12 h. Apprenez à faire des sushis ! 40 euros.",
+          "questions": [
+            {
+              "id": "q23",
+              "type": "choice",
+              "prompt": "Margaux adore la peinture.",
+              "options": [
+                { "id": "a", "text": "Sortie A" },
+                { "id": "b", "text": "Sortie B" },
+                { "id": "c", "text": "Sortie C" },
+                { "id": "d", "text": "Sortie D" },
+                { "id": "e", "text": "Sortie E" },
+                { "id": "f", "text": "Sortie F" }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "A « Musée des Beaux-Arts : exposition Peintres de la mer » 가 그림 전시다."
+            },
+            {
+              "id": "q24",
+              "type": "choice",
+              "prompt": "M. et Mme Roche veulent sortir avec leurs petits-enfants et manger dehors.",
+              "options": [
+                { "id": "a", "text": "Sortie A" },
+                { "id": "b", "text": "Sortie B" },
+                { "id": "c", "text": "Sortie C" },
+                { "id": "d", "text": "Sortie D" },
+                { "id": "e", "text": "Sortie E" },
+                { "id": "f", "text": "Sortie F" }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "B « promenade en famille […] Tables de pique-nique à l'entrée » 다. 밖에서 먹을 수 있다고 쓴 곳은 여기뿐이다."
+            },
+            {
+              "id": "q25",
+              "type": "choice",
+              "prompt": "Hugo, 20 ans, aime la musique forte et sortir tard le soir.",
+              "options": [
+                { "id": "a", "text": "Sortie A" },
+                { "id": "b", "text": "Sortie B" },
+                { "id": "c", "text": "Sortie C" },
+                { "id": "d", "text": "Sortie D" },
+                { "id": "e", "text": "Sortie E" },
+                { "id": "f", "text": "Sortie F" }
+              ],
+              "answer": ["e"],
+              "points": 1.5,
+              "explanation": "E « concert de rock […] Samedi à 22 h » 이다. 음악 공연은 이것뿐이다."
+            },
+            {
+              "id": "q26",
+              "type": "choice",
+              "prompt": "Antoine voudrait voir une pièce de théâtre classique.",
+              "options": [
+                { "id": "a", "text": "Sortie A" },
+                { "id": "b", "text": "Sortie B" },
+                { "id": "c", "text": "Sortie C" },
+                { "id": "d", "text": "Sortie D" },
+                { "id": "e", "text": "Sortie E" },
+                { "id": "f", "text": "Sortie F" }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "C « Le Malade imaginaire, une pièce classique de Molière » 다."
+            }
+          ]
+        },
+        {
+          "id": "doc12",
+          "context": "Exercice 2. Vous vous êtes inscrit(e) dans une association. Vous recevez ce courriel.",
+          "title": "Objet : Votre inscription aux Amis du Livre",
+          "text": "Madame Perrin,\n\nMerci pour votre inscription à notre association. Votre carte de membre est prête : vous pouvez venir la chercher à la bibliothèque le mardi ou le vendredi, entre 14 h et 18 h.\n\nAvec cette carte, vous pouvez emprunter cinq livres pendant trois semaines. Vous avez aussi une réduction de 10 % à la librairie Le Marque-Page, rue Nationale.\n\nNotre prochaine rencontre a lieu le jeudi 6 février à 18 h 30. L'écrivaine Anne Morel va présenter son nouveau roman. Après la rencontre, nous vous invitons à boire un verre avec elle.\n\nNous cherchons aussi des bénévoles pour lire des histoires aux enfants le mercredi matin. Si cela vous intéresse, répondez simplement à ce courriel.\n\nCordialement,\nPierre Vasseur, président des Amis du Livre",
+          "questions": [
+            {
+              "id": "q27",
+              "type": "choice",
+              "prompt": "Mme Perrin peut aller chercher sa carte…",
+              "options": [
+                { "id": "a", "text": "le lundi." },
+                { "id": "b", "text": "le mardi ou le vendredi." },
+                { "id": "c", "text": "le jeudi 6 février." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« vous pouvez venir la chercher à la bibliothèque le mardi ou le vendredi » 라고 쓴다."
+            },
+            {
+              "id": "q28",
+              "type": "choice",
+              "prompt": "Avec sa carte, Mme Perrin peut emprunter…",
+              "options": [
+                { "id": "a", "text": "trois livres." },
+                { "id": "b", "text": "cinq livres." },
+                { "id": "c", "text": "dix livres." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« vous pouvez emprunter cinq livres pendant trois semaines » 라고 쓴다. 3은 대출 기간(주)이다."
+            },
+            {
+              "id": "q29",
+              "type": "choice",
+              "prompt": "À la librairie Le Marque-Page, Mme Perrin a…",
+              "options": [
+                { "id": "a", "text": "un livre gratuit." },
+                { "id": "b", "text": "une réduction." },
+                { "id": "c", "text": "une invitation à une rencontre." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Vous avez aussi une réduction de 10 % à la librairie Le Marque-Page » 라고 쓴다."
+            },
+            {
+              "id": "q30",
+              "type": "choice",
+              "prompt": "Le jeudi 6 février…",
+              "options": [
+                { "id": "a", "text": "une écrivaine présente son livre." },
+                { "id": "b", "text": "la bibliothèque est fermée." },
+                { "id": "c", "text": "des bénévoles lisent des histoires aux enfants." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« L'écrivaine Anne Morel va présenter son nouveau roman » 이라고 쓴다. 아이들에게 책 읽어 주기는 수요일 오전이다."
+            },
+            {
+              "id": "q31",
+              "type": "choice",
+              "prompt": "L'association cherche des bénévoles pour…",
+              "options": [
+                { "id": "a", "text": "ranger les livres." },
+                { "id": "b", "text": "lire des histoires aux enfants." },
+                { "id": "c", "text": "organiser les rencontres." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« des bénévoles pour lire des histoires aux enfants le mercredi matin » 이라고 쓴다."
+            },
+            {
+              "id": "q32",
+              "type": "choice",
+              "prompt": "Si Mme Perrin veut être bénévole, elle doit…",
+              "options": [
+                { "id": "a", "text": "répondre au courriel." },
+                { "id": "b", "text": "téléphoner à M. Vasseur." },
+                { "id": "c", "text": "aller à la librairie." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Si cela vous intéresse, répondez simplement à ce courriel » 이라고 쓴다."
+            }
+          ]
+        },
+        {
+          "id": "doc13",
+          "context": "Exercice 3. Vous voulez faire des crêpes. Vous lisez cette recette.",
+          "title": "Les crêpes de Mamie Jeanne (pour 4 personnes)",
+          "text": "Ingrédients : 250 g de farine, 4 œufs, un demi-litre de lait, une pincée de sel, 2 cuillères à soupe de sucre, 50 g de beurre fondu.\n\n1. Dans un grand saladier, mettez la farine, le sel et le sucre.\n2. Ajoutez les œufs et mélangez.\n3. Versez le lait petit à petit et mélangez bien : la pâte doit être bien lisse.\n4. Ajoutez le beurre fondu.\n5. Laissez reposer la pâte une heure au réfrigérateur.\n6. Faites chauffer une poêle avec un peu d'huile. Versez une petite louche de pâte et faites cuire une minute de chaque côté.\n\nLe conseil de Mamie Jeanne : pour des crêpes plus légères, remplacez un peu de lait par de l'eau !",
+          "questions": [
+            {
+              "id": "q33",
+              "type": "choice",
+              "prompt": "Pour 4 personnes, il faut…",
+              "options": [
+                { "id": "a", "text": "2 œufs." },
+                { "id": "b", "text": "4 œufs." },
+                { "id": "c", "text": "6 œufs." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« Ingrédients : 250 g de farine, 4 œufs » 라고 쓴다."
+            },
+            {
+              "id": "q34",
+              "type": "choice",
+              "prompt": "Juste après les œufs, on ajoute…",
+              "options": [
+                { "id": "a", "text": "le lait." },
+                { "id": "b", "text": "le beurre fondu." },
+                { "id": "c", "text": "la farine." }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "2단계 « Ajoutez les œufs » 다음 3단계가 « Versez le lait petit à petit » 이다. 버터는 4단계, 밀가루는 1단계다."
+            },
+            {
+              "id": "q35",
+              "type": "choice",
+              "prompt": "Avant la cuisson, la pâte doit reposer…",
+              "options": [
+                { "id": "a", "text": "une minute." },
+                { "id": "b", "text": "une heure." },
+                { "id": "c", "text": "une nuit." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« Laissez reposer la pâte une heure au réfrigérateur » 라고 쓴다. 1분은 한 면을 굽는 시간이다."
+            },
+            {
+              "id": "q36",
+              "type": "choice",
+              "prompt": "Pour avoir des crêpes plus légères, Mamie Jeanne conseille…",
+              "options": [
+                { "id": "a", "text": "d'ajouter du sucre." },
+                { "id": "b", "text": "de mettre un peu d'eau à la place du lait." },
+                { "id": "c", "text": "de cuire les crêpes plus longtemps." }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« pour des crêpes plus légères, remplacez un peu de lait par de l'eau » 라고 쓴다."
+            }
+          ]
+        },
+        {
+          "id": "doc14",
+          "context": "Exercice 4. Vous lisez cet article sur un site d'informations.",
+          "title": "Covoiturage : de plus en plus de Français partagent leur voiture",
+          "text": "Le covoiturage, c'est simple : un conducteur qui fait un trajet propose les places libres de sa voiture à d'autres personnes. Les passagers paient une partie de l'essence et des péages.\n\nAujourd'hui, des millions de Français utilisent des sites internet ou des applications pour trouver un conducteur ou des passagers. Pour un trajet Paris-Lyon, un passager paie environ 30 euros : c'est deux fois moins cher que le train.\n\nÉlodie, 23 ans, est étudiante à Bordeaux. Elle rentre chez ses parents, à Toulouse, un week-end sur deux. « Avant, je prenais le train, mais c'était trop cher pour moi. Avec le covoiturage, je dépense moins et je rencontre des gens sympas. Une fois, j'ai voyagé avec un musicien et il m'a invitée à son concert ! »\n\nMais il y a aussi des problèmes. Parfois, un conducteur annule le trajet au dernier moment. Et certaines personnes n'aiment pas voyager avec des inconnus.\n\nPour la planète, le covoiturage est une bonne idée : moins de voitures sur les routes, c'est moins de pollution.",
+          "questions": [
+            {
+              "id": "q37",
+              "type": "choice",
+              "prompt": "Dans le covoiturage, les passagers…",
+              "options": [
+                { "id": "a", "text": "conduisent chacun à leur tour." },
+                { "id": "b", "text": "paient une partie des frais du trajet." },
+                { "id": "c", "text": "voyagent gratuitement." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Les passagers paient une partie de l'essence et des péages » 라고 쓴다."
+            },
+            {
+              "id": "q38",
+              "type": "choice",
+              "prompt": "En covoiturage, un trajet Paris-Lyon coûte environ…",
+              "options": [
+                { "id": "a", "text": "15 euros." },
+                { "id": "b", "text": "30 euros." },
+                { "id": "c", "text": "60 euros." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« un passager paie environ 30 euros » 라고 쓴다. 60유로는 « deux fois moins cher que le train » 에서 계산되는 기차값이다."
+            },
+            {
+              "id": "q39",
+              "type": "choice",
+              "prompt": "Par rapport au train, le covoiturage est…",
+              "options": [
+                { "id": "a", "text": "deux fois moins cher." },
+                { "id": "b", "text": "deux fois plus cher." },
+                { "id": "c", "text": "aussi cher." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« c'est deux fois moins cher que le train » 이라고 쓴다."
+            },
+            {
+              "id": "q40",
+              "type": "choice",
+              "prompt": "Élodie va chez ses parents…",
+              "options": [
+                { "id": "a", "text": "tous les week-ends." },
+                { "id": "b", "text": "un week-end sur deux." },
+                { "id": "c", "text": "une fois par mois." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Elle rentre chez ses parents, à Toulouse, un week-end sur deux » 라고 쓴다."
+            },
+            {
+              "id": "q41",
+              "type": "truefalse",
+              "prompt": "Élodie a choisi le covoiturage parce que le train était trop cher pour elle.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["v"],
+              "points": 1,
+              "explanation": "« Avant, je prenais le train, mais c'était trop cher pour moi » 라고 말한다."
+            },
+            {
+              "id": "q42",
+              "type": "choice",
+              "prompt": "Selon l'article, un problème du covoiturage, c'est que…",
+              "options": [
+                { "id": "a", "text": "le conducteur peut annuler au dernier moment." },
+                { "id": "b", "text": "les voitures sont souvent sales." },
+                { "id": "c", "text": "les trajets sont plus longs qu'en train." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Parfois, un conducteur annule le trajet au dernier moment » 이라고 쓴다."
+            },
+            {
+              "id": "q43",
+              "type": "choice",
+              "prompt": "Selon l'article, le covoiturage est bon pour la planète parce que…",
+              "options": [
+                { "id": "a", "text": "il y a moins de voitures sur les routes." },
+                { "id": "b", "text": "les voitures sont électriques." },
+                { "id": "c", "text": "les gens prennent plus souvent le train." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« moins de voitures sur les routes, c'est moins de pollution » 이라고 쓴다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 45,
+      "instructions": "Cette épreuve comporte deux exercices. Écrivez au moins 60 mots pour chaque texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Exercice 1. Vous avez fait un voyage ou une sortie inoubliable (en train, à vélo, en bateau…). Vous écrivez un article sur votre blog pour raconter : où vous êtes allé(e), avec qui, ce que vous avez vu et fait, et ce que vous avez ressenti. (60 mots minimum)",
+          "minWords": 60,
+          "maxWords": 80,
+          "points": 13,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, sujet, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à raconter et à décrire (événements, lieux, personnes)",
+              "points": 4
+            },
+            { "criterion": "Capacité à donner ses impressions", "points": 2 },
+            { "criterion": "Lexique et orthographe lexicale", "points": 2 },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale (passé composé, imparfait, accords)",
+              "points": 2.5
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs simples, ordre du récit)",
+              "points": 1.5
+            }
+          ]
+        },
+        {
+          "id": "w2",
+          "prompt": "Exercice 2. Votre amie française Chloé vous écrit :\n\n« Coucou ! J'ai une grande nouvelle : j'ai eu mon diplôme et j'ai trouvé un travail à Bordeaux ! Je déménage le mois prochain. Bisous, Chloé »\n\nVous répondez à Chloé : vous la félicitez, vous lui posez des questions sur son nouveau travail et vous lui proposez de l'aider pour le déménagement. (60 mots minimum)",
+          "minWords": 60,
+          "maxWords": 80,
+          "points": 12,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, sujet, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Correction sociolinguistique (formules d'appel et de congé, registre adapté)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à interagir (féliciter, poser des questions, proposer son aide)",
+              "points": 4
+            },
+            { "criterion": "Lexique et orthographe lexicale", "points": 2 },
+            { "criterion": "Morphosyntaxe et orthographe grammaticale", "points": 2.5 },
+            { "criterion": "Cohérence et cohésion", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}
