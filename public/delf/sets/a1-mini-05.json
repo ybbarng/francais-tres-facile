@@ -1,0 +1,331 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-05",
+  "level": "A1",
+  "kind": "mini",
+  "title": "Un rendez-vous",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Un homme téléphone au cabinet d'un médecin.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Secrétaire",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Cabinet du docteur Moreau, bonjour."
+              },
+              {
+                "speaker": "Patient",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Bonjour madame. Je voudrais un rendez-vous avec le docteur, s'il vous plaît."
+              },
+              {
+                "speaker": "Secrétaire",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Oui. Mardi à 10 heures, ça va ?"
+              },
+              {
+                "speaker": "Patient",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Non, mardi, je travaille. Mercredi, c'est possible ?"
+              },
+              {
+                "speaker": "Secrétaire",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Mercredi à 17 heures 30."
+              },
+              {
+                "speaker": "Patient",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "D'accord, très bien."
+              },
+              {
+                "speaker": "Secrétaire",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Votre nom, s'il vous plaît ?"
+              },
+              {
+                "speaker": "Patient",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Bernard. Julien Bernard."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "L'homme téléphone pour :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "prendre un rendez-vous."
+                },
+                {
+                  "id": "b",
+                  "text": "annuler un rendez-vous."
+                },
+                {
+                  "id": "c",
+                  "text": "changer l'heure d'un rendez-vous."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Je voudrais un rendez-vous avec le docteur »."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Mardi, l'homme ne peut pas venir parce qu'il :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "est en voyage."
+                },
+                {
+                  "id": "b",
+                  "text": "a un autre rendez-vous."
+                },
+                {
+                  "id": "c",
+                  "text": "travaille."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Non, mardi, je travaille. »"
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Le rendez-vous est :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "mercredi à 17 h 30."
+                },
+                {
+                  "id": "b",
+                  "text": "mardi à 10 h."
+                },
+                {
+                  "id": "c",
+                  "text": "mercredi à 10 h."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Mercredi à 17 heures 30. — D'accord, très bien. » 화요일 10시는 거절했다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Antoine écoute ce message sur son téléphone.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Coucou Antoine ! C'est Sophie. Samedi soir, je fais une fête chez moi pour mes 30 ans. Ça commence à 20 heures. Mon adresse, c'est 8, rue des Lilas. Tu peux venir avec ta copine ! Réponds-moi avant jeudi, d'accord ? À bientôt !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Sophie fait une fête pour :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "son anniversaire."
+                },
+                {
+                  "id": "b",
+                  "text": "son nouvel appartement."
+                },
+                {
+                  "id": "c",
+                  "text": "la fin des examens."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « je fais une fête chez moi pour mes 30 ans. »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Antoine doit répondre avant :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "vendredi."
+                },
+                {
+                  "id": "b",
+                  "text": "samedi."
+                },
+                {
+                  "id": "c",
+                  "text": "jeudi."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Réponds-moi avant jeudi ». 토요일은 파티 날이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Camille reçoit cet e-mail.",
+          "title": "Objet : Dîner de vendredi",
+          "text": "Bonjour Camille,\n\nMerci pour ton invitation ! Mais je suis désolée : vendredi soir, je ne peux pas venir au dîner. Ma mère arrive de Lyon et je vais la chercher à la gare à 19 h.\n\nTu es libre dimanche ? On peut déjeuner au restaurant italien près de chez toi, à midi. C'est moi qui invite !\n\nBises,\nYasmine",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Yasmine écrit pour :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "accepter une invitation."
+                },
+                {
+                  "id": "b",
+                  "text": "refuser une invitation."
+                },
+                {
+                  "id": "c",
+                  "text": "inviter Camille au cinéma."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« vendredi soir, je ne peux pas venir au dîner. » 대신 일요일 점심을 제안하지만 영화는 아니다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Vendredi soir, Yasmine va :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "au restaurant."
+                },
+                {
+                  "id": "b",
+                  "text": "à Lyon."
+                },
+                {
+                  "id": "c",
+                  "text": "à la gare."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« je vais la chercher à la gare à 19 h. » 리옹은 어머니가 오는 곳이다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Yasmine propose de déjeuner :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "vendredi."
+                },
+                {
+                  "id": "b",
+                  "text": "samedi."
+                },
+                {
+                  "id": "c",
+                  "text": "dimanche."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Tu es libre dimanche ? On peut déjeuner au restaurant italien »."
+            },
+            {
+              "id": "q9",
+              "type": "truefalse",
+              "prompt": "Camille va payer le restaurant.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« C'est moi qui invite ! » 는 야스민이 낸다는 뜻이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Un ami vous invite à son anniversaire samedi. Vous ne pouvez pas venir. Vous lui écrivez un message : vous dites merci, vous expliquez pourquoi vous ne pouvez pas venir et vous proposez un autre jour pour vous voir."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-01",
+  "level": "A1",
+  "kind": "mini",
+  "title": "Au marché",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous êtes au marché. Une cliente parle avec un vendeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Vendeur",
+                "voice": "Thomas",
+                "text": "Bonjour madame ! Qu'est-ce que vous voulez ?"
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour ! Je voudrais un kilo de tomates, s'il vous plaît."
+              },
+              {
+                "speaker": "Vendeur",
+                "voice": "Thomas",
+                "text": "Voilà. Et avec ça ?"
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Vous avez des fraises ?"
+              },
+              {
+                "speaker": "Vendeur",
+                "voice": "Thomas",
+                "text": "Non, désolé, pas aujourd'hui. J'ai des pommes et des oranges."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Alors, deux kilos de pommes."
+              },
+              {
+                "speaker": "Vendeur",
+                "voice": "Thomas",
+                "text": "Très bien. Ça fait 7 euros, s'il vous plaît."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Voilà 10 euros."
+              },
+              {
+                "speaker": "Vendeur",
+                "voice": "Thomas",
+                "text": "Et voilà 3 euros. Merci, bonne journée !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "D'abord, la cliente achète :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "des fraises."
+                },
+                {
+                  "id": "b",
+                  "text": "des oranges."
+                },
+                {
+                  "id": "c",
+                  "text": "des tomates."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Je voudrais un kilo de tomates » 가 첫 주문이다. 딸기는 오늘 없고, 오렌지는 사지 않았다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Aujourd'hui, le vendeur n'a pas :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "de pommes."
+                },
+                {
+                  "id": "b",
+                  "text": "d'oranges."
+                },
+                {
+                  "id": "c",
+                  "text": "de fraises."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Vous avez des fraises ? — Non, désolé, pas aujourd'hui. » 사과와 오렌지는 있다고 한다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Combien coûtent les achats de la cliente ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "7 euros."
+                },
+                {
+                  "id": "b",
+                  "text": "3 euros."
+                },
+                {
+                  "id": "c",
+                  "text": "10 euros."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Ça fait 7 euros ». 10유로는 손님이 낸 돈, 3유로는 거스름돈이다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Vous êtes dans un supermarché. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Mesdames et messieurs, bonjour. Aujourd'hui, au rayon boulangerie, trois croissants pour 2 euros seulement ! Le magasin ferme ce soir à 20 heures. Demain, il ouvre à 8 heures. Merci et bonnes courses !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Aujourd'hui, quel produit est moins cher ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les croissants."
+                },
+                {
+                  "id": "b",
+                  "text": "Le pain."
+                },
+                {
+                  "id": "c",
+                  "text": "Les gâteaux."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « trois croissants pour 2 euros seulement ! »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Ce soir, le magasin ferme à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "8 heures."
+                },
+                {
+                  "id": "b",
+                  "text": "22 heures."
+                },
+                {
+                  "id": "c",
+                  "text": "20 heures."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Le magasin ferme ce soir à 20 heures. » 8시는 내일 여는 시간이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez cette affiche sur la porte d'une boulangerie.",
+          "title": "Boulangerie Martin",
+          "text": "Horaires\n\nDu mardi au samedi : 7 h – 19 h 30\nDimanche : 7 h – 13 h\nFermé le lundi\n\nNouveau ! Pain aux noix : 3,20 €\n\nGâteaux d'anniversaire : commandez 2 jours avant.\nTél. : 04 78 31 25 60",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le lundi, la boulangerie :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "ouvre à 7 h."
+                },
+                {
+                  "id": "b",
+                  "text": "est fermée."
+                },
+                {
+                  "id": "c",
+                  "text": "ferme à 13 h."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Fermé le lundi »."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Le dimanche, vous pouvez acheter du pain à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "8 h."
+                },
+                {
+                  "id": "b",
+                  "text": "14 h."
+                },
+                {
+                  "id": "c",
+                  "text": "18 h."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Dimanche : 7 h – 13 h » 이므로 8시만 문을 연 시간이다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Pour avoir un gâteau d'anniversaire, vous devez :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "commander 2 jours avant."
+                },
+                {
+                  "id": "b",
+                  "text": "venir le lundi."
+                },
+                {
+                  "id": "c",
+                  "text": "arriver avant 7 h."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Gâteaux d'anniversaire : commandez 2 jours avant. »"
+            },
+            {
+              "id": "q9",
+              "type": "truefalse",
+              "prompt": "Le pain aux noix coûte 3,20 €.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 1,
+              "explanation": "근거 문장: « Nouveau ! Pain aux noix : 3,20 € »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Samedi soir, vous faites un dîner chez vous avec des amis. Vous êtes au marché. Vous écrivez un message à votre ami Lucas : vous dites ce que vous achetez et vous lui demandez d'apporter quelque chose pour le dîner."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

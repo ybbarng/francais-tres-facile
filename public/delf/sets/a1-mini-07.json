@@ -1,0 +1,288 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-07",
+  "level": "A1",
+  "kind": "mini",
+  "title": "À l'hôtel",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Une femme arrive à l'hôtel. Elle parle avec le réceptionniste.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Thomas",
+                "text": "Bonsoir madame, bienvenue à l'hôtel du Port."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bonsoir. J'ai une réservation au nom de Dubois."
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Thomas",
+                "text": "Oui, madame Dubois, une chambre pour deux nuits. C'est la chambre 208, au deuxième étage."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Le petit-déjeuner est à quelle heure ?"
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Thomas",
+                "text": "De 7 heures à 10 heures, au restaurant de l'hôtel."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Et il y a le wifi ?"
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Thomas",
+                "text": "Oui, c'est gratuit. Le code est sur votre clé."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "La cliente reste à l'hôtel :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "une nuit."
+                },
+                {
+                  "id": "b",
+                  "text": "deux nuits."
+                },
+                {
+                  "id": "c",
+                  "text": "une semaine."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « une chambre pour deux nuits »."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Sa chambre est :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "au deuxième étage."
+                },
+                {
+                  "id": "b",
+                  "text": "au premier étage."
+                },
+                {
+                  "id": "c",
+                  "text": "au rez-de-chaussée."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « C'est la chambre 208, au deuxième étage. »"
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "On peut prendre le petit-déjeuner jusqu'à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "10 h."
+                },
+                {
+                  "id": "b",
+                  "text": "7 h."
+                },
+                {
+                  "id": "c",
+                  "text": "8 h."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « De 7 heures à 10 heures, au restaurant de l'hôtel. »"
+            },
+            {
+              "id": "q4",
+              "type": "truefalse",
+              "prompt": "Le wifi est payant.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "근거 문장: « Oui, c'est gratuit. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous êtes en vacances. Vous lisez ce document à l'office de tourisme.",
+          "title": "Visitez Saint-Malo !",
+          "text": "Visite de la vieille ville à pied, avec un guide\nTous les jours à 10 h 30. Départ devant l'office de tourisme.\nDurée : 1 h 30.\nPrix : 8 € (gratuit pour les enfants de moins de 12 ans).\n\nPromenade en bateau\nLe samedi et le dimanche, à 14 h et à 16 h.\nPrix : 15 €.\n\nL'office de tourisme est ouvert tous les jours, de 9 h à 18 h.",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "La visite à pied commence à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "9 h."
+                },
+                {
+                  "id": "b",
+                  "text": "10 h 30."
+                },
+                {
+                  "id": "c",
+                  "text": "14 h."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Tous les jours à 10 h 30. » 9시는 관광안내소가 여는 시간이다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Un enfant de 8 ans paie la visite à pied :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "8 €."
+                },
+                {
+                  "id": "b",
+                  "text": "15 €."
+                },
+                {
+                  "id": "c",
+                  "text": "0 €."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« gratuit pour les enfants de moins de 12 ans ». 8살은 12살 미만이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Vous pouvez faire une promenade en bateau :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le lundi à 14 h."
+                },
+                {
+                  "id": "b",
+                  "text": "le samedi à 16 h."
+                },
+                {
+                  "id": "c",
+                  "text": "le dimanche à 10 h 30."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Le samedi et le dimanche, à 14 h et à 16 h. »"
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "La visite à pied dure :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "1 heure."
+                },
+                {
+                  "id": "b",
+                  "text": "2 heures."
+                },
+                {
+                  "id": "c",
+                  "text": "1 heure 30."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Durée : 1 h 30. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Vous voulez réserver une chambre d'hôtel. Vous écrivez un e-mail à l'hôtel : vous donnez la date d'arrivée, le nombre de nuits et le nombre de personnes, et vous posez une question (prix, petit-déjeuner, parking…)."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-06",
+  "level": "A1",
+  "kind": "mini",
+  "title": "Le cours de français",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous êtes étudiant(e) dans une école de langues. Le professeur parle à la classe.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Professeur",
+                "voice": "Jacques",
+                "text": "Bonjour à tous. Attention : demain, le cours de français commence à 10 heures, pas à 9 heures. Nous sommes dans la salle 12, au premier étage. N'oubliez pas votre dictionnaire. Merci !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Demain, le cours commence à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "10 h."
+                },
+                {
+                  "id": "b",
+                  "text": "9 h."
+                },
+                {
+                  "id": "c",
+                  "text": "12 h."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « demain, le cours de français commence à 10 heures, pas à 9 heures. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Le cours a lieu dans la salle :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "12."
+                },
+                {
+                  "id": "b",
+                  "text": "9."
+                },
+                {
+                  "id": "c",
+                  "text": "10."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Nous sommes dans la salle 12, au premier étage. »"
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Les étudiants doivent apporter :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un cahier."
+                },
+                {
+                  "id": "b",
+                  "text": "un ordinateur."
+                },
+                {
+                  "id": "c",
+                  "text": "un dictionnaire."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « N'oubliez pas votre dictionnaire. »"
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Deux étudiants parlent avant le cours.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Marco",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Salut ! Tu es nouvelle ? Je m'appelle Marco. Je suis italien."
+              },
+              {
+                "speaker": "Aiko",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Bonjour Marco. Moi, c'est Aiko. Je suis japonaise. J'habite à Paris depuis deux mois."
+              },
+              {
+                "speaker": "Marco",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Tu aimes le cours ?"
+              },
+              {
+                "speaker": "Aiko",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Oui, beaucoup ! Mais la grammaire, c'est difficile. Je préfère parler."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Aiko est :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "italienne."
+                },
+                {
+                  "id": "b",
+                  "text": "chinoise."
+                },
+                {
+                  "id": "c",
+                  "text": "japonaise."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Moi, c'est Aiko. Je suis japonaise. » 이탈리아 사람은 마르코다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Pour Aiko, la grammaire est :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "difficile."
+                },
+                {
+                  "id": "b",
+                  "text": "facile."
+                },
+                {
+                  "id": "c",
+                  "text": "très amusante."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « la grammaire, c'est difficile. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez cette affiche dans une école de langues.",
+          "title": "École de langues Babel – Cours du soir",
+          "text": "Français débutant (A1)\nLundi et jeudi, de 18 h 30 à 20 h – Salle 4\n\nFrançais intermédiaire (A2)\nMardi et vendredi, de 18 h 30 à 20 h – Salle 7\n\nPrix : 180 € pour 10 semaines\n\nInscription au secrétariat, du lundi au vendredi, de 9 h à 17 h.\nPremier cours : lundi 5 octobre.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Vous êtes débutant(e). Vous avez cours :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le mardi et le vendredi."
+                },
+                {
+                  "id": "b",
+                  "text": "le lundi et le jeudi."
+                },
+                {
+                  "id": "c",
+                  "text": "le lundi et le vendredi."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Français débutant (A1) — Lundi et jeudi »."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Le cours A2 a lieu dans la salle :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "4."
+                },
+                {
+                  "id": "b",
+                  "text": "10."
+                },
+                {
+                  "id": "c",
+                  "text": "7."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Français intermédiaire (A2) … Salle 7 »."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Pour vous inscrire, vous allez au secrétariat :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "entre 9 h et 17 h."
+                },
+                {
+                  "id": "b",
+                  "text": "le samedi."
+                },
+                {
+                  "id": "c",
+                  "text": "entre 18 h 30 et 20 h."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Inscription au secrétariat, du lundi au vendredi, de 9 h à 17 h. » 18 h 30–20 h 는 수업 시간이다."
+            },
+            {
+              "id": "q9",
+              "type": "truefalse",
+              "prompt": "Le cours coûte 180 € par semaine.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Prix : 180 € pour 10 semaines » 이므로 한 주 값이 아니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Vous voulez suivre un cours de français. Vous écrivez un e-mail à l'école : vous vous présentez (nom, nationalité), vous dites votre niveau et vous demandez les jours et les heures des cours."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

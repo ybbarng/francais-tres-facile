@@ -1,0 +1,1232 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-exam-02",
+  "level": "A1",
+  "kind": "exam",
+  "title": "Examen blanc A1 n° 2",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 20,
+      "instructions": "Vous allez entendre plusieurs documents. Il y a 2 écoutes pour chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Madame Petit entend ce message sur son répondeur.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Garagiste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Bonjour madame Petit, ici le garage Central. Votre voiture est prête. Vous pouvez venir la chercher demain matin, entre 8 heures et 12 heures. La réparation coûte 230 euros. Attention, demain après-midi, le garage est fermé. Au revoir, madame."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Qui téléphone ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Un garage."
+                },
+                {
+                  "id": "b",
+                  "text": "Une banque."
+                },
+                {
+                  "id": "c",
+                  "text": "Un médecin."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « ici le garage Central. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "La voiture de Madame Petit :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "n'est pas encore réparée."
+                },
+                {
+                  "id": "b",
+                  "text": "est réparée."
+                },
+                {
+                  "id": "c",
+                  "text": "est vendue."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Votre voiture est prête. » — 수리가 끝났다는 뜻이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Madame Petit peut aller chercher sa voiture :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "demain après-midi."
+                },
+                {
+                  "id": "b",
+                  "text": "demain matin."
+                },
+                {
+                  "id": "c",
+                  "text": "ce soir."
+                }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "« Vous pouvez venir la chercher demain matin, entre 8 heures et 12 heures. » 내일 오후에는 문을 닫는다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "La réparation coûte :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "230 euros."
+                },
+                {
+                  "id": "b",
+                  "text": "130 euros."
+                },
+                {
+                  "id": "c",
+                  "text": "320 euros."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « La réparation coûte 230 euros. »"
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Vous êtes à l'aéroport. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Mesdames et messieurs, votre attention, s'il vous plaît. Le vol pour Rome part de la porte 32. Les passagers montent dans l'avion à 11 heures 45. Attention : le vol pour Madrid a une heure de retard. Il part à 13 heures. Merci."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Le vol pour Rome part de la porte :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "32."
+                },
+                {
+                  "id": "b",
+                  "text": "12."
+                },
+                {
+                  "id": "c",
+                  "text": "23."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Le vol pour Rome part de la porte 32. »"
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Les passagers pour Rome montent dans l'avion à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "12 h 45."
+                },
+                {
+                  "id": "b",
+                  "text": "13 h."
+                },
+                {
+                  "id": "c",
+                  "text": "11 h 45."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Les passagers montent dans l'avion à 11 heures 45. »"
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Le vol pour Madrid :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "est à l'heure."
+                },
+                {
+                  "id": "b",
+                  "text": "est annulé."
+                },
+                {
+                  "id": "c",
+                  "text": "a une heure de retard."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « le vol pour Madrid a une heure de retard. »"
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Le vol pour Madrid part à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "11 h 45."
+                },
+                {
+                  "id": "b",
+                  "text": "13 h."
+                },
+                {
+                  "id": "c",
+                  "text": "12 h."
+                }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "« Il part à 13 heures. » 11시 45분은 로마행 탑승 시각이다."
+            }
+          ]
+        },
+        {
+          "id": "doc3",
+          "context": "Un homme est dans un magasin de vêtements. Il parle avec une vendeuse.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Vendeuse",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Bonjour monsieur, je peux vous aider ?"
+              },
+              {
+                "speaker": "Client",
+                "voice": "Thomas",
+                "text": "Oui, je cherche un pull pour mon fils. Il a 15 ans."
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Quelle couleur ?"
+              },
+              {
+                "speaker": "Client",
+                "voice": "Thomas",
+                "text": "Bleu ou gris. Il n'aime pas le rouge."
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Regardez, ce pull bleu est très joli. Il coûte 35 euros."
+              },
+              {
+                "speaker": "Client",
+                "voice": "Thomas",
+                "text": "Il est un peu cher… Vous avez autre chose ?"
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Ce pull gris coûte 22 euros."
+              },
+              {
+                "speaker": "Client",
+                "voice": "Thomas",
+                "text": "Parfait, je le prends."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Le pull est pour :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le fils du client."
+                },
+                {
+                  "id": "b",
+                  "text": "le client."
+                },
+                {
+                  "id": "c",
+                  "text": "la fille du client."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « je cherche un pull pour mon fils. »"
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Le fils n'aime pas :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le rouge."
+                },
+                {
+                  "id": "b",
+                  "text": "le bleu."
+                },
+                {
+                  "id": "c",
+                  "text": "le gris."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Bleu ou gris. Il n'aime pas le rouge. »"
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "Le client achète :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le pull bleu."
+                },
+                {
+                  "id": "b",
+                  "text": "le pull gris."
+                },
+                {
+                  "id": "c",
+                  "text": "deux pulls."
+                }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "파란 스웨터는 « un peu cher » 라고 했고, « Ce pull gris coûte 22 euros. — Parfait, je le prends. »"
+            },
+            {
+              "id": "q12",
+              "type": "choice",
+              "prompt": "Il paie :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "15 euros."
+                },
+                {
+                  "id": "b",
+                  "text": "22 euros."
+                },
+                {
+                  "id": "c",
+                  "text": "35 euros."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Ce pull gris coûte 22 euros. — Parfait, je le prends. » 35유로는 파란 스웨터, 15는 아들 나이다."
+            }
+          ]
+        },
+        {
+          "id": "doc4",
+          "context": "Vous allez entendre cinq petits dialogues. Pour chaque dialogue, choisissez la bonne réponse.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Narrateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Dialogue numéro 1."
+              },
+              {
+                "speaker": "Passante",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Excusez-moi, il est quelle heure, s'il vous plaît ?"
+              },
+              {
+                "speaker": "Passant",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Il est 4 heures et quart."
+              },
+              {
+                "speaker": "Narrateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Dialogue numéro 2."
+              },
+              {
+                "speaker": "Client",
+                "voice": "Jacques",
+                "text": "Combien coûte ce livre ?"
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "12 euros 50."
+              },
+              {
+                "speaker": "Narrateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Dialogue numéro 3."
+              },
+              {
+                "speaker": "Employée",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Vous habitez où ?"
+              },
+              {
+                "speaker": "Monsieur",
+                "voice": "Thomas",
+                "text": "J'habite 14, rue Molière, à Lyon."
+              },
+              {
+                "speaker": "Narrateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Dialogue numéro 4."
+              },
+              {
+                "speaker": "Serveur",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Bonsoir. Vous êtes combien ?"
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Nous sommes quatre : deux adultes et deux enfants."
+              },
+              {
+                "speaker": "Narrateur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Dialogue numéro 5."
+              },
+              {
+                "speaker": "Fille",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "C'est quand, ton anniversaire ?"
+              },
+              {
+                "speaker": "Garçon",
+                "voice": "Jacques",
+                "text": "Le 22 mai."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q13",
+              "type": "choice",
+              "prompt": "Dialogue 1. Qu'est-ce qu'on demande ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Un prix."
+                },
+                {
+                  "id": "b",
+                  "text": "Une adresse."
+                },
+                {
+                  "id": "c",
+                  "text": "L'heure."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « il est quelle heure, s'il vous plaît ? »"
+            },
+            {
+              "id": "q14",
+              "type": "choice",
+              "prompt": "Dialogue 2. Qu'est-ce qu'on demande ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Un numéro de téléphone."
+                },
+                {
+                  "id": "b",
+                  "text": "Un prix."
+                },
+                {
+                  "id": "c",
+                  "text": "Une date."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Combien coûte ce livre ? »"
+            },
+            {
+              "id": "q15",
+              "type": "choice",
+              "prompt": "Dialogue 3. Qu'est-ce qu'on demande ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Un âge."
+                },
+                {
+                  "id": "b",
+                  "text": "Une adresse."
+                },
+                {
+                  "id": "c",
+                  "text": "Une profession."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Vous habitez où ? — J'habite 14, rue Molière »."
+            },
+            {
+              "id": "q16",
+              "type": "choice",
+              "prompt": "Dialogue 4. Qu'est-ce qu'on demande ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Une heure."
+                },
+                {
+                  "id": "b",
+                  "text": "Un prix."
+                },
+                {
+                  "id": "c",
+                  "text": "Un nombre de personnes."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Vous êtes combien ? — Nous sommes quatre »."
+            },
+            {
+              "id": "q17",
+              "type": "choice",
+              "prompt": "Dialogue 5. Qu'est-ce qu'on demande ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Une adresse."
+                },
+                {
+                  "id": "b",
+                  "text": "Un nom."
+                },
+                {
+                  "id": "c",
+                  "text": "Une date."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « C'est quand, ton anniversaire ? — Le 22 mai. »"
+            }
+          ]
+        },
+        {
+          "id": "doc5",
+          "context": "Votre fille va au centre de loisirs. Vous écoutez ce message.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Animatrice",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour, c'est Karine, du centre de loisirs. Demain, jeudi, les enfants vont visiter le zoo. Le bus part du centre à 8 heures 30. Les enfants rentrent à 16 heures. Ils doivent apporter un repas froid et une bouteille d'eau. La sortie coûte 5 euros. Merci et bonne soirée !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q18",
+              "type": "choice",
+              "prompt": "Demain, les enfants vont :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "au zoo."
+                },
+                {
+                  "id": "b",
+                  "text": "au musée."
+                },
+                {
+                  "id": "c",
+                  "text": "à la piscine."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Demain, jeudi, les enfants vont visiter le zoo. »"
+            },
+            {
+              "id": "q19",
+              "type": "choice",
+              "prompt": "Le bus part à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "8 h."
+                },
+                {
+                  "id": "b",
+                  "text": "8 h 30."
+                },
+                {
+                  "id": "c",
+                  "text": "16 h."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Le bus part du centre à 8 heures 30. » 16시는 돌아오는 시각이다."
+            },
+            {
+              "id": "q20",
+              "type": "choice",
+              "prompt": "Les enfants doivent apporter :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un maillot de bain."
+                },
+                {
+                  "id": "b",
+                  "text": "un appareil photo."
+                },
+                {
+                  "id": "c",
+                  "text": "un repas froid et de l'eau."
+                }
+              ],
+              "answer": ["c"],
+              "points": 2,
+              "explanation": "근거 문장: « Ils doivent apporter un repas froid et une bouteille d'eau. »"
+            },
+            {
+              "id": "q21",
+              "type": "choice",
+              "prompt": "La sortie coûte :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "8 euros."
+                },
+                {
+                  "id": "b",
+                  "text": "5 euros."
+                },
+                {
+                  "id": "c",
+                  "text": "16 euros."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « La sortie coûte 5 euros. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 30,
+      "instructions": "Lisez les documents et répondez aux questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc6",
+          "context": "Lucas trouve ce mot sur la table de la cuisine.",
+          "title": "Un mot de Maman",
+          "text": "Lucas,\n\nJe rentre tard ce soir, vers 21 h. Il y a des pâtes et du poulet dans le frigo pour ton dîner.\n\nAprès l'école, va chercher ta sœur chez Mamie, s'il te plaît. Et n'oublie pas : tu as ton cours de guitare à 18 h !\n\nBisous,\nMaman",
+          "questions": [
+            {
+              "id": "q22",
+              "type": "choice",
+              "prompt": "La mère de Lucas rentre :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "à 18 h."
+                },
+                {
+                  "id": "b",
+                  "text": "vers 21 h."
+                },
+                {
+                  "id": "c",
+                  "text": "après l'école."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Je rentre tard ce soir, vers 21 h. »"
+            },
+            {
+              "id": "q23",
+              "type": "choice",
+              "prompt": "Pour le dîner, il y a :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "une pizza."
+                },
+                {
+                  "id": "b",
+                  "text": "du poisson."
+                },
+                {
+                  "id": "c",
+                  "text": "des pâtes et du poulet."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Il y a des pâtes et du poulet dans le frigo pour ton dîner. »"
+            },
+            {
+              "id": "q24",
+              "type": "choice",
+              "prompt": "Après l'école, Lucas doit :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "aller chercher sa sœur."
+                },
+                {
+                  "id": "b",
+                  "text": "faire les courses."
+                },
+                {
+                  "id": "c",
+                  "text": "téléphoner à sa grand-mère."
+                }
+              ],
+              "answer": ["a"],
+              "points": 2,
+              "explanation": "« Après l'école, va chercher ta sœur chez Mamie ». 할머니 댁에 가는 것이지 전화하는 것이 아니다."
+            },
+            {
+              "id": "q25",
+              "type": "choice",
+              "prompt": "À 18 h, Lucas a :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un match de football."
+                },
+                {
+                  "id": "b",
+                  "text": "un rendez-vous chez le médecin."
+                },
+                {
+                  "id": "c",
+                  "text": "un cours de guitare."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « tu as ton cours de guitare à 18 h ! »"
+            }
+          ]
+        },
+        {
+          "id": "doc7",
+          "context": "Vous lisez le programme du cinéma de votre quartier.",
+          "title": "Cinéma Le Rex – Cette semaine",
+          "text": "« Le Grand Voyage » (film d'aventure, 1 h 50)\nTous les jours : 14 h, 18 h, 20 h 30\n\n« Mon ami le chat » (dessin animé, 1 h 20)\nMercredi, samedi et dimanche : 10 h 30 et 15 h\n\n« Amour à Paris » (comédie, 1 h 35)\nVendredi et samedi : 21 h\n\nTarif normal : 10 €\nMoins de 14 ans : 6 €\nLe lundi : 7 € pour tous",
+          "questions": [
+            {
+              "id": "q26",
+              "type": "choice",
+              "prompt": "Le dessin animé passe :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "tous les jours."
+                },
+                {
+                  "id": "b",
+                  "text": "le vendredi et le samedi."
+                },
+                {
+                  "id": "c",
+                  "text": "le mercredi, le samedi et le dimanche."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Mon ami le chat » (dessin animé) — « Mercredi, samedi et dimanche »."
+            },
+            {
+              "id": "q27",
+              "type": "choice",
+              "prompt": "Le film « Le Grand Voyage » dure :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "1 h 50."
+                },
+                {
+                  "id": "b",
+                  "text": "1 h 20."
+                },
+                {
+                  "id": "c",
+                  "text": "1 h 35."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Le Grand Voyage » (film d'aventure, 1 h 50) »."
+            },
+            {
+              "id": "q28",
+              "type": "choice",
+              "prompt": "Vous voulez voir la comédie le vendredi. La séance est à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "21 h."
+                },
+                {
+                  "id": "b",
+                  "text": "18 h."
+                },
+                {
+                  "id": "c",
+                  "text": "20 h 30."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Amour à Paris » (comédie) — « Vendredi et samedi : 21 h »."
+            },
+            {
+              "id": "q29",
+              "type": "choice",
+              "prompt": "Le lundi, un adulte paie :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "6 €."
+                },
+                {
+                  "id": "b",
+                  "text": "7 €."
+                },
+                {
+                  "id": "c",
+                  "text": "10 €."
+                }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "근거 문장: « Le lundi : 7 € pour tous »."
+            }
+          ]
+        },
+        {
+          "id": "doc8",
+          "context": "Vous êtes étudiant(e). Vous cherchez un logement près de l'université. Vous avez un chat. Vous lisez ces annonces.",
+          "title": "Petites annonces – Logement",
+          "text": "A. Chambre dans une maison, à 15 minutes de l'université à vélo. 350 € par mois. Pas d'animaux.\n\nB. Studio à côté de l'université. 480 € par mois. Animaux acceptés.\n\nC. Chambre chez une dame âgée, au centre-ville, à 40 minutes de l'université en bus. 300 € par mois. Animaux acceptés.\n\nD. Grand appartement avec 3 chambres, près de la gare. 1 100 € par mois. Animaux acceptés.",
+          "questions": [
+            {
+              "id": "q30",
+              "type": "choice",
+              "prompt": "Quelle annonce est la meilleure pour vous ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Annonce A."
+                },
+                {
+                  "id": "b",
+                  "text": "Annonce B."
+                },
+                {
+                  "id": "c",
+                  "text": "Annonce C."
+                },
+                {
+                  "id": "d",
+                  "text": "Annonce D."
+                }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "B 는 « à côté de l'université » 이고 « Animaux acceptés ». A 는 « Pas d'animaux », C 는 버스로 40분, D 는 기차역 근처다."
+            },
+            {
+              "id": "q31",
+              "type": "choice",
+              "prompt": "Dans quel logement est-ce qu'on ne peut pas avoir d'animal ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Annonce A."
+                },
+                {
+                  "id": "b",
+                  "text": "Annonce B."
+                },
+                {
+                  "id": "c",
+                  "text": "Annonce C."
+                },
+                {
+                  "id": "d",
+                  "text": "Annonce D."
+                }
+              ],
+              "answer": ["a"],
+              "points": 2,
+              "explanation": "A 에만 « Pas d'animaux » 라고 쓰여 있다."
+            },
+            {
+              "id": "q32",
+              "type": "choice",
+              "prompt": "Quel logement est le moins cher ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Annonce A."
+                },
+                {
+                  "id": "b",
+                  "text": "Annonce B."
+                },
+                {
+                  "id": "c",
+                  "text": "Annonce C."
+                },
+                {
+                  "id": "d",
+                  "text": "Annonce D."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "C 가 « 300 € par mois » 로 가장 싸다(A 350 €, B 480 €, D 1 100 €)."
+            }
+          ]
+        },
+        {
+          "id": "doc9",
+          "context": "Ana reçoit cet e-mail de son ami Thomas.",
+          "title": "Objet : Ta visite à Strasbourg",
+          "text": "Bonjour Ana,\n\nJe suis très content : tu viens à Strasbourg le week-end prochain ! Je vais te chercher à la gare samedi, à 11 h 20. Après, on va déjeuner chez mes parents. Ils habitent près de la cathédrale.\n\nDimanche, s'il fait beau, on fait une promenade en bateau. S'il pleut, on visite le musée d'Art moderne.\n\nPrends un parapluie : il pleut souvent ici !\n\nÀ samedi,\nThomas",
+          "questions": [
+            {
+              "id": "q33",
+              "type": "choice",
+              "prompt": "Thomas va chercher Ana :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "à l'aéroport."
+                },
+                {
+                  "id": "b",
+                  "text": "à la gare."
+                },
+                {
+                  "id": "c",
+                  "text": "chez ses parents."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Je vais te chercher à la gare samedi, à 11 h 20. »"
+            },
+            {
+              "id": "q34",
+              "type": "choice",
+              "prompt": "Samedi midi, ils déjeunent :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "chez les parents de Thomas."
+                },
+                {
+                  "id": "b",
+                  "text": "au restaurant."
+                },
+                {
+                  "id": "c",
+                  "text": "sur un bateau."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Après, on va déjeuner chez mes parents. »"
+            },
+            {
+              "id": "q35",
+              "type": "choice",
+              "prompt": "Dimanche, s'il pleut, ils vont :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "faire une promenade en bateau."
+                },
+                {
+                  "id": "b",
+                  "text": "rester à la maison."
+                },
+                {
+                  "id": "c",
+                  "text": "visiter un musée."
+                }
+              ],
+              "answer": ["c"],
+              "points": 2,
+              "explanation": "« S'il pleut, on visite le musée d'Art moderne. » 배는 날씨가 좋을 때다."
+            },
+            {
+              "id": "q36",
+              "type": "choice",
+              "prompt": "Thomas dit à Ana d'apporter :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un pull."
+                },
+                {
+                  "id": "b",
+                  "text": "un appareil photo."
+                },
+                {
+                  "id": "c",
+                  "text": "un parapluie."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Prends un parapluie : il pleut souvent ici ! »"
+            }
+          ]
+        },
+        {
+          "id": "doc10",
+          "context": "Vous lisez cette affiche dans votre quartier.",
+          "title": "Grande fête du quartier Saint-Jean !",
+          "text": "Dimanche 14 juin, de 11 h à 18 h, place du Marché.\n\nAu programme :\n11 h : petit concert de l'école de musique\n12 h 30 : grand repas. Chaque famille apporte un plat !\n15 h : jeux pour les enfants\n17 h : match de football (parents contre enfants)\n\nS'il pleut, la fête a lieu dans la salle des sports, rue Pasteur.\nInformations : mairie du quartier, 01 44 62 90 15.",
+          "questions": [
+            {
+              "id": "q37",
+              "type": "choice",
+              "prompt": "La fête a lieu :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "sur la place du Marché."
+                },
+                {
+                  "id": "b",
+                  "text": "dans un parc."
+                },
+                {
+                  "id": "c",
+                  "text": "à l'école de musique."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Dimanche 14 juin, de 11 h à 18 h, place du Marché. »"
+            },
+            {
+              "id": "q38",
+              "type": "choice",
+              "prompt": "Pour le repas, chaque famille doit :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "payer 12 €."
+                },
+                {
+                  "id": "b",
+                  "text": "apporter un plat."
+                },
+                {
+                  "id": "c",
+                  "text": "réserver à la mairie."
+                }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "근거 문장: « 12 h 30 : grand repas. Chaque famille apporte un plat ! »"
+            },
+            {
+              "id": "q39",
+              "type": "choice",
+              "prompt": "À 15 h, il y a :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un concert."
+                },
+                {
+                  "id": "b",
+                  "text": "un match de football."
+                },
+                {
+                  "id": "c",
+                  "text": "des jeux pour les enfants."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« 15 h : jeux pour les enfants ». 콘서트는 11시, 축구는 17시다."
+            },
+            {
+              "id": "q40",
+              "type": "choice",
+              "prompt": "S'il pleut, la fête :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "a lieu dans la salle des sports."
+                },
+                {
+                  "id": "b",
+                  "text": "est annulée."
+                },
+                {
+                  "id": "c",
+                  "text": "a lieu à la mairie."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « S'il pleut, la fête a lieu dans la salle des sports, rue Pasteur. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 30,
+      "instructions": "L'épreuve a deux exercices. Exercice 1 : vous complétez une fiche. Exercice 2 : vous écrivez un message de 40 à 50 mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Exercice 1. Vous voulez vous inscrire dans un club de sport. Complétez la fiche d'inscription. Écrivez une ligne pour chaque information.\n\nNom :\nPrénom :\nÂge :\nNationalité :\nAdresse :\nNuméro de téléphone :\nProfession :\nSport choisi :\nJours où vous êtes libre :\nPourquoi vous voulez faire ce sport (quelques mots) :",
+          "minWords": 15,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Nom : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Prénom : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Âge : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Nationalité : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Adresse : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Numéro de téléphone : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Profession : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Sport choisi : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Jours où vous êtes libre : information correcte et lisible",
+              "points": 1
+            },
+            {
+              "criterion": "Pourquoi vous voulez faire ce sport (quelques mots) : information correcte et lisible",
+              "points": 1
+            }
+          ]
+        },
+        {
+          "id": "w2",
+          "prompt": "Exercice 2. Un(e) ami(e) français(e) vient dans votre ville le mois prochain. Vous lui écrivez un e-mail : vous présentez votre ville (lieux intéressants, activités) et vous proposez deux activités à faire ensemble.",
+          "minWords": 40,
+          "maxWords": 50,
+          "points": 15,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 4
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 3
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 3
+            },
+            {
+              "criterion": "Cohérence et cohésion (mots de liaison simples : et, mais, alors, puis)",
+              "points": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

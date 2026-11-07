@@ -1,0 +1,336 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-02",
+  "level": "A1",
+  "kind": "mini",
+  "title": "À la gare",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous êtes à la gare. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Votre attention, s'il vous plaît. Le train pour Bordeaux de 14 heures 20 part du quai numéro 5. Le train pour Nantes a 10 minutes de retard. Il part à 14 heures 40. Merci."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Le train pour Bordeaux part du quai :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "numéro 5."
+                },
+                {
+                  "id": "b",
+                  "text": "numéro 4."
+                },
+                {
+                  "id": "c",
+                  "text": "numéro 10."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Le train pour Bordeaux de 14 heures 20 part du quai numéro 5. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Le train pour Nantes part à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "14 h 20."
+                },
+                {
+                  "id": "b",
+                  "text": "14 h 30."
+                },
+                {
+                  "id": "c",
+                  "text": "14 h 40."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Le train pour Nantes a 10 minutes de retard. Il part à 14 heures 40. » 14시 20분은 보르도행 열차 시간이다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Un homme achète un billet au guichet de la gare.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Employée",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour monsieur."
+              },
+              {
+                "speaker": "Voyageur",
+                "voice": "Jacques",
+                "text": "Bonjour. Je voudrais un billet pour Lille, demain matin, s'il vous plaît."
+              },
+              {
+                "speaker": "Employée",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Un aller simple ou un aller-retour ?"
+              },
+              {
+                "speaker": "Voyageur",
+                "voice": "Jacques",
+                "text": "Un aller-retour. Je rentre dimanche."
+              },
+              {
+                "speaker": "Employée",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Il y a un train à 8 heures 15 et un train à 10 heures."
+              },
+              {
+                "speaker": "Voyageur",
+                "voice": "Jacques",
+                "text": "8 heures 15, c'est parfait."
+              },
+              {
+                "speaker": "Employée",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Alors, ça fait 64 euros."
+              },
+              {
+                "speaker": "Voyageur",
+                "voice": "Jacques",
+                "text": "Je peux payer par carte ?"
+              },
+              {
+                "speaker": "Employée",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Oui, bien sûr."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "L'homme achète :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un aller simple."
+                },
+                {
+                  "id": "b",
+                  "text": "deux billets."
+                },
+                {
+                  "id": "c",
+                  "text": "un aller-retour."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Un aller simple ou un aller-retour ? — Un aller-retour. »"
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Il prend le train de :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "8 h 15."
+                },
+                {
+                  "id": "b",
+                  "text": "10 h."
+                },
+                {
+                  "id": "c",
+                  "text": "8 h 50."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« 8 heures 15, c'est parfait. » 10시 기차는 고르지 않았다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Le billet coûte :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "46 euros."
+                },
+                {
+                  "id": "b",
+                  "text": "64 euros."
+                },
+                {
+                  "id": "c",
+                  "text": "15 euros."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Alors, ça fait 64 euros. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez ces informations à l'arrêt de bus.",
+          "title": "Bus ligne 12 : Gare – Université",
+          "text": "Du lundi au vendredi : un bus toutes les 15 minutes, de 6 h à 21 h.\nLe samedi : un bus toutes les 30 minutes, de 7 h à 20 h.\nLe dimanche : pas de bus.\n\nTicket : 1,80 € (dans le bus : 2,50 €)\nCarnet de 10 tickets : 15 €",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le samedi, il y a un bus :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "toutes les 15 minutes."
+                },
+                {
+                  "id": "b",
+                  "text": "toutes les 30 minutes."
+                },
+                {
+                  "id": "c",
+                  "text": "toutes les heures."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Le samedi : un bus toutes les 30 minutes »."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Le dimanche :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "il n'y a pas de bus."
+                },
+                {
+                  "id": "b",
+                  "text": "le premier bus part à 7 h."
+                },
+                {
+                  "id": "c",
+                  "text": "le bus est gratuit."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Le dimanche : pas de bus. »"
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Vous achetez un ticket dans le bus. Il coûte :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "1,80 €."
+                },
+                {
+                  "id": "b",
+                  "text": "2,50 €."
+                },
+                {
+                  "id": "c",
+                  "text": "15 €."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Ticket : 1,80 € (dans le bus : 2,50 €) ». 버스 안에서 사면 2,50 €다."
+            },
+            {
+              "id": "q9",
+              "type": "truefalse",
+              "prompt": "Le mercredi, il y a des bus jusqu'à 21 h.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 1,
+              "explanation": "« Du lundi au vendredi : … de 6 h à 21 h. » 수요일은 월~금에 들어간다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Vous avez rendez-vous avec votre amie Clara, mais votre train a du retard. Vous lui écrivez un SMS : vous expliquez le problème, vous donnez votre nouvelle heure d'arrivée et vous proposez un lieu pour vous retrouver."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

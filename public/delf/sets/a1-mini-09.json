@@ -1,0 +1,302 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-09",
+  "level": "A1",
+  "kind": "mini",
+  "title": "Un appartement à louer",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Une femme téléphone à une agence immobilière.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Agent",
+                "voice": "Jacques",
+                "text": "Agence Soleil, bonjour."
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Bonjour monsieur. J'appelle pour l'appartement de la rue Pasteur."
+              },
+              {
+                "speaker": "Agent",
+                "voice": "Jacques",
+                "text": "Oui. C'est un appartement de deux pièces, avec une grande cuisine et un balcon."
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Il est à quel étage ?"
+              },
+              {
+                "speaker": "Agent",
+                "voice": "Jacques",
+                "text": "Au troisième étage, mais il y a un ascenseur."
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Et le loyer, c'est combien ?"
+              },
+              {
+                "speaker": "Agent",
+                "voice": "Jacques",
+                "text": "650 euros par mois."
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Je peux le visiter jeudi ?"
+              },
+              {
+                "speaker": "Agent",
+                "voice": "Jacques",
+                "text": "Oui, jeudi à 18 heures."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "L'appartement a :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un jardin."
+                },
+                {
+                  "id": "b",
+                  "text": "un balcon."
+                },
+                {
+                  "id": "c",
+                  "text": "un garage."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « avec une grande cuisine et un balcon. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "L'appartement est au :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "deuxième étage."
+                },
+                {
+                  "id": "b",
+                  "text": "troisième étage."
+                },
+                {
+                  "id": "c",
+                  "text": "quatrième étage."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Au troisième étage, mais il y a un ascenseur. » 2는 방 개수다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Le loyer est de :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "560 euros par mois."
+                },
+                {
+                  "id": "b",
+                  "text": "615 euros par mois."
+                },
+                {
+                  "id": "c",
+                  "text": "650 euros par mois."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « 650 euros par mois. »"
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "La visite est :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "jeudi à 18 h."
+                },
+                {
+                  "id": "b",
+                  "text": "jeudi à 8 h."
+                },
+                {
+                  "id": "c",
+                  "text": "mardi à 18 h."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Oui, jeudi à 18 heures. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez ce message dans l'entrée de votre immeuble.",
+          "title": "Information aux habitants",
+          "text": "Bonjour à tous,\n\nLe mardi 14 avril, il n'y a pas d'eau chaude de 9 h à 16 h : des ouvriers travaillent dans l'immeuble.\n\nRappel : on sort les poubelles le lundi soir et le jeudi soir. Les vélos vont dans la cour, pas dans l'entrée.\n\nMerci !\nLe gardien, M. Lopez",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Le 14 avril, il n'y a pas :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "d'eau chaude."
+                },
+                {
+                  "id": "b",
+                  "text": "d'électricité."
+                },
+                {
+                  "id": "c",
+                  "text": "d'ascenseur."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « il n'y a pas d'eau chaude de 9 h à 16 h »."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "On sort les poubelles :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le mardi et le jeudi."
+                },
+                {
+                  "id": "b",
+                  "text": "tous les soirs."
+                },
+                {
+                  "id": "c",
+                  "text": "le lundi et le jeudi."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« on sort les poubelles le lundi soir et le jeudi soir. » 화요일은 온수가 끊기는 날이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Les vélos doivent être :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "dans l'entrée."
+                },
+                {
+                  "id": "b",
+                  "text": "dans les appartements."
+                },
+                {
+                  "id": "c",
+                  "text": "dans la cour."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Les vélos vont dans la cour, pas dans l'entrée. »"
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Qui écrit ce message ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le gardien de l'immeuble."
+                },
+                {
+                  "id": "b",
+                  "text": "Un ouvrier."
+                },
+                {
+                  "id": "c",
+                  "text": "Un nouvel habitant."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Le gardien, M. Lopez »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Vous avez un nouvel appartement. Vous écrivez un e-mail à un(e) ami(e) : vous décrivez l'appartement (pièces, taille, quartier) et vous l'invitez à venir le voir."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

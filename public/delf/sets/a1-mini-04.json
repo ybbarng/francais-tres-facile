@@ -1,0 +1,325 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-04",
+  "level": "A1",
+  "kind": "mini",
+  "title": "La photo de famille",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Deux amis regardent une photo.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Paul",
+                "voice": "Thomas",
+                "text": "C'est qui, sur la photo ?"
+              },
+              {
+                "speaker": "Inès",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "C'est ma famille. Ici, c'est mon frère Karim. Il a 12 ans."
+              },
+              {
+                "speaker": "Paul",
+                "voice": "Thomas",
+                "text": "Et la fille à côté ?"
+              },
+              {
+                "speaker": "Inès",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "C'est ma sœur Nadia. Elle a 20 ans. Elle est étudiante à Toulouse."
+              },
+              {
+                "speaker": "Paul",
+                "voice": "Thomas",
+                "text": "Et le monsieur avec le chien ?"
+              },
+              {
+                "speaker": "Inès",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "C'est mon grand-père. Il habite avec nous."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Karim est :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le cousin d'Inès."
+                },
+                {
+                  "id": "b",
+                  "text": "le père d'Inès."
+                },
+                {
+                  "id": "c",
+                  "text": "le frère d'Inès."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Ici, c'est mon frère Karim. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Nadia a :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "12 ans."
+                },
+                {
+                  "id": "b",
+                  "text": "20 ans."
+                },
+                {
+                  "id": "c",
+                  "text": "22 ans."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« C'est ma sœur Nadia. Elle a 20 ans. » 12살은 카림의 나이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Le grand-père d'Inès :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "habite à Toulouse."
+                },
+                {
+                  "id": "b",
+                  "text": "est étudiant."
+                },
+                {
+                  "id": "c",
+                  "text": "habite avec la famille d'Inès."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« C'est mon grand-père. Il habite avec nous. » 툴루즈에 사는 사람은 언니 나디아다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Mathis écoute ce message sur son téléphone.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Grand-mère",
+                "voice": "Grandma (프랑스어(프랑스))",
+                "text": "Allô, Mathis ? C'est mamie. Dimanche, c'est l'anniversaire de ton papa. On fait un repas chez moi, à midi. Tu peux apporter le gâteau ? Merci, mon chéri. Bisous !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Dimanche, c'est l'anniversaire :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "de Mathis."
+                },
+                {
+                  "id": "b",
+                  "text": "de la grand-mère."
+                },
+                {
+                  "id": "c",
+                  "text": "du père de Mathis."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Dimanche, c'est l'anniversaire de ton papa. »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "La grand-mère demande à Mathis d'apporter :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le gâteau."
+                },
+                {
+                  "id": "b",
+                  "text": "des fleurs."
+                },
+                {
+                  "id": "c",
+                  "text": "un cadeau."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Tu peux apporter le gâteau ? »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez cette annonce sur internet.",
+          "title": "Cherche baby-sitter",
+          "text": "Bonjour !\n\nNous sommes une famille avec deux enfants : Lina, 6 ans, et Tom, 4 ans. Nous cherchons une baby-sitter pour le mercredi après-midi, de 13 h à 18 h.\n\nVous allez chercher les enfants à l'école, vous jouez avec eux et vous préparez le goûter. Vous parlez anglais ? C'est parfait !\n\n12 € de l'heure.\nAppelez Mme Garnier au 06 52 18 47 93.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "La famille a :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "deux enfants."
+                },
+                {
+                  "id": "b",
+                  "text": "un enfant."
+                },
+                {
+                  "id": "c",
+                  "text": "trois enfants."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Nous sommes une famille avec deux enfants : Lina, 6 ans, et Tom, 4 ans. »"
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "La baby-sitter travaille :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le mercredi matin."
+                },
+                {
+                  "id": "b",
+                  "text": "le mercredi après-midi."
+                },
+                {
+                  "id": "c",
+                  "text": "le week-end."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « pour le mercredi après-midi, de 13 h à 18 h. »"
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "La baby-sitter doit :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "faire le ménage."
+                },
+                {
+                  "id": "b",
+                  "text": "préparer le goûter."
+                },
+                {
+                  "id": "c",
+                  "text": "faire les devoirs avec les enfants."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« vous jouez avec eux et vous préparez le goûter. » 청소와 숙제는 나오지 않는다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Le travail est payé :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "6 € de l'heure."
+                },
+                {
+                  "id": "b",
+                  "text": "18 € de l'heure."
+                },
+                {
+                  "id": "c",
+                  "text": "12 € de l'heure."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« 12 € de l'heure. » 6은 리나의 나이, 18은 끝나는 시각이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Vous écrivez un message à un nouvel ami français. Vous présentez votre famille : deux ou trois personnes (nom, âge, travail ou études)."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

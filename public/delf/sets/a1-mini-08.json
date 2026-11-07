@@ -1,0 +1,326 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-08",
+  "level": "A1",
+  "kind": "mini",
+  "title": "Au restaurant",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Un homme et une femme sont au restaurant. Ils commandent.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Serveur",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Bonjour messieurs-dames. Vous avez choisi ?"
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Oui. Pour moi, le poulet avec des frites, s'il vous plaît."
+              },
+              {
+                "speaker": "Client",
+                "voice": "Jacques",
+                "text": "Et pour moi, le poisson avec du riz."
+              },
+              {
+                "speaker": "Serveur",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Désolé, monsieur, il n'y a plus de poisson."
+              },
+              {
+                "speaker": "Client",
+                "voice": "Jacques",
+                "text": "Ah… Alors, la salade au chèvre."
+              },
+              {
+                "speaker": "Serveur",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Et comme boisson ?"
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Une bouteille d'eau, s'il vous plaît."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "La femme prend :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le poisson avec du riz."
+                },
+                {
+                  "id": "b",
+                  "text": "le poulet avec des frites."
+                },
+                {
+                  "id": "c",
+                  "text": "la salade au chèvre."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Pour moi, le poulet avec des frites »."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Finalement, l'homme prend :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "la salade au chèvre."
+                },
+                {
+                  "id": "b",
+                  "text": "le poisson avec du riz."
+                },
+                {
+                  "id": "c",
+                  "text": "le poulet avec des frites."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « il n'y a plus de poisson. — Ah… Alors, la salade au chèvre. »"
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Comme boisson, ils prennent :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "du vin."
+                },
+                {
+                  "id": "b",
+                  "text": "du jus d'orange."
+                },
+                {
+                  "id": "c",
+                  "text": "de l'eau."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Une bouteille d'eau, s'il vous plaît. »"
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Vous entendez cette publicité à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Publicité",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Nouveau ! Le restaurant Chez Nino ouvre rue Victor-Hugo. Pizzas, pâtes et desserts italiens. Le midi, le menu coûte 14 euros. Le restaurant est fermé le lundi. Chez Nino, c'est comme en Italie !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Le menu du midi coûte :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "4 euros."
+                },
+                {
+                  "id": "b",
+                  "text": "14 euros."
+                },
+                {
+                  "id": "c",
+                  "text": "40 euros."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Le midi, le menu coûte 14 euros. »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Le restaurant est fermé :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le lundi."
+                },
+                {
+                  "id": "b",
+                  "text": "le mardi."
+                },
+                {
+                  "id": "c",
+                  "text": "le dimanche."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Le restaurant est fermé le lundi. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez ce menu à l'entrée d'un café.",
+          "title": "Café des Amis – Menu du jour",
+          "text": "Entrée\nSoupe de légumes ou salade verte\n\nPlat\nSteak-frites ou omelette aux champignons\n\nDessert\nTarte aux pommes ou glace (vanille ou chocolat)\n\nEntrée + plat : 13 €\nPlat + dessert : 12 €\nEntrée + plat + dessert : 16 €\n\nBoissons en plus. Menu servi de 12 h à 14 h 30.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Vous ne mangez pas de viande. Comme plat, vous choisissez :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le steak-frites."
+                },
+                {
+                  "id": "b",
+                  "text": "la soupe de légumes."
+                },
+                {
+                  "id": "c",
+                  "text": "l'omelette aux champignons."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Plat : Steak-frites ou omelette aux champignons ». 수프는 plat 가 아니라 entrée 다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Vous prenez un plat et un dessert. Vous payez :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "13 €."
+                },
+                {
+                  "id": "b",
+                  "text": "16 €."
+                },
+                {
+                  "id": "c",
+                  "text": "12 €."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Plat + dessert : 12 € »."
+            },
+            {
+              "id": "q8",
+              "type": "truefalse",
+              "prompt": "Les boissons sont dans le prix du menu.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Boissons en plus. » 음료는 따로 낸다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "On peut manger ce menu à :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "11 h 30."
+                },
+                {
+                  "id": "b",
+                  "text": "13 h."
+                },
+                {
+                  "id": "c",
+                  "text": "15 h."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Menu servi de 12 h à 14 h 30. » 13시만 이 사이에 있다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Vous invitez un(e) ami(e) à dîner chez vous. Vous lui écrivez un message : vous donnez le jour et l'heure, et vous dites ce que vous allez préparer."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

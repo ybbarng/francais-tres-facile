@@ -1,0 +1,320 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-10",
+  "level": "A1",
+  "kind": "mini",
+  "title": "Un week-end actif",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre 2 fois chaque document. Avant la première écoute, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous téléphonez à la piscine. Vous entendez ce message.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Message",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour, vous êtes bien à la piscine municipale. La piscine est ouverte du mardi au dimanche, de 10 heures à 20 heures. Le lundi, elle est fermée. L'entrée coûte 4 euros pour les adultes et 2 euros pour les enfants. Le bonnet de bain est obligatoire. Merci et à bientôt !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "La piscine est fermée :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le mardi."
+                },
+                {
+                  "id": "b",
+                  "text": "le dimanche."
+                },
+                {
+                  "id": "c",
+                  "text": "le lundi."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Le lundi, elle est fermée. »"
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Un adulte paie :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "2 euros."
+                },
+                {
+                  "id": "b",
+                  "text": "10 euros."
+                },
+                {
+                  "id": "c",
+                  "text": "4 euros."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « L'entrée coûte 4 euros pour les adultes et 2 euros pour les enfants. »"
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pour nager, il faut avoir :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un bonnet de bain."
+                },
+                {
+                  "id": "b",
+                  "text": "une carte de membre."
+                },
+                {
+                  "id": "c",
+                  "text": "une serviette."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Le bonnet de bain est obligatoire. »"
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Deux amis parlent du week-end.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Léo",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Manon, tu fais quoi samedi ?"
+              },
+              {
+                "speaker": "Manon",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Le matin, je joue au tennis avec ma sœur. L'après-midi, je suis libre."
+              },
+              {
+                "speaker": "Léo",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "On va au musée ? Il y a une exposition de photos."
+              },
+              {
+                "speaker": "Manon",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bonne idée ! On se retrouve à 15 heures devant le musée ?"
+              },
+              {
+                "speaker": "Léo",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "D'accord. À samedi !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Samedi matin, Manon :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "va au musée."
+                },
+                {
+                  "id": "b",
+                  "text": "joue au tennis."
+                },
+                {
+                  "id": "c",
+                  "text": "travaille."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Le matin, je joue au tennis avec ma sœur. »"
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Léo et Manon se retrouvent :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "à 15 h devant le musée."
+                },
+                {
+                  "id": "b",
+                  "text": "à 13 h devant le musée."
+                },
+                {
+                  "id": "c",
+                  "text": "à 15 h au club de tennis."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « On se retrouve à 15 heures devant le musée ? — D'accord. »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez les documents. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez cette affiche à la mairie.",
+          "title": "Club de randonnée de Grenoble",
+          "text": "Vous aimez la nature ? Venez marcher avec nous !\n\nChaque dimanche, nous faisons une randonnée de 10 à 15 km dans la montagne. Rendez-vous à 8 h devant la gare. Retour vers 17 h.\n\nApportez de l'eau, un pique-nique et de bonnes chaussures.\n\nInscription : 30 € par an.\nContact : rando.grenoble@mail.fr",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le club fait des randonnées :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le samedi."
+                },
+                {
+                  "id": "b",
+                  "text": "le dimanche."
+                },
+                {
+                  "id": "c",
+                  "text": "tous les jours."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Chaque dimanche, nous faisons une randonnée »."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Le rendez-vous est :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "devant la gare."
+                },
+                {
+                  "id": "b",
+                  "text": "devant la mairie."
+                },
+                {
+                  "id": "c",
+                  "text": "dans la montagne."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Rendez-vous à 8 h devant la gare. »"
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Il faut apporter :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un vélo."
+                },
+                {
+                  "id": "b",
+                  "text": "un pique-nique."
+                },
+                {
+                  "id": "c",
+                  "text": "un maillot de bain."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Apportez de l'eau, un pique-nique et de bonnes chaussures. »"
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "L'inscription coûte :",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "30 € par an."
+                },
+                {
+                  "id": "b",
+                  "text": "15 € par an."
+                },
+                {
+                  "id": "c",
+                  "text": "30 € par mois."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Inscription : 30 € par an. » 15는 거리(km)다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un court texte. Respectez le nombre de mots.",
+      "tasks": [
+        {
+          "id": "w1",
+          "minWords": 30,
+          "maxWords": 40,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (type de texte, informations demandées, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (saluer, prendre congé, tutoyer ou vouvoyer)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à informer et/ou à décrire",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale",
+              "points": 2
+            }
+          ],
+          "prompt": "Vous écrivez un message à un(e) ami(e). Vous racontez ce que vous allez faire le week-end prochain (samedi et dimanche) et vous l'invitez à faire une activité avec vous."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}
