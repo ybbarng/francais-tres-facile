@@ -74,16 +74,22 @@
               "type": "choice",
               "prompt": "Selon Mathilde Roux, le bâtiment le plus écologique est...",
               "options": [
-                { "id": "a", "text": "celui qui consomme le moins de chauffage." },
-                { "id": "b", "text": "celui qui existe déjà." },
+                {
+                  "id": "a",
+                  "text": "celui qui consomme le moins d'énergie pour le chauffage."
+                },
+                {
+                  "id": "b",
+                  "text": "celui qu'on n'a pas besoin de construire."
+                },
                 {
                   "id": "c",
-                  "text": "celui qui est construit avec les matériaux les plus récents."
+                  "text": "celui qui est bâti avec les matériaux les plus innovants."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« le bâtiment le plus écologique, c'est celui qui existe déjà »."
+              "explanation": "« le bâtiment le plus écologique, c'est celui qui existe déjà » — 새로 지을 필요가 없는 건물이다. 난방 에너지는 「c'est important」이라고만 했다(a)."
             },
             {
               "id": "q2",
@@ -94,10 +100,13 @@
                   "id": "a",
                   "text": "Les bâtiments neufs consomment plus d'énergie que les anciens."
                 },
-                { "id": "b", "text": "Les matériaux anciens ne peuvent pas être recyclés." },
+                {
+                  "id": "b",
+                  "text": "Les matériaux des bâtiments démolis ne peuvent pas être recyclés."
+                },
                 {
                   "id": "c",
-                  "text": "Le chantier produit beaucoup d'émissions qu'il faut parfois des décennies pour compenser."
+                  "text": "Les émissions dues aux travaux mettent longtemps à être compensées."
                 }
               ],
               "answer": ["c"],
@@ -111,52 +120,82 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "On peut les rénover et atteindre des performances proches du neuf."
+                  "text": "Une fois rénovés, ils peuvent presque égaler un bâtiment neuf."
                 },
-                { "id": "b", "text": "Il faut les démolir en priorité." },
-                { "id": "c", "text": "Leurs habitants doivent accepter d'avoir un peu froid." }
+                {
+                  "id": "b",
+                  "text": "Leur démolition reste préférable dans la plupart des cas."
+                },
+                {
+                  "id": "c",
+                  "text": "Leur rénovation est possible, mais donne rarement de bons résultats."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Non, justement, puisqu'on peut les rénover ... atteindre des performances proches de celles du neuf »."
+              "explanation": "« Non, justement, puisqu'on peut les rénover ... atteindre des performances proches de celles du neuf. ... dans la grande majorité des cas, c'est possible. » 대부분 가능하다고 하니 c는 틀리다."
             },
             {
               "id": "q4",
               "type": "choice",
               "prompt": "Sur la question du coût, elle affirme qu'une rénovation lourde...",
               "options": [
-                { "id": "a", "text": "coûte toujours plus cher que le neuf." },
+                {
+                  "id": "a",
+                  "text": "coûte autant qu'une construction neuve, mais prend plus de temps."
+                },
                 {
                   "id": "b",
-                  "text": "coûte en général moins qu'une démolition suivie d'une reconstruction."
+                  "text": "revient souvent moins cher que de démolir pour reconstruire."
                 },
-                { "id": "c", "text": "est toujours bon marché." }
+                {
+                  "id": "c",
+                  "text": "coûte cher, et c'est pour cela que les promoteurs préfèrent le neuf."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Une rénovation lourde peut coûter cher, c'est vrai, mais en général moins qu'une démolition suivie d'une reconstruction. »"
+              "explanation": "« Une rénovation lourde peut coûter cher, c'est vrai, mais en général moins qu'une démolition suivie d'une reconstruction. » 개발업자가 신축을 고르는 까닭은 비용이 아니라 « les règles d'urbanisme et les habitudes des promoteurs »라서 c는 틀리다."
             },
             {
               "id": "q5",
               "type": "choice",
               "prompt": "Pourquoi les promoteurs préfèrent-ils encore construire du neuf ?",
               "options": [
-                { "id": "a", "text": "Parce que les habitants l'exigent." },
-                { "id": "b", "text": "Parce que c'est plus prévisible." },
-                { "id": "c", "text": "Parce que c'est plus rapide dans tous les cas." }
+                {
+                  "id": "a",
+                  "text": "Parce que les futurs habitants le réclament."
+                },
+                {
+                  "id": "b",
+                  "text": "Parce qu'un chantier neuf réserve moins d'imprévus."
+                },
+                {
+                  "id": "c",
+                  "text": "Parce que c'est plus rapide dans la plupart des cas."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Construire du neuf, c'est plus prévisible : on part d'une page blanche. » 예시에서는 구조를 살려 공사 기간을 줄였으므로 c는 틀리다."
+              "explanation": "« Construire du neuf, c'est plus prévisible : on part d'une page blanche. Rénover, c'est accepter de découvrir des surprises en cours de chantier. » 예시에서는 구조를 살려 공사 기간을 줄였으므로 c는 틀리다."
             },
             {
               "id": "q6",
               "type": "choice",
               "prompt": "Dans l'exemple de l'ancien immeuble de bureaux, garder la structure a permis...",
               "options": [
-                { "id": "a", "text": "de réduire la durée des travaux de près d'un an." },
-                { "id": "b", "text": "de loger deux cents étudiants." },
-                { "id": "c", "text": "de diviser les loyers par deux." }
+                {
+                  "id": "a",
+                  "text": "de gagner presque une année sur la durée du chantier."
+                },
+                {
+                  "id": "b",
+                  "text": "de loger deux cents étudiants dans l'immeuble."
+                },
+                {
+                  "id": "c",
+                  "text": "de proposer des loyers deux fois moins élevés."
+                }
               ],
               "answer": ["a"],
               "points": 2,
@@ -167,13 +206,22 @@
               "type": "choice",
               "prompt": "Que propose finalement Mathilde Roux ?",
               "options": [
-                { "id": "a", "text": "Interdire toute démolition." },
-                { "id": "b", "text": "Réserver la rénovation aux bâtiments historiques." },
-                { "id": "c", "text": "Obliger à étudier la rénovation avant toute démolition." }
+                {
+                  "id": "a",
+                  "text": "Interdire la démolition, sauf pour les bâtiments dangereux."
+                },
+                {
+                  "id": "b",
+                  "text": "Réserver la rénovation aux bâtiments auxquels les habitants tiennent."
+                },
+                {
+                  "id": "c",
+                  "text": "Faire de la rénovation la première option à examiner."
+                }
               ],
               "answer": ["c"],
               "points": 2,
-              "explanation": "« avant toute démolition, on soit obligé d'étudier sérieusement la possibilité de rénover. Je ne demande pas d'interdire la démolition »."
+              "explanation": "« avant toute démolition, on soit obligé d'étudier sérieusement la possibilité de rénover. Je ne demande pas d'interdire la démolition, mais d'en faire l'exception plutôt que la règle »."
             }
           ]
         },
@@ -231,11 +279,17 @@
               "type": "choice",
               "prompt": "Selon Hélène Dubreuil, les jeunes...",
               "options": [
-                { "id": "a", "text": "ne lisent plus rien." },
-                { "id": "b", "text": "lisent davantage de livres qu'avant." },
+                {
+                  "id": "a",
+                  "text": "lisent moins qu'avant, quel que soit le support."
+                },
+                {
+                  "id": "b",
+                  "text": "lisent toujours autant de livres, mais davantage sur écran."
+                },
                 {
                   "id": "c",
-                  "text": "lisent moins de livres, mais n'ont jamais autant lu au sens large."
+                  "text": "lisent beaucoup, mais de moins en moins de livres."
                 }
               ],
               "answer": ["c"],
@@ -247,9 +301,18 @@
               "type": "choice",
               "prompt": "À partir de quel moment la lecture de livres recule-t-elle particulièrement ?",
               "options": [
-                { "id": "a", "text": "Dès l'école primaire." },
-                { "id": "b", "text": "À partir de l'adolescence." },
-                { "id": "c", "text": "À l'entrée à l'université." }
+                {
+                  "id": "a",
+                  "text": "Dès les premières années d'école."
+                },
+                {
+                  "id": "b",
+                  "text": "Au moment où ils deviennent adolescents."
+                },
+                {
+                  "id": "c",
+                  "text": "Lorsqu'ils entrent à l'université."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -262,10 +325,16 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Comme une lecture fragmentée, où l'on parcourt et cherche des informations."
+                  "text": "Comme une lecture rapide et sélective, qui a son utilité."
                 },
-                { "id": "b", "text": "Comme une lecture plus attentive que sur papier." },
-                { "id": "c", "text": "Comme une activité sans aucune utilité." }
+                {
+                  "id": "b",
+                  "text": "Comme une lecture plus attentive que la lecture sur papier."
+                },
+                {
+                  "id": "c",
+                  "text": "Comme une habitude qui ne développe aucune compétence."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -276,9 +345,18 @@
               "type": "choice",
               "prompt": "Selon les études citées, pour des textes longs et complexes, la compréhension est...",
               "options": [
-                { "id": "a", "text": "meilleure sur écran." },
-                { "id": "b", "text": "un peu meilleure sur papier." },
-                { "id": "c", "text": "identique sur papier et sur écran." }
+                {
+                  "id": "a",
+                  "text": "meilleure sur écran."
+                },
+                {
+                  "id": "b",
+                  "text": "un peu meilleure sur papier."
+                },
+                {
+                  "id": "c",
+                  "text": "identique sur papier et sur écran."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -289,38 +367,62 @@
               "type": "choice",
               "prompt": "Que pense-t-elle de l'idée de bannir les écrans de l'école ?",
               "options": [
-                { "id": "a", "text": "Elle la trouve irréaliste et contre-productive." },
-                { "id": "b", "text": "Elle la soutient pleinement." },
-                { "id": "c", "text": "Elle la réserve aux plus jeunes élèves." }
+                {
+                  "id": "a",
+                  "text": "Elle la rejette, car les élèves doivent aussi apprendre à lire sur écran."
+                },
+                {
+                  "id": "b",
+                  "text": "Elle la soutient, pour protéger la capacité de concentration des élèves."
+                },
+                {
+                  "id": "c",
+                  "text": "Elle la juge utile, mais seulement pour les plus jeunes élèves."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Surtout pas. Ce serait à la fois irréaliste et contre-productif. »"
+              "explanation": "« Surtout pas. Ce serait à la fois irréaliste et contre-productif. Les élèves doivent apprendre à lire sur écran, à repérer une source fiable ». 집중력이 약해진다고 걱정하지만 그 해법은 금지가 아니라 균형이다(b)."
             },
             {
               "id": "q13",
               "type": "choice",
               "prompt": "Pourquoi conseille-t-elle de laisser les élèves choisir leurs lectures ?",
               "options": [
-                { "id": "a", "text": "Parce que les classiques sont trop difficiles pour eux." },
+                {
+                  "id": "a",
+                  "text": "Parce que les classiques sont trop difficiles pour la plupart d'entre eux."
+                },
                 {
                   "id": "b",
-                  "text": "Pour qu'ils prennent l'habitude de lire et aillent ensuite vers des textes plus exigeants."
+                  "text": "Pour qu'ils lisent par habitude et progressent vers des textes plus riches."
                 },
-                { "id": "c", "text": "Pour réduire le coût des livres scolaires." }
+                {
+                  "id": "c",
+                  "text": "Parce que les mangas développent mieux la concentration que les romans."
+                }
               ],
               "answer": ["b"],
               "points": 2,
-              "explanation": "« ils prennent l'habitude de lire, et souvent, ils finissent par aller vers des textes plus exigeants » — 고전을 강요하면 「une obligation scolaire」로 여긴다는 것이지 어렵다는 말은 아니다."
+              "explanation": "« ils prennent l'habitude de lire, et souvent, ils finissent par aller vers des textes plus exigeants » — 고전을 강요하면 「une obligation scolaire」로 여긴다는 것이지 어렵다는 말은 아니다(a)."
             },
             {
               "id": "q14",
               "type": "choice",
               "prompt": "Dans certains collèges, le quart d'heure de lecture silencieuse...",
               "options": [
-                { "id": "a", "text": "a lieu une fois par semaine." },
-                { "id": "b", "text": "concerne uniquement les élèves en difficulté." },
-                { "id": "c", "text": "réunit chaque jour élèves et adultes." }
+                {
+                  "id": "a",
+                  "text": "a lieu une fois par semaine, pendant un cours."
+                },
+                {
+                  "id": "b",
+                  "text": "est réservé aux élèves qui lisent peu."
+                },
+                {
+                  "id": "c",
+                  "text": "est partagé chaque jour par tout l'établissement."
+                }
               ],
               "answer": ["c"],
               "points": 2,
@@ -337,7 +439,7 @@
               {
                 "speaker": "Journaliste",
                 "voice": "Jacques",
-                "text": "Depuis six mois, la commune de Lanvallec éteint l'éclairage public entre une heure et cinq heures du matin. La mesure, prise d'abord pour réduire la facture d'électricité, a permis d'économiser près de quarante pour cent sur ce poste. Certains habitants s'inquiétaient pour leur sécurité, mais selon la gendarmerie, le nombre de cambriolages n'a pas augmenté. Autre effet inattendu : des associations de protection de la nature ont constaté le retour de certaines espèces nocturnes, comme les chauves-souris. La commune envisage désormais d'étendre l'extinction de minuit à six heures."
+                "text": "Depuis six mois, la commune de Kerfalven éteint l'éclairage public entre une heure et cinq heures du matin. La mesure, prise d'abord pour réduire la facture d'électricité, a permis d'économiser près de quarante pour cent sur ce poste. Certains habitants s'inquiétaient pour leur sécurité, mais selon la gendarmerie, le nombre de cambriolages n'a pas augmenté. Autre effet inattendu : des associations de protection de la nature ont constaté le retour de certaines espèces nocturnes, comme les chauves-souris. La commune envisage désormais d'étendre l'extinction de minuit à six heures."
               }
             ]
           },
@@ -347,9 +449,18 @@
               "type": "choice",
               "prompt": "Pourquoi la commune a-t-elle d'abord décidé d'éteindre l'éclairage la nuit ?",
               "options": [
-                { "id": "a", "text": "Pour protéger les chauves-souris." },
-                { "id": "b", "text": "À la demande de la gendarmerie." },
-                { "id": "c", "text": "Pour réduire la facture d'électricité." }
+                {
+                  "id": "a",
+                  "text": "Pour permettre le retour des chauves-souris."
+                },
+                {
+                  "id": "b",
+                  "text": "Parce que la gendarmerie le lui avait conseillé."
+                },
+                {
+                  "id": "c",
+                  "text": "Pour faire baisser ses dépenses d'énergie."
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -360,13 +471,22 @@
               "type": "choice",
               "prompt": "Qu'apprend-on sur la sécurité ?",
               "options": [
-                { "id": "a", "text": "Le nombre de cambriolages n'a pas augmenté." },
-                { "id": "b", "text": "Le nombre de cambriolages a augmenté." },
-                { "id": "c", "text": "Les habitants ont dû installer des alarmes." }
+                {
+                  "id": "a",
+                  "text": "Les craintes de certains habitants ne se sont pas confirmées."
+                },
+                {
+                  "id": "b",
+                  "text": "Les cambriolages ont légèrement augmenté pendant la nuit."
+                },
+                {
+                  "id": "c",
+                  "text": "La gendarmerie a dû renforcer ses patrouilles nocturnes."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« selon la gendarmerie, le nombre de cambriolages n'a pas augmenté »."
+              "explanation": "« Certains habitants s'inquiétaient pour leur sécurité, mais selon la gendarmerie, le nombre de cambriolages n'a pas augmenté »."
             }
           ]
         },
@@ -383,7 +503,7 @@
               },
               {
                 "speaker": "Julien",
-                "voice": "Rocko (프랑스어(프랑스))",
+                "voice": "Thomas",
                 "text": "Je gagnais bien ma vie, mais je passais mes journées devant des tableaux de chiffres, et le soir, je n'avais pas l'impression d'avoir fait quelque chose de concret. Le plus dur, ça n'a pas été la formation : c'était d'accepter de redevenir débutant à quarante ans, d'être corrigé par des formateurs plus jeunes que moi. Aujourd'hui, je gagne moins, c'est sûr, à peu près la moitié de mon ancien salaire. Mais je ne regrette rien : quand je livre un meuble à un client, je sais pourquoi je me lève le matin."
               }
             ]
@@ -394,26 +514,44 @@
               "type": "choice",
               "prompt": "Pour Julien, qu'est-ce qui a été le plus difficile ?",
               "options": [
-                { "id": "a", "text": "Suivre la formation." },
-                { "id": "b", "text": "Accepter d'être de nouveau débutant." },
-                { "id": "c", "text": "Trouver ses premiers clients." }
+                {
+                  "id": "a",
+                  "text": "Apprendre les gestes d'un nouveau métier manuel."
+                },
+                {
+                  "id": "b",
+                  "text": "Se retrouver en position d'apprenti à son âge."
+                },
+                {
+                  "id": "c",
+                  "text": "Trouver ses premiers clients."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Le plus dur, ça n'a pas été la formation : c'était d'accepter de redevenir débutant à quarante ans »."
+              "explanation": "« Le plus dur, ça n'a pas été la formation : c'était d'accepter de redevenir débutant à quarante ans, d'être corrigé par des formateurs plus jeunes que moi »."
             },
             {
               "id": "q18",
               "type": "choice",
               "prompt": "Aujourd'hui, Julien...",
               "options": [
-                { "id": "a", "text": "gagne autant qu'avant." },
-                { "id": "b", "text": "regrette son ancien métier." },
-                { "id": "c", "text": "gagne moins, mais ne regrette pas son choix." }
+                {
+                  "id": "a",
+                  "text": "gagne à peu près autant qu'à la banque."
+                },
+                {
+                  "id": "b",
+                  "text": "regrette parfois la sécurité de son ancien poste."
+                },
+                {
+                  "id": "c",
+                  "text": "assume une forte baisse de revenus, sans regret."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« je gagne moins ... à peu près la moitié de mon ancien salaire. Mais je ne regrette rien »."
+              "explanation": "« je gagne moins, c'est sûr, à peu près la moitié de mon ancien salaire. Mais je ne regrette rien »."
             }
           ]
         },
@@ -441,11 +579,17 @@
               "type": "choice",
               "prompt": "Qui peut proposer un projet ?",
               "options": [
-                { "id": "a", "text": "Uniquement les citoyens français majeurs." },
-                { "id": "b", "text": "Uniquement les associations de la ville." },
+                {
+                  "id": "a",
+                  "text": "Seuls les habitants majeurs de nationalité française."
+                },
+                {
+                  "id": "b",
+                  "text": "Seules les associations déclarées dans la ville."
+                },
                 {
                   "id": "c",
-                  "text": "Toute personne à partir de seize ans, quelle que soit sa nationalité."
+                  "text": "Tous les habitants dès seize ans, Français ou étrangers."
                 }
               ],
               "answer": ["c"],
@@ -457,13 +601,22 @@
               "type": "choice",
               "prompt": "Quel est l'objectif de la ville pour cette édition ?",
               "options": [
-                { "id": "a", "text": "Qu'au moins quinze pour cent des habitants votent." },
-                { "id": "b", "text": "Doubler le budget consacré aux projets." },
-                { "id": "c", "text": "Que huit pour cent des habitants proposent un projet." }
+                {
+                  "id": "a",
+                  "text": "Que la participation au vote soit presque multipliée par deux."
+                },
+                {
+                  "id": "b",
+                  "text": "Que le budget consacré aux projets soit doublé."
+                },
+                {
+                  "id": "c",
+                  "text": "Que huit pour cent des habitants déposent un projet."
+                }
               ],
               "answer": ["a"],
               "points": 1.5,
-              "explanation": "« L'an dernier, seulement huit pour cent des habitants ont voté. Notre objectif, cette fois, c'est d'atteindre au moins quinze pour cent. » 8퍼센트는 지난해 투표율이다."
+              "explanation": "« L'an dernier, seulement huit pour cent des habitants ont voté. Notre objectif, cette fois, c'est d'atteindre au moins quinze pour cent. » 8퍼센트에서 15퍼센트로, 투표율을 두 배 가까이 올리려 한다. 8퍼센트는 지난해 투표율이다(c)."
             }
           ]
         }
@@ -478,20 +631,29 @@
           "id": "doc6",
           "context": "Exercice 1 (9 points). Vous lisez cet article dans un magazine consacré à la consommation.",
           "title": "Le vrac, une révolution dans nos courses ?",
-          "text": "Pâtes, lentilles, café, mais aussi lessive ou huile d'olive : il y a encore une quinzaine d'années, acheter ces produits sans emballage relevait de l'exception. Les magasins spécialisés dans la vente en vrac se comptaient sur les doigts d'une main. Aujourd'hui, la plupart des supermarchés possèdent leur rayon vrac, et la loi s'en est mêlée : d'ici à 2030, les grandes surfaces devront consacrer environ un cinquième de leur espace de vente à des produits sans emballage.\n\nLes arguments en faveur du vrac sont connus. Le premier est écologique : les emballages représentent une part importante de nos déchets ménagers, et une grande partie d'entre eux n'est pas recyclée. Le second est économique : en achetant la quantité exacte dont il a besoin, le consommateur évite de jeter des produits périmés. Contrairement à une idée répandue, le vrac n'est d'ailleurs pas forcément plus cher : sans le coût de l'emballage et du marketing, certains produits sont même vendus moins cher qu'en paquet.\n\nPourtant, après une forte croissance, le secteur traverse une période difficile. Plusieurs dizaines d'épiceries spécialisées ont fermé ces dernières années. La hausse des prix alimentaires a poussé de nombreux ménages vers les produits les moins chers, souvent emballés, et le vrac a souffert de son image de produit réservé à une clientèle aisée. Les distributeurs pointent aussi des contraintes pratiques : il faut penser à apporter ses contenants, peser ses produits, et les courses prennent plus de temps.\n\nLes professionnels du secteur reconnaissent également certaines limites. L'hygiène doit faire l'objet d'une attention particulière, puisque les produits sont manipulés par les clients eux-mêmes. Et tous les produits ne s'y prêtent pas : les produits frais ou fragiles restent difficiles à vendre sans emballage.\n\nPour relancer le vrac, ses défenseurs misent sur deux leviers. D'une part, mieux informer les consommateurs, en rappelant que le vrac permet souvent de faire des économies. D'autre part, simplifier les gestes : certaines enseignes prêtent désormais des contenants consignés, que le client rapporte lors de son passage suivant. Reste à savoir si ces efforts suffiront à transformer durablement des habitudes de consommation bien ancrées.",
+          "text": "Pâtes, lentilles, café, mais aussi lessive ou huile d'olive : il y a encore une quinzaine d'années, acheter ces produits sans emballage relevait de l'exception. Les magasins spécialisés dans la vente en vrac se comptaient sur les doigts d'une main. Aujourd'hui, la plupart des supermarchés possèdent leur rayon vrac, et la loi s'en est mêlée : d'ici à 2030, les grandes surfaces devront consacrer à la vente sans emballage au moins 20 % de la surface réservée aux produits de grande consommation.\n\nLes arguments en faveur du vrac sont connus. Le premier est écologique : les emballages représentent une part importante de nos déchets ménagers, et une grande partie d'entre eux n'est pas recyclée. Le second est économique : en achetant la quantité exacte dont il a besoin, le consommateur évite de jeter des produits périmés. Contrairement à une idée répandue, le vrac n'est d'ailleurs pas forcément plus cher : sans le coût de l'emballage et du marketing, certains produits sont même vendus moins cher qu'en paquet.\n\nPourtant, après une forte croissance, le secteur traverse une période difficile. Plusieurs dizaines d'épiceries spécialisées ont fermé ces dernières années. La hausse des prix alimentaires a poussé de nombreux ménages vers les produits les moins chers, souvent emballés, et le vrac a souffert de son image de produit réservé à une clientèle aisée. Les distributeurs pointent aussi des contraintes pratiques : il faut penser à apporter ses contenants, peser ses produits, et les courses prennent plus de temps.\n\nLes professionnels du secteur reconnaissent également certaines limites. L'hygiène doit faire l'objet d'une attention particulière, puisque les produits sont manipulés par les clients eux-mêmes. Et tous les produits ne s'y prêtent pas : les produits frais ou fragiles restent difficiles à vendre sans emballage.\n\nPour relancer le vrac, ses défenseurs misent sur deux leviers. D'une part, mieux informer les consommateurs, en rappelant que le vrac permet souvent de faire des économies. D'autre part, simplifier les gestes : certaines enseignes prêtent désormais des contenants consignés, que le client rapporte lors de son passage suivant. Reste à savoir si ces efforts suffiront à transformer durablement des habitudes de consommation bien ancrées.",
           "questions": [
             {
               "id": "q21",
               "type": "choice",
               "prompt": "Il y a une quinzaine d'années, l'achat en vrac...",
               "options": [
-                { "id": "a", "text": "était déjà très répandu." },
-                { "id": "b", "text": "était rare." },
-                { "id": "c", "text": "était interdit dans les supermarchés." }
+                {
+                  "id": "a",
+                  "text": "était déjà proposé dans la plupart des supermarchés."
+                },
+                {
+                  "id": "b",
+                  "text": "restait marginal."
+                },
+                {
+                  "id": "c",
+                  "text": "était interdit dans les supermarchés."
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« acheter ces produits sans emballage relevait de l'exception. Les magasins spécialisés ... se comptaient sur les doigts d'une main »."
+              "explanation": "« acheter ces produits sans emballage relevait de l'exception. Les magasins spécialisés ... se comptaient sur les doigts d'une main ». 대부분의 슈퍼마켓에 매대가 생긴 것은 « Aujourd'hui »다(a)."
             },
             {
               "id": "q22",
@@ -500,36 +662,60 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Les grandes surfaces devront consacrer environ un cinquième de leur espace de vente au vrac."
+                  "text": "Une part minimale de la surface des produits courants devra être réservée au vrac."
                 },
-                { "id": "b", "text": "Les grandes surfaces devront vendre uniquement en vrac." },
-                { "id": "c", "text": "Tous les emballages plastiques seront interdits." }
+                {
+                  "id": "b",
+                  "text": "Les grandes surfaces devront vendre au moins la moitié de leurs produits en vrac."
+                },
+                {
+                  "id": "c",
+                  "text": "Les emballages plastiques seront interdits dans les grandes surfaces."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« d'ici à 2030, les grandes surfaces devront consacrer environ un cinquième de leur espace de vente à des produits sans emballage »."
+              "explanation": "« d'ici à 2030, les grandes surfaces devront consacrer à la vente sans emballage au moins 20 % de la surface réservée aux produits de grande consommation » — 최소 비율을 정한 것이지 절반(b)이 아니다."
             },
             {
               "id": "q23",
               "type": "choice",
               "prompt": "Selon l'article, par rapport aux produits emballés, le vrac...",
               "options": [
-                { "id": "a", "text": "est toujours plus cher." },
-                { "id": "b", "text": "est toujours moins cher." },
-                { "id": "c", "text": "n'est pas nécessairement plus cher." }
+                {
+                  "id": "a",
+                  "text": "coûte plus cher, à cause du temps passé à peser les produits."
+                },
+                {
+                  "id": "b",
+                  "text": "revient moins cher pour tous les produits, faute d'emballage."
+                },
+                {
+                  "id": "c",
+                  "text": "peut coûter moins cher, contrairement à ce que beaucoup pensent."
+                }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« le vrac n'est d'ailleurs pas forcément plus cher : ... certains produits sont même vendus moins cher » — 「certains」라서 「toujours moins cher」(b)는 지나치다."
+              "explanation": "« Contrairement à une idée répandue, le vrac n'est d'ailleurs pas forcément plus cher : ... certains produits sont même vendus moins cher » — 「certains」라서 모든 제품이 싸다는 b는 지나치다. 무게 다는 시간은 불편함(« les courses prennent plus de temps »)으로 나올 뿐 값과 관계없다(a)."
             },
             {
               "id": "q24",
               "type": "choice",
               "prompt": "Parmi les causes des difficultés actuelles du secteur, l'article cite...",
               "options": [
-                { "id": "a", "text": "l'image d'un produit réservé à une clientèle aisée." },
-                { "id": "b", "text": "le manque de produits disponibles en vrac." },
-                { "id": "c", "text": "une loi qui limite la vente en vrac." }
+                {
+                  "id": "a",
+                  "text": "une réputation de commerce destiné aux ménages aisés."
+                },
+                {
+                  "id": "b",
+                  "text": "le manque de produits disponibles sans emballage."
+                },
+                {
+                  "id": "c",
+                  "text": "une loi qui limite la vente en vrac dans les épiceries."
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -540,9 +726,18 @@
               "type": "choice",
               "prompt": "Quelle contrainte pratique est mentionnée par les distributeurs ?",
               "options": [
-                { "id": "a", "text": "Il faut commander ses produits à l'avance." },
-                { "id": "b", "text": "Il faut penser à apporter ses contenants." },
-                { "id": "c", "text": "Il faut payer une adhésion au magasin." }
+                {
+                  "id": "a",
+                  "text": "Il faut commander ses produits à l'avance."
+                },
+                {
+                  "id": "b",
+                  "text": "Il faut venir avec ses propres récipients."
+                },
+                {
+                  "id": "c",
+                  "text": "Il faut payer une adhésion au magasin."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -553,11 +748,17 @@
               "type": "choice",
               "prompt": "Quelle limite les professionnels du secteur reconnaissent-ils ?",
               "options": [
-                { "id": "a", "text": "Les producteurs refusent de vendre en vrac." },
-                { "id": "b", "text": "Les produits secs se conservent mal sans emballage." },
+                {
+                  "id": "a",
+                  "text": "Beaucoup de producteurs refusent de livrer leurs produits en vrac."
+                },
+                {
+                  "id": "b",
+                  "text": "Les produits secs se conservent mal une fois sortis de leur emballage."
+                },
                 {
                   "id": "c",
-                  "text": "L'hygiène demande une attention particulière, car les clients manipulent eux-mêmes les produits."
+                  "text": "Les clients touchant eux-mêmes les produits, l'hygiène exige de la vigilance."
                 }
               ],
               "answer": ["c"],
@@ -571,9 +772,12 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Ils sont prêtés au client, qui les rapporte lors de son passage suivant."
+                  "text": "Le client les emprunte, puis les rend lors de sa visite suivante."
                 },
-                { "id": "b", "text": "Ils sont vendus et jetés après usage." },
+                {
+                  "id": "b",
+                  "text": "Le client les achète, puis les jette après usage."
+                },
                 {
                   "id": "c",
                   "text": "Ils sont réservés aux clients qui achètent en grande quantité."
@@ -596,19 +800,22 @@
               "type": "choice",
               "prompt": "Quelle est la thèse défendue par l'auteur ?",
               "options": [
-                { "id": "a", "text": "Toute forme de publicité devrait être interdite." },
+                {
+                  "id": "a",
+                  "text": "La publicité devrait être interdite dans tous les médias."
+                },
                 {
                   "id": "b",
-                  "text": "Toutes les villes devraient limiter les écrans publicitaires."
+                  "text": "Les villes qui restreignent ces écrans montrent la voie à suivre."
                 },
                 {
                   "id": "c",
-                  "text": "Les écrans publicitaires sont acceptables s'ils sont éteints la nuit."
+                  "text": "Ces écrans sont acceptables s'ils sont éteints la nuit."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Je pense qu'elles ont raison, et que toutes devraient suivre leur exemple. » 모든 광고 금지는 「Ce n'est pas le cas」라며 부정한다."
+              "explanation": "« Plusieurs villes ont récemment décidé d'en limiter le nombre, voire de les interdire. Je pense qu'elles ont raison, et que toutes devraient suivre leur exemple. » 모든 광고 금지는 「Ce n'est pas le cas」라며 부정한다(a)."
             },
             {
               "id": "q29",
@@ -617,23 +824,38 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Les écrans consomment beaucoup alors qu'on demande aux citoyens de faire des économies."
+                  "text": "Leur forte consommation contraste avec les efforts demandés aux citoyens."
                 },
-                { "id": "b", "text": "Les écrans fonctionnent grâce à des énergies fossiles." },
-                { "id": "c", "text": "Les écrans réchauffent les stations de métro." }
+                {
+                  "id": "b",
+                  "text": "Ils fonctionnent surtout grâce à des énergies fossiles."
+                },
+                {
+                  "id": "c",
+                  "text": "Leur fabrication consomme plus d'énergie que leur utilisation."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Un seul de ces grands écrans consomme autant d'électricité qu'un foyer ... À l'heure où l'on demande aux citoyens d'éteindre la lumière... »"
+              "explanation": "« Un seul de ces grands écrans consomme autant d'électricité qu'un foyer ... À l'heure où l'on demande aux citoyens d'éteindre la lumière et de baisser le chauffage, comment justifier... »"
             },
             {
               "id": "q30",
               "type": "choice",
               "prompt": "Selon l'auteur, en quoi l'écran animé diffère-t-il de l'affiche imprimée ?",
               "options": [
-                { "id": "a", "text": "Il est plus facile à ignorer." },
-                { "id": "b", "text": "Il donne davantage d'informations utiles." },
-                { "id": "c", "text": "Il attire notre attention malgré nous." }
+                {
+                  "id": "a",
+                  "text": "Il est plus facile à ignorer pour les passants."
+                },
+                {
+                  "id": "b",
+                  "text": "Il diffuse davantage d'informations pratiques."
+                },
+                {
+                  "id": "c",
+                  "text": "Il capte notre regard sans qu'on le veuille."
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -644,12 +866,18 @@
               "type": "choice",
               "prompt": "Comment l'auteur répond-il à l'argument financier ?",
               "options": [
-                { "id": "a", "text": "Il nie que les écrans rapportent de l'argent." },
+                {
+                  "id": "a",
+                  "text": "Il conteste que ces écrans rapportent réellement de l'argent."
+                },
                 {
                   "id": "b",
-                  "text": "Il admet son importance, mais y voit la preuve que notre attention est mise en vente."
+                  "text": "Il le juge sérieux, mais y voit le signe que notre attention est à vendre."
                 },
-                { "id": "c", "text": "Il propose d'augmenter le prix de la publicité sur écran." }
+                {
+                  "id": "c",
+                  "text": "Il propose d'utiliser ces recettes pour aider la presse."
+                }
               ],
               "answer": ["b"],
               "points": 1,
@@ -662,14 +890,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Les diffuser sur des écrans réservés à cet usage, sans publicité."
+                  "text": "Les confier à des écrans dédiés, libres de toute publicité."
                 },
-                { "id": "b", "text": "Les supprimer de l'espace public." },
-                { "id": "c", "text": "Les diffuser uniquement sur les téléphones." }
+                {
+                  "id": "b",
+                  "text": "Les afficher sur papier pour économiser l'énergie."
+                },
+                {
+                  "id": "c",
+                  "text": "Les diffuser en alternance avec les messages publicitaires."
+                }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« rien n'empêche de les diffuser sur des écrans réservés à cet usage, sans publicité »."
+              "explanation": "« Quant aux informations pratiques, rien n'empêche de les diffuser sur des écrans réservés à cet usage, sans publicité »."
             },
             {
               "id": "q33",
@@ -678,13 +912,16 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Parce que la publicité dans la presse est de meilleure qualité."
+                  "text": "Parce que la publicité dans la presse est plus honnête."
                 },
                 {
                   "id": "b",
-                  "text": "Parce que le lecteur a choisi d'ouvrir le journal, alors que le passant n'a rien choisi."
+                  "text": "Parce que le lecteur d'un journal y consent, contrairement au passant."
                 },
-                { "id": "c", "text": "Parce que la presse ne pourrait pas vivre sans la rue." }
+                {
+                  "id": "c",
+                  "text": "Parce que les annonces imprimées consomment moins d'énergie."
+                }
               ],
               "answer": ["b"],
               "points": 2,
@@ -695,16 +932,22 @@
               "type": "choice",
               "prompt": "Dans sa conclusion, l'auteur présente la limitation des écrans publicitaires comme...",
               "options": [
-                { "id": "a", "text": "une mesure avant tout économique." },
-                { "id": "b", "text": "une première étape vers l'interdiction de toute publicité." },
+                {
+                  "id": "a",
+                  "text": "un moyen, avant tout, de réduire la consommation d'énergie."
+                },
+                {
+                  "id": "b",
+                  "text": "une première étape vers la fin de toute publicité."
+                },
                 {
                   "id": "c",
-                  "text": "une façon d'affirmer que l'espace public n'est pas un marché."
+                  "text": "une façon de soustraire l'espace public à la logique commerciale."
                 }
               ],
               "answer": ["c"],
               "points": 2,
-              "explanation": "« ce n'est pas seulement économiser de l'énergie. C'est rappeler que l'espace public n'est pas un marché »."
+              "explanation": "« Limiter les écrans publicitaires, ce n'est pas seulement économiser de l'énergie. C'est rappeler que l'espace public n'est pas un marché » — 「pas seulement」이라 에너지가 주된 목적이라는 a는 틀리다."
             }
           ]
         },
@@ -712,16 +955,25 @@
           "id": "doc8",
           "context": "Exercice 3 (7 points). Dans le courrier des lecteurs d'un quotidien, trois personnes répondent à la question : « Faut-il rendre le vote obligatoire ? » Lisez leurs opinions.",
           "title": "Faut-il rendre le vote obligatoire ?",
-          "text": "Karim, étudiant en droit\nDans plusieurs pays, comme la Belgique ou l'Australie, voter est obligatoire, et la participation y est bien plus élevée que chez nous. Je trouve cela juste : voter n'est pas seulement un droit, c'est aussi un devoir envers la collectivité. Aujourd'hui, ce sont surtout les jeunes et les classes populaires qui s'abstiennent ; leurs intérêts sont donc moins pris en compte par les élus. Rendre le vote obligatoire forcerait les responsables politiques à s'adresser à tout le monde, et pas seulement à ceux qui votent.\n\nMartine, retraitée, ancienne maire d'une petite commune\nJ'ai été maire pendant dix-huit ans, et l'abstention m'a toujours inquiétée. Mais je ne crois pas qu'une amende règle le problème. Les gens qui ne votent pas ne sont pas des paresseux : beaucoup ne se sentent pas représentés. Si on les oblige à se déplacer, ils voteront blanc, ou au hasard. Il faudrait d'abord reconnaître le vote blanc, c'est-à-dire le compter dans les résultats, pour que ceux qui refusent tous les candidats puissent l'exprimer. Ce serait un premier pas plus respectueux.\n\nSébastien, professeur d'histoire\nJe constate que le désintérêt pour le vote commence souvent par une méconnaissance. Beaucoup de mes élèves ne savent pas vraiment à quoi servent les différentes élections. Avant de parler d'obligation ou de sanction, il faudrait renforcer l'éducation civique, organiser des débats au lycée et, pourquoi pas, permettre aux jeunes de voter dès seize ans aux élections locales, comme cela se fait ailleurs. On prend l'habitude de voter jeune, ou on ne la prend jamais.",
+          "text": "Karim, étudiant en droit\nDans plusieurs pays, comme l'Australie ou, pour la plupart des scrutins, la Belgique, voter est obligatoire, et la participation y est bien plus élevée que chez nous. Je trouve cela juste : voter n'est pas seulement un droit, c'est aussi un devoir envers la collectivité. Aujourd'hui, ce sont surtout les jeunes et les classes populaires qui s'abstiennent ; les candidats font donc campagne en pensant d'abord aux électeurs plus âgés et plus aisés. Rendre le vote obligatoire forcerait les responsables politiques à s'adresser à tout le monde, et pas seulement à ceux qui votent.\n\nMartine, retraitée, ancienne maire d'une petite commune\nJ'ai été maire pendant dix-huit ans, et l'abstention m'a toujours inquiétée. Mais je ne crois pas qu'une amende règle le problème. Les gens qui ne votent pas ne sont pas des paresseux : beaucoup ne se sentent pas représentés. Si on les oblige à se déplacer, ils voteront blanc, ou au hasard. Il faudrait d'abord reconnaître vraiment le vote blanc, c'est-à-dire le compter parmi les suffrages exprimés, pour que ceux qui refusent tous les candidats puissent l'exprimer. Ce serait un premier pas plus respectueux.\n\nSébastien, professeur d'histoire\nJe constate que le désintérêt pour le vote commence souvent par une méconnaissance. Beaucoup de mes élèves ne savent pas vraiment à quoi servent les différentes élections. Avant de parler d'obligation ou de sanction, il faudrait renforcer l'éducation civique, organiser des débats au lycée et, pourquoi pas, permettre aux jeunes de voter dès seize ans aux élections locales, comme cela se fait ailleurs. On prend l'habitude de voter jeune, ou on ne la prend jamais.",
           "questions": [
             {
               "id": "q35",
               "type": "choice",
               "prompt": "Qui considère le vote comme un devoir envers la collectivité ?",
               "options": [
-                { "id": "a", "text": "Karim" },
-                { "id": "b", "text": "Martine" },
-                { "id": "c", "text": "Sébastien" }
+                {
+                  "id": "a",
+                  "text": "Karim"
+                },
+                {
+                  "id": "b",
+                  "text": "Martine"
+                },
+                {
+                  "id": "c",
+                  "text": "Sébastien"
+                }
               ],
               "answer": ["a"],
               "points": 1,
@@ -730,24 +982,42 @@
             {
               "id": "q36",
               "type": "choice",
-              "prompt": "Qui explique l'abstention par le sentiment de ne pas être représenté ?",
+              "prompt": "Qui pense que beaucoup d'abstentionnistes ne se reconnaissent dans aucun candidat ?",
               "options": [
-                { "id": "a", "text": "Karim" },
-                { "id": "b", "text": "Martine" },
-                { "id": "c", "text": "Sébastien" }
+                {
+                  "id": "a",
+                  "text": "Karim"
+                },
+                {
+                  "id": "b",
+                  "text": "Martine"
+                },
+                {
+                  "id": "c",
+                  "text": "Sébastien"
+                }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "마르틴: « Les gens qui ne votent pas ne sont pas des paresseux : beaucoup ne se sentent pas représentés. » 카림은 기권의 결과(의원들이 이들의 이익을 덜 챙긴다)를 말할 뿐 원인을 설명하지 않는다."
+              "explanation": "마르틴: « beaucoup ne se sentent pas représentés » « pour que ceux qui refusent tous les candidats puissent l'exprimer ». 카림은 누가 기권하는지와 후보들이 누구를 보고 선거 운동을 하는지를 말할 뿐, 기권자의 마음을 말하지 않는다."
             },
             {
               "id": "q37",
               "type": "choice",
               "prompt": "Qui explique l'abstention en partie par un manque de connaissances ?",
               "options": [
-                { "id": "a", "text": "Karim" },
-                { "id": "b", "text": "Martine" },
-                { "id": "c", "text": "Sébastien" }
+                {
+                  "id": "a",
+                  "text": "Karim"
+                },
+                {
+                  "id": "b",
+                  "text": "Martine"
+                },
+                {
+                  "id": "c",
+                  "text": "Sébastien"
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -758,9 +1028,18 @@
               "type": "choice",
               "prompt": "Qui propose d'abaisser l'âge du vote pour certaines élections ?",
               "options": [
-                { "id": "a", "text": "Karim" },
-                { "id": "b", "text": "Martine" },
-                { "id": "c", "text": "Sébastien" }
+                {
+                  "id": "a",
+                  "text": "Karim"
+                },
+                {
+                  "id": "b",
+                  "text": "Martine"
+                },
+                {
+                  "id": "c",
+                  "text": "Sébastien"
+                }
               ],
               "answer": ["c"],
               "points": 1,
@@ -771,26 +1050,44 @@
               "type": "choice",
               "prompt": "Qui s'appuie sur l'exemple d'autres pays pour défendre l'obligation de voter ?",
               "options": [
-                { "id": "a", "text": "Karim" },
-                { "id": "b", "text": "Martine" },
-                { "id": "c", "text": "Sébastien" }
+                {
+                  "id": "a",
+                  "text": "Karim"
+                },
+                {
+                  "id": "b",
+                  "text": "Martine"
+                },
+                {
+                  "id": "c",
+                  "text": "Sébastien"
+                }
               ],
               "answer": ["a"],
               "points": 1.5,
-              "explanation": "카림: « Dans plusieurs pays, comme la Belgique ou l'Australie, voter est obligatoire » — 세바스티앵도 다른 나라를 들지만 16세 투표의 예이고 의무 투표를 지지하는 말이 아니다."
+              "explanation": "카림: « Dans plusieurs pays, comme l'Australie ou, pour la plupart des scrutins, la Belgique, voter est obligatoire » — 세바스티앵도 다른 나라를 들지만 16세 투표의 예이고 의무 투표를 지지하는 말이 아니다."
             },
             {
               "id": "q40",
               "type": "choice",
-              "prompt": "Qui souhaite que le vote blanc soit compté dans les résultats ?",
+              "prompt": "Qui voudrait que le vote blanc pèse dans le calcul des résultats ?",
               "options": [
-                { "id": "a", "text": "Karim" },
-                { "id": "b", "text": "Martine" },
-                { "id": "c", "text": "Sébastien" }
+                {
+                  "id": "a",
+                  "text": "Karim"
+                },
+                {
+                  "id": "b",
+                  "text": "Martine"
+                },
+                {
+                  "id": "c",
+                  "text": "Sébastien"
+                }
               ],
               "answer": ["b"],
               "points": 1.5,
-              "explanation": "마르틴: « Il faudrait d'abord reconnaître le vote blanc, c'est-à-dire le compter dans les résultats »."
+              "explanation": "마르틴: « Il faudrait d'abord reconnaître vraiment le vote blanc, c'est-à-dire le compter parmi les suffrages exprimés ». 지금도 백지표는 따로 세지만 유효표에 들지 않는다."
             }
           ]
         }
@@ -816,14 +1113,38 @@
               "criterion": "Correction sociolinguistique (registre adapté à un magazine)",
               "points": 2
             },
-            { "criterion": "Capacité à présenter des faits et des exemples", "points": 3 },
-            { "criterion": "Capacité à argumenter une prise de position", "points": 4 },
-            { "criterion": "Cohérence et cohésion", "points": 3 },
-            { "criterion": "Étendue du vocabulaire", "points": 2 },
-            { "criterion": "Maîtrise du vocabulaire", "points": 2 },
-            { "criterion": "Maîtrise de l'orthographe", "points": 1 },
-            { "criterion": "Degré d'élaboration des phrases", "points": 2 },
-            { "criterion": "Choix des formes (morphosyntaxe)", "points": 4 }
+            {
+              "criterion": "Capacité à présenter des faits et des exemples",
+              "points": 3
+            },
+            {
+              "criterion": "Capacité à argumenter une prise de position",
+              "points": 4
+            },
+            {
+              "criterion": "Cohérence et cohésion",
+              "points": 3
+            },
+            {
+              "criterion": "Étendue du vocabulaire",
+              "points": 2
+            },
+            {
+              "criterion": "Maîtrise du vocabulaire",
+              "points": 2
+            },
+            {
+              "criterion": "Maîtrise de l'orthographe",
+              "points": 1
+            },
+            {
+              "criterion": "Degré d'élaboration des phrases",
+              "points": 2
+            },
+            {
+              "criterion": "Choix des formes (morphosyntaxe)",
+              "points": 4
+            }
           ]
         }
       ]
