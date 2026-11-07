@@ -1,0 +1,111 @@
+{
+  "schema": "study-french/expressions@1",
+  "updatedAt": "2026-11-08",
+  "note": "테스트용 표본. 원본은 https://gh.byb.kr/study-french/speaking/expressions.json",
+  "groups": {
+    "A": "복구",
+    "B": "묘사",
+    "C": "서사",
+    "D": "의견",
+    "E": "구어·반응"
+  },
+  "expressions": [
+    {
+      "id": "E01",
+      "group": "A",
+      "fr": "Tu peux répéter, s'il te plaît ?",
+      "ko": "다시 말해 줄래?",
+      "example": {
+        "fr": "Désolé, je n'ai pas entendu. Tu peux répéter ?",
+        "ko": "미안, 못 들었어. 다시 말해 줄래?"
+      },
+      "session": 1,
+      "learned": true
+    },
+    {
+      "id": "E04",
+      "group": "A",
+      "fr": "Qu'est-ce que ça veut dire, … ?",
+      "ko": "…가 무슨 뜻이야?",
+      "example": {
+        "fr": "Qu'est-ce que ça veut dire, « crevé » ?",
+        "ko": "« crevé »가 무슨 뜻이야?"
+      },
+      "session": 2,
+      "learned": true
+    },
+    {
+      "id": "E25",
+      "group": "B",
+      "fr": "J'ai goûté … pour la première fois.",
+      "ko": "…를 처음 먹어 봤어.",
+      "example": {
+        "fr": "Hier, j'ai goûté des huîtres pour la première fois.",
+        "ko": "어제 굴을 처음 먹어 봤어."
+      },
+      "session": 9,
+      "learned": true,
+      "review": "pour 뒤 la를 빠뜨렸다"
+    },
+    {
+      "id": "E82",
+      "group": "E",
+      "fr": "Il vaut mieux + 동사원형",
+      "ko": "…하는 게 낫겠어.",
+      "example": {
+        "fr": "Il vaut mieux se reposer ce soir.",
+        "ko": "오늘 밤엔 쉬는 게 낫겠어."
+      },
+      "session": 28,
+      "learned": false
+    },
+    {
+      "id": "E16",
+      "group": "B",
+      "fr": "Je suis à … / Je suis en train de …",
+      "ko": "나 …에 있어 / …하는 중이야",
+      "example": {
+        "fr": "Je suis au bureau. Je suis en train de coder.",
+        "ko": "나 회사야. 코딩하는 중이야."
+      },
+      "session": 6,
+      "learned": true
+    },
+    {
+      "id": "E34",
+      "group": "C",
+      "fr": "Ce matin, je suis allé à …",
+      "ko": "오늘 아침에 …에 갔어.",
+      "example": {
+        "fr": "Ce matin, je suis allé à la boulangerie.",
+        "ko": "오늘 아침에 빵집에 갔어."
+      },
+      "session": 12,
+      "learned": true
+    },
+    {
+      "id": "E49",
+      "group": "D",
+      "fr": "À mon avis, …",
+      "ko": "내 생각엔 …",
+      "example": {
+        "fr": "À mon avis, ce film est trop long.",
+        "ko": "내 생각엔 이 영화 너무 길어."
+      },
+      "session": 17,
+      "learned": true
+    },
+    {
+      "id": "E61",
+      "group": "E",
+      "fr": "En fait, …",
+      "ko": "사실은 …",
+      "example": {
+        "fr": "En fait, je n'aime pas trop le café.",
+        "ko": "사실 나 커피 별로 안 좋아해."
+      },
+      "session": 21,
+      "learned": true
+    }
+  ]
+}

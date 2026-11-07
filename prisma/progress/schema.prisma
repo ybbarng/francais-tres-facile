@@ -30,3 +30,10 @@ model ShadowingProgress {
   @@unique([materialId, unit, itemIndex])
   @@index([materialId])
 }
+
+// 말하기 표현 「익힘」 표시. 표현 원본은 study-french 의 speaking/expressions.json (id "E01" 등)
+model ExpressionProgress {
+  expressionId String   @id
+  learned      Boolean  @default(false)
+  updatedAt    DateTime @updatedAt
+}

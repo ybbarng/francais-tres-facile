@@ -23,6 +23,8 @@ ADMIN_PASSWORD=your-secure-password
 | `/api/sync` | POST | RFI 데이터 동기화 |
 | `/api/progress/[exerciseId]` | POST/PATCH | 학습 진도 저장 |
 | `/api/exercises/[id]/refresh` | POST | 개별 연습 새로고침 |
+| `/api/shadowing/progress` | POST | 쉐도잉 반복 횟수 저장 |
+| `/api/expressions/progress` | POST | 말하기 표현 「익힘」 표시 저장 (읽기 GET 은 암호 없이) |
 
 ## 클라이언트 사용법
 
