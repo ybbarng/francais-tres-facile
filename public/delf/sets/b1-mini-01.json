@@ -132,20 +132,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "la baisse des déchets."
+                  "text": "la forte baisse des déchets de l'immeuble."
                 },
                 {
                   "id": "b",
-                  "text": "les fleurs de la cour."
+                  "text": "les fleurs plantées dans la cour au printemps."
                 },
                 {
                   "id": "c",
-                  "text": "les meilleures relations entre voisins."
+                  "text": "les liens qui se sont créés entre voisins."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« Mais pour moi, le plus important, c'est que les voisins se parlent enfin. » 쓰레기 감소와 꽃도 말하지만 « le plus important » 은 이웃 관계다."
+              "explanation": "« Mais pour moi, le plus important, c'est que les voisins se parlent enfin. » 쓰레기가 3분의 1 줄어든 것과 마당의 꽃도 말하지만, « le plus important » 이라고 한 것은 이웃끼리 말을 하게 된 것이다."
             }
           ]
         }
@@ -169,20 +169,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Pour faire des économies."
+                  "text": "Ils voulaient dépenser moins pour leurs courses."
                 },
                 {
                   "id": "b",
-                  "text": "Après avoir vu un documentaire."
+                  "text": "Un film sur l'état des océans les a bouleversés."
                 },
                 {
                   "id": "c",
-                  "text": "Parce que leurs enfants l'ont demandé."
+                  "text": "Leurs enfants leur ont demandé de le faire."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « Nous avons vu un documentaire sur la pollution des océans et nous avons été choqués ». 그래서 정답은 「Après avoir vu un documentaire」이다."
+              "explanation": "« Nous avons vu un documentaire sur la pollution des océans et nous avons été choqués » — 다큐멘터리(film)를 보고 충격을 받아서다. 돈을 조금 덜 쓰게 된 것은 결과일 뿐 이유가 아니고, 아이들은 처음에 « ont d'abord protesté » 반대했다."
             },
             {
               "id": "q6",
@@ -191,20 +191,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "le prix des produits en vrac."
+                  "text": "changer des réflexes qu'ils avaient depuis longtemps."
                 },
                 {
                   "id": "b",
-                  "text": "le manque de magasins près de chez eux."
+                  "text": "payer plus cher les produits vendus en vrac."
                 },
                 {
                   "id": "c",
-                  "text": "de changer leurs habitudes."
+                  "text": "convaincre les commerçants d'accepter leurs bocaux."
                 }
               ],
-              "answer": ["c"],
+              "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « Le plus difficile, c'était les habitudes, explique Julien. ». 그래서 정답은 「de changer leurs habitudes」이다."
+              "explanation": "« Le plus difficile, c'était les habitudes, explique Julien. » 오래된 습관(réflexes)을 바꾸는 것이 가장 어려웠다. 값은 오히려 « dépenser un peu moins qu'avant » 덜 들고, 상인을 설득했다는 말은 없다."
             },
             {
               "id": "q7",
@@ -213,20 +213,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "étaient contents du projet."
+                  "text": "préparaient déjà des biscuits avec leur père."
                 },
                 {
                   "id": "b",
-                  "text": "n'étaient pas d'accord."
+                  "text": "étaient fiers de participer au projet familial."
                 },
                 {
                   "id": "c",
-                  "text": "aidaient à faire les courses."
+                  "text": "se plaignaient de devoir renoncer à leurs gâteaux."
                 }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « Les enfants... ont d'abord protesté : ils regrettaient leurs gâteaux industriels. ». 그래서 정답은 「n'étaient pas d'accord」이다."
+              "explanation": "« Les enfants... ont d'abord protesté : ils regrettaient leurs gâteaux industriels. » 처음에는 사던 과자를 못 먹게 되어 불평했다. 아빠와 비스킷을 굽는 것은 « Aujourd'hui » 지금 이야기다."
             },
             {
               "id": "q8",
@@ -235,20 +235,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "une fois par mois."
-                },
-                {
-                  "id": "b",
                   "text": "tous les trois jours."
                 },
                 {
-                  "id": "c",
+                  "id": "b",
                   "text": "une fois par semaine."
+                },
+                {
+                  "id": "c",
+                  "text": "une douzaine de fois par an."
                 }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
-              "explanation": "« la poubelle... qui se remplissait autrefois en trois jours, n'est plus sortie qu'une fois par mois. » 사흘은 예전 이야기다."
+              "explanation": "« la poubelle... qui se remplissait autrefois en trois jours, n'est plus sortie qu'une fois par mois. » 한 달에 한 번이면 1년에 열두 번쯤이다. 사흘은 예전 이야기다."
             },
             {
               "id": "q9",
@@ -275,20 +275,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Les petits efforts de chacun peuvent beaucoup changer."
+                  "text": "Si chacun en faisait un peu, l'effet serait considérable."
                 },
                 {
                   "id": "b",
-                  "text": "Le zéro déchet est facile pour tout le monde."
+                  "text": "Le zéro déchet fait gagner beaucoup de temps au quotidien."
                 },
                 {
                   "id": "c",
-                  "text": "Sa famille a parfaitement réussi."
+                  "text": "Sa famille ne produit plus du tout de déchets aujourd'hui."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« si chaque famille faisait un petit effort, les résultats seraient énormes. » 또 « Je ne dirais pas qu'on a réussi à cent pour cent » 이라 c는 틀리고, « demande du temps » 이라 b도 틀리다."
+              "explanation": "« si chaque famille faisait un petit effort, les résultats seraient énormes. » 시간은 오히려 « le zéro déchet demande du temps » 든다고 했고, « Je ne dirais pas qu'on a réussi à cent pour cent » 이라 쓰레기가 전혀 없지는 않다."
             }
           ]
         }
@@ -301,7 +301,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Sur un forum, quelqu'un pose la question suivante : « Faut-il obliger les supermarchés à vendre plus de produits sans emballage ? » Vous répondez sur le forum. Vous donnez votre opinion et vous la justifiez avec un exemple tiré de votre expérience.",
+          "prompt": "Sur un forum, quelqu'un pose la question suivante : « Faut-il obliger les supermarchés à vendre plus de produits sans emballage ? » Vous répondez sur le forum. Vous donnez votre opinion et vous la justifiez avec un exemple tiré de votre expérience. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

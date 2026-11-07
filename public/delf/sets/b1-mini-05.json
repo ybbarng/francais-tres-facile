@@ -95,20 +95,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Le bruit dans la rue."
+                  "text": "Le bruit des clients installés en terrasse."
                 },
                 {
                   "id": "b",
-                  "text": "La pollution de l'air."
+                  "text": "La pollution de l'air dans le centre-ville."
                 },
                 {
                   "id": "c",
-                  "text": "Les difficultés de déplacement des personnes âgées."
+                  "text": "Les déplacements difficiles pour les personnes âgées."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« pour les personnes âgées comme moi, c'est plus compliqué... l'arrêt de bus le plus proche est à dix minutes à pied ». 소음과 공기는 오히려 좋아졌다고 말한다."
+              "explanation": "« pour les personnes âgées comme moi, c'est plus compliqué... l'arrêt de bus le plus proche est à dix minutes à pied ». 소음과 공기는 « c'est plus calme et l'air est meilleur » 오히려 좋아졌다고 말한다."
             },
             {
               "id": "q4",
@@ -145,56 +145,78 @@
           "id": "doc2",
           "context": "Vous lisez cette page d'information de votre ville.",
           "title": "Vélo'Ville : ce qui change le 1er mars",
-          "text": "À partir du 1er mars, le service de vélos en libre-service de la ville évolue. Voici les principales nouveautés.\n\nPlus de vélos électriques\nSur les 800 vélos du réseau, la moitié sera désormais électrique. Vous les reconnaîtrez facilement : ils sont verts. Les vélos classiques restent bleus.\n\nNouveaux tarifs\nL'abonnement annuel passe de 30 € à 35 €. Avec un vélo classique, les trente premières minutes de chaque trajet restent gratuites pour les abonnés ; ensuite, chaque demi-heure coûte 1 €. Avec un vélo électrique, chaque trajet coûte 0,50 € de plus. Les étudiants et les demandeurs d'emploi paient l'abonnement moitié prix, sur présentation d'un justificatif.\n\nUne application plus simple\nVous n'aurez plus besoin de carte : vous pourrez déverrouiller le vélo directement avec votre téléphone. Les anciennes cartes fonctionneront encore jusqu'au 30 juin.\n\nAttention\nLes vélos doivent être rendus dans une station. Si vous laissez un vélo ailleurs, vous devrez payer une amende de 20 €.",
+          "text": "À partir du 1er mars, le service de vélos en libre-service de la ville évolue. L'an dernier, une enquête menée auprès de 3 000 usagers avait fait apparaître deux reproches principaux : il n'y avait pas assez de vélos électriques, et la carte d'abonné était jugée peu pratique. La mairie a donc décidé de revoir le service.\n\nDavantage de vélos électriques\nSur les 800 vélos du réseau, la moitié sera désormais électrique, contre une centaine seulement aujourd'hui. Pour qu'on puisse les reconnaître au premier coup d'œil, ils ont été peints en vert ; les vélos classiques, eux, restent bleus.\n\nDes tarifs revus\nAfin de financer ces nouveaux vélos, l'abonnement annuel passe de 30 € à 35 €. Les étudiants et les demandeurs d'emploi continueront à le payer moitié prix, à condition de présenter un justificatif. Pour les abonnés, la première demi-heure de chaque trajet reste gratuite ; au-delà, chaque demi-heure commencée coûte 1 €. Attention : avec un vélo électrique, 0,50 € s'ajoute au prix de chaque trajet, même très court.\n\nLe téléphone remplace la carte\nGrâce à la nouvelle application, il suffira de scanner le code affiché sur le vélo pour le déverrouiller. Les usagers qui n'ont pas de smartphone ne seront pas oubliés : leur ancienne carte fonctionnera jusqu'au 30 juin, puis ils pourront en demander gratuitement une nouvelle à l'accueil de la mairie.\n\nRappel\nUn vélo qui n'est pas rendu dans une station est considéré comme abandonné. Son utilisateur devra payer une amende de 20 €, même si le vélo est retrouvé en bon état.",
           "questions": [
             {
               "id": "q5",
               "type": "choice",
-              "prompt": "Comment reconnaît-on un vélo électrique ?",
+              "prompt": "Pourquoi la mairie a-t-elle modifié le service ?",
               "options": [
                 {
                   "id": "a",
-                  "text": "Il est bleu."
+                  "text": "Pour répondre aux critiques des usagers."
                 },
                 {
                   "id": "b",
-                  "text": "Il a une carte."
+                  "text": "Parce que les vélos bleus étaient trop vieux."
                 },
                 {
                   "id": "c",
-                  "text": "Il est vert."
-                }
-              ],
-              "answer": ["c"],
-              "points": 1,
-              "explanation": "근거 문장: « Vous les reconnaîtrez facilement : ils sont verts. Les vélos classiques restent bleus. ». 그래서 정답은 「Il est vert」이다."
-            },
-            {
-              "id": "q6",
-              "type": "choice",
-              "prompt": "Pour une personne qui a un emploi, l'abonnement annuel coûtera...",
-              "options": [
-                {
-                  "id": "a",
-                  "text": "35 €."
-                },
-                {
-                  "id": "b",
-                  "text": "30 €."
-                },
-                {
-                  "id": "c",
-                  "text": "17,50 €."
+                  "text": "Parce que le nombre d'abonnés diminuait."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« L'abonnement annuel passe de 30 € à 35 € ». 반값(17,50 €)은 학생과 구직자만 해당한다."
+              "explanation": "« une enquête menée auprès de 3 000 usagers avait fait apparaître deux reproches principaux... La mairie a donc décidé de revoir le service. » 이용자의 불만(reproches)에 답하려고 바꿨다. 자전거가 낡았다거나 가입자가 줄었다는 말은 없다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Marc, 40 ans, est salarié et ne fait pas d'études. Combien paiera-t-il son abonnement annuel ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "30 €."
+                },
+                {
+                  "id": "b",
+                  "text": "17,50 €."
+                },
+                {
+                  "id": "c",
+                  "text": "35 €."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« l'abonnement annuel passe de 30 € à 35 € ». 반값(17,50 €)은 « Les étudiants et les demandeurs d'emploi » 학생과 구직자만 해당하는데, 마르크는 일하고 공부하지 않으므로 35유로를 낸다. 30유로는 옛 요금이다."
             },
             {
               "id": "q7",
+              "type": "choice",
+              "prompt": "Léa, étudiante et abonnée, prend un vélo électrique pour un trajet de 40 minutes. Combien paie-t-elle ce trajet ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "0,50 €."
+                },
+                {
+                  "id": "b",
+                  "text": "1,50 €."
+                },
+                {
+                  "id": "c",
+                  "text": "1 €."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« la première demi-heure de chaque trajet reste gratuite ; au-delà, chaque demi-heure commencée coûte 1 € » 이라 40분이면 30분을 넘긴 10분에 1유로가 붙는다. 여기에 « avec un vélo électrique, 0,50 € s'ajoute au prix de chaque trajet » 을 더해 1,50유로다. 학생 반값은 연회비에만 해당한다."
+            },
+            {
+              "id": "q8",
               "type": "truefalse",
-              "prompt": "Pour un abonné, un trajet de vingt minutes avec un vélo classique est gratuit.",
+              "prompt": "Un abonné qui n'a pas de smartphone pourra encore utiliser Vélo'Ville après le 30 juin.",
               "options": [
                 {
                   "id": "v",
@@ -207,51 +229,29 @@
               ],
               "answer": ["v"],
               "points": 1,
-              "explanation": "« Avec un vélo classique, les trente premières minutes de chaque trajet restent gratuites pour les abonnés » — 20분은 30분 안이라 무료다."
-            },
-            {
-              "id": "q8",
-              "type": "choice",
-              "prompt": "Jusqu'à quand peut-on utiliser l'ancienne carte ?",
-              "options": [
-                {
-                  "id": "a",
-                  "text": "Jusqu'au 30 juin."
-                },
-                {
-                  "id": "b",
-                  "text": "Jusqu'au 1er mars."
-                },
-                {
-                  "id": "c",
-                  "text": "Sans limite de date."
-                }
-              ],
-              "answer": ["a"],
-              "points": 1,
-              "explanation": "근거 문장: « Les anciennes cartes fonctionneront encore jusqu'au 30 juin. ». 그래서 정답은 「Jusqu'au 30 juin」이다."
+              "explanation": "« leur ancienne carte fonctionnera jusqu'au 30 juin, puis ils pourront en demander gratuitement une nouvelle à l'accueil de la mairie » — 6월 30일 뒤에는 새 카드를 받아 계속 쓸 수 있다. 끝나는 것은 옛 카드뿐이다."
             },
             {
               "id": "q9",
               "type": "choice",
-              "prompt": "Que se passe-t-il si on laisse un vélo en dehors d'une station ?",
+              "prompt": "Que risque un usager qui laisse son vélo devant chez lui ?",
               "options": [
                 {
                   "id": "a",
-                  "text": "On perd son abonnement."
+                  "text": "Une amende de 20 €."
                 },
                 {
                   "id": "b",
-                  "text": "On paie une amende de 20 €."
+                  "text": "Rien, si le vélo n'est pas abîmé."
                 },
                 {
                   "id": "c",
-                  "text": "On paie 1 € de plus."
+                  "text": "La perte de son abonnement."
                 }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « Si vous laissez un vélo ailleurs, vous devrez payer une amende de 20 €. ». 그래서 정답은 「On paie une amende de 20 €」이다."
+              "explanation": "« Un vélo qui n'est pas rendu dans une station est considéré comme abandonné. Son utilisateur devra payer une amende de 20 €, même si le vélo est retrouvé en bon état. » 자전거가 멀쩡해도 벌금을 낸다."
             }
           ]
         }
@@ -264,7 +264,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "La mairie de votre ville propose de fermer le centre-ville aux voitures tous les week-ends. Vous écrivez un court courriel au journal local pour donner votre opinion. Vous expliquez comment ce projet changerait votre vie quotidienne.",
+          "prompt": "La mairie de votre ville propose de fermer le centre-ville aux voitures tous les week-ends. Vous écrivez un court courriel au journal local pour donner votre opinion. Vous expliquez comment ce projet changerait votre vie quotidienne. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

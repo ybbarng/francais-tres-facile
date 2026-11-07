@@ -66,20 +66,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "tous les patients."
+                  "text": "tous les patients qui ont envie de bouger."
                 },
                 {
                   "id": "b",
-                  "text": "les personnes qui ont une maladie de longue durée."
+                  "text": "les patients atteints d'une maladie chronique."
                 },
                 {
                   "id": "c",
-                  "text": "seulement les sportifs blessés."
+                  "text": "seulement les sportifs qui se sont blessés."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « pour les personnes qui ont une maladie de longue durée, comme le diabète... je peux écrire sur l'ordonnance ». 그래서 정답은 「les personnes qui ont une maladie de longue durée」이다."
+              "explanation": "« pour les personnes qui ont une maladie de longue durée, comme le diabète ou certaines maladies du cœur, je peux écrire sur l'ordonnance » — 오래가는 병(maladie chronique)이 있는 환자만 해당한다."
             },
             {
               "id": "q2",
@@ -235,20 +235,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "améliore la mémoire."
+                  "text": "améliore la concentration et la mémoire."
                 },
                 {
                   "id": "b",
-                  "text": "diminue le stress."
+                  "text": "peut empêcher de bien dormir la nuit."
                 },
                 {
                   "id": "c",
-                  "text": "peut empêcher de bien dormir la nuit."
+                  "text": "diminue le stress de la journée."
                 }
               ],
-              "answer": ["c"],
+              "answer": ["b"],
               "points": 1,
-              "explanation": "« une sieste trop longue peut donner une sensation de fatigue au réveil et empêcher de bien dormir la nuit ». a와 b는 짧은 낮잠의 효과다."
+              "explanation": "« une sieste trop longue peut donner une sensation de fatigue au réveil et empêcher de bien dormir la nuit ». 집중력·기억력과 스트레스는 « une courte sieste » 짧은 낮잠의 효과다."
             },
             {
               "id": "q9",
@@ -257,20 +257,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Elles coûtent trop cher."
+                  "text": "Beaucoup de patrons y voient du temps perdu."
                 },
                 {
                   "id": "b",
-                  "text": "La loi les interdit."
+                  "text": "Elles coûtent trop cher aux entreprises."
                 },
                 {
                   "id": "c",
-                  "text": "Beaucoup de chefs pensent que c'est une perte de temps."
+                  "text": "Les médecins doutent de leur intérêt."
                 }
               ],
-              "answer": ["c"],
+              "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « Beaucoup de chefs d'entreprise pensent encore que dormir au travail, c'est perdre du temps. ». 그래서 정답은 「Beaucoup de chefs pensent que c'est une perte de temps」이다."
+              "explanation": "« Beaucoup de chefs d'entreprise pensent encore que dormir au travail, c'est perdre du temps. » 비용 이야기는 없고, 의사들은 오히려 « confirment l'intérêt d'une courte sieste » 효과를 인정한다."
             }
           ]
         }
@@ -283,7 +283,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Un magazine de santé demande à ses lecteurs : « Qu'avez-vous changé dans votre vie pour être en meilleure santé ? » Vous écrivez au magazine. Vous racontez un changement que vous avez fait (sport, alimentation, sommeil...), ses résultats, et vous dites si vous le conseillez.",
+          "prompt": "Un magazine de santé demande à ses lecteurs : « Qu'avez-vous changé dans votre vie pour être en meilleure santé ? » Vous écrivez au magazine. Vous racontez un changement que vous avez fait (sport, alimentation, sommeil...), ses résultats, et vous dites si vous le conseillez. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

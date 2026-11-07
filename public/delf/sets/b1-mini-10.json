@@ -19,7 +19,7 @@
               {
                 "speaker": "Annonce",
                 "voice": "Sandy (프랑스어(프랑스))",
-                "text": "Mesdames et messieurs, en raison d'un problème technique, le train à destination de Marseille, prévu au départ à quatorze heures dix, partira avec un retard d'environ quarante minutes. Attention : ce train partira de la voie huit, et non de la voie trois comme indiqué sur les écrans. Nous vous prions de nous excuser pour ce retard."
+                "text": "Mesdames et messieurs, votre attention, s'il vous plaît. En raison d'un incident technique sur la ligne entre Lyon et Valence, le train à destination de Marseille, dont le départ était prévu à quatorze heures dix, partira avec un retard estimé à quarante minutes. Nous attirons également votre attention sur un changement de voie : contrairement à ce qu'indiquent encore les écrans, ce train partira de la voie huit, et non de la voie trois. Les voyageurs qui ont une correspondance à Marseille sont invités à se présenter au guichet, où un agent leur proposera une solution. Par ailleurs, un bon de réduction sera envoyé par courriel à tous les voyageurs concernés par ce retard. Nous vous prions de bien vouloir nous excuser pour la gêne occasionnée."
               }
             ]
           },
@@ -27,46 +27,46 @@
             {
               "id": "q1",
               "type": "choice",
-              "prompt": "Le train pour Marseille aura un retard d'environ...",
+              "prompt": "À quelle heure le train pour Marseille devrait-il maintenant partir ?",
               "options": [
                 {
                   "id": "a",
-                  "text": "dix minutes."
+                  "text": "Vers 14 h 10."
                 },
                 {
                   "id": "b",
-                  "text": "une heure."
+                  "text": "Vers 14 h 50."
                 },
                 {
                   "id": "c",
-                  "text": "quarante minutes."
+                  "text": "Vers 14 h 40."
                 }
               ],
-              "answer": ["c"],
+              "answer": ["b"],
               "points": 1,
-              "explanation": "« partira avec un retard d'environ quarante minutes ». « dix » 는 출발 예정 시각(14시 10분)에 나온다."
+              "explanation": "« dont le départ était prévu à quatorze heures dix, partira avec un retard estimé à quarante minutes » — 14시 10분에 40분을 더하면 14시 50분쯤이다. 14시 10분은 원래 출발 시각이다."
             },
             {
               "id": "q2",
               "type": "choice",
-              "prompt": "De quelle voie le train partira-t-il ?",
+              "prompt": "Que doivent faire les voyageurs qui ont une correspondance à Marseille ?",
               "options": [
                 {
                   "id": "a",
-                  "text": "De la voie 8."
+                  "text": "Aller voir un agent au guichet."
                 },
                 {
                   "id": "b",
-                  "text": "De la voie 3."
+                  "text": "Attendre un courriel de la compagnie."
                 },
                 {
                   "id": "c",
-                  "text": "De la voie 10."
+                  "text": "Changer de train à Lyon."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « ce train partira de la voie huit, et non de la voie trois ». 그래서 정답은 「De la voie 8」이다."
+              "explanation": "« Les voyageurs qui ont une correspondance à Marseille sont invités à se présenter au guichet, où un agent leur proposera une solution. » 메일로 오는 것은 지연된 모든 승객에게 주는 할인권이다."
             }
           ]
         },
@@ -104,7 +104,7 @@
               {
                 "speaker": "Emma",
                 "voice": "Flo (프랑스어(프랑스))",
-                "text": "Un peu, au début. Mais on s'est beaucoup écrit avant, et on s'est parlé en vidéo. Et ils m'ont laissé plein de conseils : les meilleurs restaurants, les plages moins touristiques... C'était comme avoir des amis sur place."
+                "text": "Un peu, au début. Mais on s'est beaucoup écrit avant, et on s'est parlé en vidéo. Et le meilleur, c'est qu'ils m'avaient laissé plein de conseils : leurs restaurants préférés, des plages que les touristes ne connaissent pas... C'était comme avoir des amis sur place."
               },
               {
                 "speaker": "Nicolas",
@@ -126,20 +126,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "à l'hôtel."
+                  "text": "dans un hôtel près de la plage."
                 },
                 {
                   "id": "b",
-                  "text": "chez une famille portugaise, absente pendant son séjour."
+                  "text": "chez une famille de Lisbonne partie à Lyon."
                 },
                 {
                   "id": "c",
-                  "text": "chez des amis."
+                  "text": "chez des amis de ses parents."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Une famille de Lisbonne est venue habiter dans mon appartement à Lyon... et moi, j'étais chez eux. » 그 가족은 그동안 리옹에 있었으므로 집에 없었다. 친구 집이 아니라 « comme avoir des amis » 라고 비유했을 뿐이다."
+              "explanation": "« Une famille de Lisbonne est venue habiter dans mon appartement à Lyon pendant deux semaines, et moi, j'étais chez eux. » 그 가족은 그동안 리옹의 에마 집에 있었다. 호텔에는 « je ne suis pas allée à l'hôtel » 가지 않았고, « comme avoir des amis » 는 비유일 뿐이다."
             },
             {
               "id": "q4",
@@ -148,20 +148,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Le prix des restaurants."
+                  "text": "Les prix très bas des restaurants."
                 },
                 {
                   "id": "b",
-                  "text": "Les plages très touristiques."
+                  "text": "Les plages les plus connues du pays."
                 },
                 {
                   "id": "c",
-                  "text": "Les conseils de la famille portugaise."
+                  "text": "Les bonnes adresses laissées par la famille."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« ils m'ont laissé plein de conseils... C'était comme avoir des amis sur place. » 해변은 « moins touristiques » 곳을 추천받았다."
+              "explanation": "« Et le meilleur, c'est qu'ils m'avaient laissé plein de conseils : leurs restaurants préférés, des plages que les touristes ne connaissent pas... » 가장 좋았던 것(le meilleur)은 그 가족이 남긴 추천이다. 해변은 관광객이 모르는 곳이고, 식당 값 이야기는 없다."
             },
             {
               "id": "q5",
@@ -207,20 +207,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "voyager autrement et prendre son temps."
+                  "text": "voir les paysages sans se presser."
                 },
                 {
                   "id": "b",
-                  "text": "économiser de l'argent."
+                  "text": "dépenser moins qu'en prenant l'avion."
                 },
                 {
                   "id": "c",
-                  "text": "éviter les aéroports."
+                  "text": "protéger avant tout l'environnement."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« D'abord pour l'environnement... Mais surtout, je voulais voyager autrement et prendre le temps de regarder les paysages. » 문항의 « surtout » 과 같은 말이다."
+              "explanation": "« D'abord pour l'environnement... Mais surtout, je voulais voyager autrement et prendre le temps de regarder les paysages. » 환경은 첫째 이유로 들었지만 « surtout » 가장 큰 이유는 천천히 풍경을 보는 것이다. 패스는 비행기보다 « un peu plus cher » 조금 비쌌다."
             },
             {
               "id": "q7",
@@ -251,7 +251,7 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Ils étaient toujours complets."
+                  "text": "Ils étaient souvent complets en été."
                 },
                 {
                   "id": "b",
@@ -259,12 +259,12 @@
                 },
                 {
                   "id": "c",
-                  "text": "Ils étaient très lents."
+                  "text": "Ils s'arrêtaient dans trop de petites gares."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « dans certains trains, il fallait aussi réserver sa place et payer un supplément ». 그래서 정답은 「Il fallait réserver et payer un supplément」이다."
+              "explanation": "« dans certains trains, il fallait aussi réserver sa place et payer un supplément ». 자리가 꽉 찼다거나 작은 역에 너무 많이 섰다는 말은 없다."
             },
             {
               "id": "q9",
@@ -321,7 +321,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Pendant un voyage, quelque chose s'est mal passé (retard, bagage perdu, mauvais hôtel...). Vous écrivez un courriel à un ami pour lui raconter ce qui est arrivé, comment vous avez réagi, et ce que vous feriez différemment la prochaine fois.",
+          "prompt": "Pendant un voyage, quelque chose s'est mal passé (retard, bagage perdu, mauvais hôtel...). Vous écrivez un courriel à un ami pour lui raconter ce qui est arrivé, comment vous avez réagi, et ce que vous feriez différemment la prochaine fois. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

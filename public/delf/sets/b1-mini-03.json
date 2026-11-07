@@ -122,11 +122,11 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "a supprimé ses réseaux sociaux."
+                  "text": "a supprimé tous ses comptes sur les réseaux sociaux."
                 },
                 {
                   "id": "b",
-                  "text": "a changé de travail."
+                  "text": "a trouvé un travail sans ordinateur ni téléphone."
                 },
                 {
                   "id": "c",
@@ -135,7 +135,7 @@
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« je laisse mon téléphone dans l'entrée quand je rentre le soir ». « Je n'ai pas supprimé mes réseaux sociaux » 이라 a는 틀리다."
+              "explanation": "« je laisse mon téléphone dans l'entrée quand je rentre le soir ». « Je n'ai pas supprimé mes réseaux sociaux, ce serait impossible avec mon travail » 이라 SNS 계정을 지우지도, 일을 바꾸지도 않았다."
             }
           ]
         }
@@ -149,7 +149,7 @@
         {
           "id": "doc2",
           "context": "Vous lisez cet article sur le site de votre ville.",
-          "title": "Médiathèque Jules-Verne : des ateliers pour apprivoiser internet",
+          "title": "Médiathèque Jules-Verne : des ateliers pour se sentir à l'aise avec internet",
           "text": "Prendre un rendez-vous chez le médecin, déclarer ses impôts, envoyer des photos à ses petits-enfants : aujourd'hui, presque tout se fait en ligne. Pourtant, près d'une personne âgée sur trois ne se sent pas à l'aise avec internet. Pour les aider, la médiathèque Jules-Verne organise depuis septembre des ateliers gratuits, tous les mardis matin.\n\nLes participants viennent avec leur propre téléphone ou leur tablette. Ceux qui n'en ont pas peuvent emprunter un appareil sur place. Les groupes sont petits, six personnes au maximum, pour que chacun puisse poser ses questions.\n\n« Au début, j'avais honte de ne rien comprendre, raconte Monique, soixante-dix-huit ans. Mes enfants voulaient m'aider, mais ils allaient trop vite et ils s'énervaient. Ici, on a le droit de demander dix fois la même chose. » Après trois mois, elle sait faire des appels vidéo et commander ses courses sur internet.\n\nL'animateur, Bastien, insiste aussi sur la sécurité. « Beaucoup de personnes âgées reçoivent de faux messages qui leur demandent leurs codes bancaires. Nous leur apprenons à reconnaître ces arnaques. »\n\nFace au succès des ateliers, la médiathèque cherche maintenant des bénévoles pour ouvrir un deuxième groupe le jeudi après-midi.",
           "questions": [
             {
@@ -181,20 +181,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "ne peuvent pas participer."
+                  "text": "ne peuvent pas participer aux ateliers."
                 },
                 {
                   "id": "b",
-                  "text": "doivent en acheter une."
+                  "text": "doivent en acheter une avant le premier atelier."
                 },
                 {
                   "id": "c",
-                  "text": "peuvent emprunter un appareil sur place."
+                  "text": "peuvent utiliser un appareil prêté sur place."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « Ceux qui n'en ont pas peuvent emprunter un appareil sur place. ». 그래서 정답은 「peuvent emprunter un appareil sur place」이다."
+              "explanation": "« Ceux qui n'en ont pas peuvent emprunter un appareil sur place. » 기기가 없으면 그 자리에서 빌려 쓴다."
             },
             {
               "id": "q7",
@@ -203,20 +203,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Pour que chacun puisse poser ses questions."
+                  "text": "Pour que chacun ait le temps d'interroger l'animateur."
                 },
                 {
                   "id": "b",
-                  "text": "Parce que la salle est petite."
+                  "text": "Parce que la médiathèque n'a que six tablettes à prêter."
                 },
                 {
                   "id": "c",
-                  "text": "Parce qu'il n'y a pas assez d'appareils."
+                  "text": "Parce que la salle des ateliers est très petite."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « six personnes au maximum, pour que chacun puisse poser ses questions ». 그래서 정답은 「Pour que chacun puisse poser ses questions」이다."
+              "explanation": "« Les groupes sont petits, six personnes au maximum, pour que chacun puisse poser ses questions. » 여섯은 한 반의 최대 인원이지 빌려주는 기기 수가 아니고, 방 크기 이야기는 없다."
             },
             {
               "id": "q8",
@@ -225,42 +225,42 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "lui ont conseillé les ateliers."
+                  "text": "lui expliquaient tout par écrit."
                 },
                 {
                   "id": "b",
-                  "text": "allaient trop vite."
+                  "text": "lui montraient tout trop rapidement."
                 },
                 {
                   "id": "c",
-                  "text": "lui ont acheté une tablette."
+                  "text": "refusaient de l'aider avec internet."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « Mes enfants voulaient m'aider, mais ils allaient trop vite et ils s'énervaient. ». 그래서 정답은 「allaient trop vite」이다."
+              "explanation": "« Mes enfants voulaient m'aider, mais ils allaient trop vite et ils s'énervaient. » 너무 빨리 보여 주었다. 도와주려고 했으므로(« voulaient m'aider ») 거절한 것이 아니다."
             },
             {
               "id": "q9",
               "type": "choice",
-              "prompt": "L'animateur apprend aussi aux participants à...",
+              "prompt": "Selon l'animateur, quel danger menace beaucoup de personnes âgées sur internet ?",
               "options": [
                 {
                   "id": "a",
-                  "text": "ouvrir un compte bancaire."
+                  "text": "Oublier leurs codes bancaires."
                 },
                 {
                   "id": "b",
-                  "text": "réparer leur téléphone."
+                  "text": "Payer trop cher leurs courses en ligne."
                 },
                 {
                   "id": "c",
-                  "text": "reconnaître les arnaques."
+                  "text": "Se laisser tromper par de faux messages."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « Nous leur apprenons à reconnaître ces arnaques. ». 그래서 정답은 「reconnaître les arnaques」이다."
+              "explanation": "« Beaucoup de personnes âgées reçoivent de faux messages qui leur demandent leurs codes bancaires. Nous leur apprenons à reconnaître ces arnaques. » 가짜 메시지에 속는 것이 위험이다. 코드를 잊는 것이 아니라 코드를 빼앗기는 것이다."
             },
             {
               "id": "q10",
@@ -295,7 +295,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Un magazine demande à ses lecteurs : « Pourriez-vous vivre une semaine sans smartphone ? » Vous écrivez un court texte pour le magazine. Vous donnez votre opinion et vous racontez un moment de votre vie où le téléphone vous a aidé ou gêné.",
+          "prompt": "Un magazine demande à ses lecteurs : « Pourriez-vous vivre une semaine sans smartphone ? » Vous écrivez un court texte pour le magazine. Vous donnez votre opinion et vous racontez un moment de votre vie où le téléphone vous a aidé ou gêné. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

@@ -66,20 +66,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "gratuitement."
+                  "text": "gratuitement, grâce aux dons des supermarchés."
                 },
                 {
                   "id": "b",
-                  "text": "à moitié prix."
+                  "text": "à moitié prix, aux familles inscrites."
                 },
                 {
                   "id": "c",
-                  "text": "à environ dix pour cent du prix normal."
+                  "text": "pour un dixième environ de leur prix habituel."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « à environ dix pour cent du prix normal ». 그래서 정답은 「à environ dix pour cent du prix normal」이다."
+              "explanation": "« L'épicerie vend des produits à des familles qui ont peu d'argent, à environ dix pour cent du prix normal. » 정가의 10퍼센트쯤, 곧 10분의 1 값에 판다. 슈퍼마켓이 물건을 기부하지만 가게는 공짜로 주지 않고 판다."
             },
             {
               "id": "q2",
@@ -88,20 +88,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "d'accueillir les familles."
+                  "text": "d'accueillir les familles et de les conseiller."
                 },
                 {
                   "id": "b",
-                  "text": "de tenir la caisse."
+                  "text": "de tenir la caisse le mardi et le vendredi."
                 },
                 {
                   "id": "c",
-                  "text": "d'aller chercher et de ranger les produits."
+                  "text": "de récupérer les marchandises et de les ranger."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « je m'occupe surtout de la réception des marchandises : ... je vais chercher les produits ... et je les range ». 그래서 정답은 「d'aller chercher et de ranger les produits」이다."
+              "explanation": "« je m'occupe surtout de la réception des marchandises : le mardi et le vendredi, je vais chercher les produits... et je les range ». 화요일과 금요일은 물건을 받으러 가는 날이지 계산대를 보는 날이 아니다."
             },
             {
               "id": "q3",
@@ -132,20 +132,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Travailler seul."
+                  "text": "Côtoyer des gens de tous les âges."
                 },
                 {
                   "id": "b",
-                  "text": "Rencontrer des personnes de tous les âges."
+                  "text": "Travailler seul, à son rythme."
                 },
                 {
                   "id": "c",
                   "text": "Conduire sur de longues distances."
                 }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « Les autres bénévoles ont entre dix-huit et quatre-vingts ans, et ça, j'adore. ». 그래서 정답은 「Rencontrer des personnes de tous les âges」이다."
+              "explanation": "« Les autres bénévoles ont entre dix-huit et quatre-vingts ans, et ça, j'adore. » 여러 나이대 사람과 어울리는 것을 좋아한다. 운전은 봉사를 시작한 계기일 뿐이다."
             },
             {
               "id": "q5",
@@ -191,20 +191,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "des précautions à prendre avant un volontariat."
+                  "text": "des dangers que courent les volontaires en Asie."
                 },
                 {
                   "id": "b",
-                  "text": "des dangers des voyages en Asie."
+                  "text": "des précautions à prendre avant un volontariat."
                 },
                 {
                   "id": "c",
-                  "text": "du prix des voyages organisés."
+                  "text": "du prix élevé des séjours vendus par les agences."
                 }
               ],
-              "answer": ["a"],
+              "answer": ["b"],
               "points": 1,
-              "explanation": "제목 « bien choisir son projet » 과 « Avant de partir, il faut aussi se renseigner sur l'organisme » 처럼 글 전체가 봉사 전에 따져 볼 점을 다룬다."
+              "explanation": "제목 « bien choisir son projet » 과 « Avant de partir, il faut aussi se renseigner sur l'organisme » 처럼 글 전체가 봉사 전에 따져 볼 점을 다룬다. 아시아는 카미유가 간 곳일 뿐이고, 값은 한 번 나올 뿐이다."
             },
             {
               "id": "q7",
@@ -213,20 +213,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Les enfants voyaient sans cesse partir les volontaires."
+                  "text": "Le séjour lui avait coûté beaucoup trop cher."
                 },
                 {
                   "id": "b",
-                  "text": "Le séjour était trop cher."
+                  "text": "Les conditions de vie sur place étaient dures."
                 },
                 {
                   "id": "c",
-                  "text": "Les conditions de vie étaient difficiles."
+                  "text": "Les enfants voyaient sans cesse partir les volontaires."
                 }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « les enfants voyaient arriver un nouveau groupe de volontaires toutes les deux semaines. Ils s'attachaient à nous, puis on partait. ». 그래서 정답은 「Les enfants voyaient sans cesse partir les volontaires」이다."
+              "explanation": "« les enfants voyaient arriver un nouveau groupe de volontaires toutes les deux semaines. Ils s'attachaient à nous, puis on partait. » 카미유는 값이나 생활 조건을 문제 삼지 않았다."
             },
             {
               "id": "q8",
@@ -257,20 +257,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "est toujours gratuit."
+                  "text": "propose surtout de courts séjours auprès d'enfants."
                 },
                 {
                   "id": "b",
-                  "text": "accepte les volontaires sans formation."
+                  "text": "dit clairement à quoi sert l'argent versé."
                 },
                 {
                   "id": "c",
-                  "text": "explique clairement où va l'argent."
+                  "text": "laisse les habitants en dehors du projet."
                 }
               ],
-              "answer": ["c"],
+              "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « Où va l'argent payé par le volontaire ? ... Un bon organisme répond clairement à ces questions et propose une formation avant le départ. ». 그래서 정답은 「explique clairement où va l'argent」이다."
+              "explanation": "« Où va l'argent payé par le volontaire ? Les habitants participent-ils au projet ? Un bon organisme répond clairement à ces questions ». 아이들 곁의 짧은 체류는 전문가들이 « peuvent leur faire plus de mal que de bien » 이라고 비판한 것이고, 주민을 빼는 것은 좋은 단체의 반대다."
             },
             {
               "id": "q10",
@@ -279,18 +279,18 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "veut repartir après ses études d'infirmière."
-                },
-                {
-                  "id": "b",
                   "text": "a décidé de ne plus faire de volontariat."
                 },
                 {
-                  "id": "c",
+                  "id": "b",
                   "text": "travaille dans une agence de volontariat."
+                },
+                {
+                  "id": "c",
+                  "text": "veut repartir après ses études d'infirmière."
                 }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
               "explanation": "근거 문장: « Elle termine ses études d'infirmière et prévoit de repartir pendant un an avec une association médicale. ». 그래서 정답은 「veut repartir après ses études d'infirmière」이다."
             }
@@ -305,7 +305,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Votre amie Julie voudrait faire du bénévolat, mais elle ne sait pas quoi choisir. Vous lui écrivez un courriel : vous lui racontez une expérience de bénévolat (la vôtre ou celle d'un proche) et vous lui donnez des conseils.",
+          "prompt": "Votre amie Julie voudrait faire du bénévolat, mais elle ne sait pas quoi choisir. Vous lui écrivez un courriel : vous lui racontez une expérience de bénévolat (la vôtre ou celle d'un proche) et vous lui donnez des conseils. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

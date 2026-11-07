@@ -150,20 +150,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Travailler chez elle deux jours par semaine."
+                  "text": "Avoir le lundi libre au lieu du vendredi."
                 },
                 {
                   "id": "b",
-                  "text": "Avoir son lundi libre."
+                  "text": "Partager l'équipe en deux groupes."
                 },
                 {
                   "id": "c",
-                  "text": "Changer d'équipe."
+                  "text": "Faire du télétravail deux jours par semaine."
                 }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « je préférerais pouvoir travailler de chez moi deux jours par semaine ». 그래서 정답은 「Travailler chez elle deux jours par semaine」이다."
+              "explanation": "« je préférerais pouvoir travailler de chez moi deux jours par semaine » — 집에서 일하는 것(télétravail)을 더 바란다. 팀을 둘로 나누는 것은 남자의 제안이고, 여자는 « Pourquoi pas... » 라고만 했다."
             }
           ]
         }
@@ -301,7 +301,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Votre ami Thomas vous écrit : son entreprise lui propose la semaine de quatre jours, avec des journées de neuf heures. Il hésite. Vous lui répondez par courriel : vous lui donnez votre avis et des conseils, en vous appuyant sur votre expérience ou celle d'un proche.",
+          "prompt": "Votre ami Thomas vous écrit : son entreprise lui propose la semaine de quatre jours, avec des journées de neuf heures. Il hésite. Vous lui répondez par courriel : vous lui donnez votre avis et des conseils, en vous appuyant sur votre expérience ou celle d'un proche. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

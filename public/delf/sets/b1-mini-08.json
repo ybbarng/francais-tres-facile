@@ -110,20 +110,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "coûterait plus cher qu'une machine neuve."
+                  "text": "serait impossible à faire en magasin."
                 },
                 {
                   "id": "b",
-                  "text": "était impossible."
+                  "text": "prendrait au moins une semaine."
                 },
                 {
                   "id": "c",
-                  "text": "prendrait une semaine."
+                  "text": "coûterait plus qu'une machine neuve."
                 }
               ],
-              "answer": ["a"],
+              "answer": ["c"],
               "points": 1,
-              "explanation": "« Au magasin, on m'a dit que la réparation coûterait plus cher qu'une machine neuve. » 일주일은 기계가 고장 나 있던 기간이다."
+              "explanation": "« Au magasin, on m'a dit que la réparation coûterait plus cher qu'une machine neuve. » 일주일은 기계가 고장 나 있던 기간이고, 가게는 못 고친다고 하지 않고 값이 비싸다고 했다."
             },
             {
               "id": "q4",
@@ -209,24 +209,24 @@
             {
               "id": "q7",
               "type": "choice",
-              "prompt": "D'après l'article, l'industrie textile...",
+              "prompt": "Selon l'article, acheter d'occasion est bon pour la planète parce que...",
               "options": [
                 {
                   "id": "a",
-                  "text": "utilise peu d'eau."
+                  "text": "cela évite de jeter des vêtements encore portables."
                 },
                 {
                   "id": "b",
-                  "text": "pollue beaucoup."
+                  "text": "on lave ces vêtements moins souvent que les neufs."
                 },
                 {
                   "id": "c",
-                  "text": "produit moins qu'avant."
+                  "text": "les applications polluent moins que les magasins."
                 }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « l'industrie textile est l'une des plus polluantes du monde ». 그래서 정답은 「pollue beaucoup」이다."
+              "explanation": "« Acheter d'occasion permet de donner une deuxième vie aux vêtements au lieu de les jeter. » 아직 입을 수 있는 옷을 버리지 않게 해 준다. 빨래 횟수나 앱과 가게의 오염을 견주는 말은 없다."
             },
             {
               "id": "q8",
@@ -283,7 +283,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Sur un forum de consommateurs, quelqu'un écrit : « Acheter d'occasion, c'est bon pour ceux qui n'ont pas d'argent. » Vous répondez à ce message. Vous donnez votre opinion et vous racontez un achat d'occasion (ou une réparation) que vous avez fait.",
+          "prompt": "Sur un forum de consommateurs, quelqu'un écrit : « Acheter d'occasion, c'est bon pour ceux qui n'ont pas d'argent. » Vous répondez à ce message. Vous donnez votre opinion et vous racontez un achat d'occasion (ou une réparation) que vous avez fait. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,

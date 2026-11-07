@@ -133,20 +133,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "il abandonnerait vite."
+                  "text": "il ne tiendrait que quelques mois."
                 },
                 {
                   "id": "b",
-                  "text": "il réussirait facilement."
+                  "text": "il aurait de meilleures notes qu'au lycée."
                 },
                 {
                   "id": "c",
-                  "text": "son père serait déçu."
+                  "text": "il travaillerait en même temps chez son oncle."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « Si je m'inscris en droit juste pour faire plaisir à papa, je vais abandonner au bout de trois mois. ». 그래서 정답은 「il abandonnerait vite」이다."
+              "explanation": "« Si je m'inscris en droit juste pour faire plaisir à papa, je vais abandonner au bout de trois mois. » 석 달쯤 뒤에 그만둘 것이라고 한다. 삼촌 식당 일은 법대 대신 하려는 계획이고, 성적 이야기는 없다."
             },
             {
               "id": "q5",
@@ -280,20 +280,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "Toutes les écoles devraient le faire."
+                  "text": "Toutes les écoles de Rennes devraient l'adopter vite."
                 },
                 {
                   "id": "b",
-                  "text": "Cette pratique est dangereuse pour les enfants."
+                  "text": "Sa réussite dépend surtout de la personne qui enseigne."
                 },
                 {
                   "id": "c",
-                  "text": "Cela fonctionne seulement avec un enseignant motivé et formé."
+                  "text": "Les enfants y apprennent plus vite qu'en classe."
                 }
               ],
-              "answer": ["c"],
+              "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « Ce n'est pas une solution miracle. Sans un enseignant motivé et bien formé, cela ne marche pas. ». 그래서 정답은 「Cela fonctionne seulement avec un enseignant motivé et formé」이다."
+              "explanation": "« Ce n'est pas une solution miracle. Sans un enseignant motivé et bien formé, cela ne marche pas. » 성공은 가르치는 사람에게 달려 있다는 뜻이다. 교장은 « il faut rester prudent » 이라 모든 학교가 서두르자는 말이 아니고, 아이들은 « autant progressé » 비슷하게 늘었다."
             }
           ]
         }
@@ -306,7 +306,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Le blog d'une université populaire demande à ses lecteurs de raconter une chose qu'ils ont apprise à l'âge adulte (une langue, un sport, un instrument, la cuisine...). Vous racontez votre expérience et vous dites si vous conseillez d'apprendre quelque chose de nouveau à l'âge adulte.",
+          "prompt": "Le blog d'une université populaire demande à ses lecteurs de raconter une chose qu'ils ont apprise à l'âge adulte (une langue, un sport, un instrument, la cuisine...). Vous racontez votre expérience et vous dites si vous conseillez d'apprendre quelque chose de nouveau à l'âge adulte. (80 à 100 mots)",
           "minWords": 80,
           "maxWords": 100,
           "points": 10,
