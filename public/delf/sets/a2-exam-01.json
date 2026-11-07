@@ -359,16 +359,16 @@
             {
               "id": "q18",
               "type": "multi",
-              "prompt": "Pour être membre du jardin, qu'est-ce qu'il faut faire ? (deux réponses)",
+              "prompt": "Qui vient au jardin ? (deux réponses)",
               "options": [
-                { "id": "a", "text": "Payer une somme chaque année." },
-                { "id": "b", "text": "Venir au moins une fois par semaine." },
-                { "id": "c", "text": "Habiter dans la rue du jardin." },
-                { "id": "d", "text": "Avoir des enfants." }
+                { "id": "a", "text": "Des étudiants." },
+                { "id": "b", "text": "Des retraités." },
+                { "id": "c", "text": "Des touristes." },
+                { "id": "d", "text": "Des commerçants." }
               ],
               "answer": ["a", "b"],
               "points": 1.5,
-              "explanation": "« il faut payer dix euros par an et venir au moins une fois par semaine » 라고 말한다."
+              "explanation": "« Tout le monde : des familles, des étudiants, des retraités » 라고 말한다. 관광객과 상인은 나오지 않는다."
             }
           ]
         },
@@ -395,14 +395,14 @@
             {
               "id": "q19",
               "type": "choice",
-              "prompt": "Dialogue 1 : dans cette situation, la personne veut…",
+              "prompt": "Dialogue 1 : dans cette situation, une personne…",
               "options": [
-                { "id": "a", "text": "demander son chemin." },
-                { "id": "b", "text": "réserver une table au restaurant." },
-                { "id": "c", "text": "acheter un billet de train." },
-                { "id": "d", "text": "se plaindre d'un produit." },
-                { "id": "e", "text": "accepter une invitation." },
-                { "id": "f", "text": "annuler un rendez-vous." }
+                { "id": "a", "text": "demande son chemin." },
+                { "id": "b", "text": "réserve une table au restaurant." },
+                { "id": "c", "text": "achète un billet de train." },
+                { "id": "d", "text": "se plaint d'un produit." },
+                { "id": "e", "text": "accepte une invitation." },
+                { "id": "f", "text": "annule un rendez-vous." }
               ],
               "answer": ["a"],
               "points": 1,
@@ -438,14 +438,14 @@
             {
               "id": "q20",
               "type": "choice",
-              "prompt": "Dialogue 2 : dans cette situation, la personne veut…",
+              "prompt": "Dialogue 2 : dans cette situation, une personne…",
               "options": [
-                { "id": "a", "text": "demander son chemin." },
-                { "id": "b", "text": "réserver une table au restaurant." },
-                { "id": "c", "text": "acheter un billet de train." },
-                { "id": "d", "text": "se plaindre d'un produit." },
-                { "id": "e", "text": "accepter une invitation." },
-                { "id": "f", "text": "annuler un rendez-vous." }
+                { "id": "a", "text": "demande son chemin." },
+                { "id": "b", "text": "réserve une table au restaurant." },
+                { "id": "c", "text": "achète un billet de train." },
+                { "id": "d", "text": "se plaint d'un produit." },
+                { "id": "e", "text": "accepte une invitation." },
+                { "id": "f", "text": "annule un rendez-vous." }
               ],
               "answer": ["b"],
               "points": 1,
@@ -475,14 +475,14 @@
             {
               "id": "q21",
               "type": "choice",
-              "prompt": "Dialogue 3 : dans cette situation, la personne veut…",
+              "prompt": "Dialogue 3 : dans cette situation, une personne…",
               "options": [
-                { "id": "a", "text": "demander son chemin." },
-                { "id": "b", "text": "réserver une table au restaurant." },
-                { "id": "c", "text": "acheter un billet de train." },
-                { "id": "d", "text": "se plaindre d'un produit." },
-                { "id": "e", "text": "accepter une invitation." },
-                { "id": "f", "text": "annuler un rendez-vous." }
+                { "id": "a", "text": "demande son chemin." },
+                { "id": "b", "text": "réserve une table au restaurant." },
+                { "id": "c", "text": "achète un billet de train." },
+                { "id": "d", "text": "se plaint d'un produit." },
+                { "id": "e", "text": "accepte une invitation." },
+                { "id": "f", "text": "annule un rendez-vous." }
               ],
               "answer": ["d"],
               "points": 1,
@@ -517,14 +517,14 @@
             {
               "id": "q22",
               "type": "choice",
-              "prompt": "Dialogue 4 : dans cette situation, la personne veut…",
+              "prompt": "Dialogue 4 : dans cette situation, une personne…",
               "options": [
-                { "id": "a", "text": "demander son chemin." },
-                { "id": "b", "text": "réserver une table au restaurant." },
-                { "id": "c", "text": "acheter un billet de train." },
-                { "id": "d", "text": "se plaindre d'un produit." },
-                { "id": "e", "text": "accepter une invitation." },
-                { "id": "f", "text": "annuler un rendez-vous." }
+                { "id": "a", "text": "demande son chemin." },
+                { "id": "b", "text": "réserve une table au restaurant." },
+                { "id": "c", "text": "achète un billet de train." },
+                { "id": "d", "text": "se plaint d'un produit." },
+                { "id": "e", "text": "accepte une invitation." },
+                { "id": "f", "text": "annule un rendez-vous." }
               ],
               "answer": ["e"],
               "points": 1,
@@ -811,9 +811,9 @@
             {
               "id": "q41",
               "type": "truefalse",
-              "prompt": "Les bénévoles réparent les objets à la place des visiteurs.",
+              "prompt": "Au Café Répare, les visiteurs réparent eux-mêmes leurs objets.",
               "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
-              "answer": ["f"],
+              "answer": ["v"],
               "points": 1,
               "explanation": "« Ils ne font pas le travail à la place des visiteurs : ils expliquent, et les visiteurs réparent eux-mêmes » 라고 쓴다."
             },
@@ -833,15 +833,15 @@
             {
               "id": "q43",
               "type": "choice",
-              "prompt": "Selon l'article, un des objectifs du café est de…",
+              "prompt": "Depuis janvier, au Café Répare, on a réparé…",
               "options": [
-                { "id": "a", "text": "gagner de l'argent." },
-                { "id": "b", "text": "produire moins de déchets." },
-                { "id": "c", "text": "former des électriciens." }
+                { "id": "a", "text": "18 objets." },
+                { "id": "b", "text": "34 objets." },
+                { "id": "c", "text": "plus de 300 objets." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
-              "explanation": "« L'objectif : produire moins de déchets et créer des liens entre les habitants » 라고 쓴다."
+              "explanation": "« Depuis janvier, les bénévoles et les visiteurs ont réparé plus de 300 objets » 라고 쓴다. 34는 Mathieu 의 나이, 18은 카페가 닫는 시각이다."
             }
           ]
         }
@@ -850,11 +850,11 @@
     {
       "area": "PE",
       "minutes": 45,
-      "instructions": "Cette épreuve comporte deux exercices. Écrivez au moins 60 mots pour chaque texte.",
+      "instructions": "Cette épreuve comporte deux exercices. Écrivez de 60 à 80 mots pour chaque texte.",
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Exercice 1. Vous avez participé à une fête (un anniversaire, un mariage, une fête de quartier…). Vous écrivez un message à un(e) ami(e) pour lui raconter cette journée : où c'était, avec qui, ce que vous avez fait, et ce que vous en avez pensé. (60 mots minimum)",
+          "prompt": "Exercice 1. Vous avez participé à une fête (un anniversaire, un mariage, une fête de quartier…). Vous écrivez un message à un(e) ami(e) pour lui raconter cette journée : où c'était, avec qui, ce que vous avez fait, et ce que vous en avez pensé. (60 à 80 mots)",
           "minWords": 60,
           "maxWords": 80,
           "points": 13,
@@ -881,7 +881,7 @@
         },
         {
           "id": "w2",
-          "prompt": "Exercice 2. Vous recevez ce message de votre collègue Laura :\n\n« Salut ! Samedi prochain, je fais un pique-nique au parc pour fêter mon nouveau travail. Tu viens ? Dis-moi aussi si tu peux apporter quelque chose. Bises, Laura »\n\nVous répondez à Laura : vous la remerciez et vous la félicitez, vous ne pouvez pas venir et vous expliquez pourquoi, puis vous proposez une autre idée pour fêter ça ensemble. (60 mots minimum)",
+          "prompt": "Exercice 2. Vous recevez ce message de votre collègue Laura :\n\n« Salut ! Samedi prochain, je fais un pique-nique au parc pour fêter mon nouveau travail. Tu viens ? Dis-moi aussi si tu peux apporter quelque chose. Bises, Laura »\n\nVous répondez à Laura : vous la remerciez et vous la félicitez, vous ne pouvez pas venir et vous expliquez pourquoi, puis vous proposez une autre idée pour fêter ça ensemble. (60 à 80 mots)",
           "minWords": 60,
           "maxWords": 80,
           "points": 12,

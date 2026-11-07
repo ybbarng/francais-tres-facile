@@ -24,7 +24,7 @@
               {
                 "speaker": "Inès",
                 "voice": "Shelley (프랑스어(프랑스))",
-                "text": "Oui, bonjour ! Je m'appelle Inès. Je suis arrivée la semaine dernière."
+                "text": "Oui, bonjour ! Je m'appelle Inès. Je suis arrivée il y a une semaine."
               },
               {
                 "speaker": "M. Blanc",
@@ -70,7 +70,7 @@
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« Je suis arrivée la semaine dernière » 라고 말한다. 20년은 M. Blanc이다."
+              "explanation": "« Je suis arrivée il y a une semaine » 라고 말한다. 20년은 M. Blanc 이다."
             },
             {
               "id": "q2",
@@ -142,11 +142,11 @@
             {
               "id": "q6",
               "type": "truefalse",
-              "prompt": "À la Croix-Rousse, Antoine fait ses courses au supermarché.",
+              "prompt": "À la Croix-Rousse, Antoine fait ses courses dans des petits commerces.",
               "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
-              "answer": ["f"],
+              "answer": ["v"],
               "points": 1,
-              "explanation": "« je fais mes courses chez le boucher et au marché, pas au supermarché » 라고 쓴다."
+              "explanation": "« Il y a beaucoup de petits commerces : je fais mes courses chez le boucher et au marché, pas au supermarché » 라고 쓴다."
             },
             {
               "id": "q7",

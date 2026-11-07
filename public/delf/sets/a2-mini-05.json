@@ -19,7 +19,7 @@
               {
                 "speaker": "Annonceur",
                 "voice": "Rocko (프랑스어(프랑스))",
-                "text": "Chers habitants, la fête du quartier des Lilas a lieu le samedi quatorze juin, de quatorze heures à minuit, dans le parc Jean-Moulin. Au programme : des jeux pour les enfants l'après-midi, un grand repas à dix-neuf heures, et un bal à partir de vingt et une heures. Pour le repas, chaque famille apporte un plat à partager. L'entrée est gratuite. Nous cherchons encore des bénévoles pour installer les tables le matin. Si vous voulez aider, inscrivez-vous à la mairie avant le dix juin. Merci et à samedi !"
+                "text": "Chers habitants, la fête du quartier des Lilas a lieu le samedi treize juin, de quatorze heures à minuit, dans le parc Jean-Moulin. Au programme : des jeux pour les enfants l'après-midi, un grand repas à dix-neuf heures, et un bal à partir de vingt et une heures. Pour le repas, chaque famille apporte un plat à partager. L'entrée est gratuite. Nous cherchons encore des bénévoles pour installer les tables le matin. Si vous voulez aider, inscrivez-vous à la mairie avant le dix juin. Merci et à samedi !"
               }
             ]
           },
@@ -66,15 +66,15 @@
             {
               "id": "q4",
               "type": "choice",
-              "prompt": "Les bénévoles vont aider…",
+              "prompt": "Pour aider à installer les tables, il faut s'inscrire…",
               "options": [
-                { "id": "a", "text": "le matin." },
-                { "id": "b", "text": "l'après-midi." },
-                { "id": "c", "text": "le soir." }
+                { "id": "a", "text": "à la mairie, avant le 10 juin." },
+                { "id": "b", "text": "à la mairie, avant le 13 juin." },
+                { "id": "c", "text": "dans le parc, le matin de la fête." }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« des bénévoles pour installer les tables le matin » 이라고 말한다."
+              "explanation": "« inscrivez-vous à la mairie avant le dix juin » 이라고 말한다. 13일은 축제 날이다."
             }
           ]
         }
@@ -89,7 +89,7 @@
           "id": "doc2",
           "context": "Vous lisez cette affiche dans votre ville.",
           "title": "Journée portes ouvertes – École de musique Mozart",
-          "text": "Samedi 20 septembre, de 10 h à 17 h, l'école de musique vous ouvre ses portes !\n\nVenez découvrir nos cours : piano, guitare, violon, batterie et chant. Les professeurs présentent leurs instruments et vous pouvez les essayer gratuitement.\n\nÀ 11 h et à 15 h : petits concerts des élèves dans la grande salle.\n\nLes inscriptions pour l'année commencent ce jour-là. Les cours ont lieu du lundi au vendredi après 17 h, et le samedi matin. Prix : 25 euros par mois pour les enfants, 35 euros par mois pour les adultes.\n\nAttention : il reste peu de places pour le piano !",
+          "text": "Samedi 19 septembre, de 10 h à 17 h, l'école de musique vous ouvre ses portes !\n\nVenez découvrir nos cours : piano, guitare, violon, batterie et chant. Les professeurs présentent leurs instruments et vous pouvez les essayer gratuitement.\n\nÀ 11 h et à 15 h : petits concerts des élèves dans la grande salle.\n\nLes inscriptions pour l'année commencent ce jour-là. Les cours ont lieu du lundi au vendredi après 17 h, et le samedi matin. Prix : 25 euros par mois pour les enfants, 35 euros par mois pour les adultes.\n\nAttention : il reste peu de places pour le piano !",
           "questions": [
             {
               "id": "q5",
@@ -120,11 +120,11 @@
             {
               "id": "q7",
               "type": "truefalse",
-              "prompt": "Il y a des cours le dimanche.",
+              "prompt": "On peut prendre des cours le samedi.",
               "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
-              "answer": ["f"],
+              "answer": ["v"],
               "points": 1,
-              "explanation": "« Les cours ont lieu du lundi au vendredi après 17 h, et le samedi matin » 이므로 일요일에는 수업이 없다."
+              "explanation": "« Les cours ont lieu du lundi au vendredi après 17 h, et le samedi matin » 이므로 토요일 오전에도 수업이 있다."
             },
             {
               "id": "q8",

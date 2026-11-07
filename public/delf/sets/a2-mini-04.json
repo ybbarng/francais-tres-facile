@@ -19,7 +19,7 @@
               {
                 "speaker": "Mme Garnier",
                 "voice": "Sandy (프랑스어(프랑스))",
-                "text": "Bonjour, ici madame Garnier, du Café des Arts. J'ai bien reçu votre CV, merci. Je voudrais vous rencontrer pour un entretien. Est-ce que vous êtes libre le jeudi douze juin, à dix heures ? L'entretien va durer environ trente minutes. Venez directement au café, au quatorze, rue du Port. Si jeudi n'est pas possible pour vous, appelez-moi avant mercredi soir au zéro quatre, quatre-vingt-onze, cinquante-six, vingt, zéro huit. À bientôt !"
+                "text": "Bonjour, ici madame Garnier, du Café des Arts. J'ai bien reçu votre CV, merci. Je voudrais vous rencontrer pour un entretien. Est-ce que vous êtes libre le jeudi onze juin, à dix heures ? L'entretien va durer environ trente minutes. Venez directement au café, au dix-huit, rue du Port. Si jeudi n'est pas possible pour vous, appelez-moi avant mercredi soir au zéro quatre, quatre-vingt-onze, cinquante-six, vingt, zéro huit. À bientôt !"
               }
             ]
           },
@@ -42,13 +42,13 @@
               "type": "choice",
               "prompt": "L'entretien a lieu…",
               "options": [
-                { "id": "a", "text": "le mercredi 11 juin." },
-                { "id": "b", "text": "le jeudi 12 juin." },
-                { "id": "c", "text": "le jeudi 14 juin." }
+                { "id": "a", "text": "le mercredi 10 juin." },
+                { "id": "b", "text": "le jeudi 11 juin." },
+                { "id": "c", "text": "le jeudi 18 juin." }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« le jeudi douze juin, à dix heures » 라고 말한다. 14는 주소 번지, 수요일은 전화할 기한이다."
+              "explanation": "« le jeudi onze juin, à dix heures » 라고 말한다. 18은 주소 번지, 수요일은 전화할 기한이다."
             },
             {
               "id": "q3",
@@ -76,7 +76,7 @@
           "id": "doc2",
           "context": "Vous lisez cette offre d'emploi.",
           "title": "Le Café des Arts recrute !",
-          "text": "Nous cherchons un serveur ou une serveuse pour l'été, du 1er juillet au 31 août.\n\nHoraires : du mercredi au dimanche, de 17 h à 23 h. Le lundi et le mardi sont libres.\n\nProfil : vous êtes souriant(e) et dynamique. Vous parlez anglais, car nos clients sont souvent des touristes. Une première expérience dans un restaurant est un plus, mais ce n'est pas obligatoire.\n\nSalaire : 12 euros de l'heure + repas du soir offert.\n\nEnvoyez votre CV et une courte lettre à Mme Garnier : recrutement@cafedesarts.fr. Les entretiens ont lieu la semaine du 9 juin.",
+          "text": "Nous cherchons un serveur ou une serveuse pour l'été, du 1er juillet au 31 août.\n\nHoraires : du mercredi au dimanche, de 17 h à 23 h. Le lundi et le mardi sont libres.\n\nProfil : vous êtes souriant(e) et dynamique. Vous parlez anglais, car nos clients sont souvent des touristes. Une première expérience dans un restaurant est appréciée, mais ce n'est pas obligatoire.\n\nSalaire : 12 euros de l'heure + repas du soir offert.\n\nEnvoyez votre CV et une courte lettre à Mme Garnier : recrutement@cafedesarts.fr. Les entretiens ont lieu la semaine du 8 juin.",
           "questions": [
             {
               "id": "q4",
@@ -111,7 +111,7 @@
               "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
               "answer": ["f"],
               "points": 1,
-              "explanation": "« Une première expérience […] est un plus, mais ce n'est pas obligatoire » 라고 쓴다."
+              "explanation": "« Une première expérience […] est appréciée, mais ce n'est pas obligatoire » 라고 쓴다."
             },
             {
               "id": "q7",

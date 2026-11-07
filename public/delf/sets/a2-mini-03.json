@@ -71,7 +71,7 @@
               {
                 "speaker": "Clara",
                 "voice": "Shelley (프랑스어(프랑스))",
-                "text": "Moi, je voudrais faire une randonnée dans la forêt de Fontainebleau. Tu veux venir ?"
+                "text": "Moi, je voudrais faire une randonnée ce week-end dans la forêt de Fontainebleau. Tu veux venir ?"
               },
               {
                 "speaker": "Hugo",
@@ -114,7 +114,7 @@
               "type": "choice",
               "prompt": "Pour aller dans la forêt, Clara et Hugo vont prendre…",
               "options": [
-                { "id": "a", "text": "la voiture de Hugo." },
+                { "id": "a", "text": "la voiture d'Hugo." },
                 { "id": "b", "text": "le train." },
                 { "id": "c", "text": "le vélo." }
               ],
@@ -179,11 +179,11 @@
             {
               "id": "q8",
               "type": "truefalse",
-              "prompt": "S'il pleut samedi soir, il n'y a pas de concert.",
+              "prompt": "S'il pleut samedi soir, le concert a lieu dans une salle.",
               "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
-              "answer": ["f"],
+              "answer": ["v"],
               "points": 1,
-              "explanation": "« En cas de pluie, le concert a lieu à la salle Pierre-Lamy » 이므로 장소만 바뀐다."
+              "explanation": "« En cas de pluie, le concert a lieu à la salle Pierre-Lamy » 라고 쓴다. 비가 오면 공연 장소만 실내로 바뀐다."
             },
             {
               "id": "q9",

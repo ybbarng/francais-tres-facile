@@ -129,41 +129,41 @@
             {
               "id": "q6",
               "type": "choice",
-              "prompt": "Selon l'article, le sport…",
+              "prompt": "Selon l'article, il ne faut pas boire de café…",
               "options": [
-                { "id": "a", "text": "est mauvais pour le sommeil." },
-                { "id": "b", "text": "est bon, mais pas juste avant de dormir." },
-                { "id": "c", "text": "est meilleur le soir." }
+                { "id": "a", "text": "après 16 heures." },
+                { "id": "b", "text": "après 18 heures." },
+                { "id": "c", "text": "après 20 heures." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
-              "explanation": "« Faites du sport, mais pas juste avant de vous coucher. Le matin ou l'après-midi, c'est mieux » 라고 쓴다."
+              "explanation": "« Ne buvez pas de café après 16 heures » 라고 쓴다. 18은 침실 온도다."
             },
             {
               "id": "q7",
               "type": "choice",
-              "prompt": "Une heure avant de dormir, l'article conseille de…",
+              "prompt": "Selon l'article, il faut éteindre son téléphone et son ordinateur…",
               "options": [
-                { "id": "a", "text": "regarder un film." },
-                { "id": "b", "text": "lire un livre." },
-                { "id": "c", "text": "boire un café." }
+                { "id": "a", "text": "juste avant de dormir." },
+                { "id": "b", "text": "une demi-heure avant de dormir." },
+                { "id": "c", "text": "une heure avant de dormir." }
               ],
-              "answer": ["b"],
+              "answer": ["c"],
               "points": 1,
-              "explanation": "« éteignez votre téléphone et votre ordinateur. Lisez plutôt un livre ! » 라고 쓴다."
+              "explanation": "« Une heure avant de dormir, éteignez votre téléphone et votre ordinateur » 라고 쓴다."
             },
             {
               "id": "q8",
               "type": "choice",
-              "prompt": "Dans la chambre, la bonne température est de…",
+              "prompt": "Selon l'article, beaucoup de Français…",
               "options": [
-                { "id": "a", "text": "16 degrés." },
-                { "id": "b", "text": "18 degrés." },
-                { "id": "c", "text": "20 degrés." }
+                { "id": "a", "text": "dorment mal." },
+                { "id": "b", "text": "se couchent trop tard." },
+                { "id": "c", "text": "boivent trop de café." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1,
-              "explanation": "« la température idéale pour une chambre est de 18 degrés » 라고 쓴다. 16은 커피를 마시지 말라는 시각이다."
+              "explanation": "« Beaucoup de Français dorment mal » 이라고 쓴다. 늦게 잔다거나 커피를 많이 마신다는 말은 없다."
             }
           ]
         }

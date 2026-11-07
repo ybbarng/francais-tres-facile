@@ -148,7 +148,7 @@
           "id": "doc3",
           "context": "Vous avez acheté des vêtements sur internet. Vous recevez ce courriel.",
           "title": "Objet : Votre commande n° 4521",
-          "text": "Bonjour madame Dupuis,\n\nMerci pour votre commande sur Modea.fr ! Voici le récapitulatif :\n– 1 robe rouge, taille 40 : 59 euros\n– 2 tee-shirts blancs : 2 × 15 euros\n– Livraison : gratuite (commande de plus de 50 euros)\n\nTotal : 89 euros\n\nVotre colis va arriver chez vous entre le mardi 8 et le jeudi 10 avril. Si vous n'êtes pas chez vous, le livreur va laisser le colis à la boulangerie Martin, au coin de votre rue.\n\nVous n'êtes pas contente d'un article ? Vous avez 14 jours pour le renvoyer. Le retour est gratuit.\n\nL'équipe Modea",
+          "text": "Bonjour madame Dupuis,\n\nMerci pour votre commande sur Modea.fr ! Voici le récapitulatif :\n– 1 robe rouge, taille 40 : 59 euros\n– 2 tee-shirts blancs : 2 × 15 euros\n– Livraison : gratuite (commande de plus de 50 euros)\n\nTotal : 89 euros\n\nVotre colis va arriver chez vous entre le mardi 7 et le jeudi 9 avril. Si vous n'êtes pas chez vous, le livreur va laisser le colis à la boulangerie Martin, au coin de votre rue.\n\nVous n'êtes pas contente d'un article ? Vous avez 14 jours pour le renvoyer. Le retour est gratuit.\n\nL'équipe Modea",
           "questions": [
             {
               "id": "q6",

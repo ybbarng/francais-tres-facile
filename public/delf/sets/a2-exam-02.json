@@ -542,13 +542,13 @@
         {
           "id": "doc11",
           "context": "Exercice 1. Vous lisez le programme des sorties du week-end dans votre ville. Pour chaque personne, choisissez la sortie qui correspond.",
-          "title": "Sorties du week-end",
-          "text": "A. Musée des Beaux-Arts : exposition « Peintres de la mer ». Tous les jours sauf le mardi, de 10 h à 18 h. 9 euros.\n\nB. Parc des Oiseaux : promenade en famille au milieu de 3 000 oiseaux. Ouvert le week-end. Enfants : 6 euros, adultes : 12 euros. Tables de pique-nique à l'entrée.\n\nC. Théâtre du Rond-Point : Le Malade imaginaire, une pièce classique de Molière. Samedi à 20 h 30. 25 euros.\n\nD. Stade municipal : match de football. Dimanche à 15 h. À partir de 15 euros.\n\nE. Salle Apollo : concert de rock avec le groupe Les Fous du Volant. Samedi à 22 h. 30 euros. Interdit aux moins de 16 ans.\n\nF. Atelier de cuisine japonaise chez Yumi : samedi, de 10 h à 12 h. Apprenez à faire des sushis ! 40 euros.",
+          "title": "Sorties de la semaine",
+          "text": "A. Musée des Beaux-Arts : exposition « Peintres de la mer ». Tous les jours sauf le mardi, de 10 h à 18 h. 9 euros.\n\nB. Parc des Oiseaux : promenade en famille au milieu de 3 000 oiseaux. Ouvert le week-end. Enfants : 6 euros, adultes : 12 euros. Tables de pique-nique à l'entrée.\n\nC. Théâtre du Rond-Point : Le Malade imaginaire, une pièce classique de Molière. Samedi à 20 h 30. 25 euros.\n\nD. Théâtre des Petits : Le Loup et les sept chevreaux, une pièce moderne pour les enfants de 4 à 10 ans. Dimanche à 15 h. 8 euros.\n\nE. Salle Apollo : concert de rock avec le groupe Les Fous du Volant. Samedi à 22 h. 30 euros. Interdit aux moins de 16 ans.\n\nF. Café Le Piano : concert de jazz calme. Vendredi, de 18 h à 20 h. Entrée libre.",
           "questions": [
             {
               "id": "q23",
               "type": "choice",
-              "prompt": "Margaux adore la peinture.",
+              "prompt": "Margaux adore la peinture. Elle est libre seulement le mardi et le mercredi.",
               "options": [
                 { "id": "a", "text": "Sortie A" },
                 { "id": "b", "text": "Sortie B" },
@@ -559,12 +559,12 @@
               ],
               "answer": ["a"],
               "points": 1.5,
-              "explanation": "A « Musée des Beaux-Arts : exposition Peintres de la mer » 가 그림 전시다."
+              "explanation": "A « exposition Peintres de la mer » 가 그림 전시이고, « Tous les jours sauf le mardi » 이므로 수요일에 갈 수 있다."
             },
             {
               "id": "q24",
               "type": "choice",
-              "prompt": "M. et Mme Roche veulent sortir avec leurs petits-enfants et manger dehors.",
+              "prompt": "M. et Mme Roche veulent sortir avec leurs petits-enfants (5 et 7 ans) et manger dehors.",
               "options": [
                 { "id": "a", "text": "Sortie A" },
                 { "id": "b", "text": "Sortie B" },
@@ -575,7 +575,7 @@
               ],
               "answer": ["b"],
               "points": 1.5,
-              "explanation": "B « promenade en famille […] Tables de pique-nique à l'entrée » 다. 밖에서 먹을 수 있다고 쓴 곳은 여기뿐이다."
+              "explanation": "B « promenade en famille […] Tables de pique-nique à l'entrée » 다. D 도 아이들을 위한 공연이지만 밖에서 먹는다는 말이 없다."
             },
             {
               "id": "q25",
@@ -591,7 +591,7 @@
               ],
               "answer": ["e"],
               "points": 1.5,
-              "explanation": "E « concert de rock […] Samedi à 22 h » 이다. 음악 공연은 이것뿐이다."
+              "explanation": "E « concert de rock […] Samedi à 22 h » 이다. F 도 음악이지만 « jazz calme », 18시~20시라 맞지 않는다. Hugo 는 20살이라 « Interdit aux moins de 16 ans » 에 걸리지 않는다."
             },
             {
               "id": "q26",
@@ -607,7 +607,7 @@
               ],
               "answer": ["c"],
               "points": 1.5,
-              "explanation": "C « Le Malade imaginaire, une pièce classique de Molière » 다."
+              "explanation": "C « Le Malade imaginaire, une pièce classique de Molière » 다. D 도 연극이지만 « une pièce moderne pour les enfants » 이다."
             }
           ]
         },
@@ -615,7 +615,7 @@
           "id": "doc12",
           "context": "Exercice 2. Vous vous êtes inscrit(e) dans une association. Vous recevez ce courriel.",
           "title": "Objet : Votre inscription aux Amis du Livre",
-          "text": "Madame Perrin,\n\nMerci pour votre inscription à notre association. Votre carte de membre est prête : vous pouvez venir la chercher à la bibliothèque le mardi ou le vendredi, entre 14 h et 18 h.\n\nAvec cette carte, vous pouvez emprunter cinq livres pendant trois semaines. Vous avez aussi une réduction de 10 % à la librairie Le Marque-Page, rue Nationale.\n\nNotre prochaine rencontre a lieu le jeudi 6 février à 18 h 30. L'écrivaine Anne Morel va présenter son nouveau roman. Après la rencontre, nous vous invitons à boire un verre avec elle.\n\nNous cherchons aussi des bénévoles pour lire des histoires aux enfants le mercredi matin. Si cela vous intéresse, répondez simplement à ce courriel.\n\nCordialement,\nPierre Vasseur, président des Amis du Livre",
+          "text": "Madame Perrin,\n\nMerci pour votre inscription à notre association. Votre carte de membre est prête : vous pouvez venir la chercher à la bibliothèque le mardi ou le vendredi, entre 14 h et 18 h.\n\nAvec cette carte, vous pouvez emprunter cinq livres pendant trois semaines. Vous avez aussi une réduction de 10 % à la librairie Le Marque-Page, rue Nationale.\n\nNotre prochaine rencontre a lieu le jeudi 5 février à 18 h 30. L'écrivaine Anne Morel va présenter son nouveau roman. Après la rencontre, nous vous invitons à boire un verre avec elle.\n\nNous cherchons aussi des bénévoles pour lire des histoires aux enfants le mercredi matin. Si cela vous intéresse, répondez simplement à ce courriel.\n\nCordialement,\nPierre Vasseur, président des Amis du Livre",
           "questions": [
             {
               "id": "q27",
@@ -624,7 +624,7 @@
               "options": [
                 { "id": "a", "text": "le lundi." },
                 { "id": "b", "text": "le mardi ou le vendredi." },
-                { "id": "c", "text": "le jeudi 6 février." }
+                { "id": "c", "text": "le jeudi 5 février." }
               ],
               "answer": ["b"],
               "points": 1,
@@ -659,7 +659,7 @@
             {
               "id": "q30",
               "type": "choice",
-              "prompt": "Le jeudi 6 février…",
+              "prompt": "Le jeudi 5 février…",
               "options": [
                 { "id": "a", "text": "une écrivaine présente son livre." },
                 { "id": "b", "text": "la bibliothèque est fermée." },
@@ -745,15 +745,15 @@
             {
               "id": "q36",
               "type": "choice",
-              "prompt": "Pour avoir des crêpes plus légères, Mamie Jeanne conseille…",
+              "prompt": "Pour cuire les crêpes, on met dans la poêle…",
               "options": [
-                { "id": "a", "text": "d'ajouter du sucre." },
-                { "id": "b", "text": "de mettre un peu d'eau à la place du lait." },
-                { "id": "c", "text": "de cuire les crêpes plus longtemps." }
+                { "id": "a", "text": "un peu d'huile." },
+                { "id": "b", "text": "du beurre fondu." },
+                { "id": "c", "text": "un peu d'eau." }
               ],
-              "answer": ["b"],
+              "answer": ["a"],
               "points": 1.5,
-              "explanation": "« pour des crêpes plus légères, remplacez un peu de lait par de l'eau » 라고 쓴다."
+              "explanation": "« Faites chauffer une poêle avec un peu d'huile » 라고 쓴다. 녹인 버터는 4단계에서 반죽에 넣고, 물은 우유 대신 조금 넣으라는 조언이다."
             }
           ]
         },
@@ -761,20 +761,20 @@
           "id": "doc14",
           "context": "Exercice 4. Vous lisez cet article sur un site d'informations.",
           "title": "Covoiturage : de plus en plus de Français partagent leur voiture",
-          "text": "Le covoiturage, c'est simple : un conducteur qui fait un trajet propose les places libres de sa voiture à d'autres personnes. Les passagers paient une partie de l'essence et des péages.\n\nAujourd'hui, des millions de Français utilisent des sites internet ou des applications pour trouver un conducteur ou des passagers. Pour un trajet Paris-Lyon, un passager paie environ 30 euros : c'est deux fois moins cher que le train.\n\nÉlodie, 23 ans, est étudiante à Bordeaux. Elle rentre chez ses parents, à Toulouse, un week-end sur deux. « Avant, je prenais le train, mais c'était trop cher pour moi. Avec le covoiturage, je dépense moins et je rencontre des gens sympas. Une fois, j'ai voyagé avec un musicien et il m'a invitée à son concert ! »\n\nMais il y a aussi des problèmes. Parfois, un conducteur annule le trajet au dernier moment. Et certaines personnes n'aiment pas voyager avec des inconnus.\n\nPour la planète, le covoiturage est une bonne idée : moins de voitures sur les routes, c'est moins de pollution.",
+          "text": "Le covoiturage, c'est simple : un conducteur qui fait un trajet propose les places libres de sa voiture à d'autres personnes. Les passagers paient une partie de l'essence et de l'autoroute.\n\nAujourd'hui, des millions de Français utilisent des sites internet ou des applications pour trouver un conducteur ou des passagers. Pour un trajet Paris-Lyon, un passager paie environ 30 euros : c'est deux fois moins cher que le train.\n\nÉlodie, 23 ans, est étudiante à Bordeaux. Elle rentre chez ses parents, à Toulouse, un week-end sur deux. « Avant, je prenais le train, mais c'était trop cher pour moi. Avec le covoiturage, je dépense moins et je rencontre des gens sympas. Une fois, j'ai voyagé avec un musicien et il m'a invitée à son concert ! »\n\nMais il y a aussi des problèmes. Parfois, un conducteur annule le trajet au dernier moment. Et certaines personnes n'aiment pas voyager avec des inconnus.\n\nPour la planète, le covoiturage est une bonne idée : moins de voitures sur les routes, c'est moins de pollution.",
           "questions": [
             {
               "id": "q37",
               "type": "choice",
               "prompt": "Dans le covoiturage, les passagers…",
               "options": [
-                { "id": "a", "text": "conduisent chacun à leur tour." },
-                { "id": "b", "text": "paient une partie des frais du trajet." },
+                { "id": "a", "text": "conduisent chacun à son tour." },
+                { "id": "b", "text": "paient une partie du prix du voyage." },
                 { "id": "c", "text": "voyagent gratuitement." }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Les passagers paient une partie de l'essence et des péages » 라고 쓴다."
+              "explanation": "« Les passagers paient une partie de l'essence et de l'autoroute » 라고 쓴다."
             },
             {
               "id": "q38",
@@ -840,15 +840,15 @@
             {
               "id": "q43",
               "type": "choice",
-              "prompt": "Selon l'article, le covoiturage est bon pour la planète parce que…",
+              "prompt": "Pendant un trajet, Élodie a rencontré un musicien. Il…",
               "options": [
-                { "id": "a", "text": "il y a moins de voitures sur les routes." },
-                { "id": "b", "text": "les voitures sont électriques." },
-                { "id": "c", "text": "les gens prennent plus souvent le train." }
+                { "id": "a", "text": "l'a invitée à son concert." },
+                { "id": "b", "text": "lui a donné un CD." },
+                { "id": "c", "text": "a annulé le trajet au dernier moment." }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« moins de voitures sur les routes, c'est moins de pollution » 이라고 쓴다."
+              "explanation": "« Une fois, j'ai voyagé avec un musicien et il m'a invitée à son concert ! » 라고 말한다. 마지막 순간에 취소하는 것은 카풀의 문제로 든 일반적인 예다."
             }
           ]
         }
@@ -857,11 +857,11 @@
     {
       "area": "PE",
       "minutes": 45,
-      "instructions": "Cette épreuve comporte deux exercices. Écrivez au moins 60 mots pour chaque texte.",
+      "instructions": "Cette épreuve comporte deux exercices. Écrivez de 60 à 80 mots pour chaque texte.",
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Exercice 1. Vous avez fait un voyage ou une sortie inoubliable (en train, à vélo, en bateau…). Vous écrivez un article sur votre blog pour raconter : où vous êtes allé(e), avec qui, ce que vous avez vu et fait, et ce que vous avez ressenti. (60 mots minimum)",
+          "prompt": "Exercice 1. Vous avez fait un voyage ou une sortie inoubliable (en train, à vélo, en bateau…). Vous écrivez un article sur votre blog pour raconter : où vous êtes allé(e), avec qui, ce que vous avez vu et fait, et ce que vous avez ressenti. (60 à 80 mots)",
           "minWords": 60,
           "maxWords": 80,
           "points": 13,
@@ -888,7 +888,7 @@
         },
         {
           "id": "w2",
-          "prompt": "Exercice 2. Votre amie française Chloé vous écrit :\n\n« Coucou ! J'ai une grande nouvelle : j'ai eu mon diplôme et j'ai trouvé un travail à Bordeaux ! Je déménage le mois prochain. Bisous, Chloé »\n\nVous répondez à Chloé : vous la félicitez, vous lui posez des questions sur son nouveau travail et vous lui proposez de l'aider pour le déménagement. (60 mots minimum)",
+          "prompt": "Exercice 2. Votre amie française Chloé vous écrit :\n\n« Coucou ! J'ai une grande nouvelle : j'ai eu mon diplôme et j'ai trouvé un travail à Bordeaux ! Je déménage le mois prochain. Bisous, Chloé »\n\nVous répondez à Chloé : vous la félicitez, vous lui posez des questions sur son nouveau travail et vous lui proposez de l'aider pour le déménagement. (60 à 80 mots)",
           "minWords": 60,
           "maxWords": 80,
           "points": 12,

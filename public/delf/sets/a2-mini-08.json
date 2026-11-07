@@ -74,7 +74,7 @@
               {
                 "speaker": "Annonce",
                 "voice": "Sandy (프랑스어(프랑스))",
-                "text": "Information voyageurs. À cause de travaux, la ligne de bus numéro douze ne s'arrête pas à l'arrêt Hôtel de Ville, du lundi six au vendredi dix mai. Pendant cette période, prenez le bus à l'arrêt Place Carnot, à deux cents mètres. Le samedi et le dimanche, le service est normal."
+                "text": "Information voyageurs. À cause de travaux, la ligne de bus numéro douze ne s'arrête pas à l'arrêt Hôtel de Ville, du lundi onze au vendredi quinze mai. Pendant cette période, prenez le bus à l'arrêt Place Carnot, à deux cents mètres. Le samedi et le dimanche, le service est normal."
               }
             ]
           },
@@ -95,7 +95,7 @@
             {
               "id": "q5",
               "type": "choice",
-              "prompt": "Du 6 au 10 mai, il faut prendre le bus…",
+              "prompt": "Du 11 au 15 mai, il faut prendre le bus…",
               "options": [
                 { "id": "a", "text": "à l'arrêt Place Carnot." },
                 { "id": "b", "text": "à l'arrêt Hôtel de Ville." },

@@ -43,12 +43,12 @@
               "prompt": "Pendant les vacances, quel temps a-t-il fait ?",
               "options": [
                 { "id": "a", "text": "Il a fait très chaud." },
-                { "id": "b", "text": "Il a fait un peu froid." },
-                { "id": "c", "text": "Il a neigé." }
+                { "id": "b", "text": "Il n'a pas fait très chaud." },
+                { "id": "c", "text": "Il a plu tous les jours." }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Il a fait un peu froid » 라고 말한다."
+              "explanation": "« Il a fait un peu froid » 라고 말한다. 조금 추웠으니 그리 덥지 않았다는 뜻이다."
             },
             {
               "id": "q3",
@@ -102,7 +102,7 @@
           "id": "doc2",
           "context": "Vous recevez ce courriel d'une collègue.",
           "title": "Objet : Bonjour de Nice !",
-          "text": "Bonjour Marc,\n\nJe t'écris de Nice ! Je suis arrivée lundi avec mon frère Hugo. Nous avons loué un petit appartement près de la mer, à cinq minutes de la plage. Le matin, on se baigne et l'après-midi, on visite la ville. Hier, nous avons pris le train pour aller à Monaco : c'était très beau, mais tout est cher là-bas !\n\nLa cuisine d'ici est délicieuse. J'ai goûté la socca, une spécialité de Nice, et j'ai adoré.\n\nJe rentre à Paris dimanche prochain et je reprends le travail le mardi 2 septembre. Est-ce que tu peux arroser mes plantes au bureau jusqu'à mon retour ? Merci beaucoup !\n\nÀ bientôt,\nSophie",
+          "text": "Bonjour Marc,\n\nJe t'écris de Nice ! Je suis arrivée lundi avec mon frère Hugo. Nous avons loué un petit appartement près de la mer, à cinq minutes de la plage. Le matin, on se baigne et l'après-midi, on visite la ville. Hier, nous avons pris le train pour aller à Monaco : c'était très beau, mais tout est cher là-bas !\n\nLa cuisine d'ici est délicieuse. J'ai goûté la socca, une spécialité de Nice, et j'ai adoré.\n\nJe rentre à Paris dimanche prochain et je reprends le travail le mardi 1er septembre. Est-ce que tu peux arroser mes plantes au bureau jusqu'à mon retour ? Merci beaucoup !\n\nÀ bientôt,\nSophie",
           "questions": [
             {
               "id": "q6",
@@ -142,15 +142,15 @@
             {
               "id": "q9",
               "type": "choice",
-              "prompt": "Qu'est-ce que Sophie pense de Monaco ?",
+              "prompt": "Qu'est-ce que Sophie a adoré ?",
               "options": [
-                { "id": "a", "text": "C'est beau, mais c'est cher." },
-                { "id": "b", "text": "C'est petit et ennuyeux." },
-                { "id": "c", "text": "C'est moins beau que Nice." }
+                { "id": "a", "text": "La socca, une spécialité de Nice." },
+                { "id": "b", "text": "Les magasins de Monaco." },
+                { "id": "c", "text": "La plage de Monaco." }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« c'était très beau, mais tout est cher là-bas » 라고 쓴다."
+              "explanation": "« J'ai goûté la socca, une spécialité de Nice, et j'ai adoré » 라고 쓴다. Monaco 는 « c'était très beau, mais tout est cher » 라고만 했고, 가게나 해변 이야기는 없다."
             },
             {
               "id": "q10",

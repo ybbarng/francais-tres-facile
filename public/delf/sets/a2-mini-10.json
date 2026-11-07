@@ -69,7 +69,7 @@
               "options": [
                 { "id": "a", "text": "de la danse." },
                 { "id": "b", "text": "du théâtre." },
-                { "id": "c", "text": "de la guitare." }
+                { "id": "c", "text": "de la musique." }
               ],
               "answer": ["b"],
               "points": 1,
@@ -114,22 +114,22 @@
           "id": "doc2",
           "context": "Vous lisez ce programme de la Maison des associations.",
           "title": "Maison des associations – Activités de la rentrée",
-          "text": "A. Club de lecture : un samedi par mois, de 10 h à 12 h. On parle d'un livre autour d'un café. Gratuit.\n\nB. Cuisine du monde : le mercredi, de 18 h 30 à 21 h. Chaque semaine, la cuisine d'un pays différent. 15 euros par séance, ingrédients compris.\n\nC. Randonnée : le dimanche, toute la journée. Sorties de 15 à 20 km. Bonnes chaussures obligatoires. 20 euros par an.\n\nD. Photo : le lundi, de 19 h à 21 h. Apportez votre appareil photo (pas de téléphone). 120 euros par an.\n\nE. Échecs : le vendredi, à partir de 20 h, pour les enfants et les adultes. 10 euros par an.",
+          "text": "A. Club de lecture : un samedi par mois, de 10 h à 12 h. On parle d'un livre autour d'un café. Gratuit.\n\nB. Cuisine du monde : le mercredi, de 18 h 30 à 21 h. Chaque semaine, la cuisine d'un pays différent. 15 euros par séance, ingrédients compris.\n\nC. Randonnée : le dimanche, toute la journée. Sorties de 15 à 20 km. Bonnes chaussures obligatoires. 20 euros par an.\n\nD. Photo : le lundi, de 19 h à 21 h. Apportez votre appareil photo (pas de téléphone). 120 euros par an.\n\nE. Atelier d'écriture : le jeudi soir. On lit des romans et on écrit des histoires. 60 euros par an.",
           "questions": [
             {
               "id": "q5",
               "type": "choice",
-              "prompt": "Léo adore marcher dans la nature.",
+              "prompt": "Léo aime la nature et la photo, mais il n'a pas d'appareil photo : il prend ses photos avec son téléphone.",
               "options": [
                 { "id": "a", "text": "A. Club de lecture" },
                 { "id": "b", "text": "B. Cuisine du monde" },
                 { "id": "c", "text": "C. Randonnée" },
                 { "id": "d", "text": "D. Photo" },
-                { "id": "e", "text": "E. Échecs" }
+                { "id": "e", "text": "E. Atelier d'écriture" }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "C « Randonnée : […] Sorties de 15 à 20 km » 가 자연 속 걷기다."
+              "explanation": "Léo 는 자연을 좋아하므로 C « Randonnée » 다. 사진도 좋아하지만 휴대폰으로만 찍어서 D « Apportez votre appareil photo (pas de téléphone) » 는 맞지 않는다."
             },
             {
               "id": "q6",
@@ -140,7 +140,7 @@
                 { "id": "b", "text": "B. Cuisine du monde" },
                 { "id": "c", "text": "C. Randonnée" },
                 { "id": "d", "text": "D. Photo" },
-                { "id": "e", "text": "E. Échecs" }
+                { "id": "e", "text": "E. Atelier d'écriture" }
               ],
               "answer": ["b"],
               "points": 1,
@@ -155,11 +155,11 @@
                 { "id": "b", "text": "B. Cuisine du monde" },
                 { "id": "c", "text": "C. Randonnée" },
                 { "id": "d", "text": "D. Photo" },
-                { "id": "e", "text": "E. Échecs" }
+                { "id": "e", "text": "E. Atelier d'écriture" }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "A « On parle d'un livre […] Gratuit » 이다. 소설을 좋아하고 돈을 쓰지 않으려는 사람에게 맞는 것은 독서 모임뿐이다."
+              "explanation": "A « Club de lecture […] Gratuit » 이다. E 에서도 « On lit des romans » 이지만 « 60 euros par an » 이라 돈을 쓰지 않으려는 Paul 에게 맞지 않는다."
             },
             {
               "id": "q8",
@@ -170,7 +170,7 @@
                 { "id": "b", "text": "B. Cuisine du monde" },
                 { "id": "c", "text": "C. Randonnée" },
                 { "id": "d", "text": "D. Photo" },
-                { "id": "e", "text": "E. Échecs" }
+                { "id": "e", "text": "E. Atelier d'écriture" }
               ],
               "answer": ["d"],
               "points": 1,
