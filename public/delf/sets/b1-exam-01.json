@@ -1,0 +1,1395 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-exam-01",
+  "level": "B1",
+  "kind": "exam",
+  "title": "Épreuve d'entraînement B1 — 1",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 25,
+      "instructions": "Vous allez entendre trois documents. Chaque document est diffusé deux fois. Avant chaque écoute, vous avez un peu de temps pour lire les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Exercice 1 — Sophie téléphone à son ami Julien.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Salut Julien ! Tu as deux minutes ? J'ai un service à te demander."
+              },
+              {
+                "speaker": "Julien",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Bien sûr, vas-y."
+              },
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Tu sais que je déménage le mois prochain ? J'ai enfin trouvé un appartement plus grand, près de la gare. Je cherche des amis pour m'aider à porter les cartons."
+              },
+              {
+                "speaker": "Julien",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Ah, félicitations ! C'est quel jour ?"
+              },
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Le samedi quinze. J'avais pensé au dimanche, mais le propriétaire ne peut me donner les clés que le samedi matin."
+              },
+              {
+                "speaker": "Julien",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Le quinze... attends, je regarde. Le matin, j'ai un match de foot avec mon club, mais je peux venir à partir de midi. Ça te va ?"
+              },
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Parfait ! De toute façon, le matin, on va surtout faire le ménage dans le nouvel appartement."
+              },
+              {
+                "speaker": "Julien",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Et pour les meubles, tu as un camion ?"
+              },
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "J'ai réservé une camionnette chez un loueur à côté de chez moi. Elle coûte soixante-dix euros pour la journée. J'avais aussi demandé un prix à une entreprise de déménagement, mais c'était beaucoup trop cher : presque neuf cents euros !"
+              },
+              {
+                "speaker": "Julien",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Je comprends. Tu veux que je la conduise ? J'ai l'habitude : j'ai travaillé comme livreur pendant mes études."
+              },
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Oh oui, ça m'arrangerait beaucoup ! Moi, je n'ai jamais conduit un véhicule aussi grand. En échange, je vous invite tous au restaurant le soir. Enfin... plutôt une pizza dans le nouvel appartement : je serai trop fatiguée pour sortir !"
+              },
+              {
+                "speaker": "Julien",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Ça me va très bien. Ah, et j'ai de grandes boîtes en plastique dans ma cave. Si tu veux, je te les apporte : ce sera plus solide que des cartons pour la vaisselle."
+              },
+              {
+                "speaker": "Sophie",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Super, merci ! Tu es vraiment un ami."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Pourquoi Sophie déménage-t-elle ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Elle a changé de travail."
+                },
+                {
+                  "id": "b",
+                  "text": "Son propriétaire vend l'appartement."
+                },
+                {
+                  "id": "c",
+                  "text": "Elle a trouvé un appartement plus grand."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« J'ai enfin trouvé un appartement plus grand, près de la gare. » 다른 이유는 나오지 않는다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Pourquoi le déménagement a-t-il lieu le samedi ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Sophie travaille le dimanche."
+                },
+                {
+                  "id": "b",
+                  "text": "Le propriétaire donne les clés le samedi matin."
+                },
+                {
+                  "id": "c",
+                  "text": "Ses amis sont libres seulement le samedi."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « J'avais pensé au dimanche, mais le propriétaire ne peut me donner les clés que le samedi matin. ». 그래서 정답은 「Le propriétaire donne les clés le samedi matin」이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Julien pourra aider Sophie...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "dès le matin."
+                },
+                {
+                  "id": "b",
+                  "text": "seulement le soir."
+                },
+                {
+                  "id": "c",
+                  "text": "à partir de midi."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Le matin, j'ai un match de foot... mais je peux venir à partir de midi. ». 그래서 정답은 「à partir de midi」이다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Que vont-ils faire le matin dans le nouvel appartement ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le ménage."
+                },
+                {
+                  "id": "b",
+                  "text": "De la peinture."
+                },
+                {
+                  "id": "c",
+                  "text": "Monter les meubles."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « le matin, on va surtout faire le ménage dans le nouvel appartement ». 그래서 정답은 「Le ménage」이다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Sophie a choisi de louer une camionnette parce que...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "l'entreprise de déménagement était trop chère."
+                },
+                {
+                  "id": "b",
+                  "text": "l'entreprise de déménagement n'était pas disponible."
+                },
+                {
+                  "id": "c",
+                  "text": "une amie le lui a conseillé."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« J'avais aussi demandé un prix à une entreprise de déménagement, mais c'était beaucoup trop cher : presque neuf cents euros ! » 렌트는 하루 70유로다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Julien propose de conduire la camionnette parce que...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Sophie n'a pas de permis de conduire."
+                },
+                {
+                  "id": "b",
+                  "text": "il a déjà travaillé comme livreur."
+                },
+                {
+                  "id": "c",
+                  "text": "la camionnette lui appartient."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« J'ai l'habitude : j'ai travaillé comme livreur pendant mes études. » 소피는 면허가 없다고 하지 않고, 이렇게 큰 차를 몰아 본 적이 없다고만 한다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Qu'est-ce que Julien va apporter ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Des cartons."
+                },
+                {
+                  "id": "b",
+                  "text": "Des pizzas."
+                },
+                {
+                  "id": "c",
+                  "text": "Des boîtes en plastique."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« j'ai de grandes boîtes en plastique dans ma cave. Si tu veux, je te les apporte ». 피자는 소피가 사겠다고 한 것이다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Exercice 2 — Vous écoutez une émission de radio sur le travail.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Bonjour à tous et bienvenue dans « Carrières », l'émission qui parle de travail. Aujourd'hui, nous recevons Nathalie Roux. Pendant quinze ans, Nathalie, vous avez travaillé dans une banque. Et depuis deux ans, vous êtes menuisière. C'est un sacré changement !"
+              },
+              {
+                "speaker": "Nathalie Roux",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Oui, on peut le dire ! Je n'étais pas malheureuse à la banque : j'avais un bon salaire et des collègues sympathiques. Mais je passais mes journées devant un écran, et j'avais l'impression que mon travail n'avait pas vraiment de sens. Le week-end, je réparais de vieux meubles pour ma famille, et c'était le seul moment où je me sentais vraiment bien."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Comment avez-vous franchi le pas ?"
+              },
+              {
+                "speaker": "Nathalie Roux",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Ça ne s'est pas fait du jour au lendemain. J'ai d'abord fait un bilan de compétences avec une conseillère, pour être sûre de mon choix. Ensuite, j'ai passé une semaine dans l'atelier d'un menuisier, pour voir le métier de près. Et là, j'ai su que c'était ça que je voulais faire."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Et la formation ?"
+              },
+              {
+                "speaker": "Nathalie Roux",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "J'ai suivi une formation de neuf mois pour adultes. Elle a été en grande partie payée grâce à mon compte personnel de formation. Le plus dur, ce n'était pas le travail manuel. C'était de redevenir élève à quarante ans, avec des camarades qui avaient vingt ans de moins que moi !"
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Aujourd'hui, vous travaillez à votre compte ?"
+              },
+              {
+                "speaker": "Nathalie Roux",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Pas encore. Je suis salariée dans une petite entreprise de cinq personnes. Je préfère apprendre encore deux ou trois ans avant d'ouvrir mon propre atelier. Il faut aussi dire que je gagne moins qu'avant, environ un tiers de moins. Mais je rentre le soir fatiguée et heureuse, et ça, ça n'a pas de prix."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Quel conseil donneriez-vous à ceux qui hésitent ?"
+              },
+              {
+                "speaker": "Nathalie Roux",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "De ne pas démissionner sur un coup de tête. Il faut tester le métier avant, et préparer son projet financièrement. Une reconversion, c'est une course de fond, pas un sprint."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Avant sa reconversion, Nathalie...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "trouvait que son travail manquait de sens."
+                },
+                {
+                  "id": "b",
+                  "text": "ne s'entendait pas avec ses collègues."
+                },
+                {
+                  "id": "c",
+                  "text": "gagnait mal sa vie."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« j'avais l'impression que mon travail n'avait pas vraiment de sens ». « un bon salaire et des collègues sympathiques » 라고 했으므로 나머지 둘은 틀리다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Le week-end, quand elle travaillait à la banque, Nathalie...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "réparait de vieux meubles."
+                },
+                {
+                  "id": "b",
+                  "text": "suivait des cours de menuiserie."
+                },
+                {
+                  "id": "c",
+                  "text": "travaillait dans un atelier."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "근거 문장: « Le week-end, je réparais de vieux meubles pour ma famille ». 그래서 정답은 「réparait de vieux meubles」이다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Avant de commencer sa formation, Nathalie a...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "démissionné de la banque sans préparation."
+                },
+                {
+                  "id": "b",
+                  "text": "passé une semaine dans l'atelier d'un menuisier."
+                },
+                {
+                  "id": "c",
+                  "text": "ouvert sa propre entreprise."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "근거 문장: « Ensuite, j'ai passé une semaine dans l'atelier d'un menuisier, pour voir le métier de près. ». 그래서 정답은 「passé une semaine dans l'atelier d'un menuisier」이다."
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "Pendant la formation, le plus difficile pour Nathalie a été...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "de redevenir élève à son âge."
+                },
+                {
+                  "id": "b",
+                  "text": "le travail manuel."
+                },
+                {
+                  "id": "c",
+                  "text": "de payer la formation."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "근거 문장: « Le plus dur, ce n'était pas le travail manuel. C'était de redevenir élève à quarante ans ». 그래서 정답은 「de redevenir élève à son âge」이다."
+            },
+            {
+              "id": "q12",
+              "type": "choice",
+              "prompt": "Aujourd'hui, Nathalie...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "travaille dans une petite entreprise."
+                },
+                {
+                  "id": "b",
+                  "text": "a son propre atelier."
+                },
+                {
+                  "id": "c",
+                  "text": "gagne plus qu'à la banque."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« Je suis salariée dans une petite entreprise de cinq personnes. » 자기 공방은 2~3년 뒤 계획이고, 수입은 « un tiers de moins » 이다."
+            },
+            {
+              "id": "q13",
+              "type": "choice",
+              "prompt": "Quel conseil Nathalie donne-t-elle ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Démissionner vite pour ne pas hésiter trop longtemps."
+                },
+                {
+                  "id": "b",
+                  "text": "Choisir un métier mieux payé."
+                },
+                {
+                  "id": "c",
+                  "text": "Tester le métier et préparer son projet avant de partir."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "근거 문장: « De ne pas démissionner sur un coup de tête. Il faut tester le métier avant, et préparer son projet financièrement. ». 그래서 정답은 「Tester le métier et préparer son projet avant de partir」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc3",
+          "context": "Exercice 3 — Vous écoutez une émission de radio sur la vie en ville.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Ils sont de plus en plus nombreux dans nos villes : les jardins partagés. Sur un terrain prêté par la commune, des habitants cultivent ensemble des légumes, des fleurs ou des herbes aromatiques. Pour en parler, nous recevons Amélie Benali, urbaniste. Amélie Benali, comment expliquez-vous ce succès ?"
+              },
+              {
+                "speaker": "Amélie Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Il y a plusieurs raisons. D'abord, beaucoup de citadins vivent en appartement, sans balcon ni terrasse : ils ont envie de retrouver un contact avec la nature. Ensuite, les gens cherchent de plus en plus à manger des produits locaux. Mais selon moi, la raison principale est ailleurs : ces jardins répondent à un besoin de lien social. Dans les grandes villes, beaucoup de gens se sentent seuls."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Est-ce qu'on peut vraiment nourrir une famille avec un jardin partagé ?"
+              },
+              {
+                "speaker": "Amélie Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Non, soyons honnêtes. Les parcelles sont petites, souvent quelques mètres carrés par famille. On récolte de quoi faire quelques salades et des tomates en été, mais pas plus. L'intérêt n'est pas là."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Ces jardins sont-ils utiles aussi pour la ville elle-même ?"
+              },
+              {
+                "speaker": "Amélie Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Tout à fait. Les plantes rafraîchissent l'air pendant les vagues de chaleur, et elles accueillent des insectes comme les abeilles, qui ont disparu de nombreux quartiers. Et puis, un terrain cultivé est souvent mieux entretenu qu'un terrain abandonné."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Il y a pourtant des critiques..."
+              },
+              {
+                "speaker": "Amélie Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Oui. Certains disent que ces jardins profitent surtout à des habitants déjà favorisés, qui ont du temps libre. Et c'est parfois vrai. C'est pourquoi certaines villes réservent maintenant une partie des parcelles aux écoles et aux maisons de retraite. Il faudrait aussi que les mairies informent mieux les habitants des quartiers populaires, qui ne savent pas toujours que ces jardins existent."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Et si un auditeur veut participer ?"
+              },
+              {
+                "speaker": "Amélie Benali",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Il doit se renseigner auprès de sa mairie. Mais attention : dans certaines villes, il faut attendre plus d'un an pour obtenir une parcelle !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q14",
+              "type": "choice",
+              "prompt": "Selon Amélie Benali, la raison principale du succès des jardins partagés est...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le contact avec la nature."
+                },
+                {
+                  "id": "b",
+                  "text": "l'envie de manger local."
+                },
+                {
+                  "id": "c",
+                  "text": "le besoin de lien social."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "세 가지 이유를 말하지만 « selon moi, la raison principale est ailleurs : ces jardins répondent à un besoin de lien social » 이라 가장 큰 이유는 사회적 관계다."
+            },
+            {
+              "id": "q15",
+              "type": "choice",
+              "prompt": "D'après elle, avec une parcelle de jardin partagé, on peut...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "nourrir sa famille toute l'année."
+                },
+                {
+                  "id": "b",
+                  "text": "récolter seulement quelques légumes."
+                },
+                {
+                  "id": "c",
+                  "text": "vendre ses légumes au marché."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "근거 문장: « On récolte de quoi faire quelques salades et des tomates en été, mais pas plus. ». 그래서 정답은 「récolter seulement quelques légumes」이다."
+            },
+            {
+              "id": "q16",
+              "type": "choice",
+              "prompt": "Pour la ville, les jardins partagés...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "coûtent très cher à entretenir."
+                },
+                {
+                  "id": "b",
+                  "text": "attirent beaucoup de touristes."
+                },
+                {
+                  "id": "c",
+                  "text": "rafraîchissent l'air pendant les fortes chaleurs."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "근거 문장: « Les plantes rafraîchissent l'air pendant les vagues de chaleur ». 그래서 정답은 「rafraîchissent l'air pendant les fortes chaleurs」이다."
+            },
+            {
+              "id": "q17",
+              "type": "choice",
+              "prompt": "Quelle critique fait-on à ces jardins ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ils attirent trop d'insectes."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils profitent surtout à des habitants favorisés."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils prennent la place des parcs."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "근거 문장: « Certains disent que ces jardins profitent surtout à des habitants déjà favorisés, qui ont du temps libre. ». 그래서 정답은 「Ils profitent surtout à des habitants favorisés」이다."
+            },
+            {
+              "id": "q18",
+              "type": "choice",
+              "prompt": "Pour répondre à cette critique, certaines villes...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "réservent des parcelles aux écoles et aux maisons de retraite."
+                },
+                {
+                  "id": "b",
+                  "text": "font payer les parcelles plus cher."
+                },
+                {
+                  "id": "c",
+                  "text": "ferment certains jardins."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "근거 문장: « C'est pourquoi certaines villes réservent maintenant une partie des parcelles aux écoles et aux maisons de retraite. ». 그래서 정답은 「réservent des parcelles aux écoles et aux maisons de retraite」이다."
+            },
+            {
+              "id": "q19",
+              "type": "choice",
+              "prompt": "Pour obtenir une parcelle, il faut parfois...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "attendre plus d'un an."
+                },
+                {
+                  "id": "b",
+                  "text": "habiter juste à côté du jardin."
+                },
+                {
+                  "id": "c",
+                  "text": "suivre une formation."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "근거 문장: « dans certaines villes, il faut attendre plus d'un an pour obtenir une parcelle ! ». 그래서 정답은 「attendre plus d'un an」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 45,
+      "instructions": "Lisez les documents et répondez aux questions. Exercice 1 : pour chaque annonce, indiquez si elle correspond ou non à chaque critère. Exercices 2 et 3 : choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc4",
+          "context": "Exercice 1 — Votre amie Clara veut suivre des cours de cuisine. Elle cherche : des cours le week-end, une séance à moins de 50 €, des recettes végétariennes, un groupe de 8 personnes au maximum. Lisez les quatre annonces. Annonce A :",
+          "title": "A — L'Atelier des Saveurs",
+          "text": "Cours de cuisine du monde tous les samedis, de 10 h à 13 h. Au menu : currys indiens, couscous aux légumes, mezzés libanais... Toutes nos recettes sont sans viande ni poisson.\n\nGroupes de 12 personnes, dans une grande cuisine lumineuse.\n\nTarif : 45 € la séance de trois heures. À la fin du cours, vous dégustez ensemble les plats préparés.",
+          "questions": [
+            {
+              "id": "q20",
+              "type": "truefalse",
+              "prompt": "Annonce A : les cours ont lieu le week-end.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« tous les samedis » — 토요일이라 주말이다."
+            },
+            {
+              "id": "q21",
+              "type": "truefalse",
+              "prompt": "Annonce A : une séance coûte moins de 50 €.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« Tarif : 45 € la séance » — 50유로보다 싸다."
+            },
+            {
+              "id": "q22",
+              "type": "truefalse",
+              "prompt": "Annonce A : le cours propose des recettes végétariennes.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « Toutes nos recettes sont sans viande ni poisson. ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q23",
+              "type": "truefalse",
+              "prompt": "Annonce A : les groupes ont 8 personnes au maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 0.5,
+              "explanation": "« Groupes de 12 personnes » — 8명을 넘는다."
+            }
+          ]
+        },
+        {
+          "id": "doc5",
+          "context": "Exercice 1 (suite) — Critères de Clara : cours le week-end, moins de 50 € la séance, recettes végétariennes, 8 personnes au maximum. Annonce B :",
+          "title": "B — Chez Mamie Lou",
+          "text": "Cours en petits groupes de 6 personnes, le mercredi soir et le samedi après-midi.\n\nChaque cours est consacré à un grand plat de viande de la cuisine française : bœuf bourguignon, blanquette de veau, poulet à la crème...\n\n38 € par cours, ingrédients compris.",
+          "questions": [
+            {
+              "id": "q24",
+              "type": "truefalse",
+              "prompt": "Annonce B : les cours ont lieu le week-end.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« le mercredi soir et le samedi après-midi » — 토요일 수업이 있다."
+            },
+            {
+              "id": "q25",
+              "type": "truefalse",
+              "prompt": "Annonce B : une séance coûte moins de 50 €.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « 38 € par cours ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q26",
+              "type": "truefalse",
+              "prompt": "Annonce B : le cours propose des recettes végétariennes.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 0.5,
+              "explanation": "« Chaque cours est consacré à un grand plat de viande » — 모든 수업이 고기 요리다."
+            },
+            {
+              "id": "q27",
+              "type": "truefalse",
+              "prompt": "Annonce B : les groupes ont 8 personnes au maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « petits groupes de 6 personnes ». 그래서 정답은 「Vrai」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc6",
+          "context": "Exercice 1 (suite) — Critères de Clara : cours le week-end, moins de 50 € la séance, recettes végétariennes, 8 personnes au maximum. Annonce C :",
+          "title": "C — Les Pousses, association de cuisine végétale",
+          "text": "Notre association propose des ateliers de cuisine 100 % végétale : ni viande, ni poisson, ni produits laitiers. Nous cuisinons uniquement des légumes de saison.\n\nLes ateliers ont lieu le dimanche matin, dans notre local du centre-ville, avec 8 participants au maximum.\n\nParticipation : 25 € par atelier pour les adhérents (adhésion annuelle : 15 €).",
+          "questions": [
+            {
+              "id": "q28",
+              "type": "truefalse",
+              "prompt": "Annonce C : les cours ont lieu le week-end.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« le dimanche matin » — 일요일이다."
+            },
+            {
+              "id": "q29",
+              "type": "truefalse",
+              "prompt": "Annonce C : une séance coûte moins de 50 €.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« 25 € par atelier ». 연회비 15유로를 처음 한 번 더해도 40유로라 50유로보다 싸다."
+            },
+            {
+              "id": "q30",
+              "type": "truefalse",
+              "prompt": "Annonce C : le cours propose des recettes végétariennes.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« ni viande, ni poisson » — 고기와 생선이 없으니 채식 요리다."
+            },
+            {
+              "id": "q31",
+              "type": "truefalse",
+              "prompt": "Annonce C : les groupes ont 8 personnes au maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « avec 8 participants au maximum ». 그래서 정답은 「Vrai」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc7",
+          "context": "Exercice 1 (suite) — Critères de Clara : cours le week-end, moins de 50 € la séance, recettes végétariennes, 8 personnes au maximum. Annonce D :",
+          "title": "D — Un chef chez vous",
+          "text": "Un chef professionnel vient chez vous pour vous apprendre à cuisiner ! Vous choisissez le menu : viande, poisson ou végétarien.\n\nCours individuel ou jusqu'à 4 personnes. Du lundi au vendredi, en soirée.\n\nTarif : 90 € la séance, par personne.",
+          "questions": [
+            {
+              "id": "q32",
+              "type": "truefalse",
+              "prompt": "Annonce D : les cours ont lieu le week-end.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 0.5,
+              "explanation": "« Du lundi au vendredi, en soirée » — 평일 저녁뿐이다."
+            },
+            {
+              "id": "q33",
+              "type": "truefalse",
+              "prompt": "Annonce D : une séance coûte moins de 50 €.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 0.5,
+              "explanation": "근거 문장: « 90 € la séance, par personne ». 그래서 정답은 「Faux」이다."
+            },
+            {
+              "id": "q34",
+              "type": "truefalse",
+              "prompt": "Annonce D : le cours propose des recettes végétariennes.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« Vous choisissez le menu : viande, poisson ou végétarien. » — 채식 메뉴를 고를 수 있다."
+            },
+            {
+              "id": "q35",
+              "type": "truefalse",
+              "prompt": "Annonce D : les groupes ont 8 personnes au maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « Cours individuel ou jusqu'à 4 personnes ». 그래서 정답은 「Vrai」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc8",
+          "context": "Exercice 2 — Vous lisez cet article dans un magazine.",
+          "title": "Les jeunes et la lecture : la fin d'une idée reçue ?",
+          "text": "On entend souvent dire que les jeunes ne lisent plus et qu'ils préfèrent les écrans aux livres. Pourtant, les chiffres racontent une histoire plus nuancée. Selon une enquête publiée cette année, les 15-25 ans achètent plus de livres qu'il y a dix ans. Ce sont surtout les mangas, les romans fantastiques et les romans d'amour qui ont du succès.\n\nParadoxalement, les réseaux sociaux jouent un rôle important dans ce retour. Sur certaines plateformes de vidéos, des milliers de jeunes lecteurs présentent leurs livres préférés en quelques minutes, avec beaucoup d'émotion. « J'ai découvert ma série préférée grâce à une vidéo, raconte Inès, 17 ans. La lectrice pleurait en parlant de la fin. Je voulais absolument savoir pourquoi ! » Les libraires l'ont bien compris : beaucoup ont installé une table spéciale avec les titres les plus partagés en ligne.\n\nLes professeurs de français restent pourtant inquiets. Selon eux, les élèves lisent volontiers ce qu'ils ont choisi, mais ils ont de plus en plus de mal à lire les textes longs et complexes étudiés en classe. « Ils lisent beaucoup, mais toujours le même genre de livres, regrette Marc Delorme, professeur dans un lycée de Lille. Mon rôle, c'est de leur faire découvrir d'autres univers, même si, au début, ils protestent. »\n\nAutre problème : la lecture reste très inégale. Les filles lisent nettement plus que les garçons, et les enfants dont les parents lisent ont beaucoup plus de chances de devenir lecteurs à leur tour. Pour réduire ces écarts, certaines villes ont lancé des initiatives originales : des livres gratuits dans les transports, des bibliothèques ouvertes le dimanche ou des rencontres avec des auteurs dans les clubs de sport.\n\nFinalement, la vraie question n'est peut-être pas de savoir si les jeunes lisent assez, mais de les aider à lire de tout. Car comme le dit Marc Delorme, « un lecteur qui ne lit qu'un seul genre de livres, c'est comme un voyageur qui visite toujours le même pays ».",
+          "questions": [
+            {
+              "id": "q36",
+              "type": "choice",
+              "prompt": "Selon l'enquête, les 15-25 ans...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "achètent moins de livres qu'avant."
+                },
+                {
+                  "id": "b",
+                  "text": "achètent plus de livres qu'il y a dix ans."
+                },
+                {
+                  "id": "c",
+                  "text": "lisent uniquement sur écran."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « les 15-25 ans achètent plus de livres qu'il y a dix ans ». 그래서 정답은 「achètent plus de livres qu'il y a dix ans」이다."
+            },
+            {
+              "id": "q37",
+              "type": "choice",
+              "prompt": "Quels livres ont le plus de succès chez les jeunes ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les livres d'histoire."
+                },
+                {
+                  "id": "b",
+                  "text": "Les grands classiques étudiés en classe."
+                },
+                {
+                  "id": "c",
+                  "text": "Les mangas et les romans fantastiques ou d'amour."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Ce sont surtout les mangas, les romans fantastiques et les romans d'amour qui ont du succès. ». 그래서 정답은 「Les mangas et les romans fantastiques ou d'amour」이다."
+            },
+            {
+              "id": "q38",
+              "type": "choice",
+              "prompt": "Comment Inès a-t-elle découvert sa série préférée ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Grâce à une vidéo en ligne."
+                },
+                {
+                  "id": "b",
+                  "text": "Grâce à son professeur."
+                },
+                {
+                  "id": "c",
+                  "text": "Dans une bibliothèque."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « J'ai découvert ma série préférée grâce à une vidéo ». 그래서 정답은 「Grâce à une vidéo en ligne」이다."
+            },
+            {
+              "id": "q39",
+              "type": "choice",
+              "prompt": "Qu'ont fait beaucoup de libraires ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ils ont ouvert une boutique en ligne."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils ont installé une table avec les livres populaires sur internet."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils ont baissé le prix des livres."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « beaucoup ont installé une table spéciale avec les titres les plus partagés en ligne ». 그래서 정답은 「Ils ont installé une table avec les livres populaires sur internet」이다."
+            },
+            {
+              "id": "q40",
+              "type": "choice",
+              "prompt": "Selon les professeurs, les élèves ont des difficultés à...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "lire des textes longs et complexes."
+                },
+                {
+                  "id": "b",
+                  "text": "choisir leurs livres."
+                },
+                {
+                  "id": "c",
+                  "text": "trouver des livres près de chez eux."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « ils ont de plus en plus de mal à lire les textes longs et complexes étudiés en classe ». 그래서 정답은 「lire des textes longs et complexes」이다."
+            },
+            {
+              "id": "q41",
+              "type": "choice",
+              "prompt": "Pour Marc Delorme, son rôle de professeur est de...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "faire découvrir aux élèves d'autres genres de livres."
+                },
+                {
+                  "id": "b",
+                  "text": "interdire les mangas en classe."
+                },
+                {
+                  "id": "c",
+                  "text": "choisir des livres faciles pour ses élèves."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Mon rôle, c'est de leur faire découvrir d'autres univers ». 그래서 정답은 「faire découvrir aux élèves d'autres genres de livres」이다."
+            },
+            {
+              "id": "q42",
+              "type": "choice",
+              "prompt": "Quelle inégalité l'article mentionne-t-il ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les garçons lisent plus que les filles."
+                },
+                {
+                  "id": "b",
+                  "text": "Les jeunes des villes lisent moins que ceux des campagnes."
+                },
+                {
+                  "id": "c",
+                  "text": "Les enfants de parents lecteurs lisent davantage."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les enfants dont les parents lisent ont beaucoup plus de chances de devenir lecteurs à leur tour ». 글은 « Les filles lisent nettement plus que les garçons » 라고 해 a와 반대다."
+            },
+            {
+              "id": "q43",
+              "type": "choice",
+              "prompt": "Quelle est l'idée principale de la conclusion ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les jeunes ne lisent pas assez."
+                },
+                {
+                  "id": "b",
+                  "text": "Il faut lire seulement les classiques."
+                },
+                {
+                  "id": "c",
+                  "text": "Il faut aider les jeunes à lire des livres variés."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « la vraie question n'est peut-être pas de savoir si les jeunes lisent assez, mais de les aider à lire de tout ». 그래서 정답은 「Il faut aider les jeunes à lire des livres variés」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc9",
+          "context": "Exercice 3 — Vous lisez cet article sur un site d'information.",
+          "title": "Trop de touristes ? Des villes européennes disent stop",
+          "text": "Chaque été, c'est la même scène : des rues si pleines qu'on ne peut plus avancer, des files d'attente interminables devant les monuments et des habitants exaspérés. Venise, Barcelone, Amsterdam... plusieurs villes européennes souffrent de ce qu'on appelle le « surtourisme ». Et certaines ont décidé de réagir.\n\nVenise, par exemple, fait désormais payer un droit d'entrée, certains jours de l'année, aux visiteurs qui viennent seulement pour la journée. L'objectif n'est pas de gagner de l'argent, assure la mairie, mais de mieux répartir les visiteurs dans le temps. Amsterdam, de son côté, a lancé une campagne pour décourager les jeunes touristes qui viennent uniquement pour faire la fête, et elle limite le nombre de nouveaux hôtels.\n\nPour les habitants, le problème principal n'est pas seulement le bruit : c'est surtout le logement. Dans les quartiers historiques, de nombreux appartements sont loués aux touristes sur des plateformes en ligne, car c'est plus rentable pour les propriétaires. Résultat : les loyers augmentent et les familles doivent partir vivre en banlieue. « Dans mon immeuble, il ne reste que deux familles. Les autres appartements changent de locataires tous les trois jours », témoigne Laura, une Barcelonaise de 50 ans.\n\nCes mesures ne font pourtant pas l'unanimité. Les commerçants et les restaurateurs craignent de perdre des clients, alors que le tourisme fait vivre une grande partie de l'économie locale. Certains experts doutent aussi de leur efficacité : selon eux, un droit d'entrée de quelques euros ne découragera pas des visiteurs qui ont déjà payé leur billet d'avion.\n\nPour beaucoup de spécialistes, la solution passe aussi par les touristes eux-mêmes. Voyager hors saison, choisir des destinations moins connues, rester plus longtemps au même endroit : ce sont autant de façons de voyager sans abîmer les lieux qu'on aime. Les offices de tourisme commencent d'ailleurs à mettre en avant des villages et des régions oubliés.\n\n« Le tourisme n'est pas l'ennemi, résume un sociologue. Le problème, c'est quand une ville ne vit plus que pour ses visiteurs et qu'elle oublie ses habitants. »",
+          "questions": [
+            {
+              "id": "q44",
+              "type": "choice",
+              "prompt": "Selon la mairie de Venise, le droit d'entrée sert à...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "gagner de l'argent."
+                },
+                {
+                  "id": "b",
+                  "text": "mieux répartir les visiteurs dans le temps."
+                },
+                {
+                  "id": "c",
+                  "text": "interdire l'entrée aux touristes."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « L'objectif n'est pas de gagner de l'argent, assure la mairie, mais de mieux répartir les visiteurs dans le temps. ». 그래서 정답은 「mieux répartir les visiteurs dans le temps」이다."
+            },
+            {
+              "id": "q45",
+              "type": "choice",
+              "prompt": "Que fait Amsterdam ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Elle interdit la ville aux jeunes touristes."
+                },
+                {
+                  "id": "b",
+                  "text": "Elle essaie de décourager les touristes qui viennent seulement faire la fête."
+                },
+                {
+                  "id": "c",
+                  "text": "Elle construit de nouveaux hôtels."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« une campagne pour décourager les jeunes touristes qui viennent uniquement pour faire la fête ». 금지가 아니라 단념시키려는 것이고, 호텔은 « limite » 한다."
+            },
+            {
+              "id": "q46",
+              "type": "choice",
+              "prompt": "Pour les habitants, le problème principal est...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le bruit."
+                },
+                {
+                  "id": "b",
+                  "text": "le logement."
+                },
+                {
+                  "id": "c",
+                  "text": "la saleté des rues."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « le problème principal n'est pas seulement le bruit : c'est surtout le logement ». 그래서 정답은 「le logement」이다."
+            },
+            {
+              "id": "q47",
+              "type": "choice",
+              "prompt": "Pourquoi beaucoup de propriétaires louent-ils leur appartement aux touristes ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Parce que la loi les y oblige."
+                },
+                {
+                  "id": "b",
+                  "text": "Parce que les familles ne veulent plus vivre dans le centre."
+                },
+                {
+                  "id": "c",
+                  "text": "Parce que c'est plus rentable."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « car c'est plus rentable pour les propriétaires ». 그래서 정답은 「Parce que c'est plus rentable」이다."
+            },
+            {
+              "id": "q48",
+              "type": "choice",
+              "prompt": "Que dit Laura de son immeuble ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Elle va bientôt partir en banlieue."
+                },
+                {
+                  "id": "b",
+                  "text": "Ses voisins sont trop bruyants."
+                },
+                {
+                  "id": "c",
+                  "text": "La plupart des appartements sont loués à des touristes."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« il ne reste que deux familles. Les autres appartements changent de locataires tous les trois jours » — 나머지 집은 사흘마다 손님이 바뀌는 관광객 숙소다."
+            },
+            {
+              "id": "q49",
+              "type": "choice",
+              "prompt": "Pourquoi les commerçants s'opposent-ils à ces mesures ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ils doivent payer une nouvelle taxe."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils manquent d'employés."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils ont peur de perdre des clients."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Les commerçants et les restaurateurs craignent de perdre des clients ». 그래서 정답은 「Ils ont peur de perdre des clients」이다."
+            },
+            {
+              "id": "q50",
+              "type": "choice",
+              "prompt": "Selon certains experts, un droit d'entrée de quelques euros...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "est très efficace."
+                },
+                {
+                  "id": "b",
+                  "text": "ne découragera pas beaucoup de visiteurs."
+                },
+                {
+                  "id": "c",
+                  "text": "est trop cher pour les familles."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « un droit d'entrée de quelques euros ne découragera pas des visiteurs qui ont déjà payé leur billet d'avion ». 그래서 정답은 「ne découragera pas beaucoup de visiteurs」이다."
+            },
+            {
+              "id": "q51",
+              "type": "choice",
+              "prompt": "D'après les spécialistes, les touristes peuvent aider en...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "voyageant hors saison et en restant plus longtemps au même endroit."
+                },
+                {
+                  "id": "b",
+                  "text": "visitant seulement les grandes villes."
+                },
+                {
+                  "id": "c",
+                  "text": "réservant leur billet d'avion plus tôt."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Voyager hors saison, choisir des destinations moins connues, rester plus longtemps au même endroit ». 그래서 정답은 「voyageant hors saison et en restant plus longtemps au même endroit」이다."
+            },
+            {
+              "id": "q52",
+              "type": "choice",
+              "prompt": "Que pense le sociologue ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le tourisme est l'ennemi des villes."
+                },
+                {
+                  "id": "b",
+                  "text": "Une ville ne doit pas oublier ses habitants."
+                },
+                {
+                  "id": "c",
+                  "text": "Il faut fermer les villes aux touristes."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Le tourisme n'est pas l'ennemi... Le problème, c'est quand une ville ne vit plus que pour ses visiteurs et qu'elle oublie ses habitants. ». 그래서 정답은 「Une ville ne doit pas oublier ses habitants」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 45,
+      "instructions": "Lisez la consigne et écrivez votre texte (160 mots minimum).",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Sur le forum d'un journal, on lit : « Tous les jeunes de 18 à 25 ans devraient faire obligatoirement six mois de service civique, c'est-à-dire un travail au service de la société (aide aux personnes âgées, protection de la nature, soutien scolaire...). » Vous répondez sur le forum. Vous donnez votre opinion de façon argumentée et vous l'illustrez avec des exemples tirés de votre expérience ou de celle de vos proches.",
+          "minWords": 160,
+          "maxWords": 200,
+          "points": 25,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 4
+            },
+            {
+              "criterion": "Capacité à exprimer sa pensée et à argumenter",
+              "points": 4
+            },
+            {
+              "criterion": "Cohérence et cohésion (organisation, connecteurs, ponctuation)",
+              "points": 3
+            },
+            {
+              "criterion": "Compétence lexicale : étendue, maîtrise et orthographe du vocabulaire",
+              "points": 6
+            },
+            {
+              "criterion": "Compétence grammaticale : phrases complexes, temps et modes, accords et orthographe grammaticale",
+              "points": 6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전. 읽기 연습 1은 공식 OUI/NON 표를 참/거짓 문항으로 바꾸었다."
+  }
+}
