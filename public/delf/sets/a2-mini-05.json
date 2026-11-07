@@ -1,0 +1,177 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-05",
+  "level": "A2",
+  "kind": "mini",
+  "title": "Fêtes et portes ouvertes",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre un document. Lisez d'abord les questions. Vous allez entendre le document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous entendez cette annonce à la radio locale.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonceur",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Chers habitants, la fête du quartier des Lilas a lieu le samedi quatorze juin, de quatorze heures à minuit, dans le parc Jean-Moulin. Au programme : des jeux pour les enfants l'après-midi, un grand repas à dix-neuf heures, et un bal à partir de vingt et une heures. Pour le repas, chaque famille apporte un plat à partager. L'entrée est gratuite. Nous cherchons encore des bénévoles pour installer les tables le matin. Si vous voulez aider, inscrivez-vous à la mairie avant le dix juin. Merci et à samedi !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "La fête a lieu…",
+              "options": [
+                { "id": "a", "text": "dans un parc." },
+                { "id": "b", "text": "à la mairie." },
+                { "id": "c", "text": "dans une école." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« dans le parc Jean-Moulin » 이라고 말한다. 시청은 자원봉사 신청 장소다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "À 19 heures, il y a…",
+              "options": [
+                { "id": "a", "text": "des jeux pour les enfants." },
+                { "id": "b", "text": "un grand repas." },
+                { "id": "c", "text": "un bal." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« un grand repas à dix-neuf heures » 라고 말한다. 무도회는 21시부터다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Pour le repas, chaque famille doit…",
+              "options": [
+                { "id": "a", "text": "payer l'entrée." },
+                { "id": "b", "text": "apporter un plat." },
+                { "id": "c", "text": "réserver à la mairie." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« chaque famille apporte un plat à partager » 라고 말한다. 입장은 « gratuite » 다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Les bénévoles vont aider…",
+              "options": [
+                { "id": "a", "text": "le matin." },
+                { "id": "b", "text": "l'après-midi." },
+                { "id": "c", "text": "le soir." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« des bénévoles pour installer les tables le matin » 이라고 말한다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cette affiche dans votre ville.",
+          "title": "Journée portes ouvertes – École de musique Mozart",
+          "text": "Samedi 20 septembre, de 10 h à 17 h, l'école de musique vous ouvre ses portes !\n\nVenez découvrir nos cours : piano, guitare, violon, batterie et chant. Les professeurs présentent leurs instruments et vous pouvez les essayer gratuitement.\n\nÀ 11 h et à 15 h : petits concerts des élèves dans la grande salle.\n\nLes inscriptions pour l'année commencent ce jour-là. Les cours ont lieu du lundi au vendredi après 17 h, et le samedi matin. Prix : 25 euros par mois pour les enfants, 35 euros par mois pour les adultes.\n\nAttention : il reste peu de places pour le piano !",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Pendant la journée portes ouvertes, les visiteurs peuvent…",
+              "options": [
+                { "id": "a", "text": "essayer des instruments." },
+                { "id": "b", "text": "acheter des instruments." },
+                { "id": "c", "text": "avoir un mois de cours gratuit." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« vous pouvez les essayer gratuitement » 이라고 쓴다. 무료인 것은 악기 체험이지 수업이 아니다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Les concerts des élèves ont lieu…",
+              "options": [
+                { "id": "a", "text": "à 10 h et à 17 h." },
+                { "id": "b", "text": "à 11 h et à 15 h." },
+                { "id": "c", "text": "à 15 h seulement." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« À 11 h et à 15 h : petits concerts des élèves » 라고 쓴다. 10시~17시는 행사 시간이다."
+            },
+            {
+              "id": "q7",
+              "type": "truefalse",
+              "prompt": "Il y a des cours le dimanche.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Les cours ont lieu du lundi au vendredi après 17 h, et le samedi matin » 이므로 일요일에는 수업이 없다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Un adulte paie…",
+              "options": [
+                { "id": "a", "text": "25 euros par mois." },
+                { "id": "b", "text": "35 euros par mois." },
+                { "id": "c", "text": "60 euros par mois." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« 35 euros par mois pour les adultes » 라고 쓴다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Votre ami(e) français(e) vous invite à la fête de son quartier samedi, mais vous ne pouvez pas venir. Vous lui écrivez un message : vous le/la remerciez, vous vous excusez, vous expliquez pourquoi vous ne pouvez pas venir et vous proposez un autre moment pour vous voir. (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (remercier, s'excuser, expliquer, proposer, nombre de mots)",
+              "points": 1.5
+            },
+            { "criterion": "Capacité à s'excuser et à proposer une autre solution", "points": 3 },
+            { "criterion": "Lexique et orthographe lexicale", "points": 2 },
+            { "criterion": "Morphosyntaxe et orthographe grammaticale", "points": 2 },
+            { "criterion": "Cohérence, cohésion et formules du message", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}

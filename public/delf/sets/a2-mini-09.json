@@ -1,0 +1,218 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-09",
+  "level": "A2",
+  "kind": "mini",
+  "title": "Mon quartier",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre un document. Lisez d'abord les questions. Vous allez entendre le document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous entendez une conversation entre deux voisins dans l'escalier.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "M. Blanc",
+                "voice": "Jacques",
+                "text": "Bonjour ! Vous êtes la nouvelle voisine du troisième ?"
+              },
+              {
+                "speaker": "Inès",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Oui, bonjour ! Je m'appelle Inès. Je suis arrivée la semaine dernière."
+              },
+              {
+                "speaker": "M. Blanc",
+                "voice": "Jacques",
+                "text": "Bienvenue ! Moi, c'est Gérard Blanc. J'habite ici depuis vingt ans. Vous connaissez déjà le quartier ?"
+              },
+              {
+                "speaker": "Inès",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Pas encore. Il y a un supermarché près d'ici ?"
+              },
+              {
+                "speaker": "M. Blanc",
+                "voice": "Jacques",
+                "text": "Oui, au bout de la rue, à côté de la pharmacie. Mais il est fermé le dimanche. Il y a aussi un marché le mercredi et le samedi matin, sur la place de l'église. Les légumes sont moins chers qu'au supermarché."
+              },
+              {
+                "speaker": "Inès",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Merci ! Et pour faire du sport ?"
+              },
+              {
+                "speaker": "M. Blanc",
+                "voice": "Jacques",
+                "text": "Il y a une piscine municipale derrière l'école. Elle est ouverte tous les jours, sauf le lundi."
+              },
+              {
+                "speaker": "Inès",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Super, merci beaucoup, monsieur Blanc !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Inès habite dans l'immeuble depuis…",
+              "options": [
+                { "id": "a", "text": "une semaine." },
+                { "id": "b", "text": "un mois." },
+                { "id": "c", "text": "vingt ans." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Je suis arrivée la semaine dernière » 라고 말한다. 20년은 M. Blanc이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Le supermarché est…",
+              "options": [
+                { "id": "a", "text": "à côté de la pharmacie." },
+                { "id": "b", "text": "sur la place de l'église." },
+                { "id": "c", "text": "derrière l'école." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« au bout de la rue, à côté de la pharmacie » 라고 말한다. 교회 광장은 시장, 학교 뒤는 수영장이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Le marché a lieu…",
+              "options": [
+                { "id": "a", "text": "le mercredi et le samedi matin." },
+                { "id": "b", "text": "le dimanche matin." },
+                { "id": "c", "text": "tous les jours, sauf le lundi." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« un marché le mercredi et le samedi matin » 이라고 말한다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Selon M. Blanc, au marché, les légumes sont…",
+              "options": [
+                { "id": "a", "text": "plus chers qu'au supermarché." },
+                { "id": "b", "text": "moins chers qu'au supermarché." },
+                { "id": "c", "text": "au même prix qu'au supermarché." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Les légumes sont moins chers qu'au supermarché » 라고 말한다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez ce texte sur un blog.",
+          "title": "Mon quartier préféré : la Croix-Rousse",
+          "text": "J'habite à la Croix-Rousse, à Lyon, depuis cinq ans. Avant, j'habitais dans le centre-ville, mais c'était trop bruyant et les loyers étaient très chers.\n\nIci, c'est plus calme et il y a une ambiance de village. Tout le monde se dit bonjour dans la rue. Il y a beaucoup de petits commerces : je fais mes courses chez le boucher et au marché, pas au supermarché.\n\nLe seul problème, ce sont les rues qui montent ! Le quartier est sur une colline et il faut beaucoup marcher. Mais il y a un métro qui va au centre en dix minutes.\n\nLe week-end, j'aime boire un café sur la place et regarder la vue sur la ville.\n\nAntoine",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Antoine a quitté le centre-ville parce que…",
+              "options": [
+                { "id": "a", "text": "c'était bruyant et cher." },
+                { "id": "b", "text": "il n'y avait pas de métro." },
+                { "id": "c", "text": "il a trouvé un travail à la Croix-Rousse." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« c'était trop bruyant et les loyers étaient très chers » 라고 쓴다."
+            },
+            {
+              "id": "q6",
+              "type": "truefalse",
+              "prompt": "À la Croix-Rousse, Antoine fait ses courses au supermarché.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« je fais mes courses chez le boucher et au marché, pas au supermarché » 라고 쓴다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Pour Antoine, le problème du quartier, c'est…",
+              "options": [
+                { "id": "a", "text": "le bruit." },
+                { "id": "b", "text": "les rues qui montent." },
+                { "id": "c", "text": "le prix des loyers." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Le seul problème, ce sont les rues qui montent ! » 이라고 쓴다. 소음과 집세는 예전 동네의 문제다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Pour aller au centre, il faut…",
+              "options": [
+                { "id": "a", "text": "5 minutes en métro." },
+                { "id": "b", "text": "10 minutes en métro." },
+                { "id": "c", "text": "10 minutes à pied." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« un métro qui va au centre en dix minutes » 라고 쓴다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Un(e) ami(e) français(e) va bientôt habiter dans votre ville. Vous lui écrivez un message pour présenter votre quartier : les magasins, les transports, ce que vous aimez et ce que vous n'aimez pas. (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (magasins, transports, avis, nombre de mots)",
+              "points": 1.5
+            },
+            { "criterion": "Capacité à décrire un lieu et à donner son avis", "points": 3 },
+            {
+              "criterion": "Lexique et orthographe lexicale (ville, commerces, transports)",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale (il y a, prépositions de lieu, comparatif)",
+              "points": 2
+            },
+            { "criterion": "Cohérence, cohésion et formules du message", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}

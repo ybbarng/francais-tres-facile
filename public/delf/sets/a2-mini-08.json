@@ -1,0 +1,205 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-08",
+  "level": "A2",
+  "kind": "mini",
+  "title": "En gare et en ville",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 5,
+      "instructions": "Vous allez entendre deux documents. Pour chaque document, lisez d'abord les questions. Vous allez entendre chaque document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous êtes à la gare. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Thomas",
+                "text": "Mesdames et messieurs, votre attention, s'il vous plaît. Le train à destination de Bordeaux, prévu à dix heures quinze, va partir avec un retard d'environ vingt minutes. Attention : ce train part de la voie trois, et non de la voie cinq. Nous vous prions de nous excuser pour ce retard."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Le train pour Bordeaux devait partir à…",
+              "options": [
+                { "id": "a", "text": "10 h 05." },
+                { "id": "b", "text": "10 h 15." },
+                { "id": "c", "text": "10 h 35." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« prévu à dix heures quinze » 라고 말한다. 10시 35분은 20분 늦어진 출발 예상 시각이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Le train a un retard d'environ…",
+              "options": [
+                { "id": "a", "text": "15 minutes." },
+                { "id": "b", "text": "20 minutes." },
+                { "id": "c", "text": "30 minutes." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« un retard d'environ vingt minutes » 라고 말한다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Le train part de la voie…",
+              "options": [
+                { "id": "a", "text": "3." },
+                { "id": "b", "text": "5." },
+                { "id": "c", "text": "15." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« ce train part de la voie trois, et non de la voie cinq » 라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Vous êtes dans le bus. Vous entendez cette information.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Information voyageurs. À cause de travaux, la ligne de bus numéro douze ne s'arrête pas à l'arrêt Hôtel de Ville, du lundi six au vendredi dix mai. Pendant cette période, prenez le bus à l'arrêt Place Carnot, à deux cents mètres. Le samedi et le dimanche, le service est normal."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Le bus ne s'arrête pas à l'Hôtel de Ville à cause…",
+              "options": [
+                { "id": "a", "text": "d'une grève." },
+                { "id": "b", "text": "de travaux." },
+                { "id": "c", "text": "d'une fête." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« À cause de travaux » 라고 말한다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Du 6 au 10 mai, il faut prendre le bus…",
+              "options": [
+                { "id": "a", "text": "à l'arrêt Place Carnot." },
+                { "id": "b", "text": "à l'arrêt Hôtel de Ville." },
+                { "id": "c", "text": "à la gare." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« prenez le bus à l'arrêt Place Carnot, à deux cents mètres » 라고 말한다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez ce document sur un vélo en libre-service.",
+          "title": "VéloCité : le vélo en libre-service à Rennes",
+          "text": "Comment ça marche ?\n\nVous pouvez prendre un vélo dans une des 50 stations de la ville, 24 heures sur 24, 7 jours sur 7. Pour louer un vélo, il faut une carte bancaire ou un abonnement.\n\nPrix :\n– Ticket 1 jour : 2 euros\n– Abonnement 1 an : 30 euros\n\nAvec le ticket ou l'abonnement, les 30 premières minutes de chaque trajet sont gratuites. Après, vous payez 1 euro par demi-heure.\n\nAttention : rendez votre vélo dans une station avant 24 heures. Le casque n'est pas obligatoire, mais il est conseillé.",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "truefalse",
+              "prompt": "On peut prendre un vélo la nuit.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["v"],
+              "points": 1,
+              "explanation": "« 24 heures sur 24, 7 jours sur 7 » 이므로 밤에도 빌릴 수 있다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Vous avez un ticket 1 jour. Pour un trajet de 20 minutes, vous payez en plus du ticket…",
+              "options": [
+                { "id": "a", "text": "0 euro." },
+                { "id": "b", "text": "1 euro." },
+                { "id": "c", "text": "2 euros." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« les 30 premières minutes de chaque trajet sont gratuites » 이므로 20분은 추가 요금이 없다."
+            },
+            {
+              "id": "q8",
+              "type": "truefalse",
+              "prompt": "Le casque est obligatoire.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Le casque n'est pas obligatoire, mais il est conseillé » 라고 쓴다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "L'abonnement d'un an coûte…",
+              "options": [
+                { "id": "a", "text": "2 euros." },
+                { "id": "b", "text": "24 euros." },
+                { "id": "c", "text": "30 euros." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Abonnement 1 an : 30 euros » 라고 쓴다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Hier, vous êtes arrivé(e) très en retard à un rendez-vous avec un(e) ami(e) à cause d'un problème de transport. Vous lui écrivez un message pour raconter ce qui s'est passé et pour vous excuser. (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (récit du problème, excuses, nombre de mots)",
+              "points": 1.5
+            },
+            { "criterion": "Capacité à raconter un incident et à s'excuser", "points": 3 },
+            { "criterion": "Lexique et orthographe lexicale (transports, heures)", "points": 2 },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale (passé composé, imparfait simple)",
+              "points": 2
+            },
+            { "criterion": "Cohérence, cohésion et formules du message", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}

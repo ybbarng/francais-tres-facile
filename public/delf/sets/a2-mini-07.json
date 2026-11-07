@@ -1,0 +1,245 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-07",
+  "level": "A2",
+  "kind": "mini",
+  "title": "Les soldes",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 5,
+      "instructions": "Vous allez entendre deux documents. Pour chaque document, lisez d'abord les questions. Vous allez entendre chaque document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous êtes dans un grand magasin. Vous entendez cette annonce.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonce",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Chers clients, bienvenue aux Galeries du Centre ! Aujourd'hui, c'est le premier jour des soldes. Moins cinquante pour cent sur tous les manteaux, au deuxième étage, et moins trente pour cent sur les chaussures, au premier étage. Au rez-de-chaussée, découvrez notre nouveau rayon de parfums. Attention : ce soir, exceptionnellement, le magasin ferme à dix-neuf heures. Bonnes courses !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Aujourd'hui, les manteaux sont…",
+              "options": [
+                { "id": "a", "text": "à moins 30 %." },
+                { "id": "b", "text": "à moins 50 %." },
+                { "id": "c", "text": "au prix normal." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Moins cinquante pour cent sur tous les manteaux » 라고 말한다. 30%는 신발이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Les chaussures sont…",
+              "options": [
+                { "id": "a", "text": "au rez-de-chaussée." },
+                { "id": "b", "text": "au premier étage." },
+                { "id": "c", "text": "au deuxième étage." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« moins trente pour cent sur les chaussures, au premier étage » 라고 말한다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Ce soir, le magasin ferme à…",
+              "options": [
+                { "id": "a", "text": "19 h." },
+                { "id": "b", "text": "20 h." },
+                { "id": "c", "text": "21 h." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« ce soir, exceptionnellement, le magasin ferme à dix-neuf heures » 라고 말한다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Vous entendez une conversation dans un magasin de vêtements.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Vendeuse",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bonjour monsieur, je peux vous aider ?"
+              },
+              {
+                "speaker": "Ahmed",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Oui, je cherche un pull pour l'anniversaire de ma sœur."
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Quelle taille fait-elle ?"
+              },
+              {
+                "speaker": "Ahmed",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Je crois qu'elle fait du trente-huit."
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Nous avons ce pull bleu en laine, à quarante-cinq euros, ou ce pull gris en coton, à trente euros."
+              },
+              {
+                "speaker": "Ahmed",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Le bleu est très joli, mais il est un peu cher pour moi. Je prends le gris."
+              },
+              {
+                "speaker": "Vendeuse",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Très bien. Si la taille ne va pas, votre sœur peut l'échanger pendant trente jours, avec le ticket de caisse."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Ahmed achète…",
+              "options": [
+                { "id": "a", "text": "le pull bleu à 45 euros." },
+                { "id": "b", "text": "le pull gris à 30 euros." },
+                { "id": "c", "text": "le pull gris à 45 euros." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« ce pull gris en coton, à trente euros » 그리고 « Je prends le gris » 라고 말한다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "La sœur d'Ahmed peut échanger le pull…",
+              "options": [
+                { "id": "a", "text": "pendant quinze jours." },
+                { "id": "b", "text": "pendant trente jours." },
+                { "id": "c", "text": "sans le ticket de caisse." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« votre sœur peut l'échanger pendant trente jours, avec le ticket de caisse » 라고 말한다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous avez acheté des vêtements sur internet. Vous recevez ce courriel.",
+          "title": "Objet : Votre commande n° 4521",
+          "text": "Bonjour madame Dupuis,\n\nMerci pour votre commande sur Modea.fr ! Voici le récapitulatif :\n– 1 robe rouge, taille 40 : 59 euros\n– 2 tee-shirts blancs : 2 × 15 euros\n– Livraison : gratuite (commande de plus de 50 euros)\n\nTotal : 89 euros\n\nVotre colis va arriver chez vous entre le mardi 8 et le jeudi 10 avril. Si vous n'êtes pas chez vous, le livreur va laisser le colis à la boulangerie Martin, au coin de votre rue.\n\nVous n'êtes pas contente d'un article ? Vous avez 14 jours pour le renvoyer. Le retour est gratuit.\n\nL'équipe Modea",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Mme Dupuis a acheté…",
+              "options": [
+                { "id": "a", "text": "une robe et deux tee-shirts." },
+                { "id": "b", "text": "deux robes et un tee-shirt." },
+                { "id": "c", "text": "une robe et un tee-shirt." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« 1 robe rouge » 와 « 2 tee-shirts blancs » 를 샀다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Pourquoi la livraison est-elle gratuite ?",
+              "options": [
+                { "id": "a", "text": "C'est la première commande de Mme Dupuis." },
+                { "id": "b", "text": "La commande fait plus de 50 euros." },
+                { "id": "c", "text": "Mme Dupuis habite près du magasin." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Livraison : gratuite (commande de plus de 50 euros) » 라고 쓴다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Si Mme Dupuis n'est pas chez elle, le colis va être…",
+              "options": [
+                { "id": "a", "text": "renvoyé au magasin." },
+                { "id": "b", "text": "à la boulangerie Martin." },
+                { "id": "c", "text": "chez sa voisine." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« le livreur va laisser le colis à la boulangerie Martin » 이라고 쓴다."
+            },
+            {
+              "id": "q9",
+              "type": "truefalse",
+              "prompt": "Pour renvoyer un article, Mme Dupuis doit payer.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Le retour est gratuit » 라고 쓴다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Vous avez fait les soldes avec un(e) ami(e). Vous écrivez un message à un(e) autre ami(e) pour raconter cette journée : où vous êtes allé(e)s, ce que vous avez acheté, et ce que vous en pensez. (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (lieu, achats, avis, nombre de mots)",
+              "points": 1.5
+            },
+            {
+              "criterion": "Capacité à raconter un événement passé et à donner son avis",
+              "points": 3
+            },
+            {
+              "criterion": "Lexique et orthographe lexicale (vêtements, couleurs, prix)",
+              "points": 2
+            },
+            {
+              "criterion": "Morphosyntaxe et orthographe grammaticale (passé composé, accords des adjectifs)",
+              "points": 2
+            },
+            { "criterion": "Cohérence, cohésion et formules du message", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}

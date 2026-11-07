@@ -1,0 +1,206 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a2-mini-06",
+  "level": "A2",
+  "kind": "mini",
+  "title": "Chez le médecin",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre un document. Lisez d'abord les questions. Vous allez entendre le document deux fois. Répondez en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous entendez une conversation chez le médecin.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Médecin",
+                "voice": "Jacques",
+                "text": "Bonjour madame Roux. Qu'est-ce qui ne va pas ?"
+              },
+              {
+                "speaker": "Mme Roux",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour docteur. J'ai mal à la gorge depuis trois jours, et hier soir, j'ai eu de la fièvre."
+              },
+              { "speaker": "Médecin", "voice": "Jacques", "text": "Vous toussez ?" },
+              {
+                "speaker": "Mme Roux",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Un peu, surtout la nuit."
+              },
+              {
+                "speaker": "Médecin",
+                "voice": "Jacques",
+                "text": "Bon, je vais vous examiner. Ouvrez la bouche… Ce n'est pas grave, c'est une angine. Je vous donne un médicament. Vous prenez un comprimé le matin et un comprimé le soir, pendant six jours."
+              },
+              {
+                "speaker": "Mme Roux",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "D'accord. Est-ce que je peux aller travailler ?"
+              },
+              {
+                "speaker": "Médecin",
+                "voice": "Jacques",
+                "text": "Non, restez à la maison jusqu'à jeudi. Buvez beaucoup d'eau et reposez-vous. Si vous avez encore de la fièvre samedi, revenez me voir."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Mme Roux a mal…",
+              "options": [
+                { "id": "a", "text": "à la tête." },
+                { "id": "b", "text": "à la gorge." },
+                { "id": "c", "text": "au ventre." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« J'ai mal à la gorge » 라고 말한다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Elle est malade depuis…",
+              "options": [
+                { "id": "a", "text": "hier soir." },
+                { "id": "b", "text": "trois jours." },
+                { "id": "c", "text": "six jours." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« J'ai mal à la gorge depuis trois jours » 라고 말한다. 어제저녁은 열이 난 때이고, 6일은 약 먹는 기간이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Elle doit prendre le médicament…",
+              "options": [
+                { "id": "a", "text": "une fois par jour." },
+                { "id": "b", "text": "deux fois par jour." },
+                { "id": "c", "text": "trois fois par jour." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« un comprimé le matin et un comprimé le soir » 이므로 하루 두 번이다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Le médecin dit à Mme Roux…",
+              "options": [
+                { "id": "a", "text": "d'aller travailler demain." },
+                { "id": "b", "text": "de rester à la maison jusqu'à jeudi." },
+                { "id": "c", "text": "de revenir le voir jeudi." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« restez à la maison jusqu'à jeudi » 라고 말한다. 다시 오라는 것은 토요일에도 열이 날 때다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions en cochant la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine de santé.",
+          "title": "Cinq conseils pour bien dormir",
+          "text": "Beaucoup de Français dorment mal. Voici quelques conseils simples.\n\n1. Couchez-vous et levez-vous à la même heure tous les jours, même le week-end.\n\n2. Ne buvez pas de café après 16 heures.\n\n3. Le soir, mangez léger : un grand repas rend le sommeil difficile.\n\n4. Faites du sport, mais pas juste avant de vous coucher. Le matin ou l'après-midi, c'est mieux.\n\n5. Une heure avant de dormir, éteignez votre téléphone et votre ordinateur. Lisez plutôt un livre !\n\nEnfin, la température idéale pour une chambre est de 18 degrés.",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "truefalse",
+              "prompt": "Selon l'article, le week-end, on peut se lever plus tard.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« Couchez-vous et levez-vous à la même heure tous les jours, même le week-end » 라고 쓴다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Selon l'article, le sport…",
+              "options": [
+                { "id": "a", "text": "est mauvais pour le sommeil." },
+                { "id": "b", "text": "est bon, mais pas juste avant de dormir." },
+                { "id": "c", "text": "est meilleur le soir." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Faites du sport, mais pas juste avant de vous coucher. Le matin ou l'après-midi, c'est mieux » 라고 쓴다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Une heure avant de dormir, l'article conseille de…",
+              "options": [
+                { "id": "a", "text": "regarder un film." },
+                { "id": "b", "text": "lire un livre." },
+                { "id": "c", "text": "boire un café." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« éteignez votre téléphone et votre ordinateur. Lisez plutôt un livre ! » 라고 쓴다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Dans la chambre, la bonne température est de…",
+              "options": [
+                { "id": "a", "text": "16 degrés." },
+                { "id": "b", "text": "18 degrés." },
+                { "id": "c", "text": "20 degrés." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« la température idéale pour une chambre est de 18 degrés » 라고 쓴다. 16은 커피를 마시지 말라는 시각이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un texte court. Respectez le nombre de mots indiqué.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Vous êtes malade et vous ne pouvez pas aller à votre cours de français demain. Vous écrivez un message à votre professeur : vous vous excusez, vous expliquez ce que vous avez et vous demandez quels sont les devoirs. (40 à 60 mots)",
+          "minWords": 40,
+          "maxWords": 60,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (excuse, symptômes, demande des devoirs, nombre de mots)",
+              "points": 1.5
+            },
+            { "criterion": "Capacité à s'excuser, à expliquer et à demander", "points": 3 },
+            { "criterion": "Lexique et orthographe lexicale (corps, maladie)", "points": 2 },
+            { "criterion": "Morphosyntaxe et orthographe grammaticale", "points": 2 },
+            {
+              "criterion": "Registre adapté au professeur (vouvoiement, formules de politesse)",
+              "points": 1.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "content-writer",
+    "at": "2026-11-08",
+    "notes": "첫 작성. 독립 풀이 확인 전."
+  }
+}
