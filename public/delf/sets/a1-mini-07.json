@@ -29,7 +29,7 @@
               {
                 "speaker": "Réceptionniste",
                 "voice": "Thomas",
-                "text": "Oui, madame Dubois, une chambre pour deux nuits. C'est la chambre 208, au deuxième étage."
+                "text": "Oui, madame Dubois, une chambre pour deux nuits. C'est la chambre 15, au deuxième étage."
               },
               {
                 "speaker": "Cliente",
@@ -39,7 +39,7 @@
               {
                 "speaker": "Réceptionniste",
                 "voice": "Thomas",
-                "text": "De 7 heures à 10 heures, au restaurant de l'hôtel."
+                "text": "De 7 heures à 10 heures, au restaurant, au premier étage."
               },
               {
                 "speaker": "Cliente",
@@ -96,7 +96,7 @@
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « C'est la chambre 208, au deuxième étage. »"
+              "explanation": "« C'est la chambre 15, au deuxième étage. » premier étage 는 식당이 있는 층이다."
             },
             {
               "id": "q3",
@@ -118,7 +118,7 @@
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « De 7 heures à 10 heures, au restaurant de l'hôtel. »"
+              "explanation": "근거 문장: « De 7 heures à 10 heures, au restaurant, au premier étage. »"
             },
             {
               "id": "q4",
@@ -277,7 +277,7 @@
               "points": 2
             }
           ],
-          "prompt": "Vous voulez réserver une chambre d'hôtel. Vous écrivez un e-mail à l'hôtel : vous donnez la date d'arrivée, le nombre de nuits et le nombre de personnes, et vous posez une question (prix, petit-déjeuner, parking…)."
+          "prompt": "Vous voulez réserver une chambre d'hôtel. Vous écrivez un e-mail à l'hôtel : vous donnez la date d'arrivée, le nombre de nuits et le nombre de personnes, et vous posez une question (prix, petit-déjeuner, parking…). (30 à 40 mots)"
         }
       ]
     }

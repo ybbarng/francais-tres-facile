@@ -19,7 +19,7 @@
               {
                 "speaker": "Garagiste",
                 "voice": "Rocko (프랑스어(프랑스))",
-                "text": "Bonjour madame Petit, ici le garage Central. Votre voiture est prête. Vous pouvez venir la chercher demain matin, entre 8 heures et 12 heures. La réparation coûte 230 euros. Attention, demain après-midi, le garage est fermé. Au revoir, madame."
+                "text": "Bonjour madame Petit, ici le garage Central. Votre voiture est prête. Vous pouvez venir la chercher demain matin, entre 8 heures et 12 heures. La réparation coûte 230 euros, et vous payez seulement par carte. Attention, demain après-midi, le garage est fermé. Au revoir, madame."
               }
             ]
           },
@@ -49,24 +49,24 @@
             {
               "id": "q2",
               "type": "choice",
-              "prompt": "La voiture de Madame Petit :",
+              "prompt": "Madame Petit peut payer :",
               "options": [
                 {
                   "id": "a",
-                  "text": "n'est pas encore réparée."
+                  "text": "par chèque."
                 },
                 {
                   "id": "b",
-                  "text": "est réparée."
+                  "text": "par carte."
                 },
                 {
                   "id": "c",
-                  "text": "est vendue."
+                  "text": "sur internet."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "« Votre voiture est prête. » — 수리가 끝났다는 뜻이다."
+              "explanation": "근거 문장: « vous payez seulement par carte. »"
             },
             {
               "id": "q3",
@@ -153,7 +153,7 @@
             {
               "id": "q6",
               "type": "choice",
-              "prompt": "Les passagers pour Rome montent dans l'avion à :",
+              "prompt": "Pour Rome, on monte dans l'avion à :",
               "options": [
                 {
                   "id": "a",
@@ -431,11 +431,11 @@
               {
                 "speaker": "Fille",
                 "voice": "Sandy (프랑스어(프랑스))",
-                "text": "C'est quand, ton anniversaire ?"
+                "text": "Papi, c'est quand, ton anniversaire ?"
               },
               {
-                "speaker": "Garçon",
-                "voice": "Jacques",
+                "speaker": "Grand-père",
+                "voice": "Grandpa (프랑스어(프랑스))",
                 "text": "Le 22 mai."
               }
             ]
@@ -549,7 +549,7 @@
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « C'est quand, ton anniversaire ? — Le 22 mai. »"
+              "explanation": "근거 문장: « Papi, c'est quand, ton anniversaire ? — Le 22 mai. »"
             }
           ]
         },
@@ -1144,8 +1144,7 @@
         {
           "id": "w1",
           "prompt": "Exercice 1. Vous voulez vous inscrire dans un club de sport. Complétez la fiche d'inscription. Écrivez une ligne pour chaque information.\n\nNom :\nPrénom :\nÂge :\nNationalité :\nAdresse :\nNuméro de téléphone :\nProfession :\nSport choisi :\nJours où vous êtes libre :\nPourquoi vous voulez faire ce sport (quelques mots) :",
-          "minWords": 15,
-          "maxWords": 60,
+          "minWords": 10,
           "points": 10,
           "rubric": [
             {

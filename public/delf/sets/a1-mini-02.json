@@ -274,7 +274,7 @@
             {
               "id": "q9",
               "type": "truefalse",
-              "prompt": "Le mercredi, il y a des bus jusqu'à 21 h.",
+              "prompt": "Le mercredi soir, il y a des bus à 20 h.",
               "options": [
                 {
                   "id": "v",
@@ -287,7 +287,7 @@
               ],
               "answer": ["v"],
               "points": 1,
-              "explanation": "« Du lundi au vendredi : … de 6 h à 21 h. » 수요일은 월~금에 들어간다."
+              "explanation": "« Du lundi au vendredi : un bus toutes les 15 minutes, de 6 h à 21 h. » 수요일은 월요일~금요일에 들어가고, 20시는 6시~21시 사이다."
             }
           ]
         }
@@ -325,7 +325,7 @@
               "points": 2
             }
           ],
-          "prompt": "Vous avez rendez-vous avec votre amie Clara, mais votre train a du retard. Vous lui écrivez un SMS : vous expliquez le problème, vous donnez votre nouvelle heure d'arrivée et vous proposez un lieu pour vous retrouver."
+          "prompt": "Vous avez rendez-vous avec votre amie Clara, mais votre train a du retard. Vous lui écrivez un SMS : vous expliquez le problème, vous donnez votre nouvelle heure d'arrivée et vous proposez un lieu pour vous retrouver. (30 à 40 mots)"
         }
       ]
     }

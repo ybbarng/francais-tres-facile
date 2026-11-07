@@ -86,7 +86,7 @@
                 },
                 {
                   "id": "c",
-                  "text": "22 ans."
+                  "text": "25 ans."
                 }
               ],
               "answer": ["b"],
@@ -314,7 +314,7 @@
               "points": 2
             }
           ],
-          "prompt": "Vous écrivez un message à un nouvel ami français. Vous présentez votre famille : deux ou trois personnes (nom, âge, travail ou études)."
+          "prompt": "Vous écrivez un message à un nouvel ami français. Vous présentez votre famille : deux ou trois personnes (nom, âge, travail ou études). (30 à 40 mots)"
         }
       ]
     }

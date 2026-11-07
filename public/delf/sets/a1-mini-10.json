@@ -19,7 +19,7 @@
               {
                 "speaker": "Message",
                 "voice": "Flo (프랑스어(프랑스))",
-                "text": "Bonjour, vous êtes bien à la piscine municipale. La piscine est ouverte du mardi au dimanche, de 10 heures à 20 heures. Le lundi, elle est fermée. L'entrée coûte 4 euros pour les adultes et 2 euros pour les enfants. Le bonnet de bain est obligatoire. Merci et à bientôt !"
+                "text": "Bonjour, vous êtes bien à la piscine municipale. La piscine est ouverte du mardi au dimanche, de 10 heures à 20 heures. Le lundi, elle est fermée. L'entrée coûte 4 euros pour les adultes et 2 euros pour les enfants. Le mercredi, à 14 heures, il y a un cours de natation pour les enfants. Merci et à bientôt !"
               }
             ]
           },
@@ -71,24 +71,24 @@
             {
               "id": "q3",
               "type": "choice",
-              "prompt": "Pour nager, il faut avoir :",
+              "prompt": "Le cours de natation pour les enfants est :",
               "options": [
                 {
                   "id": "a",
-                  "text": "un bonnet de bain."
+                  "text": "le mercredi à 14 h."
                 },
                 {
                   "id": "b",
-                  "text": "une carte de membre."
+                  "text": "le mardi à 14 h."
                 },
                 {
                   "id": "c",
-                  "text": "une serviette."
+                  "text": "le mercredi à 10 h."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « Le bonnet de bain est obligatoire. »"
+              "explanation": "« Le mercredi, à 14 heures, il y a un cours de natation pour les enfants. » 10시는 수영장이 여는 시각이다."
             }
           ]
         },
@@ -309,7 +309,7 @@
               "points": 2
             }
           ],
-          "prompt": "Vous écrivez un message à un(e) ami(e). Vous racontez ce que vous allez faire le week-end prochain (samedi et dimanche) et vous l'invitez à faire une activité avec vous."
+          "prompt": "Vous écrivez un message à un(e) ami(e). Vous racontez ce que vous allez faire le week-end prochain (samedi et dimanche) et vous l'invitez à faire une activité avec vous. (30 à 40 mots)"
         }
       ]
     }

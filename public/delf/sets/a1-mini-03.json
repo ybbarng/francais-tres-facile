@@ -49,7 +49,7 @@
             {
               "id": "q2",
               "type": "choice",
-              "prompt": "Demain après-midi, il y a :",
+              "prompt": "Demain après-midi, à Paris, il y a :",
               "options": [
                 {
                   "id": "a",
@@ -285,7 +285,7 @@
               "points": 2
             }
           ],
-          "prompt": "Vous êtes en vacances. Vous écrivez une carte postale à un(e) ami(e) : vous dites où vous êtes, quel temps il fait et ce que vous faites."
+          "prompt": "Vous êtes en vacances. Vous écrivez une carte postale à un(e) ami(e) : vous dites où vous êtes, quel temps il fait et ce que vous faites. (30 à 40 mots)"
         }
       ]
     }

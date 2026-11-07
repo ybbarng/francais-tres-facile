@@ -198,7 +198,7 @@
           "id": "doc3",
           "context": "Camille reçoit cet e-mail.",
           "title": "Objet : Dîner de vendredi",
-          "text": "Bonjour Camille,\n\nMerci pour ton invitation ! Mais je suis désolée : vendredi soir, je ne peux pas venir au dîner. Ma mère arrive de Lyon et je vais la chercher à la gare à 19 h.\n\nTu es libre dimanche ? On peut déjeuner au restaurant italien près de chez toi, à midi. C'est moi qui invite !\n\nBises,\nYasmine",
+          "text": "Bonjour Camille,\n\nMerci pour ton invitation ! Mais je suis désolée : vendredi soir, je ne peux pas venir au dîner. Ma mère arrive de Lyon et je vais la chercher à la gare à 19 h.\n\nTu es libre dimanche ? On peut déjeuner au restaurant italien près de chez toi, à midi. Et cette fois, je paie !\n\nBises,\nYasmine",
           "questions": [
             {
               "id": "q6",
@@ -282,7 +282,7 @@
               ],
               "answer": ["f"],
               "points": 1,
-              "explanation": "« C'est moi qui invite ! » 는 야스민이 낸다는 뜻이다."
+              "explanation": "« Et cette fois, je paie ! » — 식당 값은 Camille 이 아니라 Yasmine 이 낸다."
             }
           ]
         }
@@ -320,7 +320,7 @@
               "points": 2
             }
           ],
-          "prompt": "Un ami vous invite à son anniversaire samedi. Vous ne pouvez pas venir. Vous lui écrivez un message : vous dites merci, vous expliquez pourquoi vous ne pouvez pas venir et vous proposez un autre jour pour vous voir."
+          "prompt": "Un ami vous invite à son anniversaire samedi. Vous ne pouvez pas venir. Vous lui écrivez un message : vous dites merci, vous expliquez pourquoi vous ne pouvez pas venir et vous proposez un autre jour pour vous voir. (30 à 40 mots)"
         }
       ]
     }

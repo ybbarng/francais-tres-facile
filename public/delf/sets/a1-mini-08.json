@@ -101,7 +101,7 @@
             {
               "id": "q3",
               "type": "choice",
-              "prompt": "Comme boisson, ils prennent :",
+              "prompt": "Comme boisson, la femme commande :",
               "options": [
                 {
                   "id": "a",
@@ -151,7 +151,7 @@
                 },
                 {
                   "id": "c",
-                  "text": "40 euros."
+                  "text": "20 euros."
                 }
               ],
               "answer": ["b"],
@@ -315,7 +315,7 @@
               "points": 2
             }
           ],
-          "prompt": "Vous invitez un(e) ami(e) à dîner chez vous. Vous lui écrivez un message : vous donnez le jour et l'heure, et vous dites ce que vous allez préparer."
+          "prompt": "Vous invitez un(e) ami(e) à dîner chez vous. Vous lui écrivez un message : vous donnez le jour et l'heure, et vous dites ce que vous allez préparer. (30 à 40 mots)"
         }
       ]
     }

@@ -149,7 +149,7 @@
             {
               "id": "q4",
               "type": "choice",
-              "prompt": "Aujourd'hui, quel produit est moins cher ?",
+              "prompt": "Aujourd'hui, quel produit a un prix spécial ?",
               "options": [
                 {
                   "id": "a",
@@ -166,7 +166,7 @@
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « trois croissants pour 2 euros seulement ! »"
+              "explanation": "근거 문장: « trois croissants pour 2 euros seulement ! » 오늘 특별 가격인 것은 크루아상이다. 빵과 케이크는 안내에 나오지 않는다."
             },
             {
               "id": "q5",
@@ -274,7 +274,7 @@
             {
               "id": "q9",
               "type": "truefalse",
-              "prompt": "Le pain aux noix coûte 3,20 €.",
+              "prompt": "Le dimanche, la boulangerie ferme à 19 h 30.",
               "options": [
                 {
                   "id": "v",
@@ -285,9 +285,9 @@
                   "text": "Faux"
                 }
               ],
-              "answer": ["v"],
+              "answer": ["f"],
               "points": 1,
-              "explanation": "근거 문장: « Nouveau ! Pain aux noix : 3,20 € »."
+              "explanation": "« Dimanche : 7 h – 13 h » 이므로 일요일에는 13시에 닫는다. 19시 30분은 화요일~토요일에 닫는 시각이다."
             }
           ]
         }
@@ -325,7 +325,7 @@
               "points": 2
             }
           ],
-          "prompt": "Samedi soir, vous faites un dîner chez vous avec des amis. Vous êtes au marché. Vous écrivez un message à votre ami Lucas : vous dites ce que vous achetez et vous lui demandez d'apporter quelque chose pour le dîner."
+          "prompt": "Samedi soir, vous faites un dîner chez vous avec des amis. Vous êtes au marché. Vous écrivez un message à votre ami Lucas : vous dites ce que vous achetez et vous lui demandez d'apporter quelque chose pour le dîner. (30 à 40 mots)"
         }
       ]
     }

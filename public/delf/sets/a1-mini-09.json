@@ -12,7 +12,7 @@
       "documents": [
         {
           "id": "doc1",
-          "context": "Une femme téléphone à une agence immobilière.",
+          "context": "Une femme téléphone pour un appartement.",
           "audio": {
             "plays": 2,
             "script": [
@@ -111,24 +111,24 @@
             {
               "id": "q3",
               "type": "choice",
-              "prompt": "Le loyer est de :",
+              "prompt": "L'appartement coûte :",
               "options": [
                 {
                   "id": "a",
-                  "text": "560 euros par mois."
+                  "text": "500 euros par mois."
                 },
                 {
                   "id": "b",
-                  "text": "615 euros par mois."
+                  "text": "650 euros par mois."
                 },
                 {
                   "id": "c",
-                  "text": "650 euros par mois."
+                  "text": "750 euros par mois."
                 }
               ],
-              "answer": ["c"],
+              "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « 650 euros par mois. »"
+              "explanation": "« Et le loyer, c'est combien ? — 650 euros par mois. » 한 달에 650유로다."
             },
             {
               "id": "q4",
@@ -291,7 +291,7 @@
               "points": 2
             }
           ],
-          "prompt": "Vous avez un nouvel appartement. Vous écrivez un e-mail à un(e) ami(e) : vous décrivez l'appartement (pièces, taille, quartier) et vous l'invitez à venir le voir."
+          "prompt": "Vous avez un nouvel appartement. Vous écrivez un e-mail à un(e) ami(e) : vous décrivez l'appartement (pièces, taille, quartier) et vous l'invitez à venir le voir. (30 à 40 mots)"
         }
       ]
     }

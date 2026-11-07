@@ -19,7 +19,7 @@
               {
                 "speaker": "Nicolas",
                 "voice": "Rocko (프랑스어(프랑스))",
-                "text": "Bonjour Élodie, c'est Nicolas, du bureau. Demain, la réunion de 9 heures est annulée. La réunion est jeudi, à 14 heures, dans la salle Rouge. Est-ce que tu peux apporter ton ordinateur ? Et n'oublie pas : vendredi, on déjeune tous ensemble au restaurant Le Lys, à 12 heures 30. Bonne soirée !"
+                "text": "Bonjour Élodie, c'est Nicolas, du bureau. Demain, il n'y a pas de réunion à 9 heures. La réunion est jeudi, à 14 heures, dans la salle Rouge. Est-ce que tu peux apporter ton ordinateur ? Et n'oublie pas : vendredi, on déjeune tous ensemble au restaurant Le Lys, à 12 heures 30. Bonne soirée !"
               }
             ]
           },
@@ -66,7 +66,7 @@
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "« La réunion est jeudi, à 14 heures ». 내일 9시 회의는 취소되었다."
+              "explanation": "« Demain, il n'y a pas de réunion à 9 heures. La réunion est jeudi, à 14 heures ». 내일 9시에는 회의가 없다."
             },
             {
               "id": "q3",
@@ -209,7 +209,7 @@
                 },
                 {
                   "id": "c",
-                  "text": "un défilé de mode."
+                  "text": "un film."
                 }
               ],
               "answer": ["a"],
@@ -277,7 +277,7 @@
                 },
                 {
                   "id": "c",
-                  "text": "13 août."
+                  "text": "5 août."
                 }
               ],
               "answer": ["b"],
@@ -371,7 +371,7 @@
               {
                 "speaker": "Pharmacien",
                 "voice": "Thomas",
-                "text": "Oui, prenez ces comprimés, deux fois par jour."
+                "text": "Oui, prenez ces médicaments, deux fois par jour."
               },
               {
                 "speaker": "Narrateur",
@@ -456,7 +456,7 @@
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "« j'ai mal à la tête » 와 « prenez ces comprimés »."
+              "explanation": "« j'ai mal à la tête » 와 « prenez ces médicaments »."
             },
             {
               "id": "q14",
@@ -1060,24 +1060,24 @@
             {
               "id": "q38",
               "type": "choice",
-              "prompt": "Pendant l'atelier, on :",
+              "prompt": "Pour cet atelier, il y a :",
               "options": [
                 {
                   "id": "a",
-                  "text": "lit des livres de cuisine."
+                  "text": "10 places."
                 },
                 {
                   "id": "b",
-                  "text": "regarde un film."
+                  "text": "3 places."
                 },
                 {
                   "id": "c",
-                  "text": "prépare des plats."
+                  "text": "15 places."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « Venez cuisiner des plats du Maroc, du Vietnam et du Mexique »."
+              "explanation": "근거 문장: « Nombre de places : 15. » 10은 참가할 수 있는 어린이 나이 기준, 3은 날짜(3 octobre)다."
             },
             {
               "id": "q39",
@@ -1135,8 +1135,7 @@
         {
           "id": "w1",
           "prompt": "Exercice 1. Vous voulez vous inscrire à la médiathèque de votre ville. Complétez la fiche d'inscription. Écrivez une ligne pour chaque information.\n\nNom :\nPrénom :\nDate de naissance :\nNationalité :\nAdresse :\nTéléphone :\nAdresse e-mail :\nProfession :\nLangue(s) parlée(s) :\nVous voulez emprunter (livres, films, musique…) :",
-          "minWords": 15,
-          "maxWords": 60,
+          "minWords": 10,
           "points": 10,
           "rubric": [
             {
