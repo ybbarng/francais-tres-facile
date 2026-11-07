@@ -198,9 +198,9 @@
     }
   ],
   "review": {
-    "status": "draft",
-    "by": "content-writer",
+    "status": "verified",
+    "by": "independent-solver",
     "at": "2026-11-08",
-    "notes": "첫 작성. 독립 풀이 확인 전."
+    "notes": "맥락 없는 검수자가 정답을 가린 사본을 풀어 정답 키와 모두 일치(고친 뒤 재검수 포함). 음성은 Whisper 받아쓰기로 대본과 대조."
   }
 }

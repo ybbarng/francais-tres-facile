@@ -1,0 +1,1157 @@
+{
+  "schema": "ftf/delf-index@1",
+  "sets": [
+    {
+      "id": "a1-mini-01",
+      "level": "A1",
+      "kind": "mini",
+      "title": "Au marché",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-02",
+      "level": "A1",
+      "kind": "mini",
+      "title": "À la gare",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-03",
+      "level": "A1",
+      "kind": "mini",
+      "title": "Il pleut ou il fait beau ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-04",
+      "level": "A1",
+      "kind": "mini",
+      "title": "La photo de famille",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-05",
+      "level": "A1",
+      "kind": "mini",
+      "title": "Un rendez-vous",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-06",
+      "level": "A1",
+      "kind": "mini",
+      "title": "Le cours de français",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-07",
+      "level": "A1",
+      "kind": "mini",
+      "title": "À l'hôtel",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-08",
+      "level": "A1",
+      "kind": "mini",
+      "title": "Au restaurant",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-09",
+      "level": "A1",
+      "kind": "mini",
+      "title": "Un appartement à louer",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-mini-10",
+      "level": "A1",
+      "kind": "mini",
+      "title": "Un week-end actif",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-exam-01",
+      "level": "A1",
+      "kind": "exam",
+      "title": "Examen blanc A1 n° 1",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 20,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 30,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 30,
+          "max": 25
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a1-exam-02",
+      "level": "A1",
+      "kind": "exam",
+      "title": "Examen blanc A1 n° 2",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 20,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 30,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 30,
+          "max": 25
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-01",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Retour de vacances",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-02",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Un nouvel appartement",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-03",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Projets pour le week-end",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-04",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Un travail pour l'été",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 3
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-05",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Fêtes et portes ouvertes",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-06",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Chez le médecin",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-07",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Les soldes",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-08",
+      "level": "A2",
+      "kind": "mini",
+      "title": "En gare et en ville",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-09",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Mon quartier",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-mini-10",
+      "level": "A2",
+      "kind": "mini",
+      "title": "Loisirs et activités",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 4
+        },
+        {
+          "area": "PE",
+          "minutes": 6,
+          "max": 10
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-exam-01",
+      "level": "A2",
+      "kind": "exam",
+      "title": "Épreuve complète A2 – Sujet 1",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 25,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 30,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 45,
+          "max": 25
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "a2-exam-02",
+      "level": "A2",
+      "kind": "exam",
+      "title": "Épreuve complète A2 – Sujet 2",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 25,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 30,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 45,
+          "max": 25
+        }
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "b1-mini-01",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Moins de déchets",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 6
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-02",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Travailler moins, vivre mieux ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-03",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Vivre avec les écrans",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 6
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-04",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Apprendre autrement",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-05",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Une ville sans voitures ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-06",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Donner de son temps",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-07",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Sortir, écouter, partager",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-08",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Réparer, revendre, réutiliser",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-09",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Prendre soin de soi",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 4
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-mini-10",
+      "level": "B1",
+      "kind": "mini",
+      "title": "Voyager autrement",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 7,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-exam-01",
+      "level": "B1",
+      "kind": "exam",
+      "title": "Épreuve d'entraînement B1 — 1",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 25,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 45,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 45,
+          "max": 25
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b1-exam-02",
+      "level": "B1",
+      "kind": "exam",
+      "title": "Épreuve d'entraînement B1 — 2",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 25,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 45,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 45,
+          "max": 25
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-01",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Le télétravail, et après ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-02",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Une ville sans voitures ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 6
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-03",
+      "level": "B2",
+      "kind": "mini",
+      "title": "L'intelligence artificielle et nos métiers",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-04",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Trop de touristes ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-05",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Halte au gaspillage alimentaire",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-06",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Apprendre une langue à l'âge adulte",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-07",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Le sport, une affaire d'argent ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 6
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-08",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Le retour des commerces de proximité",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-09",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Peut-on encore croire l'information ?",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-mini-10",
+      "level": "B2",
+      "kind": "mini",
+      "title": "Se loger en ville",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 4,
+          "max": 5
+        },
+        {
+          "area": "CE",
+          "minutes": 5,
+          "max": 5
+        },
+        {
+          "area": "PE",
+          "minutes": 8,
+          "max": 10
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-exam-01",
+      "level": "B2",
+      "kind": "exam",
+      "title": "Sujet complet n° 1",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 30,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 60,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 60,
+          "max": 25
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "b2-exam-02",
+      "level": "B2",
+      "kind": "exam",
+      "title": "Sujet complet n° 2",
+      "areas": [
+        {
+          "area": "CO",
+          "minutes": 30,
+          "max": 25
+        },
+        {
+          "area": "CE",
+          "minutes": 60,
+          "max": 25
+        },
+        {
+          "area": "PE",
+          "minutes": 60,
+          "max": 25
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}
