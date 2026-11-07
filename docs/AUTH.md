@@ -25,6 +25,7 @@ ADMIN_PASSWORD=your-secure-password
 | `/api/exercises/[id]/refresh` | POST | 개별 연습 새로고침 |
 | `/api/shadowing/progress` | POST | 쉐도잉 반복 횟수 저장 |
 | `/api/expressions/progress` | POST | 말하기 표현 「익힘」 표시 저장 (읽기 GET 은 암호 없이) |
+| `/api/delf/attempts` | POST | DELF 모의고사 풀이 저장. 서버가 세트 파일로 다시 채점한다 (읽기 GET 은 암호 없이, 답·쓴 글은 내보내지 않음) |
 
 ## 클라이언트 사용법
 
