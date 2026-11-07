@@ -1,0 +1,831 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b2-exam-01",
+  "level": "B2",
+  "kind": "exam",
+  "title": "Sujet complet n° 1",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 30,
+      "instructions": "Cette épreuve comporte trois exercices. Exercices 1 et 2 : vous allez écouter deux fois un document. Vous avez d'abord une minute pour lire les questions. Après la première écoute, vous aurez une pause pour commencer à répondre ; après la seconde écoute, vous aurez une minute pour compléter vos réponses. Exercice 3 : vous allez écouter une seule fois trois documents courts. Avant chaque document, lisez les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Exercice 1 (9 points). Vous écoutez une interview dans une émission de radio consacrée à l'économie.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour à tous. Travailler quatre jours au lieu de cinq, sans perte de salaire : l'idée, longtemps jugée utopique, est aujourd'hui testée par un nombre croissant d'entreprises. Pour faire le point, nous recevons Bernard Javel, économiste du travail. Bernard Javel, bonjour."
+              },
+              { "speaker": "Bernard Javel", "voice": "Jacques", "text": "Bonjour." },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "D'abord, de quoi parle-t-on exactement ? Car il existe plusieurs formules."
+              },
+              {
+                "speaker": "Bernard Javel",
+                "voice": "Jacques",
+                "text": "Vous avez raison, et c'est une source de confusion. Dans certaines entreprises, on garde le même nombre d'heures, mais on les répartit sur quatre jours : on travaille donc plus longtemps chaque jour. Dans d'autres, on réduit réellement le temps de travail, par exemple de trente-cinq à trente-deux heures par semaine, sans baisser les salaires. Ce sont deux choses très différentes, et c'est la seconde qui intéresse surtout les chercheurs."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Et que montrent les expériences menées jusqu'ici ?"
+              },
+              {
+                "speaker": "Bernard Javel",
+                "voice": "Jacques",
+                "text": "Les résultats sont plutôt encourageants. Dans la plupart des entreprises qui ont participé aux grands essais, au Royaume-Uni notamment, la productivité s'est maintenue, et les salariés déclaraient moins de stress et moins de fatigue. Le nombre d'arrêts maladie a d'ailleurs diminué. À la fin de l'expérience, une très large majorité des entreprises ont décidé de conserver le dispositif."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Alors, pourquoi ne se généralise-t-il pas ?"
+              },
+              {
+                "speaker": "Bernard Javel",
+                "voice": "Jacques",
+                "text": "Il faut rester prudent. Les entreprises qui se portent volontaires pour ce type d'essai sont souvent celles qui y croient déjà, et qui ont une organisation adaptée. Ce sont, pour la plupart, des entreprises de services, des emplois de bureau. Dans un hôpital, une usine ou un commerce, c'est beaucoup plus compliqué : si une infirmière travaille un jour de moins, il faut bien que quelqu'un la remplace. Là, réduire le temps de travail implique d'embaucher, donc des coûts supplémentaires."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Certains disent aussi que les salariés risquent de s'épuiser en faisant le même travail en moins de temps."
+              },
+              {
+                "speaker": "Bernard Javel",
+                "voice": "Jacques",
+                "text": "C'est un vrai risque, surtout dans la formule où l'on concentre les heures. Des journées de neuf ou dix heures, c'est épuisant, notamment pour les parents qui doivent aller chercher leurs enfants à l'école. Ce que montrent les expériences réussies, c'est que la semaine de quatre jours ne fonctionne que si l'on repense l'organisation du travail : moins de réunions, moins d'interruptions, des priorités plus claires. Si l'on se contente de supprimer un jour sans rien changer, on obtient l'effet inverse de celui qu'on recherchait."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Vous êtes donc favorable à la semaine de quatre jours ?"
+              },
+              {
+                "speaker": "Bernard Javel",
+                "voice": "Jacques",
+                "text": "Favorable, oui, mais pas à n'importe quelle condition. Je ne crois pas qu'il faille l'imposer à tout le monde par la loi. Il faut laisser chaque secteur, chaque entreprise trouver la formule qui lui convient, en discutant avec les salariés."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Selon Bernard Javel, pourquoi l'expression « semaine de quatre jours » prête-t-elle à confusion ?",
+              "options": [
+                { "id": "a", "text": "Elle n'est utilisée que par les syndicats." },
+                { "id": "b", "text": "Elle désigne des formules très différentes." },
+                { "id": "c", "text": "Elle ne concerne que le secteur public." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« il existe plusieurs formules » « Ce sont deux choses très différentes » — 같은 말로 서로 다른 방식을 가리켜서 헷갈린다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Quelle formule intéresse surtout les chercheurs ?",
+              "options": [
+                { "id": "a", "text": "Le même nombre d'heures réparti sur quatre jours." },
+                { "id": "b", "text": "Une réduction du temps de travail avec baisse de salaire." },
+                {
+                  "id": "c",
+                  "text": "Une réduction réelle du temps de travail sans baisse de salaire."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« on réduit réellement le temps de travail ... sans baisser les salaires. ... c'est la seconde qui intéresse surtout les chercheurs »."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "D'après les grands essais menés, notamment au Royaume-Uni...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "la productivité s'est maintenue et les salariés étaient moins stressés."
+                },
+                { "id": "b", "text": "la productivité a baissé dans la plupart des entreprises." },
+                { "id": "c", "text": "les salariés ont demandé à revenir à cinq jours." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« la productivité s'est maintenue, et les salariés déclaraient moins de stress et moins de fatigue »."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Pourquoi l'économiste invite-t-il à rester prudent face à ces résultats ?",
+              "options": [
+                { "id": "a", "text": "Les essais ont duré trop peu de temps." },
+                { "id": "b", "text": "Les salariés interrogés n'étaient pas sincères." },
+                {
+                  "id": "c",
+                  "text": "Les entreprises volontaires ne représentent pas l'ensemble des entreprises."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Les entreprises qui se portent volontaires pour ce type d'essai sont souvent celles qui y croient déjà, et qui ont une organisation adaptée » — 자원한 기업은 전체를 대표하지 않는다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Pourquoi la semaine de quatre jours est-elle plus difficile à appliquer dans un hôpital ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Il faudrait embaucher pour remplacer les absents, ce qui coûte cher."
+                },
+                { "id": "b", "text": "Les infirmières y sont opposées." },
+                { "id": "c", "text": "La loi l'interdit dans le secteur de la santé." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« si une infirmière travaille un jour de moins, il faut bien que quelqu'un la remplace. Là, réduire le temps de travail implique d'embaucher, donc des coûts supplémentaires »."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Selon Bernard Javel, à quelle condition la semaine de quatre jours peut-elle réussir ?",
+              "options": [
+                { "id": "a", "text": "Si les journées de travail sont allongées." },
+                { "id": "b", "text": "Si l'organisation du travail est repensée." },
+                { "id": "c", "text": "Si les salaires sont augmentés." }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "« la semaine de quatre jours ne fonctionne que si l'on repense l'organisation du travail : moins de réunions, moins d'interruptions, des priorités plus claires ». 긴 근무일은 오히려 「c'est épuisant」이라고 했다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Quelle est finalement la position de l'économiste ?",
+              "options": [
+                { "id": "a", "text": "Il y est opposé, car elle épuise les salariés." },
+                { "id": "b", "text": "Il souhaite une loi qui l'impose à toutes les entreprises." },
+                {
+                  "id": "c",
+                  "text": "Il y est favorable, à condition qu'elle soit adaptée et négociée dans chaque entreprise."
+                }
+              ],
+              "answer": ["c"],
+              "points": 2,
+              "explanation": "« Favorable, oui, mais pas à n'importe quelle condition. Je ne crois pas qu'il faille l'imposer à tout le monde par la loi. Il faut laisser chaque secteur, chaque entreprise trouver la formule qui lui convient, en discutant avec les salariés. »"
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Exercice 2 (9 points). Vous écoutez un extrait d'une conférence donnée par une médecin spécialiste du sommeil.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Conférencière",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Je voudrais commencer par une question simple : combien d'heures un adolescent devrait-il dormir ? La plupart des parents répondent sept ou huit heures. En réalité, les spécialistes recommandent entre huit et dix heures par nuit. Or, selon plusieurs enquêtes, près d'un lycéen sur trois dort moins de sept heures en semaine. Nous sommes donc face à une dette de sommeil massive, et largement sous-estimée."
+              },
+              {
+                "speaker": "Conférencière",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "On accuse souvent les écrans, et ils jouent effectivement un rôle. La lumière qu'ils émettent retarde la production de mélatonine, l'hormone qui nous prépare au sommeil. Et surtout, les contenus sont conçus pour nous retenir : une vidéo en appelle une autre, une conversation ne se termine jamais vraiment. Pourtant, je voudrais insister sur un point que l'on oublie trop souvent : même sans écrans, les adolescents auraient du mal à s'endormir tôt. À la puberté, l'horloge biologique se décale naturellement d'environ deux heures. Un adolescent qui n'a pas sommeil à vingt-deux heures n'est pas forcément de mauvaise volonté : son corps n'est tout simplement pas prêt."
+              },
+              {
+                "speaker": "Conférencière",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Le problème, c'est que ce décalage entre en conflit avec les horaires scolaires. Les cours commencent à huit heures, parfois avant. Résultat : les adolescents accumulent un manque de sommeil pendant la semaine, et essaient de le rattraper le week-end en dormant jusqu'à midi, ce qui décale encore davantage leur horloge. C'est un cercle vicieux."
+              },
+              {
+                "speaker": "Conférencière",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Les conséquences ne se limitent pas à la fatigue. Le manque de sommeil affecte la mémoire et la concentration, mais aussi l'humeur : les adolescents qui dorment peu sont plus irritables et plus exposés aux troubles anxieux."
+              },
+              {
+                "speaker": "Conférencière",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Que peut-on faire ? Certains pays ont tenté de retarder l'heure de début des cours. Aux États-Unis, plusieurs établissements qui ont commencé les cours une heure plus tard ont observé une amélioration des résultats et une baisse des retards. En France, cette solution se heurte à de nombreuses contraintes, notamment les transports scolaires et l'organisation des familles. Elle mérite pourtant d'être étudiée sérieusement."
+              },
+              {
+                "speaker": "Conférencière",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "En attendant, les familles peuvent agir. Je ne crois pas aux interdictions brutales, qui provoquent souvent des conflits. Il vaut mieux fixer ensemble des règles simples : par exemple, laisser les téléphones hors de la chambre la nuit. Et surtout, montrer l'exemple : difficile de convaincre un adolescent d'éteindre son téléphone quand ses parents regardent le leur à table."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Selon les spécialistes, combien d'heures un adolescent devrait-il dormir ?",
+              "options": [
+                { "id": "a", "text": "Moins de sept heures." },
+                { "id": "b", "text": "Sept ou huit heures." },
+                { "id": "c", "text": "Entre huit et dix heures." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les spécialistes recommandent entre huit et dix heures par nuit » — 「sept ou huit heures」는 부모들이 흔히 하는 대답이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Que dit la conférencière à propos des écrans ?",
+              "options": [
+                { "id": "a", "text": "Ils jouent un rôle, mais n'expliquent pas tout." },
+                { "id": "b", "text": "Ils sont la seule cause du manque de sommeil." },
+                { "id": "c", "text": "Ils n'ont aucune influence sur le sommeil." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« ils jouent effectivement un rôle » 그러면서 « même sans écrans, les adolescents auraient du mal à s'endormir tôt »."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Pourquoi un adolescent a-t-il souvent du mal à s'endormir tôt ?",
+              "options": [
+                { "id": "a", "text": "Parce qu'il mange trop tard." },
+                {
+                  "id": "b",
+                  "text": "Parce que son horloge biologique se décale naturellement à la puberté."
+                },
+                { "id": "c", "text": "Parce qu'il manque de volonté." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« À la puberté, l'horloge biologique se décale naturellement d'environ deux heures. Un adolescent qui n'a pas sommeil ... n'est pas forcément de mauvaise volonté »."
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "Selon la conférencière, dormir jusqu'à midi le week-end...",
+              "options": [
+                { "id": "a", "text": "aggrave le décalage de l'horloge biologique." },
+                { "id": "b", "text": "permet de récupérer complètement." },
+                { "id": "c", "text": "n'a aucun effet sur le sommeil de la semaine." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« en dormant jusqu'à midi, ce qui décale encore davantage leur horloge. C'est un cercle vicieux. »"
+            },
+            {
+              "id": "q12",
+              "type": "choice",
+              "prompt": "Parmi les conséquences du manque de sommeil, la conférencière mentionne...",
+              "options": [
+                { "id": "a", "text": "des problèmes de vue." },
+                { "id": "b", "text": "une prise de poids." },
+                { "id": "c", "text": "une plus grande irritabilité et un risque accru d'anxiété." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« les adolescents qui dorment peu sont plus irritables et plus exposés aux troubles anxieux »."
+            },
+            {
+              "id": "q13",
+              "type": "choice",
+              "prompt": "Que pense-t-elle de l'idée de retarder le début des cours en France ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Elle souhaite qu'elle soit appliquée immédiatement partout."
+                },
+                {
+                  "id": "b",
+                  "text": "Elle reconnaît les difficultés, mais estime qu'il faut l'étudier sérieusement."
+                },
+                { "id": "c", "text": "Elle la juge irréaliste et inutile." }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "« En France, cette solution se heurte à de nombreuses contraintes ... Elle mérite pourtant d'être étudiée sérieusement. »"
+            },
+            {
+              "id": "q14",
+              "type": "choice",
+              "prompt": "Quel conseil donne-t-elle aux familles ?",
+              "options": [
+                { "id": "a", "text": "Interdire strictement les écrans aux adolescents." },
+                { "id": "b", "text": "Laisser les adolescents dormir le matin en semaine." },
+                { "id": "c", "text": "Fixer ensemble des règles simples et montrer l'exemple." }
+              ],
+              "answer": ["c"],
+              "points": 2,
+              "explanation": "« Je ne crois pas aux interdictions brutales » « Il vaut mieux fixer ensemble des règles simples ... Et surtout, montrer l'exemple »."
+            }
+          ]
+        },
+        {
+          "id": "doc3",
+          "context": "Exercice 3 (7 points), document 1. Vous écoutez un court reportage à la radio.",
+          "audio": {
+            "plays": 1,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Depuis que la loi impose de trier les déchets alimentaires, la ville de Villeneuve a installé des composteurs collectifs au pied des immeubles. Madame Perrin, vous êtes référente pour votre résidence."
+              },
+              {
+                "speaker": "Madame Perrin",
+                "voice": "Grandma (프랑스어(프랑스))",
+                "text": "Oui. Je vérifie que tout se passe bien, et j'explique aux voisins ce qu'on peut mettre ou non dans le composteur. Au début, j'étais sceptique, je me disais que personne ne s'en servirait. Finalement, au bout de trois mois seulement, la moitié des foyers de la résidence l'utilisent déjà. Et le compost, on s'en sert pour les plantes de la cour. Ce qui manque encore, c'est l'information : beaucoup de gens ne savent pas que les épluchures ou le marc de café, ça se composte."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q15",
+              "type": "choice",
+              "prompt": "Quel est le rôle de Madame Perrin ?",
+              "options": [
+                { "id": "a", "text": "Elle vend le compost aux habitants." },
+                { "id": "b", "text": "Elle surveille le composteur et informe ses voisins." },
+                { "id": "c", "text": "Elle a fabriqué les composteurs." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je vérifie que tout se passe bien, et j'explique aux voisins ce qu'on peut mettre ou non »."
+            },
+            {
+              "id": "q16",
+              "type": "choice",
+              "prompt": "Selon Madame Perrin, qu'est-ce qui manque encore ?",
+              "options": [
+                { "id": "a", "text": "De l'information sur ce que l'on peut composter." },
+                { "id": "b", "text": "Des composteurs supplémentaires." },
+                { "id": "c", "text": "Des habitants volontaires pour s'en occuper." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Ce qui manque encore, c'est l'information »."
+            }
+          ]
+        },
+        {
+          "id": "doc4",
+          "context": "Exercice 3, document 2. Vous écoutez une chronique scientifique à la radio.",
+          "audio": {
+            "plays": 1,
+            "script": [
+              {
+                "speaker": "Chroniqueur",
+                "voice": "Thomas",
+                "text": "On les voit se multiplier sur les toits des entreprises et des hôtels : les ruches urbaines sont à la mode. L'intention est louable, il s'agit de sauver les abeilles. Le problème, c'est que les abeilles domestiques, celles qui produisent du miel, ne sont pas menacées. Ce sont les abeilles sauvages, près d'un millier d'espèces en France, qui sont en déclin. Or, en ville, les fleurs sont rares, et les abeilles domestiques, très nombreuses, leur font concurrence pour se nourrir. Installer trop de ruches peut donc nuire aux espèces que l'on prétend protéger. Pour aider vraiment les pollinisateurs, mieux vaut planter des fleurs locales et laisser des coins d'herbe non tondus."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q17",
+              "type": "choice",
+              "prompt": "Selon le chroniqueur, les abeilles domestiques...",
+              "options": [
+                { "id": "a", "text": "sont en voie de disparition." },
+                { "id": "b", "text": "ne sont pas menacées." },
+                { "id": "c", "text": "ne survivent pas en ville." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« les abeilles domestiques, celles qui produisent du miel, ne sont pas menacées »."
+            },
+            {
+              "id": "q18",
+              "type": "choice",
+              "prompt": "Quelle est la position du chroniqueur sur les ruches urbaines ?",
+              "options": [
+                { "id": "a", "text": "Il encourage à en installer le plus possible." },
+                {
+                  "id": "b",
+                  "text": "Il pense qu'elles n'ont aucun effet sur les autres insectes."
+                },
+                {
+                  "id": "c",
+                  "text": "Il estime qu'en trop grand nombre, elles peuvent nuire aux abeilles sauvages."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Installer trop de ruches peut donc nuire aux espèces que l'on prétend protéger. »"
+            }
+          ]
+        },
+        {
+          "id": "doc5",
+          "context": "Exercice 3, document 3. Vous écoutez une information culturelle à la radio.",
+          "audio": {
+            "plays": 1,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Le musée des Beaux-Arts de Montclair est désormais ouvert jusqu'à vingt-deux heures tous les jeudis, avec une entrée gratuite pour les moins de vingt-six ans. Son directeur, Alain Vidal, explique ce choix."
+              },
+              {
+                "speaker": "Alain Vidal",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Notre public était essentiellement composé de retraités et de touristes. Les jeunes actifs, eux, ne venaient pas, tout simplement parce qu'ils travaillent aux heures d'ouverture. Avec les nocturnes, on leur dit : venez après le bureau. Et ça fonctionne : depuis septembre, la fréquentation du jeudi soir a triplé. On y organise aussi des concerts et des visites guidées courtes, de vingt minutes, pour ceux qui n'ont pas beaucoup de temps."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q19",
+              "type": "choice",
+              "prompt": "Pourquoi le musée a-t-il décidé d'ouvrir le jeudi soir ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Pour attirer les jeunes actifs, qui travaillent pendant la journée."
+                },
+                { "id": "b", "text": "Pour accueillir davantage de touristes." },
+                { "id": "c", "text": "Parce que les retraités l'avaient demandé." }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« Les jeunes actifs, eux, ne venaient pas, tout simplement parce qu'ils travaillent aux heures d'ouverture. Avec les nocturnes, on leur dit : venez après le bureau. »"
+            },
+            {
+              "id": "q20",
+              "type": "choice",
+              "prompt": "Depuis septembre, la fréquentation du jeudi soir...",
+              "options": [
+                { "id": "a", "text": "a doublé." },
+                { "id": "b", "text": "est restée stable." },
+                { "id": "c", "text": "a triplé." }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "« depuis septembre, la fréquentation du jeudi soir a triplé »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 60,
+      "instructions": "Cette épreuve comporte trois exercices. Lisez les documents, puis répondez aux questions en choisissant la bonne réponse. Exercice 3 : lisez les trois opinions et indiquez à quelle personne correspond chaque affirmation.",
+      "documents": [
+        {
+          "id": "doc6",
+          "context": "Exercice 1 (9 points). Vous lisez cet article dans un magazine consacré à l'environnement.",
+          "title": "La forêt française à l'épreuve du climat",
+          "text": "Jamais, depuis plusieurs siècles, la forêt n'a couvert une aussi grande part du territoire français. Elle occupe aujourd'hui près d'un tiers de la France métropolitaine, soit environ deux fois plus qu'au milieu du XIXe siècle. Ce chiffre rassurant cache pourtant une réalité préoccupante : si la forêt s'étend, elle va de plus en plus mal.\n\nLes sécheresses à répétition et les fortes chaleurs de ces dernières années ont affaibli de nombreux arbres. Privés d'eau, ils deviennent plus vulnérables aux insectes, comme les scolytes, qui ont ravagé des milliers d'hectares d'épicéas dans l'est du pays. Résultat : la mortalité des arbres a fortement augmenté en dix ans, et leur croissance ralentit. Conséquence moins connue, la forêt absorbe aujourd'hui beaucoup moins de dioxyde de carbone qu'au début des années 2000. Celle qui devait nous aider à lutter contre le réchauffement en devient l'une des victimes.\n\nFace à cette situation, les forestiers sont divisés. Pour les uns, il faut aider la forêt à s'adapter en plantant des essences venues de régions plus chaudes, capables de supporter la sécheresse, comme le cèdre de l'Atlas ou certains chênes du sud de l'Europe. L'État a d'ailleurs lancé un vaste plan de replantation, avec l'objectif de planter un milliard d'arbres en dix ans. Pour les autres, cette stratégie comporte des risques. Personne ne peut prédire avec certitude comment ces espèces se comporteront dans un nouvel environnement, et les plantations, souvent composées d'une seule essence, sont plus fragiles que les forêts naturelles, où se mélangent des arbres d'âges et d'espèces différents.\n\nCes derniers défendent plutôt une gestion plus douce : laisser la forêt se régénérer naturellement, diversifier les espèces, éviter les coupes rases, qui exposent les sols au soleil et à l'érosion. Une forêt variée, expliquent-ils, résiste mieux aux maladies comme aux incendies, car un parasite s'attaque rarement à toutes les espèces à la fois.\n\nLe débat dépasse les seuls spécialistes. La forêt est aussi une ressource économique : la filière bois emploie des centaines de milliers de personnes, et les industriels ont besoin d'arbres qui poussent vite et droit. Concilier ces intérêts avec la préservation de la biodiversité n'a rien d'évident. Une chose est sûre, cependant : les décisions prises aujourd'hui engagent la forêt pour au moins un siècle, car un chêne planté cette année n'atteindra sa maturité que bien après 2100.",
+          "questions": [
+            {
+              "id": "q21",
+              "type": "choice",
+              "prompt": "Depuis le milieu du XIXe siècle, la surface de la forêt française...",
+              "options": [
+                { "id": "a", "text": "a diminué d'un tiers." },
+                { "id": "b", "text": "a environ doublé." },
+                { "id": "c", "text": "est restée stable." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« soit environ deux fois plus qu'au milieu du XIXe siècle » — 「un tiers」는 오늘날 숲이 국토에서 차지하는 비율이다."
+            },
+            {
+              "id": "q22",
+              "type": "choice",
+              "prompt": "Pourquoi de nombreux arbres sont-ils devenus plus vulnérables aux insectes ?",
+              "options": [
+                { "id": "a", "text": "Ils ont été affaiblis par le manque d'eau." },
+                { "id": "b", "text": "Ils ont été plantés trop près les uns des autres." },
+                { "id": "c", "text": "Ils sont trop jeunes." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Les sécheresses à répétition ... ont affaibli de nombreux arbres. Privés d'eau, ils deviennent plus vulnérables aux insectes »."
+            },
+            {
+              "id": "q23",
+              "type": "choice",
+              "prompt": "Que signifie la phrase « Celle qui devait nous aider à lutter contre le réchauffement en devient l'une des victimes » ?",
+              "options": [
+                { "id": "a", "text": "La forêt est la principale responsable du réchauffement." },
+                { "id": "b", "text": "La forêt n'a jamais absorbé de carbone." },
+                {
+                  "id": "c",
+                  "text": "La forêt, censée limiter le réchauffement, en subit désormais les effets."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "앞 문장 « la forêt absorbe aujourd'hui beaucoup moins de dioxyde de carbone » — 온난화를 막아 줄 숲이 온난화의 피해자가 되었다는 뜻이다."
+            },
+            {
+              "id": "q24",
+              "type": "choice",
+              "prompt": "Quel est l'objectif du plan lancé par l'État ?",
+              "options": [
+                { "id": "a", "text": "Interdire les coupes rases." },
+                { "id": "b", "text": "Planter un milliard d'arbres en dix ans." },
+                { "id": "c", "text": "Remplacer tous les épicéas de l'est du pays." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« avec l'objectif de planter un milliard d'arbres en dix ans »."
+            },
+            {
+              "id": "q25",
+              "type": "choice",
+              "prompt": "Quelles critiques certains forestiers adressent-ils aux plantations d'essences venues de régions plus chaudes ?",
+              "options": [
+                { "id": "a", "text": "Ces arbres coûtent trop cher à importer." },
+                { "id": "b", "text": "Ces arbres poussent trop lentement pour l'industrie." },
+                {
+                  "id": "c",
+                  "text": "On ignore comment ces espèces réagiront, et les plantations d'une seule essence sont fragiles."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Personne ne peut prédire avec certitude comment ces espèces se comporteront ... et les plantations, souvent composées d'une seule essence, sont plus fragiles »."
+            },
+            {
+              "id": "q26",
+              "type": "choice",
+              "prompt": "Selon les partisans d'une gestion plus douce, pourquoi une forêt variée résiste-t-elle mieux ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Parce qu'un parasite s'attaque rarement à toutes les espèces en même temps."
+                },
+                { "id": "b", "text": "Parce que les arbres y poussent plus vite." },
+                { "id": "c", "text": "Parce qu'elle est mieux surveillée par les forestiers." }
+              ],
+              "answer": ["a"],
+              "points": 2,
+              "explanation": "« Une forêt variée ... résiste mieux aux maladies comme aux incendies, car un parasite s'attaque rarement à toutes les espèces à la fois. »"
+            },
+            {
+              "id": "q27",
+              "type": "choice",
+              "prompt": "Quelle idée la conclusion de l'article met-elle en avant ?",
+              "options": [
+                { "id": "a", "text": "Le débat sur la forêt ne concerne que les spécialistes." },
+                {
+                  "id": "b",
+                  "text": "Les choix faits aujourd'hui auront des conséquences à très long terme."
+                },
+                {
+                  "id": "c",
+                  "text": "Les intérêts de l'industrie doivent passer avant la biodiversité."
+                }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "« les décisions prises aujourd'hui engagent la forêt pour au moins un siècle » — 「Le débat dépasse les seuls spécialistes」라서 a는 틀리고, 「Concilier ces intérêts ... n'a rien d'évident」이라 어느 한쪽을 앞세우지 않는다."
+            }
+          ]
+        },
+        {
+          "id": "doc7",
+          "context": "Exercice 2 (9 points). Vous lisez cette tribune publiée dans un quotidien.",
+          "title": "Service civique obligatoire : une fausse bonne idée",
+          "text": "Régulièrement, l'idée revient dans le débat public : il faudrait rendre obligatoire, pour tous les jeunes, une période de quelques mois consacrée à l'intérêt général. Aider dans une association, accompagner des personnes âgées, participer à la protection de l'environnement... Qui pourrait s'y opposer ? L'intention est généreuse, et je ne doute pas de la sincérité de ceux qui la défendent. Je crois pourtant qu'ils se trompent.\n\nD'abord, parce que l'engagement ne se décrète pas. Ce qui fait la valeur du bénévolat, c'est précisément qu'il est choisi. Un jeune qui s'engage parce qu'il le veut apporte son énergie, sa curiosité, son envie d'être utile. Un jeune contraint risque au contraire de vivre cette période comme une perte de temps, voire comme une punition. Les associations, qui ont besoin de volontaires motivés et non de personnes qui attendent la fin de leur mission, en seraient les premières victimes.\n\nEnsuite, parce que la mesure aurait un coût considérable. Encadrer chaque année plusieurs centaines de milliers de jeunes suppose des moyens humains et financiers que personne n'a encore sérieusement chiffrés. On peut craindre que, faute d'encadrement suffisant, ces missions se réduisent à des tâches sans intérêt, ce qui irait à l'encontre du but recherché.\n\nOn m'objectera que l'obligation permettrait de toucher des jeunes qui ne s'engagent jamais, ceux qui sont les plus éloignés de la vie associative. C'est l'argument le plus sérieux, et je ne le balaie pas d'un revers de main. Mais la contrainte est-elle le meilleur moyen de les atteindre ? Je ne le crois pas. Si ces jeunes ne s'engagent pas, ce n'est généralement pas par manque de volonté, mais parce qu'ils ne connaissent pas les possibilités existantes, ou parce qu'ils doivent travailler pour financer leurs études. C'est sur ces obstacles qu'il faut agir.\n\nConcrètement, plutôt que de dépenser des milliards dans un dispositif obligatoire, mieux vaudrait renforcer le service civique volontaire, qui existe déjà : le faire mieux connaître dans les lycées, mieux l'indemniser pour qu'il soit accessible à ceux qui ne peuvent pas se permettre de travailler sans être payés, et reconnaître l'expérience acquise dans les parcours d'études.\n\nL'engagement des jeunes est une richesse. Il mérite mieux qu'une obligation de plus : il mérite qu'on lui donne les moyens d'exister.",
+          "questions": [
+            {
+              "id": "q28",
+              "type": "choice",
+              "prompt": "Quelle est la position de l'auteur sur le service civique obligatoire ?",
+              "options": [
+                { "id": "a", "text": "Il y est favorable sans réserve." },
+                { "id": "b", "text": "Il n'a pas d'avis tranché." },
+                {
+                  "id": "c",
+                  "text": "Il y est opposé, tout en reconnaissant la générosité de l'intention."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« L'intention est généreuse ... Je crois pourtant qu'ils se trompent. » 제목도 « une fausse bonne idée »다."
+            },
+            {
+              "id": "q29",
+              "type": "choice",
+              "prompt": "Selon l'auteur, ce qui fait la valeur du bénévolat, c'est...",
+              "options": [
+                { "id": "a", "text": "qu'il est librement choisi." },
+                { "id": "b", "text": "qu'il est gratuit." },
+                { "id": "c", "text": "qu'il dure longtemps." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Ce qui fait la valeur du bénévolat, c'est précisément qu'il est choisi. »"
+            },
+            {
+              "id": "q30",
+              "type": "choice",
+              "prompt": "Pourquoi les associations seraient-elles « les premières victimes » d'une obligation ?",
+              "options": [
+                { "id": "a", "text": "Elles devraient rémunérer les jeunes." },
+                { "id": "b", "text": "Elles accueilleraient des jeunes peu motivés." },
+                { "id": "c", "text": "Elles perdraient leurs bénévoles actuels." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Les associations, qui ont besoin de volontaires motivés et non de personnes qui attendent la fin de leur mission, en seraient les premières victimes. »"
+            },
+            {
+              "id": "q31",
+              "type": "choice",
+              "prompt": "Quel risque l'auteur associe-t-il à un encadrement insuffisant ?",
+              "options": [
+                { "id": "a", "text": "Que les associations doivent fermer." },
+                { "id": "b", "text": "Que les jeunes refusent de participer." },
+                { "id": "c", "text": "Que les missions se limitent à des tâches sans intérêt." }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« faute d'encadrement suffisant, ces missions se réduisent à des tâches sans intérêt »."
+            },
+            {
+              "id": "q32",
+              "type": "choice",
+              "prompt": "Comment l'auteur traite-t-il l'argument selon lequel l'obligation toucherait les jeunes les plus éloignés de l'engagement ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Il le juge sérieux, mais doute que la contrainte soit la bonne réponse."
+                },
+                { "id": "b", "text": "Il le rejette comme ridicule." },
+                { "id": "c", "text": "Il l'accepte et change d'avis." }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« C'est l'argument le plus sérieux, et je ne le balaie pas d'un revers de main. Mais la contrainte est-elle le meilleur moyen de les atteindre ? Je ne le crois pas. »"
+            },
+            {
+              "id": "q33",
+              "type": "choice",
+              "prompt": "D'après l'auteur, pourquoi certains jeunes ne s'engagent-ils pas ?",
+              "options": [
+                { "id": "a", "text": "Par manque de volonté." },
+                {
+                  "id": "b",
+                  "text": "Parce qu'ils ignorent les possibilités ou doivent travailler pour financer leurs études."
+                },
+                { "id": "c", "text": "Parce que les associations ne veulent pas d'eux." }
+              ],
+              "answer": ["b"],
+              "points": 2,
+              "explanation": "« ce n'est généralement pas par manque de volonté, mais parce qu'ils ne connaissent pas les possibilités existantes, ou parce qu'ils doivent travailler pour financer leurs études »."
+            },
+            {
+              "id": "q34",
+              "type": "choice",
+              "prompt": "Que propose l'auteur ?",
+              "options": [
+                { "id": "a", "text": "Supprimer le service civique volontaire." },
+                {
+                  "id": "b",
+                  "text": "Rendre le service civique obligatoire seulement pour les lycéens."
+                },
+                { "id": "c", "text": "Renforcer le service civique volontaire, qui existe déjà." }
+              ],
+              "answer": ["c"],
+              "points": 2,
+              "explanation": "« mieux vaudrait renforcer le service civique volontaire, qui existe déjà ». 고등학교는 제도를 「faire mieux connaître」할 장소로만 나온다."
+            }
+          ]
+        },
+        {
+          "id": "doc8",
+          "context": "Exercice 3 (7 points). Sur le site d'un magazine, trois personnes répondent à la question : « Faut-il interdire le téléphone portable au lycée ? » Lisez leurs opinions.",
+          "title": "Faut-il interdire le téléphone portable au lycée ?",
+          "text": "Léa, 17 ans, lycéenne\nJe comprends qu'on interdise le téléphone en classe, c'est normal. Mais pendant les pauses ? Au lycée, nous avons quinze, seize, dix-sept ans : on nous demande de devenir responsables, et en même temps on nous traite comme des enfants. Le téléphone, c'est aussi ce qui nous permet de prévenir nos parents quand le bus est en retard ou en cas de problème. Plutôt que d'interdire, on ferait mieux de nous apprendre à l'utiliser intelligemment. D'ailleurs, ceux qui veulent tricher ou passer leur temps sur les réseaux trouveront toujours un moyen de le faire.\n\nAntoine, professeur de mathématiques\nDepuis que notre établissement a interdit les téléphones pendant toute la journée, y compris dans la cour, j'ai vu la différence. Les élèves se parlent de nouveau pendant les récréations, ils jouent, ils discutent. Les cas de harcèlement liés à des photos prises au lycée ont nettement diminué. Au début, il y a eu des protestations, c'est vrai, mais au bout de quelques semaines, la plupart des élèves ont reconnu qu'ils se sentaient moins stressés. Bien sûr, cela demande un effort de surveillance, mais je crois que cela en vaut la peine.\n\nNathalie, mère d'un élève de seconde\nJe n'ai pas d'avis définitif. D'un côté, je vois bien que mon fils passe trop de temps sur son téléphone, et je ne serais pas mécontente que le lycée l'en prive quelques heures. De l'autre, je me demande s'il n'est pas un peu facile de demander à l'école de régler un problème qui commence à la maison. Le soir, à table, qui regarde son téléphone ? Souvent les parents eux-mêmes. Avant d'interdire quoi que ce soit aux adolescents, nous devrions peut-être nous interroger sur nos propres habitudes.",
+          "questions": [
+            {
+              "id": "q35",
+              "type": "choice",
+              "prompt": "Qui constate que l'interdiction a amélioré les relations entre élèves ?",
+              "options": [
+                { "id": "a", "text": "Léa" },
+                { "id": "b", "text": "Antoine" },
+                { "id": "c", "text": "Nathalie" }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "앙투안: « Les élèves se parlent de nouveau pendant les récréations, ils jouent, ils discutent. »"
+            },
+            {
+              "id": "q36",
+              "type": "choice",
+              "prompt": "Qui considère que le téléphone peut être utile pour des raisons de sécurité ?",
+              "options": [
+                { "id": "a", "text": "Léa" },
+                { "id": "b", "text": "Antoine" },
+                { "id": "c", "text": "Nathalie" }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "레아: « ce qui nous permet de prévenir nos parents quand le bus est en retard ou en cas de problème »."
+            },
+            {
+              "id": "q37",
+              "type": "choice",
+              "prompt": "Qui hésite entre deux points de vue ?",
+              "options": [
+                { "id": "a", "text": "Léa" },
+                { "id": "b", "text": "Antoine" },
+                { "id": "c", "text": "Nathalie" }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "나탈리: « Je n'ai pas d'avis définitif. D'un côté, ... De l'autre, ... »"
+            },
+            {
+              "id": "q38",
+              "type": "choice",
+              "prompt": "Qui préférerait qu'on apprenne aux jeunes à bien utiliser le téléphone plutôt que de l'interdire ?",
+              "options": [
+                { "id": "a", "text": "Léa" },
+                { "id": "b", "text": "Antoine" },
+                { "id": "c", "text": "Nathalie" }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "레아: « Plutôt que d'interdire, on ferait mieux de nous apprendre à l'utiliser intelligemment. »"
+            },
+            {
+              "id": "q39",
+              "type": "choice",
+              "prompt": "Qui pense que les adultes devraient d'abord remettre en question leur propre comportement ?",
+              "options": [
+                { "id": "a", "text": "Léa" },
+                { "id": "b", "text": "Antoine" },
+                { "id": "c", "text": "Nathalie" }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "나탈리: « Avant d'interdire quoi que ce soit aux adolescents, nous devrions peut-être nous interroger sur nos propres habitudes. »"
+            },
+            {
+              "id": "q40",
+              "type": "choice",
+              "prompt": "Qui reconnaît que la mesure a d'abord été mal accueillie ?",
+              "options": [
+                { "id": "a", "text": "Léa" },
+                { "id": "b", "text": "Antoine" },
+                { "id": "c", "text": "Nathalie" }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "앙투안: « Au début, il y a eu des protestations, c'est vrai »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 60,
+      "instructions": "Vous rédigez un texte argumenté d'au moins 250 mots. Vous respectez le type de texte demandé, vous présentez clairement votre position et vous l'appuyez sur des arguments organisés et des exemples précis.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "La municipalité de votre ville a décidé de fermer la bibliothèque de votre quartier pour construire un parking à sa place. Vous écrivez une lettre au maire pour protester contre cette décision. Vous expliquez ce que la bibliothèque apporte aux habitants, vous réfutez les arguments de la municipalité et vous proposez une autre solution. (250 mots minimum)",
+          "minWords": 250,
+          "maxWords": 350,
+          "points": 25,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (lettre de protestation, destinataire, longueur)",
+              "points": 2
+            },
+            {
+              "criterion": "Correction sociolinguistique (registre formel, formules de la lettre)",
+              "points": 2
+            },
+            { "criterion": "Capacité à présenter des faits et des exemples", "points": 3 },
+            { "criterion": "Capacité à argumenter une prise de position", "points": 4 },
+            { "criterion": "Cohérence et cohésion", "points": 3 },
+            { "criterion": "Étendue du vocabulaire", "points": 2 },
+            { "criterion": "Maîtrise du vocabulaire", "points": 2 },
+            { "criterion": "Maîtrise de l'orthographe", "points": 1 },
+            { "criterion": "Degré d'élaboration des phrases", "points": 2 },
+            { "criterion": "Choix des formes (morphosyntaxe)", "points": 4 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "B2 실제 형식 초안. 듣기 연습 1·2(문항 7개, 9점)·연습 3(짧은 문서 3개 한 번 듣기, 7점), 읽기 연습 1·2(9점)·연습 3(의견 연결, 7점). 독립 풀이 확인 전."
+  }
+}
