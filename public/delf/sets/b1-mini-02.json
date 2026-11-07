@@ -1,0 +1,344 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-mini-02",
+  "level": "B1",
+  "kind": "mini",
+  "title": "Travailler moins, vivre mieux ?",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre deux documents. Chaque document est diffusé deux fois. Lisez d'abord les questions, puis écoutez et choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous entendez cette information à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Présentatrice",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Une entreprise lyonnaise de logiciels, Novatech, teste depuis six mois la semaine de quatre jours. Ses quatre-vingts salariés travaillent du lundi au jeudi, trente-deux heures par semaine, pour le même salaire. Le premier bilan est plutôt positif : selon la direction, les arrêts maladie ont baissé de moitié et la production n'a pas diminué. Les salariés, eux, apprécient surtout d'avoir plus de temps pour leur famille. Mais tout n'est pas parfait : certains trouvent que les journées sont devenues plus intenses et plus fatigantes. L'entreprise décidera en juin si elle garde ce rythme définitivement."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Chez Novatech, les salariés travaillent...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "trente-deux heures pour le même salaire."
+                },
+                {
+                  "id": "b",
+                  "text": "trente-deux heures pour un salaire plus bas."
+                },
+                {
+                  "id": "c",
+                  "text": "trente-cinq heures en quatre jours."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « trente-deux heures par semaine, pour le même salaire ». 그래서 정답은 「trente-deux heures pour le même salaire」이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Selon la direction, depuis le début du test...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "la production a baissé."
+                },
+                {
+                  "id": "b",
+                  "text": "l'entreprise a recruté de nouveaux salariés."
+                },
+                {
+                  "id": "c",
+                  "text": "il y a moins d'arrêts maladie."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « les arrêts maladie ont baissé de moitié et la production n'a pas diminué ». 그래서 정답은 「il y a moins d'arrêts maladie」이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Quel problème certains salariés signalent-ils ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ils voient moins leur famille."
+                },
+                {
+                  "id": "b",
+                  "text": "Leurs journées sont plus fatigantes."
+                },
+                {
+                  "id": "c",
+                  "text": "Ils gagnent moins d'argent."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « certains trouvent que les journées sont devenues plus intenses et plus fatigantes ». 그래서 정답은 「Leurs journées sont plus fatigantes」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Deux collègues discutent à la pause café.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Homme",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Tu as entendu ? Chez Novatech, ils ne travaillent plus le vendredi. J'aimerais bien que notre chef essaie la même chose !"
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Moi, je ne suis pas sûre. Avec nos clients, ce serait compliqué : ils appellent tous les jours, même le vendredi."
+              },
+              {
+                "speaker": "Homme",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "On pourrait s'organiser : la moitié de l'équipe libre le vendredi, l'autre moitié le lundi."
+              },
+              {
+                "speaker": "Femme",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Pourquoi pas... Mais franchement, je préférerais pouvoir travailler de chez moi deux jours par semaine. Je perds une heure et demie dans les transports chaque jour, c'est ça qui me fatigue."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Pourquoi la femme hésite-t-elle ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les clients appellent tous les jours."
+                },
+                {
+                  "id": "b",
+                  "text": "Elle aime travailler le vendredi."
+                },
+                {
+                  "id": "c",
+                  "text": "Son chef n'est pas d'accord."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Avec nos clients, ce serait compliqué : ils appellent tous les jours, même le vendredi. ». 그래서 정답은 「Les clients appellent tous les jours」이다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Qu'est-ce que la femme préférerait ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Travailler chez elle deux jours par semaine."
+                },
+                {
+                  "id": "b",
+                  "text": "Avoir son lundi libre."
+                },
+                {
+                  "id": "c",
+                  "text": "Changer d'équipe."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « je préférerais pouvoir travailler de chez moi deux jours par semaine ». 그래서 정답은 「Travailler chez elle deux jours par semaine」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez ce message sur un forum.",
+          "title": "Forum « Travail et vie privée » — J'ai choisi de travailler moins",
+          "text": "Bonjour à tous,\n\nIl y a deux ans, j'étais responsable commercial dans une grande entreprise. Je gagnais bien ma vie, mais je partais à sept heures le matin et je rentrais souvent après vingt heures. Je ne voyais presque pas mes enfants grandir. Un soir, ma fille m'a demandé pourquoi je n'étais jamais là pour ses matchs de basket. Cette question m'a fait réfléchir.\n\nJ'ai demandé à passer à temps partiel, à quatre-vingts pour cent. Mon chef a d'abord refusé, puis il a accepté à condition que je change de poste. Aujourd'hui, je m'occupe de la formation des nouveaux employés. C'est moins prestigieux, mais je trouve ce travail plus intéressant que je ne l'imaginais.\n\nBien sûr, mon salaire a baissé et nous avons dû faire des choix : nous partons moins loin en vacances et nous avons vendu notre deuxième voiture. Mais je ne regrette rien. Le mercredi, j'accompagne ma fille à ses entraînements et je fais la cuisine pour toute la famille.\n\nJe sais que tout le monde ne peut pas se permettre de gagner moins. Pourtant, si vous en avez la possibilité, je vous conseille d'essayer. Le temps, on ne le rattrape jamais.\n\nKarim, 41 ans",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Qu'est-ce qui a poussé Karim à changer ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Un problème de santé."
+                },
+                {
+                  "id": "b",
+                  "text": "Une question de sa fille."
+                },
+                {
+                  "id": "c",
+                  "text": "Un conflit avec son chef."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « ma fille m'a demandé pourquoi je n'étais jamais là pour ses matchs de basket. Cette question m'a fait réfléchir. ». 그래서 정답은 「Une question de sa fille」이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Son chef a accepté le temps partiel...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "immédiatement."
+                },
+                {
+                  "id": "b",
+                  "text": "à condition qu'il travaille le mercredi."
+                },
+                {
+                  "id": "c",
+                  "text": "à condition qu'il change de poste."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Mon chef a d'abord refusé, puis il a accepté à condition que je change de poste. ». 그래서 정답은 「à condition qu'il change de poste」이다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Que pense Karim de son nouveau poste ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Il le trouve ennuyeux."
+                },
+                {
+                  "id": "b",
+                  "text": "Il le trouve plus intéressant que prévu."
+                },
+                {
+                  "id": "c",
+                  "text": "Il voudrait retrouver son ancien poste."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « je trouve ce travail plus intéressant que je ne l'imaginais ». 그래서 정답은 「Il le trouve plus intéressant que prévu」이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Pour compenser la baisse de salaire, la famille...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "a déménagé."
+                },
+                {
+                  "id": "b",
+                  "text": "ne part plus du tout en vacances."
+                },
+                {
+                  "id": "c",
+                  "text": "a vendu une voiture."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« nous avons vendu notre deuxième voiture ». 휴가는 « moins loin » 갈 뿐 아예 안 가는 것은 아니라 b는 틀리다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Karim conseille de travailler moins...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "à ceux qui peuvent se le permettre."
+                },
+                {
+                  "id": "b",
+                  "text": "à tout le monde, sans exception."
+                },
+                {
+                  "id": "c",
+                  "text": "seulement aux parents."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Je sais que tout le monde ne peut pas se permettre de gagner moins. Pourtant, si vous en avez la possibilité, je vous conseille d'essayer. ». 그래서 정답은 「à ceux qui peuvent se le permettre」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 7,
+      "instructions": "Lisez la consigne et écrivez votre texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Votre ami Thomas vous écrit : son entreprise lui propose la semaine de quatre jours, avec des journées de neuf heures. Il hésite. Vous lui répondez par courriel : vous lui donnez votre avis et des conseils, en vous appuyant sur votre expérience ou celle d'un proche.",
+          "minWords": 80,
+          "maxWords": 100,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à exprimer et à justifier une opinion",
+              "points": 2
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs, organisation)",
+              "points": 1
+            },
+            {
+              "criterion": "Compétence lexicale et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Compétence grammaticale et orthographe grammaticale",
+              "points": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전."
+  }
+}

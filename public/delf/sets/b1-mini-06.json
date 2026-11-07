@@ -1,0 +1,348 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-mini-06",
+  "level": "B1",
+  "kind": "mini",
+  "title": "Donner de son temps",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre deux fois un document. Lisez d'abord les questions, puis écoutez le document et choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une interview sur une radio locale.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Marc, vous êtes retraité et vous êtes bénévole à l'épicerie solidaire de votre quartier. En quoi consiste votre travail ?"
+              },
+              {
+                "speaker": "Marc",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "L'épicerie vend des produits à des familles qui ont peu d'argent, à environ dix pour cent du prix normal. Moi, je m'occupe surtout de la réception des marchandises : le mardi et le vendredi, je vais chercher les produits que nous donnent les supermarchés, et je les range."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Pourquoi avez-vous choisi de faire du bénévolat ?"
+              },
+              {
+                "speaker": "Marc",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Quand j'ai pris ma retraite, je me suis senti un peu inutile. J'avais travaillé quarante ans comme chauffeur de camion, et du jour au lendemain, plus rien. Un ami m'a dit que l'épicerie cherchait quelqu'un qui savait conduire une camionnette. C'était parfait pour moi !"
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Qu'est-ce que cette expérience vous apporte ?"
+              },
+              {
+                "speaker": "Marc",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Beaucoup de rencontres. Les autres bénévoles ont entre dix-huit et quatre-vingts ans, et ça, j'adore. Et puis, quand une maman me remercie parce qu'elle a pu acheter de la viande pour ses enfants, ça me touche énormément."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Vous avez un message pour nos auditeurs ?"
+              },
+              {
+                "speaker": "Marc",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Oui : nous manquons de bénévoles le samedi matin. Même deux heures par mois, ça nous aide beaucoup."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "L'épicerie solidaire vend ses produits...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "gratuitement."
+                },
+                {
+                  "id": "b",
+                  "text": "à moitié prix."
+                },
+                {
+                  "id": "c",
+                  "text": "à environ dix pour cent du prix normal."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « à environ dix pour cent du prix normal ». 그래서 정답은 「à environ dix pour cent du prix normal」이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "À l'épicerie, Marc s'occupe surtout...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "d'accueillir les familles."
+                },
+                {
+                  "id": "b",
+                  "text": "de tenir la caisse."
+                },
+                {
+                  "id": "c",
+                  "text": "d'aller chercher et de ranger les produits."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « je m'occupe surtout de la réception des marchandises : ... je vais chercher les produits ... et je les range ». 그래서 정답은 「d'aller chercher et de ranger les produits」이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Marc est devenu bénévole parce que...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "il avait besoin d'argent."
+                },
+                {
+                  "id": "b",
+                  "text": "il se sentait inutile à la retraite."
+                },
+                {
+                  "id": "c",
+                  "text": "sa femme le lui avait demandé."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Quand j'ai pris ma retraite, je me suis senti un peu inutile. ». 그래서 정답은 「il se sentait inutile à la retraite」이다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Qu'est-ce que Marc apprécie particulièrement ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Travailler seul."
+                },
+                {
+                  "id": "b",
+                  "text": "Rencontrer des personnes de tous les âges."
+                },
+                {
+                  "id": "c",
+                  "text": "Conduire sur de longues distances."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Les autres bénévoles ont entre dix-huit et quatre-vingts ans, et ça, j'adore. ». 그래서 정답은 「Rencontrer des personnes de tous les âges」이다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "L'épicerie a surtout besoin de bénévoles...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le mardi."
+                },
+                {
+                  "id": "b",
+                  "text": "le samedi matin."
+                },
+                {
+                  "id": "c",
+                  "text": "le vendredi."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« nous manquons de bénévoles le samedi matin ». 화요일과 금요일은 마르크가 물건을 받으러 가는 날이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine pour les jeunes.",
+          "title": "Volontariat à l'étranger : bien choisir son projet",
+          "text": "Chaque année, des milliers de jeunes Français partent quelques semaines à l'étranger pour aider dans une école, construire un puits ou protéger des tortues. C'est souvent une expérience inoubliable. Mais certains en reviennent déçus, ou même choqués.\n\nC'est le cas de Camille, vingt-deux ans. L'été dernier, elle a payé deux mille euros à une agence pour s'occuper d'enfants dans un orphelinat en Asie. « Sur place, j'ai compris que les enfants voyaient arriver un nouveau groupe de volontaires toutes les deux semaines. Ils s'attachaient à nous, puis on partait. Je me suis demandé si je les aidais vraiment. »\n\nLes spécialistes partagent cette inquiétude. Selon eux, les séjours très courts auprès d'enfants peuvent leur faire plus de mal que de bien. Ils conseillent plutôt des missions où les volontaires apportent une compétence précise, ou des missions qui durent au moins six mois.\n\nAvant de partir, il faut aussi se renseigner sur l'organisme. Où va l'argent payé par le volontaire ? Les habitants participent-ils au projet ? Un bon organisme répond clairement à ces questions et propose une formation avant le départ.\n\nCamille, elle, n'a pas renoncé. Elle termine ses études d'infirmière et prévoit de repartir pendant un an avec une association médicale. « Cette fois, je saurai pourquoi je suis là. »",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Cet article parle principalement...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "des précautions à prendre avant un volontariat."
+                },
+                {
+                  "id": "b",
+                  "text": "des dangers des voyages en Asie."
+                },
+                {
+                  "id": "c",
+                  "text": "du prix des voyages organisés."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "제목 « bien choisir son projet » 과 « Avant de partir, il faut aussi se renseigner sur l'organisme » 처럼 글 전체가 봉사 전에 따져 볼 점을 다룬다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Qu'est-ce qui a gêné Camille pendant son séjour ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les enfants voyaient sans cesse partir les volontaires."
+                },
+                {
+                  "id": "b",
+                  "text": "Le séjour était trop cher."
+                },
+                {
+                  "id": "c",
+                  "text": "Les conditions de vie étaient difficiles."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « les enfants voyaient arriver un nouveau groupe de volontaires toutes les deux semaines. Ils s'attachaient à nous, puis on partait. ». 그래서 정답은 「Les enfants voyaient sans cesse partir les volontaires」이다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Selon les spécialistes, il vaut mieux choisir une mission...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "longue, ou qui demande une compétence précise."
+                },
+                {
+                  "id": "b",
+                  "text": "courte, auprès d'enfants."
+                },
+                {
+                  "id": "c",
+                  "text": "organisée par une agence de voyages."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Ils conseillent plutôt des missions où les volontaires apportent une compétence précise, ou des missions qui durent au moins six mois. ». 그래서 정답은 「longue, ou qui demande une compétence précise」이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "D'après l'article, un bon organisme...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "est toujours gratuit."
+                },
+                {
+                  "id": "b",
+                  "text": "accepte les volontaires sans formation."
+                },
+                {
+                  "id": "c",
+                  "text": "explique clairement où va l'argent."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Où va l'argent payé par le volontaire ? ... Un bon organisme répond clairement à ces questions et propose une formation avant le départ. ». 그래서 정답은 「explique clairement où va l'argent」이다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Aujourd'hui, Camille...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "veut repartir après ses études d'infirmière."
+                },
+                {
+                  "id": "b",
+                  "text": "a décidé de ne plus faire de volontariat."
+                },
+                {
+                  "id": "c",
+                  "text": "travaille dans une agence de volontariat."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Elle termine ses études d'infirmière et prévoit de repartir pendant un an avec une association médicale. ». 그래서 정답은 「veut repartir après ses études d'infirmière」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 7,
+      "instructions": "Lisez la consigne et écrivez votre texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Votre amie Julie voudrait faire du bénévolat, mais elle ne sait pas quoi choisir. Vous lui écrivez un courriel : vous lui racontez une expérience de bénévolat (la vôtre ou celle d'un proche) et vous lui donnez des conseils.",
+          "minWords": 80,
+          "maxWords": 100,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à exprimer et à justifier une opinion",
+              "points": 2
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs, organisation)",
+              "points": 1
+            },
+            {
+              "criterion": "Compétence lexicale et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Compétence grammaticale et orthographe grammaticale",
+              "points": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전."
+  }
+}

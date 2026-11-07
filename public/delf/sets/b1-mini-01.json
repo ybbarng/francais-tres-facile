@@ -1,0 +1,344 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-mini-01",
+  "level": "B1",
+  "kind": "mini",
+  "title": "Moins de déchets",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre deux fois un document. Lisez d'abord les questions, puis écoutez le document et choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez une émission de radio sur la vie en ville.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Bonjour et bienvenue dans « Vivre mieux en ville ». Aujourd'hui, nous parlons du compost. Claire Moreau, vous habitez à Nantes et vous avez installé un composteur collectif dans votre immeuble. Comment est née cette idée ?"
+              },
+              {
+                "speaker": "Claire Moreau",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour. Eh bien, tout a commencé il y a deux ans. Ma voisine et moi, nous avons remarqué que nos poubelles étaient pleines d'épluchures de légumes et de restes de café. Nous nous sommes dit que c'était dommage de jeter tout ça. Alors, nous avons proposé un composteur aux autres habitants pendant la réunion de l'immeuble."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Et les voisins ont accepté tout de suite ?"
+              },
+              {
+                "speaker": "Claire Moreau",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Pas vraiment ! Au début, certains avaient peur des mauvaises odeurs et des insectes. Il a fallu les rassurer. La mairie nous a prêté un composteur gratuitement et un animateur est venu nous expliquer comment l'utiliser. Aujourd'hui, vingt-cinq familles sur trente participent."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Qu'est-ce qui a changé pour vous ?"
+              },
+              {
+                "speaker": "Claire Moreau",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Nous jetons beaucoup moins de déchets, à peu près un tiers de moins. Et puis, au printemps, nous utilisons le compost pour les fleurs de la cour. Mais pour moi, le plus important, c'est que les voisins se parlent enfin. Avant, on se croisait dans l'escalier sans se dire bonjour !"
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Un conseil pour nos auditeurs ?"
+              },
+              {
+                "speaker": "Claire Moreau",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Commencez petit, et surtout, ne restez pas seuls : demandez de l'aide à votre mairie."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "L'idée du composteur collectif vient...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "d'une proposition de la mairie."
+                },
+                {
+                  "id": "b",
+                  "text": "d'un animateur du quartier."
+                },
+                {
+                  "id": "c",
+                  "text": "de Claire et de sa voisine."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Ma voisine et moi, nous avons remarqué... nous avons proposé un composteur aux autres habitants » 에서 클레르와 이웃이 낸 생각임을 알 수 있다. 시청은 나중에 퇴비통을 빌려주었을 뿐이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Au début, certains voisins...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "trouvaient le projet trop cher."
+                },
+                {
+                  "id": "b",
+                  "text": "avaient peur des odeurs et des insectes."
+                },
+                {
+                  "id": "c",
+                  "text": "n'avaient pas le temps de participer."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Au début, certains avaient peur des mauvaises odeurs et des insectes. ». 그래서 정답은 「avaient peur des odeurs et des insectes」이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Combien de familles participent aujourd'hui ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "25 familles."
+                },
+                {
+                  "id": "b",
+                  "text": "20 familles."
+                },
+                {
+                  "id": "c",
+                  "text": "30 familles."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Aujourd'hui, vingt-cinq familles sur trente participent. » 30은 건물 전체 가구 수다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Pour Claire, le résultat le plus important est...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "la baisse des déchets."
+                },
+                {
+                  "id": "b",
+                  "text": "les fleurs de la cour."
+                },
+                {
+                  "id": "c",
+                  "text": "les meilleures relations entre voisins."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Mais pour moi, le plus important, c'est que les voisins se parlent enfin. » 쓰레기 감소와 꽃도 말하지만 « le plus important » 은 이웃 관계다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un journal local.",
+          "title": "Un an presque sans poubelle : le pari de la famille Garnier",
+          "text": "Il y a un an, Julien et Sophie Garnier, parents de deux enfants, ont décidé de réduire leurs déchets au maximum. « Nous avons vu un documentaire sur la pollution des océans et nous avons été choqués, raconte Sophie. Nous voulions agir, même à notre petite échelle. »\n\nLa famille a commencé par la cuisine. Elle fait désormais ses courses au marché et dans une épicerie où l'on achète les produits en vrac, avec ses propres bocaux en verre. « Le plus difficile, c'était les habitudes, explique Julien. Au supermarché, tout est emballé dans du plastique. Il faut prévoir ses sacs et ses boîtes avant de partir, sinon c'est raté. »\n\nLes enfants, qui ont huit et onze ans, ont d'abord protesté : ils regrettaient leurs gâteaux industriels. Aujourd'hui, ils préparent eux-mêmes des biscuits le dimanche avec leur père.\n\nRésultat : la poubelle de la famille, qui se remplissait autrefois en trois jours, n'est plus sortie qu'une fois par mois. Côté budget, les Garnier disent dépenser un peu moins qu'avant, surtout parce qu'ils achètent seulement les quantités dont ils ont besoin.\n\nSophie reconnaît toutefois que le zéro déchet demande du temps. « Je ne dirais pas qu'on a réussi à cent pour cent. Mais si chaque famille faisait un petit effort, les résultats seraient énormes. »",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Pourquoi les Garnier ont-ils changé leurs habitudes ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Pour faire des économies."
+                },
+                {
+                  "id": "b",
+                  "text": "Après avoir vu un documentaire."
+                },
+                {
+                  "id": "c",
+                  "text": "Parce que leurs enfants l'ont demandé."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Nous avons vu un documentaire sur la pollution des océans et nous avons été choqués ». 그래서 정답은 「Après avoir vu un documentaire」이다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Selon Julien, la principale difficulté a été...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le prix des produits en vrac."
+                },
+                {
+                  "id": "b",
+                  "text": "le manque de magasins près de chez eux."
+                },
+                {
+                  "id": "c",
+                  "text": "de changer leurs habitudes."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Le plus difficile, c'était les habitudes, explique Julien. ». 그래서 정답은 「de changer leurs habitudes」이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Au début, les enfants...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "étaient contents du projet."
+                },
+                {
+                  "id": "b",
+                  "text": "n'étaient pas d'accord."
+                },
+                {
+                  "id": "c",
+                  "text": "aidaient à faire les courses."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Les enfants... ont d'abord protesté : ils regrettaient leurs gâteaux industriels. ». 그래서 정답은 「n'étaient pas d'accord」이다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Aujourd'hui, la famille sort sa poubelle...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "une fois par mois."
+                },
+                {
+                  "id": "b",
+                  "text": "tous les trois jours."
+                },
+                {
+                  "id": "c",
+                  "text": "une fois par semaine."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« la poubelle... qui se remplissait autrefois en trois jours, n'est plus sortie qu'une fois par mois. » 사흘은 예전 이야기다."
+            },
+            {
+              "id": "q9",
+              "type": "truefalse",
+              "prompt": "La famille dépense plus d'argent qu'avant pour ses courses.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 1,
+              "explanation": "« les Garnier disent dépenser un peu moins qu'avant » — 예전보다 조금 덜 쓴다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Quelle est l'opinion de Sophie ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les petits efforts de chacun peuvent beaucoup changer."
+                },
+                {
+                  "id": "b",
+                  "text": "Le zéro déchet est facile pour tout le monde."
+                },
+                {
+                  "id": "c",
+                  "text": "Sa famille a parfaitement réussi."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« si chaque famille faisait un petit effort, les résultats seraient énormes. » 또 « Je ne dirais pas qu'on a réussi à cent pour cent » 이라 c는 틀리고, « demande du temps » 이라 b도 틀리다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 7,
+      "instructions": "Lisez la consigne et écrivez votre texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Sur un forum, quelqu'un pose la question suivante : « Faut-il obliger les supermarchés à vendre plus de produits sans emballage ? » Vous répondez sur le forum. Vous donnez votre opinion et vous la justifiez avec un exemple tiré de votre expérience.",
+          "minWords": 80,
+          "maxWords": 100,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à exprimer et à justifier une opinion",
+              "points": 2
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs, organisation)",
+              "points": 1
+            },
+            {
+              "criterion": "Compétence lexicale et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Compétence grammaticale et orthographe grammaticale",
+              "points": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전."
+  }
+}

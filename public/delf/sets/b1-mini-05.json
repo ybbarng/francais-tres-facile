@@ -1,0 +1,307 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-mini-05",
+  "level": "B1",
+  "kind": "mini",
+  "title": "Une ville sans voitures ?",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre deux fois un document. Lisez d'abord les questions, puis écoutez le document et choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez un reportage à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Depuis le mois de mai, la rue de la République, en plein centre de Besançon, est fermée aux voitures. Nous avons demandé aux habitants ce qu'ils en pensaient. Madame, vous tenez une boulangerie dans cette rue..."
+              },
+              {
+                "speaker": "Boulangère",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Oui, et j'étais complètement contre ce projet ! J'avais peur de perdre mes clients qui venaient en voiture. Mais je dois reconnaître que je me suis trompée : il y a beaucoup plus de monde qui passe à pied, et j'ai même installé trois tables sur le trottoir. Je vends plus qu'avant."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "Et vous, monsieur, vous habitez ici depuis longtemps ?"
+              },
+              {
+                "speaker": "Habitant",
+                "voice": "Grandpa (프랑스어(프랑스))",
+                "text": "Depuis quarante ans. C'est vrai que c'est plus calme et que l'air est meilleur. Mais pour les personnes âgées comme moi, c'est plus compliqué. Ma fille ne peut plus me déposer devant chez moi, et l'arrêt de bus le plus proche est à dix minutes à pied. Il faudrait que la mairie pense aussi à nous."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Thomas",
+                "text": "La mairie a justement annoncé qu'une petite navette électrique gratuite circulerait dans le centre à partir de septembre."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Avant la fermeture de la rue aux voitures, la boulangère...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "était opposée au projet."
+                },
+                {
+                  "id": "b",
+                  "text": "était favorable au projet."
+                },
+                {
+                  "id": "c",
+                  "text": "n'avait pas d'avis."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « j'étais complètement contre ce projet ! ». 그래서 정답은 「était opposée au projet」이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Aujourd'hui, la boulangère...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "a perdu des clients."
+                },
+                {
+                  "id": "b",
+                  "text": "vend plus qu'avant."
+                },
+                {
+                  "id": "c",
+                  "text": "veut déménager sa boutique."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « je me suis trompée : il y a beaucoup plus de monde qui passe à pied... Je vends plus qu'avant. ». 그래서 정답은 「vend plus qu'avant」이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Quel problème l'habitant mentionne-t-il ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le bruit dans la rue."
+                },
+                {
+                  "id": "b",
+                  "text": "La pollution de l'air."
+                },
+                {
+                  "id": "c",
+                  "text": "Les difficultés de déplacement des personnes âgées."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« pour les personnes âgées comme moi, c'est plus compliqué... l'arrêt de bus le plus proche est à dix minutes à pied ». 소음과 공기는 오히려 좋아졌다고 말한다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Qu'est-ce que la mairie va mettre en place ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Une nouvelle ligne de bus payante."
+                },
+                {
+                  "id": "b",
+                  "text": "Une navette électrique gratuite."
+                },
+                {
+                  "id": "c",
+                  "text": "Un parking pour les habitants."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « une petite navette électrique gratuite circulerait dans le centre à partir de septembre ». 그래서 정답은 「Une navette électrique gratuite」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cette page d'information de votre ville.",
+          "title": "Vélo'Ville : ce qui change le 1er mars",
+          "text": "À partir du 1er mars, le service de vélos en libre-service de la ville évolue. Voici les principales nouveautés.\n\nPlus de vélos électriques\nSur les 800 vélos du réseau, la moitié sera désormais électrique. Vous les reconnaîtrez facilement : ils sont verts. Les vélos classiques restent bleus.\n\nNouveaux tarifs\nL'abonnement annuel passe de 30 € à 35 €. Avec un vélo classique, les trente premières minutes de chaque trajet restent gratuites pour les abonnés ; ensuite, chaque demi-heure coûte 1 €. Avec un vélo électrique, chaque trajet coûte 0,50 € de plus. Les étudiants et les demandeurs d'emploi paient l'abonnement moitié prix, sur présentation d'un justificatif.\n\nUne application plus simple\nVous n'aurez plus besoin de carte : vous pourrez déverrouiller le vélo directement avec votre téléphone. Les anciennes cartes fonctionneront encore jusqu'au 30 juin.\n\nAttention\nLes vélos doivent être rendus dans une station. Si vous laissez un vélo ailleurs, vous devrez payer une amende de 20 €.",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Comment reconnaît-on un vélo électrique ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Il est bleu."
+                },
+                {
+                  "id": "b",
+                  "text": "Il a une carte."
+                },
+                {
+                  "id": "c",
+                  "text": "Il est vert."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Vous les reconnaîtrez facilement : ils sont verts. Les vélos classiques restent bleus. ». 그래서 정답은 「Il est vert」이다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Pour une personne qui a un emploi, l'abonnement annuel coûtera...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "35 €."
+                },
+                {
+                  "id": "b",
+                  "text": "30 €."
+                },
+                {
+                  "id": "c",
+                  "text": "17,50 €."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« L'abonnement annuel passe de 30 € à 35 € ». 반값(17,50 €)은 학생과 구직자만 해당한다."
+            },
+            {
+              "id": "q7",
+              "type": "truefalse",
+              "prompt": "Pour un abonné, un trajet de vingt minutes avec un vélo classique est gratuit.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 1,
+              "explanation": "« Avec un vélo classique, les trente premières minutes de chaque trajet restent gratuites pour les abonnés » — 20분은 30분 안이라 무료다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Jusqu'à quand peut-on utiliser l'ancienne carte ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Jusqu'au 30 juin."
+                },
+                {
+                  "id": "b",
+                  "text": "Jusqu'au 1er mars."
+                },
+                {
+                  "id": "c",
+                  "text": "Sans limite de date."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Les anciennes cartes fonctionneront encore jusqu'au 30 juin. ». 그래서 정답은 「Jusqu'au 30 juin」이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Que se passe-t-il si on laisse un vélo en dehors d'une station ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "On perd son abonnement."
+                },
+                {
+                  "id": "b",
+                  "text": "On paie une amende de 20 €."
+                },
+                {
+                  "id": "c",
+                  "text": "On paie 1 € de plus."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Si vous laissez un vélo ailleurs, vous devrez payer une amende de 20 €. ». 그래서 정답은 「On paie une amende de 20 €」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 7,
+      "instructions": "Lisez la consigne et écrivez votre texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "La mairie de votre ville propose de fermer le centre-ville aux voitures tous les week-ends. Vous écrivez un court courriel au journal local pour donner votre opinion. Vous expliquez comment ce projet changerait votre vie quotidienne.",
+          "minWords": 80,
+          "maxWords": 100,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à exprimer et à justifier une opinion",
+              "points": 2
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs, organisation)",
+              "points": 1
+            },
+            {
+              "criterion": "Compétence lexicale et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Compétence grammaticale et orthographe grammaticale",
+              "points": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전."
+  }
+}

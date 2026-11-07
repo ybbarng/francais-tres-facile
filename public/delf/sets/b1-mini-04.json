@@ -1,0 +1,349 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-mini-04",
+  "level": "B1",
+  "kind": "mini",
+  "title": "Apprendre autrement",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre deux documents. Chaque document est diffusé deux fois. Lisez d'abord les questions, puis écoutez et choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous entendez cette annonce à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Annonceur",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Vous avez envie d'apprendre, mais vous n'avez pas le temps de reprendre des études ? L'université populaire de Grenoble vous propose plus de cent cours du soir : langues, histoire de l'art, informatique, cuisine du monde... Aucun diplôme n'est demandé, et les cours commencent le lundi six octobre. L'inscription coûte quarante euros pour l'année, quel que soit le nombre de cours que vous choisissez. Attention, les places sont limitées : inscrivez-vous en ligne avant le vingt septembre."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Pour suivre les cours de l'université populaire, il faut...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "payer quarante euros pour toute l'année."
+                },
+                {
+                  "id": "b",
+                  "text": "avoir le baccalauréat."
+                },
+                {
+                  "id": "c",
+                  "text": "payer quarante euros par cours."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« L'inscription coûte quarante euros pour l'année, quel que soit le nombre de cours ». « Aucun diplôme n'est demandé » 이라 b는 틀리다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Il faut s'inscrire avant...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le six octobre."
+                },
+                {
+                  "id": "b",
+                  "text": "le vingt septembre."
+                },
+                {
+                  "id": "c",
+                  "text": "le vingt octobre."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« inscrivez-vous en ligne avant le vingt septembre ». 10월 6일은 수업이 시작하는 날이다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Une mère et son fils discutent à la maison.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Mère",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Alors Hugo, tu as réfléchi pour l'année prochaine ? Tu sais que tu dois choisir ta formation avant la fin du mois."
+              },
+              {
+                "speaker": "Hugo",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Oui, justement, je voulais t'en parler. Je ne veux pas commencer l'université tout de suite. J'aimerais prendre une année pour travailler et voyager."
+              },
+              {
+                "speaker": "Mère",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Une année entière ? J'ai peur que tu perdes l'habitude d'étudier."
+              },
+              {
+                "speaker": "Hugo",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Je comprends, mais je ne sais pas encore ce que je veux faire. Si je m'inscris en droit juste pour faire plaisir à papa, je vais abandonner au bout de trois mois. Je préfère travailler six mois dans le restaurant de mon oncle pour gagner un peu d'argent, puis partir en Australie."
+              },
+              {
+                "speaker": "Mère",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bon... Si tu as un vrai projet, je veux bien en parler avec ton père. Mais tu prépares un plan précis, d'accord ?"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "L'année prochaine, Hugo veut...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "commencer des études de droit."
+                },
+                {
+                  "id": "b",
+                  "text": "faire une pause avant l'université."
+                },
+                {
+                  "id": "c",
+                  "text": "arrêter définitivement ses études."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Je ne veux pas commencer l'université tout de suite. J'aimerais prendre une année pour travailler et voyager. » « tout de suite » 이므로 공부를 영영 그만두는 것은 아니다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Selon Hugo, s'il commençait le droit maintenant...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "il abandonnerait vite."
+                },
+                {
+                  "id": "b",
+                  "text": "il réussirait facilement."
+                },
+                {
+                  "id": "c",
+                  "text": "son père serait déçu."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Si je m'inscris en droit juste pour faire plaisir à papa, je vais abandonner au bout de trois mois. ». 그래서 정답은 「il abandonnerait vite」이다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "À la fin de la conversation, la mère...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "accepte d'en parler au père si Hugo prépare un plan."
+                },
+                {
+                  "id": "b",
+                  "text": "refuse le projet de son fils."
+                },
+                {
+                  "id": "c",
+                  "text": "propose à Hugo de travailler avec elle."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Si tu as un vrai projet, je veux bien en parler avec ton père. Mais tu prépares un plan précis, d'accord ? ». 그래서 정답은 「accepte d'en parler au père si Hugo prépare un plan」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc3",
+          "context": "Vous lisez cet article dans un magazine sur l'éducation.",
+          "title": "L'école dehors : apprendre au grand air",
+          "text": "Chaque jeudi, les vingt-quatre élèves de Mme Lefèvre, qui ont huit ans, ne restent pas en classe. Avec leur institutrice, ils passent la journée dans un parc à vingt minutes à pied de leur école, à Rennes. Ils y font des mathématiques en comptant les arbres, du français en écrivant des poèmes sur les saisons et des sciences en observant les insectes.\n\nL'idée vient des pays scandinaves, où « l'école dehors » existe depuis longtemps. Mme Lefèvre l'a découverte pendant un stage au Danemark. « J'ai vu des enfants plus concentrés et plus autonomes que dans une salle de classe. Je me suis dit qu'il fallait essayer chez nous. »\n\nLes débuts n'ont pas été simples. Certains parents craignaient que leurs enfants tombent malades à cause du froid, ou que le programme ne soit pas respecté. L'institutrice a donc organisé une réunion pour présenter son projet, et l'école a acheté des vêtements de pluie pour toute la classe.\n\nUn an plus tard, les résultats sont encourageants : les élèves ont autant progressé que ceux des autres classes de l'école, et Mme Lefèvre constate qu'ils se disputent beaucoup moins. Les parents les plus inquiets ont changé d'avis. « Mon fils, qui détestait l'école, attend le jeudi avec impatience », raconte l'un d'eux.\n\nPlusieurs enseignants de Rennes souhaitent maintenant se lancer. Mais pour la directrice de l'école, il faut rester prudent : « Ce n'est pas une solution miracle. Sans un enseignant motivé et bien formé, cela ne marche pas. »",
+          "questions": [
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le jeudi, les élèves de Mme Lefèvre...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "travaillent dans la cour de l'école."
+                },
+                {
+                  "id": "b",
+                  "text": "partent en voyage scolaire."
+                },
+                {
+                  "id": "c",
+                  "text": "passent la journée dans un parc."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « ils passent la journée dans un parc à vingt minutes à pied de leur école ». 그래서 정답은 「passent la journée dans un parc」이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Mme Lefèvre a découvert cette pratique...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "dans un livre."
+                },
+                {
+                  "id": "b",
+                  "text": "pendant un stage au Danemark."
+                },
+                {
+                  "id": "c",
+                  "text": "grâce à des parents d'élèves."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Mme Lefèvre l'a découverte pendant un stage au Danemark. ». 그래서 정답은 「pendant un stage au Danemark」이다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Au début, certains parents avaient peur que leurs enfants...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "s'ennuient."
+                },
+                {
+                  "id": "b",
+                  "text": "se perdent dans le parc."
+                },
+                {
+                  "id": "c",
+                  "text": "tombent malades."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Certains parents craignaient que leurs enfants tombent malades à cause du froid ». 그래서 정답은 「tombent malades」이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Après un an, les élèves de Mme Lefèvre...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "ont autant progressé que les autres classes."
+                },
+                {
+                  "id": "b",
+                  "text": "ont plus progressé que les autres classes."
+                },
+                {
+                  "id": "c",
+                  "text": "ont moins progressé que les autres classes."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « les élèves ont autant progressé que ceux des autres classes de l'école ». 그래서 정답은 「ont autant progressé que les autres classes」이다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Que pense la directrice de l'école ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Toutes les écoles devraient le faire."
+                },
+                {
+                  "id": "b",
+                  "text": "Cette pratique est dangereuse pour les enfants."
+                },
+                {
+                  "id": "c",
+                  "text": "Cela fonctionne seulement avec un enseignant motivé et formé."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Ce n'est pas une solution miracle. Sans un enseignant motivé et bien formé, cela ne marche pas. ». 그래서 정답은 「Cela fonctionne seulement avec un enseignant motivé et formé」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 7,
+      "instructions": "Lisez la consigne et écrivez votre texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Le blog d'une université populaire demande à ses lecteurs de raconter une chose qu'ils ont apprise à l'âge adulte (une langue, un sport, un instrument, la cuisine...). Vous racontez votre expérience et vous dites si vous conseillez d'apprendre quelque chose de nouveau à l'âge adulte.",
+          "minWords": 80,
+          "maxWords": 100,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à exprimer et à justifier une opinion",
+              "points": 2
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs, organisation)",
+              "points": 1
+            },
+            {
+              "criterion": "Compétence lexicale et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Compétence grammaticale et orthographe grammaticale",
+              "points": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전."
+  }
+}

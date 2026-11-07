@@ -1,0 +1,326 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-mini-08",
+  "level": "B1",
+  "kind": "mini",
+  "title": "Réparer, revendre, réutiliser",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre deux fois un document. Lisez d'abord les questions, puis écoutez le document et choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous écoutez un reportage à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Nous sommes au café réparation de Montreuil, qui ouvre ses portes le premier samedi de chaque mois. Hélène, vous êtes l'une des organisatrices. Comment ça fonctionne ?"
+              },
+              {
+                "speaker": "Hélène",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "C'est très simple. Les gens viennent avec un objet cassé : un grille-pain, une lampe, un vélo, un pantalon troué... Des bénévoles les aident à le réparer. Mais attention, on ne répare pas à leur place : on répare avec eux. L'idée, c'est qu'ils apprennent à le faire."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Et c'est payant ?"
+              },
+              {
+                "speaker": "Hélène",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Non, c'est gratuit. Il y a juste une boîte pour les dons, qui nous sert à acheter des outils."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Monsieur, qu'est-ce que vous avez apporté aujourd'hui ?"
+              },
+              {
+                "speaker": "Visiteur",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Ma machine à café. Elle ne marchait plus depuis une semaine. Au magasin, on m'a dit que la réparation coûterait plus cher qu'une machine neuve. Ici, en vingt minutes, on a trouvé le problème : un petit tuyau bouché. Je suis vraiment content, et la prochaine fois, je saurai le faire tout seul."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Jacques",
+                "text": "Hélène, quels objets réparez-vous le plus souvent ?"
+              },
+              {
+                "speaker": "Hélène",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Surtout des petits appareils électriques. Les téléphones, c'est plus difficile : ils sont souvent fabriqués pour qu'on ne puisse pas les ouvrir."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Le café réparation ouvre...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "tous les samedis."
+                },
+                {
+                  "id": "b",
+                  "text": "le premier dimanche du mois."
+                },
+                {
+                  "id": "c",
+                  "text": "le premier samedi du mois."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « qui ouvre ses portes le premier samedi de chaque mois ». 그래서 정답은 「le premier samedi du mois」이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Au café réparation, les bénévoles...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "réparent les objets avec les visiteurs."
+                },
+                {
+                  "id": "b",
+                  "text": "réparent les objets à la place des visiteurs."
+                },
+                {
+                  "id": "c",
+                  "text": "vendent des objets réparés."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « on ne répare pas à leur place : on répare avec eux ». 그래서 정답은 「réparent les objets avec les visiteurs」이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Selon le magasin, la réparation de la machine à café...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "coûterait plus cher qu'une machine neuve."
+                },
+                {
+                  "id": "b",
+                  "text": "était impossible."
+                },
+                {
+                  "id": "c",
+                  "text": "prendrait une semaine."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Au magasin, on m'a dit que la réparation coûterait plus cher qu'une machine neuve. » 일주일은 기계가 고장 나 있던 기간이다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Pourquoi les téléphones sont-ils difficiles à réparer ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ils sont souvent impossibles à ouvrir."
+                },
+                {
+                  "id": "b",
+                  "text": "Les bénévoles n'ont pas les bons outils."
+                },
+                {
+                  "id": "c",
+                  "text": "Les pièces coûtent trop cher."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « ils sont souvent fabriqués pour qu'on ne puisse pas les ouvrir ». 그래서 정답은 「Ils sont souvent impossibles à ouvrir」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cet article dans un magazine.",
+          "title": "Seconde main : la nouvelle façon de s'habiller",
+          "text": "Il y a quelques années, acheter des vêtements d'occasion était plutôt mal vu. Aujourd'hui, c'est devenu à la mode, surtout chez les jeunes. Selon une étude récente, quatre Français sur dix ont acheté au moins un vêtement de seconde main l'année dernière.\n\nLes raisons sont d'abord économiques. Lucie, étudiante de vingt ans, achète presque tous ses vêtements sur des applications de vente entre particuliers. « Avec mon budget, je ne pourrais pas m'offrir de belles marques neuves. Là, je paie un jean de qualité cinq fois moins cher. »\n\nMais l'argument écologique compte aussi. La fabrication d'un seul jean demande des milliers de litres d'eau, et l'industrie textile est l'une des plus polluantes du monde. Acheter d'occasion permet de donner une deuxième vie aux vêtements au lieu de les jeter.\n\nCe succès a pourtant des effets inattendus. Certains spécialistes remarquent que beaucoup de gens revendent rapidement ce qu'ils achètent, pour pouvoir acheter encore plus. « Si on achète trois fois plus de vêtements parce qu'ils sont d'occasion, le bénéfice pour la planète disparaît », explique une sociologue.\n\nLe meilleur vêtement pour l'environnement, conclut-elle, reste celui qu'on a déjà dans son armoire.",
+          "questions": [
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Selon l'étude, combien de Français ont acheté un vêtement d'occasion l'année dernière ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Un sur dix."
+                },
+                {
+                  "id": "b",
+                  "text": "Quatre sur dix."
+                },
+                {
+                  "id": "c",
+                  "text": "La moitié."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « quatre Français sur dix ont acheté au moins un vêtement de seconde main l'année dernière ». 그래서 정답은 「Quatre sur dix」이다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Lucie achète des vêtements d'occasion surtout parce que...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "elle aime les vêtements anciens."
+                },
+                {
+                  "id": "b",
+                  "text": "ses amis le font."
+                },
+                {
+                  "id": "c",
+                  "text": "c'est moins cher."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Avec mon budget, je ne pourrais pas m'offrir de belles marques neuves. Là, je paie un jean de qualité cinq fois moins cher. ». 그래서 정답은 「c'est moins cher」이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "D'après l'article, l'industrie textile...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "utilise peu d'eau."
+                },
+                {
+                  "id": "b",
+                  "text": "pollue beaucoup."
+                },
+                {
+                  "id": "c",
+                  "text": "produit moins qu'avant."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « l'industrie textile est l'une des plus polluantes du monde ». 그래서 정답은 「pollue beaucoup」이다."
+            },
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "Quel effet inattendu certains spécialistes observent-ils ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Les vêtements d'occasion deviennent plus chers."
+                },
+                {
+                  "id": "b",
+                  "text": "Certaines personnes achètent et revendent beaucoup plus."
+                },
+                {
+                  "id": "c",
+                  "text": "Les magasins de vêtements neufs ferment."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « beaucoup de gens revendent rapidement ce qu'ils achètent, pour pouvoir acheter encore plus ». 그래서 정답은 「Certaines personnes achètent et revendent beaucoup plus」이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Selon la sociologue, le meilleur choix pour l'environnement est...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "d'acheter seulement des vêtements d'occasion."
+                },
+                {
+                  "id": "b",
+                  "text": "de revendre ses vêtements rapidement."
+                },
+                {
+                  "id": "c",
+                  "text": "de garder les vêtements qu'on a déjà."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Le meilleur vêtement pour l'environnement... reste celui qu'on a déjà dans son armoire. ». 그래서 정답은 「de garder les vêtements qu'on a déjà」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 7,
+      "instructions": "Lisez la consigne et écrivez votre texte.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Sur un forum de consommateurs, quelqu'un écrit : « Acheter d'occasion, c'est bon pour ceux qui n'ont pas d'argent. » Vous répondez à ce message. Vous donnez votre opinion et vous racontez un achat d'occasion (ou une réparation) que vous avez fait.",
+          "minWords": 80,
+          "maxWords": 100,
+          "points": 10,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, type de texte, nombre de mots)",
+              "points": 1
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à exprimer et à justifier une opinion",
+              "points": 2
+            },
+            {
+              "criterion": "Cohérence et cohésion (connecteurs, organisation)",
+              "points": 1
+            },
+            {
+              "criterion": "Compétence lexicale et orthographe lexicale",
+              "points": 2
+            },
+            {
+              "criterion": "Compétence grammaticale et orthographe grammaticale",
+              "points": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전."
+  }
+}
