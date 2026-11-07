@@ -1,0 +1,1400 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "b1-exam-02",
+  "level": "B1",
+  "kind": "exam",
+  "title": "Épreuve d'entraînement B1 — 2",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 25,
+      "instructions": "Vous allez entendre trois documents. Chaque document est diffusé deux fois. Avant chaque écoute, vous avez un peu de temps pour lire les questions. Pour chaque question, choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Exercice 1 — Une femme téléphone à un gîte pour réserver des vacances.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Gîte des Trois Chênes, bonjour !"
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Bonjour monsieur. Je vous appelle parce que j'aimerais réserver un séjour chez vous pour les vacances de printemps. Nous sommes deux adultes et deux enfants."
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Très bien. Pour quelles dates ?"
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Du douze au dix-neuf avril, si possible."
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Je regarde... Alors, la grande maison est déjà réservée cette semaine-là. Par contre, il me reste le petit gîte, avec deux chambres et une cuisine équipée. Il est un peu plus petit, mais il a une terrasse avec vue sur la rivière."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Deux chambres, ça devrait aller. Et quel est le prix ?"
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Pour la semaine, c'est six cent quarante euros. Les draps et les serviettes sont compris, mais pas le ménage de fin de séjour : si vous voulez que nous le fassions, c'est cinquante euros en plus."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "D'accord. Et est-ce qu'il y a des activités pour les enfants dans la région ? Ils ont huit et douze ans."
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Oui, beaucoup ! Il y a un centre équestre à deux kilomètres, et en avril, la base de canoë est déjà ouverte le week-end. Et nous prêtons gratuitement des vélos à nos clients."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Parfait. Et les animaux sont acceptés ? Nous avons un petit chien."
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Oui, sans problème. Mais il faut le tenir en laisse dans le jardin, parce que nous avons des poules."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Très bien. Comment est-ce que je fais pour réserver ?"
+              },
+              {
+                "speaker": "Réceptionniste",
+                "voice": "Rocko (프랑스어(프랑스))",
+                "text": "Je vous envoie le contrat par courriel aujourd'hui. Pour confirmer, vous devrez verser trente pour cent du prix, et vous paierez le reste à votre arrivée."
+              },
+              {
+                "speaker": "Cliente",
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "C'est noté. Merci beaucoup, au revoir !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "La cliente veut réserver pour combien de personnes ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Deux personnes."
+                },
+                {
+                  "id": "b",
+                  "text": "Six personnes."
+                },
+                {
+                  "id": "c",
+                  "text": "Quatre personnes."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Nous sommes deux adultes et deux enfants. » — 모두 네 명이다."
+            },
+            {
+              "id": "q2",
+              "type": "choice",
+              "prompt": "Pourquoi le réceptionniste propose-t-il le petit gîte ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le petit gîte est moins cher."
+                },
+                {
+                  "id": "b",
+                  "text": "La grande maison n'est pas libre à ces dates."
+                },
+                {
+                  "id": "c",
+                  "text": "La cliente a demandé un petit logement."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « la grande maison est déjà réservée cette semaine-là. Par contre, il me reste le petit gîte ». 그래서 정답은 「La grande maison n'est pas libre à ces dates」이다."
+            },
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "Combien coûte la semaine, sans le ménage ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "590 €."
+                },
+                {
+                  "id": "b",
+                  "text": "690 €."
+                },
+                {
+                  "id": "c",
+                  "text": "640 €."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« Pour la semaine, c'est six cent quarante euros. » 청소를 맡기면 50유로가 더해진다."
+            },
+            {
+              "id": "q4",
+              "type": "choice",
+              "prompt": "Qu'est-ce que la cliente doit payer en plus si elle le souhaite ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le ménage de fin de séjour."
+                },
+                {
+                  "id": "b",
+                  "text": "Les draps et les serviettes."
+                },
+                {
+                  "id": "c",
+                  "text": "Les vélos."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« pas le ménage de fin de séjour : ... c'est cinquante euros en plus ». 침구는 포함이고 자전거는 « gratuitement » 빌려준다."
+            },
+            {
+              "id": "q5",
+              "type": "choice",
+              "prompt": "Qu'est-ce que le gîte propose gratuitement à ses clients ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Des cours d'équitation."
+                },
+                {
+                  "id": "b",
+                  "text": "Des sorties en canoë."
+                },
+                {
+                  "id": "c",
+                  "text": "Des vélos."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "« nous prêtons gratuitement des vélos à nos clients ». 승마장과 카누는 근처에 있다고만 한다."
+            },
+            {
+              "id": "q6",
+              "type": "choice",
+              "prompt": "Le chien de la cliente...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "est accepté s'il reste en laisse dans le jardin."
+                },
+                {
+                  "id": "b",
+                  "text": "n'est pas accepté."
+                },
+                {
+                  "id": "c",
+                  "text": "doit rester à l'intérieur du gîte."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Oui, sans problème. Mais il faut le tenir en laisse dans le jardin ». 그래서 정답은 「est accepté s'il reste en laisse dans le jardin」이다."
+            },
+            {
+              "id": "q7",
+              "type": "choice",
+              "prompt": "Pour confirmer la réservation, la cliente doit...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "verser trente pour cent du prix."
+                },
+                {
+                  "id": "b",
+                  "text": "payer tout le séjour."
+                },
+                {
+                  "id": "c",
+                  "text": "envoyer cinquante euros."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Pour confirmer, vous devrez verser trente pour cent du prix, et vous paierez le reste à votre arrivée. ». 그래서 정답은 「verser trente pour cent du prix」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc2",
+          "context": "Exercice 2 — Vous écoutez une émission de radio sur le travail.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Bienvenue dans « Le monde du travail ». Aujourd'hui, direction Saint-Julien, un village de huit cents habitants dans le Limousin. Benoît Lacroix y a ouvert, il y a un an, un espace de travail partagé, dans l'ancienne poste du village. Benoît, à quoi sert ce lieu ?"
+              },
+              {
+                "speaker": "Benoît Lacroix",
+                "voice": "Thomas",
+                "text": "C'est un bureau que plusieurs personnes utilisent ensemble. Nous avons douze postes de travail, une bonne connexion internet, une salle de réunion et une cuisine. Les gens viennent à la journée, à la semaine ou au mois, et ils paient seulement le temps qu'ils utilisent."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Qui sont vos clients ?"
+              },
+              {
+                "speaker": "Benoît Lacroix",
+                "voice": "Thomas",
+                "text": "Surtout des salariés en télétravail qui ont quitté la ville ces dernières années. Ils pensaient pouvoir travailler tranquillement chez eux, mais beaucoup se sont rendu compte qu'ils se sentaient isolés. Il y a aussi des travailleurs indépendants : une graphiste, un traducteur, un architecte."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Pourquoi avoir choisi un si petit village ?"
+              },
+              {
+                "speaker": "Benoît Lacroix",
+                "voice": "Thomas",
+                "text": "Parce que c'est là que j'ai grandi ! Quand j'étais jeune, tous mes amis sont partis en ville pour trouver du travail. Je voulais montrer qu'aujourd'hui, avec internet, on peut vivre et travailler à la campagne. Et la mairie m'a beaucoup aidé : elle me loue le bâtiment pour un prix très bas."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Est-ce que c'est rentable ?"
+              },
+              {
+                "speaker": "Benoît Lacroix",
+                "voice": "Thomas",
+                "text": "Pas encore, honnêtement. Les postes sont occupés à environ soixante pour cent. Pour gagner ma vie, je continue à travailler à mi-temps comme informaticien. Mais je suis optimiste : chaque mois, de nouvelles personnes nous contactent."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Sandy (프랑스어(프랑스))",
+                "text": "Qu'est-ce qui a changé dans le village depuis l'ouverture ?"
+              },
+              {
+                "speaker": "Benoît Lacroix",
+                "voice": "Thomas",
+                "text": "Beaucoup de choses ! Nos clients déjeunent au restaurant du village, qui avait failli fermer. Aujourd'hui, il est plein tous les midis. Et deux familles se sont installées à Saint-Julien parce qu'elles savaient qu'elles pourraient travailler ici. L'école a même pu garder sa deuxième classe."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q8",
+              "type": "choice",
+              "prompt": "L'espace de travail partagé se trouve...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "dans la mairie."
+                },
+                {
+                  "id": "b",
+                  "text": "dans une ancienne école."
+                },
+                {
+                  "id": "c",
+                  "text": "dans l'ancienne poste du village."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "근거 문장: « un espace de travail partagé, dans l'ancienne poste du village ». 그래서 정답은 「dans l'ancienne poste du village」이다."
+            },
+            {
+              "id": "q9",
+              "type": "choice",
+              "prompt": "Les clients de l'espace de travail paient...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "un abonnement annuel obligatoire."
+                },
+                {
+                  "id": "b",
+                  "text": "seulement le temps qu'ils utilisent."
+                },
+                {
+                  "id": "c",
+                  "text": "rien : c'est gratuit."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "근거 문장: « ils paient seulement le temps qu'ils utilisent ». 그래서 정답은 「seulement le temps qu'ils utilisent」이다."
+            },
+            {
+              "id": "q10",
+              "type": "choice",
+              "prompt": "Pourquoi beaucoup de télétravailleurs viennent-ils dans cet espace ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Ils n'ont pas internet chez eux."
+                },
+                {
+                  "id": "b",
+                  "text": "Ils se sentaient isolés chez eux."
+                },
+                {
+                  "id": "c",
+                  "text": "Leur entreprise les y oblige."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "근거 문장: « beaucoup se sont rendu compte qu'ils se sentaient isolés ». 그래서 정답은 「Ils se sentaient isolés chez eux」이다."
+            },
+            {
+              "id": "q11",
+              "type": "choice",
+              "prompt": "Benoît a choisi ce village parce que...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "la mairie lui a donné le bâtiment."
+                },
+                {
+                  "id": "b",
+                  "text": "ses clients y habitaient déjà."
+                },
+                {
+                  "id": "c",
+                  "text": "il y a grandi."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "« Parce que c'est là que j'ai grandi ! » 시청은 건물을 준 것이 아니라 « me loue le bâtiment pour un prix très bas » 싸게 빌려준다."
+            },
+            {
+              "id": "q12",
+              "type": "choice",
+              "prompt": "Aujourd'hui, l'activité de Benoît...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "est très rentable."
+                },
+                {
+                  "id": "b",
+                  "text": "n'est pas encore rentable."
+                },
+                {
+                  "id": "c",
+                  "text": "va bientôt s'arrêter."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "« Est-ce que c'est rentable ? — Pas encore, honnêtement. » 그래도 « je suis optimiste » 라 c는 틀리다."
+            },
+            {
+              "id": "q13",
+              "type": "choice",
+              "prompt": "Grâce à l'espace de travail partagé...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le restaurant du village a retrouvé des clients."
+                },
+                {
+                  "id": "b",
+                  "text": "une nouvelle école a été construite."
+                },
+                {
+                  "id": "c",
+                  "text": "la poste a rouvert."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« Nos clients déjeunent au restaurant du village, qui avait failli fermer. Aujourd'hui, il est plein tous les midis. » 학교는 새로 지은 것이 아니라 두 번째 반을 지켰다."
+            }
+          ]
+        },
+        {
+          "id": "doc3",
+          "context": "Exercice 3 — Vous écoutez un reportage à la radio.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Pendant longtemps, on les a crus réservés aux enfants ou aux soirées de Noël en famille. Pourtant, les jeux de société connaissent aujourd'hui un succès impressionnant : en France, leurs ventes ont presque doublé en dix ans. Nous sommes à Lille, dans un bar à jeux, où l'on peut boire un verre en jouant à l'un des huit cents jeux disponibles. Camille, vous êtes la gérante. Qui sont vos clients ?"
+              },
+              {
+                "speaker": "Camille",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Il y a vraiment de tout : des étudiants, des couples, des collègues qui viennent après le travail, et même des grands-parents avec leurs petits-enfants le mercredi. Ce qui m'étonne, c'est le nombre de jeunes adultes. Le vendredi soir, nous devons refuser du monde !"
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Comment expliquez-vous ce succès ?"
+              },
+              {
+                "speaker": "Camille",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Je crois que les gens ont besoin de se retrouver vraiment, sans écran entre eux. Quand on joue, on se regarde, on rit, on discute. Et puis, les jeux ont beaucoup changé : ils sont plus beaux, plus variés, et il y en a pour tous les goûts."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Antoine Leroy, vous êtes sociologue et vous étudiez les loisirs. Êtes-vous d'accord ?"
+              },
+              {
+                "speaker": "Antoine Leroy",
+                "voice": "Jacques",
+                "text": "Oui, en partie. Mais je voudrais ajouter une chose : beaucoup de jeux modernes sont coopératifs. Les joueurs ne jouent plus les uns contre les autres, mais ensemble, contre le jeu. Cela correspond à une envie de notre époque : faire équipe plutôt que gagner seul."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Les jeux de société, c'est aussi une question d'argent..."
+              },
+              {
+                "speaker": "Antoine Leroy",
+                "voice": "Jacques",
+                "text": "Bien sûr. Certains jeux coûtent plus de soixante euros, et tout le monde ne peut pas se les offrir. C'est pourquoi les ludothèques, ces bibliothèques où l'on emprunte des jeux, sont si importantes. Elles permettent à toutes les familles de jouer, quel que soit leur budget."
+              },
+              {
+                "speaker": "Journaliste",
+                "voice": "Eddy (프랑스어(프랑스))",
+                "text": "Camille, un dernier mot ?"
+              },
+              {
+                "speaker": "Camille",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Oui : n'ayez pas peur des règles ! Ici, nos animateurs les expliquent en cinq minutes. Le plus difficile, c'est souvent de s'arrêter de jouer !"
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q14",
+              "type": "choice",
+              "prompt": "Selon le journaliste, en dix ans, les ventes de jeux de société en France ont...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "légèrement baissé."
+                },
+                {
+                  "id": "b",
+                  "text": "triplé."
+                },
+                {
+                  "id": "c",
+                  "text": "presque doublé."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "근거 문장: « leurs ventes ont presque doublé en dix ans ». 그래서 정답은 「presque doublé」이다."
+            },
+            {
+              "id": "q15",
+              "type": "choice",
+              "prompt": "Qu'est-ce qui étonne la gérante du bar à jeux ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le nombre de grands-parents."
+                },
+                {
+                  "id": "b",
+                  "text": "Le nombre de jeunes adultes."
+                },
+                {
+                  "id": "c",
+                  "text": "Le prix des jeux."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "근거 문장: « Ce qui m'étonne, c'est le nombre de jeunes adultes. ». 그래서 정답은 「Le nombre de jeunes adultes」이다."
+            },
+            {
+              "id": "q16",
+              "type": "choice",
+              "prompt": "Selon Camille, les gens aiment les jeux de société parce qu'ils...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "veulent gagner des prix."
+                },
+                {
+                  "id": "b",
+                  "text": "ont besoin de se retrouver sans écran."
+                },
+                {
+                  "id": "c",
+                  "text": "s'ennuient au travail."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1.5,
+              "explanation": "근거 문장: « les gens ont besoin de se retrouver vraiment, sans écran entre eux ». 그래서 정답은 「ont besoin de se retrouver sans écran」이다."
+            },
+            {
+              "id": "q17",
+              "type": "choice",
+              "prompt": "Selon le sociologue, beaucoup de jeux modernes...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "sont plus difficiles qu'avant."
+                },
+                {
+                  "id": "b",
+                  "text": "se jouent seul."
+                },
+                {
+                  "id": "c",
+                  "text": "se jouent ensemble, contre le jeu."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1.5,
+              "explanation": "근거 문장: « beaucoup de jeux modernes sont coopératifs. Les joueurs ne jouent plus les uns contre les autres, mais ensemble, contre le jeu ». 그래서 정답은 「se jouent ensemble, contre le jeu」이다."
+            },
+            {
+              "id": "q18",
+              "type": "choice",
+              "prompt": "D'après le sociologue, les ludothèques sont importantes parce qu'elles...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "permettent à toutes les familles de jouer."
+                },
+                {
+                  "id": "b",
+                  "text": "vendent des jeux moins chers."
+                },
+                {
+                  "id": "c",
+                  "text": "créent de nouveaux jeux."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "« Elles permettent à toutes les familles de jouer, quel que soit leur budget. » 장난감 도서관은 « où l'on emprunte des jeux » 빌리는 곳이지 파는 곳이 아니다."
+            },
+            {
+              "id": "q19",
+              "type": "choice",
+              "prompt": "Au bar à jeux, les règles des jeux...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "sont expliquées par des animateurs."
+                },
+                {
+                  "id": "b",
+                  "text": "sont très longues à apprendre."
+                },
+                {
+                  "id": "c",
+                  "text": "doivent être lues avant de venir."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1.5,
+              "explanation": "근거 문장: « Ici, nos animateurs les expliquent en cinq minutes. ». 그래서 정답은 「sont expliquées par des animateurs」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 45,
+      "instructions": "Lisez les documents et répondez aux questions. Exercice 1 : pour chaque annonce, indiquez si elle correspond ou non à chaque critère. Exercices 2 et 3 : choisissez la bonne réponse.",
+      "documents": [
+        {
+          "id": "doc4",
+          "context": "Exercice 1 — Votre ami Lucas va étudier à l'université de Montpellier. Il cherche un logement : un loyer de 500 € maximum par mois, charges comprises ; un logement meublé ; à 15 minutes maximum de l'université ; disponible dès le 1er septembre. Lisez les quatre annonces. Annonce A :",
+          "title": "A — Studio en centre-ville",
+          "text": "Studio de 22 m² en centre-ville, entièrement meublé et équipé.\n\nLoyer : 480 € par mois, charges comprises.\n\nTram direct pour l'université : 25 minutes.\n\nLibre le 1er septembre.",
+          "questions": [
+            {
+              "id": "q20",
+              "type": "truefalse",
+              "prompt": "Annonce A : le loyer, charges comprises, est de 500 € maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « 480 € par mois, charges comprises ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q21",
+              "type": "truefalse",
+              "prompt": "Annonce A : le logement est meublé.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « entièrement meublé et équipé ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q22",
+              "type": "truefalse",
+              "prompt": "Annonce A : le logement est à 15 minutes maximum de l'université.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 0.5,
+              "explanation": "« Tram direct pour l'université : 25 minutes » — 15분을 넘는다."
+            },
+            {
+              "id": "q23",
+              "type": "truefalse",
+              "prompt": "Annonce A : le logement est disponible le 1er septembre.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « Libre le 1er septembre. ». 그래서 정답은 「Vrai」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc5",
+          "context": "Exercice 1 (suite) — Critères de Lucas : 500 € maximum charges comprises, meublé, 15 minutes maximum de l'université, disponible dès le 1er septembre. Annonce B :",
+          "title": "B — Chambre chez l'habitant",
+          "text": "Grande chambre meublée chez l'habitant, dans une maison avec jardin, à 10 minutes à pied de l'université.\n\n420 € par mois, charges comprises (eau, électricité, internet).\n\nDisponible à partir du 1er octobre.",
+          "questions": [
+            {
+              "id": "q24",
+              "type": "truefalse",
+              "prompt": "Annonce B : le loyer, charges comprises, est de 500 € maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « 420 € par mois, charges comprises ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q25",
+              "type": "truefalse",
+              "prompt": "Annonce B : le logement est meublé.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « Grande chambre meublée ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q26",
+              "type": "truefalse",
+              "prompt": "Annonce B : le logement est à 15 minutes maximum de l'université.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « à 10 minutes à pied de l'université ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q27",
+              "type": "truefalse",
+              "prompt": "Annonce B : le logement est disponible le 1er septembre.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 0.5,
+              "explanation": "« Disponible à partir du 1er octobre. » — 9월 1일에는 들어갈 수 없다."
+            }
+          ]
+        },
+        {
+          "id": "doc6",
+          "context": "Exercice 1 (suite) — Critères de Lucas : 500 € maximum charges comprises, meublé, 15 minutes maximum de l'université, disponible dès le 1er septembre. Annonce C :",
+          "title": "C — Colocation",
+          "text": "Nous cherchons un troisième colocataire ! Chambre de 14 m² non meublée ; le salon et la cuisine sont équipés.\n\nLoyer : 390 € + 60 € de charges par mois.\n\nL'université est à 5 minutes à vélo.\n\nEntrée possible dès le 1er septembre.",
+          "questions": [
+            {
+              "id": "q28",
+              "type": "truefalse",
+              "prompt": "Annonce C : le loyer, charges comprises, est de 500 € maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« 390 € + 60 € de charges » — 합해서 450유로다."
+            },
+            {
+              "id": "q29",
+              "type": "truefalse",
+              "prompt": "Annonce C : le logement est meublé.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["f"],
+              "points": 0.5,
+              "explanation": "« Chambre de 14 m² non meublée » — 거실과 부엌만 갖춰져 있다."
+            },
+            {
+              "id": "q30",
+              "type": "truefalse",
+              "prompt": "Annonce C : le logement est à 15 minutes maximum de l'université.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « L'université est à 5 minutes à vélo. ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q31",
+              "type": "truefalse",
+              "prompt": "Annonce C : le logement est disponible le 1er septembre.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « Entrée possible dès le 1er septembre. ». 그래서 정답은 「Vrai」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc7",
+          "context": "Exercice 1 (suite) — Critères de Lucas : 500 € maximum charges comprises, meublé, 15 minutes maximum de l'université, disponible dès le 1er septembre. Annonce D :",
+          "title": "D — Résidence étudiante",
+          "text": "Appartement de deux pièces dans une résidence étudiante, meublé.\n\nLoyer : 450 € + 40 € de charges par mois.\n\nÀ 8 minutes à pied de l'université.\n\nLibre le 1er septembre.",
+          "questions": [
+            {
+              "id": "q32",
+              "type": "truefalse",
+              "prompt": "Annonce D : le loyer, charges comprises, est de 500 € maximum.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« 450 € + 40 € de charges » — 합해서 490유로라 500유로 안이다."
+            },
+            {
+              "id": "q33",
+              "type": "truefalse",
+              "prompt": "Annonce D : le logement est meublé.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « dans une résidence étudiante, meublé ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q34",
+              "type": "truefalse",
+              "prompt": "Annonce D : le logement est à 15 minutes maximum de l'université.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "근거 문장: « À 8 minutes à pied de l'université. ». 그래서 정답은 「Vrai」이다."
+            },
+            {
+              "id": "q35",
+              "type": "truefalse",
+              "prompt": "Annonce D : le logement est disponible le 1er septembre.",
+              "options": [
+                {
+                  "id": "v",
+                  "text": "Vrai"
+                },
+                {
+                  "id": "f",
+                  "text": "Faux"
+                }
+              ],
+              "answer": ["v"],
+              "points": 0.5,
+              "explanation": "« Libre le 1er septembre. » 네 기준을 모두 맞추는 광고는 D뿐이다."
+            }
+          ]
+        },
+        {
+          "id": "doc8",
+          "context": "Exercice 2 — Vous lisez cet article dans un journal.",
+          "title": "Emporter les restes de son assiette : une habitude qui a du mal à s'imposer",
+          "text": "Au restaurant, vous n'avez pas fini votre plat. Que faites-vous ? Aux États-Unis ou au Canada, la question ne se pose pas : on demande une boîte et on emporte les restes à la maison. En France, en revanche, beaucoup de clients n'osent pas encore le faire.\n\nPourtant, le gaspillage alimentaire dans les restaurants est important : selon les spécialistes, un client laisse en moyenne plus de cent grammes de nourriture dans son assiette à chaque repas. C'est pourquoi la loi oblige désormais les restaurants à fournir un récipient aux clients qui le demandent.\n\nAlors, pourquoi les Français hésitent-ils ? « J'ai l'impression que ce n'est pas très élégant, avoue Martine, 60 ans. Demander une boîte, c'est comme dire qu'on n'a pas assez d'argent. » D'autres pensent que le serveur va mal le prendre, ou que c'est réservé aux restaurants bon marché.\n\nCertains restaurateurs ont décidé de changer ces habitudes. À Nantes, Julien Perrin, propriétaire d'une brasserie, propose systématiquement une boîte en carton à la fin du repas. « Je n'attends pas que les clients demandent, je leur propose. Ça change tout : ils acceptent presque toujours, et ils me remercient. » Il a aussi réduit la taille de certaines portions et propose maintenant des demi-portions pour les petits appétits.\n\nMais emporter ses restes n'est qu'une partie de la solution. Pour les associations de lutte contre le gaspillage, le problème commence en cuisine : achats mal prévus, produits jetés parce que leur aspect n'est pas parfait... Certaines associations accompagnent donc les restaurants pour qu'ils gaspillent moins dès la préparation des repas.\n\nUne chose est sûre : les mentalités évoluent, surtout chez les jeunes, pour qui ne pas gaspiller est devenu une évidence.",
+          "questions": [
+            {
+              "id": "q36",
+              "type": "choice",
+              "prompt": "En France, au restaurant, beaucoup de clients...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "emportent toujours leurs restes."
+                },
+                {
+                  "id": "b",
+                  "text": "finissent toujours leur assiette."
+                },
+                {
+                  "id": "c",
+                  "text": "n'osent pas encore emporter leurs restes."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « En France, en revanche, beaucoup de clients n'osent pas encore le faire. ». 그래서 정답은 「n'osent pas encore emporter leurs restes」이다."
+            },
+            {
+              "id": "q37",
+              "type": "choice",
+              "prompt": "Selon la loi, les restaurants doivent...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "servir des demi-portions."
+                },
+                {
+                  "id": "b",
+                  "text": "faire payer les boîtes."
+                },
+                {
+                  "id": "c",
+                  "text": "donner un récipient aux clients qui le demandent."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « la loi oblige désormais les restaurants à fournir un récipient aux clients qui le demandent ». 그래서 정답은 「donner un récipient aux clients qui le demandent」이다."
+            },
+            {
+              "id": "q38",
+              "type": "choice",
+              "prompt": "Pourquoi Martine hésite-t-elle à demander une boîte ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Elle trouve que ce n'est pas élégant."
+                },
+                {
+                  "id": "b",
+                  "text": "Les boîtes sont payantes."
+                },
+                {
+                  "id": "c",
+                  "text": "Elle n'aime pas manger les restes."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « J'ai l'impression que ce n'est pas très élégant, avoue Martine ». 그래서 정답은 「Elle trouve que ce n'est pas élégant」이다."
+            },
+            {
+              "id": "q39",
+              "type": "choice",
+              "prompt": "Qu'est-ce que Julien Perrin fait différemment des autres ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Il interdit d'emporter les restes."
+                },
+                {
+                  "id": "b",
+                  "text": "Il attend que les clients demandent une boîte."
+                },
+                {
+                  "id": "c",
+                  "text": "Il propose lui-même une boîte aux clients."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « Je n'attends pas que les clients demandent, je leur propose. ». 그래서 정답은 「Il propose lui-même une boîte aux clients」이다."
+            },
+            {
+              "id": "q40",
+              "type": "choice",
+              "prompt": "Quand Julien Perrin propose une boîte, les clients...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "refusent souvent."
+                },
+                {
+                  "id": "b",
+                  "text": "acceptent presque toujours."
+                },
+                {
+                  "id": "c",
+                  "text": "se sentent gênés."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « ils acceptent presque toujours, et ils me remercient ». 그래서 정답은 「acceptent presque toujours」이다."
+            },
+            {
+              "id": "q41",
+              "type": "choice",
+              "prompt": "Pour éviter le gaspillage, Julien Perrin a aussi...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "réduit la taille de certaines portions."
+                },
+                {
+                  "id": "b",
+                  "text": "augmenté ses prix."
+                },
+                {
+                  "id": "c",
+                  "text": "fermé son restaurant le soir."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « Il a aussi réduit la taille de certaines portions et propose maintenant des demi-portions ». 그래서 정답은 「réduit la taille de certaines portions」이다."
+            },
+            {
+              "id": "q42",
+              "type": "choice",
+              "prompt": "Selon les associations, le gaspillage commence...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "dans l'assiette des clients."
+                },
+                {
+                  "id": "b",
+                  "text": "en cuisine."
+                },
+                {
+                  "id": "c",
+                  "text": "dans les supermarchés."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Pour les associations de lutte contre le gaspillage, le problème commence en cuisine ». 그래서 정답은 「en cuisine」이다."
+            },
+            {
+              "id": "q43",
+              "type": "choice",
+              "prompt": "D'après l'article, chez les jeunes...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le gaspillage augmente."
+                },
+                {
+                  "id": "b",
+                  "text": "ne pas gaspiller est devenu normal."
+                },
+                {
+                  "id": "c",
+                  "text": "on va moins souvent au restaurant."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « surtout chez les jeunes, pour qui ne pas gaspiller est devenu une évidence ». 그래서 정답은 「ne pas gaspiller est devenu normal」이다."
+            }
+          ]
+        },
+        {
+          "id": "doc9",
+          "context": "Exercice 3 — Vous lisez cet article dans un magazine culturel.",
+          "title": "Faut-il rendre les musées gratuits pour tous ?",
+          "text": "En France, les musées nationaux sont gratuits pour les jeunes de moins de 26 ans qui habitent en Europe, et de nombreux musées ouvrent gratuitement leurs portes le premier dimanche du mois. Certaines villes vont plus loin : à Paris, les collections permanentes des musées de la ville sont gratuites toute l'année. Faudrait-il aller encore plus loin et supprimer le prix d'entrée partout ? Le débat divise.\n\nPour les défenseurs de la gratuité, la culture doit être accessible à tous. Le prix d'un billet, souvent entre 12 et 20 €, empêche de nombreuses familles d'entrer dans un musée. « Avec trois enfants, une visite peut coûter plus cher qu'une sortie au cinéma, explique Sarah, mère de famille. Les jours gratuits, nous y allons sans hésiter. » Les partisans de la gratuité ajoutent qu'un musée gratuit permet de venir souvent, pour voir seulement quelques œuvres, comme on se promène dans un parc.\n\nPourtant, les études montrent un résultat surprenant : quand un musée devient gratuit, le nombre de visiteurs augmente, mais ce ne sont pas forcément de nouveaux publics. Ce sont souvent les mêmes personnes, déjà habituées aux musées, qui viennent plus souvent. Pour beaucoup de gens, l'obstacle principal n'est pas le prix, mais le sentiment que les musées « ne sont pas pour eux ».\n\nIl y a aussi une question d'argent. Les billets représentent une part importante du budget de certains musées. Sans cet argent, qui paierait l'entretien des bâtiments, les expositions et les salaires ? Les impôts, répondent certains. Mais alors, tous les contribuables paieraient, y compris ceux qui ne vont jamais au musée.\n\nEntre ces deux positions, de nombreux spécialistes proposent une solution intermédiaire : garder un prix d'entrée pour les touristes et pour les grandes expositions, mais développer la gratuité pour les habitants. Et surtout, aller chercher les publics éloignés, par exemple avec des visites organisées pour les écoles, les associations de quartier ou les maisons de retraite. Car un musée gratuit mais vide n'aurait pas beaucoup de sens.",
+          "questions": [
+            {
+              "id": "q44",
+              "type": "choice",
+              "prompt": "À Paris, les collections permanentes des musées de la ville sont...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "gratuites toute l'année."
+                },
+                {
+                  "id": "b",
+                  "text": "gratuites seulement le premier dimanche du mois."
+                },
+                {
+                  "id": "c",
+                  "text": "payantes pour tous."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « à Paris, les collections permanentes des musées de la ville sont gratuites toute l'année ». 그래서 정답은 「gratuites toute l'année」이다."
+            },
+            {
+              "id": "q45",
+              "type": "choice",
+              "prompt": "Selon les défenseurs de la gratuité, le prix d'entrée...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "est trop bas pour financer les musées."
+                },
+                {
+                  "id": "b",
+                  "text": "empêche beaucoup de familles d'aller au musée."
+                },
+                {
+                  "id": "c",
+                  "text": "est moins cher qu'une place de cinéma."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« Le prix d'un billet... empêche de nombreuses familles d'entrer dans un musée. » 사라는 오히려 « plus cher qu'une sortie au cinéma » 라고 한다."
+            },
+            {
+              "id": "q46",
+              "type": "choice",
+              "prompt": "Que fait Sarah les jours gratuits ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Elle va au musée avec ses enfants."
+                },
+                {
+                  "id": "b",
+                  "text": "Elle va au cinéma."
+                },
+                {
+                  "id": "c",
+                  "text": "Elle se promène dans un parc."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "« Les jours gratuits, nous y allons sans hésiter. » — « y » 는 박물관이다."
+            },
+            {
+              "id": "q47",
+              "type": "choice",
+              "prompt": "Selon les partisans de la gratuité, un musée gratuit permet...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "de visiter sans faire la queue."
+                },
+                {
+                  "id": "b",
+                  "text": "d'organiser des fêtes."
+                },
+                {
+                  "id": "c",
+                  "text": "de venir souvent pour voir quelques œuvres."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « un musée gratuit permet de venir souvent, pour voir seulement quelques œuvres ». 그래서 정답은 「de venir souvent pour voir quelques œuvres」이다."
+            },
+            {
+              "id": "q48",
+              "type": "choice",
+              "prompt": "D'après les études, quand un musée devient gratuit...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "ce sont surtout les habitués qui viennent plus souvent."
+                },
+                {
+                  "id": "b",
+                  "text": "le nombre de visiteurs ne change pas."
+                },
+                {
+                  "id": "c",
+                  "text": "beaucoup de nouveaux publics arrivent."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « le nombre de visiteurs augmente, mais ce ne sont pas forcément de nouveaux publics. Ce sont souvent les mêmes personnes, déjà habituées aux musées, qui viennent plus souvent. ». 그래서 정답은 「ce sont surtout les habitués qui viennent plus souvent」이다."
+            },
+            {
+              "id": "q49",
+              "type": "choice",
+              "prompt": "Pour beaucoup de gens, l'obstacle principal est...",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "le prix du billet."
+                },
+                {
+                  "id": "b",
+                  "text": "les horaires d'ouverture."
+                },
+                {
+                  "id": "c",
+                  "text": "le sentiment que les musées ne sont pas pour eux."
+                }
+              ],
+              "answer": ["c"],
+              "points": 1,
+              "explanation": "근거 문장: « l'obstacle principal n'est pas le prix, mais le sentiment que les musées « ne sont pas pour eux » ». 그래서 정답은 「le sentiment que les musées ne sont pas pour eux」이다."
+            },
+            {
+              "id": "q50",
+              "type": "choice",
+              "prompt": "Si les musées devenaient tous gratuits, quel problème se poserait ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Le manque de place pour les visiteurs."
+                },
+                {
+                  "id": "b",
+                  "text": "Le manque d'argent pour les faire fonctionner."
+                },
+                {
+                  "id": "c",
+                  "text": "Le manque d'œuvres à exposer."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « Sans cet argent, qui paierait l'entretien des bâtiments, les expositions et les salaires ? ». 그래서 정답은 「Le manque d'argent pour les faire fonctionner」이다."
+            },
+            {
+              "id": "q51",
+              "type": "choice",
+              "prompt": "Quel argument l'article donne-t-il contre le financement par les impôts ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "Même les personnes qui ne vont jamais au musée paieraient."
+                },
+                {
+                  "id": "b",
+                  "text": "Les impôts sont déjà trop élevés."
+                },
+                {
+                  "id": "c",
+                  "text": "L'État n'a pas le droit de payer les musées."
+                }
+              ],
+              "answer": ["a"],
+              "points": 1,
+              "explanation": "근거 문장: « tous les contribuables paieraient, y compris ceux qui ne vont jamais au musée ». 그래서 정답은 「Même les personnes qui ne vont jamais au musée paieraient」이다."
+            },
+            {
+              "id": "q52",
+              "type": "choice",
+              "prompt": "Quelle solution de nombreux spécialistes proposent-ils ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "La gratuité totale pour tout le monde."
+                },
+                {
+                  "id": "b",
+                  "text": "Un prix pour les touristes, et des actions pour attirer les publics éloignés."
+                },
+                {
+                  "id": "c",
+                  "text": "Un prix d'entrée plus élevé pour tous."
+                }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "근거 문장: « garder un prix d'entrée pour les touristes et pour les grandes expositions, mais développer la gratuité pour les habitants. Et surtout, aller chercher les publics éloignés ». 그래서 정답은 「Un prix pour les touristes, et des actions pour attirer les publics éloignés」이다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 45,
+      "instructions": "Lisez la consigne et écrivez votre texte (160 mots minimum).",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "La mairie de votre ville a annoncé qu'elle allait fermer la bibliothèque de votre quartier pour faire des économies. Vous n'êtes pas d'accord. Vous écrivez une lettre au maire : vous expliquez ce que cette bibliothèque apporte aux habitants, en donnant des exemples précis, et vous proposez d'autres solutions.",
+          "minWords": 160,
+          "maxWords": 200,
+          "points": 25,
+          "rubric": [
+            {
+              "criterion": "Respect de la consigne (sujet, forme de la lettre, nombre de mots)",
+              "points": 2
+            },
+            {
+              "criterion": "Capacité à présenter des faits et des expériences",
+              "points": 4
+            },
+            {
+              "criterion": "Capacité à exprimer sa pensée et à argumenter",
+              "points": 4
+            },
+            {
+              "criterion": "Cohérence et cohésion (organisation, connecteurs, ponctuation)",
+              "points": 3
+            },
+            {
+              "criterion": "Compétence lexicale : étendue, maîtrise et orthographe du vocabulaire",
+              "points": 6
+            },
+            {
+              "criterion": "Compétence grammaticale : phrases complexes, temps et modes, accords et orthographe grammaticale",
+              "points": 6
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "by": "author-agent",
+    "at": "2026-11-08",
+    "notes": "형식·난이도만 맞춘 새 문제. 정답 확인 전. 읽기 연습 1은 공식 OUI/NON 표를 참/거짓 문항으로 바꾸었다."
+  }
+}
