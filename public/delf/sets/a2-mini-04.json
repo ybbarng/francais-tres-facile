@@ -151,7 +151,7 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "Vous avez lu l'offre d'emploi du Café des Arts. Vous écrivez un court courriel à Mme Garnier pour présenter votre candidature : vous vous présentez, vous parlez de votre expérience et vous expliquez pourquoi ce travail vous intéresse. (40 à 60 mots)",
+          "prompt": "Vous avez écouté le message de Mme Garnier. Vous lui écrivez un court courriel : vous confirmez le rendez-vous, vous parlez de votre expérience et vous expliquez pourquoi ce travail vous intéresse. (40 à 60 mots)",
           "minWords": 40,
           "maxWords": 60,
           "points": 10,

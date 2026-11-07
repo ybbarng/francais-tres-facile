@@ -541,7 +541,7 @@
       "documents": [
         {
           "id": "doc11",
-          "context": "Exercice 1. Vous lisez le programme des sorties du week-end dans votre ville. Pour chaque personne, choisissez la sortie qui correspond.",
+          "context": "Exercice 1. Vous lisez le programme des sorties de la semaine dans votre ville. Pour chaque personne, choisissez la sortie qui correspond.",
           "title": "Sorties de la semaine",
           "text": "A. Musée des Beaux-Arts : exposition « Peintres de la mer ». Tous les jours sauf le mardi, de 10 h à 18 h. 9 euros.\n\nB. Parc des Oiseaux : promenade en famille au milieu de 3 000 oiseaux. Ouvert le week-end. Enfants : 6 euros, adultes : 12 euros. Tables de pique-nique à l'entrée.\n\nC. Théâtre du Rond-Point : Le Malade imaginaire, une pièce classique de Molière. Samedi à 20 h 30. 25 euros.\n\nD. Théâtre des Petits : Le Loup et les sept chevreaux, une pièce moderne pour les enfants de 4 à 10 ans. Dimanche à 15 h. 8 euros.\n\nE. Salle Apollo : concert de rock avec le groupe Les Fous du Volant. Samedi à 22 h. 30 euros. Interdit aux moins de 16 ans.\n\nF. Café Le Piano : concert de jazz calme. Vendredi, de 18 h à 20 h. Entrée libre.",
           "questions": [
@@ -564,7 +564,7 @@
             {
               "id": "q24",
               "type": "choice",
-              "prompt": "M. et Mme Roche veulent sortir avec leurs petits-enfants (5 et 7 ans) et manger dehors.",
+              "prompt": "M. et Mme Roche veulent sortir avec leurs petits-enfants (5 et 7 ans) et pique-niquer.",
               "options": [
                 { "id": "a", "text": "Sortie A" },
                 { "id": "b", "text": "Sortie B" },
