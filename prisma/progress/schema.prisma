@@ -37,3 +37,21 @@ model ExpressionProgress {
   learned      Boolean  @default(false)
   updatedAt    DateTime @updatedAt
 }
+
+// DELF 모의고사 한 번 푼 기록(docs/DELF.md). 점수는 서버가 세트 파일로 다시 채점해 넣는다.
+// answers 는 {문항 id: [option id]} JSON, writing 은 {과제 id: 글} JSON
+model DelfAttempt {
+  id        String   @id @default(cuid())
+  setId     String
+  level     String
+  kind      String
+  answers   String
+  coScore   Float
+  coMax     Float
+  ceScore   Float
+  ceMax     Float
+  writing   String
+  createdAt DateTime @default(now())
+
+  @@index([setId])
+}

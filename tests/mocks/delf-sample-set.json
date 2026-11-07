@@ -1,0 +1,126 @@
+{
+  "schema": "ftf/delf-set@1",
+  "id": "a1-mini-00",
+  "level": "A1",
+  "kind": "mini",
+  "title": "Rendez-vous au café",
+  "sections": [
+    {
+      "area": "CO",
+      "minutes": 4,
+      "instructions": "Vous allez entendre un message. Lisez d'abord les questions, puis écoutez le document.",
+      "documents": [
+        {
+          "id": "doc1",
+          "context": "Vous entendez ce message sur votre téléphone.",
+          "audio": {
+            "plays": 2,
+            "script": [
+              {
+                "speaker": "Femme",
+                "voice": "Flo (프랑스어(프랑스))",
+                "text": "Bonjour Paul, c'est Marie. On se retrouve samedi à dix heures, au café de la gare."
+              },
+              {
+                "speaker": "Homme",
+                "voice": "Thomas",
+                "text": "D'accord Marie. J'apporte les photos des vacances."
+              }
+            ]
+          },
+          "questions": [
+            {
+              "id": "q1",
+              "type": "choice",
+              "prompt": "Marie et Paul se retrouvent…",
+              "options": [
+                { "id": "a", "text": "vendredi." },
+                { "id": "b", "text": "samedi." },
+                { "id": "c", "text": "dimanche." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« On se retrouve samedi à dix heures » 에서 토요일임을 알 수 있다."
+            },
+            {
+              "id": "q2",
+              "type": "truefalse",
+              "prompt": "Paul apporte des photos.",
+              "options": [{ "id": "v", "text": "Vrai" }, { "id": "f", "text": "Faux" }],
+              "answer": ["v"],
+              "points": 1,
+              "explanation": "« J'apporte les photos des vacances » 라고 말한다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "CE",
+      "minutes": 5,
+      "instructions": "Lisez le document, puis répondez aux questions.",
+      "documents": [
+        {
+          "id": "doc2",
+          "context": "Vous lisez cette affiche dans votre quartier.",
+          "title": "Fête du quartier",
+          "text": "Samedi 12 juin, de 14 h à 18 h, place de la Mairie.\n\nAu programme : musique, jeux pour les enfants et gâteaux.\n\nL'entrée est gratuite.",
+          "questions": [
+            {
+              "id": "q3",
+              "type": "choice",
+              "prompt": "La fête a lieu…",
+              "options": [
+                { "id": "a", "text": "le matin." },
+                { "id": "b", "text": "l'après-midi." },
+                { "id": "c", "text": "le soir." }
+              ],
+              "answer": ["b"],
+              "points": 1,
+              "explanation": "« de 14 h à 18 h » 이므로 오후다."
+            },
+            {
+              "id": "q4",
+              "type": "multi",
+              "prompt": "Qu'est-ce qu'il y a à la fête ? (deux réponses)",
+              "options": [
+                { "id": "a", "text": "De la musique." },
+                { "id": "b", "text": "Un film." },
+                { "id": "c", "text": "Des jeux." },
+                { "id": "d", "text": "Un repas." }
+              ],
+              "answer": ["a", "c"],
+              "points": 1,
+              "explanation": "« musique, jeux pour les enfants et gâteaux » 에 음악과 놀이가 있다. 영화·식사는 없다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area": "PE",
+      "minutes": 6,
+      "instructions": "Écrivez un message.",
+      "tasks": [
+        {
+          "id": "w1",
+          "prompt": "Vous invitez un ami à la fête du quartier. Vous lui écrivez un message : vous donnez le jour, l'heure et le lieu. (30 mots minimum)",
+          "minWords": 30,
+          "maxWords": 50,
+          "points": 5,
+          "rubric": [
+            { "criterion": "Respect de la consigne", "points": 2 },
+            { "criterion": "Lexique et orthographe", "points": 1.5 },
+            { "criterion": "Morphosyntaxe", "points": 1.5 }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "by": "test-fixture",
+    "at": "2026-11-08",
+    "notes": "테스트용 작은 세트"
+  }
+}
