@@ -4,6 +4,7 @@ import {
   BarChart3,
   BookOpen,
   CheckCircle,
+  GraduationCap,
   Headphones,
   Home,
   Menu,
@@ -31,6 +32,7 @@ export default function Header() {
     { href: "/playlist", label: "Écoute", icon: Music },
     { href: "/shadowing", label: "Shadowing", icon: Headphones },
     { href: "/expressions", label: "Expressions", icon: MessageSquareQuote },
+    { href: "/delf", label: "DELF", icon: GraduationCap },
   ];
 
   return (
