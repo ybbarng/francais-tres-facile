@@ -206,11 +206,11 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "est accepté s'il reste en laisse dans le jardin."
+                  "text": "est accepté, mais tenu en laisse dehors."
                 },
                 {
                   "id": "b",
-                  "text": "n'est pas accepté."
+                  "text": "n'est pas accepté à cause des poules."
                 },
                 {
                   "id": "c",
@@ -219,7 +219,7 @@
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « Oui, sans problème. Mais il faut le tenir en laisse dans le jardin ». 그래서 정답은 「est accepté s'il reste en laisse dans le jardin」이다."
+              "explanation": "« Oui, sans problème. Mais il faut le tenir en laisse dans le jardin, parce que nous avons des poules. » 개는 받아 주고, 닭 때문에 정원에서는 목줄을 해야 한다."
             },
             {
               "id": "q7",
@@ -446,8 +446,8 @@
             "script": [
               {
                 "speaker": "Journaliste",
-                "voice": "Eddy (프랑스어(프랑스))",
-                "text": "Pendant longtemps, on les a crus réservés aux enfants ou aux soirées de Noël en famille. Pourtant, les jeux de société connaissent aujourd'hui un succès impressionnant : en France, leurs ventes ont presque doublé en dix ans. Nous sommes à Lille, dans un bar à jeux, où l'on peut boire un verre en jouant à l'un des huit cents jeux disponibles. Camille, vous êtes la gérante. Qui sont vos clients ?"
+                "voice": "Shelley (프랑스어(프랑스))",
+                "text": "Pendant longtemps, on a cru que les jeux de société étaient réservés aux enfants ou aux soirées de Noël en famille. Pourtant, ils connaissent aujourd'hui un succès impressionnant : en France, leurs ventes ont presque doublé en dix ans. Nous sommes à Lille, dans un bar à jeux, où l'on peut boire un verre en jouant à l'un des huit cents jeux disponibles. Camille, vous êtes la gérante. Qui sont vos clients ?"
               },
               {
                 "speaker": "Camille",
@@ -456,7 +456,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Eddy (프랑스어(프랑스))",
+                "voice": "Shelley (프랑스어(프랑스))",
                 "text": "Comment expliquez-vous ce succès ?"
               },
               {
@@ -466,7 +466,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Eddy (프랑스어(프랑스))",
+                "voice": "Shelley (프랑스어(프랑스))",
                 "text": "Antoine Leroy, vous êtes sociologue et vous étudiez les loisirs. Êtes-vous d'accord ?"
               },
               {
@@ -476,7 +476,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Eddy (프랑스어(프랑스))",
+                "voice": "Shelley (프랑스어(프랑스))",
                 "text": "Les jeux de société, c'est aussi une question d'argent..."
               },
               {
@@ -486,7 +486,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Eddy (프랑스어(프랑스))",
+                "voice": "Shelley (프랑스어(프랑스))",
                 "text": "Camille, un dernier mot ?"
               },
               {
@@ -500,7 +500,7 @@
             {
               "id": "q14",
               "type": "choice",
-              "prompt": "Selon le journaliste, en dix ans, les ventes de jeux de société en France ont...",
+              "prompt": "Selon la journaliste, en dix ans, les ventes de jeux de société en France ont...",
               "options": [
                 {
                   "id": "a",
@@ -548,20 +548,20 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "veulent gagner des prix."
+                  "text": "aiment gagner seuls contre les autres."
                 },
                 {
                   "id": "b",
-                  "text": "ont besoin de se retrouver sans écran."
+                  "text": "veulent passer du temps ensemble, sans écran."
                 },
                 {
                   "id": "c",
-                  "text": "s'ennuient au travail."
+                  "text": "trouvent les jeux plus faciles qu'avant."
                 }
               ],
               "answer": ["b"],
               "points": 1.5,
-              "explanation": "근거 문장: « les gens ont besoin de se retrouver vraiment, sans écran entre eux ». 그래서 정답은 「ont besoin de se retrouver sans écran」이다."
+              "explanation": "« les gens ont besoin de se retrouver vraiment, sans écran entre eux ». 혼자 이기기보다 함께하는 쪽을 말한 것은 사회학자이고, 카미유는 게임이 « plus beaux, plus variés » 라고 했지 쉬워졌다고 하지 않았다."
             },
             {
               "id": "q17",
@@ -592,15 +592,15 @@
               "options": [
                 {
                   "id": "a",
-                  "text": "permettent à toutes les familles de jouer."
+                  "text": "donnent accès aux jeux quel que soit le budget."
                 },
                 {
                   "id": "b",
-                  "text": "vendent des jeux moins chers."
+                  "text": "vendent des jeux d'occasion moins chers."
                 },
                 {
                   "id": "c",
-                  "text": "créent de nouveaux jeux."
+                  "text": "organisent des soirées pour les adultes."
                 }
               ],
               "answer": ["a"],
@@ -636,11 +636,11 @@
     {
       "area": "CE",
       "minutes": 45,
-      "instructions": "Lisez les documents et répondez aux questions. Exercice 1 : pour chaque annonce, indiquez si elle correspond ou non à chaque critère. Exercices 2 et 3 : choisissez la bonne réponse.",
+      "instructions": "Lisez les documents et répondez aux questions. Exercice 1 : pour chaque annonce, indiquez si elle correspond ou non à chaque critère, puis choisissez l'annonce qui convient. Exercices 2 et 3 : choisissez la bonne réponse.",
       "documents": [
         {
           "id": "doc4",
-          "context": "Exercice 1 — Votre ami Lucas va étudier à l'université de Montpellier. Il cherche un logement : un loyer de 500 € maximum par mois, charges comprises ; un logement meublé ; à 15 minutes maximum de l'université ; disponible dès le 1er septembre. Lisez les quatre annonces. Annonce A :",
+          "context": "Exercice 1 — Votre ami Lucas va étudier à l'université de Montpellier. Il cherche un logement : un loyer de 500 € maximum par mois, charges comprises ; un logement meublé ; à 15 minutes maximum de l'université ; disponible dès le 1er septembre. Lisez les quatre annonces, puis choisissez celle qui lui convient. Annonce A :",
           "title": "A — Studio en centre-ville",
           "text": "Studio de 22 m² en centre-ville, entièrement meublé et équipé.\n\nLoyer : 480 € par mois, charges comprises.\n\nTram direct pour l'université : 25 minutes.\n\nLibre le 1er septembre.",
           "questions": [
@@ -802,7 +802,7 @@
           "id": "doc6",
           "context": "Exercice 1 (suite) — Critères de Lucas : 500 € maximum charges comprises, meublé, 15 minutes maximum de l'université, disponible dès le 1er septembre. Annonce C :",
           "title": "C — Colocation",
-          "text": "Nous cherchons un troisième colocataire ! Chambre de 14 m² non meublée ; le salon et la cuisine sont équipés.\n\nLoyer : 390 € + 60 € de charges par mois.\n\nL'université est à 5 minutes à vélo.\n\nEntrée possible dès le 1er septembre.",
+          "text": "Nous cherchons un troisième colocataire ! La chambre de 14 m² est vide : il faut apporter son lit, son bureau et son armoire. Le salon et la cuisine, que l'on partage, sont équipés.\n\nLoyer : 390 € + 60 € de charges par mois.\n\nL'université est à 5 minutes à vélo.\n\nEntrée possible dès le 1er septembre.",
           "questions": [
             {
               "id": "q28",
@@ -838,7 +838,7 @@
               ],
               "answer": ["f"],
               "points": 0.5,
-              "explanation": "« Chambre de 14 m² non meublée » — 거실과 부엌만 갖춰져 있다."
+              "explanation": "« La chambre de 14 m² est vide : il faut apporter son lit, son bureau et son armoire » — 루카스가 지낼 방에 가구가 없다. 갖춰진 것은 함께 쓰는 거실과 부엌뿐이다."
             },
             {
               "id": "q30",
@@ -955,6 +955,32 @@
               "answer": ["v"],
               "points": 0.5,
               "explanation": "« Libre le 1er septembre. » 네 기준을 모두 맞추는 광고는 D뿐이다."
+            },
+            {
+              "id": "q36",
+              "type": "choice",
+              "prompt": "Quelle annonce choisissez-vous pour Lucas ?",
+              "options": [
+                {
+                  "id": "a",
+                  "text": "L'annonce A."
+                },
+                {
+                  "id": "b",
+                  "text": "L'annonce B."
+                },
+                {
+                  "id": "c",
+                  "text": "L'annonce C."
+                },
+                {
+                  "id": "d",
+                  "text": "L'annonce D."
+                }
+              ],
+              "answer": ["d"],
+              "points": 1,
+              "explanation": "네 기준을 모두 맞추는 것은 D뿐이다. A는 « Tram direct pour l'université : 25 minutes » 로 15분을 넘고, B는 « Disponible à partir du 1er octobre » 라 9월 1일에 못 들어가며, C는 « La chambre de 14 m² est vide » 라 가구가 없다."
             }
           ]
         },
@@ -965,7 +991,7 @@
           "text": "Au restaurant, vous n'avez pas fini votre plat. Que faites-vous ? Aux États-Unis ou au Canada, la question ne se pose pas : on demande une boîte et on emporte les restes à la maison. En France, en revanche, beaucoup de clients n'osent pas encore le faire.\n\nPourtant, le gaspillage alimentaire dans les restaurants est important : selon les spécialistes, un client laisse en moyenne plus de cent grammes de nourriture dans son assiette à chaque repas. C'est pourquoi la loi oblige désormais les restaurants à fournir un récipient aux clients qui le demandent.\n\nAlors, pourquoi les Français hésitent-ils ? « J'ai l'impression que ce n'est pas très élégant, avoue Martine, 60 ans. Demander une boîte, c'est comme dire qu'on n'a pas assez d'argent. » D'autres pensent que le serveur va mal le prendre, ou que c'est réservé aux restaurants bon marché.\n\nCertains restaurateurs ont décidé de changer ces habitudes. À Nantes, Julien Perrin, propriétaire d'une brasserie, propose systématiquement une boîte en carton à la fin du repas. « Je n'attends pas que les clients demandent, je leur propose. Ça change tout : ils acceptent presque toujours, et ils me remercient. » Il a aussi réduit la taille de certaines portions et propose maintenant des demi-portions pour les petits appétits.\n\nMais emporter ses restes n'est qu'une partie de la solution. Pour les associations de lutte contre le gaspillage, le problème commence en cuisine : achats mal prévus, produits jetés parce que leur aspect n'est pas parfait... Certaines associations accompagnent donc les restaurants pour qu'ils gaspillent moins dès la préparation des repas.\n\nUne chose est sûre : les mentalités évoluent, surtout chez les jeunes, pour qui ne pas gaspiller est devenu une évidence.",
           "questions": [
             {
-              "id": "q36",
+              "id": "q37",
               "type": "choice",
               "prompt": "En France, au restaurant, beaucoup de clients...",
               "options": [
@@ -987,29 +1013,29 @@
               "explanation": "근거 문장: « En France, en revanche, beaucoup de clients n'osent pas encore le faire. ». 그래서 정답은 「n'osent pas encore emporter leurs restes」이다."
             },
             {
-              "id": "q37",
+              "id": "q38",
               "type": "choice",
               "prompt": "Selon la loi, les restaurants doivent...",
               "options": [
                 {
                   "id": "a",
-                  "text": "servir des demi-portions."
+                  "text": "proposer des demi-portions aux petits appétits."
                 },
                 {
                   "id": "b",
-                  "text": "faire payer les boîtes."
+                  "text": "faire payer les boîtes aux clients."
                 },
                 {
                   "id": "c",
-                  "text": "donner un récipient aux clients qui le demandent."
+                  "text": "fournir une boîte à ceux qui en veulent une."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « la loi oblige désormais les restaurants à fournir un récipient aux clients qui le demandent ». 그래서 정답은 「donner un récipient aux clients qui le demandent」이다."
+              "explanation": "« la loi oblige désormais les restaurants à fournir un récipient aux clients qui le demandent ». 반 인분은 쥘리앵 페랭이 스스로 하는 일이지 법이 정한 것이 아니다."
             },
             {
-              "id": "q38",
+              "id": "q39",
               "type": "choice",
               "prompt": "Pourquoi Martine hésite-t-elle à demander une boîte ?",
               "options": [
@@ -1031,7 +1057,7 @@
               "explanation": "근거 문장: « J'ai l'impression que ce n'est pas très élégant, avoue Martine ». 그래서 정답은 「Elle trouve que ce n'est pas élégant」이다."
             },
             {
-              "id": "q39",
+              "id": "q40",
               "type": "choice",
               "prompt": "Qu'est-ce que Julien Perrin fait différemment des autres ?",
               "options": [
@@ -1053,7 +1079,7 @@
               "explanation": "근거 문장: « Je n'attends pas que les clients demandent, je leur propose. ». 그래서 정답은 「Il propose lui-même une boîte aux clients」이다."
             },
             {
-              "id": "q40",
+              "id": "q41",
               "type": "choice",
               "prompt": "Quand Julien Perrin propose une boîte, les clients...",
               "options": [
@@ -1075,7 +1101,7 @@
               "explanation": "근거 문장: « ils acceptent presque toujours, et ils me remercient ». 그래서 정답은 「acceptent presque toujours」이다."
             },
             {
-              "id": "q41",
+              "id": "q42",
               "type": "choice",
               "prompt": "Pour éviter le gaspillage, Julien Perrin a aussi...",
               "options": [
@@ -1097,7 +1123,7 @@
               "explanation": "근거 문장: « Il a aussi réduit la taille de certaines portions et propose maintenant des demi-portions ». 그래서 정답은 「réduit la taille de certaines portions」이다."
             },
             {
-              "id": "q42",
+              "id": "q43",
               "type": "choice",
               "prompt": "Selon les associations, le gaspillage commence...",
               "options": [
@@ -1119,26 +1145,26 @@
               "explanation": "근거 문장: « Pour les associations de lutte contre le gaspillage, le problème commence en cuisine ». 그래서 정답은 「en cuisine」이다."
             },
             {
-              "id": "q43",
+              "id": "q44",
               "type": "choice",
               "prompt": "D'après l'article, chez les jeunes...",
               "options": [
                 {
                   "id": "a",
-                  "text": "le gaspillage augmente."
+                  "text": "le gaspillage laisse beaucoup de gens indifférents."
                 },
                 {
                   "id": "b",
-                  "text": "ne pas gaspiller est devenu normal."
+                  "text": "éviter de gaspiller va de soi."
                 },
                 {
                   "id": "c",
-                  "text": "on va moins souvent au restaurant."
+                  "text": "on commande plus souvent des demi-portions."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « surtout chez les jeunes, pour qui ne pas gaspiller est devenu une évidence ». 그래서 정답은 「ne pas gaspiller est devenu normal」이다."
+              "explanation": "« les mentalités évoluent, surtout chez les jeunes, pour qui ne pas gaspiller est devenu une évidence » — 낭비하지 않는 것이 당연한 일(va de soi)이 되었다. 반 인분은 한 식당의 시도일 뿐 젊은이 이야기가 아니다."
             }
           ]
         },
@@ -1149,7 +1175,7 @@
           "text": "En France, les musées nationaux sont gratuits pour les jeunes de moins de 26 ans qui habitent en Europe, et de nombreux musées ouvrent gratuitement leurs portes le premier dimanche du mois. Certaines villes vont plus loin : à Paris, les collections permanentes des musées de la ville sont gratuites toute l'année. Faudrait-il aller encore plus loin et supprimer le prix d'entrée partout ? Le débat divise.\n\nPour les défenseurs de la gratuité, la culture doit être accessible à tous. Le prix d'un billet, souvent entre 12 et 20 €, empêche de nombreuses familles d'entrer dans un musée. « Avec trois enfants, une visite peut coûter plus cher qu'une sortie au cinéma, explique Sarah, mère de famille. Les jours gratuits, nous y allons sans hésiter. » Les partisans de la gratuité ajoutent qu'un musée gratuit permet de venir souvent, pour voir seulement quelques œuvres, comme on se promène dans un parc.\n\nPourtant, les études montrent un résultat surprenant : quand un musée devient gratuit, le nombre de visiteurs augmente, mais ce ne sont pas forcément de nouveaux publics. Ce sont souvent les mêmes personnes, déjà habituées aux musées, qui viennent plus souvent. Pour beaucoup de gens, l'obstacle principal n'est pas le prix, mais le sentiment que les musées « ne sont pas pour eux ».\n\nIl y a aussi une question d'argent. Les billets représentent une part importante du budget de certains musées. Sans cet argent, qui paierait l'entretien des bâtiments, les expositions et les salaires ? Les impôts, répondent certains. Mais alors, tous les contribuables paieraient, y compris ceux qui ne vont jamais au musée.\n\nEntre ces deux positions, de nombreux spécialistes proposent une solution intermédiaire : garder un prix d'entrée pour les touristes et pour les grandes expositions, mais développer la gratuité pour les habitants. Et surtout, aller chercher les publics éloignés, par exemple avec des visites organisées pour les écoles, les associations de quartier ou les maisons de retraite. Car un musée gratuit mais vide n'aurait pas beaucoup de sens.",
           "questions": [
             {
-              "id": "q44",
+              "id": "q45",
               "type": "choice",
               "prompt": "À Paris, les collections permanentes des musées de la ville sont...",
               "options": [
@@ -1167,11 +1193,11 @@
                 }
               ],
               "answer": ["a"],
-              "points": 1,
+              "points": 0.5,
               "explanation": "근거 문장: « à Paris, les collections permanentes des musées de la ville sont gratuites toute l'année ». 그래서 정답은 「gratuites toute l'année」이다."
             },
             {
-              "id": "q45",
+              "id": "q46",
               "type": "choice",
               "prompt": "Selon les défenseurs de la gratuité, le prix d'entrée...",
               "options": [
@@ -1193,29 +1219,29 @@
               "explanation": "« Le prix d'un billet... empêche de nombreuses familles d'entrer dans un musée. » 사라는 오히려 « plus cher qu'une sortie au cinéma » 라고 한다."
             },
             {
-              "id": "q46",
+              "id": "q47",
               "type": "choice",
               "prompt": "Que fait Sarah les jours gratuits ?",
               "options": [
                 {
                   "id": "a",
-                  "text": "Elle va au musée avec ses enfants."
+                  "text": "Elle en profite pour aller au musée en famille."
                 },
                 {
                   "id": "b",
-                  "text": "Elle va au cinéma."
+                  "text": "Elle préfère aller au cinéma, moins cher."
                 },
                 {
                   "id": "c",
-                  "text": "Elle se promène dans un parc."
+                  "text": "Elle va voir seulement quelques œuvres."
                 }
               ],
               "answer": ["a"],
-              "points": 1,
-              "explanation": "« Les jours gratuits, nous y allons sans hésiter. » — « y » 는 박물관이다."
+              "points": 0.5,
+              "explanation": "« Les jours gratuits, nous y allons sans hésiter. » — « y » 는 앞 문장의 박물관이다. 영화는 값을 견준 말일 뿐이고, 작품 몇 점만 보러 온다는 것은 무료 찬성자들의 다른 주장이다."
             },
             {
-              "id": "q47",
+              "id": "q48",
               "type": "choice",
               "prompt": "Selon les partisans de la gratuité, un musée gratuit permet...",
               "options": [
@@ -1237,51 +1263,51 @@
               "explanation": "근거 문장: « un musée gratuit permet de venir souvent, pour voir seulement quelques œuvres ». 그래서 정답은 「de venir souvent pour voir quelques œuvres」이다."
             },
             {
-              "id": "q48",
+              "id": "q49",
               "type": "choice",
               "prompt": "D'après les études, quand un musée devient gratuit...",
               "options": [
                 {
                   "id": "a",
-                  "text": "ce sont surtout les habitués qui viennent plus souvent."
+                  "text": "les habitués y viennent plus souvent qu'avant."
                 },
                 {
                   "id": "b",
-                  "text": "le nombre de visiteurs ne change pas."
+                  "text": "le nombre de visiteurs reste à peu près le même."
                 },
                 {
                   "id": "c",
-                  "text": "beaucoup de nouveaux publics arrivent."
+                  "text": "de nombreux nouveaux visiteurs découvrent les musées."
                 }
               ],
               "answer": ["a"],
               "points": 1,
-              "explanation": "근거 문장: « le nombre de visiteurs augmente, mais ce ne sont pas forcément de nouveaux publics. Ce sont souvent les mêmes personnes, déjà habituées aux musées, qui viennent plus souvent. ». 그래서 정답은 「ce sont surtout les habitués qui viennent plus souvent」이다."
+              "explanation": "« le nombre de visiteurs augmente, mais ce ne sont pas forcément de nouveaux publics. Ce sont souvent les mêmes personnes, déjà habituées aux musées, qui viennent plus souvent. » 방문객 수는 늘지만 새 관객이 아니라 늘 오던 사람들이 더 자주 온다."
             },
             {
-              "id": "q49",
+              "id": "q50",
               "type": "choice",
               "prompt": "Pour beaucoup de gens, l'obstacle principal est...",
               "options": [
                 {
                   "id": "a",
-                  "text": "le prix du billet."
+                  "text": "le prix trop élevé du billet d'entrée."
                 },
                 {
                   "id": "b",
-                  "text": "les horaires d'ouverture."
+                  "text": "des horaires d'ouverture peu pratiques."
                 },
                 {
                   "id": "c",
-                  "text": "le sentiment que les musées ne sont pas pour eux."
+                  "text": "l'impression que les musées ne sont pas pour eux."
                 }
               ],
               "answer": ["c"],
               "points": 1,
-              "explanation": "근거 문장: « l'obstacle principal n'est pas le prix, mais le sentiment que les musées « ne sont pas pour eux » ». 그래서 정답은 「le sentiment que les musées ne sont pas pour eux」이다."
+              "explanation": "« l'obstacle principal n'est pas le prix, mais le sentiment que les musées « ne sont pas pour eux » ». 값은 « n'est pas » 라고 분명히 부정한다."
             },
             {
-              "id": "q50",
+              "id": "q51",
               "type": "choice",
               "prompt": "Si les musées devenaient tous gratuits, quel problème se poserait ?",
               "options": [
@@ -1303,7 +1329,7 @@
               "explanation": "근거 문장: « Sans cet argent, qui paierait l'entretien des bâtiments, les expositions et les salaires ? ». 그래서 정답은 「Le manque d'argent pour les faire fonctionner」이다."
             },
             {
-              "id": "q51",
+              "id": "q52",
               "type": "choice",
               "prompt": "Quel argument l'article donne-t-il contre le financement par les impôts ?",
               "options": [
@@ -1325,26 +1351,26 @@
               "explanation": "근거 문장: « tous les contribuables paieraient, y compris ceux qui ne vont jamais au musée ». 그래서 정답은 「Même les personnes qui ne vont jamais au musée paieraient」이다."
             },
             {
-              "id": "q52",
+              "id": "q53",
               "type": "choice",
               "prompt": "Quelle solution de nombreux spécialistes proposent-ils ?",
               "options": [
                 {
                   "id": "a",
-                  "text": "La gratuité totale pour tout le monde."
+                  "text": "Rendre les musées gratuits un dimanche par mois."
                 },
                 {
                   "id": "b",
-                  "text": "Un prix pour les touristes, et des actions pour attirer les publics éloignés."
+                  "text": "Faire payer les touristes et attirer les publics éloignés."
                 },
                 {
                   "id": "c",
-                  "text": "Un prix d'entrée plus élevé pour tous."
+                  "text": "Rendre l'entrée gratuite pour tous, grâce aux impôts."
                 }
               ],
               "answer": ["b"],
               "points": 1,
-              "explanation": "근거 문장: « garder un prix d'entrée pour les touristes et pour les grandes expositions, mais développer la gratuité pour les habitants. Et surtout, aller chercher les publics éloignés ». 그래서 정답은 「Un prix pour les touristes, et des actions pour attirer les publics éloignés」이다."
+              "explanation": "« garder un prix d'entrée pour les touristes et pour les grandes expositions, mais développer la gratuité pour les habitants. Et surtout, aller chercher les publics éloignés ». 매달 첫 일요일 무료는 이미 있는 제도이고, 세금으로 모두 무료로 하자는 안에는 글이 « tous les contribuables paieraient » 라는 문제를 짚었다."
             }
           ]
         }
@@ -1357,9 +1383,8 @@
       "tasks": [
         {
           "id": "w1",
-          "prompt": "La mairie de votre ville a annoncé qu'elle allait fermer la bibliothèque de votre quartier pour faire des économies. Vous n'êtes pas d'accord. Vous écrivez une lettre au maire : vous expliquez ce que cette bibliothèque apporte aux habitants, en donnant des exemples précis, et vous proposez d'autres solutions.",
+          "prompt": "La mairie de votre ville a annoncé qu'elle allait fermer la bibliothèque de votre quartier pour faire des économies. Vous n'êtes pas d'accord. Vous écrivez une lettre au maire : vous expliquez ce que cette bibliothèque apporte aux habitants, en donnant des exemples précis, et vous proposez d'autres solutions. (160 mots minimum)",
           "minWords": 160,
-          "maxWords": 200,
           "points": 25,
           "rubric": [
             {
