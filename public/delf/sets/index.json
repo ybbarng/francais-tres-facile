@@ -599,7 +599,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-02",
@@ -623,7 +623,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-03",
@@ -647,7 +647,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-04",
@@ -671,7 +671,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-05",
@@ -695,7 +695,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-06",
@@ -719,7 +719,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-07",
@@ -743,7 +743,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-08",
@@ -767,7 +767,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-09",
@@ -791,7 +791,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-mini-10",
@@ -815,7 +815,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-exam-01",
@@ -839,7 +839,7 @@
           "max": 25
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b1-exam-02",
@@ -863,7 +863,7 @@
           "max": 25
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-01",
@@ -887,7 +887,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-02",
@@ -911,7 +911,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-03",
@@ -935,7 +935,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-04",
@@ -959,7 +959,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-05",
@@ -983,7 +983,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-06",
@@ -1007,7 +1007,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-07",
@@ -1031,7 +1031,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-08",
@@ -1055,7 +1055,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-09",
@@ -1079,7 +1079,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-mini-10",
@@ -1103,7 +1103,7 @@
           "max": 10
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-exam-01",
@@ -1127,7 +1127,7 @@
           "max": 25
         }
       ],
-      "status": "draft"
+      "status": "verified"
     },
     {
       "id": "b2-exam-02",
@@ -1151,7 +1151,7 @@
           "max": 25
         }
       ],
-      "status": "draft"
+      "status": "verified"
     }
   ]
 }
