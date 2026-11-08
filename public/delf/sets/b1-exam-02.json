@@ -446,7 +446,7 @@
             "script": [
               {
                 "speaker": "Journaliste",
-                "voice": "Shelley (프랑스어(프랑스))",
+                "voice": "Thomas",
                 "text": "Pendant longtemps, on a cru que les jeux de société étaient réservés aux enfants ou aux soirées de Noël en famille. Pourtant, ils connaissent aujourd'hui un succès impressionnant : en France, leurs ventes ont presque doublé en dix ans. Nous sommes à Lille, dans un bar à jeux, où l'on peut boire un verre en jouant à l'un des huit cents jeux disponibles. Camille, vous êtes la gérante. Qui sont vos clients ?"
               },
               {
@@ -456,7 +456,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Shelley (프랑스어(프랑스))",
+                "voice": "Thomas",
                 "text": "Comment expliquez-vous ce succès ?"
               },
               {
@@ -466,7 +466,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Shelley (프랑스어(프랑스))",
+                "voice": "Thomas",
                 "text": "Antoine Leroy, vous êtes sociologue et vous étudiez les loisirs. Êtes-vous d'accord ?"
               },
               {
@@ -476,7 +476,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Shelley (프랑스어(프랑스))",
+                "voice": "Thomas",
                 "text": "Les jeux de société, c'est aussi une question d'argent..."
               },
               {
@@ -486,7 +486,7 @@
               },
               {
                 "speaker": "Journaliste",
-                "voice": "Shelley (프랑스어(프랑스))",
+                "voice": "Thomas",
                 "text": "Camille, un dernier mot ?"
               },
               {

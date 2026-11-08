@@ -635,7 +635,7 @@
       "documents": [
         {
           "id": "doc4",
-          "context": "Exercice 1 — Votre amie Clara veut suivre des cours de cuisine. Ses critères : pouvoir suivre un cours le week-end, une séance à moins de 50 €, des recettes végétariennes, un groupe de 8 personnes au maximum. Lisez les quatre annonces, puis choisissez celle qui lui convient. Annonce A :",
+          "context": "Exercice 1 — Votre amie Clara veut suivre des cours de cuisine. Ses critères : pouvoir suivre un cours le week-end, une séance à moins de 50 €, des recettes végétariennes, un groupe de 8 personnes au maximum. Lisez les quatre annonces, puis choisissez celle qui lui convient.",
           "title": "A — L'Atelier des Saveurs",
           "text": "Cours de cuisine du monde tous les samedis, de 10 h à 13 h. Au menu : currys indiens, couscous aux légumes, mezzés libanais... Toutes nos recettes sont sans viande ni poisson.\n\nGroupes de 12 personnes, dans une grande cuisine lumineuse.\n\nTarif : 45 € la séance de trois heures. À la fin du cours, vous dégustez ensemble les plats préparés.",
           "questions": [
@@ -1326,7 +1326,7 @@
             {
               "id": "q52",
               "type": "choice",
-              "prompt": "D'après les spécialistes, les touristes peuvent aider en...",
+              "prompt": "D'après les spécialistes, les touristes peuvent aider...",
               "options": [
                 {
                   "id": "a",

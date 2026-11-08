@@ -265,7 +265,7 @@
             {
               "id": "q10",
               "type": "choice",
-              "prompt": "Quelle est la conclusion des spécialistes ?",
+              "prompt": "Selon les spécialistes, que faut-il penser des applications de langues ?",
               "options": [
                 {
                   "id": "a",
