@@ -99,6 +99,19 @@ describe("findBlank", () => {
   it("단어 중간에 걸친 것은 찾지 않는다", () => {
     expect(findBlank("Ça marcherait bien.", "Ça marche !")).toBeNull();
   });
+
+  // 표현 틀 끝의 de·que·si 가 문장에서는 모음 앞이라 d'·qu'·s' 로 줄어든 경우
+  it("조각 끝 낱말이 문장에서 줄어든 꼴(d'·qu'·s')이어도 같은 자리로 찾는다", () => {
+    expect(findBlank("J'ai envie d'aller au cinéma.", "J'ai envie de …")?.text).toBe(
+      "J'ai envie d'"
+    );
+    expect(findBlank("Je crois qu'il pleut.", "Je crois que …")?.text).toBe("Je crois qu'");
+    expect(findBlank("Dis-moi s'il vient.", "Dis-moi si …")?.text).toBe("Dis-moi s'");
+  });
+
+  it("줄어들지 않은 꼴이 문장에 있으면 그대로 찾는다", () => {
+    expect(findBlank("J'ai envie de manger.", "J'ai envie de …")?.text).toBe("J'ai envie de");
+  });
 });
 
 describe("pickDistractors", () => {

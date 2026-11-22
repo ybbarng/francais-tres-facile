@@ -74,13 +74,37 @@ export interface BlankSpot {
   text: string;
 }
 
+/** 모음 앞에서 줄어드는 낱말(엘리지옹). 표현 틀 끝에 오면 뒤 낱말이 빈자리라 문장에서 줄어들 수 있다 */
+const ELISION: Record<string, string> = {
+  de: "d'",
+  que: "qu'",
+  si: "s'",
+  je: "j'",
+  ne: "n'",
+  me: "m'",
+  te: "t'",
+  se: "s'",
+  le: "l'",
+  la: "l'",
+};
+
+/** 조각과, 끝 낱말이 줄어든 꼴(… de → … d')을 함께 돌려준다 */
+function fragmentForms(fragment: string): string[] {
+  const m = fragment.match(/^(.*?)(\p{L}+)$/u);
+  const elided = m ? ELISION[m[2].toLowerCase()] : undefined;
+  if (!m || !elided) return [fragment];
+  const head =
+    m[2][0] === m[2][0].toUpperCase() ? elided[0].toUpperCase() + elided.slice(1) : elided;
+  return [fragment, m[1] + head];
+}
+
 /**
  * 문장 안에서 가릴 고정 부분. 문장에 실제로 들어 있는(대소문자·아포스트로피 차이 무시, 단어 중간 제외)
- * 조각 중 가장 긴 것. 못 찾으면 null
+ * 조각 중 가장 긴 것. 조각 끝 낱말이 문장에서 줄어든 꼴(d'·qu'·s' 등)이어도 찾는다. 못 찾으면 null
  */
 export function findBlank(sentence: string, fr: string): BlankSpot | null {
   const folded = foldText(sentence);
-  for (const fragment of fixedFragments(fr)) {
+  for (const fragment of fixedFragments(fr).flatMap(fragmentForms)) {
     const needle = foldText(fragment);
     let from = 0;
     while (from <= folded.length) {
