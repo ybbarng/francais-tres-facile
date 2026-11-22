@@ -15,6 +15,21 @@ export interface Expression {
   learned: boolean;
   /** 다시 볼 이유. 있으면 「다시 볼 것」 */
   review?: string;
+  /** 수업 날짜 이름("11-05" 등). 날짜별로 더한 표현(E91~)에만 있다. 순서는 session 숫자로 본다 */
+  sessionName?: string;
+  /** 표현을 가져온 곳(영상 id 등) */
+  source?: string;
+  /** 이 표현으로 대꾸할 상황들 */
+  contexts?: ExpressionContext[];
+}
+
+export interface ExpressionContext {
+  cue: string;
+  cueKo: string;
+  reply: string;
+  replyKo: string;
+  /** 있으면 reply 가 이 id 의 표현도 함께 쓴 것이다 */
+  combo?: string;
 }
 
 export interface ExpressionsData {
@@ -24,6 +39,17 @@ export interface ExpressionsData {
 
 function isRecord(v: unknown): v is Record<string, unknown> {
   return typeof v === "object" && v !== null && !Array.isArray(v);
+}
+
+function isContext(v: unknown): v is ExpressionContext {
+  return (
+    isRecord(v) &&
+    typeof v.cue === "string" &&
+    typeof v.cueKo === "string" &&
+    typeof v.reply === "string" &&
+    typeof v.replyKo === "string" &&
+    (v.combo === undefined || typeof v.combo === "string")
+  );
 }
 
 function isExpression(v: unknown): v is Expression {
@@ -40,8 +66,17 @@ function isExpression(v: unknown): v is Expression {
     typeof ex.ko === "string" &&
     typeof v.session === "number" &&
     typeof v.learned === "boolean" &&
-    (v.review === undefined || typeof v.review === "string")
+    (v.review === undefined || typeof v.review === "string") &&
+    (v.sessionName === undefined || typeof v.sessionName === "string") &&
+    (v.source === undefined || typeof v.source === "string")
   );
+}
+
+/** contexts 는 선택 필드라 모양이 맞는 것만 남긴다(하나가 틀려도 표현 전체를 버리지 않는다) */
+function withValidContexts(e: Expression): Expression {
+  const raw = (e as { contexts?: unknown }).contexts;
+  if (raw === undefined) return e;
+  return { ...e, contexts: Array.isArray(raw) ? raw.filter(isContext) : [] };
 }
 
 /** 원본 JSON 을 확인해 화면이 쓰는 모양으로 돌려준다. 형식이 다르면 던진다 */
@@ -60,7 +95,10 @@ export function parseExpressions(json: unknown): ExpressionsData {
   if (bad !== -1) {
     throw new Error(`expressions.json 의 ${bad + 1}번째 표현 형식이 올바르지 않습니다`);
   }
-  return { groups: groups as Record<string, string>, expressions: expressions as Expression[] };
+  return {
+    groups: groups as Record<string, string>,
+    expressions: (expressions as Expression[]).map(withValidContexts),
+  };
 }
 
 export interface ExpressionFilter {

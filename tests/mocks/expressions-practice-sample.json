@@ -1,0 +1,219 @@
+{
+  "schema": "study-french/expressions@1",
+  "updatedAt": "2026-11-21",
+  "note": "연습 화면 테스트용 표본. study-french speaking/expressions.json(2026-11-21)에서 표현 8개를 그대로 뽑았다(contexts 의 direction 만 뺐다)",
+  "groups": {
+    "A": "복구",
+    "B": "묘사",
+    "C": "서사",
+    "D": "의견",
+    "E": "구어·반응",
+    "F": "반응·맞장구",
+    "G": "의견·생각",
+    "H": "부탁·제안·약속",
+    "I": "감정·상태"
+  },
+  "deepSessions": [{ "session": 28, "ids": ["E82", "E83"] }],
+  "expressions": [
+    {
+      "id": "E01",
+      "group": "A",
+      "fr": "Tu peux répéter, s'il te plaît ?",
+      "ko": "다시 말해 줄래?",
+      "example": {
+        "fr": "Désolé, je n'ai pas entendu. Tu peux répéter ?",
+        "ko": "미안, 못 들었어. 다시 말해 줄래?"
+      },
+      "session": 1,
+      "learned": true,
+      "contexts": [
+        {
+          "cue": "On se voit à… … heures ?",
+          "cueKo": "…시에 볼까?",
+          "reply": "Pardon, tu peux répéter, s'il te plaît ?",
+          "replyKo": "미안, 다시 말해 줄래?"
+        },
+        {
+          "cue": "Tu veux… … ce soir ?",
+          "cueKo": "너 오늘 저녁에 …할래?",
+          "reply": "Tu peux répéter, s'il te plaît ? Il y a du bruit.",
+          "replyKo": "다시 말해 줄래? 시끄러워서."
+        },
+        {
+          "cue": "Le chef dit que la sauce est trop salée.",
+          "cueKo": "셰프가 그러는데 소스가 너무 짜대.",
+          "reply": "Tu peux répéter plus lentement, s'il te plaît ?",
+          "replyKo": "좀 더 천천히 다시 말해 줄래?",
+          "combo": "E02"
+        },
+        {
+          "cue": "Ton train part du quai… …",
+          "cueKo": "네 기차는 …번 승강장에서 출발해",
+          "reply": "Désolé, tu peux répéter, s'il te plaît ?",
+          "replyKo": "미안, 다시 말해 줄래?"
+        },
+        {
+          "cue": "Allô, je suis… … malade.",
+          "cueKo": "여보세요, 나 … 아파.",
+          "reply": "Ça coupe ! Tu peux répéter, s'il te plaît ?",
+          "replyKo": "끊긴다! 다시 말해 줄래?"
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "group": "A",
+      "fr": "Plus lentement, s'il te plaît.",
+      "ko": "좀 더 천천히 말해 줘.",
+      "example": {
+        "fr": "Tu parles vite ! Plus lentement, s'il te plaît.",
+        "ko": "너 말 빨라! 좀 더 천천히."
+      },
+      "session": 1,
+      "learned": true,
+      "contexts": [
+        {
+          "cue": "On joue après le dîner ?",
+          "cueKo": "저녁 먹고 게임할래?",
+          "reply": "Pardon, plus lentement, s'il te plaît.",
+          "replyKo": "미안, 좀 더 천천히 말해 줘."
+        }
+      ]
+    },
+    {
+      "id": "E16",
+      "group": "B",
+      "fr": "Je suis à … / Je suis en train de …",
+      "ko": "나 …에 있어 / …하는 중이야",
+      "example": {
+        "fr": "Je suis au bureau. Je suis en train de coder.",
+        "ko": "나 회사야. 코딩하는 중이야."
+      },
+      "session": 6,
+      "learned": true,
+      "contexts": [
+        {
+          "cue": "Tu es où, là ?",
+          "cueKo": "지금 어디야?",
+          "reply": "Je suis à la gare.",
+          "replyKo": "나 역에 있어."
+        },
+        {
+          "cue": "Pourquoi tu n'as pas répondu ?",
+          "cueKo": "왜 답 안 했어?",
+          "reply": "J'étais en train de jouer, désolé !",
+          "replyKo": "게임하는 중이었어, 미안!"
+        }
+      ]
+    },
+    {
+      "id": "E42",
+      "group": "C",
+      "fr": "J'ai failli + 동사원형",
+      "ko": "하마터면 …할 뻔했어.",
+      "example": {
+        "fr": "J'ai failli rater le train.",
+        "ko": "하마터면 기차를 놓칠 뻔했어."
+      },
+      "session": 14,
+      "learned": true,
+      "review": "failli 뒤에 de를 넣지 않는다 · Session 21에서 건너뜀",
+      "contexts": [
+        {
+          "cue": "Tu as eu ton avion ?",
+          "cueKo": "비행기 탔어?",
+          "reply": "Oui, mais j'ai failli le rater !",
+          "replyKo": "응, 근데 하마터면 놓칠 뻔했어!"
+        }
+      ]
+    },
+    {
+      "id": "E91",
+      "group": "F",
+      "fr": "Ça alors !",
+      "ko": "세상에, 이럴 수가!",
+      "example": {
+        "fr": "Ça alors ! Tu parles coréen maintenant ?",
+        "ko": "세상에! 너 이제 한국어 해?"
+      },
+      "session": 32,
+      "sessionName": "11-05",
+      "learned": false,
+      "source": "ostV5Va7uHQ@29:00",
+      "contexts": [
+        {
+          "cue": "Je me suis marié le mois dernier !",
+          "cueKo": "나 지난달에 결혼했어!",
+          "reply": "Ça alors ! Félicitations !",
+          "replyKo": "세상에! 축하해!"
+        }
+      ]
+    },
+    {
+      "id": "E92",
+      "group": "F",
+      "fr": "C'est dingue !",
+      "ko": "대박이다, 말도 안 돼!",
+      "example": {
+        "fr": "C'est dingue, il fait 25 degrés en novembre !",
+        "ko": "대박, 11월에 25도야!"
+      },
+      "session": 32,
+      "sessionName": "11-05",
+      "learned": false,
+      "source": "일반 구어",
+      "contexts": [
+        {
+          "cue": "J'ai vu Zidane au supermarché hier.",
+          "cueKo": "어제 슈퍼에서 지단 봤어.",
+          "reply": "C'est dingue ! Tu lui as parlé ?",
+          "replyKo": "대박! 말 걸어 봤어?"
+        }
+      ]
+    },
+    {
+      "id": "E112",
+      "group": "I",
+      "fr": "J'en ai marre (de …).",
+      "ko": "(…가) 지긋지긋해.",
+      "example": {
+        "fr": "J'en ai marre de la pluie !",
+        "ko": "비 지긋지긋해!"
+      },
+      "session": 39,
+      "sessionName": "11-12",
+      "learned": false,
+      "source": "FbI2es_Bs9A@04:33",
+      "contexts": [
+        {
+          "cue": "Le métro est encore en grève demain.",
+          "cueKo": "내일 또 지하철 파업이래.",
+          "reply": "Encore ? J'en ai marre !",
+          "replyKo": "또? 지긋지긋해!"
+        }
+      ]
+    },
+    {
+      "id": "E166",
+      "group": "G",
+      "fr": "Je n'y avais jamais pensé.",
+      "ko": "그건 생각도 못 해 봤어.",
+      "example": {
+        "fr": "Un tiers de notre vie à dormir ? Je n'y avais jamais pensé.",
+        "ko": "인생의 3분의 1을 잔다고? 생각도 못 해 봤어."
+      },
+      "session": 57,
+      "sessionName": "11-30",
+      "learned": false,
+      "source": "7JvvNzZM7I0@05:51",
+      "contexts": [
+        {
+          "cue": "Tu pourrais apprendre le français avec des chansons.",
+          "cueKo": "노래로 프랑스어를 배울 수도 있잖아.",
+          "reply": "Bonne idée ! Je n'y avais jamais pensé.",
+          "replyKo": "좋은 생각! 생각도 못 해 봤어."
+        }
+      ]
+    }
+  ]
+}
