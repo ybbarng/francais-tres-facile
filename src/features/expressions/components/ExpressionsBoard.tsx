@@ -1,6 +1,7 @@
 "use client";
 
-import { MessageSquareQuote, Shuffle } from "lucide-react";
+import { Gamepad2, MessageSquareQuote, Shuffle } from "lucide-react";
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -164,9 +165,15 @@ export default function ExpressionsBoard() {
   return (
     <Card>
       <CardHeader className="pb-3">
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <MessageSquareQuote className="h-5 w-5 text-primary" />
           <CardTitle>말하기 표현</CardTitle>
+          <Button size="sm" className="ml-auto rounded-full" asChild>
+            <Link href="/expressions/practice">
+              <Gamepad2 />
+              게임으로 연습
+            </Link>
+          </Button>
         </div>
         <p className="text-sm text-muted-foreground">
           ChatGPT 말하기 수업에서 배운 표현을 복습합니다. 「익힘」 표시는 서버에 저장되어 폰과
