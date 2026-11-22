@@ -38,6 +38,13 @@ model ExpressionProgress {
   updatedAt    DateTime @updatedAt
 }
 
+// 말하기 표현 연습 설정 키-값. key "lastSession" 에 마지막으로 한 세션 번호(문자열)를 둔다
+model ExpressionPracticeSetting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
 // DELF 모의고사 한 번 푼 기록(docs/DELF.md). 점수는 서버가 세트 파일로 다시 채점해 넣는다.
 // answers 는 {문항 id: [option id]} JSON, writing 은 {과제 id: 글} JSON
 model DelfAttempt {
