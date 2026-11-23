@@ -377,8 +377,7 @@ export default function PracticeQuestionView({
               {canSpeak && (
                 <FrLine text={q.sentence} canSpeak={canSpeak} speak={speak} className="text-sm" />
               )}
-            </>,
-            <AlsoFits items={q.alsoFits} canSpeak={canSpeak} speak={speak} />
+            </>
           )}
         </div>
       );
