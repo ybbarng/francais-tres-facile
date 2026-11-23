@@ -15,6 +15,7 @@
     "delf:strip": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/delf-strip.ts",
     "delf:audio": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/delf-audio.ts",
     "delf:asr": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/delf-asr-check.ts",
+    "expressions:review-todo": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/expressions-review-todo.ts",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
