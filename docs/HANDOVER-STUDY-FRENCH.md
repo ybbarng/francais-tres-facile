@@ -60,7 +60,9 @@ study-french 데이터와 이어진 화면(표현·연습·DELF)만 study-french
 2. **코드 옮기기**: study-french 저장소에 `app/` 으로 FTF 기록을 합친다(git subtree). 테스트·lint 가 study-french 안에서 돈다. 이 단계에서는 배포를 바꾸지 않는다(FTF 저장소가 계속 배포).
 3. **배포 옮기기**: 이미지 빌드 워크플로를 study-french 로 옮기고(경로 필터 `app/**`), servers 저장소의 deploy.sh·compose 를 새 이미지 이름으로. 배포 키 forced-command 경로를 맞춘다. 서버 DB 는 그대로(옮기지 않음).
 4. **주소 바꾸기**: 새 주소 nginx·TLS, 옛 `ftf.byb.kr` 은 301 로 넘긴다. `lang.byb.kr` 홈의 프랑스어 링크를 새 주소로 바꾼다(홈은 lang.byb.kr 세션이 맡는다, 비서를 통해 요청). 폰 홈 화면 바로가기·북마크는 사용자가 새로 단다.
-5. **정리**: FTF 저장소 archive, 표현 원본을 같은 저장소 파일로 읽게 바꾸기, 겹치는 buzz-challenge 정리.
+5. **정리**: FTF 저장소 archive, 표현 원본을 같은 저장소 파일로 읽게 바꾸기, 겹치는 buzz-challenge 정리. lang.byb.kr/french/numbers(프랑스어 숫자 듣기, SvelteKit + 브라우저 speechSynthesis)를 연습 화면의 모드 하나로 다시 짓고 옛 주소는 새 화면으로 넘긴다(어려운 범위 70~99·연도·가격·시각·전화번호 고르기 포함, 사용자 동의).
+
+**결정(2026-11-23)**: 사용자가 안 2 로 정했다. 1단계는 FTF `HANDOFF.md` 로 넘겼고, 2단계부터는 study-french 세션이 맡는다(12월 초).
 
 ## FTF 세션이 넘길 것
 - 이 문서, FTF `HANDOFF.md`(DELF 확장 절차·정답 확인 단계), `docs/DELF.md`, `docs/EXPRESSIONS-PRACTICE.md`(검토 기록과 다시 돌리는 법), `docs/DEPLOY.md`, `docs/AUTH.md`.
