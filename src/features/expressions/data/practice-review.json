@@ -1,1 +1,6580 @@
-{ "schema": "ftf/expressions-practice-review@1", "reviewedAt": "2026-11-23", "items": {} }
+{
+  "schema": "ftf/expressions-practice-review@1",
+  "reviewedAt": "2026-11-23",
+  "items": {
+    "E01": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Désolé, je n'ai pas entendu. Tu peux répéter, s'il te plaît ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On se voit à… … heures ?",
+          "alsoFits": ["E15"],
+          "skip": [],
+          "note": "끊긴 질문이라 질문을 못 알아들었다는 말도 자연스럽다"
+        },
+        {
+          "cue": "Tu veux… … ce soir ?",
+          "alsoFits": ["E15"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le chef dit que la sauce est trop salée.",
+          "alsoFits": ["E71", "E72"],
+          "skip": ["situation", "blank"],
+          "note": "cue 가 끊기지 않아 다시 말해 달라고 할 까닭이 안 보인다. reply 는 '천천히'(E02)가 끼어 고정 부분이 갈라진다"
+        },
+        {
+          "cue": "Ton train part du quai… …",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Allô, je suis… … malade.",
+          "alsoFits": ["E207"],
+          "skip": [],
+          "note": "아프다는 말은 들렸으니 무슨 일이냐고 묻는 것도 자연스럽다"
+        }
+      ]
+    },
+    "E02": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu parles vite ! Plus lentement, s'il te plaît.",
+        "alsoFits": ["E01"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On joue après le dîner ?",
+          "alsoFits": ["E01", "E68", "E105", "E172", "E173", "E174"],
+          "skip": ["situation"],
+          "note": "짧고 쉬운 제안이라 천천히 말해 달라는 대꾸가 억지스럽다. 수락 표현이 더 자연스럽다"
+        },
+        {
+          "cue": "La réunion a changé, c'est à dix heures.",
+          "alsoFits": ["E01", "E71", "E72", "E248"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le concert commence tôt, dépêche-toi !",
+          "alsoFits": ["E01"],
+          "skip": ["situation"],
+          "note": "서두르라는 말에 천천히 말해 달라는 대꾸는 잘 이어지지 않는다"
+        },
+        {
+          "cue": "Tu coupes, tu mélanges, tu fais cuire !",
+          "alsoFits": ["E01"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "À gauche, à droite, puis tout droit !",
+          "alsoFits": ["E01"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E03": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je ne connais pas ce mot. Tu peux l'écrire ?",
+        "alsoFits": ["E01", "E04"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ce vin, c'est un gewurztraminer.",
+          "alsoFits": ["E01", "E04"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pour ce plat, il faut du curcuma.",
+          "alsoFits": ["E01", "E04"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Mon numéro, c'est le zéro six…",
+          "alsoFits": ["E01"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pour ton dos, prends de l'ibuprofène.",
+          "alsoFits": ["E01", "E04"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "L'hôtel est rue de la Grenouillère.",
+          "alsoFits": ["E01", "E02"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E04": {
+      "similarMeaning": ["E181"],
+      "example": {
+        "text": "Qu'est-ce que ça veut dire, « crevé » ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ce soir, je suis vraiment claqué.",
+          "alsoFits": ["E03", "E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il faut émincer l'oignon.",
+          "alsoFits": ["E03", "E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce vin est très gouleyant.",
+          "alsoFits": ["E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Vendredi, je fais le pont.",
+          "alsoFits": ["E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce concert, c'était le pied !",
+          "alsoFits": ["E181"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E05": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Comment on dit « 회식 » en français ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce que tu manges au bureau à midi ?",
+          "alsoFits": ["E06", "E07", "E12"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Avec quoi tu coupes les légumes ?",
+          "alsoFits": ["E06", "E07"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as l'air malade, non ?",
+          "alsoFits": ["E07", "E76", "E100", "E161"],
+          "skip": [],
+          "note": "아파 보인다는 말에는 지친 상태 표현도 자연스럽다"
+        },
+        {
+          "cue": "Tu as mal où ?",
+          "alsoFits": ["E06", "E07"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu fais quoi le dimanche ?",
+          "alsoFits": ["E06", "E07"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E06": {
+      "similarMeaning": ["E07"],
+      "example": {
+        "text": "Attends… je cherche le mot.",
+        "alsoFits": ["E07"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, ce truc dans ta cuisine ?",
+          "alsoFits": ["E05", "E07", "E10", "E12"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu fais quoi, au travail ?",
+          "alsoFits": ["E05", "E07", "E10"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu ne disais rien, tout à l'heure ?",
+          "alsoFits": ["E07", "E160", "E206"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'Je cherchais' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Ce vin a quel goût ?",
+          "alsoFits": ["E05", "E07", "E10", "E31"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Elle était comment, la mer là-bas ?",
+          "alsoFits": ["E05", "E07", "E10"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E07": {
+      "similarMeaning": ["E06", "E176", "E212"],
+      "example": {
+        "text": "C'est difficile… je ne sais pas comment le dire.",
+        "alsoFits": ["E06"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu aimes autant ce jeu ?",
+          "alsoFits": ["E06", "E10", "E175", "E176", "E177"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Cette musique, ça te fait quoi ?",
+          "alsoFits": ["E06", "E168", "E176", "E178"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu n'as rien dit à ton chef ?",
+          "alsoFits": ["E206"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'Je ne savais pas' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Tu as mal où, exactement ?",
+          "alsoFits": ["E06", "E176"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce fromage, il sent comment ?",
+          "alsoFits": ["E06", "E176"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E08": {
+      "similarMeaning": ["E09"],
+      "example": {
+        "text": "Je veux dire que j'ai besoin de repos.",
+        "alsoFits": ["E09", "E61"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu n'aimes pas ton travail ?",
+          "alsoFits": ["E11", "E61", "E76", "E141"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu ne veux pas venir samedi ?",
+          "alsoFits": ["E11", "E61", "E123", "E141", "E197"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce restaurant est un peu cher…",
+          "alsoFits": ["E09", "E70", "E109", "E110", "E181"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 'Tu veux dire que' 로 상대 말을 되묻는 꼴이라 'Je veux dire que' 가 정답으로 맞지 않고 고정 부분도 문장에 없다"
+        },
+        {
+          "cue": "Ta soupe n'est pas bonne ?",
+          "alsoFits": ["E61", "E141", "E142"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu arrêtes de jouer ?",
+          "alsoFits": ["E61", "E102"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E09": {
+      "similarMeaning": ["E08"],
+      "example": {
+        "text": "Je suis développeur, c'est-à-dire que j'écris du code.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles à la maison ?",
+          "alsoFits": ["E56", "E61"],
+          "skip": [],
+          "note": "애매: 상황 문제로는 '즉' 을 떠올릴 실마리가 약하다"
+        },
+        {
+          "cue": "Tu bois quel genre de vin ?",
+          "alsoFits": ["E55"],
+          "skip": [],
+          "note": "애매: 상황 문제로는 '즉' 을 떠올릴 실마리가 약하다"
+        },
+        {
+          "cue": "Ce soir, je suis un peu occupé.",
+          "alsoFits": ["E69", "E71", "E72", "E80", "E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu dors comment en ce moment ?",
+          "alsoFits": ["E64", "E77"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu pars quand en vacances ?",
+          "alsoFits": ["E75", "E87", "E107"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E10": {
+      "similarMeaning": ["E215"],
+      "example": {
+        "text": "Ton vin préféré ? Attends, je réfléchis.",
+        "alsoFits": ["E175", "E177"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ton jeu préféré de tous les temps ?",
+          "alsoFits": ["E175", "E176", "E177", "E214"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu veux manger quoi ce soir ?",
+          "alsoFits": ["E73", "E109", "E110", "E148", "E177", "E214"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Décris ton plat coréen préféré !",
+          "alsoFits": ["E07"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On part où cet été ?",
+          "alsoFits": ["E73", "E87", "E107", "E109", "E110", "E177", "E214"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton premier concert, c'était quand ?",
+          "alsoFits": ["E177", "E189"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E11": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Hier, je suis… non, ce n'est pas ça. Je recommence.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as fait quoi hier soir ?",
+          "alsoFits": ["E06", "E10", "E35"],
+          "skip": ["situation"],
+          "note": "자기 말을 고치는 표현이라 cue 만으로는 이 표현을 고를 까닭이 없다"
+        },
+        {
+          "cue": "Tu as acheté quoi au marché ?",
+          "alsoFits": ["E06", "E10"],
+          "skip": ["situation"],
+          "note": "자기 말을 고치는 표현이라 cue 만으로는 이 표현을 고를 까닭이 없다"
+        },
+        {
+          "cue": "Tu n'aimes pas sortir avec nous ?",
+          "alsoFits": ["E61", "E141"],
+          "skip": ["situation"],
+          "note": "reply 의 'Ce n'est pas ça' 는 '그런 게 아니야' 라는 뜻이고 'Je recommence' 가 없어 틀 전체가 정답으로 맞지 않는다"
+        },
+        {
+          "cue": "Tu as gagné combien de parties ?",
+          "alsoFits": ["E10"],
+          "skip": ["situation"],
+          "note": "자기 말을 고치는 표현이라 cue 만으로는 이 표현을 고를 까닭이 없다"
+        },
+        {
+          "cue": "Ton avion part à quelle heure ?",
+          "alsoFits": ["E10"],
+          "skip": ["situation"],
+          "note": "자기 말을 고치는 표현이라 cue 만으로는 이 표현을 고를 까닭이 없다"
+        }
+      ]
+    },
+    "E12": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Le kimchi, c'est une sorte de chou fermenté.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, le tteok ?",
+          "alsoFits": ["E13", "E18"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "C'est quoi, le makgeolli ?",
+          "alsoFits": ["E13", "E18"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as mangé quoi au restaurant ?",
+          "alsoFits": ["E13", "E18", "E25"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "C'est quoi, la musique trot ?",
+          "alsoFits": ["E13", "E18"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "C'est quoi, un hagwon ?",
+          "alsoFits": ["E13", "E18"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E13": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Le soju, c'est comme la vodka, mais plus doux.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, le bibimbap ?",
+          "alsoFits": ["E12", "E18"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton jeu, il ressemble à quoi ?",
+          "alsoFits": ["E18"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il était comment, le concert ?",
+          "alsoFits": ["E18", "E31", "E32", "E48", "E65", "E203"],
+          "skip": [],
+          "note": "느낌을 묻는 열린 질문"
+        },
+        {
+          "cue": "C'est quoi, le kimbap ?",
+          "alsoFits": ["E12", "E18"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Busan, c'est comment ?",
+          "alsoFits": ["E17", "E18", "E21", "E29", "E54"],
+          "skip": [],
+          "note": "묘사를 묻는 열린 질문"
+        }
+      ]
+    },
+    "E14": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Mon français n'est pas parfait. Tu me comprends ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Euh… pardon ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton explication est un peu longue…",
+          "alsoFits": ["E63", "E70"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "D'accord… je crois.",
+          "alsoFits": [],
+          "skip": ["blank"],
+          "note": "reply 가 'Tu m'as bien compris' 로 바뀌어 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Je ne connais pas le tteok.",
+          "alsoFits": ["E12", "E13"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je ne comprends pas, tu as mal où ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E15": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pardon, je n'ai pas bien compris ta question.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Au fond, ce jeu t'apporte quoi ?",
+          "alsoFits": ["E01", "E175", "E176", "E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu préfères le terroir ou le cépage ?",
+          "alsoFits": ["E01", "E56", "E177", "E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton boulot, ça te nourrit vraiment ?",
+          "alsoFits": ["E175", "E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton rythme de sommeil, il est régulier ?",
+          "alsoFits": ["E01", "E181"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es plutôt live ou studio ?",
+          "alsoFits": ["E01", "E56", "E177", "E181"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E16": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je suis au bureau. Je suis en train de coder.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "두 문장의 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu es où, là ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu fais quoi, là ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu n'as pas répondu ?",
+          "alsoFits": ["E78", "E162"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'J'étais en train de' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Je t'appelle, tu as deux minutes ?",
+          "alsoFits": ["E147", "E162"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es déjà rentré chez toi ?",
+          "alsoFits": ["E162"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E17": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Dans ce quartier, il y a beaucoup de restaurants.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "'Il y a beaucoup de restaurants dans ce quartier' 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Ton quartier est comment ?",
+          "alsoFits": ["E28", "E29", "E31"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu aimes ton supermarché ?",
+          "alsoFits": ["E31", "E55", "E66"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le concert était bien ?",
+          "alsoFits": ["E28", "E31", "E32", "E65", "E203"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'il y avait' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Ça va, au travail ?",
+          "alsoFits": ["E142", "E143", "E161", "E162", "E245"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce jeu est difficile ?",
+          "alsoFits": ["E56", "E142"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E18": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce plat ? Ça ressemble à un bibimbap.",
+        "alsoFits": ["E12"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Regarde ce fromage tout blanc !",
+          "alsoFits": ["E13", "E118"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Écoute ce groupe !",
+          "alsoFits": ["E13", "E66", "E118", "E209"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il était comment, ton hôtel ?",
+          "alsoFits": ["E13", "E29", "E31", "E65", "E203"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'ressemblait' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Tu connais ce nouveau jeu ?",
+          "alsoFits": ["E13", "E209"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Goûte ma sauce !",
+          "alsoFits": ["E13", "E23", "E24", "E66"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E19": {
+      "similarMeaning": ["E200"],
+      "example": {
+        "text": "Ce matin, il fait frais.",
+        "alsoFits": ["E20", "E200"],
+        "skip": ["order"],
+        "note": "'Il fait frais ce matin' 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Il fait quel temps chez toi ?",
+          "alsoFits": ["E20", "E199", "E200", "E201"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu prends un manteau ?",
+          "alsoFits": ["E20", "E200"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Elle était bien, ta promenade ?",
+          "alsoFits": ["E65", "E199"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'il faisait' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Tu pars à la montagne cet été ?",
+          "alsoFits": ["E75", "E107"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu portes un pull ?",
+          "alsoFits": ["E200"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E20": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Aujourd'hui, le ciel est couvert.",
+        "alsoFits": ["E19", "E199", "E200", "E201"],
+        "skip": ["order"],
+        "note": "'Le ciel est couvert aujourd'hui' 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "On mange dehors ce midi ?",
+          "alsoFits": ["E19", "E68", "E105", "E172", "E173"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je prends un parapluie ?",
+          "alsoFits": ["E199", "E201", "E216"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as vu les étoiles hier soir ?",
+          "alsoFits": [],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'était' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Tu vois la montagne depuis ton hôtel ?",
+          "alsoFits": ["E22"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le concert en plein air, c'est toujours ce soir ?",
+          "alsoFits": ["E19"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E21": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Mon hôtel ? C'est au bord de la rivière.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il est où, ton hôtel ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il est où, ce restaurant ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as passé tes vacances où ?",
+          "alsoFits": [],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'C'était au bord de' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "On fait un pique-nique où ?",
+          "alsoFits": ["E109", "E110"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le festival, il est où ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E22": {
+      "similarMeaning": [],
+      "example": {
+        "text": "D'ici, on voit la montagne au loin.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "'on voit au loin la montagne', 'On voit la montagne au loin d'ici' 도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Ta chambre a une belle vue ?",
+          "alsoFits": ["E21"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il y a quoi, devant ton bureau ?",
+          "alsoFits": ["E17"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il y avait une belle vue, en haut ?",
+          "alsoFits": [],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'on voyait' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Tu es sur ton balcon ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "C'est joli, le trajet en train ?",
+          "alsoFits": ["E17", "E66"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E23": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu fais du pain ? Ça sent bon !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je fais un gâteau au chocolat.",
+          "alsoFits": ["E75", "E138"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Sens ce vin !",
+          "alsoFits": ["E18", "E66"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es passé devant la boulangerie ?",
+          "alsoFits": [],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'ça sentait bon' 이라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Ta mère prépare quoi ce soir ?",
+          "alsoFits": ["E75", "E138", "E149"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es au marché ?",
+          "alsoFits": ["E17", "E28", "E29"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E24": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Hmm, la soupe… c'est un peu fade.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Alors, mon poulet ?",
+          "alsoFits": ["E23", "E66", "E150"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu aimes la soupe de la cantine ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le dîner d'hier, c'était comment ?",
+          "alsoFits": ["E65", "E150"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 'C'était délicieux' 라 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Tu veux encore du sel ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu aimes ce plat sans épices ?",
+          "alsoFits": ["E66"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E25": {
+      "similarMeaning": ["E47"],
+      "example": {
+        "text": "Hier, j'ai goûté des huîtres pour la première fois.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as mangé quoi au restaurant ?",
+          "alsoFits": ["E12", "E47"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "C'était bien, le marché ?",
+          "alsoFits": ["E17", "E47", "E65", "E235"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton collègue français, il a aimé le resto coréen ?",
+          "alsoFits": ["E47"],
+          "skip": ["blank"],
+          "note": "reply 주어가 'Il a goûté' 라 'J'ai goûté' 고정 부분이 문장에 그대로 없다"
+        },
+        {
+          "cue": "Tu as aimé le Japon ?",
+          "alsoFits": ["E47", "E48", "E65", "E235"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu souris comme ça ?",
+          "alsoFits": ["E47", "E136"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E26": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce fromage ? C'est une spécialité de la région.",
+        "alsoFits": ["E24"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, ce gâteau ?",
+          "alsoFits": ["E12", "E13", "E18"],
+          "skip": [],
+          "note": "무엇인지 묻는 말이라 설명 표현도 자연스럽다"
+        },
+        {
+          "cue": "Pourquoi tout le monde commande ce plat ?",
+          "alsoFits": ["E24"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as apporté quoi ?",
+          "alsoFits": ["E232", "E12"],
+          "skip": [],
+          "note": "reply 는 \"de ma ville\" 로 틀과 끝이 다름 — 빈칸 애매"
+        },
+        {
+          "cue": "Ce vin blanc est très bon !",
+          "alsoFits": ["E104", "E70", "E24"],
+          "skip": [],
+          "note": "칭찬에 맞장구치는 표현도 자연스럽다"
+        },
+        {
+          "cue": "Tu achètes quoi comme souvenir ?",
+          "alsoFits": ["E214", "E107", "E177"],
+          "skip": [],
+          "note": "무엇을 살지 묻는 열린 질문"
+        }
+      ]
+    },
+    "E27": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Les gens ont l'air contents aujourd'hui.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "aujourd'hui 를 앞에 둬도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "L'ambiance au bureau, c'est comment ?",
+          "alsoFits": ["E29", "E119", "E118", "E28"],
+          "skip": [],
+          "note": "분위기를 묻는 열린 질문"
+        },
+        {
+          "cue": "Il y a quelle ambiance au concert ?",
+          "alsoFits": ["E29", "E28", "E118", "E119"],
+          "skip": [],
+          "note": "분위기를 묻는 열린 질문"
+        },
+        {
+          "cue": "Ton voyage à Paris, c'était bien ?",
+          "alsoFits": ["E32", "E65", "E203", "E48", "E235"],
+          "skip": [],
+          "note": "여행 소감을 묻는 열린 질문. reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(avaient l'air)"
+        },
+        {
+          "cue": "Tu es à la fête ?",
+          "alsoFits": ["E28", "E29"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es dans le métro ?",
+          "alsoFits": ["E28", "E33"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E28": {
+      "similarMeaning": ["E29"],
+      "example": {
+        "text": "Ce soir, il y a du monde au bar.",
+        "alsoFits": ["E17"],
+        "skip": ["order"],
+        "note": "ce soir 를 뒤에 둬도 자연스럽다. E17 은 \"beaucoup de monde\" 로 채울 때"
+      },
+      "contexts": [
+        {
+          "cue": "Tu es au supermarché ?",
+          "alsoFits": ["E17"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es à la salle de sport ?",
+          "alsoFits": ["E29"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le restaurant était bien, hier ?",
+          "alsoFits": ["E29", "E24", "E65"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(il n'y avait personne)"
+        },
+        {
+          "cue": "Le concert commence bientôt ?",
+          "alsoFits": ["E17", "E75"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tes parents sont à la maison ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E29": {
+      "similarMeaning": ["E28"],
+      "example": {
+        "text": "Le soir, mon quartier est très animé.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "예문에 \"C'est\" 가 없고 \"est très animé\" 꼴 — 빈칸 애매. le soir 를 뒤에 둬도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Ton quartier, c'est comment le soir ?",
+          "alsoFits": ["E28", "E17"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le marché, c'est comment le dimanche ?",
+          "alsoFits": ["E28", "E17", "E23"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le village où tu es allé, c'était bien ?",
+          "alsoFits": ["E65", "E32", "E27", "E48"],
+          "skip": [],
+          "note": "소감을 묻는 열린 질문. reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(c'était)"
+        },
+        {
+          "cue": "Ça va, au bureau aujourd'hui ?",
+          "alsoFits": ["E28", "E162", "E161", "E76"],
+          "skip": [],
+          "note": "근황을 묻는 열린 질문"
+        },
+        {
+          "cue": "Le bar à jeux, c'est comment ce soir ?",
+          "alsoFits": ["E28", "E27"],
+          "skip": ["situation"],
+          "note": "\"c'est comment ?\" 에 \"Oui\" 로 답해 cue 와 reply 가 어긋난다"
+        }
+      ]
+    },
+    "E30": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Une bonne bouteille, ça coûte à peu près vingt euros.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Un bon dîner ici, c'est cher ?",
+          "alsoFits": ["E56", "E60"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton nouveau jeu, c'est cher ?",
+          "alsoFits": ["E60"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton billet d'avion, c'était cher ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(ça a coûté)"
+        },
+        {
+          "cue": "Le bœuf est cher au marché ?",
+          "alsoFits": ["E56"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Les billets du concert sont chers ?",
+          "alsoFits": ["E56", "E60"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E31": {
+      "similarMeaning": ["E50", "E49"],
+      "example": {
+        "text": "Ce jeu ? Je trouve ça génial.",
+        "alsoFits": ["E120"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes le jazz ?",
+          "alsoFits": ["E50"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu aimes la nouvelle déco du bureau ?",
+          "alsoFits": ["E50", "E66", "E235"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le film d'hier, tu l'as aimé ?",
+          "alsoFits": ["E50", "E65", "E203", "E32", "E66", "E64"],
+          "skip": [],
+          "note": "영화 소감을 묻는 열린 질문. reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(j'ai trouvé ça)"
+        },
+        {
+          "cue": "Tu aimes cuisiner le soir ?",
+          "alsoFits": ["E50"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le vin nature, tu en penses quoi ?",
+          "alsoFits": ["E49", "E50", "E59", "E64", "E66"],
+          "skip": [],
+          "note": "의견을 묻는 열린 질문"
+        }
+      ]
+    },
+    "E32": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce qui m'a frappé, c'est le silence.",
+        "alsoFits": ["E55"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé Paris ?",
+          "alsoFits": ["E65", "E235", "E48", "E55", "E27"],
+          "skip": [],
+          "note": "소감을 묻는 열린 질문"
+        },
+        {
+          "cue": "Le concert d'hier, c'était comment ?",
+          "alsoFits": ["E65", "E48", "E203", "E31"],
+          "skip": [],
+          "note": "소감을 묻는 열린 질문"
+        },
+        {
+          "cue": "Je suis allé en Corée cet été !",
+          "alsoFits": ["E139"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 \"Ce qui t'a frappé, c'est quoi ?\" 로 되묻는 꼴이라 틀(m'a frappé)과 다르다. 이 cue 에 틀을 고르면 말하는 사람이 소감을 말하는 것처럼 읽힌다"
+        },
+        {
+          "cue": "Ton nouveau travail, c'est comment ?",
+          "alsoFits": ["E27", "E50", "E119", "E143", "E142", "E59", "E162"],
+          "skip": [],
+          "note": "근황을 묻는 열린 질문"
+        },
+        {
+          "cue": "Le restaurant chic, tu as aimé ?",
+          "alsoFits": ["E65", "E150", "E48", "E203", "E24"],
+          "skip": [],
+          "note": "소감을 묻는 열린 질문"
+        }
+      ]
+    },
+    "E33": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Au bureau, à côté de moi, il y a un collègue très drôle.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "\"à côté de moi\" 와 \"au bureau\" 자리를 바꾸거나 뒤로 보내도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu es bien installé dans le train ?",
+          "alsoFits": ["E28"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ça va, au concert ?",
+          "alsoFits": ["E28", "E27"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "C'était comment, ton vol ?",
+          "alsoFits": ["E41", "E236"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(il y avait)"
+        },
+        {
+          "cue": "Tu es seul à ta table ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu travailles seul à la maison ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E34": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce matin, je suis allé à la boulangerie.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "ce matin 을 뒤에 둬도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu as fait quoi ce matin ?",
+          "alsoFits": ["E35"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu es en retard ?",
+          "alsoFits": ["E43", "E231", "E44"],
+          "skip": [],
+          "note": "늦은 까닭을 묻는 말이라 여러 대꾸가 맞다"
+        },
+        {
+          "cue": "Tu as fait du sport avec ton ami ?",
+          "alsoFits": ["E35"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(on est allés)"
+        },
+        {
+          "cue": "Tu as acheté tes médicaments ?",
+          "alsoFits": ["E44", "E78"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as trouvé du bon vin ?",
+          "alsoFits": ["E78"],
+          "skip": [],
+          "note": "cue 와 reply 의 이음이 약하다(마트에 갔다는 말이 와인을 찾았다는 답으로 조금 돌아감), 애매"
+        }
+      ]
+    },
+    "E35": {
+      "similarMeaning": [],
+      "example": {
+        "text": "D'abord, j'ai mangé, et ensuite j'ai joué.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On fait quoi samedi ?",
+          "alsoFits": ["E109", "E110", "E73", "E223"],
+          "skip": [],
+          "note": "계획을 묻는 말이라 제안 표현도 자연스럽다"
+        },
+        {
+          "cue": "Comment tu fais ta sauce ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu fais quoi ce soir ?",
+          "alsoFits": ["E86", "E85", "E148"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ta journée a été comment ?",
+          "alsoFits": ["E162", "E76", "E236", "E46"],
+          "skip": [],
+          "note": "하루를 묻는 열린 질문"
+        },
+        {
+          "cue": "Ton voyage commence où ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E36": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Après ça, on a décidé de rentrer.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Et après le dîner ?",
+          "alsoFits": ["E35"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il a plu pendant ta randonnée ?",
+          "alsoFits": ["E45"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton jeu a planté ce soir ?",
+          "alsoFits": ["E113", "E153", "E80"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(j'ai décidé)"
+        },
+        {
+          "cue": "Le gâteau était raté ?",
+          "alsoFits": ["E45", "E80"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le bar était fermé, hier ?",
+          "alsoFits": ["E45", "E80", "E129"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E37": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pendant que j'attendais, j'ai lu un livre.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "\"pendant que j'attendais\" 를 뒤로 보내도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Ton train avait du retard ?",
+          "alsoFits": ["E41", "E45", "E113"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le médecin était en retard ?",
+          "alsoFits": ["E41"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as attendu longtemps avec tes amis ?",
+          "alsoFits": ["E41"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(pendant qu'on attendait)"
+        },
+        {
+          "cue": "Le pain a cuit longtemps ?",
+          "alsoFits": ["E41"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton avion est parti en retard ?",
+          "alsoFits": ["E41", "E45"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E38": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tout à coup, il a commencé à pleuvoir.",
+        "alsoFits": ["E45"],
+        "skip": ["order"],
+        "note": "tout à coup 을 뒤에 둬도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Il s'est passé quoi au concert ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu as crié ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ta randonnée s'est bien passée ?",
+          "alsoFits": ["E43", "E236", "E45"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as perdu ta partie ?",
+          "alsoFits": ["E45"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il n'y a plus de lumière chez toi ?",
+          "alsoFits": ["E177"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E39": {
+      "similarMeaning": ["E166"],
+      "example": {
+        "text": "Il m'a offert un cadeau. Je ne m'y attendais pas.",
+        "alsoFits": ["E93"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ton équipe t'a organisé une fête ?",
+          "alsoFits": ["E93", "E178", "E179"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il a neigé chez toi ce matin ?",
+          "alsoFits": ["E91", "E200", "E93"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton ami a aimé ton cadeau ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(il ne s'y attendait pas)"
+        },
+        {
+          "cue": "Tu as gagné le tournoi ?",
+          "alsoFits": ["E93", "E40", "E179", "E116"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le restaurant t'a offert le dessert ?",
+          "alsoFits": ["E40", "E91"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E40": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il restait une table. On a eu de la chance.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il restait des places au concert ?",
+          "alsoFits": ["E39"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il a plu pendant ton pique-nique ?",
+          "alsoFits": ["E45"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as eu ton train ?",
+          "alsoFits": ["E42", "E237"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(j'ai eu)"
+        },
+        {
+          "cue": "Ton vol n'a pas été annulé ?",
+          "alsoFits": ["E45"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton équipe a gagné hier soir ?",
+          "alsoFits": ["E42"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E41": {
+      "similarMeaning": ["E225"],
+      "example": {
+        "text": "Le concert ? Ça a duré environ deux heures.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ta réunion a été longue ?",
+          "alsoFits": ["E76"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le voyage en train était long ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ta partie va être longue ?",
+          "alsoFits": ["E225"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(ça va durer)"
+        },
+        {
+          "cue": "Ta sauce a cuit longtemps ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as attendu longtemps chez le médecin ?",
+          "alsoFits": ["E37"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E42": {
+      "similarMeaning": ["E237"],
+      "example": {
+        "text": "J'ai failli rater le train.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as eu ton avion ?",
+          "alsoFits": ["E40", "E237"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as l'air fatigué ce matin.",
+          "alsoFits": ["E76", "E100", "E162"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton équipe a gagné ?",
+          "alsoFits": ["E40"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(on a failli)"
+        },
+        {
+          "cue": "Ton gâteau est réussi ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as fini le jeu ?",
+          "alsoFits": ["E116", "E236"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E43": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Sans GPS, on s'est perdus.",
+        "alsoFits": ["E236"],
+        "skip": ["order"],
+        "note": "\"sans GPS\" 를 뒤로 보내도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu es arrivé si tard ?",
+          "alsoFits": ["E231", "E123", "E34"],
+          "skip": [],
+          "note": "늦은 까닭을 묻는 말이라 여러 대꾸가 맞다"
+        },
+        {
+          "cue": "C'était bien, la randonnée avec tes amis ?",
+          "alsoFits": ["E236", "E45"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as trouvé le restaurant facilement ?",
+          "alsoFits": ["E236"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(je me suis perdu)"
+        },
+        {
+          "cue": "Tu as aimé la vieille ville ?",
+          "alsoFits": ["E32", "E65", "E235"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le festival était grand ?",
+          "alsoFits": ["E28", "E17"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E44": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai oublié mon parapluie.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu m'appelles d'un autre numéro ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as froid ?",
+          "alsoFits": ["E19", "E200"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je ne trouve pas mes clés !",
+          "alsoFits": [],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 상대에게 되묻는 \"Tu les as oubliées … ?\" 라 틀(J'ai oublié …)로 고르면 내가 잊은 것처럼 읽힌다"
+        },
+        {
+          "cue": "Ta soupe n'a pas de goût.",
+          "alsoFits": ["E70", "E153", "E104"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu ne joues pas ce soir ?",
+          "alsoFits": ["E76", "E101", "E123", "E100"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E45": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Malheureusement, le magasin était fermé.",
+        "alsoFits": ["E61"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as eu des places pour le concert ?",
+          "alsoFits": ["E40"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as raté ton train ?",
+          "alsoFits": ["E40"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il a plu pendant ta randonnée ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton dîner s'est bien passé ?",
+          "alsoFits": ["E46", "E42"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es allé chez le médecin ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E46": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'avais peur, mais finalement, ça s'est bien passé.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ta présentation au travail, c'était comment ?",
+          "alsoFits": ["E236"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton entretien, c'était comment ?",
+          "alsoFits": ["E236"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'avais peur de mon examen, ce matin.",
+          "alsoFits": ["E127", "E128"],
+          "skip": [],
+          "note": "reply 가 되묻는 말(억양만 바뀜)이라 틀은 그대로다"
+        },
+        {
+          "cue": "Ton premier pain maison ?",
+          "alsoFits": ["E236"],
+          "skip": [],
+          "note": "빵 굽기에 \"ça s'est bien passé\" 는 조금 어색할 수 있다, 애매"
+        },
+        {
+          "cue": "Le voyage avec les enfants ?",
+          "alsoFits": ["E236", "E76"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E47": {
+      "similarMeaning": ["E25"],
+      "example": {
+        "text": "C'était la première fois que je voyais la neige.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu étais si content hier ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as aimé le ski ?",
+          "alsoFits": ["E65", "E236", "E48"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es déjà venu ici ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(c'est la première fois)"
+        },
+        {
+          "cue": "Tu as aimé le champagne ?",
+          "alsoFits": ["E25", "E65", "E66"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as vu un opéra ?",
+          "alsoFits": ["E65", "E32", "E48"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E48": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce dîner était magique. Je m'en souviendrai longtemps.",
+        "alsoFits": ["E150"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ton voyage au Japon, c'était bien ?",
+          "alsoFits": ["E65", "E32", "E235"],
+          "skip": [],
+          "note": "소감을 묻는 열린 질문"
+        },
+        {
+          "cue": "Ce concert était génial, non ?",
+          "alsoFits": ["E105", "E70", "E104", "E65"],
+          "skip": [],
+          "note": "동의를 구하는 말이라 맞장구도 자연스럽다"
+        },
+        {
+          "cue": "Le mariage de ton frère, c'était beau ?",
+          "alsoFits": ["E65"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(on s'en souviendra)"
+        },
+        {
+          "cue": "Tu as bu un grand vin ?",
+          "alsoFits": ["E150", "E65"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le repas chez ta grand-mère, c'était comment ?",
+          "alsoFits": ["E150", "E65", "E178"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E49": {
+      "similarMeaning": ["E50"],
+      "example": {
+        "text": "À mon avis, ce film est trop long.",
+        "alsoFits": ["E50", "E64", "E119", "E144"],
+        "skip": ["order"],
+        "note": "\"à mon avis\" 를 뒤로 보내도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "On prend le métro ou un taxi ?",
+          "alsoFits": ["E50", "E82", "E56", "E54"],
+          "skip": [],
+          "note": "고르는 질문이라 의견·비교 표현이 맞다"
+        },
+        {
+          "cue": "Quel vin avec le poisson ?",
+          "alsoFits": ["E56", "E82"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je cherche un cadeau pour ma mère.",
+          "alsoFits": ["E83", "E84"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 \"À ton avis … ?\" 로 상대에게 묻는 꼴이라 틀(À mon avis)과 다르다"
+        },
+        {
+          "cue": "Ce jeu va avoir du succès ?",
+          "alsoFits": ["E50", "E176", "E87", "E177", "E188"],
+          "skip": [],
+          "note": "예측을 묻는 열린 질문"
+        },
+        {
+          "cue": "Je dors mal en ce moment.",
+          "alsoFits": ["E83", "E84", "E50"],
+          "skip": [],
+          "note": "조언할 자리라 권유 표현도 자연스럽다"
+        }
+      ]
+    },
+    "E50": {
+      "similarMeaning": ["E31", "E49"],
+      "example": {
+        "text": "Je pense que le télétravail, c'est pratique.",
+        "alsoFits": ["E49", "E64", "E119"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes ton nouveau bureau ?",
+          "alsoFits": ["E49", "E31", "E120", "E59", "E143"],
+          "skip": [],
+          "note": "의견을 묻는 열린 질문"
+        },
+        {
+          "cue": "On va au restaurant italien ?",
+          "alsoFits": ["E189", "E188", "E61"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le concert, c'est demain.",
+          "alsoFits": ["E72", "E230"],
+          "skip": [],
+          "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(je pensais que)"
+        },
+        {
+          "cue": "Il manque quelque chose à ma sauce ?",
+          "alsoFits": ["E49", "E24", "E119"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton petit frère joue trop aux jeux ?",
+          "alsoFits": ["E49", "E56"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E51": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Contrairement à mon frère, j'adore cuisiner.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "J'adore cuisiner, contrairement à mon frère 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes le sport, comme ton père ?",
+          "alsoFits": ["E53", "E61", "E141"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton collègue aime le café ?",
+          "alsoFits": ["E61", "E141"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu manges du fromage tous les jours ?",
+          "alsoFits": ["E52", "E61", "E64"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ta sœur joue aussi aux jeux vidéo ?",
+          "alsoFits": ["E61"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Séoul, c'est comme Paris ?",
+          "alsoFits": ["E13", "E54", "E61", "E176"],
+          "skip": [],
+          "note": "비교를 묻는 열린 질문이라 비교 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E52": {
+      "similarMeaning": [],
+      "example": {
+        "text": "En Corée, on mange vite, alors qu'ici, on prend son temps.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On dîne tard en Corée ?",
+          "alsoFits": ["E51", "E61"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le pourboire, c'est normal en Corée ?",
+          "alsoFits": ["E51", "E61"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu bois du vin au repas en Corée ?",
+          "alsoFits": ["E51", "E61"],
+          "skip": ["blank"],
+          "note": "reply 가 En France … alors qu'en Corée 로 틀의 고정 부분(En Corée … alors qu'ici)과 달라 빈칸으로 가리기 어렵다"
+        },
+        {
+          "cue": "Tu finis tard au travail en Corée ?",
+          "alsoFits": ["E51", "E245"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu enlèves tes chaussures chez toi ?",
+          "alsoFits": ["E51"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E53": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Moi, je ne cuisine pas. Mes parents, eux, le font tous les jours.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu fais du sport le matin ?",
+          "alsoFits": ["E51"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu fais du sport le soir ?",
+          "alsoFits": ["E51"],
+          "skip": [],
+          "note": "앞 맥락(le matin)과 거의 같은 cue"
+        },
+        {
+          "cue": "Tu fais ton pain toi-même ?",
+          "alsoFits": ["E51", "E101"],
+          "skip": ["blank"],
+          "note": "reply 가 단수 elle, le fait 라 틀의 고정 부분 eux, le font 이 없다"
+        },
+        {
+          "cue": "Tu fais la sieste l'après-midi ?",
+          "alsoFits": ["E51"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu sens le vin avant de le boire ?",
+          "alsoFits": ["E51"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E54": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Le train, c'est plus rapide que le bus.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu préfères le train ou l'avion ?",
+          "alsoFits": ["E50", "E55", "E56", "E59", "E214"],
+          "skip": [],
+          "note": "선호를 묻는 열린 질문"
+        },
+        {
+          "cue": "Tu cuisines ou tu commandes ?",
+          "alsoFits": ["E56", "E59", "E101"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On prend ce vin ou l'autre ?",
+          "alsoFits": ["E56", "E59"],
+          "skip": ["blank"],
+          "note": "reply 가 plus 대신 moins 를 써서 고정 부분 plus 가 없다"
+        },
+        {
+          "cue": "Le nouveau jeu est bien ?",
+          "alsoFits": ["E31", "E50", "E59", "E64", "E65", "E66", "E203"],
+          "skip": [],
+          "note": "느낌을 묻는 열린 질문이라 평가 표현이 여럿 맞다"
+        },
+        {
+          "cue": "Tu vas au travail à vélo ?",
+          "alsoFits": ["E56"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E55": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce que je préfère, c'est le vin rouge.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes quoi dans la cuisine française ?",
+          "alsoFits": ["E235"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu aimes quoi dans ton travail ?",
+          "alsoFits": ["E64", "E176"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Moi, j'adore la cuisine coréenne !",
+          "alsoFits": ["E72", "E73", "E90"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 Ce que tu préfères, c'est quoi ? 라는 되묻기라 내 선호를 말하는 틀(Ce que je préfère)이 정답으로 어색하고 고정 부분도 없다"
+        },
+        {
+          "cue": "Tu écoutes quel genre de musique ?",
+          "alsoFits": ["E56"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Qu'est-ce que tu aimes en voyage ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E56": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je sors ce week-end ? Ça dépend de la météo.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu viens au bar ce soir ?",
+          "alsoFits": [
+            "E68",
+            "E76",
+            "E87",
+            "E101",
+            "E107",
+            "E123",
+            "E172",
+            "E173",
+            "E174",
+            "E196",
+            "E197",
+            "E198",
+            "E215"
+          ],
+          "skip": [],
+          "note": "초대에 대한 답이라 수락·거절·보류 표현이 모두 자연스럽다"
+        },
+        {
+          "cue": "Tu bois du rouge ou du blanc ?",
+          "alsoFits": ["E55", "E214"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu joues combien d'heures par jour ?",
+          "alsoFits": ["E64", "E176"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu pars en vacances cet été ?",
+          "alsoFits": ["E85", "E86", "E87", "E107", "E241"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu dors combien d'heures ?",
+          "alsoFits": ["E64", "E77"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E57": {
+      "similarMeaning": [],
+      "example": {
+        "text": "C'est un bon restaurant ? Je suis d'accord, mais c'est cher.",
+        "alsoFits": ["E132"],
+        "skip": [],
+        "note": "질문(C'est un bon restaurant ?)에 Je suis d'accord 로 답하는 것은 조금 어색하다. 동의는 단정한 말에 붙는 편이다(애매)"
+      },
+      "contexts": [
+        {
+          "cue": "Les jeux vidéo, c'est super.",
+          "alsoFits": ["E70", "E104", "E105", "E130", "E132"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le vin français est le meilleur.",
+          "alsoFits": ["E70", "E104", "E130", "E131", "E132", "E164"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce restaurant est excellent !",
+          "alsoFits": ["E70", "E104", "E105", "E132"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On doit finir ce projet vite.",
+          "alsoFits": ["E70", "E132", "E228"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le sport, c'est important.",
+          "alsoFits": ["E70", "E104", "E130", "E132"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E58": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Manger du riz le matin ? Ce n'est pas une erreur, c'est une différence.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Manger la soupe avec du riz, c'est bizarre !",
+          "alsoFits": ["E52", "E131", "E141", "E164"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu sers le vin à deux mains ?",
+          "alsoFits": ["E52"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton collègue t'a corrigé en réunion ?",
+          "alsoFits": ["E113"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 ce n'était pas … c'était 로 바뀌어 고정 부분과 다르다"
+        },
+        {
+          "cue": "Tu mets du sucre dans la sauce ?!",
+          "alsoFits": ["E52"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Dormir par terre, c'est bizarre, non ?",
+          "alsoFits": ["E52", "E131", "E141", "E164"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E59": {
+      "similarMeaning": ["E132"],
+      "example": {
+        "text": "D'un côté, Paris est beau, de l'autre, c'est cher.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes travailler à la maison ?",
+          "alsoFits": ["E31", "E50", "E56", "E106", "E132", "E142", "E143"],
+          "skip": [],
+          "note": "의견을 묻는 열린 질문"
+        },
+        {
+          "cue": "Tu veux acheter ce vin ?",
+          "alsoFits": ["E60", "E106", "E107", "E142", "E215"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu aimes ton nouveau quartier ?",
+          "alsoFits": ["E50", "E106", "E132", "E142", "E143"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu joues encore à ce jeu ?",
+          "alsoFits": ["E61", "E64", "E106"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu veux partir en voiture ?",
+          "alsoFits": ["E56", "E68", "E74", "E82", "E106", "E142", "E172"],
+          "skip": [],
+          "note": "제안에 대한 답이라 수락·대안 표현도 맞다"
+        }
+      ]
+    },
+    "E60": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce restaurant est loin, mais ça vaut la peine.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le musée est loin, tu y vas ?",
+          "alsoFits": ["E56", "E86", "E87", "E101"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On attend une heure pour ce restaurant ?",
+          "alsoFits": ["E68", "E74", "E82", "E110", "E172"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as fait la queue pour le concert ?",
+          "alsoFits": ["E41", "E236"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 ça valait la peine 라 고정 부분과 다르다"
+        },
+        {
+          "cue": "Tu achètes la nouvelle console ?",
+          "alsoFits": ["E56", "E85", "E87", "E107", "E215"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Faire son pain, ce n'est pas trop long ?",
+          "alsoFits": ["E59"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E61": {
+      "similarMeaning": [],
+      "example": {
+        "text": "En fait, je n'aime pas trop le café.",
+        "alsoFits": ["E64", "E144"],
+        "skip": ["order"],
+        "note": "Je n'aime pas trop le café, en fait 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles ce week-end ?",
+          "alsoFits": ["E87", "E241"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu adores le fromage, je crois ?",
+          "alsoFits": ["E64", "E141", "E144"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le jeu était facile ?",
+          "alsoFits": ["E54", "E64", "E141", "E236"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu joues du piano, c'est ça ?",
+          "alsoFits": ["E141"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu es malade ?",
+          "alsoFits": ["E76", "E100", "E141", "E161"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E62": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il pleuvait, du coup, on est restés à la maison.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le restaurant était fermé ?",
+          "alsoFits": ["E45"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as raté le bus ?",
+          "alsoFits": ["E45", "E236"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il pleut beaucoup ce soir.",
+          "alsoFits": ["E82", "E129", "E199", "E201"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton ordinateur est en panne ?",
+          "alsoFits": ["E45", "E113"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as mal dormi ?",
+          "alsoFits": ["E76", "E100"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E63": {
+      "similarMeaning": ["E222"],
+      "example": {
+        "text": "Bref, c'était une longue journée.",
+        "alsoFits": ["E222"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Raconte-moi ta semaine !",
+          "alsoFits": ["E162", "E222", "E245"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Et ton voyage, alors ?",
+          "alsoFits": ["E46", "E65", "E203", "E222", "E236"],
+          "skip": [],
+          "note": "근황을 묻는 열린 질문"
+        },
+        {
+          "cue": "Et ton déménagement ?",
+          "alsoFits": ["E76", "E222", "E236"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton dîner de samedi ?",
+          "alsoFits": ["E62", "E222"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton concert d'hier soir, raconte !",
+          "alsoFits": ["E48", "E65", "E222"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E64": {
+      "similarMeaning": ["E144"],
+      "example": {
+        "text": "Franchement, ce jeu est trop difficile.",
+        "alsoFits": ["E49", "E50", "E61", "E144"],
+        "skip": ["order"],
+        "note": "Ce jeu est trop difficile, franchement 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes mon gâteau ?",
+          "alsoFits": ["E24", "E31", "E66", "E144", "E150"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce film t'a plu ?",
+          "alsoFits": ["E61", "E65", "E144", "E203"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Mon nouveau travail, ça va.",
+          "alsoFits": ["E71", "E139", "E182"],
+          "skip": [],
+          "note": "reply 가 Franchement 으로 시작하는 되묻기라 다른 맥락보다 정답 근거가 약하다(애매)"
+        },
+        {
+          "cue": "Ce vin est bon, non ?",
+          "alsoFits": ["E57", "E61", "E66", "E70", "E104", "E144"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu fais du sport ?",
+          "alsoFits": ["E61", "E144"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E65": {
+      "similarMeaning": ["E235"],
+      "example": {
+        "text": "Le concert d'hier ? Ça m'a plu.",
+        "alsoFits": ["E48", "E66", "E203"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé le restaurant ?",
+          "alsoFits": ["E64", "E150", "E203"],
+          "skip": ["blank"],
+          "note": "reply 에 beaucoup 이 끼어 고정 부분 Ça m'a plu 가 끊긴다"
+        },
+        {
+          "cue": "Le nouveau jeu, alors ?",
+          "alsoFits": ["E64", "E66", "E203"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je suis allé voir ton film préféré.",
+          "alsoFits": ["E139", "E183"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 Ça t'a plu ? 라는 되묻기라 Ça m'a plu 가 정답으로 어색하고 고정 부분도 다르다"
+        },
+        {
+          "cue": "Ton voyage à Lyon, c'était bien ?",
+          "alsoFits": ["E48", "E64", "E203"],
+          "skip": ["blank"],
+          "note": "reply 에 vraiment 이 끼어 고정 부분이 끊긴다"
+        },
+        {
+          "cue": "Le cours de cuisine, c'était comment ?",
+          "alsoFits": ["E64", "E66", "E203"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E66": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ton nouveau vin ? Pas mal !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Regarde ma nouvelle guitare !",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Goûte ma soupe.",
+          "alsoFits": ["E23", "E24"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton nouveau clavier, il est bien ?",
+          "alsoFits": ["E64"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai fini le jeu en trois heures.",
+          "alsoFits": ["E92", "E171"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Écoute ma nouvelle chanson.",
+          "alsoFits": ["E171"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E67": {
+      "similarMeaning": ["E69", "E74"],
+      "example": {
+        "text": "Tu peux m'aider ? — Pas de souci.",
+        "alsoFits": ["E174"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu peux m'envoyer le fichier ?",
+          "alsoFits": ["E68", "E89", "E248"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Désolé, je dois changer l'heure du dîner.",
+          "alsoFits": ["E69", "E81"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu peux réserver le restaurant ?",
+          "alsoFits": ["E68", "E174", "E248"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu peux garder mon chat ce week-end ?",
+          "alsoFits": ["E68", "E105", "E123", "E174", "E196", "E197"],
+          "skip": [],
+          "note": "부탁에 대한 답이라 수락·거절 표현이 여럿 맞다"
+        },
+        {
+          "cue": "Je peux prendre ta manette ?",
+          "alsoFits": ["E105"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E68": {
+      "similarMeaning": ["E74", "E173"],
+      "example": {
+        "text": "On se voit à huit heures ? — Ça marche !",
+        "alsoFits": ["E67", "E74", "E185"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On se retrouve devant le cinéma ?",
+          "alsoFits": ["E67", "E74", "E172", "E185"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu apportes le vin, j'apporte le fromage ?",
+          "alsoFits": ["E67", "E74", "E172"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On joue en ligne à neuf heures ?",
+          "alsoFits": ["E74", "E105", "E172", "E173", "E185"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On cuisine des pâtes ce soir ?",
+          "alsoFits": ["E74", "E105", "E172", "E173"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je réserve deux places pour le concert ?",
+          "alsoFits": ["E74", "E105"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E69": {
+      "similarMeaning": ["E67", "E81"],
+      "example": {
+        "text": "Je suis en retard. — Ce n'est pas grave.",
+        "alsoFits": ["E67", "E81"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai cassé ton verre, pardon !",
+          "alsoFits": ["E67", "E81"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Désolé, j'ai oublié le pain.",
+          "alsoFits": ["E67", "E80", "E81"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je suis désolé pour hier soir.",
+          "alsoFits": ["E67"],
+          "skip": ["blank"],
+          "note": "reply 가 반과거 Ce n'était pas grave 라 고정 부분과 다르다"
+        },
+        {
+          "cue": "Pardon, on a perdu à cause de moi.",
+          "alsoFits": ["E67", "E80", "E81"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je ne peux pas venir samedi.",
+          "alsoFits": ["E67", "E80", "E129", "E198"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E70": {
+      "similarMeaning": ["E96", "E104", "E130"],
+      "example": {
+        "text": "C'est trop cher. — Tu as raison.",
+        "alsoFits": ["E96", "E104"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles trop, tu sais.",
+          "alsoFits": ["E57", "E104", "E229"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce vin est meilleur avec du fromage.",
+          "alsoFits": ["E57", "E104", "E105"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu vois, le film était nul !",
+          "alsoFits": ["E104"],
+          "skip": ["blank"],
+          "note": "reply 가 tu avais raison(반과거)이라 고정 부분과 다르다"
+        },
+        {
+          "cue": "Tu devrais boire plus d'eau.",
+          "alsoFits": ["E57", "E104"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce jeu est meilleur à deux.",
+          "alsoFits": ["E73", "E104", "E105"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E71": {
+      "similarMeaning": ["E127", "E248"],
+      "example": {
+        "text": "J'ai beaucoup de travail ce mois-ci. — Je vois.",
+        "alsoFits": ["E127"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je ne peux pas venir, je suis malade.",
+          "alsoFits": ["E69", "E80", "E159", "E243"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il faut appuyer ici, puis là.",
+          "alsoFits": ["E01", "E02", "E248"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ce restaurant est bon, mais… bruyant.",
+          "alsoFits": ["E70", "E104"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je ne bois pas, je conduis ce soir.",
+          "alsoFits": ["E127"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Mon chef veut le projet pour lundi.",
+          "alsoFits": ["E72", "E217"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E72": {
+      "similarMeaning": ["E194"],
+      "example": {
+        "text": "J'ai arrêté le café. — Ah bon ?",
+        "alsoFits": ["E91", "E163"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je déménage à Marseille !",
+          "alsoFits": ["E91", "E92", "E139"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le restaurant d'en face est fermé.",
+          "alsoFits": ["E91", "E129", "E153", "E221"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Finalement, je n'ai plus mal au dos.",
+          "alsoFits": ["E125", "E169"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'arrête les jeux vidéo.",
+          "alsoFits": ["E91", "E93", "E163"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le concert est annulé.",
+          "alsoFits": ["E80", "E129", "E151", "E153"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E73": {
+      "similarMeaning": ["E109", "E223"],
+      "example": {
+        "text": "Ça te dit de manger ensemble samedi ?",
+        "alsoFits": ["E110"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai rien à faire ce soir.",
+          "alsoFits": ["E109", "E110", "E223"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai envie de bien manger.",
+          "alsoFits": ["E109", "E110", "E223"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Mes amis et moi, on s'ennuie.",
+          "alsoFits": ["E109", "E110"],
+          "skip": ["blank"],
+          "note": "reply 가 Ça vous dit 라 고정 부분 Ça te dit 와 다르다"
+        },
+        {
+          "cue": "Il fait beau aujourd'hui !",
+          "alsoFits": ["E109", "E110", "E223"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'aimerais découvrir le vin.",
+          "alsoFits": ["E83", "E109", "E110"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E74": {
+      "similarMeaning": ["E67", "E68", "E185"],
+      "example": {
+        "text": "Samedi à midi ? — Ça me va.",
+        "alsoFits": ["E68", "E185"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On mange italien ce soir ?",
+          "alsoFits": ["E68", "E105", "E172", "E173"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Rendez-vous à la gare à midi ?",
+          "alsoFits": ["E68", "E185"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je suis libre jeudi soir.",
+          "alsoFits": ["E121", "E122"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 ça te va ? 라는 되묻기라 Ça me va 가 정답으로 어색하고 고정 부분도 다르다"
+        },
+        {
+          "cue": "Je fais le plat, tu fais le dessert ?",
+          "alsoFits": ["E67", "E68"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On partage l'addition ?",
+          "alsoFits": ["E68"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E75": {
+      "similarMeaning": ["E85", "E148", "E242"],
+      "example": {
+        "text": "J'ai hâte de partir en vacances.",
+        "alsoFits": ["E85", "E86", "E148"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tes vacances commencent quand ?",
+          "alsoFits": ["E242"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le nouveau jeu sort demain !",
+          "alsoFits": ["E242"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je vais au Japon la semaine prochaine.",
+          "alsoFits": ["E158"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 Tu as hâte de partir ? 라는 되묻기라 J'ai hâte de 가 정답으로 어색하고 고정 부분도 다르다"
+        },
+        {
+          "cue": "Tu vas voir ta famille bientôt ?",
+          "alsoFits": ["E242"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le concert, c'est samedi, non ?",
+          "alsoFits": ["E242"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E76": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai travaillé jusqu'à minuit. Je suis crevé.",
+        "alsoFits": ["E114", "E102", "E100"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as couru combien de kilomètres ?",
+          "alsoFits": ["E114", "E236"],
+          "skip": [],
+          "note": "애매: 질문의 답은 숫자이고 표현은 덧붙인 말이라 다른 소감 표현도 들어간다"
+        },
+        {
+          "cue": "Tu sors ce soir ?",
+          "alsoFits": ["E100", "E101", "E102", "E114", "E123", "E196", "E87", "E107", "E162"],
+          "skip": [],
+          "note": "나갈지 묻는 열린 질문이라 거절·미정 표현이 다 맞다"
+        },
+        {
+          "cue": "J'ai travaillé jusqu'à deux heures du matin.",
+          "alsoFits": ["E128", "E243", "E83"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 tu dois être crevé 로 주어가 바뀌어 Je suis crevé 틀로는 대꾸가 안 된다. 빈칸도 débordé 같은 다른 말이 들어간다"
+        },
+        {
+          "cue": "Tu as l'air fatigué.",
+          "alsoFits": ["E100", "E114", "E162", "E102", "E77", "E161"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Ton déménagement est fini ?",
+          "alsoFits": ["E116", "E236", "E46", "E102"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E77": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai du mal à dormir en ce moment.",
+        "alsoFits": ["E148"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu comprends les films français ?",
+          "alsoFits": ["E64", "E59", "E56"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu te lèves tôt le matin ?",
+          "alsoFits": ["E254", "E101", "E56"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as trouvé l'hôtel facilement ?",
+          "alsoFits": ["E236", "E43"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as fini le niveau dix ?",
+          "alsoFits": ["E78", "E112"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu fais des crêpes ?",
+          "alsoFits": ["E85", "E254"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E78": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je n'ai pas eu le temps de manger.",
+        "alsoFits": ["E77", "E101", "E148"],
+        "skip": [],
+        "note": "예문이 짧아 다른 동사 틀(…하기 귀찮아, …하고 싶어)도 자연스럽게 들어간다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu as lu mon message ?",
+          "alsoFits": ["E44"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as fini ton jeu ?",
+          "alsoFits": ["E77"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je n'ai pas encore mangé aujourd'hui.",
+          "alsoFits": ["E72", "E83", "E221"],
+          "skip": ["situation"],
+          "note": "reply 가 Tu n'as pas eu le temps … 로 되묻는 말이라 Je … 틀로 대꾸하면 어색하다"
+        },
+        {
+          "cue": "Tu as fait les courses ?",
+          "alsoFits": ["E101", "E44", "E162", "E76"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as appelé ta mère ?",
+          "alsoFits": ["E44", "E162"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E79": {
+      "similarMeaning": ["E115"],
+      "example": {
+        "text": "J'ai retrouvé mon portable ! — Tant mieux.",
+        "alsoFits": ["E125", "E169"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai retrouvé mes clés !",
+          "alsoFits": ["E125", "E169"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je ne travaille pas vendredi !",
+          "alsoFits": ["E158", "E243", "E242"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il reste deux places au concert !",
+          "alsoFits": ["E115", "E169"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je n'ai plus de fièvre.",
+          "alsoFits": ["E125", "E159", "E243", "E169"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le restaurant a une table pour nous.",
+          "alsoFits": ["E115", "E40", "E68"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E80": {
+      "similarMeaning": ["E229"],
+      "example": {
+        "text": "Le magasin est fermé. — Tant pis.",
+        "alsoFits": ["E129", "E153", "E69"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il n'y a plus de billets.",
+          "alsoFits": ["E129", "E153", "E198", "E69", "E151"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il n'y a plus de vin rouge.",
+          "alsoFits": ["E69", "E67", "E153", "E129"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Mon frère ne veut pas venir ce soir.",
+          "alsoFits": ["E129", "E72", "E221", "E69"],
+          "skip": [],
+          "note": "reply 의 Tant pis pour lui 는 '걔만 손해' 라는 다른 뜻으로 쓰였다"
+        },
+        {
+          "cue": "Le serveur du jeu est en panne.",
+          "alsoFits": ["E153", "E129", "E89", "E113", "E151"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il pleut, pas de pique-nique.",
+          "alsoFits": ["E129", "E153", "E199", "E198", "E69"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E81": {
+      "similarMeaning": ["E127"],
+      "example": {
+        "text": "J'ai oublié ton anniversaire… — Ça arrive.",
+        "alsoFits": ["E69", "E67"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pardon, j'ai oublié notre rendez-vous.",
+          "alsoFits": ["E69", "E67"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai raté mon gâteau.",
+          "alsoFits": ["E69", "E129", "E255"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai perdu le match ce soir.",
+          "alsoFits": ["E69", "E219", "E129", "E155"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je me suis trompé de train.",
+          "alsoFits": ["E69", "E156", "E153"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai fait une erreur dans mon code.",
+          "alsoFits": ["E69", "E67", "E89"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E82": {
+      "similarMeaning": ["E83"],
+      "example": {
+        "text": "Il vaut mieux se reposer ce soir.",
+        "alsoFits": ["E110"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il pleut beaucoup, on sort quand même ?",
+          "alsoFits": ["E110", "E109", "E87"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai mal à la tête depuis ce matin.",
+          "alsoFits": ["E83", "E84", "E159", "E243"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Pourquoi tu es parti tôt du concert ?",
+          "alsoFits": ["E76", "E100", "E206", "E142"],
+          "skip": ["situation"],
+          "note": "'왜' 질문의 답은 앞 문장(사람이 너무 많았다)이고 표현은 과거형으로 덧붙어 있어, 표현만으로는 대꾸가 안 된다"
+        },
+        {
+          "cue": "On réserve le restaurant ?",
+          "alsoFits": ["E68", "E89", "E172", "E216", "E105"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "On ouvre le vin maintenant ?",
+          "alsoFits": ["E133", "E172", "E105", "E68", "E110"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E83": {
+      "similarMeaning": ["E82"],
+      "example": {
+        "text": "Tu devrais voir un médecin.",
+        "alsoFits": ["E82"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je dors très mal en ce moment.",
+          "alsoFits": ["E82", "E84"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je m'ennuie le week-end.",
+          "alsoFits": ["E84", "E109", "E110", "E73", "E223", "E82"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il va faire beau ce week-end.",
+          "alsoFits": ["E109", "E110", "E73", "E223", "E242"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 On devrait 라 Tu devrais 틀과 주어가 다르고, 날씨 소식에 '너 …하는 게 좋겠어' 로 대꾸하면 어색하다. 제안 표현이 더 맞다"
+        },
+        {
+          "cue": "Je n'arrive pas à battre ce boss.",
+          "alsoFits": ["E84", "E82", "E217"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Mon chef me donne trop de travail.",
+          "alsoFits": ["E84", "E82", "E217"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E84": {
+      "similarMeaning": [],
+      "example": {
+        "text": "À ta place, je dormirais plus.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je ne sais pas quel vin acheter.",
+          "alsoFits": ["E83", "E82", "E204"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Mon téléphone est très vieux.",
+          "alsoFits": ["E83", "E82"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je veux acheter cette console très chère.",
+          "alsoFits": ["E83", "E60", "E172", "E82"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai mal au dos depuis une semaine.",
+          "alsoFits": ["E83", "E82", "E159"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je pars en été ou en hiver ?",
+          "alsoFits": ["E83", "E82", "E56", "E176", "E177"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E85": {
+      "similarMeaning": ["E148", "E75"],
+      "example": {
+        "text": "J'aimerais bien apprendre le piano.",
+        "alsoFits": ["E86", "E148"],
+        "skip": [],
+        "note": "E148 은 d'apprendre 로 줄어든 꼴이 된다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu as des projets pour cette année ?",
+          "alsoFits": ["E86", "E253", "E148", "E107", "E87"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu veux faire quoi ce week-end ?",
+          "alsoFits": ["E148", "E86", "E109", "E110", "E73", "E177"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le concert était complet.",
+          "alsoFits": ["E129", "E80", "E153"],
+          "skip": ["situation", "blank"],
+          "note": "reply 가 j'aurais bien aimé(조건법 과거)라 J'aimerais bien 틀로는 매진 소식에 대꾸가 안 되고, 빈칸 자리도 틀과 꼴이 다르다"
+        },
+        {
+          "cue": "Tu joues d'un instrument ?",
+          "alsoFits": ["E148"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu sais faire des croissants ?",
+          "alsoFits": ["E148"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E86": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je compte partir en Bretagne cet été.",
+        "alsoFits": ["E85", "E148", "E75"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu fais quoi ce week-end ?",
+          "alsoFits": ["E85", "E148", "E107", "E87", "E177"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu vas changer de travail ?",
+          "alsoFits": ["E85", "E87", "E107", "E215", "E106", "E177", "E176"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "J'ai enfin acheté un vélo !",
+          "alsoFits": ["E117", "E79", "E158"],
+          "skip": ["situation"],
+          "note": "reply 가 Tu comptes … ? 로 되묻는 말이라 Je compte 틀로 대꾸하면 어색하다"
+        },
+        {
+          "cue": "Tu as acheté beaucoup de légumes !",
+          "alsoFits": ["E148"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu as des projets pour Noël ?",
+          "alsoFits": ["E85", "E148", "E107", "E87", "E241"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E87": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu viens demain ? — On verra.",
+        "alsoFits": ["E107", "E177", "E215"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu viendras à ma fête samedi ?",
+          "alsoFits": ["E107", "E177", "E215", "E196", "E123", "E174", "E197"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu vas acheter ce jeu ?",
+          "alsoFits": ["E215", "E177", "E106", "E107"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu pars en vacances en décembre ?",
+          "alsoFits": ["E107", "E177", "E86", "E241"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu vas gagner le tournoi ?",
+          "alsoFits": ["E176", "E177", "E216", "E228"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu vas courir demain matin ?",
+          "alsoFits": ["E56", "E177", "E107", "E86"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E88": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Salut Marc ! Ça fait longtemps !",
+        "alsoFits": ["E244"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu te souviens de moi ?",
+          "alsoFits": ["E209"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Coucou, c'est moi, ton vieux copain !",
+          "alsoFits": ["E244", "E91"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Tu joues encore à ce jeu ?",
+          "alsoFits": ["E78"],
+          "skip": ["situation"],
+          "note": "reply 는 ça fait longtemps que …(…한 지 오래됐다)로 쓰여 '오랜만이야!' 인사로는 이 질문에 대꾸가 안 된다"
+        },
+        {
+          "cue": "On ne s'est pas vus depuis l'été !",
+          "alsoFits": ["E246", "E244"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "C'est toi, Brice ?",
+          "alsoFits": ["E244"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E89": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Les billets ? Je m'en occupe.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Qui réserve le restaurant ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il faut acheter le vin pour la fête.",
+          "alsoFits": ["E68", "E248"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Il faut réserver la salle pour la réunion.",
+          "alsoFits": ["E248", "E68"],
+          "skip": ["blank"],
+          "note": "reply 가 je m'en suis occupé(과거)라 틀의 고정 부분과 꼴이 다르다. 상황 대꾸로는 Je m'en occupe 가 자연스럽다"
+        },
+        {
+          "cue": "Qui fait la vaisselle ce soir ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Le serveur du jeu ne marche plus.",
+          "alsoFits": ["E80", "E113", "E151", "E153"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E90": {
+      "similarMeaning": ["E136"],
+      "example": {
+        "text": "Merci pour le cadeau, ça me fait plaisir.",
+        "alsoFits": ["E178"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je t'ai apporté du vin coréen.",
+          "alsoFits": ["E193", "E233", "E178"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je viens à ta fête samedi !",
+          "alsoFits": ["E79"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Merci pour le dîner d'hier !",
+          "alsoFits": ["E195", "E67"],
+          "skip": ["blank"],
+          "note": "reply 가 ça m'a fait plaisir(과거)라 틀의 고정 부분과 꼴이 다르다"
+        },
+        {
+          "cue": "Ton français a beaucoup progressé !",
+          "alsoFits": ["E194", "E193", "E178", "E137"],
+          "skip": [],
+          "note": ""
+        },
+        {
+          "cue": "Je t'appelle juste pour dire bonjour.",
+          "alsoFits": ["E178", "E193", "E88"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E91": {
+      "similarMeaning": ["E92", "E93", "E151"],
+      "example": {
+        "text": "Ça alors ! Tu parles coréen maintenant ?",
+        "alsoFits": ["E92", "E151", "E72"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je me suis marié le mois dernier !",
+          "alsoFits": ["E92", "E151", "E169", "E170", "E117", "E93"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E92": {
+      "similarMeaning": ["E91", "E151"],
+      "example": {
+        "text": "C'est dingue, il fait 25 degrés en novembre !",
+        "alsoFits": ["E91", "E151"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai vu Zidane au supermarché hier.",
+          "alsoFits": ["E91", "E151", "E72"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E93": {
+      "similarMeaning": ["E91"],
+      "example": {
+        "text": "J'ai gagné ? Je n'arrive pas à y croire !",
+        "alsoFits": ["E91", "E92", "E151"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as réussi ton examen, tu as eu 18 sur 20 !",
+          "alsoFits": ["E91", "E92", "E151", "E169", "E179"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E94": {
+      "similarMeaning": ["E130", "E96"],
+      "example": {
+        "text": "Ton explication est longue, mais ça se tient.",
+        "alsoFits": ["E167"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il est en retard, il y a sûrement des bouchons.",
+          "alsoFits": ["E130", "E70", "E104"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E95": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ah, c'est bien vu, je n'avais pas remarqué.",
+        "alsoFits": ["E70"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ton texte est bien, mais ce mot est répété trois fois.",
+          "alsoFits": ["E70", "E248"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E96": {
+      "similarMeaning": ["E70", "E94", "E130"],
+      "example": {
+        "text": "Tu marques un point, c'est moins cher en train.",
+        "alsoFits": ["E70", "E104", "E130"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Si on prend le vélo, on fait du sport en même temps.",
+          "alsoFits": ["E70", "E130", "E94", "E167", "E104"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E97": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu peux me donner un coup de main avec ces cartons ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce qu'il y a ? Tu as l'air occupé.",
+          "alsoFits": ["E162", "E99"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E98": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu peux jeter un coup d'œil à mon texte ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as besoin de quelque chose ?",
+          "alsoFits": ["E97", "E99"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E99": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ça te dérange de fermer la fenêtre ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je vais au supermarché.",
+          "alsoFits": ["E111"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E100": {
+      "similarMeaning": ["E76"],
+      "example": {
+        "text": "Après le déjeuner, j'ai un coup de barre.",
+        "alsoFits": ["E76"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as l'air fatigué, ça va ?",
+          "alsoFits": ["E76", "E162", "E161", "E102"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E101": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai la flemme de cuisiner. On commande une pizza ?",
+        "alsoFits": ["E78"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu vas à la salle de sport ce soir ?",
+          "alsoFits": ["E76", "E100", "E102"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E102": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Cette semaine a été dure, j'ai besoin de souffler un peu.",
+        "alsoFits": ["E76", "E114"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles encore ce week-end ?",
+          "alsoFits": ["E76", "E162", "E114"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E103": {
+      "similarMeaning": ["E208", "E105"],
+      "example": {
+        "text": "Il est fatigué ? Tu m'étonnes, il travaille la nuit !",
+        "alsoFits": ["E208", "E127"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Après le marathon, j'avais super faim.",
+          "alsoFits": ["E208", "E127"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E104": {
+      "similarMeaning": ["E70"],
+      "example": {
+        "text": "J'avoue, ce film était un peu long.",
+        "alsoFits": ["E64", "E144"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le café ici est vraiment bon.",
+          "alsoFits": ["E70"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E105": {
+      "similarMeaning": ["E208", "E103"],
+      "example": {
+        "text": "Une pizza ce soir ? Carrément !",
+        "alsoFits": ["E172", "E173", "E68", "E174"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On va à la plage ce week-end ?",
+          "alsoFits": ["E172", "E173", "E68", "E174"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E106": {
+      "similarMeaning": ["E214"],
+      "example": {
+        "text": "Rester ou partir ? Je suis partagé.",
+        "alsoFits": ["E107", "E177", "E176"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu préfères habiter en ville ou à la campagne ?",
+          "alsoFits": ["E59", "E56", "E176", "E177", "E55"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E107": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pour les vacances, je ne suis pas encore fixé.",
+        "alsoFits": ["E106", "E87", "E177"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu pars où cet été ?",
+          "alsoFits": ["E87", "E177", "E214", "E86"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E108": {
+      "similarMeaning": ["E188"],
+      "example": {
+        "text": "Je me demande si Paul va venir ce soir.",
+        "alsoFits": ["E188"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Paul n'est pas encore arrivé.",
+          "alsoFits": ["E188", "E124", "E118", "E119"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E109": {
+      "similarMeaning": ["E110", "E73"],
+      "example": {
+        "text": "Et si on allait au cinéma ce soir ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je m'ennuie un peu aujourd'hui.",
+          "alsoFits": ["E110", "E73", "E223", "E83"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E110": {
+      "similarMeaning": ["E109"],
+      "example": {
+        "text": "On pourrait inviter Marie aussi.",
+        "alsoFits": ["E83"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce qu'on fait pour l'anniversaire de Paul ?",
+          "alsoFits": ["E109", "E73"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E111": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tant qu'à faire, prends aussi du pain.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je vais à Paris pour le travail lundi.",
+          "alsoFits": ["E158", "E83"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E112": {
+      "similarMeaning": ["E113"],
+      "example": {
+        "text": "J'en ai marre de la pluie !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le métro est encore en grève demain.",
+          "alsoFits": ["E113", "E151", "E152"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E113": {
+      "similarMeaning": ["E112"],
+      "example": {
+        "text": "Le bus est encore en retard, ça m'énerve.",
+        "alsoFits": ["E112"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ton voisin fait encore du bruit la nuit ?",
+          "alsoFits": ["E112", "E114"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E114": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Trois heures de réunion ? Je n'en peux plus !",
+        "alsoFits": ["E112", "E152"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On fait encore une heure de travail ?",
+          "alsoFits": ["E76", "E102"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E115": {
+      "similarMeaning": ["E79"],
+      "example": {
+        "text": "Tu as faim ? Ça tombe bien, j'ai fait des crêpes.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai deux places pour le concert ce soir.",
+          "alsoFits": ["E173", "E105"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E116": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ça y est, j'ai fini mon rapport !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Alors, tu as trouvé un appartement ?",
+          "alsoFits": ["E40"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E117": {
+      "similarMeaning": ["E169"],
+      "example": {
+        "text": "Tu as eu le poste ? Ça se fête !",
+        "alsoFits": ["E169", "E170", "E171"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai eu une promotion au travail !",
+          "alsoFits": ["E169", "E170", "E171", "E91"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E118": {
+      "similarMeaning": ["E119", "E120"],
+      "example": {
+        "text": "On dirait que tu es fatigué.",
+        "alsoFits": ["E119"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Regarde Marie, elle sourit tout le temps aujourd'hui.",
+          "alsoFits": ["E119", "E108", "E188"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E119": {
+      "similarMeaning": ["E118", "E120"],
+      "example": {
+        "text": "J'ai l'impression que tout le monde est fatigué.",
+        "alsoFits": ["E118", "E50", "E49"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu comprends mieux le français maintenant ?",
+          "alsoFits": ["E50", "E118", "E176", "E177", "E64", "E144"],
+          "skip": [],
+          "note": "열린 질문이라 의견·망설임 표현도 자연스럽다"
+        }
+      ]
+    },
+    "E120": {
+      "similarMeaning": ["E119", "E118"],
+      "example": {
+        "text": "Vingt euros ? Ça me paraît cher.",
+        "alsoFits": ["E31"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On peut partager l'addition en trois.",
+          "alsoFits": ["E68", "E74", "E67", "E31", "E172", "E167", "E185"],
+          "skip": [],
+          "note": "제안에 동의하는 대꾸가 여럿 맞다"
+        }
+      ]
+    },
+    "E121": {
+      "similarMeaning": [],
+      "example": {
+        "text": "On se retrouve à la gare à midi ?",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "장소·시간 순서를 바꿔도 자연스럽다(à midi à la gare)"
+      },
+      "contexts": [
+        {
+          "cue": "Alors, pour demain, on fait comment ?",
+          "alsoFits": ["E110", "E109", "E224", "E73"],
+          "skip": [],
+          "note": "약속을 정하는 제안 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E122": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Samedi à midi, ça te convient ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je suis libre jeudi ou vendredi.",
+          "alsoFits": ["E121", "E110", "E109", "E73", "E223"],
+          "skip": [],
+          "note": "날짜를 제안하는 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E123": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Désolé, j'ai un empêchement ce soir.",
+        "alsoFits": ["E196"],
+        "skip": ["order"],
+        "note": "ce soir 자리를 앞으로 옮겨도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu viens toujours au dîner ce soir ?",
+          "alsoFits": ["E186", "E162"],
+          "skip": [],
+          "note": "toujours 로 이미 정한 약속이라 E196(선약)은 어색해서 뺐다"
+        }
+      ]
+    },
+    "E124": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il ne répond pas au téléphone, ça m'inquiète.",
+        "alsoFits": ["E113", "E227"],
+        "skip": ["order"],
+        "note": "두 절 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Comment va ton chat ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": "애매: 고양이 근황 질문에 '걱정돼'만으로는 앞 문장에 기대지만 대꾸로는 성립한다"
+        }
+      ]
+    },
+    "E125": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu es bien arrivé ? Ça me rassure.",
+        "alsoFits": ["E79"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le médecin a dit que ce n'était rien de grave.",
+          "alsoFits": ["E79", "E169", "E72"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E126": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Demain, je fais un exposé, j'ai le trac.",
+        "alsoFits": ["E124"],
+        "skip": ["order"],
+        "note": "Demain 을 문장 끝으로 옮겨도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "C'est bientôt ton tour de parler !",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E127": {
+      "similarMeaning": ["E103", "E208"],
+      "example": {
+        "text": "Tu es déçu ? Ça se comprend.",
+        "alsoFits": ["E103", "E208"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je suis stressé, j'ai un entretien demain.",
+          "alsoFits": ["E157", "E217", "E103", "E208", "E218"],
+          "skip": [],
+          "note": "걱정하는 말에 위로·격려 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E128": {
+      "similarMeaning": ["E228"],
+      "example": {
+        "text": "Tu as déménagé seul ? Ça n'a pas dû être facile.",
+        "alsoFits": ["E171"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai attendu le train trois heures sous la pluie.",
+          "alsoFits": ["E219", "E151", "E210", "E92", "E91"],
+          "skip": [],
+          "note": "고생담에 놀람·안타까움 반응이 여럿 맞다"
+        }
+      ]
+    },
+    "E129": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu ne viens pas ? C'est dommage !",
+        "alsoFits": ["E80", "E198"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le restaurant est fermé ce soir.",
+          "alsoFits": ["E80", "E153", "E156", "E110", "E109"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E130": {
+      "similarMeaning": ["E94"],
+      "example": {
+        "text": "Il y a du vrai dans ce que tu dis, mais c'est compliqué.",
+        "alsoFits": ["E94", "E70", "E96", "E57", "E131"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Les gens travaillent trop en Corée.",
+          "alsoFits": ["E70", "E94", "E104", "E57", "E131", "E132", "E56", "E50"],
+          "skip": [],
+          "note": "의견 표명에 대한 대꾸라 동의·유보 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E131": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu trouves ça drôle ? C'est une façon de voir les choses.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le travail, c'est juste pour gagner de l'argent.",
+          "alsoFits": ["E130", "E57", "E132", "E56", "E50", "E164"],
+          "skip": [],
+          "note": "의견 표명에 대한 대꾸라 여러 표현이 맞다"
+        }
+      ]
+    },
+    "E132": {
+      "similarMeaning": ["E59"],
+      "example": {
+        "text": "C'est cher. En même temps, c'est très bon.",
+        "alsoFits": ["E155"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Paul est toujours en retard !",
+          "alsoFits": ["E57", "E61"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E133": {
+      "similarMeaning": ["E134"],
+      "example": {
+        "text": "Rends-moi le livre quand tu veux, rien ne presse.",
+        "alsoFits": ["E134", "E67", "E69"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Désolé, je n'ai pas encore réparé ton vélo.",
+          "alsoFits": ["E134", "E67", "E69"],
+          "skip": [],
+          "note": "reply 에 E69(Ce n'est pas grave)도 들어 있다"
+        }
+      ]
+    },
+    "E134": {
+      "similarMeaning": ["E133"],
+      "example": {
+        "text": "Tu cherches tes mots ? Prends ton temps.",
+        "alsoFits": ["E133"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Attends, je cherche mes clés…",
+          "alsoFits": ["E133", "E67"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E135": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu n'es pas obligé de venir, tu sais.",
+        "alsoFits": ["E83"],
+        "skip": [],
+        "note": "Tu devrais venir 도 문장으로는 자연스럽다(뜻은 반대)"
+      },
+      "contexts": [
+        {
+          "cue": "Je dois apporter du vin ce soir ?",
+          "alsoFits": ["E83", "E89"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E136": {
+      "similarMeaning": ["E179", "E90"],
+      "example": {
+        "text": "Il fait beau, je suis de bonne humeur.",
+        "alsoFits": ["E137", "E179"],
+        "skip": ["order"],
+        "note": "두 절 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu chantes ? Qu'est-ce qui se passe ?",
+          "alsoFits": ["E179"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E137": {
+      "similarMeaning": ["E180"],
+      "example": {
+        "text": "Un bon café, ça me remonte le moral.",
+        "alsoFits": ["E180"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, je t'ai apporté des chocolats.",
+          "alsoFits": ["E193", "E233", "E178", "E90"],
+          "skip": [],
+          "note": "선물을 받는 말에 고마움 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E138": {
+      "similarMeaning": ["E148", "E85"],
+      "example": {
+        "text": "Ce soleil, ça me donne envie de partir à la plage.",
+        "alsoFits": ["E148"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Regarde la recette de tarte de ma grand-mère.",
+          "alsoFits": ["E148", "E66", "E85"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E139": {
+      "similarMeaning": ["E182"],
+      "example": {
+        "text": "Tu as vu Paul hier ? Raconte !",
+        "alsoFits": ["E182"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il m'est arrivé un truc bizarre ce matin.",
+          "alsoFits": ["E182", "E72", "E207"],
+          "skip": [],
+          "note": "reply 에 E72(Ah bon ?)도 들어 있다"
+        }
+      ]
+    },
+    "E140": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu n'aimes pas courir ? Moi non plus !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai pas bien dormi cette nuit.",
+          "alsoFits": ["E76", "E81"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E141": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je te dérange ? Mais pas du tout !",
+        "alsoFits": ["E67"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu es fâché contre moi ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E142": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'aime ce quartier. Le problème, c'est que c'est bruyant.",
+        "alsoFits": ["E143", "E132"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu ne prends pas la voiture ?",
+          "alsoFits": ["E61", "E143"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E143": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce qui me dérange, c'est que personne ne dit merci.",
+        "alsoFits": ["E142"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes ton nouveau bureau ?",
+          "alsoFits": ["E142", "E50", "E59", "E132", "E66", "E144"],
+          "skip": [],
+          "note": "의견을 묻는 열린 질문이다"
+        }
+      ]
+    },
+    "E144": {
+      "similarMeaning": ["E64"],
+      "example": {
+        "text": "Je t'avoue que je n'ai pas lu ton message.",
+        "alsoFits": ["E64", "E61"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé le film d'hier ?",
+          "alsoFits": ["E64", "E203", "E61", "E66", "E65", "E50", "E106"],
+          "skip": [],
+          "note": "감상을 묻는 열린 질문이다"
+        }
+      ]
+    },
+    "E145": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je n'ai pas encore la réponse, je te tiens au courant.",
+        "alsoFits": ["E147"],
+        "skip": ["order"],
+        "note": "두 절 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu sais quand tu pars en voyage ?",
+          "alsoFits": ["E107", "E87", "E177"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E146": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Comme convenu, je t'attends à huit heures.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On se voit toujours demain matin ?",
+          "alsoFits": ["E68", "E186", "E123"],
+          "skip": [],
+          "note": "약속 확인에 수락·연기·취소 대꾸가 모두 맞다"
+        }
+      ]
+    },
+    "E147": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je suis dans le métro, je te rappelle.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "두 절 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Allô ? Tu as deux minutes ?",
+          "alsoFits": ["E162"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E148": {
+      "similarMeaning": ["E85", "E138"],
+      "example": {
+        "text": "J'ai envie de manger une glace.",
+        "alsoFits": ["E85", "E75"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce que tu veux faire ce soir ?",
+          "alsoFits": ["E85", "E101", "E102", "E177", "E110", "E109", "E223", "E76"],
+          "skip": [],
+          "note": "하고 싶은 것을 묻는 열린 질문이다"
+        }
+      ]
+    },
+    "E149": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il est seize heures, j'ai un petit creux.",
+        "alsoFits": ["E100"],
+        "skip": ["order"],
+        "note": "두 절 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "On mange dans deux heures.",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E150": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Merci pour le dîner, je me suis régalé !",
+        "alsoFits": ["E65"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Alors, tu as aimé le couscous ?",
+          "alsoFits": ["E65", "E24", "E66", "E144", "E64", "E203"],
+          "skip": [],
+          "note": "맛을 묻는 질문이라 감상 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E151": {
+      "similarMeaning": ["E152", "E165", "E92"],
+      "example": {
+        "text": "C'est pas vrai, j'ai encore raté le bus !",
+        "alsoFits": ["E152", "E153"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Désolé, la machine à café est encore en panne.",
+          "alsoFits": ["E152", "E153", "E112", "E113"],
+          "skip": [],
+          "note": "짜증·어이없음 반응이 여럿 맞다"
+        }
+      ]
+    },
+    "E152": {
+      "similarMeaning": ["E151", "E165"],
+      "example": {
+        "text": "Non mais je rêve, il a pris ma place !",
+        "alsoFits": ["E151", "E113"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le train a deux heures de retard.",
+          "alsoFits": ["E151", "E210", "E153", "E112", "E113", "E92"],
+          "skip": [],
+          "note": "어이없음 반응이 여럿 맞다"
+        }
+      ]
+    },
+    "E153": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Mince, j'ai oublié mes clés !",
+        "alsoFits": ["E151"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as pris ton parapluie ? Il pleut.",
+          "alsoFits": ["E44", "E151"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E154": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tout compte fait, je préfère rester ici.",
+        "alsoFits": ["E62", "E61", "E63"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Alors, tu prends le train ou l'avion ?",
+          "alsoFits": ["E61", "E62", "E55", "E214", "E107", "E106", "E56"],
+          "skip": [],
+          "note": "선택을 묻는 질문이라 여러 표현이 맞다"
+        }
+      ]
+    },
+    "E155": {
+      "similarMeaning": [],
+      "example": {
+        "text": "On a perdu, mais au moins, on a essayé.",
+        "alsoFits": ["E222"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il a plu toute la semaine pendant mes vacances.",
+          "alsoFits": ["E129", "E219", "E132"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E156": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Au pire, on mange une pizza à la maison.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Et si le restaurant est complet ?",
+          "alsoFits": ["E110", "E87"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E157": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ne t'inquiète pas, tout va bien se passer demain.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je passe mon permis demain, j'ai peur.",
+          "alsoFits": ["E217", "E127", "E218"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E158": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu pars en vacances ? Profites-en bien !",
+        "alsoFits": ["E243"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Demain, je pars une semaine à Nice.",
+          "alsoFits": ["E243"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E159": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu as l'air fatigué. Prends soin de toi.",
+        "alsoFits": ["E243"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je suis malade depuis lundi.",
+          "alsoFits": ["E243", "E217"],
+          "skip": [],
+          "note": "reply 에 E243(Repose-toi bien)도 들어 있다"
+        }
+      ]
+    },
+    "E160": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pardon, j'ai la tête ailleurs aujourd'hui.",
+        "alsoFits": ["E76"],
+        "skip": ["order"],
+        "note": "aujourd'hui 자리를 옮겨도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu m'écoutes ? Je t'ai posé une question.",
+          "alsoFits": ["E01", "E15"],
+          "skip": [],
+          "note": "reply 뒷부분이 E01 과 거의 같다"
+        }
+      ]
+    },
+    "E161": {
+      "similarMeaning": [],
+      "example": {
+        "text": "C'est une semaine difficile, mais je tiens le coup.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as beaucoup de travail en ce moment, ça va ?",
+          "alsoFits": ["E162", "E76", "E114", "E112", "E102"],
+          "skip": [],
+          "note": "근황 질문이라 상태 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E162": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je ne peux pas déjeuner, je suis débordé.",
+        "alsoFits": ["E196", "E123"],
+        "skip": ["order"],
+        "note": "두 절 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "On prend un café cet après-midi ?",
+          "alsoFits": ["E123", "E196", "E197", "E198", "E172", "E173", "E174", "E68"],
+          "skip": [],
+          "note": "권유라 거절·수락 표현이 모두 맞다"
+        }
+      ]
+    },
+    "E163": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il va arriver à l'heure ? Ça m'étonnerait.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je pense qu'il va faire beau demain.",
+          "alsoFits": ["E176", "E87", "E216"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E164": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Deux heures ? Tu exagères, c'était vingt minutes !",
+        "alsoFits": ["E165"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ce film est le pire film du monde !",
+          "alsoFits": ["E165", "E131"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E165": {
+      "similarMeaning": ["E151"],
+      "example": {
+        "text": "Les chats détestent les gens ? N'importe quoi !",
+        "alsoFits": ["E164"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Les Coréens ne mangent que du riz.",
+          "alsoFits": ["E164", "E141"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E166": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Un tiers de notre vie à dormir ? Je n'y avais jamais pensé.",
+        "alsoFits": ["E93", "E92", "E91"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu pourrais apprendre le français avec des chansons.",
+          "alsoFits": ["E167", "E215", "E172", "E95"],
+          "skip": [],
+          "note": "제안에 대한 반응이 여럿 맞다"
+        }
+      ]
+    },
+    "E167": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Prendre le métro ? C'est pas bête.",
+        "alsoFits": ["E172", "E94"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On peut cuisiner ensemble au lieu d'aller au restaurant.",
+          "alsoFits": ["E172", "E68", "E173", "E74", "E166", "E94"],
+          "skip": [],
+          "note": "제안에 대한 동의 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E168": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce livre parle de la solitude. Ça me parle.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Apprendre une langue, c'est comme le sport.",
+          "alsoFits": ["E70", "E94", "E104", "E130"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E169": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu as trouvé un appartement ? Quelle bonne nouvelle !",
+        "alsoFits": ["E170", "E79", "E117"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ma sœur attend un bébé !",
+          "alsoFits": ["E117", "E91"],
+          "skip": [],
+          "note": "E170 은 pour toi 라 언니 얘기에는 어색해서 뺐다"
+        }
+      ]
+    },
+    "E170": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu as eu le poste ? Je suis super content pour toi !",
+        "alsoFits": ["E169", "E117", "E171"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai enfin eu mon permis de conduire !",
+          "alsoFits": ["E169", "E117", "E171"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E171": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu as couru un marathon ? Chapeau !",
+        "alsoFits": ["E92", "E128"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai appris à jouer de la guitare tout seul.",
+          "alsoFits": ["E92", "E91"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E172": {
+      "similarMeaning": ["E174", "E105"],
+      "example": {
+        "text": "Un film ce soir ? Pourquoi pas !",
+        "alsoFits": ["E173", "E68", "E74", "E105", "E174"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu veux essayer le nouveau restaurant thaï ?",
+          "alsoFits": ["E173", "E68", "E105", "E174", "E74"],
+          "skip": [],
+          "note": "권유 수락 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E173": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Une randonnée dimanche ? Je suis partant !",
+        "alsoFits": ["E172", "E68", "E105", "E174"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On va faire du ski en janvier. Tu viens ?",
+          "alsoFits": ["E172", "E105", "E68", "E174"],
+          "skip": [],
+          "note": "권유 수락 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E174": {
+      "similarMeaning": ["E172"],
+      "example": {
+        "text": "Encore un peu de thé ? — Volontiers !",
+        "alsoFits": ["E172"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu veux encore un morceau de gâteau ?",
+          "alsoFits": ["E172", "E105"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E175": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pourquoi les Français dînent si tard ? Bonne question !",
+        "alsoFits": ["E176", "E177"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu apprends le français ?",
+          "alsoFits": ["E61"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E176": {
+      "similarMeaning": ["E177"],
+      "example": {
+        "text": "Qui va gagner ? C'est difficile à dire.",
+        "alsoFits": ["E175", "E177", "E87"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu crois qu'il va neiger à Noël ?",
+          "alsoFits": ["E177", "E87", "E188", "E216", "E163"],
+          "skip": [],
+          "note": "예측을 묻는 질문이라 여러 표현이 맞다"
+        }
+      ]
+    },
+    "E177": {
+      "similarMeaning": ["E176"],
+      "example": {
+        "text": "Sortir ce soir ? Je ne sais pas trop.",
+        "alsoFits": ["E87", "E107", "E176"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu préfères la mer ou la montagne ?",
+          "alsoFits": ["E106", "E56", "E176", "E214", "E55", "E175"],
+          "skip": [],
+          "note": "선호를 묻는 열린 질문이다"
+        }
+      ]
+    },
+    "E178": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Merci pour ton message, ça me fait chaud au cœur.",
+        "alsoFits": ["E90", "E137"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tous tes collègues ont signé une carte pour toi.",
+          "alsoFits": ["E90"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E179": {
+      "similarMeaning": ["E136"],
+      "example": {
+        "text": "Elle a dit oui ! Je suis aux anges !",
+        "alsoFits": ["E136", "E116"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ta famille vient te voir pour Noël ?",
+          "alsoFits": ["E75", "E242"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E180": {
+      "similarMeaning": ["E137"],
+      "example": {
+        "text": "Une petite promenade, ça m'a fait du bien.",
+        "alsoFits": ["E65"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Alors, ton week-end à la mer ?",
+          "alsoFits": ["E65", "E66"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E181": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Comment ça, le magasin est fermé ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Finalement, je ne pars plus en vacances.",
+          "alsoFits": ["E72", "E221", "E207", "E129"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E182": {
+      "similarMeaning": ["E139"],
+      "example": {
+        "text": "Tu as l'air triste. Dis-moi tout.",
+        "alsoFits": ["E139", "E207"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai un petit problème au travail.",
+          "alsoFits": ["E139", "E72", "E207"],
+          "skip": [],
+          "note": "reply 에 E72(Ah bon ?)도 들어 있다"
+        }
+      ]
+    },
+    "E183": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai acheté ce manteau. Tu en penses quoi ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Moi, je trouve que Séoul est trop grand.",
+          "alsoFits": ["E57", "E50"],
+          "skip": ["situation"],
+          "note": "상대가 이미 의견을 말했는데 같은 화제로 '넌 어떻게 생각해?'를 고르는 건 어색하다. reply 는 파리로 화제를 돌려서야 성립한다"
+        }
+      ]
+    },
+    "E184": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu es libre samedi après-midi ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'aimerais bien te voir avant Noël.",
+          "alsoFits": ["E121", "E110", "E109", "E73", "E223"],
+          "skip": [],
+          "note": "만날 약속을 제안하는 표현이 여럿 맞다"
+        }
+      ]
+    },
+    "E185": {
+      "similarMeaning": ["E74"],
+      "example": {
+        "text": "On se voit mardi ? Ça m'arrange bien.",
+        "alsoFits": ["E74", "E68"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On peut se voir près de ton bureau, si tu veux.",
+          "alsoFits": ["E74", "E68", "E193"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E186": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je suis malade. On peut repousser à lundi ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On se voit toujours demain à midi ?",
+          "alsoFits": ["E123", "E146", "E68"],
+          "skip": [],
+          "note": "약속 확인에 수락·연기·취소 대꾸가 모두 맞다"
+        }
+      ]
+    },
+    "E187": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il a encore oublié ? Je m'en doutais.",
+        "alsoFits": ["E103", "E208"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Finalement, Paul ne vient pas ce soir.",
+          "alsoFits": ["E129", "E80", "E103", "E208"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E188": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ça se trouve, il est déjà parti.",
+        "alsoFits": ["E118", "E119"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Marie ne répond pas au téléphone.",
+          "alsoFits": ["E81", "E119"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E189": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Si je me souviens bien, il habite à Lyon.",
+        "alsoFits": ["E50", "E119"],
+        "skip": ["order"],
+        "note": "si 절을 문장 끝으로 옮겨도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Le musée est ouvert le lundi ?",
+          "alsoFits": ["E177", "E50", "E119"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E190": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pardon pour ton verre, je ne l'ai pas fait exprès.",
+        "alsoFits": ["E191", "E192"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Hé ! Tu as pris mon parapluie !",
+          "alsoFits": ["E191", "E230"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E191": {
+      "similarMeaning": ["E192"],
+      "example": {
+        "text": "On a raté le train, c'est ma faute.",
+        "alsoFits": ["E192"],
+        "skip": ["order"],
+        "note": "두 절 순서를 바꿔도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "On est arrivés en retard au cinéma.",
+          "alsoFits": ["E192", "E231"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E192": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai oublié ton anniversaire, je m'en veux.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu ne m'as pas appelé hier…",
+          "alsoFits": ["E190", "E191", "E153", "E78", "E44"],
+          "skip": [],
+          "note": "전화를 안 한 것에 사과·변명·깜빡함 표현 모두 자연스럽다"
+        }
+      ]
+    },
+    "E193": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Merci, c'est gentil de m'avoir attendu.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, je t'ai gardé une place.",
+          "alsoFits": ["E115"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E194": {
+      "similarMeaning": ["E72"],
+      "example": {
+        "text": "Mon accent est bon ? Tu trouves ?",
+        "alsoFits": ["E72"],
+        "skip": ["order"],
+        "note": "두 질문 문장이라 « Tu trouves ? » 를 앞에 둬도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu parles vraiment bien français !",
+          "alsoFits": ["E141", "E193", "E164", "E72"],
+          "skip": [],
+          "note": "칭찬에 겸손하게 받는 말이 여럿 맞다"
+        }
+      ]
+    },
+    "E195": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Merci à toi ! — Non, c'est moi qui te remercie.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Merci d'être venu à ma fête !",
+          "alsoFits": ["E90"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E196": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Samedi ? Désolé, je suis déjà pris.",
+        "alsoFits": ["E123", "E198"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu viens dîner chez nous vendredi ?",
+          "alsoFits": ["E197", "E198", "E123", "E172", "E173", "E174", "E215", "E87", "E68"],
+          "skip": [],
+          "note": "초대에 답하는 열린 질문이라 수락·거절·보류 모두 맞다"
+        }
+      ]
+    },
+    "E197": {
+      "similarMeaning": ["E85"],
+      "example": {
+        "text": "Ça aurait été avec plaisir, mais je travaille.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "On fait une fête samedi soir. Tu viens ?",
+          "alsoFits": ["E196", "E198", "E123", "E172", "E173", "E174", "E215", "E87", "E105"],
+          "skip": [],
+          "note": "초대에 답하는 열린 질문"
+        }
+      ]
+    },
+    "E198": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pas ce soir. Une prochaine fois, peut-être.",
+        "alsoFits": ["E196", "E123", "E87"],
+        "skip": ["order"],
+        "note": "« Peut-être une prochaine fois » 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Le concert, c'est ce soir. Tu viens ?",
+          "alsoFits": ["E196", "E197", "E123", "E172", "E173", "E174", "E105"],
+          "skip": [],
+          "note": "초대에 답하는 열린 질문"
+        }
+      ]
+    },
+    "E199": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Encore de la pluie ? Quel temps de chien !",
+        "alsoFits": ["E112"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il y a du vent et de la pluie depuis ce matin.",
+          "alsoFits": ["E201", "E112"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E200": {
+      "similarMeaning": ["E19"],
+      "example": {
+        "text": "Mets ton bonnet, il fait un froid de canard.",
+        "alsoFits": ["E19"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il fait combien dehors ?",
+          "alsoFits": ["E19"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E201": {
+      "similarMeaning": ["E216"],
+      "example": {
+        "text": "Prends un parapluie, il pleut des cordes !",
+        "alsoFits": ["E216"],
+        "skip": [],
+        "note": "E216 예문(Prends un parapluie, on ne sait jamais.)과 앞부분이 같다. 듣고 고르기에서 둘이 함께 나오면 헷갈릴 수 있다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu sors faire ton jogging ?",
+          "alsoFits": ["E101", "E200", "E199", "E76"],
+          "skip": [],
+          "note": "조깅 안 나가는 까닭은 여러 가지로 댈 수 있다"
+        }
+      ]
+    },
+    "E202": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Le Japon ? Je n'y suis jamais allé.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu connais Marseille ?",
+          "alsoFits": ["E209", "E235"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E203": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Le film ? J'ai été un peu déçu.",
+        "alsoFits": ["E65", "E66", "E106"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé le nouveau café en bas ?",
+          "alsoFits": [
+            "E49",
+            "E50",
+            "E31",
+            "E65",
+            "E66",
+            "E64",
+            "E144",
+            "E142",
+            "E143",
+            "E202",
+            "E106",
+            "E150",
+            "E59"
+          ],
+          "skip": [],
+          "note": "감상을 묻는 열린 질문이라 의견·감정 표현이 넓게 맞다"
+        }
+      ]
+    },
+    "E204": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce livre est génial, je te le recommande.",
+        "alsoFits": ["E83"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je cherche un bon restaurant coréen à Paris.",
+          "alsoFits": ["E83", "E189"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E205": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il fait gris, j'ai un peu le cafard.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as l'air triste aujourd'hui.",
+          "alsoFits": ["E160", "E114", "E161", "E76", "E112"],
+          "skip": [],
+          "note": "기분을 묻는 말이라 상태 표현 여럿이 맞다"
+        }
+      ]
+    },
+    "E206": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je ne connais personne ici, je suis mal à l'aise.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu ne parles à personne à la fête ?",
+          "alsoFits": ["E160", "E76", "E205", "E101"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E207": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu pleures ? Qu'est-ce qui t'arrive ?",
+        "alsoFits": ["E182"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je ne me sens pas bien du tout…",
+          "alsoFits": ["E182", "E243", "E159", "E124"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E208": {
+      "similarMeaning": ["E103", "E127"],
+      "example": {
+        "text": "Tu n'as pas dormi ? Forcément, tu es fatigué.",
+        "alsoFits": ["E62"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai rien mangé ce midi et j'ai très faim.",
+          "alsoFits": ["E103", "E127"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E209": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce nom, ça me dit quelque chose.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu connais le Mont-Saint-Michel ?",
+          "alsoFits": ["E202", "E189", "E235"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E210": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu as acheté dix livres ? Tant que ça ?",
+        "alsoFits": ["E72", "E164", "E92"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai bu cinq cafés aujourd'hui.",
+          "alsoFits": ["E164", "E72", "E92", "E91"],
+          "skip": [],
+          "note": "놀람 반응이 여럿 맞다"
+        }
+      ]
+    },
+    "E211": {
+      "similarMeaning": ["E212"],
+      "example": {
+        "text": "Pour le dessert, qu'est-ce que tu me conseilles ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu vas à Lyon ? J'y ai habité cinq ans !",
+          "alsoFits": ["E139", "E115"],
+          "skip": [],
+          "note": "대꾸가 « … de voir » 로 늘어난 꼴이라 빈칸에서 낯설 수 있다(애매)"
+        }
+      ]
+    },
+    "E212": {
+      "similarMeaning": ["E211"],
+      "example": {
+        "text": "Ce meuble ? Je ne sais pas comment m'y prendre.",
+        "alsoFits": ["E97", "E236"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu as fini de monter ton armoire ?",
+          "alsoFits": ["E77", "E78", "E101", "E97", "E236"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E213": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Excuse-moi de te déranger, tu as une minute ?",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Allô ? Oui, c'est Julie.",
+          "alsoFits": ["E88", "E184", "E220", "E244"],
+          "skip": [],
+          "note": "전화 첫마디라 인사·용건 꺼내기가 여럿 맞다"
+        }
+      ]
+    },
+    "E214": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'hésite entre le poisson et la viande.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu pars où pour les vacances ?",
+          "alsoFits": ["E107", "E86", "E85", "E87", "E177", "E108"],
+          "skip": [],
+          "note": "휴가 계획을 묻는 열린 질문"
+        }
+      ]
+    },
+    "E215": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ton idée est intéressante, je vais y réfléchir.",
+        "alsoFits": ["E87"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu veux venir au cours de danse avec moi ?",
+          "alsoFits": ["E172", "E173", "E174", "E105", "E87", "E196", "E197", "E198"],
+          "skip": [],
+          "note": "권유에 답하는 열린 질문. 대꾸 앞부분 « Pourquoi pas… » 는 E172 지만 combo 로 적혀 있지 않다"
+        }
+      ]
+    },
+    "E216": {
+      "similarMeaning": ["E188", "E201"],
+      "example": {
+        "text": "Prends un parapluie, on ne sait jamais.",
+        "alsoFits": ["E201"],
+        "skip": [],
+        "note": "E201 예문과 앞부분이 같다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu achètes un billet de loto ?",
+          "alsoFits": ["E172", "E188"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E217": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu as un examen demain ? Bon courage !",
+        "alsoFits": ["E157"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ce soir, je dois finir un gros dossier.",
+          "alsoFits": ["E228"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E218": {
+      "similarMeaning": [],
+      "example": {
+        "text": "C'est un moment difficile. Je suis de tout cœur avec toi.",
+        "alsoFits": ["E217", "E159"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Mon père est à l'hôpital depuis lundi.",
+          "alsoFits": ["E217", "E159"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E219": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ton vol est annulé ? Ce n'est vraiment pas de chance.",
+        "alsoFits": ["E151", "E153", "E129"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "J'ai cassé mon téléphone le jour de mon anniversaire.",
+          "alsoFits": ["E151", "E91", "E153", "E129", "E81"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E220": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu es au courant ? Léa va se marier !",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "« Léa va se marier ! Tu es au courant ? » 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Salut ! Ça va, au bureau ?",
+          "alsoFits": ["E61", "E161", "E162", "E245", "E64", "E112"],
+          "skip": [],
+          "note": "근황을 묻는 열린 질문. 정답은 « Ça va ! » 뒤에 화제를 바꾸는 꼴이라 상황 대꾸로는 약간 억지스럽다(애매)"
+        }
+      ]
+    },
+    "E221": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il n'y a personne ? Comment ça se fait ?",
+        "alsoFits": ["E181"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le restaurant est fermé ce soir.",
+          "alsoFits": ["E72", "E80", "E129", "E153", "E181", "E187"],
+          "skip": [],
+          "note": "대꾸 앞부분 « Ah bon ? » 은 E72 지만 combo 로 적혀 있지 않다"
+        }
+      ]
+    },
+    "E222": {
+      "similarMeaning": ["E63"],
+      "example": {
+        "text": "Je ne sais pas. En tout cas, merci !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je ne sais pas si je peux venir samedi.",
+          "alsoFits": ["E87", "E135", "E133", "E67", "E134"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E223": {
+      "similarMeaning": ["E73", "E109"],
+      "example": {
+        "text": "Il fait froid. On se fait un chocolat chaud ?",
+        "alsoFits": ["E73", "E109", "E110"],
+        "skip": [],
+        "note": "뒤 낱말을 맞춰 바꾸면 제안 표현이 모두 들어간다"
+      },
+      "contexts": [
+        {
+          "cue": "J'ai fini le travail plus tôt aujourd'hui.",
+          "alsoFits": ["E73", "E109", "E110", "E79", "E115", "E158"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E224": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Je passe te prendre à huit heures.",
+        "alsoFits": ["E121"],
+        "skip": ["order"],
+        "note": "« À huit heures, je passe te prendre » 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "C'est loin, la fête ? Je n'ai pas de voiture.",
+          "alsoFits": ["E89", "E67"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E225": {
+      "similarMeaning": ["E41"],
+      "example": {
+        "text": "Attends-moi, j'en ai pour cinq minutes.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu es prêt ? On y va ?",
+          "alsoFits": ["E68", "E116"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E226": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Il est amoureux, ça saute aux yeux !",
+        "alsoFits": ["E187"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu crois que Léa aime son nouveau travail ?",
+          "alsoFits": ["E118", "E119", "E50", "E49", "E177", "E176"],
+          "skip": [],
+          "note": "생각을 묻는 열린 질문"
+        }
+      ]
+    },
+    "E227": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce prix ? Il y a quelque chose qui cloche.",
+        "alsoFits": ["E152", "E151"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Regarde, la facture fait trois cents euros.",
+          "alsoFits": ["E152", "E151", "E210", "E92", "E91"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E228": {
+      "similarMeaning": ["E128"],
+      "example": {
+        "text": "Finir tout ça ce soir ? Ce n'est pas gagné.",
+        "alsoFits": ["E163", "E217"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je veux parler français couramment en six mois.",
+          "alsoFits": ["E217", "E163", "E164"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E229": {
+      "similarMeaning": ["E80"],
+      "example": {
+        "text": "Le train est en retard, je n'y peux rien.",
+        "alsoFits": ["E113", "E80"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu travailles encore ce week-end ?",
+          "alsoFits": ["E162"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E230": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pardon, je me suis trompé de numéro.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu es où ? On t'attend devant le cinéma.",
+          "alsoFits": ["E153", "E231", "E225", "E16"],
+          "skip": [],
+          "note": "어디냐는 물음이라 위치·지각 사과 표현도 맞다"
+        }
+      ]
+    },
+    "E231": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Désolé pour le retard, il y avait des bouchons.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ah, te voilà enfin !",
+          "alsoFits": ["E230"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E232": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Joyeux anniversaire ! J'ai un petit quelque chose pour toi.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu as un grand sac aujourd'hui ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E233": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Des fleurs ? Oh, tu n'aurais pas dû !",
+        "alsoFits": ["E193", "E178"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, c'est un cadeau pour toi.",
+          "alsoFits": ["E193", "E178", "E90"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E234": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ce pull rouge, ça te va très bien.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Regarde mon nouveau manteau. Il est bien ?",
+          "alsoFits": ["E66", "E31", "E50", "E64"],
+          "skip": [],
+          "note": "의견을 묻는 말"
+        }
+      ]
+    },
+    "E235": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai eu un coup de cœur pour cette petite ville.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce que tu as préféré au Portugal ?",
+          "alsoFits": ["E55", "E32"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E236": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Pour trouver un appartement, j'ai galéré !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Alors, ton déménagement ?",
+          "alsoFits": ["E46", "E76", "E114", "E161", "E64"],
+          "skip": [],
+          "note": "어땠는지 묻는 열린 질문"
+        }
+      ]
+    },
+    "E237": {
+      "similarMeaning": ["E42"],
+      "example": {
+        "text": "La voiture ne m'a pas vu. Je l'ai échappé belle !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Il paraît que tu as presque raté ton avion ?",
+          "alsoFits": ["E40", "E42"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E238": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Joyeux Noël à toi et à ta famille !",
+        "alsoFits": ["E239"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "C'est le 24 décembre aujourd'hui !",
+          "alsoFits": ["E239", "E251", "E246"],
+          "skip": [],
+          "note": "24일 밤은 réveillon 이라 E251 도 맞다"
+        }
+      ]
+    },
+    "E239": {
+      "similarMeaning": ["E251"],
+      "example": {
+        "text": "Je pars demain. Bonnes fêtes de fin d'année !",
+        "alsoFits": ["E252", "E238", "E158"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "C'est mon dernier jour au bureau avant les vacances.",
+          "alsoFits": ["E158", "E243", "E252", "E238"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E240": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Bon week-end ! — Merci, pareillement !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Bonnes vacances, Brice !",
+          "alsoFits": ["E193"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E241": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai posé quelques jours pour me reposer.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles entre Noël et le Nouvel An ?",
+          "alsoFits": [],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E242": {
+      "similarMeaning": ["E75"],
+      "example": {
+        "text": "Encore trois jours de travail. Vivement les vacances !",
+        "alsoFits": ["E75", "E112"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Encore deux jours de travail avant le week-end.",
+          "alsoFits": ["E75", "E217", "E112"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E243": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu as l'air fatigué. Repose-toi bien !",
+        "alsoFits": ["E159"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je suis crevé, je rentre à la maison.",
+          "alsoFits": ["E159", "E127"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E244": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Salut Marc ! Quoi de neuf ?",
+        "alsoFits": ["E88"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Salut ! Ça fait une semaine qu'on ne s'est pas vus.",
+          "alsoFits": ["E220"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E245": {
+      "similarMeaning": [],
+      "example": {
+        "text": "En ce moment, c'est métro-boulot-dodo.",
+        "alsoFits": ["E162", "E161"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu fais quoi de beau en ce moment ?",
+          "alsoFits": ["E162", "E16", "E241"],
+          "skip": [],
+          "note": "근황을 묻는 열린 질문"
+        }
+      ]
+    },
+    "E246": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Déjà décembre ? Le temps passe trop vite !",
+        "alsoFits": ["E93"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tu te rends compte ? C'est bientôt la fin de l'année.",
+          "alsoFits": ["E93"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E247": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Tu apportes le dessert ? Je compte sur toi !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "D'accord, je m'occupe des boissons pour la fête.",
+          "alsoFits": ["E68", "E248", "E74"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E248": {
+      "similarMeaning": ["E71"],
+      "example": {
+        "text": "Rendez-vous lundi à neuf heures ? C'est noté.",
+        "alsoFits": ["E68", "E74", "E185"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "La réunion commence à dix heures, pas à neuf.",
+          "alsoFits": ["E71", "E68", "E115", "E79", "E72", "E74", "E185"],
+          "skip": [],
+          "note": "알림을 받는 말이라 수긍 표현 여럿이 맞다"
+        }
+      ]
+    },
+    "E249": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Et ton projet, tu en es où ?",
+        "alsoFits": ["E183"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je cherche toujours un nouvel appartement.",
+          "alsoFits": ["E217", "E72", "E83"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E250": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Bon anniversaire, Paul ! À la tienne !",
+        "alsoFits": ["E258"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, ton verre de champagne. Santé !",
+          "alsoFits": ["E117"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E251": {
+      "similarMeaning": ["E239"],
+      "example": {
+        "text": "Tu passes le 31 chez tes parents ? Bon réveillon !",
+        "alsoFits": ["E239", "E158"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Le 31, on fait une fête chez des amis.",
+          "alsoFits": ["E158", "E239"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E252": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Merci pour tout et à l'année prochaine !",
+        "alsoFits": ["E239"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "C'est notre dernier cours de l'année !",
+          "alsoFits": ["E239", "E246"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E253": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Cette année, ma résolution, c'est de faire du sport.",
+        "alsoFits": ["E86", "E85"],
+        "skip": ["order"],
+        "note": "« Ma résolution, cette année, c'est de … » 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu as des projets pour l'année prochaine ?",
+          "alsoFits": ["E86", "E85", "E107", "E87", "E214", "E148"],
+          "skip": [],
+          "note": "계획을 묻는 열린 질문"
+        }
+      ]
+    },
+    "E254": {
+      "similarMeaning": [],
+      "example": {
+        "text": "J'ai tendance à trop manger à Noël.",
+        "alsoFits": [],
+        "skip": ["order"],
+        "note": "« À Noël, j'ai tendance à trop manger » 순서도 자연스럽다"
+      },
+      "contexts": [
+        {
+          "cue": "Tu dors bien en ce moment ?",
+          "alsoFits": ["E77", "E162", "E76", "E160"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E255": {
+      "similarMeaning": [],
+      "example": {
+        "text": "Ton gâteau est raté ? Il faut bien un début à tout !",
+        "alsoFits": ["E69", "E81"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai jamais fait de ski. J'ai un peu peur.",
+          "alsoFits": ["E157", "E69", "E217", "E135"],
+          "skip": [],
+          "note": "대꾸 앞부분 « Ce n'est pas grave » 는 E69 지만 combo 로 적혀 있지 않다"
+        }
+      ]
+    },
+    "E256": {
+      "similarMeaning": ["E257", "E258"],
+      "example": {
+        "text": "Minuit ! Bonne année, bonne santé à tous !",
+        "alsoFits": ["E257"],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Ça y est, il est minuit !",
+          "alsoFits": ["E257", "E117"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E257": {
+      "similarMeaning": ["E256", "E258"],
+      "example": {
+        "text": "Meilleurs vœux pour la nouvelle année !",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Salut ! Tu as passé de bonnes fêtes ?",
+          "alsoFits": ["E256", "E180", "E150"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    },
+    "E258": {
+      "similarMeaning": ["E257"],
+      "example": {
+        "text": "Pour cette nouvelle année, je te souhaite le meilleur.",
+        "alsoFits": [],
+        "skip": [],
+        "note": ""
+      },
+      "contexts": [
+        {
+          "cue": "Merci pour tout cette année, tu m'as beaucoup aidé.",
+          "alsoFits": ["E195", "E90", "E67", "E252"],
+          "skip": [],
+          "note": ""
+        }
+      ]
+    }
+  }
+}
