@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchWithAuth, getStoredPassword } from "@/lib/password";
 import { cn } from "@/lib/utils";
+import reviewJson from "../data/practice-review.json";
 import { useFrenchVoice } from "../hooks/use-french-voice";
 import {
   EXPRESSIONS_URL,
@@ -41,7 +42,26 @@ import {
   seoulMonthDay,
   sessionOptions,
 } from "../lib/practice-range";
+import {
+  buildReviewIndex,
+  EMPTY_REVIEW,
+  type PracticeReview,
+  parsePracticeReview,
+  type ReviewIndex,
+} from "../lib/practice-review";
 import PracticeQuestionView from "./PracticeQuestionView";
+
+/** 문제 검토 기록(빌드에 들어가는 정적 JSON). 형식이 틀리면 없는 것으로 보고 지금 규칙대로 낸다 */
+function loadReview(): PracticeReview {
+  try {
+    return parsePracticeReview(reviewJson);
+  } catch (e) {
+    console.error("practice-review.json 형식이 틀려 쓰지 않습니다", e);
+    return EMPTY_REVIEW;
+  }
+}
+
+const REVIEW = loadReview();
 
 // 옛 키(ftf-expressions-practice-last-session)는 옛 session 번호라 읽지 않는다
 const LOCAL_RANGE_KEY = "ftf-expressions-practice-range";
@@ -94,6 +114,7 @@ interface PlayState {
   pool: Expression[];
   modes: PracticeMode[];
   canSpeak: boolean;
+  review: ReviewIndex;
   queue: RoundItem[];
   item: RoundItem | null;
   question: Question | null;
@@ -127,7 +148,12 @@ function advance(s: PlayState): PlayState {
     queue = rest;
     const expr = byId.get(item.expressionId);
     const question =
-      expr && buildQuestion(expr, s.pool, s.modes, { canSpeak: s.canSpeak, avoid: item.avoid });
+      expr &&
+      buildQuestion(expr, s.pool, s.modes, {
+        canSpeak: s.canSpeak,
+        avoid: item.avoid,
+        review: s.review,
+      });
     if (question) {
       return { ...s, queue, item, question, answered: false, shown: s.shown + 1 };
     }
@@ -166,13 +192,15 @@ function newPlay(
   targets: Expression[],
   pool: Expression[],
   modes: PracticeMode[],
-  canSpeak: boolean
+  canSpeak: boolean,
+  review: ReviewIndex
 ): PlayState {
   const queue = planRound(targets);
   return {
     pool,
     modes,
     canSpeak,
+    review,
     queue,
     item: null,
     question: null,
@@ -279,6 +307,8 @@ export default function PracticeGame() {
     () => (data ? distractorPool(data.expressions, bounds) : []),
     [data, bounds]
   );
+  // 짝 맞추기·모르는 id 거르기는 전체 표현 기준으로 한다
+  const reviewIndex = useMemo(() => buildReviewIndex(REVIEW, data?.expressions ?? []), [data]);
 
   const playing = play !== null && play.endedAt === null;
   useEffect(() => {
@@ -328,7 +358,10 @@ export default function PracticeGame() {
   const start = (targets: Expression[]) => {
     const playModes = usableModes.length ? usableModes : (["recall"] as PracticeMode[]);
     setNow(Date.now());
-    dispatch({ type: "start", state: newPlay(targets, pool, playModes, voice.available) });
+    dispatch({
+      type: "start",
+      state: newPlay(targets, pool, playModes, voice.available, reviewIndex),
+    });
   };
 
   const byId = useMemo(() => new Map(pool.map((e) => [e.id, e])), [pool]);

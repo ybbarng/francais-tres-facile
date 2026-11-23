@@ -5,7 +5,13 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { Expression } from "../lib/expressions";
-import { type ChoiceOption, PRACTICE_MODE_LABELS, type Question } from "../lib/practice";
+import {
+  type ChoiceOption,
+  isAccepted,
+  PRACTICE_MODE_LABELS,
+  type Question,
+} from "../lib/practice";
+import type { AlsoFitsExpression } from "../lib/practice-review";
 
 interface Props {
   question: Question;
@@ -64,12 +70,15 @@ function FrLine({
 function Choices({
   choices,
   answerId,
+  accepted = [],
   picked,
   onPick,
   lang,
 }: {
   choices: ChoiceOption[];
   answerId: string;
+  /** 정답 말고도 맞는 것으로 치는 보기 id */
+  accepted?: readonly string[];
   picked: string | null;
   onPick: (id: string) => void;
   lang?: string;
@@ -77,7 +86,7 @@ function Choices({
   return (
     <div className="grid gap-2">
       {choices.map((c) => {
-        const isAnswer = c.id === answerId;
+        const isAnswer = c.id === answerId || (c.id === picked && accepted.includes(c.id));
         const isPicked = c.id === picked;
         return (
           <button
@@ -109,6 +118,32 @@ function Choices({
   );
 }
 
+/** 답한 뒤: 검토 기록이 "이 자리에도 자연스럽다"고 한 다른 표현 */
+function AlsoFits({
+  items,
+  canSpeak,
+  speak,
+}: {
+  items: AlsoFitsExpression[];
+  canSpeak: boolean;
+  speak: (t: string) => void;
+}) {
+  if (!items.length) return null;
+  return (
+    <div className="space-y-1.5 rounded-lg border border-border bg-background/60 p-3">
+      <p className="text-xs text-muted-foreground">이 상황엔 이런 표현도 자연스러워요</p>
+      <ul className="space-y-1.5">
+        {items.map((e) => (
+          <li key={e.id}>
+            <FrLine text={e.fr} canSpeak={canSpeak} speak={speak} className="text-sm font-medium" />
+            <p className="text-xs text-muted-foreground">{e.ko}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 /** 답한 뒤: 맞았는지와 그 표현(fr·ko·예문) */
 function Feedback({
   correct,
@@ -117,6 +152,7 @@ function Feedback({
   speak,
   onNext,
   children,
+  after,
 }: {
   correct: boolean;
   expression: Expression;
@@ -124,6 +160,8 @@ function Feedback({
   speak: (t: string) => void;
   onNext: () => void;
   children?: React.ReactNode;
+  /** 정답 설명 아래에 붙일 것 */
+  after?: React.ReactNode;
 }) {
   return (
     <div
@@ -149,6 +187,7 @@ function Feedback({
         <FrLine text={e.example.fr} canSpeak={canSpeak} speak={speak} className="text-sm italic" />
         <p className="text-xs text-muted-foreground">{e.example.ko}</p>
       </div>
+      {after}
       <Button className="h-11 w-full text-base" onClick={onNext} autoFocus>
         다음
       </Button>
@@ -184,10 +223,16 @@ export default function PracticeQuestionView({
   const pick = (id: string) => {
     if (picked !== null) return;
     setPicked(id);
-    settle(id === q.expressionId);
+    settle(isAccepted(q, id));
   };
 
-  const feedback = (extra?: React.ReactNode) =>
+  // 정답 대신 "이것도 맞는" 표현을 골랐을 때
+  const pickedAlso = picked !== null && picked !== q.expressionId && isAccepted(q, picked);
+  const alsoNote = pickedAlso && (
+    <p className="text-sm">이것도 자연스러워요. 수업에서는 아래 표현을 썼어요.</p>
+  );
+
+  const feedback = (extra?: React.ReactNode, after?: React.ReactNode) =>
     result !== null && (
       <Feedback
         correct={result}
@@ -195,6 +240,7 @@ export default function PracticeQuestionView({
         canSpeak={canSpeak}
         speak={speak}
         onNext={onNext}
+        after={after}
       >
         {extra}
       </Feedback>
@@ -275,16 +321,21 @@ export default function PracticeQuestionView({
           <Choices
             choices={q.choices}
             answerId={q.expressionId}
+            accepted={q.accepted}
             picked={picked}
             onPick={pick}
             lang="fr"
           />
           {feedback(
-            <div className="space-y-0.5">
-              <p className="text-xs text-muted-foreground">이렇게 대꾸해요</p>
-              <FrLine text={q.reply} canSpeak={canSpeak} speak={speak} />
-              <p className="text-sm text-muted-foreground">{q.replyKo}</p>
-            </div>
+            <>
+              {alsoNote}
+              <div className="space-y-0.5">
+                <p className="text-xs text-muted-foreground">이렇게 대꾸해요</p>
+                <FrLine text={q.reply} canSpeak={canSpeak} speak={speak} />
+                <p className="text-sm text-muted-foreground">{q.replyKo}</p>
+              </div>
+            </>,
+            <AlsoFits items={q.alsoFits} canSpeak={canSpeak} speak={speak} />
           )}
         </div>
       );
@@ -315,14 +366,19 @@ export default function PracticeQuestionView({
           <Choices
             choices={q.choices}
             answerId={q.expressionId}
+            accepted={q.accepted}
             picked={picked}
             onPick={pick}
             lang="fr"
           />
           {feedback(
-            canSpeak ? (
-              <FrLine text={q.sentence} canSpeak={canSpeak} speak={speak} className="text-sm" />
-            ) : undefined
+            <>
+              {alsoNote}
+              {canSpeak && (
+                <FrLine text={q.sentence} canSpeak={canSpeak} speak={speak} className="text-sm" />
+              )}
+            </>,
+            <AlsoFits items={q.alsoFits} canSpeak={canSpeak} speak={speak} />
           )}
         </div>
       );
