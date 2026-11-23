@@ -6,20 +6,20 @@
       "similarMeaning": [],
       "example": {
         "text": "Désolé, je n'ai pas entendu. Tu peux répéter, s'il te plaît ?",
-        "alsoFits": [],
+        "alsoFits": ["E15"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "On se voit à… … heures ?",
-          "alsoFits": ["E15"],
+          "alsoFits": ["E15", "E02"],
           "skip": [],
           "note": "끊긴 질문이라 질문을 못 알아들었다는 말도 자연스럽다"
         },
         {
           "cue": "Tu veux… … ce soir ?",
-          "alsoFits": ["E15"],
+          "alsoFits": ["E15", "E02"],
           "skip": [],
           "note": ""
         },
@@ -31,13 +31,13 @@
         },
         {
           "cue": "Ton train part du quai… …",
-          "alsoFits": [],
+          "alsoFits": ["E02", "E03"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Allô, je suis… … malade.",
-          "alsoFits": ["E207"],
+          "alsoFits": ["E207", "E72", "E159", "E243", "E124", "E217"],
           "skip": [],
           "note": "아프다는 말은 들렸으니 무슨 일이냐고 묻는 것도 자연스럽다"
         }
@@ -47,7 +47,7 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu parles vite ! Plus lentement, s'il te plaît.",
-        "alsoFits": ["E01"],
+        "alsoFits": ["E01", "E03"],
         "skip": [],
         "note": ""
       },
@@ -60,7 +60,22 @@
         },
         {
           "cue": "La réunion a changé, c'est à dix heures.",
-          "alsoFits": ["E01", "E71", "E72", "E248"],
+          "alsoFits": [
+            "E01",
+            "E71",
+            "E72",
+            "E248",
+            "E03",
+            "E181",
+            "E68",
+            "E74",
+            "E185",
+            "E79",
+            "E221",
+            "E115",
+            "E187",
+            "E39"
+          ],
           "skip": [],
           "note": ""
         },
@@ -72,13 +87,13 @@
         },
         {
           "cue": "Tu coupes, tu mélanges, tu fais cuire !",
-          "alsoFits": ["E01"],
+          "alsoFits": ["E01", "E03", "E68"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "À gauche, à droite, puis tout droit !",
-          "alsoFits": ["E01"],
+          "alsoFits": ["E01", "E03", "E68", "E248", "E71"],
           "skip": [],
           "note": ""
         }
@@ -95,31 +110,31 @@
       "contexts": [
         {
           "cue": "Ce vin, c'est un gewurztraminer.",
-          "alsoFits": ["E01", "E04"],
+          "alsoFits": ["E01", "E04", "E02", "E72", "E209", "E71"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pour ce plat, il faut du curcuma.",
-          "alsoFits": ["E01", "E04"],
+          "alsoFits": ["E01", "E04", "E02", "E72", "E209", "E71"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Mon numéro, c'est le zéro six…",
-          "alsoFits": ["E01"],
+          "alsoFits": ["E01", "E248"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pour ton dos, prends de l'ibuprofène.",
-          "alsoFits": ["E01", "E04"],
+          "alsoFits": ["E01", "E04", "E02", "E209", "E72", "E71"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "L'hôtel est rue de la Grenouillère.",
-          "alsoFits": ["E01", "E02"],
+          "alsoFits": ["E01", "E02", "E04", "E209", "E248", "E71"],
           "skip": [],
           "note": ""
         }
@@ -136,31 +151,31 @@
       "contexts": [
         {
           "cue": "Ce soir, je suis vraiment claqué.",
-          "alsoFits": ["E03", "E181"],
+          "alsoFits": ["E03", "E181", "E01", "E02", "E72", "E76", "E243", "E127", "E103"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il faut émincer l'oignon.",
-          "alsoFits": ["E03", "E181"],
+          "alsoFits": ["E03", "E181", "E01", "E02", "E89", "E68", "E71"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce vin est très gouleyant.",
-          "alsoFits": ["E181"],
+          "alsoFits": ["E181", "E01", "E02"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Vendredi, je fais le pont.",
-          "alsoFits": ["E181"],
+          "alsoFits": ["E181", "E01", "E72", "E158", "E79", "E241"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce concert, c'était le pied !",
-          "alsoFits": ["E181"],
+          "alsoFits": ["E181", "E01", "E72", "E79", "E139", "E182"],
           "skip": [],
           "note": ""
         }
@@ -177,31 +192,44 @@
       "contexts": [
         {
           "cue": "Qu'est-ce que tu manges au bureau à midi ?",
-          "alsoFits": ["E06", "E07", "E12"],
+          "alsoFits": ["E06", "E07", "E12", "E10", "E13", "E56", "E55"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Avec quoi tu coupes les légumes ?",
-          "alsoFits": ["E06", "E07"],
+          "alsoFits": ["E06", "E07", "E10"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as l'air malade, non ?",
-          "alsoFits": ["E07", "E76", "E100", "E161"],
+          "alsoFits": [
+            "E07",
+            "E76",
+            "E100",
+            "E161",
+            "E61",
+            "E64",
+            "E72",
+            "E141",
+            "E102",
+            "E114",
+            "E162",
+            "E205"
+          ],
           "skip": [],
           "note": "아파 보인다는 말에는 지친 상태 표현도 자연스럽다"
         },
         {
           "cue": "Tu as mal où ?",
-          "alsoFits": ["E06", "E07"],
+          "alsoFits": ["E06", "E07", "E10"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu fais quoi le dimanche ?",
-          "alsoFits": ["E06", "E07"],
+          "alsoFits": ["E06", "E07", "E10", "E56", "E254", "E55", "E35", "E61"],
           "skip": [],
           "note": ""
         }
@@ -211,14 +239,14 @@
       "similarMeaning": ["E07"],
       "example": {
         "text": "Attends… je cherche le mot.",
-        "alsoFits": ["E07"],
+        "alsoFits": ["E07", "E10"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "C'est quoi, ce truc dans ta cuisine ?",
-          "alsoFits": ["E05", "E07", "E10", "E12"],
+          "alsoFits": ["E05", "E07", "E10", "E12", "E13"],
           "skip": [],
           "note": ""
         },
@@ -230,19 +258,31 @@
         },
         {
           "cue": "Pourquoi tu ne disais rien, tout à l'heure ?",
-          "alsoFits": ["E07", "E160", "E206"],
+          "alsoFits": ["E07", "E160", "E206", "E100", "E76", "E61", "E64", "E205", "E144", "E126"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'Je cherchais' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Ce vin a quel goût ?",
-          "alsoFits": ["E05", "E07", "E10", "E31"],
+          "alsoFits": ["E05", "E07", "E10", "E31", "E24", "E18", "E13", "E23", "E66", "E176"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Elle était comment, la mer là-bas ?",
-          "alsoFits": ["E05", "E07", "E10"],
+          "alsoFits": [
+            "E05",
+            "E07",
+            "E10",
+            "E29",
+            "E31",
+            "E13",
+            "E18",
+            "E32",
+            "E65",
+            "E66",
+            "E203"
+          ],
           "skip": [],
           "note": ""
         }
@@ -252,38 +292,63 @@
       "similarMeaning": ["E06", "E176", "E212"],
       "example": {
         "text": "C'est difficile… je ne sais pas comment le dire.",
-        "alsoFits": ["E06"],
+        "alsoFits": ["E06", "E10", "E177", "E212"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Pourquoi tu aimes autant ce jeu ?",
-          "alsoFits": ["E06", "E10", "E175", "E176", "E177"],
+          "alsoFits": [
+            "E06",
+            "E10",
+            "E175",
+            "E176",
+            "E177",
+            "E61",
+            "E64",
+            "E55",
+            "E31",
+            "E50",
+            "E168"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Cette musique, ça te fait quoi ?",
-          "alsoFits": ["E06", "E168", "E176", "E178"],
+          "alsoFits": [
+            "E06",
+            "E168",
+            "E176",
+            "E178",
+            "E10",
+            "E177",
+            "E137",
+            "E138",
+            "E31",
+            "E205",
+            "E209",
+            "E64"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pourquoi tu n'as rien dit à ton chef ?",
-          "alsoFits": ["E206"],
+          "alsoFits": ["E206", "E61", "E64", "E144", "E78", "E126", "E212"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'Je ne savais pas' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Tu as mal où, exactement ?",
-          "alsoFits": ["E06", "E176"],
+          "alsoFits": ["E06", "E176", "E10", "E177"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce fromage, il sent comment ?",
-          "alsoFits": ["E06", "E176"],
+          "alsoFits": ["E06", "E176", "E23", "E18", "E13", "E10", "E31"],
           "skip": [],
           "note": ""
         }
@@ -293,20 +358,48 @@
       "similarMeaning": ["E09"],
       "example": {
         "text": "Je veux dire que j'ai besoin de repos.",
-        "alsoFits": ["E09", "E61"],
+        "alsoFits": ["E09", "E61", "E50", "E119", "E62", "E63", "E64", "E144", "E142", "E222"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu n'aimes pas ton travail ?",
-          "alsoFits": ["E11", "E61", "E76", "E141"],
+          "alsoFits": [
+            "E11",
+            "E61",
+            "E76",
+            "E141",
+            "E64",
+            "E144",
+            "E142",
+            "E162",
+            "E56",
+            "E59",
+            "E106",
+            "E245",
+            "E112",
+            "E161"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu ne veux pas venir samedi ?",
-          "alsoFits": ["E11", "E61", "E123", "E141", "E197"],
+          "alsoFits": [
+            "E11",
+            "E61",
+            "E123",
+            "E141",
+            "E197",
+            "E196",
+            "E64",
+            "E144",
+            "E142",
+            "E107",
+            "E87",
+            "E198"
+          ],
           "skip": [],
           "note": ""
         },
@@ -318,13 +411,13 @@
         },
         {
           "cue": "Ta soupe n'est pas bonne ?",
-          "alsoFits": ["E61", "E141", "E142"],
+          "alsoFits": ["E61", "E141", "E142", "E24", "E64", "E144", "E143", "E31", "E50"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu arrêtes de jouer ?",
-          "alsoFits": ["E61", "E102"],
+          "alsoFits": ["E61", "E102", "E100", "E76", "E114", "E112", "E141"],
           "skip": [],
           "note": ""
         }
@@ -334,38 +427,52 @@
       "similarMeaning": ["E08"],
       "example": {
         "text": "Je suis développeur, c'est-à-dire que j'écris du code.",
-        "alsoFits": [],
+        "alsoFits": ["E08"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu travailles à la maison ?",
-          "alsoFits": ["E56", "E61"],
+          "alsoFits": ["E56", "E61", "E64"],
           "skip": [],
           "note": "애매: 상황 문제로는 '즉' 을 떠올릴 실마리가 약하다"
         },
         {
           "cue": "Tu bois quel genre de vin ?",
-          "alsoFits": ["E55"],
+          "alsoFits": ["E55", "E56", "E254", "E61"],
           "skip": [],
           "note": "애매: 상황 문제로는 '즉' 을 떠올릴 실마리가 약하다"
         },
         {
           "cue": "Ce soir, je suis un peu occupé.",
-          "alsoFits": ["E69", "E71", "E72", "E80", "E181"],
+          "alsoFits": [
+            "E69",
+            "E71",
+            "E72",
+            "E80",
+            "E181",
+            "E67",
+            "E127",
+            "E198",
+            "E87",
+            "E133",
+            "E135",
+            "E221",
+            "E129"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu dors comment en ce moment ?",
-          "alsoFits": ["E64", "E77"],
+          "alsoFits": ["E64", "E77", "E61", "E76", "E161", "E66", "E254", "E56", "E114"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu pars quand en vacances ?",
-          "alsoFits": ["E75", "E87", "E107"],
+          "alsoFits": ["E75", "E87", "E107", "E86", "E241", "E242", "E56", "E10", "E177", "E61"],
           "skip": [],
           "note": ""
         }
@@ -375,38 +482,65 @@
       "similarMeaning": ["E215"],
       "example": {
         "text": "Ton vin préféré ? Attends, je réfléchis.",
-        "alsoFits": ["E175", "E177"],
+        "alsoFits": ["E175", "E177", "E176", "E55", "E56", "E214", "E106"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Ton jeu préféré de tous les temps ?",
-          "alsoFits": ["E175", "E176", "E177", "E214"],
+          "alsoFits": ["E175", "E176", "E177", "E214", "E55", "E106", "E56"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu veux manger quoi ce soir ?",
-          "alsoFits": ["E73", "E109", "E110", "E148", "E177", "E214"],
+          "alsoFits": [
+            "E73",
+            "E109",
+            "E110",
+            "E148",
+            "E177",
+            "E214",
+            "E85",
+            "E56",
+            "E107",
+            "E223",
+            "E101"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Décris ton plat coréen préféré !",
-          "alsoFits": ["E07"],
+          "alsoFits": ["E07", "E12", "E13", "E05", "E55", "E175", "E18"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "On part où cet été ?",
-          "alsoFits": ["E73", "E87", "E107", "E109", "E110", "E177", "E214"],
+          "alsoFits": [
+            "E73",
+            "E87",
+            "E107",
+            "E109",
+            "E110",
+            "E177",
+            "E214",
+            "E85",
+            "E86",
+            "E56",
+            "E106",
+            "E148",
+            "E215",
+            "E176"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton premier concert, c'était quand ?",
-          "alsoFits": ["E177", "E189"],
+          "alsoFits": ["E177", "E189", "E176"],
           "skip": [],
           "note": ""
         }
@@ -416,7 +550,7 @@
       "similarMeaning": [],
       "example": {
         "text": "Hier, je suis… non, ce n'est pas ça. Je recommence.",
-        "alsoFits": [],
+        "alsoFits": ["E10"],
         "skip": [],
         "note": ""
       },
@@ -457,38 +591,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Le kimchi, c'est une sorte de chou fermenté.",
-        "alsoFits": [],
+        "alsoFits": ["E18"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "C'est quoi, le tteok ?",
-          "alsoFits": ["E13", "E18"],
+          "alsoFits": ["E13", "E18", "E06", "E10"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "C'est quoi, le makgeolli ?",
-          "alsoFits": ["E13", "E18"],
+          "alsoFits": ["E13", "E18", "E06", "E10"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as mangé quoi au restaurant ?",
-          "alsoFits": ["E13", "E18", "E25"],
+          "alsoFits": ["E13", "E18", "E25", "E24", "E06", "E26", "E150", "E35"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "C'est quoi, la musique trot ?",
-          "alsoFits": ["E13", "E18"],
+          "alsoFits": ["E13", "E18", "E06", "E10", "E52"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "C'est quoi, un hagwon ?",
-          "alsoFits": ["E13", "E18"],
+          "alsoFits": ["E13", "E18", "E06", "E10", "E52"],
           "skip": [],
           "note": ""
         }
@@ -498,38 +632,52 @@
       "similarMeaning": [],
       "example": {
         "text": "Le soju, c'est comme la vodka, mais plus doux.",
-        "alsoFits": [],
+        "alsoFits": ["E18"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "C'est quoi, le bibimbap ?",
-          "alsoFits": ["E12", "E18"],
+          "alsoFits": ["E12", "E18", "E06", "E10"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton jeu, il ressemble à quoi ?",
-          "alsoFits": ["E18"],
+          "alsoFits": ["E18", "E12", "E06", "E10"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il était comment, le concert ?",
-          "alsoFits": ["E18", "E31", "E32", "E48", "E65", "E203"],
+          "alsoFits": [
+            "E18",
+            "E31",
+            "E32",
+            "E48",
+            "E65",
+            "E203",
+            "E66",
+            "E28",
+            "E29",
+            "E17",
+            "E60",
+            "E64",
+            "E45"
+          ],
           "skip": [],
           "note": "느낌을 묻는 열린 질문"
         },
         {
           "cue": "C'est quoi, le kimbap ?",
-          "alsoFits": ["E12", "E18"],
+          "alsoFits": ["E12", "E18", "E06", "E10"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Busan, c'est comment ?",
-          "alsoFits": ["E17", "E18", "E21", "E29", "E54"],
+          "alsoFits": ["E17", "E18", "E21", "E29", "E54", "E28", "E31", "E50", "E202", "E66"],
           "skip": [],
           "note": "묘사를 묻는 열린 질문"
         }
@@ -546,31 +694,31 @@
       "contexts": [
         {
           "cue": "Euh… pardon ?",
-          "alsoFits": [],
+          "alsoFits": ["E08"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton explication est un peu longue…",
-          "alsoFits": ["E63", "E70"],
+          "alsoFits": ["E63", "E70", "E104"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "D'accord… je crois.",
-          "alsoFits": [],
+          "alsoFits": ["E134", "E08"],
           "skip": ["blank"],
           "note": "reply 가 'Tu m'as bien compris' 로 바뀌어 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Je ne connais pas le tteok.",
-          "alsoFits": ["E12", "E13"],
+          "alsoFits": ["E12", "E13", "E18", "E06"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je ne comprends pas, tu as mal où ?",
-          "alsoFits": [],
+          "alsoFits": ["E07", "E06"],
           "skip": [],
           "note": ""
         }
@@ -580,38 +728,50 @@
       "similarMeaning": [],
       "example": {
         "text": "Pardon, je n'ai pas bien compris ta question.",
-        "alsoFits": [],
+        "alsoFits": ["E01", "E02"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Au fond, ce jeu t'apporte quoi ?",
-          "alsoFits": ["E01", "E175", "E176", "E181"],
+          "alsoFits": ["E01", "E175", "E176", "E181", "E10", "E07", "E177", "E02"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu préfères le terroir ou le cépage ?",
-          "alsoFits": ["E01", "E56", "E177", "E181"],
+          "alsoFits": ["E01", "E56", "E177", "E181", "E10", "E176", "E106", "E214", "E02", "E04"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton boulot, ça te nourrit vraiment ?",
-          "alsoFits": ["E175", "E181"],
+          "alsoFits": ["E175", "E181", "E10", "E07", "E176", "E177", "E02", "E04"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton rythme de sommeil, il est régulier ?",
-          "alsoFits": ["E01", "E181"],
+          "alsoFits": ["E01", "E181", "E02", "E177", "E56", "E176"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es plutôt live ou studio ?",
-          "alsoFits": ["E01", "E56", "E177", "E181"],
+          "alsoFits": [
+            "E01",
+            "E56",
+            "E177",
+            "E181",
+            "E02",
+            "E04",
+            "E10",
+            "E176",
+            "E106",
+            "E214",
+            "E55"
+          ],
           "skip": [],
           "note": ""
         }
@@ -634,25 +794,25 @@
         },
         {
           "cue": "Tu fais quoi, là ?",
-          "alsoFits": [],
+          "alsoFits": ["E162", "E101"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pourquoi tu n'as pas répondu ?",
-          "alsoFits": ["E78", "E162"],
+          "alsoFits": ["E78", "E162", "E190", "E61", "E44", "E160", "E192"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'J'étais en train de' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Je t'appelle, tu as deux minutes ?",
-          "alsoFits": ["E147", "E162"],
+          "alsoFits": ["E147", "E162", "E67", "E74"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es déjà rentré chez toi ?",
-          "alsoFits": ["E162"],
+          "alsoFits": ["E162", "E61", "E78"],
           "skip": [],
           "note": ""
         }
@@ -669,31 +829,56 @@
       "contexts": [
         {
           "cue": "Ton quartier est comment ?",
-          "alsoFits": ["E28", "E29", "E31"],
+          "alsoFits": ["E28", "E29", "E31", "E21", "E22", "E13", "E18", "E66"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu aimes ton supermarché ?",
-          "alsoFits": ["E31", "E55", "E66"],
+          "alsoFits": ["E31", "E55", "E66", "E28", "E64", "E142"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le concert était bien ?",
-          "alsoFits": ["E28", "E31", "E32", "E65", "E203"],
+          "alsoFits": [
+            "E28",
+            "E31",
+            "E32",
+            "E65",
+            "E203",
+            "E13",
+            "E29",
+            "E66",
+            "E45",
+            "E60",
+            "E64",
+            "E92"
+          ],
           "skip": ["blank"],
           "note": "reply 가 반과거 'il y avait' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Ça va, au travail ?",
-          "alsoFits": ["E142", "E143", "E161", "E162", "E245"],
+          "alsoFits": [
+            "E142",
+            "E143",
+            "E161",
+            "E162",
+            "E245",
+            "E64",
+            "E76",
+            "E114",
+            "E112",
+            "E61",
+            "E31"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce jeu est difficile ?",
-          "alsoFits": ["E56", "E142"],
+          "alsoFits": ["E56", "E142", "E13", "E61", "E64", "E77"],
           "skip": [],
           "note": ""
         }
@@ -703,38 +888,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce plat ? Ça ressemble à un bibimbap.",
-        "alsoFits": ["E12"],
+        "alsoFits": ["E12", "E13"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Regarde ce fromage tout blanc !",
-          "alsoFits": ["E13", "E118"],
+          "alsoFits": ["E13", "E118", "E23", "E66"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Écoute ce groupe !",
-          "alsoFits": ["E13", "E66", "E118", "E209"],
+          "alsoFits": ["E13", "E66", "E118", "E209", "E31", "E168", "E65"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il était comment, ton hôtel ?",
-          "alsoFits": ["E13", "E29", "E31", "E65", "E203"],
+          "alsoFits": ["E13", "E29", "E31", "E65", "E203", "E21", "E22", "E28", "E17", "E66"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'ressemblait' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Tu connais ce nouveau jeu ?",
-          "alsoFits": ["E13", "E209"],
+          "alsoFits": ["E13", "E209", "E12"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Goûte ma sauce !",
-          "alsoFits": ["E13", "E23", "E24", "E66"],
+          "alsoFits": ["E13", "E23", "E24", "E66", "E31"],
           "skip": [],
           "note": ""
         }
@@ -744,7 +929,7 @@
       "similarMeaning": ["E200"],
       "example": {
         "text": "Ce matin, il fait frais.",
-        "alsoFits": ["E20", "E200"],
+        "alsoFits": ["E20", "E200", "E199", "E201"],
         "skip": ["order"],
         "note": "'Il fait frais ce matin' 순서도 자연스럽다"
       },
@@ -757,25 +942,25 @@
         },
         {
           "cue": "Tu prends un manteau ?",
-          "alsoFits": ["E20", "E200"],
+          "alsoFits": ["E20", "E200", "E199", "E201", "E216"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Elle était bien, ta promenade ?",
-          "alsoFits": ["E65", "E199"],
+          "alsoFits": ["E65", "E199", "E20", "E200", "E201", "E29", "E22", "E66", "E180", "E45"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'il faisait' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Tu pars à la montagne cet été ?",
-          "alsoFits": ["E75", "E107"],
+          "alsoFits": ["E75", "E107", "E86", "E87", "E85"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pourquoi tu portes un pull ?",
-          "alsoFits": ["E200"],
+          "alsoFits": ["E200", "E61"],
           "skip": [],
           "note": ""
         }
@@ -792,31 +977,31 @@
       "contexts": [
         {
           "cue": "On mange dehors ce midi ?",
-          "alsoFits": ["E19", "E68", "E105", "E172", "E173"],
+          "alsoFits": ["E19", "E68", "E105", "E172", "E173", "E174", "E74", "E201", "E199", "E200"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je prends un parapluie ?",
-          "alsoFits": ["E199", "E201", "E216"],
+          "alsoFits": ["E199", "E201", "E216", "E83", "E82", "E84"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as vu les étoiles hier soir ?",
-          "alsoFits": [],
+          "alsoFits": ["E45", "E199", "E201"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'était' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Tu vois la montagne depuis ton hôtel ?",
-          "alsoFits": ["E22"],
+          "alsoFits": ["E22", "E45"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le concert en plein air, c'est toujours ce soir ?",
-          "alsoFits": ["E19"],
+          "alsoFits": ["E19", "E146"],
           "skip": [],
           "note": ""
         }
@@ -845,13 +1030,13 @@
         },
         {
           "cue": "Tu as passé tes vacances où ?",
-          "alsoFits": [],
+          "alsoFits": ["E29", "E22"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'C'était au bord de' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "On fait un pique-nique où ?",
-          "alsoFits": ["E109", "E110"],
+          "alsoFits": ["E109", "E110", "E29"],
           "skip": [],
           "note": ""
         },
@@ -874,31 +1059,31 @@
       "contexts": [
         {
           "cue": "Ta chambre a une belle vue ?",
-          "alsoFits": ["E21"],
+          "alsoFits": ["E21", "E66"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il y a quoi, devant ton bureau ?",
-          "alsoFits": ["E17"],
+          "alsoFits": ["E17", "E21"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il y avait une belle vue, en haut ?",
-          "alsoFits": [],
+          "alsoFits": ["E20", "E66"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'on voyait' 라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Tu es sur ton balcon ?",
-          "alsoFits": [],
+          "alsoFits": ["E19", "E20"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "C'est joli, le trajet en train ?",
-          "alsoFits": ["E17", "E66"],
+          "alsoFits": ["E17", "E66", "E31"],
           "skip": [],
           "note": ""
         }
@@ -908,32 +1093,32 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu fais du pain ? Ça sent bon !",
-        "alsoFits": [],
+        "alsoFits": ["E138", "E149", "E75"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je fais un gâteau au chocolat.",
-          "alsoFits": ["E75", "E138"],
+          "alsoFits": ["E75", "E138", "E149"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Sens ce vin !",
-          "alsoFits": ["E18", "E66"],
+          "alsoFits": ["E18", "E66", "E31"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es passé devant la boulangerie ?",
-          "alsoFits": [],
+          "alsoFits": ["E138"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'ça sentait bon' 이라 고정 부분이 문장에 그대로 없다"
         },
         {
           "cue": "Ta mère prépare quoi ce soir ?",
-          "alsoFits": ["E75", "E138", "E149"],
+          "alsoFits": ["E75", "E138", "E149", "E177"],
           "skip": [],
           "note": ""
         },
@@ -949,26 +1134,26 @@
       "similarMeaning": [],
       "example": {
         "text": "Hmm, la soupe… c'est un peu fade.",
-        "alsoFits": [],
+        "alsoFits": ["E31", "E120"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Alors, mon poulet ?",
-          "alsoFits": ["E23", "E66", "E150"],
+          "alsoFits": ["E23", "E66", "E150", "E31"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu aimes la soupe de la cantine ?",
-          "alsoFits": [],
+          "alsoFits": ["E31", "E64", "E142", "E143", "E66"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le dîner d'hier, c'était comment ?",
-          "alsoFits": ["E65", "E150"],
+          "alsoFits": ["E65", "E150", "E66"],
           "skip": ["blank"],
           "note": "reply 가 반과거 'C'était délicieux' 라 고정 부분이 문장에 그대로 없다"
         },
@@ -980,7 +1165,7 @@
         },
         {
           "cue": "Tu aimes ce plat sans épices ?",
-          "alsoFits": ["E66"],
+          "alsoFits": ["E66", "E31", "E64"],
           "skip": [],
           "note": ""
         }
@@ -997,13 +1182,13 @@
       "contexts": [
         {
           "cue": "Tu as mangé quoi au restaurant ?",
-          "alsoFits": ["E12", "E47"],
+          "alsoFits": ["E12", "E47", "E24", "E26", "E150"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "C'était bien, le marché ?",
-          "alsoFits": ["E17", "E47", "E65", "E235"],
+          "alsoFits": ["E17", "E47", "E65", "E235", "E23", "E28", "E29", "E66"],
           "skip": [],
           "note": ""
         },
@@ -1015,13 +1200,13 @@
         },
         {
           "cue": "Tu as aimé le Japon ?",
-          "alsoFits": ["E47", "E48", "E65", "E235"],
+          "alsoFits": ["E47", "E48", "E65", "E235", "E66", "E32", "E31", "E60"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pourquoi tu souris comme ça ?",
-          "alsoFits": ["E47", "E136"],
+          "alsoFits": ["E47", "E136", "E179", "E61"],
           "skip": [],
           "note": ""
         }
@@ -1031,38 +1216,87 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce fromage ? C'est une spécialité de la région.",
-        "alsoFits": ["E24"],
+        "alsoFits": [
+          "E24",
+          "E12",
+          "E13",
+          "E18",
+          "E31",
+          "E50",
+          "E65",
+          "E66",
+          "E150",
+          "E204",
+          "E30",
+          "E209",
+          "E64"
+        ],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "C'est quoi, ce gâteau ?",
-          "alsoFits": ["E12", "E13", "E18"],
+          "alsoFits": ["E12", "E13", "E18", "E177", "E24", "E61", "E07", "E06", "E209", "E204"],
           "skip": [],
           "note": "무엇인지 묻는 말이라 설명 표현도 자연스럽다"
         },
         {
           "cue": "Pourquoi tout le monde commande ce plat ?",
-          "alsoFits": ["E24"],
+          "alsoFits": ["E24", "E61", "E177", "E50", "E49", "E118", "E119", "E188", "E176"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as apporté quoi ?",
-          "alsoFits": ["E232", "E12"],
+          "alsoFits": ["E232", "E12", "E13", "E18", "E44", "E61"],
           "skip": [],
           "note": "reply 는 \"de ma ville\" 로 틀과 끝이 다름 — 빈칸 애매"
         },
         {
           "cue": "Ce vin blanc est très bon !",
-          "alsoFits": ["E104", "E70", "E24"],
+          "alsoFits": [
+            "E104",
+            "E70",
+            "E24",
+            "E66",
+            "E105",
+            "E31",
+            "E50",
+            "E194",
+            "E57",
+            "E64",
+            "E61",
+            "E150",
+            "E23",
+            "E103",
+            "E208",
+            "E30"
+          ],
           "skip": [],
           "note": "칭찬에 맞장구치는 표현도 자연스럽다"
         },
         {
           "cue": "Tu achètes quoi comme souvenir ?",
-          "alsoFits": ["E214", "E107", "E177"],
+          "alsoFits": [
+            "E214",
+            "E107",
+            "E177",
+            "E108",
+            "E215",
+            "E87",
+            "E55",
+            "E86",
+            "E85",
+            "E148",
+            "E176",
+            "E106",
+            "E56",
+            "E211",
+            "E78",
+            "E61",
+            "E175"
+          ],
           "skip": [],
           "note": "무엇을 살지 묻는 열린 질문"
         }
@@ -1072,38 +1306,119 @@
       "similarMeaning": [],
       "example": {
         "text": "Les gens ont l'air contents aujourd'hui.",
-        "alsoFits": [],
+        "alsoFits": ["E118", "E119", "E50", "E28", "E29", "E17", "E19", "E20", "E136"],
         "skip": ["order"],
         "note": "aujourd'hui 를 앞에 둬도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "L'ambiance au bureau, c'est comment ?",
-          "alsoFits": ["E29", "E119", "E118", "E28"],
+          "alsoFits": [
+            "E29",
+            "E119",
+            "E118",
+            "E28",
+            "E120",
+            "E31",
+            "E50",
+            "E59",
+            "E64",
+            "E66",
+            "E142",
+            "E143",
+            "E245",
+            "E162",
+            "E227",
+            "E32",
+            "E49",
+            "E176",
+            "E177",
+            "E61",
+            "E144",
+            "E106"
+          ],
           "skip": [],
           "note": "분위기를 묻는 열린 질문"
         },
         {
           "cue": "Il y a quelle ambiance au concert ?",
-          "alsoFits": ["E29", "E28", "E118", "E119"],
+          "alsoFits": [
+            "E29",
+            "E28",
+            "E118",
+            "E119",
+            "E17",
+            "E31",
+            "E50",
+            "E66",
+            "E92",
+            "E64",
+            "E120",
+            "E33",
+            "E49",
+            "E61"
+          ],
           "skip": [],
           "note": "분위기를 묻는 열린 질문"
         },
         {
           "cue": "Ton voyage à Paris, c'était bien ?",
-          "alsoFits": ["E32", "E65", "E203", "E48", "E235"],
+          "alsoFits": [
+            "E32",
+            "E65",
+            "E203",
+            "E48",
+            "E235",
+            "E66",
+            "E46",
+            "E236",
+            "E31",
+            "E50",
+            "E64",
+            "E45",
+            "E105",
+            "E43",
+            "E47",
+            "E29",
+            "E28",
+            "E17",
+            "E19",
+            "E201",
+            "E199",
+            "E40",
+            "E180",
+            "E204",
+            "E59",
+            "E142",
+            "E52",
+            "E54",
+            "E61",
+            "E44"
+          ],
           "skip": [],
           "note": "여행 소감을 묻는 열린 질문. reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(avaient l'air)"
         },
         {
           "cue": "Tu es à la fête ?",
-          "alsoFits": ["E28", "E29"],
+          "alsoFits": [
+            "E28",
+            "E29",
+            "E16",
+            "E17",
+            "E33",
+            "E76",
+            "E66",
+            "E123",
+            "E206",
+            "E100",
+            "E61"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es dans le métro ?",
-          "alsoFits": ["E28", "E33"],
+          "alsoFits": ["E28", "E33", "E16", "E29", "E17", "E76", "E100", "E225", "E61", "E231"],
           "skip": [],
           "note": ""
         }
@@ -1113,38 +1428,74 @@
       "similarMeaning": ["E29"],
       "example": {
         "text": "Ce soir, il y a du monde au bar.",
-        "alsoFits": ["E17"],
+        "alsoFits": ["E17", "E29"],
         "skip": ["order"],
         "note": "ce soir 를 뒤에 둬도 자연스럽다. E17 은 \"beaucoup de monde\" 로 채울 때"
       },
       "contexts": [
         {
           "cue": "Tu es au supermarché ?",
-          "alsoFits": ["E17"],
+          "alsoFits": ["E17", "E16", "E29", "E27", "E44", "E225", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es à la salle de sport ?",
-          "alsoFits": ["E29"],
+          "alsoFits": ["E29", "E16", "E17", "E76", "E101", "E33", "E27", "E225", "E61", "E77"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le restaurant était bien, hier ?",
-          "alsoFits": ["E29", "E24", "E65"],
+          "alsoFits": [
+            "E29",
+            "E24",
+            "E65",
+            "E66",
+            "E203",
+            "E150",
+            "E32",
+            "E31",
+            "E50",
+            "E64",
+            "E17",
+            "E30",
+            "E204",
+            "E235",
+            "E48",
+            "E46",
+            "E45",
+            "E142",
+            "E59",
+            "E60",
+            "E27"
+          ],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(il n'y avait personne)"
         },
         {
           "cue": "Le concert commence bientôt ?",
-          "alsoFits": ["E17", "E75"],
+          "alsoFits": [
+            "E17",
+            "E75",
+            "E29",
+            "E27",
+            "E177",
+            "E118",
+            "E119",
+            "E61",
+            "E189",
+            "E50",
+            "E49",
+            "E242",
+            "E188"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tes parents sont à la maison ?",
-          "alsoFits": [],
+          "alsoFits": ["E61", "E177", "E50", "E118", "E119", "E189", "E188"],
           "skip": [],
           "note": ""
         }
@@ -1161,25 +1512,65 @@
       "contexts": [
         {
           "cue": "Ton quartier, c'est comment le soir ?",
-          "alsoFits": ["E28", "E17"],
+          "alsoFits": ["E28", "E17", "E27", "E50", "E21", "E52", "E59", "E142", "E54", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le marché, c'est comment le dimanche ?",
-          "alsoFits": ["E28", "E17", "E23"],
+          "alsoFits": ["E28", "E17", "E23", "E27", "E66", "E31", "E50", "E55", "E59", "E142"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le village où tu es allé, c'était bien ?",
-          "alsoFits": ["E65", "E32", "E27", "E48"],
+          "alsoFits": [
+            "E65",
+            "E32",
+            "E27",
+            "E48",
+            "E66",
+            "E180",
+            "E31",
+            "E50",
+            "E46",
+            "E204",
+            "E235",
+            "E28",
+            "E17",
+            "E21",
+            "E22",
+            "E20",
+            "E19",
+            "E203",
+            "E64",
+            "E59",
+            "E47",
+            "E43"
+          ],
           "skip": [],
           "note": "소감을 묻는 열린 질문. reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(c'était)"
         },
         {
           "cue": "Ça va, au bureau aujourd'hui ?",
-          "alsoFits": ["E28", "E162", "E161", "E76"],
+          "alsoFits": [
+            "E28",
+            "E162",
+            "E161",
+            "E76",
+            "E100",
+            "E101",
+            "E245",
+            "E136",
+            "E114",
+            "E113",
+            "E112",
+            "E142",
+            "E27",
+            "E66",
+            "E61",
+            "E160"
+          ],
           "skip": [],
           "note": "근황을 묻는 열린 질문"
         },
@@ -1202,31 +1593,43 @@
       "contexts": [
         {
           "cue": "Un bon dîner ici, c'est cher ?",
-          "alsoFits": ["E56", "E60"],
+          "alsoFits": [
+            "E56",
+            "E60",
+            "E50",
+            "E49",
+            "E54",
+            "E64",
+            "E61",
+            "E177",
+            "E52",
+            "E59",
+            "E176"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton nouveau jeu, c'est cher ?",
-          "alsoFits": ["E60"],
+          "alsoFits": ["E60", "E56", "E61", "E64", "E54"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton billet d'avion, c'était cher ?",
-          "alsoFits": [],
+          "alsoFits": ["E40", "E45", "E61", "E64", "E60", "E54", "E189"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(ça a coûté)"
         },
         {
           "cue": "Le bœuf est cher au marché ?",
-          "alsoFits": ["E56"],
+          "alsoFits": ["E56", "E54", "E52", "E61", "E50", "E177", "E64", "E49"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Les billets du concert sont chers ?",
-          "alsoFits": ["E56", "E60"],
+          "alsoFits": ["E56", "E60", "E54", "E61", "E64", "E50", "E177", "E45"],
           "skip": [],
           "note": ""
         }
@@ -1243,31 +1646,98 @@
       "contexts": [
         {
           "cue": "Tu aimes le jazz ?",
-          "alsoFits": ["E50"],
+          "alsoFits": ["E50", "E55", "E66", "E105", "E64", "E56", "E106", "E177", "E61", "E168"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu aimes la nouvelle déco du bureau ?",
-          "alsoFits": ["E50", "E66", "E235"],
+          "alsoFits": [
+            "E50",
+            "E66",
+            "E235",
+            "E65",
+            "E120",
+            "E64",
+            "E59",
+            "E106",
+            "E105",
+            "E142",
+            "E143",
+            "E49",
+            "E54",
+            "E168",
+            "E18",
+            "E13",
+            "E203",
+            "E61"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le film d'hier, tu l'as aimé ?",
-          "alsoFits": ["E50", "E65", "E203", "E32", "E66", "E64"],
+          "alsoFits": [
+            "E50",
+            "E65",
+            "E203",
+            "E32",
+            "E66",
+            "E64",
+            "E49",
+            "E59",
+            "E106",
+            "E142",
+            "E143",
+            "E61",
+            "E120",
+            "E41"
+          ],
           "skip": [],
           "note": "영화 소감을 묻는 열린 질문. reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(j'ai trouvé ça)"
         },
         {
           "cue": "Tu aimes cuisiner le soir ?",
-          "alsoFits": ["E50"],
+          "alsoFits": [
+            "E50",
+            "E64",
+            "E56",
+            "E66",
+            "E105",
+            "E101",
+            "E254",
+            "E77",
+            "E55",
+            "E180",
+            "E106",
+            "E61",
+            "E120",
+            "E168"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le vin nature, tu en penses quoi ?",
-          "alsoFits": ["E49", "E50", "E59", "E64", "E66"],
+          "alsoFits": [
+            "E49",
+            "E50",
+            "E59",
+            "E64",
+            "E66",
+            "E120",
+            "E106",
+            "E132",
+            "E176",
+            "E177",
+            "E142",
+            "E143",
+            "E168",
+            "E203",
+            "E144",
+            "E61",
+            "E54"
+          ],
           "skip": [],
           "note": "의견을 묻는 열린 질문"
         }
@@ -1277,20 +1747,62 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce qui m'a frappé, c'est le silence.",
-        "alsoFits": ["E55"],
+        "alsoFits": ["E55", "E235"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu as aimé Paris ?",
-          "alsoFits": ["E65", "E235", "E48", "E55", "E27"],
+          "alsoFits": [
+            "E65",
+            "E235",
+            "E48",
+            "E55",
+            "E27",
+            "E66",
+            "E31",
+            "E50",
+            "E203",
+            "E28",
+            "E17",
+            "E29",
+            "E47",
+            "E46",
+            "E105",
+            "E54",
+            "E52",
+            "E59",
+            "E142",
+            "E43",
+            "E180"
+          ],
           "skip": [],
           "note": "소감을 묻는 열린 질문"
         },
         {
           "cue": "Le concert d'hier, c'était comment ?",
-          "alsoFits": ["E65", "E48", "E203", "E31"],
+          "alsoFits": [
+            "E65",
+            "E48",
+            "E203",
+            "E31",
+            "E66",
+            "E235",
+            "E50",
+            "E28",
+            "E29",
+            "E27",
+            "E92",
+            "E46",
+            "E55",
+            "E64",
+            "E41",
+            "E59",
+            "E142",
+            "E33",
+            "E180"
+          ],
           "skip": [],
           "note": "소감을 묻는 열린 질문"
         },
@@ -1302,13 +1814,53 @@
         },
         {
           "cue": "Ton nouveau travail, c'est comment ?",
-          "alsoFits": ["E27", "E50", "E119", "E143", "E142", "E59", "E162"],
+          "alsoFits": [
+            "E27",
+            "E50",
+            "E119",
+            "E143",
+            "E142",
+            "E59",
+            "E162",
+            "E31",
+            "E66",
+            "E120",
+            "E64",
+            "E144",
+            "E106",
+            "E29",
+            "E161",
+            "E77",
+            "E176",
+            "E61"
+          ],
           "skip": [],
           "note": "근황을 묻는 열린 질문"
         },
         {
           "cue": "Le restaurant chic, tu as aimé ?",
-          "alsoFits": ["E65", "E150", "E48", "E203", "E24"],
+          "alsoFits": [
+            "E65",
+            "E150",
+            "E48",
+            "E203",
+            "E24",
+            "E66",
+            "E31",
+            "E50",
+            "E235",
+            "E64",
+            "E59",
+            "E142",
+            "E60",
+            "E30",
+            "E29",
+            "E28",
+            "E27",
+            "E45",
+            "E46",
+            "E180"
+          ],
           "skip": [],
           "note": "소감을 묻는 열린 질문"
         }
@@ -1325,31 +1877,31 @@
       "contexts": [
         {
           "cue": "Tu es bien installé dans le train ?",
-          "alsoFits": ["E28"],
+          "alsoFits": ["E28", "E29", "E27", "E206", "E113", "E17", "E142", "E66", "E64", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ça va, au concert ?",
-          "alsoFits": ["E28", "E27"],
+          "alsoFits": ["E28", "E27", "E29", "E17", "E92", "E66", "E142", "E143", "E113", "E206"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "C'était comment, ton vol ?",
-          "alsoFits": ["E41", "E236"],
+          "alsoFits": ["E41", "E236", "E76", "E142", "E45", "E46", "E28", "E40", "E29"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(il y avait)"
         },
         {
           "cue": "Tu es seul à ta table ?",
-          "alsoFits": [],
+          "alsoFits": ["E17", "E28", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu travailles seul à la maison ?",
-          "alsoFits": [],
+          "alsoFits": ["E61"],
           "skip": [],
           "note": ""
         }
@@ -1359,38 +1911,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce matin, je suis allé à la boulangerie.",
-        "alsoFits": [],
+        "alsoFits": ["E16"],
         "skip": ["order"],
         "note": "ce matin 을 뒤에 둬도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Tu as fait quoi ce matin ?",
-          "alsoFits": ["E35"],
+          "alsoFits": ["E35", "E78", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pourquoi tu es en retard ?",
-          "alsoFits": ["E43", "E231", "E44"],
+          "alsoFits": ["E43", "E231", "E44", "E123", "E61", "E229", "E230", "E45", "E191", "E162"],
           "skip": [],
           "note": "늦은 까닭을 묻는 말이라 여러 대꾸가 맞다"
         },
         {
           "cue": "Tu as fait du sport avec ton ami ?",
-          "alsoFits": ["E35"],
+          "alsoFits": ["E35", "E78", "E61", "E76"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(on est allés)"
         },
         {
           "cue": "Tu as acheté tes médicaments ?",
-          "alsoFits": ["E44", "E78"],
+          "alsoFits": ["E44", "E78", "E153", "E89", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as trouvé du bon vin ?",
-          "alsoFits": ["E78"],
+          "alsoFits": ["E78", "E45", "E40", "E61", "E204"],
           "skip": [],
           "note": "cue 와 reply 의 이음이 약하다(마트에 갔다는 말이 와인을 찾았다는 답으로 조금 돌아감), 애매"
         }
@@ -1407,31 +1959,57 @@
       "contexts": [
         {
           "cue": "On fait quoi samedi ?",
-          "alsoFits": ["E109", "E110", "E73", "E223"],
+          "alsoFits": [
+            "E109",
+            "E110",
+            "E73",
+            "E223",
+            "E87",
+            "E85",
+            "E86",
+            "E148",
+            "E107",
+            "E56",
+            "E177",
+            "E215"
+          ],
           "skip": [],
           "note": "계획을 묻는 말이라 제안 표현도 자연스럽다"
         },
         {
           "cue": "Comment tu fais ta sauce ?",
-          "alsoFits": [],
+          "alsoFits": ["E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu fais quoi ce soir ?",
-          "alsoFits": ["E86", "E85", "E148"],
+          "alsoFits": ["E86", "E85", "E148", "E87", "E101", "E76", "E107", "E73", "E223"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ta journée a été comment ?",
-          "alsoFits": ["E162", "E76", "E236", "E46"],
+          "alsoFits": [
+            "E162",
+            "E76",
+            "E236",
+            "E46",
+            "E245",
+            "E66",
+            "E161",
+            "E114",
+            "E100",
+            "E63",
+            "E61",
+            "E64"
+          ],
           "skip": [],
           "note": "하루를 묻는 열린 질문"
         },
         {
           "cue": "Ton voyage commence où ?",
-          "alsoFits": [],
+          "alsoFits": ["E107", "E177", "E86", "E61"],
           "skip": [],
           "note": ""
         }
@@ -1448,31 +2026,31 @@
       "contexts": [
         {
           "cue": "Et après le dîner ?",
-          "alsoFits": ["E35"],
+          "alsoFits": ["E35", "E62"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il a plu pendant ta randonnée ?",
-          "alsoFits": ["E45"],
+          "alsoFits": ["E45", "E62", "E236", "E38"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton jeu a planté ce soir ?",
-          "alsoFits": ["E113", "E153", "E80"],
+          "alsoFits": ["E113", "E153", "E80", "E62", "E112", "E114", "E38"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(j'ai décidé)"
         },
         {
           "cue": "Le gâteau était raté ?",
-          "alsoFits": ["E45", "E80"],
+          "alsoFits": ["E45", "E80", "E62", "E153", "E191", "E81"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le bar était fermé, hier ?",
-          "alsoFits": ["E45", "E80", "E129"],
+          "alsoFits": ["E45", "E80", "E129", "E62"],
           "skip": [],
           "note": ""
         }
@@ -1489,19 +2067,19 @@
       "contexts": [
         {
           "cue": "Ton train avait du retard ?",
-          "alsoFits": ["E41", "E45", "E113"],
+          "alsoFits": ["E41", "E45", "E113", "E62", "E112", "E236", "E80"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le médecin était en retard ?",
-          "alsoFits": ["E41"],
+          "alsoFits": ["E41", "E62", "E45"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as attendu longtemps avec tes amis ?",
-          "alsoFits": ["E41"],
+          "alsoFits": ["E41", "E62"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(pendant qu'on attendait)"
         },
@@ -1513,7 +2091,7 @@
         },
         {
           "cue": "Ton avion est parti en retard ?",
-          "alsoFits": ["E41", "E45"],
+          "alsoFits": ["E41", "E45", "E62", "E113", "E80", "E236"],
           "skip": [],
           "note": ""
         }
@@ -1523,38 +2101,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Tout à coup, il a commencé à pleuvoir.",
-        "alsoFits": ["E45"],
+        "alsoFits": ["E45", "E37"],
         "skip": ["order"],
         "note": "tout à coup 을 뒤에 둬도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Il s'est passé quoi au concert ?",
-          "alsoFits": [],
+          "alsoFits": ["E45", "E37", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pourquoi tu as crié ?",
-          "alsoFits": [],
+          "alsoFits": ["E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ta randonnée s'est bien passée ?",
-          "alsoFits": ["E43", "E236", "E45"],
+          "alsoFits": ["E43", "E236", "E45", "E46", "E44"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as perdu ta partie ?",
-          "alsoFits": ["E45"],
+          "alsoFits": ["E45", "E80", "E113", "E44", "E61", "E229"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il n'y a plus de lumière chez toi ?",
-          "alsoFits": ["E177"],
+          "alsoFits": ["E177", "E61", "E229", "E45"],
           "skip": [],
           "note": ""
         }
@@ -1564,38 +2142,38 @@
       "similarMeaning": ["E166"],
       "example": {
         "text": "Il m'a offert un cadeau. Je ne m'y attendais pas.",
-        "alsoFits": ["E93"],
+        "alsoFits": ["E93", "E91", "E178", "E92", "E90"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Ton équipe t'a organisé une fête ?",
-          "alsoFits": ["E93", "E178", "E179"],
+          "alsoFits": ["E93", "E178", "E179", "E91", "E92", "E90", "E65", "E180"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il a neigé chez toi ce matin ?",
-          "alsoFits": ["E91", "E200", "E93"],
+          "alsoFits": ["E91", "E200", "E93", "E92", "E19", "E38"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton ami a aimé ton cadeau ?",
-          "alsoFits": [],
+          "alsoFits": ["E65"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(il ne s'y attendait pas)"
         },
         {
           "cue": "Tu as gagné le tournoi ?",
-          "alsoFits": ["E93", "E40", "E179", "E116"],
+          "alsoFits": ["E93", "E40", "E179", "E116", "E91", "E92", "E117", "E47"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le restaurant t'a offert le dessert ?",
-          "alsoFits": ["E40", "E91"],
+          "alsoFits": ["E40", "E91", "E93", "E92", "E150", "E90"],
           "skip": [],
           "note": ""
         }
@@ -1605,38 +2183,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Il restait une table. On a eu de la chance.",
-        "alsoFits": [],
+        "alsoFits": ["E115", "E79"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Il restait des places au concert ?",
-          "alsoFits": ["E39"],
+          "alsoFits": ["E39", "E115", "E116", "E79", "E45"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il a plu pendant ton pique-nique ?",
-          "alsoFits": ["E45"],
+          "alsoFits": ["E45", "E61", "E79"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as eu ton train ?",
-          "alsoFits": ["E42", "E237"],
+          "alsoFits": ["E42", "E237", "E45"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(j'ai eu)"
         },
         {
           "cue": "Ton vol n'a pas été annulé ?",
-          "alsoFits": ["E45"],
+          "alsoFits": ["E45", "E79"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton équipe a gagné hier soir ?",
-          "alsoFits": ["E42"],
+          "alsoFits": ["E42", "E64"],
           "skip": [],
           "note": ""
         }
@@ -1653,19 +2231,19 @@
       "contexts": [
         {
           "cue": "Ta réunion a été longue ?",
-          "alsoFits": ["E76"],
+          "alsoFits": ["E76", "E114", "E162", "E64", "E61", "E236"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le voyage en train était long ?",
-          "alsoFits": [],
+          "alsoFits": ["E76", "E61", "E64"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ta partie va être longue ?",
-          "alsoFits": ["E225"],
+          "alsoFits": ["E225", "E177"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(ça va durer)"
         },
@@ -1677,7 +2255,7 @@
         },
         {
           "cue": "Tu as attendu longtemps chez le médecin ?",
-          "alsoFits": ["E37"],
+          "alsoFits": ["E37", "E113", "E76", "E45"],
           "skip": [],
           "note": ""
         }
@@ -1694,31 +2272,31 @@
       "contexts": [
         {
           "cue": "Tu as eu ton avion ?",
-          "alsoFits": ["E40", "E237"],
+          "alsoFits": ["E40", "E237", "E45"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as l'air fatigué ce matin.",
-          "alsoFits": ["E76", "E100", "E162"],
+          "alsoFits": ["E76", "E100", "E162", "E161", "E160", "E114", "E102", "E101"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton équipe a gagné ?",
-          "alsoFits": ["E40"],
+          "alsoFits": ["E40", "E45"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(on a failli)"
         },
         {
           "cue": "Ton gâteau est réussi ?",
-          "alsoFits": [],
+          "alsoFits": ["E45", "E46"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as fini le jeu ?",
-          "alsoFits": ["E116", "E236"],
+          "alsoFits": ["E116", "E236", "E117", "E46", "E77"],
           "skip": [],
           "note": ""
         }
@@ -1735,31 +2313,31 @@
       "contexts": [
         {
           "cue": "Pourquoi tu es arrivé si tard ?",
-          "alsoFits": ["E231", "E123", "E34"],
+          "alsoFits": ["E231", "E123", "E34", "E191", "E45"],
           "skip": [],
           "note": "늦은 까닭을 묻는 말이라 여러 대꾸가 맞다"
         },
         {
           "cue": "C'était bien, la randonnée avec tes amis ?",
-          "alsoFits": ["E236", "E45"],
+          "alsoFits": ["E236", "E45", "E46", "E42"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as trouvé le restaurant facilement ?",
-          "alsoFits": ["E236"],
+          "alsoFits": ["E236", "E45"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(je me suis perdu)"
         },
         {
           "cue": "Tu as aimé la vieille ville ?",
-          "alsoFits": ["E32", "E65", "E235"],
+          "alsoFits": ["E32", "E65", "E235", "E66", "E31", "E29", "E28", "E50"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le festival était grand ?",
-          "alsoFits": ["E28", "E17"],
+          "alsoFits": ["E28", "E17", "E29", "E92", "E32"],
           "skip": [],
           "note": ""
         }
@@ -1776,7 +2354,7 @@
       "contexts": [
         {
           "cue": "Tu m'appelles d'un autre numéro ?",
-          "alsoFits": [],
+          "alsoFits": ["E61"],
           "skip": [],
           "note": ""
         },
@@ -1794,13 +2372,13 @@
         },
         {
           "cue": "Ta soupe n'a pas de goût.",
-          "alsoFits": ["E70", "E153", "E104"],
+          "alsoFits": ["E70", "E153", "E104", "E191"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu ne joues pas ce soir ?",
-          "alsoFits": ["E76", "E101", "E123", "E100"],
+          "alsoFits": ["E76", "E101", "E123", "E100", "E78", "E112", "E61"],
           "skip": [],
           "note": ""
         }
@@ -1810,14 +2388,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Malheureusement, le magasin était fermé.",
-        "alsoFits": ["E61"],
+        "alsoFits": ["E61", "E62"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu as eu des places pour le concert ?",
-          "alsoFits": ["E40"],
+          "alsoFits": ["E40", "E80"],
           "skip": [],
           "note": ""
         },
@@ -1835,13 +2413,13 @@
         },
         {
           "cue": "Ton dîner s'est bien passé ?",
-          "alsoFits": ["E46", "E42"],
+          "alsoFits": ["E46", "E42", "E236"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es allé chez le médecin ?",
-          "alsoFits": [],
+          "alsoFits": ["E61"],
           "skip": [],
           "note": ""
         }
@@ -1870,19 +2448,19 @@
         },
         {
           "cue": "J'avais peur de mon examen, ce matin.",
-          "alsoFits": ["E127", "E128"],
+          "alsoFits": ["E127", "E128", "E139", "E182"],
           "skip": [],
           "note": "reply 가 되묻는 말(억양만 바뀜)이라 틀은 그대로다"
         },
         {
           "cue": "Ton premier pain maison ?",
-          "alsoFits": ["E236"],
+          "alsoFits": ["E236", "E47", "E65"],
           "skip": [],
           "note": "빵 굽기에 \"ça s'est bien passé\" 는 조금 어색할 수 있다, 애매"
         },
         {
           "cue": "Le voyage avec les enfants ?",
-          "alsoFits": ["E236", "E76"],
+          "alsoFits": ["E236", "E76", "E65"],
           "skip": [],
           "note": ""
         }
@@ -1905,25 +2483,25 @@
         },
         {
           "cue": "Tu as aimé le ski ?",
-          "alsoFits": ["E65", "E236", "E48"],
+          "alsoFits": ["E65", "E236", "E48", "E66", "E46"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es déjà venu ici ?",
-          "alsoFits": [],
+          "alsoFits": ["E202"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(c'est la première fois)"
         },
         {
           "cue": "Tu as aimé le champagne ?",
-          "alsoFits": ["E25", "E65", "E66"],
+          "alsoFits": ["E25", "E65", "E66", "E150", "E235"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as vu un opéra ?",
-          "alsoFits": ["E65", "E32", "E48"],
+          "alsoFits": ["E65", "E32", "E48", "E235", "E66"],
           "skip": [],
           "note": ""
         }
@@ -1933,38 +2511,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce dîner était magique. Je m'en souviendrai longtemps.",
-        "alsoFits": ["E150"],
+        "alsoFits": ["E150", "E178"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Ton voyage au Japon, c'était bien ?",
-          "alsoFits": ["E65", "E32", "E235"],
+          "alsoFits": ["E65", "E32", "E235", "E66", "E47", "E180"],
           "skip": [],
           "note": "소감을 묻는 열린 질문"
         },
         {
           "cue": "Ce concert était génial, non ?",
-          "alsoFits": ["E105", "E70", "E104", "E65"],
+          "alsoFits": ["E105", "E70", "E104", "E65", "E92"],
           "skip": [],
           "note": "동의를 구하는 말이라 맞장구도 자연스럽다"
         },
         {
           "cue": "Le mariage de ton frère, c'était beau ?",
-          "alsoFits": ["E65"],
+          "alsoFits": ["E65", "E178", "E46"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(on s'en souviendra)"
         },
         {
           "cue": "Tu as bu un grand vin ?",
-          "alsoFits": ["E150", "E65"],
+          "alsoFits": ["E150", "E65", "E66", "E47"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le repas chez ta grand-mère, c'était comment ?",
-          "alsoFits": ["E150", "E65", "E178"],
+          "alsoFits": ["E150", "E65", "E178", "E66"],
           "skip": [],
           "note": ""
         }
@@ -1981,13 +2559,13 @@
       "contexts": [
         {
           "cue": "On prend le métro ou un taxi ?",
-          "alsoFits": ["E50", "E82", "E56", "E54"],
+          "alsoFits": ["E50", "E82", "E56", "E54", "E110", "E177"],
           "skip": [],
           "note": "고르는 질문이라 의견·비교 표현이 맞다"
         },
         {
           "cue": "Quel vin avec le poisson ?",
-          "alsoFits": ["E56", "E82"],
+          "alsoFits": ["E56", "E82", "E177"],
           "skip": [],
           "note": ""
         },
@@ -1999,13 +2577,13 @@
         },
         {
           "cue": "Ce jeu va avoir du succès ?",
-          "alsoFits": ["E50", "E176", "E87", "E177", "E188"],
+          "alsoFits": ["E50", "E176", "E87", "E177", "E188", "E119", "E118"],
           "skip": [],
           "note": "예측을 묻는 열린 질문"
         },
         {
           "cue": "Je dors mal en ce moment.",
-          "alsoFits": ["E83", "E84", "E50"],
+          "alsoFits": ["E83", "E84", "E50", "E188"],
           "skip": [],
           "note": "조언할 자리라 권유 표현도 자연스럽다"
         }
@@ -2015,38 +2593,38 @@
       "similarMeaning": ["E31", "E49"],
       "example": {
         "text": "Je pense que le télétravail, c'est pratique.",
-        "alsoFits": ["E49", "E64", "E119"],
+        "alsoFits": ["E49", "E64", "E119", "E144"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu aimes ton nouveau bureau ?",
-          "alsoFits": ["E49", "E31", "E120", "E59", "E143"],
+          "alsoFits": ["E49", "E31", "E120", "E59", "E143", "E66", "E64"],
           "skip": [],
           "note": "의견을 묻는 열린 질문"
         },
         {
           "cue": "On va au restaurant italien ?",
-          "alsoFits": ["E189", "E188", "E61"],
+          "alsoFits": ["E189", "E188", "E61", "E118", "E119"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le concert, c'est demain.",
-          "alsoFits": ["E72", "E230"],
+          "alsoFits": ["E72", "E230", "E153"],
           "skip": [],
           "note": "reply 에서 틀의 고정 부분 꼴이 바뀜(시제·인칭) — 빈칸이 고정 부분을 못 찾을 수 있음, 애매(je pensais que)"
         },
         {
           "cue": "Il manque quelque chose à ma sauce ?",
-          "alsoFits": ["E49", "E24", "E119"],
+          "alsoFits": ["E49", "E24", "E119", "E64"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton petit frère joue trop aux jeux ?",
-          "alsoFits": ["E49", "E56"],
+          "alsoFits": ["E49", "E56", "E64"],
           "skip": [],
           "note": ""
         }
@@ -2063,31 +2641,45 @@
       "contexts": [
         {
           "cue": "Tu aimes le sport, comme ton père ?",
-          "alsoFits": ["E53", "E61", "E141"],
+          "alsoFits": ["E53", "E61", "E141", "E64", "E144", "E59", "E106", "E50", "E55", "E31"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton collègue aime le café ?",
-          "alsoFits": ["E61", "E141"],
+          "alsoFits": ["E61", "E141", "E177", "E189", "E119", "E118", "E64", "E188"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu manges du fromage tous les jours ?",
-          "alsoFits": ["E52", "E61", "E64"],
+          "alsoFits": ["E52", "E61", "E64", "E144", "E141", "E56", "E105", "E254"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ta sœur joue aussi aux jeux vidéo ?",
-          "alsoFits": ["E61"],
+          "alsoFits": ["E61", "E64", "E141", "E105", "E177", "E144", "E189"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Séoul, c'est comme Paris ?",
-          "alsoFits": ["E13", "E54", "E61", "E176"],
+          "alsoFits": [
+            "E13",
+            "E54",
+            "E61",
+            "E176",
+            "E52",
+            "E18",
+            "E59",
+            "E64",
+            "E141",
+            "E177",
+            "E56",
+            "E49",
+            "E50"
+          ],
           "skip": [],
           "note": "비교를 묻는 열린 질문이라 비교 표현이 여럿 맞다"
         }
@@ -2104,31 +2696,31 @@
       "contexts": [
         {
           "cue": "On dîne tard en Corée ?",
-          "alsoFits": ["E51", "E61"],
+          "alsoFits": ["E51", "E61", "E64", "E56", "E177", "E141", "E254"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le pourboire, c'est normal en Corée ?",
-          "alsoFits": ["E51", "E61"],
+          "alsoFits": ["E51", "E61", "E64", "E141", "E56", "E177"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu bois du vin au repas en Corée ?",
-          "alsoFits": ["E51", "E61"],
+          "alsoFits": ["E51", "E61", "E64", "E56", "E141", "E254", "E55"],
           "skip": ["blank"],
           "note": "reply 가 En France … alors qu'en Corée 로 틀의 고정 부분(En Corée … alors qu'ici)과 달라 빈칸으로 가리기 어렵다"
         },
         {
           "cue": "Tu finis tard au travail en Corée ?",
-          "alsoFits": ["E51", "E245"],
+          "alsoFits": ["E51", "E245", "E64", "E162", "E56", "E105", "E141"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu enlèves tes chaussures chez toi ?",
-          "alsoFits": ["E51"],
+          "alsoFits": ["E51", "E61", "E64", "E105", "E208"],
           "skip": [],
           "note": ""
         }
@@ -2145,31 +2737,43 @@
       "contexts": [
         {
           "cue": "Tu fais du sport le matin ?",
-          "alsoFits": ["E51"],
+          "alsoFits": ["E51", "E61", "E64", "E101", "E144", "E141", "E77", "E56", "E254", "E85"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu fais du sport le soir ?",
-          "alsoFits": ["E51"],
+          "alsoFits": [
+            "E51",
+            "E61",
+            "E64",
+            "E101",
+            "E144",
+            "E141",
+            "E77",
+            "E56",
+            "E254",
+            "E76",
+            "E85"
+          ],
           "skip": [],
           "note": "앞 맥락(le matin)과 거의 같은 cue"
         },
         {
           "cue": "Tu fais ton pain toi-même ?",
-          "alsoFits": ["E51", "E101"],
+          "alsoFits": ["E51", "E101", "E61", "E64", "E141", "E144", "E77", "E105", "E85"],
           "skip": ["blank"],
           "note": "reply 가 단수 elle, le fait 라 틀의 고정 부분 eux, le font 이 없다"
         },
         {
           "cue": "Tu fais la sieste l'après-midi ?",
-          "alsoFits": ["E51"],
+          "alsoFits": ["E51", "E61", "E64", "E141", "E144", "E56", "E254", "E105", "E85"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu sens le vin avant de le boire ?",
-          "alsoFits": ["E51"],
+          "alsoFits": ["E51", "E61", "E64", "E141", "E144", "E105", "E254"],
           "skip": [],
           "note": ""
         }
@@ -2186,31 +2790,63 @@
       "contexts": [
         {
           "cue": "Tu préfères le train ou l'avion ?",
-          "alsoFits": ["E50", "E55", "E56", "E59", "E214"],
+          "alsoFits": [
+            "E50",
+            "E55",
+            "E56",
+            "E59",
+            "E214",
+            "E49",
+            "E64",
+            "E106",
+            "E107",
+            "E31",
+            "E177",
+            "E176",
+            "E61",
+            "E51"
+          ],
           "skip": [],
           "note": "선호를 묻는 열린 질문"
         },
         {
           "cue": "Tu cuisines ou tu commandes ?",
-          "alsoFits": ["E56", "E59", "E101"],
+          "alsoFits": ["E56", "E59", "E101", "E64", "E61", "E55", "E106", "E254", "E50"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "On prend ce vin ou l'autre ?",
-          "alsoFits": ["E56", "E59"],
+          "alsoFits": ["E56", "E59", "E49", "E50", "E110", "E82", "E106", "E177", "E55", "E64"],
           "skip": ["blank"],
           "note": "reply 가 plus 대신 moins 를 써서 고정 부분 plus 가 없다"
         },
         {
           "cue": "Le nouveau jeu est bien ?",
-          "alsoFits": ["E31", "E50", "E59", "E64", "E65", "E66", "E203"],
+          "alsoFits": [
+            "E31",
+            "E50",
+            "E59",
+            "E64",
+            "E65",
+            "E66",
+            "E203",
+            "E49",
+            "E61",
+            "E120",
+            "E119",
+            "E204",
+            "E176",
+            "E177",
+            "E92",
+            "E106"
+          ],
           "skip": [],
           "note": "느낌을 묻는 열린 질문이라 평가 표현이 여럿 맞다"
         },
         {
           "cue": "Tu vas au travail à vélo ?",
-          "alsoFits": ["E56"],
+          "alsoFits": ["E56", "E61", "E64", "E141", "E101", "E59", "E105", "E254"],
           "skip": [],
           "note": ""
         }
@@ -2220,20 +2856,20 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce que je préfère, c'est le vin rouge.",
-        "alsoFits": [],
+        "alsoFits": ["E235"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu aimes quoi dans la cuisine française ?",
-          "alsoFits": ["E235"],
+          "alsoFits": ["E235", "E176", "E177", "E175", "E64"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu aimes quoi dans ton travail ?",
-          "alsoFits": ["E64", "E176"],
+          "alsoFits": ["E64", "E176", "E175", "E177", "E61", "E142", "E144"],
           "skip": [],
           "note": ""
         },
@@ -2245,13 +2881,13 @@
         },
         {
           "cue": "Tu écoutes quel genre de musique ?",
-          "alsoFits": ["E56"],
+          "alsoFits": ["E56", "E176", "E177", "E64", "E61", "E254"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Qu'est-ce que tu aimes en voyage ?",
-          "alsoFits": [],
+          "alsoFits": ["E64", "E176", "E175", "E177", "E61", "E254", "E56"],
           "skip": [],
           "note": ""
         }
@@ -2281,32 +2917,52 @@
             "E196",
             "E197",
             "E198",
-            "E215"
+            "E215",
+            "E85",
+            "E64",
+            "E61",
+            "E177",
+            "E105",
+            "E162",
+            "E100"
           ],
           "skip": [],
           "note": "초대에 대한 답이라 수락·거절·보류 표현이 모두 자연스럽다"
         },
         {
           "cue": "Tu bois du rouge ou du blanc ?",
-          "alsoFits": ["E55", "E214"],
+          "alsoFits": ["E55", "E214", "E59", "E106", "E64", "E61", "E254", "E177"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu joues combien d'heures par jour ?",
-          "alsoFits": ["E64", "E176"],
+          "alsoFits": ["E64", "E176", "E61", "E177", "E254", "E144"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu pars en vacances cet été ?",
-          "alsoFits": ["E85", "E86", "E87", "E107", "E241"],
+          "alsoFits": [
+            "E85",
+            "E86",
+            "E87",
+            "E107",
+            "E241",
+            "E108",
+            "E64",
+            "E61",
+            "E177",
+            "E75",
+            "E215",
+            "E242"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu dors combien d'heures ?",
-          "alsoFits": ["E64", "E77"],
+          "alsoFits": ["E64", "E77", "E61", "E176", "E177", "E254", "E144"],
           "skip": [],
           "note": ""
         }
@@ -2316,38 +2972,76 @@
       "similarMeaning": [],
       "example": {
         "text": "C'est un bon restaurant ? Je suis d'accord, mais c'est cher.",
-        "alsoFits": ["E132"],
+        "alsoFits": ["E132", "E142", "E143", "E64", "E144", "E50", "E49", "E61", "E222"],
         "skip": [],
         "note": "질문(C'est un bon restaurant ?)에 Je suis d'accord 로 답하는 것은 조금 어색하다. 동의는 단정한 말에 붙는 편이다(애매)"
       },
       "contexts": [
         {
           "cue": "Les jeux vidéo, c'est super.",
-          "alsoFits": ["E70", "E104", "E105", "E130", "E132"],
+          "alsoFits": [
+            "E70",
+            "E104",
+            "E105",
+            "E130",
+            "E132",
+            "E59",
+            "E64",
+            "E131",
+            "E142",
+            "E61",
+            "E50"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le vin français est le meilleur.",
-          "alsoFits": ["E70", "E104", "E130", "E131", "E132", "E164"],
+          "alsoFits": [
+            "E70",
+            "E104",
+            "E130",
+            "E131",
+            "E132",
+            "E164",
+            "E59",
+            "E64",
+            "E141",
+            "E142",
+            "E61",
+            "E49",
+            "E50"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce restaurant est excellent !",
-          "alsoFits": ["E70", "E104", "E105", "E132"],
+          "alsoFits": ["E70", "E104", "E105", "E132", "E59", "E142", "E143", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "On doit finir ce projet vite.",
-          "alsoFits": ["E70", "E132", "E228"],
+          "alsoFits": [
+            "E70",
+            "E132",
+            "E228",
+            "E142",
+            "E59",
+            "E64",
+            "E89",
+            "E162",
+            "E61",
+            "E68",
+            "E104"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le sport, c'est important.",
-          "alsoFits": ["E70", "E104", "E130", "E132"],
+          "alsoFits": ["E70", "E104", "E130", "E132", "E142", "E59", "E64", "E61", "E144", "E78"],
           "skip": [],
           "note": ""
         }
@@ -2357,38 +3051,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Manger du riz le matin ? Ce n'est pas une erreur, c'est une différence.",
-        "alsoFits": [],
+        "alsoFits": ["E172"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Manger la soupe avec du riz, c'est bizarre !",
-          "alsoFits": ["E52", "E131", "E141", "E164"],
+          "alsoFits": ["E52", "E131", "E141", "E164", "E51", "E61", "E64", "E165", "E50", "E49"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Pourquoi tu sers le vin à deux mains ?",
-          "alsoFits": ["E52"],
+          "alsoFits": ["E52", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton collègue t'a corrigé en réunion ?",
-          "alsoFits": ["E113"],
+          "alsoFits": ["E113", "E61", "E64", "E143", "E203", "E206"],
           "skip": ["blank"],
           "note": "reply 가 반과거 ce n'était pas … c'était 로 바뀌어 고정 부분과 다르다"
         },
         {
           "cue": "Tu mets du sucre dans la sauce ?!",
-          "alsoFits": ["E52"],
+          "alsoFits": ["E52", "E61", "E64", "E164", "E51"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Dormir par terre, c'est bizarre, non ?",
-          "alsoFits": ["E52", "E131", "E141", "E164"],
+          "alsoFits": ["E52", "E131", "E141", "E164", "E51", "E61", "E64", "E165", "E50", "E49"],
           "skip": [],
           "note": ""
         }
@@ -2405,31 +3099,74 @@
       "contexts": [
         {
           "cue": "Tu aimes travailler à la maison ?",
-          "alsoFits": ["E31", "E50", "E56", "E106", "E132", "E142", "E143"],
+          "alsoFits": [
+            "E31",
+            "E50",
+            "E56",
+            "E106",
+            "E132",
+            "E142",
+            "E143",
+            "E64",
+            "E61",
+            "E49",
+            "E54",
+            "E176",
+            "E177",
+            "E105"
+          ],
           "skip": [],
           "note": "의견을 묻는 열린 질문"
         },
         {
           "cue": "Tu veux acheter ce vin ?",
-          "alsoFits": ["E60", "E106", "E107", "E142", "E215"],
+          "alsoFits": ["E60", "E106", "E107", "E142", "E215", "E64", "E56", "E177", "E85"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu aimes ton nouveau quartier ?",
-          "alsoFits": ["E50", "E106", "E132", "E142", "E143"],
+          "alsoFits": [
+            "E50",
+            "E106",
+            "E132",
+            "E142",
+            "E143",
+            "E64",
+            "E61",
+            "E29",
+            "E65",
+            "E66",
+            "E203",
+            "E176"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu joues encore à ce jeu ?",
-          "alsoFits": ["E61", "E64", "E106"],
+          "alsoFits": ["E61", "E64", "E106", "E141", "E144", "E112", "E105"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu veux partir en voiture ?",
-          "alsoFits": ["E56", "E68", "E74", "E82", "E106", "E142", "E172"],
+          "alsoFits": [
+            "E56",
+            "E68",
+            "E74",
+            "E82",
+            "E106",
+            "E142",
+            "E172",
+            "E64",
+            "E61",
+            "E101",
+            "E105",
+            "E110",
+            "E173",
+            "E177"
+          ],
           "skip": [],
           "note": "제안에 대한 답이라 수락·대안 표현도 맞다"
         }
@@ -2439,38 +3176,63 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce restaurant est loin, mais ça vaut la peine.",
-        "alsoFits": [],
+        "alsoFits": ["E65", "E204", "E74", "E69", "E67"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Le musée est loin, tu y vas ?",
-          "alsoFits": ["E56", "E86", "E87", "E101"],
+          "alsoFits": [
+            "E56",
+            "E86",
+            "E87",
+            "E101",
+            "E64",
+            "E61",
+            "E85",
+            "E107",
+            "E59",
+            "E106",
+            "E105"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "On attend une heure pour ce restaurant ?",
-          "alsoFits": ["E68", "E74", "E82", "E110", "E172"],
+          "alsoFits": ["E68", "E74", "E82", "E110", "E172", "E64", "E59", "E106", "E109", "E73"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as fait la queue pour le concert ?",
-          "alsoFits": ["E41", "E236"],
+          "alsoFits": ["E41", "E236", "E61", "E64", "E65", "E40", "E46"],
           "skip": ["blank"],
           "note": "reply 가 반과거 ça valait la peine 라 고정 부분과 다르다"
         },
         {
           "cue": "Tu achètes la nouvelle console ?",
-          "alsoFits": ["E56", "E85", "E87", "E107", "E215"],
+          "alsoFits": [
+            "E56",
+            "E85",
+            "E87",
+            "E107",
+            "E215",
+            "E64",
+            "E61",
+            "E59",
+            "E106",
+            "E108",
+            "E86",
+            "E105"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Faire son pain, ce n'est pas trop long ?",
-          "alsoFits": ["E59"],
+          "alsoFits": ["E59", "E57", "E70", "E104", "E61", "E64", "E141", "E56"],
           "skip": [],
           "note": ""
         }
@@ -2487,13 +3249,13 @@
       "contexts": [
         {
           "cue": "Tu travailles ce week-end ?",
-          "alsoFits": ["E87", "E241"],
+          "alsoFits": ["E87", "E241", "E64", "E56", "E107", "E162"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu adores le fromage, je crois ?",
-          "alsoFits": ["E64", "E141", "E144"],
+          "alsoFits": ["E64", "E141", "E144", "E105", "E51", "E59"],
           "skip": [],
           "note": ""
         },
@@ -2505,13 +3267,13 @@
         },
         {
           "cue": "Tu joues du piano, c'est ça ?",
-          "alsoFits": ["E141"],
+          "alsoFits": ["E141", "E144"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu es malade ?",
-          "alsoFits": ["E76", "E100", "E141", "E161"],
+          "alsoFits": ["E76", "E100", "E141", "E161", "E64", "E144", "E162", "E177"],
           "skip": [],
           "note": ""
         }
@@ -2521,38 +3283,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Il pleuvait, du coup, on est restés à la maison.",
-        "alsoFits": [],
+        "alsoFits": ["E63"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Le restaurant était fermé ?",
-          "alsoFits": ["E45"],
+          "alsoFits": ["E45", "E36", "E63", "E129", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as raté le bus ?",
-          "alsoFits": ["E45", "E236"],
+          "alsoFits": ["E45", "E236", "E61", "E42", "E237", "E36"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il pleut beaucoup ce soir.",
-          "alsoFits": ["E82", "E129", "E199", "E201"],
+          "alsoFits": ["E82", "E129", "E199", "E201", "E80", "E110", "E109", "E73", "E113"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton ordinateur est en panne ?",
-          "alsoFits": ["E45", "E113"],
+          "alsoFits": ["E45", "E113", "E112", "E153", "E229", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as mal dormi ?",
-          "alsoFits": ["E76", "E100"],
+          "alsoFits": ["E76", "E100", "E64", "E61", "E77", "E160", "E114"],
           "skip": [],
           "note": ""
         }
@@ -2562,38 +3324,63 @@
       "similarMeaning": ["E222"],
       "example": {
         "text": "Bref, c'était une longue journée.",
-        "alsoFits": ["E222"],
+        "alsoFits": ["E222", "E64", "E154", "E61"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Raconte-moi ta semaine !",
-          "alsoFits": ["E162", "E222", "E245"],
+          "alsoFits": ["E162", "E222", "E245", "E35", "E34", "E64", "E236", "E76"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Et ton voyage, alors ?",
-          "alsoFits": ["E46", "E65", "E203", "E222", "E236"],
+          "alsoFits": [
+            "E46",
+            "E65",
+            "E203",
+            "E222",
+            "E236",
+            "E35",
+            "E64",
+            "E45",
+            "E43",
+            "E40",
+            "E48",
+            "E47"
+          ],
           "skip": [],
           "note": "근황을 묻는 열린 질문"
         },
         {
           "cue": "Et ton déménagement ?",
-          "alsoFits": ["E76", "E222", "E236"],
+          "alsoFits": ["E76", "E222", "E236", "E35", "E64", "E45", "E162"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton dîner de samedi ?",
-          "alsoFits": ["E62", "E222"],
+          "alsoFits": ["E62", "E222", "E45", "E64", "E36", "E24"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton concert d'hier soir, raconte !",
-          "alsoFits": ["E48", "E65", "E222"],
+          "alsoFits": [
+            "E48",
+            "E65",
+            "E222",
+            "E64",
+            "E92",
+            "E180",
+            "E150",
+            "E46",
+            "E35",
+            "E32",
+            "E28"
+          ],
           "skip": [],
           "note": ""
         }
@@ -2603,38 +3390,50 @@
       "similarMeaning": ["E144"],
       "example": {
         "text": "Franchement, ce jeu est trop difficile.",
-        "alsoFits": ["E49", "E50", "E61", "E144"],
+        "alsoFits": ["E49", "E50", "E61", "E144", "E119", "E118", "E142", "E143"],
         "skip": ["order"],
         "note": "Ce jeu est trop difficile, franchement 순서도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Tu aimes mon gâteau ?",
-          "alsoFits": ["E24", "E31", "E66", "E144", "E150"],
+          "alsoFits": ["E24", "E31", "E66", "E144", "E150", "E61", "E65", "E120"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce film t'a plu ?",
-          "alsoFits": ["E61", "E65", "E144", "E203"],
+          "alsoFits": ["E61", "E65", "E144", "E203", "E66", "E48", "E235", "E31", "E176"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Mon nouveau travail, ça va.",
-          "alsoFits": ["E71", "E139", "E182"],
+          "alsoFits": ["E71", "E139", "E182", "E72", "E181", "E79"],
           "skip": [],
           "note": "reply 가 Franchement 으로 시작하는 되묻기라 다른 맥락보다 정답 근거가 약하다(애매)"
         },
         {
           "cue": "Ce vin est bon, non ?",
-          "alsoFits": ["E57", "E61", "E66", "E70", "E104", "E144"],
+          "alsoFits": [
+            "E57",
+            "E61",
+            "E66",
+            "E70",
+            "E104",
+            "E144",
+            "E24",
+            "E31",
+            "E50",
+            "E49",
+            "E141"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu fais du sport ?",
-          "alsoFits": ["E61", "E144"],
+          "alsoFits": ["E61", "E144", "E101", "E141", "E85", "E77", "E254", "E56"],
           "skip": [],
           "note": ""
         }
@@ -2644,20 +3443,20 @@
       "similarMeaning": ["E235"],
       "example": {
         "text": "Le concert d'hier ? Ça m'a plu.",
-        "alsoFits": ["E48", "E66", "E203"],
+        "alsoFits": ["E48", "E66", "E203", "E180", "E150", "E46"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu as aimé le restaurant ?",
-          "alsoFits": ["E64", "E150", "E203"],
+          "alsoFits": ["E64", "E150", "E203", "E66", "E24", "E31", "E48", "E235"],
           "skip": ["blank"],
           "note": "reply 에 beaucoup 이 끼어 고정 부분 Ça m'a plu 가 끊긴다"
         },
         {
           "cue": "Le nouveau jeu, alors ?",
-          "alsoFits": ["E64", "E66", "E203"],
+          "alsoFits": ["E64", "E66", "E203", "E59", "E31", "E50", "E49", "E92", "E54", "E235"],
           "skip": [],
           "note": ""
         },
@@ -2669,13 +3468,13 @@
         },
         {
           "cue": "Ton voyage à Lyon, c'était bien ?",
-          "alsoFits": ["E48", "E64", "E203"],
+          "alsoFits": ["E48", "E64", "E203", "E66", "E46", "E180", "E92", "E40", "E32"],
           "skip": ["blank"],
           "note": "reply 에 vraiment 이 끼어 고정 부분이 끊긴다"
         },
         {
           "cue": "Le cours de cuisine, c'était comment ?",
-          "alsoFits": ["E64", "E66", "E203"],
+          "alsoFits": ["E64", "E66", "E203", "E46", "E180", "E92", "E31", "E35", "E32", "E236"],
           "skip": [],
           "note": ""
         }
@@ -2685,38 +3484,38 @@
       "similarMeaning": [],
       "example": {
         "text": "Ton nouveau vin ? Pas mal !",
-        "alsoFits": [],
+        "alsoFits": ["E24", "E23", "E65"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Regarde ma nouvelle guitare !",
-          "alsoFits": [],
+          "alsoFits": ["E92", "E91", "E171", "E234", "E31"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Goûte ma soupe.",
-          "alsoFits": ["E23", "E24"],
+          "alsoFits": ["E23", "E24", "E64", "E31"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton nouveau clavier, il est bien ?",
-          "alsoFits": ["E64"],
+          "alsoFits": ["E64", "E65", "E31", "E50", "E59", "E105"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "J'ai fini le jeu en trois heures.",
-          "alsoFits": ["E92", "E171"],
+          "alsoFits": ["E92", "E171", "E72", "E93", "E151", "E164", "E163", "E91"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Écoute ma nouvelle chanson.",
-          "alsoFits": ["E171"],
+          "alsoFits": ["E171", "E31", "E168", "E92", "E65"],
           "skip": [],
           "note": ""
         }
@@ -2726,38 +3525,38 @@
       "similarMeaning": ["E69", "E74"],
       "example": {
         "text": "Tu peux m'aider ? — Pas de souci.",
-        "alsoFits": ["E174"],
+        "alsoFits": ["E174", "E68", "E89", "E105", "E196", "E123", "E173"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu peux m'envoyer le fichier ?",
-          "alsoFits": ["E68", "E89", "E248"],
+          "alsoFits": ["E68", "E89", "E248", "E174"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Désolé, je dois changer l'heure du dîner.",
-          "alsoFits": ["E69", "E81"],
+          "alsoFits": ["E69", "E81", "E80", "E71"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu peux réserver le restaurant ?",
-          "alsoFits": ["E68", "E174", "E248"],
+          "alsoFits": ["E68", "E174", "E248", "E105"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu peux garder mon chat ce week-end ?",
-          "alsoFits": ["E68", "E105", "E123", "E174", "E196", "E197"],
+          "alsoFits": ["E68", "E105", "E123", "E174", "E196", "E197", "E172", "E90"],
           "skip": [],
           "note": "부탁에 대한 답이라 수락·거절 표현이 여럿 맞다"
         },
         {
           "cue": "Je peux prendre ta manette ?",
-          "alsoFits": ["E105"],
+          "alsoFits": ["E105", "E68", "E174", "E172"],
           "skip": [],
           "note": ""
         }
@@ -2767,20 +3566,20 @@
       "similarMeaning": ["E74", "E173"],
       "example": {
         "text": "On se voit à huit heures ? — Ça marche !",
-        "alsoFits": ["E67", "E74", "E185"],
+        "alsoFits": ["E67", "E74", "E185", "E172", "E105", "E173", "E196", "E123", "E87"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "On se retrouve devant le cinéma ?",
-          "alsoFits": ["E67", "E74", "E172", "E185"],
+          "alsoFits": ["E67", "E74", "E172", "E185", "E105", "E173"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu apportes le vin, j'apporte le fromage ?",
-          "alsoFits": ["E67", "E74", "E172"],
+          "alsoFits": ["E67", "E74", "E172", "E105", "E173", "E185"],
           "skip": [],
           "note": ""
         },
@@ -2792,13 +3591,13 @@
         },
         {
           "cue": "On cuisine des pâtes ce soir ?",
-          "alsoFits": ["E74", "E105", "E172", "E173"],
+          "alsoFits": ["E74", "E105", "E172", "E173", "E185"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je réserve deux places pour le concert ?",
-          "alsoFits": ["E74", "E105"],
+          "alsoFits": ["E74", "E105", "E67", "E193", "E90"],
           "skip": [],
           "note": ""
         }
@@ -2808,14 +3607,14 @@
       "similarMeaning": ["E67", "E81"],
       "example": {
         "text": "Je suis en retard. — Ce n'est pas grave.",
-        "alsoFits": ["E67", "E81"],
+        "alsoFits": ["E67", "E81", "E133", "E134", "E157"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "J'ai cassé ton verre, pardon !",
-          "alsoFits": ["E67", "E81"],
+          "alsoFits": ["E67", "E81", "E80"],
           "skip": [],
           "note": ""
         },
@@ -2827,7 +3626,7 @@
         },
         {
           "cue": "Je suis désolé pour hier soir.",
-          "alsoFits": ["E67"],
+          "alsoFits": ["E67", "E81"],
           "skip": ["blank"],
           "note": "reply 가 반과거 Ce n'était pas grave 라 고정 부분과 다르다"
         },
@@ -2839,7 +3638,7 @@
         },
         {
           "cue": "Je ne peux pas venir samedi.",
-          "alsoFits": ["E67", "E80", "E129", "E198"],
+          "alsoFits": ["E67", "E80", "E129", "E198", "E81", "E71", "E72"],
           "skip": [],
           "note": ""
         }
@@ -2849,38 +3648,38 @@
       "similarMeaning": ["E96", "E104", "E130"],
       "example": {
         "text": "C'est trop cher. — Tu as raison.",
-        "alsoFits": ["E96", "E104"],
+        "alsoFits": ["E96", "E104", "E103", "E164", "E141", "E130", "E71", "E208", "E80"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu travailles trop, tu sais.",
-          "alsoFits": ["E57", "E104", "E229"],
+          "alsoFits": ["E57", "E104", "E229", "E130", "E96", "E162", "E61", "E114", "E164", "E141"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce vin est meilleur avec du fromage.",
-          "alsoFits": ["E57", "E104", "E105"],
+          "alsoFits": ["E57", "E104", "E105", "E130", "E96", "E103", "E141"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu vois, le film était nul !",
-          "alsoFits": ["E104"],
+          "alsoFits": ["E104", "E96", "E141", "E164", "E203", "E64"],
           "skip": ["blank"],
           "note": "reply 가 tu avais raison(반과거)이라 고정 부분과 다르다"
         },
         {
           "cue": "Tu devrais boire plus d'eau.",
-          "alsoFits": ["E57", "E104"],
+          "alsoFits": ["E57", "E104", "E130", "E215", "E248"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce jeu est meilleur à deux.",
-          "alsoFits": ["E73", "E104", "E105"],
+          "alsoFits": ["E73", "E104", "E105", "E130", "E96", "E109", "E110"],
           "skip": [],
           "note": ""
         }
@@ -2890,38 +3689,38 @@
       "similarMeaning": ["E127", "E248"],
       "example": {
         "text": "J'ai beaucoup de travail ce mois-ci. — Je vois.",
-        "alsoFits": ["E127"],
+        "alsoFits": ["E127", "E217", "E72"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je ne peux pas venir, je suis malade.",
-          "alsoFits": ["E69", "E80", "E159", "E243"],
+          "alsoFits": ["E69", "E80", "E159", "E243", "E129", "E72", "E127"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il faut appuyer ici, puis là.",
-          "alsoFits": ["E01", "E02", "E248"],
+          "alsoFits": ["E01", "E02", "E248", "E03"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ce restaurant est bon, mais… bruyant.",
-          "alsoFits": ["E70", "E104"],
+          "alsoFits": ["E70", "E104", "E57", "E127", "E132", "E131"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je ne bois pas, je conduis ce soir.",
-          "alsoFits": ["E127"],
+          "alsoFits": ["E127", "E70", "E67"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Mon chef veut le projet pour lundi.",
-          "alsoFits": ["E72", "E217"],
+          "alsoFits": ["E72", "E217", "E151", "E127"],
           "skip": [],
           "note": ""
         }
@@ -2931,20 +3730,20 @@
       "similarMeaning": ["E194"],
       "example": {
         "text": "J'ai arrêté le café. — Ah bon ?",
-        "alsoFits": ["E91", "E163"],
+        "alsoFits": ["E91", "E163", "E93", "E151", "E221", "E171", "E79", "E181", "E139"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je déménage à Marseille !",
-          "alsoFits": ["E91", "E92", "E139"],
+          "alsoFits": ["E91", "E92", "E139", "E93", "E221", "E181"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le restaurant d'en face est fermé.",
-          "alsoFits": ["E91", "E129", "E153", "E221"],
+          "alsoFits": ["E91", "E129", "E153", "E221", "E151", "E80"],
           "skip": [],
           "note": ""
         },
@@ -2956,13 +3755,13 @@
         },
         {
           "cue": "J'arrête les jeux vidéo.",
-          "alsoFits": ["E91", "E93", "E163"],
+          "alsoFits": ["E91", "E93", "E163", "E151", "E164", "E221", "E181", "E165"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le concert est annulé.",
-          "alsoFits": ["E80", "E129", "E151", "E153"],
+          "alsoFits": ["E80", "E129", "E151", "E153", "E91", "E93", "E152", "E221"],
           "skip": [],
           "note": ""
         }
@@ -2979,25 +3778,25 @@
       "contexts": [
         {
           "cue": "Je n'ai rien à faire ce soir.",
-          "alsoFits": ["E109", "E110", "E223"],
+          "alsoFits": ["E109", "E110", "E223", "E83"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "J'ai envie de bien manger.",
-          "alsoFits": ["E109", "E110", "E223"],
+          "alsoFits": ["E109", "E110", "E223", "E83"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Mes amis et moi, on s'ennuie.",
-          "alsoFits": ["E109", "E110"],
+          "alsoFits": ["E109", "E110", "E223"],
           "skip": ["blank"],
           "note": "reply 가 Ça vous dit 라 고정 부분 Ça te dit 와 다르다"
         },
         {
           "cue": "Il fait beau aujourd'hui !",
-          "alsoFits": ["E109", "E110", "E223"],
+          "alsoFits": ["E109", "E110", "E223", "E83"],
           "skip": [],
           "note": ""
         },
@@ -3013,20 +3812,20 @@
       "similarMeaning": ["E67", "E68", "E185"],
       "example": {
         "text": "Samedi à midi ? — Ça me va.",
-        "alsoFits": ["E68", "E185"],
+        "alsoFits": ["E68", "E185", "E67", "E172", "E105", "E173", "E196", "E123"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "On mange italien ce soir ?",
-          "alsoFits": ["E68", "E105", "E172", "E173"],
+          "alsoFits": ["E68", "E105", "E172", "E173", "E185"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Rendez-vous à la gare à midi ?",
-          "alsoFits": ["E68", "E185"],
+          "alsoFits": ["E68", "E185", "E172"],
           "skip": [],
           "note": ""
         },
@@ -3038,13 +3837,13 @@
         },
         {
           "cue": "Je fais le plat, tu fais le dessert ?",
-          "alsoFits": ["E67", "E68"],
+          "alsoFits": ["E67", "E68", "E172", "E105", "E173"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "On partage l'addition ?",
-          "alsoFits": ["E68"],
+          "alsoFits": ["E68", "E67", "E172", "E105"],
           "skip": [],
           "note": ""
         }
@@ -3054,7 +3853,22 @@
       "similarMeaning": ["E85", "E148", "E242"],
       "example": {
         "text": "J'ai hâte de partir en vacances.",
-        "alsoFits": ["E85", "E86", "E148"],
+        "alsoFits": [
+          "E85",
+          "E86",
+          "E148",
+          "E101",
+          "E77",
+          "E78",
+          "E82",
+          "E138",
+          "E83",
+          "E110",
+          "E36",
+          "E42",
+          "E253",
+          "E135"
+        ],
         "skip": [],
         "note": ""
       },
@@ -3067,7 +3881,7 @@
         },
         {
           "cue": "Le nouveau jeu sort demain !",
-          "alsoFits": ["E242"],
+          "alsoFits": ["E242", "E105", "E148", "E85", "E138", "E92"],
           "skip": [],
           "note": ""
         },
@@ -3079,13 +3893,13 @@
         },
         {
           "cue": "Tu vas voir ta famille bientôt ?",
-          "alsoFits": ["E242"],
+          "alsoFits": ["E242", "E86"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le concert, c'est samedi, non ?",
-          "alsoFits": ["E242"],
+          "alsoFits": ["E242", "E105"],
           "skip": [],
           "note": ""
         }
@@ -3095,20 +3909,44 @@
       "similarMeaning": [],
       "example": {
         "text": "J'ai travaillé jusqu'à minuit. Je suis crevé.",
-        "alsoFits": ["E114", "E102", "E100"],
+        "alsoFits": ["E114", "E102", "E100", "E162", "E112", "E236", "E148"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu as couru combien de kilomètres ?",
-          "alsoFits": ["E114", "E236"],
+          "alsoFits": ["E114", "E236", "E102", "E100", "E177", "E61"],
           "skip": [],
           "note": "애매: 질문의 답은 숫자이고 표현은 덧붙인 말이라 다른 소감 표현도 들어간다"
         },
         {
           "cue": "Tu sors ce soir ?",
-          "alsoFits": ["E100", "E101", "E102", "E114", "E123", "E196", "E87", "E107", "E162"],
+          "alsoFits": [
+            "E100",
+            "E101",
+            "E102",
+            "E114",
+            "E123",
+            "E196",
+            "E87",
+            "E107",
+            "E162",
+            "E148",
+            "E85",
+            "E86",
+            "E177",
+            "E56",
+            "E61",
+            "E64",
+            "E172",
+            "E105",
+            "E215",
+            "E144",
+            "E82",
+            "E109",
+            "E173"
+          ],
           "skip": [],
           "note": "나갈지 묻는 열린 질문이라 거절·미정 표현이 다 맞다"
         },
@@ -3120,13 +3958,46 @@
         },
         {
           "cue": "Tu as l'air fatigué.",
-          "alsoFits": ["E100", "E114", "E162", "E102", "E77", "E161"],
+          "alsoFits": [
+            "E100",
+            "E114",
+            "E162",
+            "E102",
+            "E77",
+            "E161",
+            "E78",
+            "E61",
+            "E160",
+            "E205",
+            "E112",
+            "E236",
+            "E144",
+            "E64",
+            "E104",
+            "E141",
+            "E194",
+            "E72",
+            "E70"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Ton déménagement est fini ?",
-          "alsoFits": ["E116", "E236", "E46", "E102"],
+          "alsoFits": [
+            "E116",
+            "E236",
+            "E46",
+            "E102",
+            "E100",
+            "E114",
+            "E45",
+            "E61",
+            "E78",
+            "E77",
+            "E97",
+            "E162"
+          ],
           "skip": [],
           "note": ""
         }
@@ -3143,31 +4014,43 @@
       "contexts": [
         {
           "cue": "Tu comprends les films français ?",
-          "alsoFits": ["E64", "E59", "E56"],
+          "alsoFits": ["E64", "E59", "E56", "E61", "E177", "E45", "E144", "E85", "E31", "E50"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu te lèves tôt le matin ?",
-          "alsoFits": ["E254", "E101", "E56"],
+          "alsoFits": ["E254", "E101", "E56", "E61", "E64", "E144", "E141", "E85"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as trouvé l'hôtel facilement ?",
-          "alsoFits": ["E236", "E43"],
+          "alsoFits": ["E236", "E43", "E45", "E40", "E61", "E141", "E64", "E46", "E144"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as fini le niveau dix ?",
-          "alsoFits": ["E78", "E112"],
+          "alsoFits": [
+            "E78",
+            "E112",
+            "E116",
+            "E61",
+            "E236",
+            "E114",
+            "E113",
+            "E64",
+            "E97",
+            "E45",
+            "E101"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu fais des crêpes ?",
-          "alsoFits": ["E85", "E254"],
+          "alsoFits": ["E85", "E254", "E148", "E61", "E97", "E86", "E149", "E73"],
           "skip": [],
           "note": ""
         }
@@ -3177,20 +4060,20 @@
       "similarMeaning": [],
       "example": {
         "text": "Je n'ai pas eu le temps de manger.",
-        "alsoFits": ["E77", "E101", "E148"],
+        "alsoFits": ["E77", "E101", "E148", "E44", "E85", "E75"],
         "skip": [],
         "note": "예문이 짧아 다른 동사 틀(…하기 귀찮아, …하고 싶어)도 자연스럽게 들어간다"
       },
       "contexts": [
         {
           "cue": "Tu as lu mon message ?",
-          "alsoFits": ["E44"],
+          "alsoFits": ["E44", "E61", "E153", "E162"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as fini ton jeu ?",
-          "alsoFits": ["E77"],
+          "alsoFits": ["E77", "E116", "E61", "E162", "E236", "E101"],
           "skip": [],
           "note": ""
         },
@@ -3202,13 +4085,13 @@
         },
         {
           "cue": "Tu as fait les courses ?",
-          "alsoFits": ["E101", "E44", "E162", "E76"],
+          "alsoFits": ["E101", "E44", "E162", "E76", "E153", "E61", "E89"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as appelé ta mère ?",
-          "alsoFits": ["E44", "E162"],
+          "alsoFits": ["E44", "E162", "E153", "E61", "E101"],
           "skip": [],
           "note": ""
         }
@@ -3218,38 +4101,38 @@
       "similarMeaning": ["E115"],
       "example": {
         "text": "J'ai retrouvé mon portable ! — Tant mieux.",
-        "alsoFits": ["E125", "E169"],
+        "alsoFits": ["E125", "E169", "E45"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "J'ai retrouvé mes clés !",
-          "alsoFits": ["E125", "E169"],
+          "alsoFits": ["E125", "E169", "E45", "E72"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je ne travaille pas vendredi !",
-          "alsoFits": ["E158", "E243", "E242"],
+          "alsoFits": ["E158", "E243", "E242", "E73", "E109", "E110", "E223", "E115", "E72", "E83"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il reste deux places au concert !",
-          "alsoFits": ["E115", "E169"],
+          "alsoFits": ["E115", "E169", "E73", "E109", "E110", "E105", "E172", "E173", "E45"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je n'ai plus de fièvre.",
-          "alsoFits": ["E125", "E159", "E243", "E169"],
+          "alsoFits": ["E125", "E159", "E243", "E169", "E45"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Le restaurant a une table pour nous.",
-          "alsoFits": ["E115", "E40", "E68"],
+          "alsoFits": ["E115", "E40", "E68", "E45", "E74", "E149", "E75"],
           "skip": [],
           "note": ""
         }
@@ -3259,38 +4142,71 @@
       "similarMeaning": ["E229"],
       "example": {
         "text": "Le magasin est fermé. — Tant pis.",
-        "alsoFits": ["E129", "E153", "E69"],
+        "alsoFits": ["E129", "E153", "E69", "E151", "E81"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Il n'y a plus de billets.",
-          "alsoFits": ["E129", "E153", "E198", "E69", "E151"],
+          "alsoFits": [
+            "E129",
+            "E153",
+            "E198",
+            "E69",
+            "E151",
+            "E152",
+            "E219",
+            "E156",
+            "E110",
+            "E109"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il n'y a plus de vin rouge.",
-          "alsoFits": ["E69", "E67", "E153", "E129"],
+          "alsoFits": ["E69", "E67", "E153", "E129", "E151", "E89", "E156", "E110", "E81"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Mon frère ne veut pas venir ce soir.",
-          "alsoFits": ["E129", "E72", "E221", "E69"],
+          "alsoFits": ["E129", "E72", "E221", "E69", "E181", "E71"],
           "skip": [],
           "note": "reply 의 Tant pis pour lui 는 '걔만 손해' 라는 다른 뜻으로 쓰였다"
         },
         {
           "cue": "Le serveur du jeu est en panne.",
-          "alsoFits": ["E153", "E129", "E89", "E113", "E151"],
+          "alsoFits": [
+            "E153",
+            "E129",
+            "E89",
+            "E113",
+            "E151",
+            "E112",
+            "E152",
+            "E221",
+            "E156",
+            "E110"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Il pleut, pas de pique-nique.",
-          "alsoFits": ["E129", "E153", "E199", "E198", "E69"],
+          "alsoFits": [
+            "E129",
+            "E153",
+            "E199",
+            "E198",
+            "E69",
+            "E201",
+            "E110",
+            "E109",
+            "E156",
+            "E112"
+          ],
           "skip": [],
           "note": ""
         }
@@ -3307,31 +4223,31 @@
       "contexts": [
         {
           "cue": "Pardon, j'ai oublié notre rendez-vous.",
-          "alsoFits": ["E69", "E67"],
+          "alsoFits": ["E69", "E67", "E129", "E110"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "J'ai raté mon gâteau.",
-          "alsoFits": ["E69", "E129", "E255"],
+          "alsoFits": ["E69", "E129", "E255", "E80", "E156", "E155", "E72"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "J'ai perdu le match ce soir.",
-          "alsoFits": ["E69", "E219", "E129", "E155"],
+          "alsoFits": ["E69", "E219", "E129", "E155", "E80", "E72", "E221", "E255"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je me suis trompé de train.",
-          "alsoFits": ["E69", "E156", "E153"],
+          "alsoFits": ["E69", "E156", "E153", "E83", "E82", "E84", "E72", "E219"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "J'ai fait une erreur dans mon code.",
-          "alsoFits": ["E69", "E67", "E89"],
+          "alsoFits": ["E69", "E67", "E89", "E110", "E83"],
           "skip": [],
           "note": ""
         }
@@ -3348,13 +4264,25 @@
       "contexts": [
         {
           "cue": "Il pleut beaucoup, on sort quand même ?",
-          "alsoFits": ["E110", "E109", "E87"],
+          "alsoFits": [
+            "E110",
+            "E109",
+            "E87",
+            "E56",
+            "E64",
+            "E101",
+            "E177",
+            "E172",
+            "E105",
+            "E199",
+            "E201"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "J'ai mal à la tête depuis ce matin.",
-          "alsoFits": ["E83", "E84", "E159", "E243"],
+          "alsoFits": ["E83", "E84", "E159", "E243", "E110", "E207"],
           "skip": [],
           "note": ""
         },
@@ -3366,13 +4294,13 @@
         },
         {
           "cue": "On réserve le restaurant ?",
-          "alsoFits": ["E68", "E89", "E172", "E216", "E105"],
+          "alsoFits": ["E68", "E89", "E172", "E216", "E105", "E74", "E173", "E174", "E56"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "On ouvre le vin maintenant ?",
-          "alsoFits": ["E133", "E172", "E105", "E68", "E110"],
+          "alsoFits": ["E133", "E172", "E105", "E68", "E110", "E74", "E174", "E173"],
           "skip": [],
           "note": ""
         }
@@ -3389,7 +4317,7 @@
       "contexts": [
         {
           "cue": "Je dors très mal en ce moment.",
-          "alsoFits": ["E82", "E84"],
+          "alsoFits": ["E82", "E84", "E207"],
           "skip": [],
           "note": ""
         },
@@ -3407,7 +4335,7 @@
         },
         {
           "cue": "Je n'arrive pas à battre ce boss.",
-          "alsoFits": ["E84", "E82", "E217"],
+          "alsoFits": ["E84", "E82", "E217", "E110", "E109"],
           "skip": [],
           "note": ""
         },
@@ -3430,7 +4358,7 @@
       "contexts": [
         {
           "cue": "Je ne sais pas quel vin acheter.",
-          "alsoFits": ["E83", "E82", "E204"],
+          "alsoFits": ["E83", "E82", "E204", "E110", "E89"],
           "skip": [],
           "note": ""
         },
@@ -3442,19 +4370,19 @@
         },
         {
           "cue": "Je veux acheter cette console très chère.",
-          "alsoFits": ["E83", "E60", "E172", "E82"],
+          "alsoFits": ["E83", "E60", "E172", "E82", "E64", "E50", "E49"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "J'ai mal au dos depuis une semaine.",
-          "alsoFits": ["E83", "E82", "E159"],
+          "alsoFits": ["E83", "E82", "E159", "E207"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Je pars en été ou en hiver ?",
-          "alsoFits": ["E83", "E82", "E56", "E176", "E177"],
+          "alsoFits": ["E83", "E82", "E56", "E176", "E177", "E49", "E50", "E59", "E55"],
           "skip": [],
           "note": ""
         }
@@ -3464,20 +4392,20 @@
       "similarMeaning": ["E148", "E75"],
       "example": {
         "text": "J'aimerais bien apprendre le piano.",
-        "alsoFits": ["E86", "E148"],
+        "alsoFits": ["E86", "E148", "E75", "E253"],
         "skip": [],
         "note": "E148 은 d'apprendre 로 줄어든 꼴이 된다"
       },
       "contexts": [
         {
           "cue": "Tu as des projets pour cette année ?",
-          "alsoFits": ["E86", "E253", "E148", "E107", "E87"],
+          "alsoFits": ["E86", "E253", "E148", "E107", "E87", "E177"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu veux faire quoi ce week-end ?",
-          "alsoFits": ["E148", "E86", "E109", "E110", "E73", "E177"],
+          "alsoFits": ["E148", "E86", "E109", "E110", "E73", "E177", "E223", "E87", "E107"],
           "skip": [],
           "note": ""
         },
@@ -3489,13 +4417,13 @@
         },
         {
           "cue": "Tu joues d'un instrument ?",
-          "alsoFits": ["E148"],
+          "alsoFits": ["E148", "E86"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu sais faire des croissants ?",
-          "alsoFits": ["E148"],
+          "alsoFits": ["E148", "E77"],
           "skip": [],
           "note": ""
         }
@@ -3512,13 +4440,13 @@
       "contexts": [
         {
           "cue": "Tu fais quoi ce week-end ?",
-          "alsoFits": ["E85", "E148", "E107", "E87", "E177"],
+          "alsoFits": ["E85", "E148", "E107", "E87", "E177", "E223", "E73", "E109", "E110"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu vas changer de travail ?",
-          "alsoFits": ["E85", "E87", "E107", "E215", "E106", "E177", "E176"],
+          "alsoFits": ["E85", "E87", "E107", "E215", "E106", "E177", "E176", "E108", "E61"],
           "skip": [],
           "note": ""
         },
@@ -3530,13 +4458,13 @@
         },
         {
           "cue": "Tu as acheté beaucoup de légumes !",
-          "alsoFits": ["E148"],
+          "alsoFits": ["E148", "E61"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu as des projets pour Noël ?",
-          "alsoFits": ["E85", "E148", "E107", "E87", "E241"],
+          "alsoFits": ["E85", "E148", "E107", "E87", "E241", "E75"],
           "skip": [],
           "note": ""
         }
@@ -3553,31 +4481,42 @@
       "contexts": [
         {
           "cue": "Tu viendras à ma fête samedi ?",
-          "alsoFits": ["E107", "E177", "E215", "E196", "E123", "E174", "E197"],
+          "alsoFits": [
+            "E107",
+            "E177",
+            "E215",
+            "E196",
+            "E123",
+            "E174",
+            "E197",
+            "E56",
+            "E172",
+            "E173"
+          ],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu vas acheter ce jeu ?",
-          "alsoFits": ["E215", "E177", "E106", "E107"],
+          "alsoFits": ["E215", "E177", "E106", "E107", "E56", "E64", "E108"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu pars en vacances en décembre ?",
-          "alsoFits": ["E107", "E177", "E86", "E241"],
+          "alsoFits": ["E107", "E177", "E86", "E241", "E108", "E215"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu vas gagner le tournoi ?",
-          "alsoFits": ["E176", "E177", "E216", "E228"],
+          "alsoFits": ["E176", "E177", "E216", "E228", "E108", "E64"],
           "skip": [],
           "note": ""
         },
         {
           "cue": "Tu vas courir demain matin ?",
-          "alsoFits": ["E56", "E177", "E107", "E86"],
+          "alsoFits": ["E56", "E177", "E107", "E86", "E108", "E101", "E215"],
           "skip": [],
           "note": ""
         }
@@ -3594,7 +4533,7 @@
       "contexts": [
         {
           "cue": "Tu te souviens de moi ?",
-          "alsoFits": ["E209"],
+          "alsoFits": ["E209", "E91"],
           "skip": [],
           "note": ""
         },
@@ -3618,7 +4557,7 @@
         },
         {
           "cue": "C'est toi, Brice ?",
-          "alsoFits": ["E244"],
+          "alsoFits": ["E244", "E91"],
           "skip": [],
           "note": ""
         }
@@ -3641,7 +4580,7 @@
         },
         {
           "cue": "Il faut acheter le vin pour la fête.",
-          "alsoFits": ["E68", "E248"],
+          "alsoFits": ["E68", "E248", "E110"],
           "skip": [],
           "note": ""
         },
@@ -3659,7 +4598,7 @@
         },
         {
           "cue": "Le serveur du jeu ne marche plus.",
-          "alsoFits": ["E80", "E113", "E151", "E153"],
+          "alsoFits": ["E80", "E113", "E151", "E153", "E112", "E221"],
           "skip": [],
           "note": ""
         }
@@ -3682,7 +4621,7 @@
         },
         {
           "cue": "Je viens à ta fête samedi !",
-          "alsoFits": ["E79"],
+          "alsoFits": ["E79", "E68"],
           "skip": [],
           "note": ""
         },
@@ -3717,7 +4656,7 @@
       "contexts": [
         {
           "cue": "Je me suis marié le mois dernier !",
-          "alsoFits": ["E92", "E151", "E169", "E170", "E117", "E93"],
+          "alsoFits": ["E92", "E151", "E169", "E170", "E117", "E93", "E72"],
           "skip": [],
           "note": ""
         }
@@ -3727,14 +4666,14 @@
       "similarMeaning": ["E91", "E151"],
       "example": {
         "text": "C'est dingue, il fait 25 degrés en novembre !",
-        "alsoFits": ["E91", "E151"],
+        "alsoFits": ["E91", "E151", "E152"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "J'ai vu Zidane au supermarché hier.",
-          "alsoFits": ["E91", "E151", "E72"],
+          "alsoFits": ["E91", "E151", "E72", "E93", "E139"],
           "skip": [],
           "note": ""
         }
@@ -3751,7 +4690,7 @@
       "contexts": [
         {
           "cue": "Tu as réussi ton examen, tu as eu 18 sur 20 !",
-          "alsoFits": ["E91", "E92", "E151", "E169", "E179"],
+          "alsoFits": ["E91", "E92", "E151", "E169", "E179", "E117", "E72"],
           "skip": [],
           "note": ""
         }
@@ -3768,7 +4707,7 @@
       "contexts": [
         {
           "cue": "Il est en retard, il y a sûrement des bouchons.",
-          "alsoFits": ["E130", "E70", "E104"],
+          "alsoFits": ["E130", "E70", "E104", "E96"],
           "skip": [],
           "note": ""
         }
@@ -3785,7 +4724,7 @@
       "contexts": [
         {
           "cue": "Ton texte est bien, mais ce mot est répété trois fois.",
-          "alsoFits": ["E70", "E248"],
+          "alsoFits": ["E70", "E248", "E96"],
           "skip": [],
           "note": ""
         }
@@ -3802,7 +4741,7 @@
       "contexts": [
         {
           "cue": "Si on prend le vélo, on fait du sport en même temps.",
-          "alsoFits": ["E70", "E130", "E94", "E167", "E104"],
+          "alsoFits": ["E70", "E130", "E94", "E167", "E104", "E68", "E172", "E95"],
           "skip": [],
           "note": ""
         }
@@ -3870,7 +4809,7 @@
       "contexts": [
         {
           "cue": "Tu as l'air fatigué, ça va ?",
-          "alsoFits": ["E76", "E162", "E161", "E102"],
+          "alsoFits": ["E76", "E162", "E161", "E102", "E114", "E160"],
           "skip": [],
           "note": ""
         }
@@ -3887,7 +4826,7 @@
       "contexts": [
         {
           "cue": "Tu vas à la salle de sport ce soir ?",
-          "alsoFits": ["E76", "E100", "E102"],
+          "alsoFits": ["E76", "E100", "E102", "E114", "E162"],
           "skip": [],
           "note": ""
         }
@@ -3904,7 +4843,7 @@
       "contexts": [
         {
           "cue": "Tu travailles encore ce week-end ?",
-          "alsoFits": ["E76", "E162", "E114"],
+          "alsoFits": ["E76", "E162", "E114", "E100", "E241"],
           "skip": [],
           "note": ""
         }
@@ -3921,7 +4860,7 @@
       "contexts": [
         {
           "cue": "Après le marathon, j'avais super faim.",
-          "alsoFits": ["E208", "E127"],
+          "alsoFits": ["E208", "E127", "E104"],
           "skip": [],
           "note": ""
         }
@@ -3938,7 +4877,7 @@
       "contexts": [
         {
           "cue": "Le café ici est vraiment bon.",
-          "alsoFits": ["E70"],
+          "alsoFits": ["E70", "E105"],
           "skip": [],
           "note": ""
         }
@@ -3972,7 +4911,20 @@
       "contexts": [
         {
           "cue": "Tu préfères habiter en ville ou à la campagne ?",
-          "alsoFits": ["E59", "E56", "E176", "E177", "E55"],
+          "alsoFits": [
+            "E59",
+            "E56",
+            "E176",
+            "E177",
+            "E55",
+            "E29",
+            "E52",
+            "E214",
+            "E54",
+            "E132",
+            "E49",
+            "E50"
+          ],
           "skip": [],
           "note": ""
         }
@@ -3989,7 +4941,7 @@
       "contexts": [
         {
           "cue": "Tu pars où cet été ?",
-          "alsoFits": ["E87", "E177", "E214", "E86"],
+          "alsoFits": ["E87", "E177", "E214", "E86", "E215", "E106"],
           "skip": [],
           "note": ""
         }
@@ -4040,7 +4992,7 @@
       "contexts": [
         {
           "cue": "Qu'est-ce qu'on fait pour l'anniversaire de Paul ?",
-          "alsoFits": ["E109", "E73"],
+          "alsoFits": ["E109", "E73", "E223"],
           "skip": [],
           "note": ""
         }
@@ -4057,7 +5009,7 @@
       "contexts": [
         {
           "cue": "Je vais à Paris pour le travail lundi.",
-          "alsoFits": ["E158", "E83"],
+          "alsoFits": ["E158", "E83", "E110"],
           "skip": [],
           "note": ""
         }
@@ -4074,7 +5026,7 @@
       "contexts": [
         {
           "cue": "Le métro est encore en grève demain.",
-          "alsoFits": ["E113", "E151", "E152"],
+          "alsoFits": ["E113", "E151", "E152", "E114"],
           "skip": [],
           "note": ""
         }
@@ -4091,7 +5043,7 @@
       "contexts": [
         {
           "cue": "Ton voisin fait encore du bruit la nuit ?",
-          "alsoFits": ["E112", "E114"],
+          "alsoFits": ["E112", "E114", "E151"],
           "skip": [],
           "note": ""
         }
@@ -4125,7 +5077,7 @@
       "contexts": [
         {
           "cue": "J'ai deux places pour le concert ce soir.",
-          "alsoFits": ["E173", "E105"],
+          "alsoFits": ["E173", "E105", "E172", "E174"],
           "skip": [],
           "note": ""
         }
@@ -4142,7 +5094,7 @@
       "contexts": [
         {
           "cue": "Alors, tu as trouvé un appartement ?",
-          "alsoFits": ["E40"],
+          "alsoFits": ["E40", "E45"],
           "skip": [],
           "note": ""
         }
@@ -4186,14 +5138,31 @@
       "similarMeaning": ["E118", "E120"],
       "example": {
         "text": "J'ai l'impression que tout le monde est fatigué.",
-        "alsoFits": ["E118", "E50", "E49"],
+        "alsoFits": ["E118", "E50", "E49", "E108", "E188", "E61", "E64", "E142", "E143", "E144"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu comprends mieux le français maintenant ?",
-          "alsoFits": ["E50", "E118", "E176", "E177", "E64", "E144"],
+          "alsoFits": [
+            "E50",
+            "E118",
+            "E176",
+            "E177",
+            "E64",
+            "E144",
+            "E61",
+            "E49",
+            "E108",
+            "E77",
+            "E54",
+            "E31",
+            "E120",
+            "E105",
+            "E155",
+            "E175"
+          ],
           "skip": [],
           "note": "열린 질문이라 의견·망설임 표현도 자연스럽다"
         }
@@ -4203,14 +5172,42 @@
       "similarMeaning": ["E119", "E118"],
       "example": {
         "text": "Vingt euros ? Ça me paraît cher.",
-        "alsoFits": ["E31"],
+        "alsoFits": [
+          "E31",
+          "E50",
+          "E54",
+          "E60",
+          "E210",
+          "E164",
+          "E151",
+          "E152",
+          "E92",
+          "E119",
+          "E118",
+          "E165"
+        ],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "On peut partager l'addition en trois.",
-          "alsoFits": ["E68", "E74", "E67", "E31", "E172", "E167", "E185"],
+          "alsoFits": [
+            "E68",
+            "E74",
+            "E67",
+            "E31",
+            "E172",
+            "E167",
+            "E185",
+            "E94",
+            "E70",
+            "E50",
+            "E89",
+            "E95",
+            "E105",
+            "E61"
+          ],
           "skip": [],
           "note": "제안에 동의하는 대꾸가 여럿 맞다"
         }
@@ -4227,7 +5224,27 @@
       "contexts": [
         {
           "cue": "Alors, pour demain, on fait comment ?",
-          "alsoFits": ["E110", "E109", "E224", "E73"],
+          "alsoFits": [
+            "E110",
+            "E109",
+            "E224",
+            "E73",
+            "E184",
+            "E122",
+            "E223",
+            "E87",
+            "E35",
+            "E82",
+            "E145",
+            "E146",
+            "E89",
+            "E56",
+            "E85",
+            "E177",
+            "E107",
+            "E148",
+            "E183"
+          ],
           "skip": [],
           "note": "약속을 정하는 제안 표현이 여럿 맞다"
         }
@@ -4237,14 +5254,28 @@
       "similarMeaning": [],
       "example": {
         "text": "Samedi à midi, ça te convient ?",
-        "alsoFits": [],
+        "alsoFits": ["E184", "E185", "E74", "E68", "E73"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je suis libre jeudi ou vendredi.",
-          "alsoFits": ["E121", "E110", "E109", "E73", "E223"],
+          "alsoFits": [
+            "E121",
+            "E110",
+            "E109",
+            "E73",
+            "E223",
+            "E185",
+            "E55",
+            "E214",
+            "E82",
+            "E115",
+            "E196",
+            "E123",
+            "E74"
+          ],
           "skip": [],
           "note": "날짜를 제안하는 표현이 여럿 맞다"
         }
@@ -4254,14 +5285,28 @@
       "similarMeaning": [],
       "example": {
         "text": "Désolé, j'ai un empêchement ce soir.",
-        "alsoFits": ["E196"],
+        "alsoFits": ["E196", "E162", "E76"],
         "skip": ["order"],
         "note": "ce soir 자리를 앞으로 옮겨도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Tu viens toujours au dîner ce soir ?",
-          "alsoFits": ["E186", "E162"],
+          "alsoFits": [
+            "E186",
+            "E162",
+            "E197",
+            "E76",
+            "E146",
+            "E75",
+            "E105",
+            "E87",
+            "E101",
+            "E177",
+            "E107",
+            "E68",
+            "E100"
+          ],
           "skip": [],
           "note": "toujours 로 이미 정한 약속이라 E196(선약)은 어색해서 뺐다"
         }
@@ -4271,14 +5316,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Il ne répond pas au téléphone, ça m'inquiète.",
-        "alsoFits": ["E113", "E227"],
+        "alsoFits": ["E113", "E227", "E108", "E188", "E112", "E119", "E118"],
         "skip": ["order"],
         "note": "두 절 순서를 바꿔도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Comment va ton chat ?",
-          "alsoFits": [],
+          "alsoFits": ["E45", "E119", "E118", "E61", "E64", "E144", "E108", "E177", "E188", "E176"],
           "skip": [],
           "note": "애매: 고양이 근황 질문에 '걱정돼'만으로는 앞 문장에 기대지만 대꾸로는 성립한다"
         }
@@ -4288,14 +5333,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu es bien arrivé ? Ça me rassure.",
-        "alsoFits": ["E79"],
+        "alsoFits": ["E79", "E169"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Le médecin a dit que ce n'était rien de grave.",
-          "alsoFits": ["E79", "E169", "E72"],
+          "alsoFits": ["E79", "E169", "E72", "E45", "E187", "E40"],
           "skip": [],
           "note": ""
         }
@@ -4305,14 +5350,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Demain, je fais un exposé, j'ai le trac.",
-        "alsoFits": ["E124"],
+        "alsoFits": ["E124", "E75"],
         "skip": ["order"],
         "note": "Demain 을 문장 끝으로 옮겨도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "C'est bientôt ton tour de parler !",
-          "alsoFits": [],
+          "alsoFits": ["E124", "E153", "E206", "E75", "E10"],
           "skip": [],
           "note": ""
         }
@@ -4322,14 +5367,14 @@
       "similarMeaning": ["E103", "E208"],
       "example": {
         "text": "Tu es déçu ? Ça se comprend.",
-        "alsoFits": ["E103", "E208"],
+        "alsoFits": ["E103", "E208", "E81", "E128"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je suis stressé, j'ai un entretien demain.",
-          "alsoFits": ["E157", "E217", "E103", "E208", "E218"],
+          "alsoFits": ["E157", "E217", "E103", "E208", "E218", "E83", "E82", "E84"],
           "skip": [],
           "note": "걱정하는 말에 위로·격려 표현이 여럿 맞다"
         }
@@ -4339,14 +5384,14 @@
       "similarMeaning": ["E228"],
       "example": {
         "text": "Tu as déménagé seul ? Ça n'a pas dû être facile.",
-        "alsoFits": ["E171"],
+        "alsoFits": ["E171", "E92", "E91"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "J'ai attendu le train trois heures sous la pluie.",
-          "alsoFits": ["E219", "E151", "E210", "E92", "E91"],
+          "alsoFits": ["E219", "E151", "E210", "E92", "E91", "E199", "E93", "E152"],
           "skip": [],
           "note": "고생담에 놀람·안타까움 반응이 여럿 맞다"
         }
@@ -4356,14 +5401,26 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu ne viens pas ? C'est dommage !",
-        "alsoFits": ["E80", "E198"],
+        "alsoFits": ["E80", "E198", "E72", "E181"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Le restaurant est fermé ce soir.",
-          "alsoFits": ["E80", "E153", "E156", "E110", "E109"],
+          "alsoFits": [
+            "E80",
+            "E153",
+            "E156",
+            "E110",
+            "E109",
+            "E72",
+            "E181",
+            "E151",
+            "E221",
+            "E187",
+            "E62"
+          ],
           "skip": [],
           "note": ""
         }
@@ -4373,14 +5430,29 @@
       "similarMeaning": ["E94"],
       "example": {
         "text": "Il y a du vrai dans ce que tu dis, mais c'est compliqué.",
-        "alsoFits": ["E94", "E70", "E96", "E57", "E131"],
+        "alsoFits": ["E94", "E70", "E96", "E57", "E131", "E104"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Les gens travaillent trop en Corée.",
-          "alsoFits": ["E70", "E94", "E104", "E57", "E131", "E132", "E56", "E50"],
+          "alsoFits": [
+            "E70",
+            "E94",
+            "E104",
+            "E57",
+            "E131",
+            "E132",
+            "E56",
+            "E50",
+            "E52",
+            "E51",
+            "E96",
+            "E64",
+            "E61",
+            "E49"
+          ],
           "skip": [],
           "note": "의견 표명에 대한 대꾸라 동의·유보 표현이 여럿 맞다"
         }
@@ -4397,7 +5469,21 @@
       "contexts": [
         {
           "cue": "Le travail, c'est juste pour gagner de l'argent.",
-          "alsoFits": ["E130", "E57", "E132", "E56", "E50", "E164"],
+          "alsoFits": [
+            "E130",
+            "E57",
+            "E132",
+            "E56",
+            "E50",
+            "E164",
+            "E141",
+            "E64",
+            "E49",
+            "E70",
+            "E104",
+            "E61",
+            "E165"
+          ],
           "skip": [],
           "note": "의견 표명에 대한 대꾸라 여러 표현이 맞다"
         }
@@ -4407,14 +5493,27 @@
       "similarMeaning": ["E59"],
       "example": {
         "text": "C'est cher. En même temps, c'est très bon.",
-        "alsoFits": ["E155"],
+        "alsoFits": ["E155", "E61", "E222"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Paul est toujours en retard !",
-          "alsoFits": ["E57", "E61"],
+          "alsoFits": [
+            "E57",
+            "E61",
+            "E70",
+            "E104",
+            "E130",
+            "E164",
+            "E113",
+            "E112",
+            "E103",
+            "E155",
+            "E142",
+            "E131"
+          ],
           "skip": [],
           "note": ""
         }
@@ -4431,7 +5530,7 @@
       "contexts": [
         {
           "cue": "Désolé, je n'ai pas encore réparé ton vélo.",
-          "alsoFits": ["E134", "E67", "E69"],
+          "alsoFits": ["E134", "E67", "E69", "E81", "E135"],
           "skip": [],
           "note": "reply 에 E69(Ce n'est pas grave)도 들어 있다"
         }
@@ -4441,14 +5540,14 @@
       "similarMeaning": ["E133"],
       "example": {
         "text": "Tu cherches tes mots ? Prends ton temps.",
-        "alsoFits": ["E133"],
+        "alsoFits": ["E133", "E67", "E69"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Attends, je cherche mes clés…",
-          "alsoFits": ["E133", "E67"],
+          "alsoFits": ["E133", "E67", "E69"],
           "skip": [],
           "note": ""
         }
@@ -4458,14 +5557,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu n'es pas obligé de venir, tu sais.",
-        "alsoFits": ["E83"],
+        "alsoFits": ["E83", "E82"],
         "skip": [],
         "note": "Tu devrais venir 도 문장으로는 자연스럽다(뜻은 반대)"
       },
       "contexts": [
         {
           "cue": "Je dois apporter du vin ce soir ?",
-          "alsoFits": ["E83", "E89"],
+          "alsoFits": ["E83", "E89", "E82", "E67", "E141"],
           "skip": [],
           "note": ""
         }
@@ -4475,14 +5574,14 @@
       "similarMeaning": ["E179", "E90"],
       "example": {
         "text": "Il fait beau, je suis de bonne humeur.",
-        "alsoFits": ["E137", "E179"],
+        "alsoFits": ["E137", "E179", "E138"],
         "skip": ["order"],
         "note": "두 절 순서를 바꿔도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Tu chantes ? Qu'est-ce qui se passe ?",
-          "alsoFits": ["E179"],
+          "alsoFits": ["E179", "E61", "E116", "E241"],
           "skip": [],
           "note": ""
         }
@@ -4509,14 +5608,14 @@
       "similarMeaning": ["E148", "E85"],
       "example": {
         "text": "Ce soleil, ça me donne envie de partir à la plage.",
-        "alsoFits": ["E148"],
+        "alsoFits": ["E148", "E85", "E75"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Regarde la recette de tarte de ma grand-mère.",
-          "alsoFits": ["E148", "E66", "E85"],
+          "alsoFits": ["E148", "E66", "E85", "E73", "E110", "E109"],
           "skip": [],
           "note": ""
         }
@@ -4533,7 +5632,7 @@
       "contexts": [
         {
           "cue": "Il m'est arrivé un truc bizarre ce matin.",
-          "alsoFits": ["E182", "E72", "E207"],
+          "alsoFits": ["E182", "E72", "E207", "E181"],
           "skip": [],
           "note": "reply 에 E72(Ah bon ?)도 들어 있다"
         }
@@ -4550,7 +5649,7 @@
       "contexts": [
         {
           "cue": "Je n'ai pas bien dormi cette nuit.",
-          "alsoFits": ["E76", "E81"],
+          "alsoFits": ["E76", "E81", "E100", "E83", "E159", "E243"],
           "skip": [],
           "note": ""
         }
@@ -4567,7 +5666,7 @@
       "contexts": [
         {
           "cue": "Tu es fâché contre moi ?",
-          "alsoFits": [],
+          "alsoFits": ["E144", "E61", "E177"],
           "skip": [],
           "note": ""
         }
@@ -4577,14 +5676,14 @@
       "similarMeaning": [],
       "example": {
         "text": "J'aime ce quartier. Le problème, c'est que c'est bruyant.",
-        "alsoFits": ["E143", "E132"],
+        "alsoFits": ["E143", "E132", "E45"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Pourquoi tu ne prends pas la voiture ?",
-          "alsoFits": ["E61", "E143"],
+          "alsoFits": ["E61", "E143", "E64"],
           "skip": [],
           "note": ""
         }
@@ -4601,7 +5700,20 @@
       "contexts": [
         {
           "cue": "Tu aimes ton nouveau bureau ?",
-          "alsoFits": ["E142", "E50", "E59", "E132", "E66", "E144"],
+          "alsoFits": [
+            "E142",
+            "E50",
+            "E59",
+            "E132",
+            "E66",
+            "E144",
+            "E31",
+            "E64",
+            "E61",
+            "E120",
+            "E203",
+            "E235"
+          ],
           "skip": [],
           "note": "의견을 묻는 열린 질문이다"
         }
@@ -4618,7 +5730,19 @@
       "contexts": [
         {
           "cue": "Tu as aimé le film d'hier ?",
-          "alsoFits": ["E64", "E203", "E61", "E66", "E65", "E50", "E106"],
+          "alsoFits": [
+            "E64",
+            "E203",
+            "E61",
+            "E66",
+            "E65",
+            "E50",
+            "E106",
+            "E31",
+            "E176",
+            "E177",
+            "E235"
+          ],
           "skip": [],
           "note": "감상을 묻는 열린 질문이다"
         }
@@ -4628,14 +5752,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Je n'ai pas encore la réponse, je te tiens au courant.",
-        "alsoFits": ["E147"],
+        "alsoFits": ["E147", "E87"],
         "skip": ["order"],
         "note": "두 절 순서를 바꿔도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Tu sais quand tu pars en voyage ?",
-          "alsoFits": ["E107", "E87", "E177"],
+          "alsoFits": ["E107", "E87", "E177", "E176"],
           "skip": [],
           "note": ""
         }
@@ -4652,7 +5776,7 @@
       "contexts": [
         {
           "cue": "On se voit toujours demain matin ?",
-          "alsoFits": ["E68", "E186", "E123"],
+          "alsoFits": ["E68", "E186", "E123", "E105"],
           "skip": [],
           "note": "약속 확인에 수락·연기·취소 대꾸가 모두 맞다"
         }
@@ -4662,14 +5786,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Je suis dans le métro, je te rappelle.",
-        "alsoFits": [],
+        "alsoFits": ["E145"],
         "skip": ["order"],
         "note": "두 절 순서를 바꿔도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Allô ? Tu as deux minutes ?",
-          "alsoFits": ["E162"],
+          "alsoFits": ["E162", "E145"],
           "skip": [],
           "note": ""
         }
@@ -4679,14 +5803,14 @@
       "similarMeaning": ["E85", "E138"],
       "example": {
         "text": "J'ai envie de manger une glace.",
-        "alsoFits": ["E85", "E75"],
+        "alsoFits": ["E85", "E75", "E101", "E138"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Qu'est-ce que tu veux faire ce soir ?",
-          "alsoFits": ["E85", "E101", "E102", "E177", "E110", "E109", "E223", "E76"],
+          "alsoFits": ["E85", "E101", "E102", "E177", "E110", "E109", "E223", "E76", "E86", "E55"],
           "skip": [],
           "note": "하고 싶은 것을 묻는 열린 질문이다"
         }
@@ -4696,14 +5820,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Il est seize heures, j'ai un petit creux.",
-        "alsoFits": ["E100"],
+        "alsoFits": ["E100", "E148"],
         "skip": ["order"],
         "note": "두 절 순서를 바꿔도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "On mange dans deux heures.",
-          "alsoFits": [],
+          "alsoFits": ["E148"],
           "skip": [],
           "note": ""
         }
@@ -4720,7 +5844,7 @@
       "contexts": [
         {
           "cue": "Alors, tu as aimé le couscous ?",
-          "alsoFits": ["E65", "E24", "E66", "E144", "E64", "E203"],
+          "alsoFits": ["E65", "E24", "E66", "E144", "E64", "E203", "E105", "E31"],
           "skip": [],
           "note": "맛을 묻는 질문이라 감상 표현이 여럿 맞다"
         }
@@ -4730,14 +5854,14 @@
       "similarMeaning": ["E152", "E165", "E92"],
       "example": {
         "text": "C'est pas vrai, j'ai encore raté le bus !",
-        "alsoFits": ["E152", "E153"],
+        "alsoFits": ["E152", "E153", "E112", "E113", "E114"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Désolé, la machine à café est encore en panne.",
-          "alsoFits": ["E152", "E153", "E112", "E113"],
+          "alsoFits": ["E152", "E153", "E112", "E113", "E80", "E187", "E114", "E72"],
           "skip": [],
           "note": "짜증·어이없음 반응이 여럿 맞다"
         }
@@ -4747,14 +5871,14 @@
       "similarMeaning": ["E151", "E165"],
       "example": {
         "text": "Non mais je rêve, il a pris ma place !",
-        "alsoFits": ["E151", "E113"],
+        "alsoFits": ["E151", "E113", "E112"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Le train a deux heures de retard.",
-          "alsoFits": ["E151", "E210", "E153", "E112", "E113", "E92"],
+          "alsoFits": ["E151", "E210", "E153", "E112", "E113", "E92", "E93", "E72", "E114"],
           "skip": [],
           "note": "어이없음 반응이 여럿 맞다"
         }
@@ -4771,7 +5895,7 @@
       "contexts": [
         {
           "cue": "Tu as pris ton parapluie ? Il pleut.",
-          "alsoFits": ["E44", "E151"],
+          "alsoFits": ["E44", "E151", "E80"],
           "skip": [],
           "note": ""
         }
@@ -4781,14 +5905,28 @@
       "similarMeaning": [],
       "example": {
         "text": "Tout compte fait, je préfère rester ici.",
-        "alsoFits": ["E62", "E61", "E63"],
+        "alsoFits": ["E62", "E61", "E63", "E64", "E144", "E222"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Alors, tu prends le train ou l'avion ?",
-          "alsoFits": ["E61", "E62", "E55", "E214", "E107", "E106", "E56"],
+          "alsoFits": [
+            "E61",
+            "E62",
+            "E55",
+            "E214",
+            "E107",
+            "E106",
+            "E56",
+            "E177",
+            "E215",
+            "E64",
+            "E144",
+            "E54",
+            "E86"
+          ],
           "skip": [],
           "note": "선택을 묻는 질문이라 여러 표현이 맞다"
         }
@@ -4798,14 +5936,14 @@
       "similarMeaning": [],
       "example": {
         "text": "On a perdu, mais au moins, on a essayé.",
-        "alsoFits": ["E222"],
+        "alsoFits": ["E222", "E132"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Il a plu toute la semaine pendant mes vacances.",
-          "alsoFits": ["E129", "E219", "E132"],
+          "alsoFits": ["E129", "E219", "E132", "E80", "E222"],
           "skip": [],
           "note": ""
         }
@@ -4815,14 +5953,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Au pire, on mange une pizza à la maison.",
-        "alsoFits": [],
+        "alsoFits": ["E110"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Et si le restaurant est complet ?",
-          "alsoFits": ["E110", "E87"],
+          "alsoFits": ["E110", "E87", "E109", "E82", "E83", "E177"],
           "skip": [],
           "note": ""
         }
@@ -4832,14 +5970,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Ne t'inquiète pas, tout va bien se passer demain.",
-        "alsoFits": [],
+        "alsoFits": ["E217"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je passe mon permis demain, j'ai peur.",
-          "alsoFits": ["E217", "E127", "E218"],
+          "alsoFits": ["E217", "E127", "E218", "E83", "E84"],
           "skip": [],
           "note": ""
         }
@@ -4856,7 +5994,7 @@
       "contexts": [
         {
           "cue": "Demain, je pars une semaine à Nice.",
-          "alsoFits": ["E243"],
+          "alsoFits": ["E243", "E85", "E138"],
           "skip": [],
           "note": ""
         }
@@ -4866,14 +6004,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu as l'air fatigué. Prends soin de toi.",
-        "alsoFits": ["E243"],
+        "alsoFits": ["E243", "E83"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je suis malade depuis lundi.",
-          "alsoFits": ["E243", "E217"],
+          "alsoFits": ["E243", "E217", "E83", "E207"],
           "skip": [],
           "note": "reply 에 E243(Repose-toi bien)도 들어 있다"
         }
@@ -4883,14 +6021,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Pardon, j'ai la tête ailleurs aujourd'hui.",
-        "alsoFits": ["E76"],
+        "alsoFits": ["E76", "E162"],
         "skip": ["order"],
         "note": "aujourd'hui 자리를 옮겨도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Tu m'écoutes ? Je t'ai posé une question.",
-          "alsoFits": ["E01", "E15"],
+          "alsoFits": ["E01", "E15", "E76", "E100"],
           "skip": [],
           "note": "reply 뒷부분이 E01 과 거의 같다"
         }
@@ -4907,7 +6045,7 @@
       "contexts": [
         {
           "cue": "Tu as beaucoup de travail en ce moment, ça va ?",
-          "alsoFits": ["E162", "E76", "E114", "E112", "E102"],
+          "alsoFits": ["E162", "E76", "E114", "E112", "E102", "E236", "E100"],
           "skip": [],
           "note": "근황 질문이라 상태 표현이 여럿 맞다"
         }
@@ -4917,14 +6055,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Je ne peux pas déjeuner, je suis débordé.",
-        "alsoFits": ["E196", "E123"],
+        "alsoFits": ["E196", "E123", "E76"],
         "skip": ["order"],
         "note": "두 절 순서를 바꿔도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "On prend un café cet après-midi ?",
-          "alsoFits": ["E123", "E196", "E197", "E198", "E172", "E173", "E174", "E68"],
+          "alsoFits": ["E123", "E196", "E197", "E198", "E172", "E173", "E174", "E68", "E186"],
           "skip": [],
           "note": "권유라 거절·수락 표현이 모두 맞다"
         }
@@ -4934,14 +6072,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Il va arriver à l'heure ? Ça m'étonnerait.",
-        "alsoFits": [],
+        "alsoFits": ["E165"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je pense qu'il va faire beau demain.",
-          "alsoFits": ["E176", "E87", "E216"],
+          "alsoFits": ["E176", "E87", "E216", "E165", "E188"],
           "skip": [],
           "note": ""
         }
@@ -4958,7 +6096,7 @@
       "contexts": [
         {
           "cue": "Ce film est le pire film du monde !",
-          "alsoFits": ["E165", "E131"],
+          "alsoFits": ["E165", "E131", "E141"],
           "skip": [],
           "note": ""
         }
@@ -4985,14 +6123,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Un tiers de notre vie à dormir ? Je n'y avais jamais pensé.",
-        "alsoFits": ["E93", "E92", "E91"],
+        "alsoFits": ["E93", "E92", "E91", "E72"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu pourrais apprendre le français avec des chansons.",
-          "alsoFits": ["E167", "E215", "E172", "E95"],
+          "alsoFits": ["E167", "E215", "E172", "E95", "E94"],
           "skip": [],
           "note": "제안에 대한 반응이 여럿 맞다"
         }
@@ -5002,14 +6140,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Prendre le métro ? C'est pas bête.",
-        "alsoFits": ["E172", "E94"],
+        "alsoFits": ["E172", "E94", "E68", "E74"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "On peut cuisiner ensemble au lieu d'aller au restaurant.",
-          "alsoFits": ["E172", "E68", "E173", "E74", "E166", "E94"],
+          "alsoFits": ["E172", "E68", "E173", "E74", "E166", "E94", "E95"],
           "skip": [],
           "note": "제안에 대한 동의 표현이 여럿 맞다"
         }
@@ -5026,7 +6164,7 @@
       "contexts": [
         {
           "cue": "Apprendre une langue, c'est comme le sport.",
-          "alsoFits": ["E70", "E94", "E104", "E130"],
+          "alsoFits": ["E70", "E94", "E104", "E130", "E95"],
           "skip": [],
           "note": ""
         }
@@ -5043,7 +6181,7 @@
       "contexts": [
         {
           "cue": "Ma sœur attend un bébé !",
-          "alsoFits": ["E117", "E91"],
+          "alsoFits": ["E117", "E91", "E170"],
           "skip": [],
           "note": "E170 은 pour toi 라 언니 얘기에는 어색해서 뺐다"
         }
@@ -5162,7 +6300,7 @@
       "contexts": [
         {
           "cue": "Tu crois qu'il va neiger à Noël ?",
-          "alsoFits": ["E177", "E87", "E188", "E216", "E163"],
+          "alsoFits": ["E177", "E87", "E188", "E216", "E163", "E108", "E119"],
           "skip": [],
           "note": "예측을 묻는 질문이라 여러 표현이 맞다"
         }
@@ -5179,7 +6317,7 @@
       "contexts": [
         {
           "cue": "Tu préfères la mer ou la montagne ?",
-          "alsoFits": ["E106", "E56", "E176", "E214", "E55", "E175"],
+          "alsoFits": ["E106", "E56", "E176", "E214", "E55", "E175", "E59", "E107"],
           "skip": [],
           "note": "선호를 묻는 열린 질문이다"
         }
@@ -5196,7 +6334,7 @@
       "contexts": [
         {
           "cue": "Tous tes collègues ont signé une carte pour toi.",
-          "alsoFits": ["E90"],
+          "alsoFits": ["E90", "E93"],
           "skip": [],
           "note": ""
         }
@@ -5213,7 +6351,7 @@
       "contexts": [
         {
           "cue": "Ta famille vient te voir pour Noël ?",
-          "alsoFits": ["E75", "E242"],
+          "alsoFits": ["E75", "E242", "E136", "E90"],
           "skip": [],
           "note": ""
         }
@@ -5315,7 +6453,7 @@
       "contexts": [
         {
           "cue": "On peut se voir près de ton bureau, si tu veux.",
-          "alsoFits": ["E74", "E68", "E193"],
+          "alsoFits": ["E74", "E68", "E193", "E115"],
           "skip": [],
           "note": ""
         }
@@ -5332,7 +6470,7 @@
       "contexts": [
         {
           "cue": "On se voit toujours demain à midi ?",
-          "alsoFits": ["E123", "E146", "E68"],
+          "alsoFits": ["E123", "E146", "E68", "E162"],
           "skip": [],
           "note": "약속 확인에 수락·연기·취소 대꾸가 모두 맞다"
         }
@@ -5349,7 +6487,7 @@
       "contexts": [
         {
           "cue": "Finalement, Paul ne vient pas ce soir.",
-          "alsoFits": ["E129", "E80", "E103", "E208"],
+          "alsoFits": ["E129", "E80", "E103", "E208", "E81"],
           "skip": [],
           "note": ""
         }
@@ -5366,7 +6504,7 @@
       "contexts": [
         {
           "cue": "Marie ne répond pas au téléphone.",
-          "alsoFits": ["E81", "E119"],
+          "alsoFits": ["E81", "E119", "E108"],
           "skip": [],
           "note": ""
         }
@@ -5383,7 +6521,7 @@
       "contexts": [
         {
           "cue": "Le musée est ouvert le lundi ?",
-          "alsoFits": ["E177", "E50", "E119"],
+          "alsoFits": ["E177", "E50", "E119", "E61"],
           "skip": [],
           "note": ""
         }
@@ -5400,7 +6538,7 @@
       "contexts": [
         {
           "cue": "Hé ! Tu as pris mon parapluie !",
-          "alsoFits": ["E191", "E230"],
+          "alsoFits": ["E191", "E230", "E153"],
           "skip": [],
           "note": ""
         }
@@ -5427,14 +6565,27 @@
       "similarMeaning": [],
       "example": {
         "text": "J'ai oublié ton anniversaire, je m'en veux.",
-        "alsoFits": [],
+        "alsoFits": ["E190", "E191"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu ne m'as pas appelé hier…",
-          "alsoFits": ["E190", "E191", "E153", "E78", "E44"],
+          "alsoFits": [
+            "E190",
+            "E191",
+            "E153",
+            "E78",
+            "E44",
+            "E61",
+            "E162",
+            "E45",
+            "E64",
+            "E144",
+            "E160",
+            "E181"
+          ],
           "skip": [],
           "note": "전화를 안 한 것에 사과·변명·깜빡함 표현 모두 자연스럽다"
         }
@@ -5451,7 +6602,7 @@
       "contexts": [
         {
           "cue": "Tiens, je t'ai gardé une place.",
-          "alsoFits": ["E115"],
+          "alsoFits": ["E115", "E185", "E79"],
           "skip": [],
           "note": ""
         }
@@ -5461,14 +6612,28 @@
       "similarMeaning": ["E72"],
       "example": {
         "text": "Mon accent est bon ? Tu trouves ?",
-        "alsoFits": ["E72"],
+        "alsoFits": ["E72", "E164", "E141", "E151", "E165", "E163"],
         "skip": ["order"],
         "note": "두 질문 문장이라 « Tu trouves ? » 를 앞에 둬도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Tu parles vraiment bien français !",
-          "alsoFits": ["E141", "E193", "E164", "E72"],
+          "alsoFits": [
+            "E141",
+            "E193",
+            "E164",
+            "E72",
+            "E151",
+            "E165",
+            "E61",
+            "E90",
+            "E178",
+            "E137",
+            "E64",
+            "E77",
+            "E144"
+          ],
           "skip": [],
           "note": "칭찬에 겸손하게 받는 말이 여럿 맞다"
         }
@@ -5485,7 +6650,7 @@
       "contexts": [
         {
           "cue": "Merci d'être venu à ma fête !",
-          "alsoFits": ["E90"],
+          "alsoFits": ["E90", "E193", "E65", "E67", "E180", "E150", "E48", "E64"],
           "skip": [],
           "note": ""
         }
@@ -5495,14 +6660,33 @@
       "similarMeaning": [],
       "example": {
         "text": "Samedi ? Désolé, je suis déjà pris.",
-        "alsoFits": ["E123", "E198"],
+        "alsoFits": ["E123", "E198", "E162"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu viens dîner chez nous vendredi ?",
-          "alsoFits": ["E197", "E198", "E123", "E172", "E173", "E174", "E215", "E87", "E68"],
+          "alsoFits": [
+            "E197",
+            "E198",
+            "E123",
+            "E172",
+            "E173",
+            "E174",
+            "E215",
+            "E87",
+            "E68",
+            "E85",
+            "E74",
+            "E105",
+            "E90",
+            "E107",
+            "E145",
+            "E186",
+            "E75",
+            "E162"
+          ],
           "skip": [],
           "note": "초대에 답하는 열린 질문이라 수락·거절·보류 모두 맞다"
         }
@@ -5512,14 +6696,32 @@
       "similarMeaning": ["E85"],
       "example": {
         "text": "Ça aurait été avec plaisir, mais je travaille.",
-        "alsoFits": [],
+        "alsoFits": ["E85"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "On fait une fête samedi soir. Tu viens ?",
-          "alsoFits": ["E196", "E198", "E123", "E172", "E173", "E174", "E215", "E87", "E105"],
+          "alsoFits": [
+            "E196",
+            "E198",
+            "E123",
+            "E172",
+            "E173",
+            "E174",
+            "E215",
+            "E87",
+            "E105",
+            "E85",
+            "E74",
+            "E90",
+            "E107",
+            "E145",
+            "E75",
+            "E162",
+            "E68"
+          ],
           "skip": [],
           "note": "초대에 답하는 열린 질문"
         }
@@ -5529,14 +6731,35 @@
       "similarMeaning": [],
       "example": {
         "text": "Pas ce soir. Une prochaine fois, peut-être.",
-        "alsoFits": ["E196", "E123", "E87"],
+        "alsoFits": ["E196", "E123", "E87", "E76", "E162", "E100", "E186"],
         "skip": ["order"],
         "note": "« Peut-être une prochaine fois » 순서도 자연스럽다"
       },
       "contexts": [
         {
           "cue": "Le concert, c'est ce soir. Tu viens ?",
-          "alsoFits": ["E196", "E197", "E123", "E172", "E173", "E174", "E105"],
+          "alsoFits": [
+            "E196",
+            "E197",
+            "E123",
+            "E172",
+            "E173",
+            "E174",
+            "E105",
+            "E85",
+            "E68",
+            "E74",
+            "E90",
+            "E107",
+            "E145",
+            "E162",
+            "E215",
+            "E87",
+            "E75",
+            "E101",
+            "E76",
+            "E100"
+          ],
           "skip": [],
           "note": "초대에 답하는 열린 질문"
         }
@@ -5546,14 +6769,25 @@
       "similarMeaning": [],
       "example": {
         "text": "Encore de la pluie ? Quel temps de chien !",
-        "alsoFits": ["E112"],
+        "alsoFits": ["E112", "E201", "E113", "E153", "E80"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Il y a du vent et de la pluie depuis ce matin.",
-          "alsoFits": ["E201", "E112"],
+          "alsoFits": [
+            "E201",
+            "E112",
+            "E19",
+            "E20",
+            "E113",
+            "E205",
+            "E242",
+            "E200",
+            "E101",
+            "E129"
+          ],
           "skip": [],
           "note": ""
         }
@@ -5563,14 +6797,14 @@
       "similarMeaning": ["E19"],
       "example": {
         "text": "Mets ton bonnet, il fait un froid de canard.",
-        "alsoFits": ["E19"],
+        "alsoFits": ["E19", "E216"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Il fait combien dehors ?",
-          "alsoFits": ["E19"],
+          "alsoFits": ["E19", "E177"],
           "skip": [],
           "note": ""
         }
@@ -5580,14 +6814,14 @@
       "similarMeaning": ["E216"],
       "example": {
         "text": "Prends un parapluie, il pleut des cordes !",
-        "alsoFits": ["E216"],
+        "alsoFits": ["E216", "E199"],
         "skip": [],
         "note": "E216 예문(Prends un parapluie, on ne sait jamais.)과 앞부분이 같다. 듣고 고르기에서 둘이 함께 나오면 헷갈릴 수 있다"
       },
       "contexts": [
         {
           "cue": "Tu sors faire ton jogging ?",
-          "alsoFits": ["E101", "E200", "E199", "E76"],
+          "alsoFits": ["E101", "E200", "E199", "E76", "E100", "E19", "E87", "E86", "E61"],
           "skip": [],
           "note": "조깅 안 나가는 까닭은 여러 가지로 댈 수 있다"
         }
@@ -5604,7 +6838,7 @@
       "contexts": [
         {
           "cue": "Tu connais Marseille ?",
-          "alsoFits": ["E209", "E235"],
+          "alsoFits": ["E209", "E235", "E85", "E61", "E189", "E21", "E32", "E65", "E148"],
           "skip": [],
           "note": ""
         }
@@ -5614,7 +6848,7 @@
       "similarMeaning": [],
       "example": {
         "text": "Le film ? J'ai été un peu déçu.",
-        "alsoFits": ["E65", "E66", "E106"],
+        "alsoFits": ["E65", "E66", "E106", "E204", "E176", "E177"],
         "skip": [],
         "note": ""
       },
@@ -5634,7 +6868,16 @@
             "E202",
             "E106",
             "E150",
-            "E59"
+            "E59",
+            "E61",
+            "E235",
+            "E204",
+            "E24",
+            "E29",
+            "E54",
+            "E28",
+            "E176",
+            "E177"
           ],
           "skip": [],
           "note": "감상을 묻는 열린 질문이라 의견·감정 표현이 넓게 맞다"
@@ -5645,14 +6888,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce livre est génial, je te le recommande.",
-        "alsoFits": ["E83"],
+        "alsoFits": ["E83", "E65"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je cherche un bon restaurant coréen à Paris.",
-          "alsoFits": ["E83", "E189"],
+          "alsoFits": ["E83", "E189", "E49", "E84", "E82", "E177"],
           "skip": [],
           "note": ""
         }
@@ -5662,14 +6905,29 @@
       "similarMeaning": [],
       "example": {
         "text": "Il fait gris, j'ai un peu le cafard.",
-        "alsoFits": [],
+        "alsoFits": ["E101", "E100", "E199"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu as l'air triste aujourd'hui.",
-          "alsoFits": ["E160", "E114", "E161", "E76", "E112"],
+          "alsoFits": [
+            "E160",
+            "E114",
+            "E161",
+            "E76",
+            "E112",
+            "E100",
+            "E61",
+            "E141",
+            "E162",
+            "E203",
+            "E64",
+            "E144",
+            "E102",
+            "E113"
+          ],
           "skip": [],
           "note": "기분을 묻는 말이라 상태 표현 여럿이 맞다"
         }
@@ -5679,14 +6937,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Je ne connais personne ici, je suis mal à l'aise.",
-        "alsoFits": [],
+        "alsoFits": ["E205"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Pourquoi tu ne parles à personne à la fête ?",
-          "alsoFits": ["E160", "E76", "E205", "E101"],
+          "alsoFits": ["E160", "E76", "E205", "E101", "E61", "E100", "E102", "E77", "E254"],
           "skip": [],
           "note": ""
         }
@@ -5696,14 +6954,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu pleures ? Qu'est-ce qui t'arrive ?",
-        "alsoFits": ["E182"],
+        "alsoFits": ["E182", "E139"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je ne me sens pas bien du tout…",
-          "alsoFits": ["E182", "E243", "E159", "E124"],
+          "alsoFits": ["E182", "E243", "E159", "E124", "E181", "E72", "E83", "E82"],
           "skip": [],
           "note": ""
         }
@@ -5713,14 +6971,14 @@
       "similarMeaning": ["E103", "E127"],
       "example": {
         "text": "Tu n'as pas dormi ? Forcément, tu es fatigué.",
-        "alsoFits": ["E62"],
+        "alsoFits": ["E62", "E118", "E119"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je n'ai rien mangé ce midi et j'ai très faim.",
-          "alsoFits": ["E103", "E127"],
+          "alsoFits": ["E103", "E127", "E83", "E82", "E110", "E223", "E73", "E109", "E149"],
           "skip": [],
           "note": ""
         }
@@ -5737,7 +6995,7 @@
       "contexts": [
         {
           "cue": "Tu connais le Mont-Saint-Michel ?",
-          "alsoFits": ["E202", "E189", "E235"],
+          "alsoFits": ["E202", "E189", "E235", "E85", "E21", "E61", "E32", "E65", "E148", "E177"],
           "skip": [],
           "note": ""
         }
@@ -5747,14 +7005,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Tu as acheté dix livres ? Tant que ça ?",
-        "alsoFits": ["E72", "E164", "E92"],
+        "alsoFits": ["E72", "E164", "E92", "E151", "E93", "E91"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "J'ai bu cinq cafés aujourd'hui.",
-          "alsoFits": ["E164", "E72", "E92", "E91"],
+          "alsoFits": ["E164", "E72", "E92", "E91", "E151", "E93", "E83", "E82", "E124"],
           "skip": [],
           "note": "놀람 반응이 여럿 맞다"
         }
@@ -5771,7 +7029,7 @@
       "contexts": [
         {
           "cue": "Tu vas à Lyon ? J'y ai habité cinq ans !",
-          "alsoFits": ["E139", "E115"],
+          "alsoFits": ["E139", "E115", "E182", "E72", "E91", "E75", "E202"],
           "skip": [],
           "note": "대꾸가 « … de voir » 로 늘어난 꼴이라 빈칸에서 낯설 수 있다(애매)"
         }
@@ -5781,14 +7039,27 @@
       "similarMeaning": ["E211"],
       "example": {
         "text": "Ce meuble ? Je ne sais pas comment m'y prendre.",
-        "alsoFits": ["E97", "E236"],
+        "alsoFits": ["E97", "E236", "E112", "E113", "E114"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu as fini de monter ton armoire ?",
-          "alsoFits": ["E77", "E78", "E101", "E97", "E236"],
+          "alsoFits": [
+            "E77",
+            "E78",
+            "E101",
+            "E97",
+            "E236",
+            "E114",
+            "E113",
+            "E112",
+            "E99",
+            "E76",
+            "E116",
+            "E46"
+          ],
           "skip": [],
           "note": ""
         }
@@ -5805,7 +7076,7 @@
       "contexts": [
         {
           "cue": "Allô ? Oui, c'est Julie.",
-          "alsoFits": ["E88", "E184", "E220", "E244"],
+          "alsoFits": ["E88", "E184", "E220", "E244", "E97"],
           "skip": [],
           "note": "전화 첫마디라 인사·용건 꺼내기가 여럿 맞다"
         }
@@ -5822,7 +7093,7 @@
       "contexts": [
         {
           "cue": "Tu pars où pour les vacances ?",
-          "alsoFits": ["E107", "E86", "E85", "E87", "E177", "E108"],
+          "alsoFits": ["E107", "E86", "E85", "E87", "E177", "E108", "E106", "E148", "E176", "E215"],
           "skip": [],
           "note": "휴가 계획을 묻는 열린 질문"
         }
@@ -5832,14 +7103,32 @@
       "similarMeaning": [],
       "example": {
         "text": "Ton idée est intéressante, je vais y réfléchir.",
-        "alsoFits": ["E87"],
+        "alsoFits": ["E87", "E94", "E167"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tu veux venir au cours de danse avec moi ?",
-          "alsoFits": ["E172", "E173", "E174", "E105", "E87", "E196", "E197", "E198"],
+          "alsoFits": [
+            "E172",
+            "E173",
+            "E174",
+            "E105",
+            "E87",
+            "E196",
+            "E197",
+            "E198",
+            "E85",
+            "E74",
+            "E68",
+            "E90",
+            "E107",
+            "E145",
+            "E106",
+            "E177",
+            "E101"
+          ],
           "skip": [],
           "note": "권유에 답하는 열린 질문. 대꾸 앞부분 « Pourquoi pas… » 는 E172 지만 combo 로 적혀 있지 않다"
         }
@@ -5849,14 +7138,14 @@
       "similarMeaning": ["E188", "E201"],
       "example": {
         "text": "Prends un parapluie, on ne sait jamais.",
-        "alsoFits": ["E201"],
+        "alsoFits": ["E201", "E199"],
         "skip": [],
         "note": "E201 예문과 앞부분이 같다"
       },
       "contexts": [
         {
           "cue": "Tu achètes un billet de loto ?",
-          "alsoFits": ["E172", "E188"],
+          "alsoFits": ["E172", "E188", "E141", "E56"],
           "skip": [],
           "note": ""
         }
@@ -5873,7 +7162,7 @@
       "contexts": [
         {
           "cue": "Ce soir, je dois finir un gros dossier.",
-          "alsoFits": ["E228"],
+          "alsoFits": ["E228", "E83"],
           "skip": [],
           "note": ""
         }
@@ -5883,14 +7172,14 @@
       "similarMeaning": [],
       "example": {
         "text": "C'est un moment difficile. Je suis de tout cœur avec toi.",
-        "alsoFits": ["E217", "E159"],
+        "alsoFits": ["E217", "E159", "E157"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Mon père est à l'hôpital depuis lundi.",
-          "alsoFits": ["E217", "E159"],
+          "alsoFits": ["E217", "E159", "E128", "E157"],
           "skip": [],
           "note": ""
         }
@@ -5900,14 +7189,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Ton vol est annulé ? Ce n'est vraiment pas de chance.",
-        "alsoFits": ["E151", "E153", "E129"],
+        "alsoFits": ["E151", "E153", "E129", "E91", "E92"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "J'ai cassé mon téléphone le jour de mon anniversaire.",
-          "alsoFits": ["E151", "E91", "E153", "E129", "E81"],
+          "alsoFits": ["E151", "E91", "E153", "E129", "E81", "E92", "E93", "E69", "E72"],
           "skip": [],
           "note": ""
         }
@@ -5924,7 +7213,7 @@
       "contexts": [
         {
           "cue": "Salut ! Ça va, au bureau ?",
-          "alsoFits": ["E61", "E161", "E162", "E245", "E64", "E112"],
+          "alsoFits": ["E61", "E161", "E162", "E245", "E64", "E112", "E76", "E114", "E113", "E236"],
           "skip": [],
           "note": "근황을 묻는 열린 질문. 정답은 « Ça va ! » 뒤에 화제를 바꾸는 꼴이라 상황 대꾸로는 약간 억지스럽다(애매)"
         }
@@ -5934,14 +7223,27 @@
       "similarMeaning": [],
       "example": {
         "text": "Il n'y a personne ? Comment ça se fait ?",
-        "alsoFits": ["E181"],
+        "alsoFits": ["E181", "E72", "E151"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Le restaurant est fermé ce soir.",
-          "alsoFits": ["E72", "E80", "E129", "E153", "E181", "E187"],
+          "alsoFits": [
+            "E72",
+            "E80",
+            "E129",
+            "E153",
+            "E181",
+            "E187",
+            "E151",
+            "E152",
+            "E91",
+            "E110",
+            "E109",
+            "E219"
+          ],
           "skip": [],
           "note": "대꾸 앞부분 « Ah bon ? » 은 E72 지만 combo 로 적혀 있지 않다"
         }
@@ -5958,7 +7260,7 @@
       "contexts": [
         {
           "cue": "Je ne sais pas si je peux venir samedi.",
-          "alsoFits": ["E87", "E135", "E133", "E67", "E134"],
+          "alsoFits": ["E87", "E135", "E133", "E67", "E134", "E69"],
           "skip": [],
           "note": ""
         }
@@ -5975,7 +7277,7 @@
       "contexts": [
         {
           "cue": "J'ai fini le travail plus tôt aujourd'hui.",
-          "alsoFits": ["E73", "E109", "E110", "E79", "E115", "E158"],
+          "alsoFits": ["E73", "E109", "E110", "E79", "E115", "E158", "E72"],
           "skip": [],
           "note": ""
         }
@@ -5992,7 +7294,7 @@
       "contexts": [
         {
           "cue": "C'est loin, la fête ? Je n'ai pas de voiture.",
-          "alsoFits": ["E89", "E67"],
+          "alsoFits": ["E89", "E67", "E110", "E109"],
           "skip": [],
           "note": ""
         }
@@ -6009,7 +7311,7 @@
       "contexts": [
         {
           "cue": "Tu es prêt ? On y va ?",
-          "alsoFits": ["E68", "E116"],
+          "alsoFits": ["E68", "E116", "E105"],
           "skip": [],
           "note": ""
         }
@@ -6026,7 +7328,7 @@
       "contexts": [
         {
           "cue": "Tu crois que Léa aime son nouveau travail ?",
-          "alsoFits": ["E118", "E119", "E50", "E49", "E177", "E176"],
+          "alsoFits": ["E118", "E119", "E50", "E49", "E177", "E176", "E163", "E188"],
           "skip": [],
           "note": "생각을 묻는 열린 질문"
         }
@@ -6036,14 +7338,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Ce prix ? Il y a quelque chose qui cloche.",
-        "alsoFits": ["E152", "E151"],
+        "alsoFits": ["E152", "E151", "E210", "E92"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Regarde, la facture fait trois cents euros.",
-          "alsoFits": ["E152", "E151", "E210", "E92", "E91"],
+          "alsoFits": ["E152", "E151", "E210", "E92", "E91", "E93"],
           "skip": [],
           "note": ""
         }
@@ -6053,14 +7355,14 @@
       "similarMeaning": ["E128"],
       "example": {
         "text": "Finir tout ça ce soir ? Ce n'est pas gagné.",
-        "alsoFits": ["E163", "E217"],
+        "alsoFits": ["E163", "E217", "E164"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Je veux parler français couramment en six mois.",
-          "alsoFits": ["E217", "E163", "E164"],
+          "alsoFits": ["E217", "E163", "E164", "E176"],
           "skip": [],
           "note": ""
         }
@@ -6077,7 +7379,7 @@
       "contexts": [
         {
           "cue": "Pourquoi tu travailles encore ce week-end ?",
-          "alsoFits": ["E162"],
+          "alsoFits": ["E162", "E245", "E61", "E113", "E112"],
           "skip": [],
           "note": ""
         }
@@ -6094,7 +7396,7 @@
       "contexts": [
         {
           "cue": "Tu es où ? On t'attend devant le cinéma.",
-          "alsoFits": ["E153", "E231", "E225", "E16"],
+          "alsoFits": ["E153", "E231", "E225", "E16", "E44", "E61"],
           "skip": [],
           "note": "어디냐는 물음이라 위치·지각 사과 표현도 맞다"
         }
@@ -6111,7 +7413,7 @@
       "contexts": [
         {
           "cue": "Ah, te voilà enfin !",
-          "alsoFits": ["E230"],
+          "alsoFits": ["E230", "E43", "E44"],
           "skip": [],
           "note": ""
         }
@@ -6128,7 +7430,7 @@
       "contexts": [
         {
           "cue": "Pourquoi tu as un grand sac aujourd'hui ?",
-          "alsoFits": [],
+          "alsoFits": ["E61"],
           "skip": [],
           "note": ""
         }
@@ -6138,14 +7440,14 @@
       "similarMeaning": [],
       "example": {
         "text": "Des fleurs ? Oh, tu n'aurais pas dû !",
-        "alsoFits": ["E193", "E178"],
+        "alsoFits": ["E193", "E178", "E91"],
         "skip": [],
         "note": ""
       },
       "contexts": [
         {
           "cue": "Tiens, c'est un cadeau pour toi.",
-          "alsoFits": ["E193", "E178", "E90"],
+          "alsoFits": ["E193", "E178", "E90", "E91"],
           "skip": [],
           "note": ""
         }
@@ -6162,7 +7464,7 @@
       "contexts": [
         {
           "cue": "Regarde mon nouveau manteau. Il est bien ?",
-          "alsoFits": ["E66", "E31", "E50", "E64"],
+          "alsoFits": ["E66", "E31", "E50", "E64", "E49", "E105"],
           "skip": [],
           "note": "의견을 묻는 말"
         }
@@ -6179,7 +7481,7 @@
       "contexts": [
         {
           "cue": "Qu'est-ce que tu as préféré au Portugal ?",
-          "alsoFits": ["E55", "E32"],
+          "alsoFits": ["E55", "E32", "E61", "E176", "E25"],
           "skip": [],
           "note": ""
         }
@@ -6196,7 +7498,7 @@
       "contexts": [
         {
           "cue": "Alors, ton déménagement ?",
-          "alsoFits": ["E46", "E76", "E114", "E161", "E64"],
+          "alsoFits": ["E46", "E76", "E114", "E161", "E64", "E116", "E45"],
           "skip": [],
           "note": "어땠는지 묻는 열린 질문"
         }
@@ -6213,7 +7515,7 @@
       "contexts": [
         {
           "cue": "Il paraît que tu as presque raté ton avion ?",
-          "alsoFits": ["E40", "E42"],
+          "alsoFits": ["E40", "E42", "E45", "E46"],
           "skip": [],
           "note": ""
         }
@@ -6230,7 +7532,7 @@
       "contexts": [
         {
           "cue": "C'est le 24 décembre aujourd'hui !",
-          "alsoFits": ["E239", "E251", "E246"],
+          "alsoFits": ["E239", "E251", "E246", "E75"],
           "skip": [],
           "note": "24일 밤은 réveillon 이라 E251 도 맞다"
         }
@@ -6281,7 +7583,7 @@
       "contexts": [
         {
           "cue": "Tu travailles entre Noël et le Nouvel An ?",
-          "alsoFits": [],
+          "alsoFits": ["E162", "E61"],
           "skip": [],
           "note": ""
         }
@@ -6298,7 +7600,7 @@
       "contexts": [
         {
           "cue": "Encore deux jours de travail avant le week-end.",
-          "alsoFits": ["E75", "E217", "E112"],
+          "alsoFits": ["E75", "E217", "E112", "E114", "E76"],
           "skip": [],
           "note": ""
         }
@@ -6315,7 +7617,7 @@
       "contexts": [
         {
           "cue": "Je suis crevé, je rentre à la maison.",
-          "alsoFits": ["E159", "E127"],
+          "alsoFits": ["E159", "E127", "E68"],
           "skip": [],
           "note": ""
         }
@@ -6332,7 +7634,7 @@
       "contexts": [
         {
           "cue": "Salut ! Ça fait une semaine qu'on ne s'est pas vus.",
-          "alsoFits": ["E220"],
+          "alsoFits": ["E220", "E88"],
           "skip": [],
           "note": ""
         }
@@ -6349,7 +7651,7 @@
       "contexts": [
         {
           "cue": "Tu fais quoi de beau en ce moment ?",
-          "alsoFits": ["E162", "E16", "E241"],
+          "alsoFits": ["E162", "E16", "E241", "E161", "E61"],
           "skip": [],
           "note": "근황을 묻는 열린 질문"
         }
@@ -6366,7 +7668,7 @@
       "contexts": [
         {
           "cue": "Tu te rends compte ? C'est bientôt la fin de l'année.",
-          "alsoFits": ["E93"],
+          "alsoFits": ["E93", "E242"],
           "skip": [],
           "note": ""
         }
@@ -6383,7 +7685,7 @@
       "contexts": [
         {
           "cue": "D'accord, je m'occupe des boissons pour la fête.",
-          "alsoFits": ["E68", "E248", "E74"],
+          "alsoFits": ["E68", "E248", "E74", "E193"],
           "skip": [],
           "note": ""
         }
@@ -6417,7 +7719,7 @@
       "contexts": [
         {
           "cue": "Je cherche toujours un nouvel appartement.",
-          "alsoFits": ["E217", "E72", "E83"],
+          "alsoFits": ["E217", "E72", "E83", "E84", "E82"],
           "skip": [],
           "note": ""
         }
@@ -6502,7 +7804,7 @@
       "contexts": [
         {
           "cue": "Tu dors bien en ce moment ?",
-          "alsoFits": ["E77", "E162", "E76", "E160"],
+          "alsoFits": ["E77", "E162", "E76", "E160", "E61"],
           "skip": [],
           "note": ""
         }
@@ -6519,7 +7821,7 @@
       "contexts": [
         {
           "cue": "Je n'ai jamais fait de ski. J'ai un peu peur.",
-          "alsoFits": ["E157", "E69", "E217", "E135"],
+          "alsoFits": ["E157", "E69", "E217", "E135", "E134"],
           "skip": [],
           "note": "대꾸 앞부분 « Ce n'est pas grave » 는 E69 지만 combo 로 적혀 있지 않다"
         }
