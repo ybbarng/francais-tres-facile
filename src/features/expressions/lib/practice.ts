@@ -1,6 +1,13 @@
 // 말하기 표현 연습(/expressions/practice)의 문제 만들기와 한 판 진행 규칙.
 // 프랑스어 문장은 데이터에 있는 것만 쓴다. 가리거나 토막 내기만 하고 새로 만들거나 섞어 꾸미지 않는다.
 import { type Expression, shuffled } from "./expressions";
+import {
+  type AlsoFitsExpression,
+  alsoFitsInPool,
+  type ReviewIndex,
+  reviewOf,
+  skips,
+} from "./practice-review";
 
 export type PracticeMode = "recall" | "context" | "blank" | "order" | "listen";
 
@@ -232,6 +239,10 @@ export type Question =
       reply: string;
       replyKo: string;
       choices: ChoiceOption[];
+      /** 정답 말고도 맞는 것으로 칠 표현 id(검토 기록의 alsoFits) */
+      accepted: string[];
+      /** 답한 뒤 "이런 표현도 자연스러워요"로 보일 표현(범위 안, 최대 3개) */
+      alsoFits: AlsoFitsExpression[];
     }
   | {
       mode: "blank";
@@ -240,6 +251,8 @@ export type Question =
       sentenceKo: string;
       spot: BlankSpot;
       choices: ChoiceOption[];
+      accepted: string[];
+      alsoFits: AlsoFitsExpression[];
     }
   | {
       mode: "order";
@@ -259,6 +272,14 @@ export interface QuestionOptions {
   random?: Random;
   /** 기기에 프랑스어 음성이 있는지. 없으면 듣고 고르기를 만들지 않는다 */
   canSpeak: boolean;
+  /** 문제 검토 기록(buildReviewIndex). 없으면 모든 표현을 검토 기록이 없는 것으로 본다 */
+  review?: ReviewIndex;
+}
+
+/** 고른 보기가 맞았는지. 정답이거나 검토 기록이 "이것도 맞다"고 한 표현이면 맞다 */
+export function isAccepted(q: Question, pickedId: string): boolean {
+  if (pickedId === q.expressionId) return true;
+  return (q.mode === "context" || q.mode === "blank") && q.accepted.includes(pickedId);
 }
 
 function withAnswer(answer: ChoiceOption, others: ChoiceOption[], random: Random): ChoiceOption[] {
@@ -270,10 +291,12 @@ export function makeQuestion(
   mode: PracticeMode,
   expr: Expression,
   pool: readonly Expression[],
-  { random = Math.random, canSpeak }: QuestionOptions
+  { random = Math.random, canSpeak, review: index }: QuestionOptions
 ): Question | null {
+  const review = reviewOf(index, expr);
   switch (mode) {
     case "recall": {
+      if (skips(review.example, "recall")) return null;
       const byExample = random() < 0.5;
       return {
         mode,
@@ -284,12 +307,20 @@ export function makeQuestion(
       };
     }
     case "context": {
-      const contexts = expr.contexts ?? [];
+      // 검토 기록이 상황 대꾸로 내지 말라고 한 context 는 뺀다
+      const contexts = (expr.contexts ?? [])
+        .map((ctx, i) => ({ ctx, slot: review.contexts[i] ?? null }))
+        .filter(({ slot }) => !skips(slot, "situation"));
       if (!contexts.length) return null;
-      const ctx = contexts[Math.floor(random() * contexts.length)];
+      const { ctx, slot } = contexts[Math.floor(random() * contexts.length)];
+      // 검토한 칸이면 "이것도 자연스러운" 표현을, 아니면 같은 묶음 표현을 오답에서 뺀다
+      const accepted = slot?.alsoFits ?? [];
+      const sameGroup = slot
+        ? []
+        : pool.filter((e) => e.group === expr.group && e.id !== expr.id).map((e) => e.id);
       const others = pickDistractors(pool, expr, {
         key: (e) => e.fr,
-        excludeIds: ctx.combo ? [ctx.combo] : [],
+        excludeIds: [...(ctx.combo ? [ctx.combo] : []), ...accepted, ...sameGroup],
         random,
       });
       if (!others) return null;
@@ -305,17 +336,31 @@ export function makeQuestion(
           others.map((e) => ({ id: e.id, label: e.fr })),
           random
         ),
+        accepted,
+        alsoFits: alsoFitsInPool(accepted, pool),
       };
     }
     case "blank": {
       const sentences = shuffled(
         [
-          { fr: expr.example.fr, ko: expr.example.ko, combo: undefined as string | undefined },
-          ...(expr.contexts ?? []).map((c) => ({ fr: c.reply, ko: c.replyKo, combo: c.combo })),
+          {
+            fr: expr.example.fr,
+            ko: expr.example.ko,
+            combo: undefined as string | undefined,
+            slot: review.example,
+          },
+          ...(expr.contexts ?? []).map((c, i) => ({
+            fr: c.reply,
+            ko: c.replyKo,
+            combo: c.combo,
+            slot: review.contexts[i] ?? null,
+          })),
         ],
         random
       );
       for (const s of sentences) {
+        if (skips(s.slot, "blank")) continue;
+        const accepted = s.slot?.alsoFits ?? [];
         const spot = findBlank(s.fr, expr.fr);
         if (!spot) continue;
         const fragmentOf = (e: Expression) =>
@@ -325,7 +370,7 @@ export function makeQuestion(
           expr,
           {
             key: (e) => matchFirstCase(fragmentOf(e), spot.text),
-            excludeIds: s.combo ? [s.combo] : [],
+            excludeIds: [...(s.combo ? [s.combo] : []), ...accepted],
             random,
           }
         );
@@ -341,11 +386,14 @@ export function makeQuestion(
             others.map((e) => ({ id: e.id, label: matchFirstCase(fragmentOf(e), spot.text) })),
             random
           ),
+          accepted,
+          alsoFits: alsoFitsInPool(accepted, pool),
         };
       }
       return null;
     }
     case "order": {
+      if (skips(review.example, "order")) return null;
       const tokens = splitTokens(expr.example.fr);
       if (tokens.length < ORDER_MIN_TOKENS || tokens.length > ORDER_MAX_TOKENS) return null;
       const order = scrambleOrder(tokens, random);
@@ -354,7 +402,12 @@ export function makeQuestion(
     }
     case "listen": {
       if (!canSpeak) return null;
-      const others = pickDistractors(pool, expr, { key: (e) => e.example.ko, random });
+      // 뜻이 거의 같은 표현은 뜻 고르기에서 서로 오답으로 내지 않는다
+      const others = pickDistractors(pool, expr, {
+        key: (e) => e.example.ko,
+        excludeIds: [...review.similarMeaning],
+        random,
+      });
       if (!others) return null;
       return {
         mode,

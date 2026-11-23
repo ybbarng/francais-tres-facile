@@ -1,0 +1,4197 @@
+{
+  "note": "study-french speaking/expressions.json(2026-11-22, 258개)에서 id·group·example.fr·contexts(cue·combo)만 뽑은 고정 표본. 검토 기록 검사 테스트용",
+  "expressions": [
+    {
+      "id": "E01",
+      "group": "A",
+      "example": {
+        "fr": "Désolé, je n'ai pas entendu. Tu peux répéter, s'il te plaît ?"
+      },
+      "contexts": [
+        {
+          "cue": "On se voit à… … heures ?"
+        },
+        {
+          "cue": "Tu veux… … ce soir ?"
+        },
+        {
+          "cue": "Le chef dit que la sauce est trop salée.",
+          "combo": "E02"
+        },
+        {
+          "cue": "Ton train part du quai… …"
+        },
+        {
+          "cue": "Allô, je suis… … malade."
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "group": "A",
+      "example": {
+        "fr": "Tu parles vite ! Plus lentement, s'il te plaît."
+      },
+      "contexts": [
+        {
+          "cue": "On joue après le dîner ?"
+        },
+        {
+          "cue": "La réunion a changé, c'est à dix heures."
+        },
+        {
+          "cue": "Le concert commence tôt, dépêche-toi !"
+        },
+        {
+          "cue": "Tu coupes, tu mélanges, tu fais cuire !"
+        },
+        {
+          "cue": "À gauche, à droite, puis tout droit !"
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "group": "A",
+      "example": {
+        "fr": "Je ne connais pas ce mot. Tu peux l'écrire ?"
+      },
+      "contexts": [
+        {
+          "cue": "Ce vin, c'est un gewurztraminer."
+        },
+        {
+          "cue": "Pour ce plat, il faut du curcuma."
+        },
+        {
+          "cue": "Mon numéro, c'est le zéro six…",
+          "combo": "E02"
+        },
+        {
+          "cue": "Pour ton dos, prends de l'ibuprofène."
+        },
+        {
+          "cue": "L'hôtel est rue de la Grenouillère."
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "group": "A",
+      "example": {
+        "fr": "Qu'est-ce que ça veut dire, « crevé » ?"
+      },
+      "contexts": [
+        {
+          "cue": "Ce soir, je suis vraiment claqué."
+        },
+        {
+          "cue": "Il faut émincer l'oignon."
+        },
+        {
+          "cue": "Ce vin est très gouleyant.",
+          "combo": "E03"
+        },
+        {
+          "cue": "Vendredi, je fais le pont."
+        },
+        {
+          "cue": "Ce concert, c'était le pied !"
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "group": "A",
+      "example": {
+        "fr": "Comment on dit « 회식 » en français ?"
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce que tu manges au bureau à midi ?"
+        },
+        {
+          "cue": "Avec quoi tu coupes les légumes ?"
+        },
+        {
+          "cue": "Tu as l'air malade, non ?",
+          "combo": "E06"
+        },
+        {
+          "cue": "Tu as mal où ?"
+        },
+        {
+          "cue": "Tu fais quoi le dimanche ?"
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "group": "A",
+      "example": {
+        "fr": "Attends… je cherche le mot."
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, ce truc dans ta cuisine ?"
+        },
+        {
+          "cue": "Tu fais quoi, au travail ?"
+        },
+        {
+          "cue": "Pourquoi tu ne disais rien, tout à l'heure ?"
+        },
+        {
+          "cue": "Ce vin a quel goût ?"
+        },
+        {
+          "cue": "Elle était comment, la mer là-bas ?"
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "group": "A",
+      "example": {
+        "fr": "C'est difficile… je ne sais pas comment le dire."
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu aimes autant ce jeu ?"
+        },
+        {
+          "cue": "Cette musique, ça te fait quoi ?"
+        },
+        {
+          "cue": "Pourquoi tu n'as rien dit à ton chef ?"
+        },
+        {
+          "cue": "Tu as mal où, exactement ?"
+        },
+        {
+          "cue": "Ce fromage, il sent comment ?"
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "group": "A",
+      "example": {
+        "fr": "Je veux dire que j'ai besoin de repos."
+      },
+      "contexts": [
+        {
+          "cue": "Tu n'aimes pas ton travail ?"
+        },
+        {
+          "cue": "Tu ne veux pas venir samedi ?"
+        },
+        {
+          "cue": "Ce restaurant est un peu cher…"
+        },
+        {
+          "cue": "Ta soupe n'est pas bonne ?"
+        },
+        {
+          "cue": "Tu arrêtes de jouer ?"
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "group": "A",
+      "example": {
+        "fr": "Je suis développeur, c'est-à-dire que j'écris du code."
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles à la maison ?"
+        },
+        {
+          "cue": "Tu bois quel genre de vin ?"
+        },
+        {
+          "cue": "Ce soir, je suis un peu occupé."
+        },
+        {
+          "cue": "Tu dors comment en ce moment ?"
+        },
+        {
+          "cue": "Tu pars quand en vacances ?"
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "group": "A",
+      "example": {
+        "fr": "Ton vin préféré ? Attends, je réfléchis."
+      },
+      "contexts": [
+        {
+          "cue": "Ton jeu préféré de tous les temps ?"
+        },
+        {
+          "cue": "Tu veux manger quoi ce soir ?"
+        },
+        {
+          "cue": "Décris ton plat coréen préféré !",
+          "combo": "E06"
+        },
+        {
+          "cue": "On part où cet été ?"
+        },
+        {
+          "cue": "Ton premier concert, c'était quand ?"
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "group": "A",
+      "example": {
+        "fr": "Hier, je suis… non, ce n'est pas ça. Je recommence."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as fait quoi hier soir ?"
+        },
+        {
+          "cue": "Tu as acheté quoi au marché ?"
+        },
+        {
+          "cue": "Tu n'aimes pas sortir avec nous ?",
+          "combo": "E08"
+        },
+        {
+          "cue": "Tu as gagné combien de parties ?"
+        },
+        {
+          "cue": "Ton avion part à quelle heure ?"
+        }
+      ]
+    },
+    {
+      "id": "E12",
+      "group": "A",
+      "example": {
+        "fr": "Le kimchi, c'est une sorte de chou fermenté."
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, le tteok ?"
+        },
+        {
+          "cue": "C'est quoi, le makgeolli ?"
+        },
+        {
+          "cue": "Tu as mangé quoi au restaurant ?"
+        },
+        {
+          "cue": "C'est quoi, la musique trot ?"
+        },
+        {
+          "cue": "C'est quoi, un hagwon ?"
+        }
+      ]
+    },
+    {
+      "id": "E13",
+      "group": "A",
+      "example": {
+        "fr": "Le soju, c'est comme la vodka, mais plus doux."
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, le bibimbap ?"
+        },
+        {
+          "cue": "Ton jeu, il ressemble à quoi ?"
+        },
+        {
+          "cue": "Il était comment, le concert ?"
+        },
+        {
+          "cue": "C'est quoi, le kimbap ?"
+        },
+        {
+          "cue": "Busan, c'est comment ?"
+        }
+      ]
+    },
+    {
+      "id": "E14",
+      "group": "A",
+      "example": {
+        "fr": "Mon français n'est pas parfait. Tu me comprends ?"
+      },
+      "contexts": [
+        {
+          "cue": "Euh… pardon ?"
+        },
+        {
+          "cue": "Ton explication est un peu longue…"
+        },
+        {
+          "cue": "D'accord… je crois."
+        },
+        {
+          "cue": "Je ne connais pas le tteok."
+        },
+        {
+          "cue": "Je ne comprends pas, tu as mal où ?"
+        }
+      ]
+    },
+    {
+      "id": "E15",
+      "group": "A",
+      "example": {
+        "fr": "Pardon, je n'ai pas bien compris ta question."
+      },
+      "contexts": [
+        {
+          "cue": "Au fond, ce jeu t'apporte quoi ?"
+        },
+        {
+          "cue": "Tu préfères le terroir ou le cépage ?"
+        },
+        {
+          "cue": "Ton boulot, ça te nourrit vraiment ?",
+          "combo": "E01"
+        },
+        {
+          "cue": "Ton rythme de sommeil, il est régulier ?"
+        },
+        {
+          "cue": "Tu es plutôt live ou studio ?"
+        }
+      ]
+    },
+    {
+      "id": "E16",
+      "group": "B",
+      "example": {
+        "fr": "Je suis au bureau. Je suis en train de coder."
+      },
+      "contexts": [
+        {
+          "cue": "Tu es où, là ?"
+        },
+        {
+          "cue": "Tu fais quoi, là ?"
+        },
+        {
+          "cue": "Pourquoi tu n'as pas répondu ?"
+        },
+        {
+          "cue": "Je t'appelle, tu as deux minutes ?"
+        },
+        {
+          "cue": "Tu es déjà rentré chez toi ?"
+        }
+      ]
+    },
+    {
+      "id": "E17",
+      "group": "B",
+      "example": {
+        "fr": "Dans ce quartier, il y a beaucoup de restaurants."
+      },
+      "contexts": [
+        {
+          "cue": "Ton quartier est comment ?"
+        },
+        {
+          "cue": "Tu aimes ton supermarché ?"
+        },
+        {
+          "cue": "Le concert était bien ?"
+        },
+        {
+          "cue": "Ça va, au travail ?"
+        },
+        {
+          "cue": "Ce jeu est difficile ?"
+        }
+      ]
+    },
+    {
+      "id": "E18",
+      "group": "B",
+      "example": {
+        "fr": "Ce plat ? Ça ressemble à un bibimbap."
+      },
+      "contexts": [
+        {
+          "cue": "Regarde ce fromage tout blanc !"
+        },
+        {
+          "cue": "Écoute ce groupe !"
+        },
+        {
+          "cue": "Il était comment, ton hôtel ?"
+        },
+        {
+          "cue": "Tu connais ce nouveau jeu ?"
+        },
+        {
+          "cue": "Goûte ma sauce !"
+        }
+      ]
+    },
+    {
+      "id": "E19",
+      "group": "B",
+      "example": {
+        "fr": "Ce matin, il fait frais."
+      },
+      "contexts": [
+        {
+          "cue": "Il fait quel temps chez toi ?"
+        },
+        {
+          "cue": "Tu prends un manteau ?"
+        },
+        {
+          "cue": "Elle était bien, ta promenade ?"
+        },
+        {
+          "cue": "Tu pars à la montagne cet été ?"
+        },
+        {
+          "cue": "Pourquoi tu portes un pull ?"
+        }
+      ]
+    },
+    {
+      "id": "E20",
+      "group": "B",
+      "example": {
+        "fr": "Aujourd'hui, le ciel est couvert."
+      },
+      "contexts": [
+        {
+          "cue": "On mange dehors ce midi ?"
+        },
+        {
+          "cue": "Je prends un parapluie ?"
+        },
+        {
+          "cue": "Tu as vu les étoiles hier soir ?"
+        },
+        {
+          "cue": "Tu vois la montagne depuis ton hôtel ?"
+        },
+        {
+          "cue": "Le concert en plein air, c'est toujours ce soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E21",
+      "group": "B",
+      "example": {
+        "fr": "Mon hôtel ? C'est au bord de la rivière."
+      },
+      "contexts": [
+        {
+          "cue": "Il est où, ton hôtel ?"
+        },
+        {
+          "cue": "Il est où, ce restaurant ?"
+        },
+        {
+          "cue": "Tu as passé tes vacances où ?"
+        },
+        {
+          "cue": "On fait un pique-nique où ?"
+        },
+        {
+          "cue": "Le festival, il est où ?"
+        }
+      ]
+    },
+    {
+      "id": "E22",
+      "group": "B",
+      "example": {
+        "fr": "D'ici, on voit la montagne au loin."
+      },
+      "contexts": [
+        {
+          "cue": "Ta chambre a une belle vue ?"
+        },
+        {
+          "cue": "Il y a quoi, devant ton bureau ?"
+        },
+        {
+          "cue": "Il y avait une belle vue, en haut ?"
+        },
+        {
+          "cue": "Tu es sur ton balcon ?"
+        },
+        {
+          "cue": "C'est joli, le trajet en train ?"
+        }
+      ]
+    },
+    {
+      "id": "E23",
+      "group": "B",
+      "example": {
+        "fr": "Tu fais du pain ? Ça sent bon !"
+      },
+      "contexts": [
+        {
+          "cue": "Je fais un gâteau au chocolat."
+        },
+        {
+          "cue": "Sens ce vin !"
+        },
+        {
+          "cue": "Tu es passé devant la boulangerie ?"
+        },
+        {
+          "cue": "Ta mère prépare quoi ce soir ?"
+        },
+        {
+          "cue": "Tu es au marché ?"
+        }
+      ]
+    },
+    {
+      "id": "E24",
+      "group": "B",
+      "example": {
+        "fr": "Hmm, la soupe… c'est un peu fade."
+      },
+      "contexts": [
+        {
+          "cue": "Alors, mon poulet ?"
+        },
+        {
+          "cue": "Tu aimes la soupe de la cantine ?"
+        },
+        {
+          "cue": "Le dîner d'hier, c'était comment ?"
+        },
+        {
+          "cue": "Tu veux encore du sel ?"
+        },
+        {
+          "cue": "Tu aimes ce plat sans épices ?"
+        }
+      ]
+    },
+    {
+      "id": "E25",
+      "group": "B",
+      "example": {
+        "fr": "Hier, j'ai goûté des huîtres pour la première fois."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as mangé quoi au restaurant ?"
+        },
+        {
+          "cue": "C'était bien, le marché ?"
+        },
+        {
+          "cue": "Ton collègue français, il a aimé le resto coréen ?"
+        },
+        {
+          "cue": "Tu as aimé le Japon ?"
+        },
+        {
+          "cue": "Pourquoi tu souris comme ça ?"
+        }
+      ]
+    },
+    {
+      "id": "E26",
+      "group": "B",
+      "example": {
+        "fr": "Ce fromage ? C'est une spécialité de la région."
+      },
+      "contexts": [
+        {
+          "cue": "C'est quoi, ce gâteau ?"
+        },
+        {
+          "cue": "Pourquoi tout le monde commande ce plat ?"
+        },
+        {
+          "cue": "Tu as apporté quoi ?"
+        },
+        {
+          "cue": "Ce vin blanc est très bon !"
+        },
+        {
+          "cue": "Tu achètes quoi comme souvenir ?"
+        }
+      ]
+    },
+    {
+      "id": "E27",
+      "group": "B",
+      "example": {
+        "fr": "Les gens ont l'air contents aujourd'hui."
+      },
+      "contexts": [
+        {
+          "cue": "L'ambiance au bureau, c'est comment ?"
+        },
+        {
+          "cue": "Il y a quelle ambiance au concert ?"
+        },
+        {
+          "cue": "Ton voyage à Paris, c'était bien ?"
+        },
+        {
+          "cue": "Tu es à la fête ?"
+        },
+        {
+          "cue": "Tu es dans le métro ?"
+        }
+      ]
+    },
+    {
+      "id": "E28",
+      "group": "B",
+      "example": {
+        "fr": "Ce soir, il y a du monde au bar."
+      },
+      "contexts": [
+        {
+          "cue": "Tu es au supermarché ?"
+        },
+        {
+          "cue": "Tu es à la salle de sport ?"
+        },
+        {
+          "cue": "Le restaurant était bien, hier ?"
+        },
+        {
+          "cue": "Le concert commence bientôt ?"
+        },
+        {
+          "cue": "Tes parents sont à la maison ?"
+        }
+      ]
+    },
+    {
+      "id": "E29",
+      "group": "B",
+      "example": {
+        "fr": "Le soir, mon quartier est très animé."
+      },
+      "contexts": [
+        {
+          "cue": "Ton quartier, c'est comment le soir ?"
+        },
+        {
+          "cue": "Le marché, c'est comment le dimanche ?"
+        },
+        {
+          "cue": "Le village où tu es allé, c'était bien ?"
+        },
+        {
+          "cue": "Ça va, au bureau aujourd'hui ?"
+        },
+        {
+          "cue": "Le bar à jeux, c'est comment ce soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E30",
+      "group": "B",
+      "example": {
+        "fr": "Une bonne bouteille, ça coûte à peu près vingt euros."
+      },
+      "contexts": [
+        {
+          "cue": "Un bon dîner ici, c'est cher ?"
+        },
+        {
+          "cue": "Ton nouveau jeu, c'est cher ?"
+        },
+        {
+          "cue": "Ton billet d'avion, c'était cher ?"
+        },
+        {
+          "cue": "Le bœuf est cher au marché ?"
+        },
+        {
+          "cue": "Les billets du concert sont chers ?"
+        }
+      ]
+    },
+    {
+      "id": "E31",
+      "group": "B",
+      "example": {
+        "fr": "Ce jeu ? Je trouve ça génial."
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes le jazz ?"
+        },
+        {
+          "cue": "Tu aimes la nouvelle déco du bureau ?"
+        },
+        {
+          "cue": "Le film d'hier, tu l'as aimé ?"
+        },
+        {
+          "cue": "Tu aimes cuisiner le soir ?"
+        },
+        {
+          "cue": "Le vin nature, tu en penses quoi ?"
+        }
+      ]
+    },
+    {
+      "id": "E32",
+      "group": "B",
+      "example": {
+        "fr": "Ce qui m'a frappé, c'est le silence."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé Paris ?"
+        },
+        {
+          "cue": "Le concert d'hier, c'était comment ?"
+        },
+        {
+          "cue": "Je suis allé en Corée cet été !"
+        },
+        {
+          "cue": "Ton nouveau travail, c'est comment ?"
+        },
+        {
+          "cue": "Le restaurant chic, tu as aimé ?"
+        }
+      ]
+    },
+    {
+      "id": "E33",
+      "group": "B",
+      "example": {
+        "fr": "Au bureau, à côté de moi, il y a un collègue très drôle."
+      },
+      "contexts": [
+        {
+          "cue": "Tu es bien installé dans le train ?"
+        },
+        {
+          "cue": "Ça va, au concert ?"
+        },
+        {
+          "cue": "C'était comment, ton vol ?"
+        },
+        {
+          "cue": "Tu es seul à ta table ?"
+        },
+        {
+          "cue": "Tu travailles seul à la maison ?"
+        }
+      ]
+    },
+    {
+      "id": "E34",
+      "group": "C",
+      "example": {
+        "fr": "Ce matin, je suis allé à la boulangerie."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as fait quoi ce matin ?"
+        },
+        {
+          "cue": "Pourquoi tu es en retard ?"
+        },
+        {
+          "cue": "Tu as fait du sport avec ton ami ?"
+        },
+        {
+          "cue": "Tu as acheté tes médicaments ?"
+        },
+        {
+          "cue": "Tu as trouvé du bon vin ?"
+        }
+      ]
+    },
+    {
+      "id": "E35",
+      "group": "C",
+      "example": {
+        "fr": "D'abord, j'ai mangé, et ensuite j'ai joué."
+      },
+      "contexts": [
+        {
+          "cue": "On fait quoi samedi ?"
+        },
+        {
+          "cue": "Comment tu fais ta sauce ?"
+        },
+        {
+          "cue": "Tu fais quoi ce soir ?"
+        },
+        {
+          "cue": "Ta journée a été comment ?"
+        },
+        {
+          "cue": "Ton voyage commence où ?"
+        }
+      ]
+    },
+    {
+      "id": "E36",
+      "group": "C",
+      "example": {
+        "fr": "Après ça, on a décidé de rentrer."
+      },
+      "contexts": [
+        {
+          "cue": "Et après le dîner ?"
+        },
+        {
+          "cue": "Il a plu pendant ta randonnée ?"
+        },
+        {
+          "cue": "Ton jeu a planté ce soir ?"
+        },
+        {
+          "cue": "Le gâteau était raté ?"
+        },
+        {
+          "cue": "Le bar était fermé, hier ?"
+        }
+      ]
+    },
+    {
+      "id": "E37",
+      "group": "C",
+      "example": {
+        "fr": "Pendant que j'attendais, j'ai lu un livre."
+      },
+      "contexts": [
+        {
+          "cue": "Ton train avait du retard ?"
+        },
+        {
+          "cue": "Le médecin était en retard ?"
+        },
+        {
+          "cue": "Tu as attendu longtemps avec tes amis ?"
+        },
+        {
+          "cue": "Le pain a cuit longtemps ?"
+        },
+        {
+          "cue": "Ton avion est parti en retard ?"
+        }
+      ]
+    },
+    {
+      "id": "E38",
+      "group": "C",
+      "example": {
+        "fr": "Tout à coup, il a commencé à pleuvoir."
+      },
+      "contexts": [
+        {
+          "cue": "Il s'est passé quoi au concert ?"
+        },
+        {
+          "cue": "Pourquoi tu as crié ?"
+        },
+        {
+          "cue": "Ta randonnée s'est bien passée ?",
+          "combo": "E42"
+        },
+        {
+          "cue": "Tu as perdu ta partie ?"
+        },
+        {
+          "cue": "Il n'y a plus de lumière chez toi ?"
+        }
+      ]
+    },
+    {
+      "id": "E39",
+      "group": "C",
+      "example": {
+        "fr": "Il m'a offert un cadeau. Je ne m'y attendais pas."
+      },
+      "contexts": [
+        {
+          "cue": "Ton équipe t'a organisé une fête ?"
+        },
+        {
+          "cue": "Il a neigé chez toi ce matin ?"
+        },
+        {
+          "cue": "Ton ami a aimé ton cadeau ?"
+        },
+        {
+          "cue": "Tu as gagné le tournoi ?"
+        },
+        {
+          "cue": "Le restaurant t'a offert le dessert ?"
+        }
+      ]
+    },
+    {
+      "id": "E40",
+      "group": "C",
+      "example": {
+        "fr": "Il restait une table. On a eu de la chance."
+      },
+      "contexts": [
+        {
+          "cue": "Il restait des places au concert ?"
+        },
+        {
+          "cue": "Il a plu pendant ton pique-nique ?"
+        },
+        {
+          "cue": "Tu as eu ton train ?"
+        },
+        {
+          "cue": "Ton vol n'a pas été annulé ?"
+        },
+        {
+          "cue": "Ton équipe a gagné hier soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E41",
+      "group": "C",
+      "example": {
+        "fr": "Le concert ? Ça a duré environ deux heures."
+      },
+      "contexts": [
+        {
+          "cue": "Ta réunion a été longue ?"
+        },
+        {
+          "cue": "Le voyage en train était long ?"
+        },
+        {
+          "cue": "Ta partie va être longue ?"
+        },
+        {
+          "cue": "Ta sauce a cuit longtemps ?"
+        },
+        {
+          "cue": "Tu as attendu longtemps chez le médecin ?"
+        }
+      ]
+    },
+    {
+      "id": "E42",
+      "group": "C",
+      "example": {
+        "fr": "J'ai failli rater le train."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as eu ton avion ?"
+        },
+        {
+          "cue": "Tu as l'air fatigué ce matin."
+        },
+        {
+          "cue": "Ton équipe a gagné ?"
+        },
+        {
+          "cue": "Ton gâteau est réussi ?"
+        },
+        {
+          "cue": "Tu as fini le jeu ?"
+        }
+      ]
+    },
+    {
+      "id": "E43",
+      "group": "C",
+      "example": {
+        "fr": "Sans GPS, on s'est perdus."
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu es arrivé si tard ?"
+        },
+        {
+          "cue": "C'était bien, la randonnée avec tes amis ?"
+        },
+        {
+          "cue": "Tu as trouvé le restaurant facilement ?"
+        },
+        {
+          "cue": "Tu as aimé la vieille ville ?"
+        },
+        {
+          "cue": "Le festival était grand ?"
+        }
+      ]
+    },
+    {
+      "id": "E44",
+      "group": "C",
+      "example": {
+        "fr": "J'ai oublié mon parapluie."
+      },
+      "contexts": [
+        {
+          "cue": "Tu m'appelles d'un autre numéro ?"
+        },
+        {
+          "cue": "Tu as froid ?"
+        },
+        {
+          "cue": "Je ne trouve pas mes clés !"
+        },
+        {
+          "cue": "Ta soupe n'a pas de goût."
+        },
+        {
+          "cue": "Tu ne joues pas ce soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E45",
+      "group": "C",
+      "example": {
+        "fr": "Malheureusement, le magasin était fermé."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as eu des places pour le concert ?"
+        },
+        {
+          "cue": "Tu as raté ton train ?"
+        },
+        {
+          "cue": "Il a plu pendant ta randonnée ?",
+          "combo": "E40"
+        },
+        {
+          "cue": "Ton dîner s'est bien passé ?"
+        },
+        {
+          "cue": "Tu es allé chez le médecin ?"
+        }
+      ]
+    },
+    {
+      "id": "E46",
+      "group": "C",
+      "example": {
+        "fr": "J'avais peur, mais finalement, ça s'est bien passé."
+      },
+      "contexts": [
+        {
+          "cue": "Ta présentation au travail, c'était comment ?"
+        },
+        {
+          "cue": "Ton entretien, c'était comment ?"
+        },
+        {
+          "cue": "J'avais peur de mon examen, ce matin."
+        },
+        {
+          "cue": "Ton premier pain maison ?"
+        },
+        {
+          "cue": "Le voyage avec les enfants ?"
+        }
+      ]
+    },
+    {
+      "id": "E47",
+      "group": "C",
+      "example": {
+        "fr": "C'était la première fois que je voyais la neige."
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu étais si content hier ?"
+        },
+        {
+          "cue": "Tu as aimé le ski ?"
+        },
+        {
+          "cue": "Tu es déjà venu ici ?"
+        },
+        {
+          "cue": "Tu as aimé le champagne ?"
+        },
+        {
+          "cue": "Tu as vu un opéra ?"
+        }
+      ]
+    },
+    {
+      "id": "E48",
+      "group": "C",
+      "example": {
+        "fr": "Ce dîner était magique. Je m'en souviendrai longtemps."
+      },
+      "contexts": [
+        {
+          "cue": "Ton voyage au Japon, c'était bien ?"
+        },
+        {
+          "cue": "Ce concert était génial, non ?"
+        },
+        {
+          "cue": "Le mariage de ton frère, c'était beau ?"
+        },
+        {
+          "cue": "Tu as bu un grand vin ?"
+        },
+        {
+          "cue": "Le repas chez ta grand-mère, c'était comment ?"
+        }
+      ]
+    },
+    {
+      "id": "E49",
+      "group": "D",
+      "example": {
+        "fr": "À mon avis, ce film est trop long."
+      },
+      "contexts": [
+        {
+          "cue": "On prend le métro ou un taxi ?"
+        },
+        {
+          "cue": "Quel vin avec le poisson ?"
+        },
+        {
+          "cue": "Je cherche un cadeau pour ma mère."
+        },
+        {
+          "cue": "Ce jeu va avoir du succès ?"
+        },
+        {
+          "cue": "Je dors mal en ce moment."
+        }
+      ]
+    },
+    {
+      "id": "E50",
+      "group": "D",
+      "example": {
+        "fr": "Je pense que le télétravail, c'est pratique."
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes ton nouveau bureau ?"
+        },
+        {
+          "cue": "On va au restaurant italien ?"
+        },
+        {
+          "cue": "Le concert, c'est demain."
+        },
+        {
+          "cue": "Il manque quelque chose à ma sauce ?"
+        },
+        {
+          "cue": "Ton petit frère joue trop aux jeux ?"
+        }
+      ]
+    },
+    {
+      "id": "E51",
+      "group": "D",
+      "example": {
+        "fr": "Contrairement à mon frère, j'adore cuisiner."
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes le sport, comme ton père ?"
+        },
+        {
+          "cue": "Ton collègue aime le café ?"
+        },
+        {
+          "cue": "Tu manges du fromage tous les jours ?"
+        },
+        {
+          "cue": "Ta sœur joue aussi aux jeux vidéo ?"
+        },
+        {
+          "cue": "Séoul, c'est comme Paris ?"
+        }
+      ]
+    },
+    {
+      "id": "E52",
+      "group": "D",
+      "example": {
+        "fr": "En Corée, on mange vite, alors qu'ici, on prend son temps."
+      },
+      "contexts": [
+        {
+          "cue": "On dîne tard en Corée ?"
+        },
+        {
+          "cue": "Le pourboire, c'est normal en Corée ?"
+        },
+        {
+          "cue": "Tu bois du vin au repas en Corée ?"
+        },
+        {
+          "cue": "Tu finis tard au travail en Corée ?"
+        },
+        {
+          "cue": "Tu enlèves tes chaussures chez toi ?"
+        }
+      ]
+    },
+    {
+      "id": "E53",
+      "group": "D",
+      "example": {
+        "fr": "Moi, je ne cuisine pas. Mes parents, eux, le font tous les jours."
+      },
+      "contexts": [
+        {
+          "cue": "Tu fais du sport le matin ?"
+        },
+        {
+          "cue": "Tu fais du sport le soir ?"
+        },
+        {
+          "cue": "Tu fais ton pain toi-même ?"
+        },
+        {
+          "cue": "Tu fais la sieste l'après-midi ?"
+        },
+        {
+          "cue": "Tu sens le vin avant de le boire ?"
+        }
+      ]
+    },
+    {
+      "id": "E54",
+      "group": "D",
+      "example": {
+        "fr": "Le train, c'est plus rapide que le bus."
+      },
+      "contexts": [
+        {
+          "cue": "Tu préfères le train ou l'avion ?"
+        },
+        {
+          "cue": "Tu cuisines ou tu commandes ?"
+        },
+        {
+          "cue": "On prend ce vin ou l'autre ?"
+        },
+        {
+          "cue": "Le nouveau jeu est bien ?"
+        },
+        {
+          "cue": "Tu vas au travail à vélo ?"
+        }
+      ]
+    },
+    {
+      "id": "E55",
+      "group": "D",
+      "example": {
+        "fr": "Ce que je préfère, c'est le vin rouge."
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes quoi dans la cuisine française ?"
+        },
+        {
+          "cue": "Tu aimes quoi dans ton travail ?"
+        },
+        {
+          "cue": "Moi, j'adore la cuisine coréenne !"
+        },
+        {
+          "cue": "Tu écoutes quel genre de musique ?"
+        },
+        {
+          "cue": "Qu'est-ce que tu aimes en voyage ?"
+        }
+      ]
+    },
+    {
+      "id": "E56",
+      "group": "D",
+      "example": {
+        "fr": "Je sors ce week-end ? Ça dépend de la météo."
+      },
+      "contexts": [
+        {
+          "cue": "Tu viens au bar ce soir ?"
+        },
+        {
+          "cue": "Tu bois du rouge ou du blanc ?"
+        },
+        {
+          "cue": "Tu joues combien d'heures par jour ?"
+        },
+        {
+          "cue": "Tu pars en vacances cet été ?"
+        },
+        {
+          "cue": "Tu dors combien d'heures ?"
+        }
+      ]
+    },
+    {
+      "id": "E57",
+      "group": "D",
+      "example": {
+        "fr": "C'est un bon restaurant ? Je suis d'accord, mais c'est cher."
+      },
+      "contexts": [
+        {
+          "cue": "Les jeux vidéo, c'est super."
+        },
+        {
+          "cue": "Le vin français est le meilleur."
+        },
+        {
+          "cue": "Ce restaurant est excellent !",
+          "combo": "E64"
+        },
+        {
+          "cue": "On doit finir ce projet vite."
+        },
+        {
+          "cue": "Le sport, c'est important."
+        }
+      ]
+    },
+    {
+      "id": "E58",
+      "group": "D",
+      "example": {
+        "fr": "Manger du riz le matin ? Ce n'est pas une erreur, c'est une différence."
+      },
+      "contexts": [
+        {
+          "cue": "Manger la soupe avec du riz, c'est bizarre !"
+        },
+        {
+          "cue": "Pourquoi tu sers le vin à deux mains ?"
+        },
+        {
+          "cue": "Ton collègue t'a corrigé en réunion ?"
+        },
+        {
+          "cue": "Tu mets du sucre dans la sauce ?!"
+        },
+        {
+          "cue": "Dormir par terre, c'est bizarre, non ?"
+        }
+      ]
+    },
+    {
+      "id": "E59",
+      "group": "D",
+      "example": {
+        "fr": "D'un côté, Paris est beau, de l'autre, c'est cher."
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes travailler à la maison ?"
+        },
+        {
+          "cue": "Tu veux acheter ce vin ?"
+        },
+        {
+          "cue": "Tu aimes ton nouveau quartier ?",
+          "combo": "E31"
+        },
+        {
+          "cue": "Tu joues encore à ce jeu ?"
+        },
+        {
+          "cue": "Tu veux partir en voiture ?"
+        }
+      ]
+    },
+    {
+      "id": "E60",
+      "group": "D",
+      "example": {
+        "fr": "Ce restaurant est loin, mais ça vaut la peine."
+      },
+      "contexts": [
+        {
+          "cue": "Le musée est loin, tu y vas ?"
+        },
+        {
+          "cue": "On attend une heure pour ce restaurant ?"
+        },
+        {
+          "cue": "Tu as fait la queue pour le concert ?"
+        },
+        {
+          "cue": "Tu achètes la nouvelle console ?"
+        },
+        {
+          "cue": "Faire son pain, ce n'est pas trop long ?"
+        }
+      ]
+    },
+    {
+      "id": "E61",
+      "group": "E",
+      "example": {
+        "fr": "En fait, je n'aime pas trop le café."
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles ce week-end ?"
+        },
+        {
+          "cue": "Tu adores le fromage, je crois ?"
+        },
+        {
+          "cue": "Le jeu était facile ?"
+        },
+        {
+          "cue": "Tu joues du piano, c'est ça ?"
+        },
+        {
+          "cue": "Tu es malade ?"
+        }
+      ]
+    },
+    {
+      "id": "E62",
+      "group": "E",
+      "example": {
+        "fr": "Il pleuvait, du coup, on est restés à la maison."
+      },
+      "contexts": [
+        {
+          "cue": "Le restaurant était fermé ?"
+        },
+        {
+          "cue": "Tu as raté le bus ?"
+        },
+        {
+          "cue": "Il pleut beaucoup ce soir."
+        },
+        {
+          "cue": "Ton ordinateur est en panne ?"
+        },
+        {
+          "cue": "Tu as mal dormi ?"
+        }
+      ]
+    },
+    {
+      "id": "E63",
+      "group": "E",
+      "example": {
+        "fr": "Bref, c'était une longue journée."
+      },
+      "contexts": [
+        {
+          "cue": "Raconte-moi ta semaine !"
+        },
+        {
+          "cue": "Et ton voyage, alors ?"
+        },
+        {
+          "cue": "Et ton déménagement ?",
+          "combo": "E46"
+        },
+        {
+          "cue": "Ton dîner de samedi ?"
+        },
+        {
+          "cue": "Ton concert d'hier soir, raconte !"
+        }
+      ]
+    },
+    {
+      "id": "E64",
+      "group": "E",
+      "example": {
+        "fr": "Franchement, ce jeu est trop difficile."
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes mon gâteau ?"
+        },
+        {
+          "cue": "Ce film t'a plu ?"
+        },
+        {
+          "cue": "Mon nouveau travail, ça va."
+        },
+        {
+          "cue": "Ce vin est bon, non ?"
+        },
+        {
+          "cue": "Tu fais du sport ?"
+        }
+      ]
+    },
+    {
+      "id": "E65",
+      "group": "E",
+      "example": {
+        "fr": "Le concert d'hier ? Ça m'a plu."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé le restaurant ?"
+        },
+        {
+          "cue": "Le nouveau jeu, alors ?"
+        },
+        {
+          "cue": "Je suis allé voir ton film préféré."
+        },
+        {
+          "cue": "Ton voyage à Lyon, c'était bien ?"
+        },
+        {
+          "cue": "Le cours de cuisine, c'était comment ?"
+        }
+      ]
+    },
+    {
+      "id": "E66",
+      "group": "E",
+      "example": {
+        "fr": "Ton nouveau vin ? Pas mal !"
+      },
+      "contexts": [
+        {
+          "cue": "Regarde ma nouvelle guitare !"
+        },
+        {
+          "cue": "Goûte ma soupe."
+        },
+        {
+          "cue": "Ton nouveau clavier, il est bien ?"
+        },
+        {
+          "cue": "J'ai fini le jeu en trois heures."
+        },
+        {
+          "cue": "Écoute ma nouvelle chanson."
+        }
+      ]
+    },
+    {
+      "id": "E67",
+      "group": "E",
+      "example": {
+        "fr": "Tu peux m'aider ? — Pas de souci."
+      },
+      "contexts": [
+        {
+          "cue": "Tu peux m'envoyer le fichier ?"
+        },
+        {
+          "cue": "Désolé, je dois changer l'heure du dîner."
+        },
+        {
+          "cue": "Tu peux réserver le restaurant ?",
+          "combo": "E89"
+        },
+        {
+          "cue": "Tu peux garder mon chat ce week-end ?"
+        },
+        {
+          "cue": "Je peux prendre ta manette ?"
+        }
+      ]
+    },
+    {
+      "id": "E68",
+      "group": "E",
+      "example": {
+        "fr": "On se voit à huit heures ? — Ça marche !"
+      },
+      "contexts": [
+        {
+          "cue": "On se retrouve devant le cinéma ?"
+        },
+        {
+          "cue": "Tu apportes le vin, j'apporte le fromage ?"
+        },
+        {
+          "cue": "On joue en ligne à neuf heures ?"
+        },
+        {
+          "cue": "On cuisine des pâtes ce soir ?"
+        },
+        {
+          "cue": "Je réserve deux places pour le concert ?"
+        }
+      ]
+    },
+    {
+      "id": "E69",
+      "group": "E",
+      "example": {
+        "fr": "Je suis en retard. — Ce n'est pas grave."
+      },
+      "contexts": [
+        {
+          "cue": "J'ai cassé ton verre, pardon !"
+        },
+        {
+          "cue": "Désolé, j'ai oublié le pain."
+        },
+        {
+          "cue": "Je suis désolé pour hier soir."
+        },
+        {
+          "cue": "Pardon, on a perdu à cause de moi."
+        },
+        {
+          "cue": "Je ne peux pas venir samedi."
+        }
+      ]
+    },
+    {
+      "id": "E70",
+      "group": "E",
+      "example": {
+        "fr": "C'est trop cher. — Tu as raison."
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles trop, tu sais."
+        },
+        {
+          "cue": "Ce vin est meilleur avec du fromage."
+        },
+        {
+          "cue": "Tu vois, le film était nul !"
+        },
+        {
+          "cue": "Tu devrais boire plus d'eau."
+        },
+        {
+          "cue": "Ce jeu est meilleur à deux."
+        }
+      ]
+    },
+    {
+      "id": "E71",
+      "group": "E",
+      "example": {
+        "fr": "J'ai beaucoup de travail ce mois-ci. — Je vois."
+      },
+      "contexts": [
+        {
+          "cue": "Je ne peux pas venir, je suis malade."
+        },
+        {
+          "cue": "Il faut appuyer ici, puis là."
+        },
+        {
+          "cue": "Ce restaurant est bon, mais… bruyant."
+        },
+        {
+          "cue": "Je ne bois pas, je conduis ce soir."
+        },
+        {
+          "cue": "Mon chef veut le projet pour lundi."
+        }
+      ]
+    },
+    {
+      "id": "E72",
+      "group": "E",
+      "example": {
+        "fr": "J'ai arrêté le café. — Ah bon ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je déménage à Marseille !"
+        },
+        {
+          "cue": "Le restaurant d'en face est fermé."
+        },
+        {
+          "cue": "Finalement, je n'ai plus mal au dos.",
+          "combo": "E79"
+        },
+        {
+          "cue": "J'arrête les jeux vidéo."
+        },
+        {
+          "cue": "Le concert est annulé."
+        }
+      ]
+    },
+    {
+      "id": "E73",
+      "group": "E",
+      "example": {
+        "fr": "Ça te dit de manger ensemble samedi ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai rien à faire ce soir."
+        },
+        {
+          "cue": "J'ai envie de bien manger."
+        },
+        {
+          "cue": "Mes amis et moi, on s'ennuie."
+        },
+        {
+          "cue": "Il fait beau aujourd'hui !"
+        },
+        {
+          "cue": "J'aimerais découvrir le vin."
+        }
+      ]
+    },
+    {
+      "id": "E74",
+      "group": "E",
+      "example": {
+        "fr": "Samedi à midi ? — Ça me va."
+      },
+      "contexts": [
+        {
+          "cue": "On mange italien ce soir ?"
+        },
+        {
+          "cue": "Rendez-vous à la gare à midi ?"
+        },
+        {
+          "cue": "Je suis libre jeudi soir."
+        },
+        {
+          "cue": "Je fais le plat, tu fais le dessert ?"
+        },
+        {
+          "cue": "On partage l'addition ?"
+        }
+      ]
+    },
+    {
+      "id": "E75",
+      "group": "E",
+      "example": {
+        "fr": "J'ai hâte de partir en vacances."
+      },
+      "contexts": [
+        {
+          "cue": "Tes vacances commencent quand ?"
+        },
+        {
+          "cue": "Le nouveau jeu sort demain !"
+        },
+        {
+          "cue": "Je vais au Japon la semaine prochaine."
+        },
+        {
+          "cue": "Tu vas voir ta famille bientôt ?"
+        },
+        {
+          "cue": "Le concert, c'est samedi, non ?"
+        }
+      ]
+    },
+    {
+      "id": "E76",
+      "group": "E",
+      "example": {
+        "fr": "J'ai travaillé jusqu'à minuit. Je suis crevé."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as couru combien de kilomètres ?"
+        },
+        {
+          "cue": "Tu sors ce soir ?"
+        },
+        {
+          "cue": "J'ai travaillé jusqu'à deux heures du matin."
+        },
+        {
+          "cue": "Tu as l'air fatigué."
+        },
+        {
+          "cue": "Ton déménagement est fini ?"
+        }
+      ]
+    },
+    {
+      "id": "E77",
+      "group": "E",
+      "example": {
+        "fr": "J'ai du mal à dormir en ce moment."
+      },
+      "contexts": [
+        {
+          "cue": "Tu comprends les films français ?"
+        },
+        {
+          "cue": "Tu te lèves tôt le matin ?"
+        },
+        {
+          "cue": "Tu as trouvé l'hôtel facilement ?"
+        },
+        {
+          "cue": "Tu as fini le niveau dix ?"
+        },
+        {
+          "cue": "Tu fais des crêpes ?"
+        }
+      ]
+    },
+    {
+      "id": "E78",
+      "group": "E",
+      "example": {
+        "fr": "Je n'ai pas eu le temps de manger."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as lu mon message ?"
+        },
+        {
+          "cue": "Tu as fini ton jeu ?"
+        },
+        {
+          "cue": "Je n'ai pas encore mangé aujourd'hui."
+        },
+        {
+          "cue": "Tu as fait les courses ?"
+        },
+        {
+          "cue": "Tu as appelé ta mère ?"
+        }
+      ]
+    },
+    {
+      "id": "E79",
+      "group": "E",
+      "example": {
+        "fr": "J'ai retrouvé mon portable ! — Tant mieux."
+      },
+      "contexts": [
+        {
+          "cue": "J'ai retrouvé mes clés !"
+        },
+        {
+          "cue": "Je ne travaille pas vendredi !"
+        },
+        {
+          "cue": "Il reste deux places au concert !",
+          "combo": "E40"
+        },
+        {
+          "cue": "Je n'ai plus de fièvre."
+        },
+        {
+          "cue": "Le restaurant a une table pour nous."
+        }
+      ]
+    },
+    {
+      "id": "E80",
+      "group": "E",
+      "example": {
+        "fr": "Le magasin est fermé. — Tant pis."
+      },
+      "contexts": [
+        {
+          "cue": "Il n'y a plus de billets."
+        },
+        {
+          "cue": "Il n'y a plus de vin rouge."
+        },
+        {
+          "cue": "Mon frère ne veut pas venir ce soir."
+        },
+        {
+          "cue": "Le serveur du jeu est en panne."
+        },
+        {
+          "cue": "Il pleut, pas de pique-nique."
+        }
+      ]
+    },
+    {
+      "id": "E81",
+      "group": "E",
+      "example": {
+        "fr": "J'ai oublié ton anniversaire… — Ça arrive."
+      },
+      "contexts": [
+        {
+          "cue": "Pardon, j'ai oublié notre rendez-vous."
+        },
+        {
+          "cue": "J'ai raté mon gâteau."
+        },
+        {
+          "cue": "J'ai perdu le match ce soir."
+        },
+        {
+          "cue": "Je me suis trompé de train."
+        },
+        {
+          "cue": "J'ai fait une erreur dans mon code."
+        }
+      ]
+    },
+    {
+      "id": "E82",
+      "group": "E",
+      "example": {
+        "fr": "Il vaut mieux se reposer ce soir."
+      },
+      "contexts": [
+        {
+          "cue": "Il pleut beaucoup, on sort quand même ?"
+        },
+        {
+          "cue": "J'ai mal à la tête depuis ce matin."
+        },
+        {
+          "cue": "Pourquoi tu es parti tôt du concert ?"
+        },
+        {
+          "cue": "On réserve le restaurant ?"
+        },
+        {
+          "cue": "On ouvre le vin maintenant ?"
+        }
+      ]
+    },
+    {
+      "id": "E83",
+      "group": "E",
+      "example": {
+        "fr": "Tu devrais voir un médecin."
+      },
+      "contexts": [
+        {
+          "cue": "Je dors très mal en ce moment."
+        },
+        {
+          "cue": "Je m'ennuie le week-end."
+        },
+        {
+          "cue": "Il va faire beau ce week-end."
+        },
+        {
+          "cue": "Je n'arrive pas à battre ce boss."
+        },
+        {
+          "cue": "Mon chef me donne trop de travail."
+        }
+      ]
+    },
+    {
+      "id": "E84",
+      "group": "E",
+      "example": {
+        "fr": "À ta place, je dormirais plus."
+      },
+      "contexts": [
+        {
+          "cue": "Je ne sais pas quel vin acheter."
+        },
+        {
+          "cue": "Mon téléphone est très vieux."
+        },
+        {
+          "cue": "Je veux acheter cette console très chère."
+        },
+        {
+          "cue": "J'ai mal au dos depuis une semaine."
+        },
+        {
+          "cue": "Je pars en été ou en hiver ?"
+        }
+      ]
+    },
+    {
+      "id": "E85",
+      "group": "E",
+      "example": {
+        "fr": "J'aimerais bien apprendre le piano."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as des projets pour cette année ?"
+        },
+        {
+          "cue": "Tu veux faire quoi ce week-end ?"
+        },
+        {
+          "cue": "Le concert était complet."
+        },
+        {
+          "cue": "Tu joues d'un instrument ?"
+        },
+        {
+          "cue": "Tu sais faire des croissants ?"
+        }
+      ]
+    },
+    {
+      "id": "E86",
+      "group": "E",
+      "example": {
+        "fr": "Je compte partir en Bretagne cet été."
+      },
+      "contexts": [
+        {
+          "cue": "Tu fais quoi ce week-end ?"
+        },
+        {
+          "cue": "Tu vas changer de travail ?"
+        },
+        {
+          "cue": "J'ai enfin acheté un vélo !"
+        },
+        {
+          "cue": "Tu as acheté beaucoup de légumes !"
+        },
+        {
+          "cue": "Tu as des projets pour Noël ?"
+        }
+      ]
+    },
+    {
+      "id": "E87",
+      "group": "E",
+      "example": {
+        "fr": "Tu viens demain ? — On verra."
+      },
+      "contexts": [
+        {
+          "cue": "Tu viendras à ma fête samedi ?"
+        },
+        {
+          "cue": "Tu vas acheter ce jeu ?"
+        },
+        {
+          "cue": "Tu pars en vacances en décembre ?",
+          "combo": "E56"
+        },
+        {
+          "cue": "Tu vas gagner le tournoi ?"
+        },
+        {
+          "cue": "Tu vas courir demain matin ?"
+        }
+      ]
+    },
+    {
+      "id": "E88",
+      "group": "E",
+      "example": {
+        "fr": "Salut Marc ! Ça fait longtemps !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu te souviens de moi ?"
+        },
+        {
+          "cue": "Coucou, c'est moi, ton vieux copain !"
+        },
+        {
+          "cue": "Tu joues encore à ce jeu ?"
+        },
+        {
+          "cue": "On ne s'est pas vus depuis l'été !"
+        },
+        {
+          "cue": "C'est toi, Brice ?"
+        }
+      ]
+    },
+    {
+      "id": "E89",
+      "group": "E",
+      "example": {
+        "fr": "Les billets ? Je m'en occupe."
+      },
+      "contexts": [
+        {
+          "cue": "Qui réserve le restaurant ?"
+        },
+        {
+          "cue": "Il faut acheter le vin pour la fête."
+        },
+        {
+          "cue": "Il faut réserver la salle pour la réunion."
+        },
+        {
+          "cue": "Qui fait la vaisselle ce soir ?"
+        },
+        {
+          "cue": "Le serveur du jeu ne marche plus."
+        }
+      ]
+    },
+    {
+      "id": "E90",
+      "group": "E",
+      "example": {
+        "fr": "Merci pour le cadeau, ça me fait plaisir."
+      },
+      "contexts": [
+        {
+          "cue": "Je t'ai apporté du vin coréen."
+        },
+        {
+          "cue": "Je viens à ta fête samedi !"
+        },
+        {
+          "cue": "Merci pour le dîner d'hier !"
+        },
+        {
+          "cue": "Ton français a beaucoup progressé !"
+        },
+        {
+          "cue": "Je t'appelle juste pour dire bonjour."
+        }
+      ]
+    },
+    {
+      "id": "E91",
+      "group": "F",
+      "example": {
+        "fr": "Ça alors ! Tu parles coréen maintenant ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je me suis marié le mois dernier !"
+        }
+      ]
+    },
+    {
+      "id": "E92",
+      "group": "F",
+      "example": {
+        "fr": "C'est dingue, il fait 25 degrés en novembre !"
+      },
+      "contexts": [
+        {
+          "cue": "J'ai vu Zidane au supermarché hier."
+        }
+      ]
+    },
+    {
+      "id": "E93",
+      "group": "F",
+      "example": {
+        "fr": "J'ai gagné ? Je n'arrive pas à y croire !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu as réussi ton examen, tu as eu 18 sur 20 !"
+        }
+      ]
+    },
+    {
+      "id": "E94",
+      "group": "G",
+      "example": {
+        "fr": "Ton explication est longue, mais ça se tient."
+      },
+      "contexts": [
+        {
+          "cue": "Il est en retard, il y a sûrement des bouchons."
+        }
+      ]
+    },
+    {
+      "id": "E95",
+      "group": "G",
+      "example": {
+        "fr": "Ah, c'est bien vu, je n'avais pas remarqué."
+      },
+      "contexts": [
+        {
+          "cue": "Ton texte est bien, mais ce mot est répété trois fois."
+        }
+      ]
+    },
+    {
+      "id": "E96",
+      "group": "G",
+      "example": {
+        "fr": "Tu marques un point, c'est moins cher en train."
+      },
+      "contexts": [
+        {
+          "cue": "Si on prend le vélo, on fait du sport en même temps."
+        }
+      ]
+    },
+    {
+      "id": "E97",
+      "group": "H",
+      "example": {
+        "fr": "Tu peux me donner un coup de main avec ces cartons ?"
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce qu'il y a ? Tu as l'air occupé."
+        }
+      ]
+    },
+    {
+      "id": "E98",
+      "group": "H",
+      "example": {
+        "fr": "Tu peux jeter un coup d'œil à mon texte ?"
+      },
+      "contexts": [
+        {
+          "cue": "Tu as besoin de quelque chose ?"
+        }
+      ]
+    },
+    {
+      "id": "E99",
+      "group": "H",
+      "example": {
+        "fr": "Ça te dérange de fermer la fenêtre ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je vais au supermarché."
+        }
+      ]
+    },
+    {
+      "id": "E100",
+      "group": "I",
+      "example": {
+        "fr": "Après le déjeuner, j'ai un coup de barre."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as l'air fatigué, ça va ?"
+        }
+      ]
+    },
+    {
+      "id": "E101",
+      "group": "I",
+      "example": {
+        "fr": "J'ai la flemme de cuisiner. On commande une pizza ?"
+      },
+      "contexts": [
+        {
+          "cue": "Tu vas à la salle de sport ce soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E102",
+      "group": "I",
+      "example": {
+        "fr": "Cette semaine a été dure, j'ai besoin de souffler un peu."
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles encore ce week-end ?"
+        }
+      ]
+    },
+    {
+      "id": "E103",
+      "group": "F",
+      "example": {
+        "fr": "Il est fatigué ? Tu m'étonnes, il travaille la nuit !"
+      },
+      "contexts": [
+        {
+          "cue": "Après le marathon, j'avais super faim."
+        }
+      ]
+    },
+    {
+      "id": "E104",
+      "group": "F",
+      "example": {
+        "fr": "J'avoue, ce film était un peu long."
+      },
+      "contexts": [
+        {
+          "cue": "Le café ici est vraiment bon."
+        }
+      ]
+    },
+    {
+      "id": "E105",
+      "group": "F",
+      "example": {
+        "fr": "Une pizza ce soir ? Carrément !"
+      },
+      "contexts": [
+        {
+          "cue": "On va à la plage ce week-end ?"
+        }
+      ]
+    },
+    {
+      "id": "E106",
+      "group": "G",
+      "example": {
+        "fr": "Rester ou partir ? Je suis partagé."
+      },
+      "contexts": [
+        {
+          "cue": "Tu préfères habiter en ville ou à la campagne ?"
+        }
+      ]
+    },
+    {
+      "id": "E107",
+      "group": "G",
+      "example": {
+        "fr": "Pour les vacances, je ne suis pas encore fixé."
+      },
+      "contexts": [
+        {
+          "cue": "Tu pars où cet été ?"
+        }
+      ]
+    },
+    {
+      "id": "E108",
+      "group": "G",
+      "example": {
+        "fr": "Je me demande si Paul va venir ce soir."
+      },
+      "contexts": [
+        {
+          "cue": "Paul n'est pas encore arrivé."
+        }
+      ]
+    },
+    {
+      "id": "E109",
+      "group": "H",
+      "example": {
+        "fr": "Et si on allait au cinéma ce soir ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je m'ennuie un peu aujourd'hui."
+        }
+      ]
+    },
+    {
+      "id": "E110",
+      "group": "H",
+      "example": {
+        "fr": "On pourrait inviter Marie aussi."
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce qu'on fait pour l'anniversaire de Paul ?"
+        }
+      ]
+    },
+    {
+      "id": "E111",
+      "group": "H",
+      "example": {
+        "fr": "Tant qu'à faire, prends aussi du pain."
+      },
+      "contexts": [
+        {
+          "cue": "Je vais à Paris pour le travail lundi."
+        }
+      ]
+    },
+    {
+      "id": "E112",
+      "group": "I",
+      "example": {
+        "fr": "J'en ai marre de la pluie !"
+      },
+      "contexts": [
+        {
+          "cue": "Le métro est encore en grève demain."
+        }
+      ]
+    },
+    {
+      "id": "E113",
+      "group": "I",
+      "example": {
+        "fr": "Le bus est encore en retard, ça m'énerve."
+      },
+      "contexts": [
+        {
+          "cue": "Ton voisin fait encore du bruit la nuit ?"
+        }
+      ]
+    },
+    {
+      "id": "E114",
+      "group": "I",
+      "example": {
+        "fr": "Trois heures de réunion ? Je n'en peux plus !"
+      },
+      "contexts": [
+        {
+          "cue": "On fait encore une heure de travail ?"
+        }
+      ]
+    },
+    {
+      "id": "E115",
+      "group": "F",
+      "example": {
+        "fr": "Tu as faim ? Ça tombe bien, j'ai fait des crêpes."
+      },
+      "contexts": [
+        {
+          "cue": "J'ai deux places pour le concert ce soir."
+        }
+      ]
+    },
+    {
+      "id": "E116",
+      "group": "F",
+      "example": {
+        "fr": "Ça y est, j'ai fini mon rapport !"
+      },
+      "contexts": [
+        {
+          "cue": "Alors, tu as trouvé un appartement ?"
+        }
+      ]
+    },
+    {
+      "id": "E117",
+      "group": "F",
+      "example": {
+        "fr": "Tu as eu le poste ? Ça se fête !"
+      },
+      "contexts": [
+        {
+          "cue": "J'ai eu une promotion au travail !"
+        }
+      ]
+    },
+    {
+      "id": "E118",
+      "group": "G",
+      "example": {
+        "fr": "On dirait que tu es fatigué."
+      },
+      "contexts": [
+        {
+          "cue": "Regarde Marie, elle sourit tout le temps aujourd'hui."
+        }
+      ]
+    },
+    {
+      "id": "E119",
+      "group": "G",
+      "example": {
+        "fr": "J'ai l'impression que tout le monde est fatigué."
+      },
+      "contexts": [
+        {
+          "cue": "Tu comprends mieux le français maintenant ?"
+        }
+      ]
+    },
+    {
+      "id": "E120",
+      "group": "G",
+      "example": {
+        "fr": "Vingt euros ? Ça me paraît cher."
+      },
+      "contexts": [
+        {
+          "cue": "On peut partager l'addition en trois."
+        }
+      ]
+    },
+    {
+      "id": "E121",
+      "group": "H",
+      "example": {
+        "fr": "On se retrouve à la gare à midi ?"
+      },
+      "contexts": [
+        {
+          "cue": "Alors, pour demain, on fait comment ?"
+        }
+      ]
+    },
+    {
+      "id": "E122",
+      "group": "H",
+      "example": {
+        "fr": "Samedi à midi, ça te convient ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je suis libre jeudi ou vendredi."
+        }
+      ]
+    },
+    {
+      "id": "E123",
+      "group": "H",
+      "example": {
+        "fr": "Désolé, j'ai un empêchement ce soir."
+      },
+      "contexts": [
+        {
+          "cue": "Tu viens toujours au dîner ce soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E124",
+      "group": "I",
+      "example": {
+        "fr": "Il ne répond pas au téléphone, ça m'inquiète."
+      },
+      "contexts": [
+        {
+          "cue": "Comment va ton chat ?"
+        }
+      ]
+    },
+    {
+      "id": "E125",
+      "group": "I",
+      "example": {
+        "fr": "Tu es bien arrivé ? Ça me rassure."
+      },
+      "contexts": [
+        {
+          "cue": "Le médecin a dit que ce n'était rien de grave."
+        }
+      ]
+    },
+    {
+      "id": "E126",
+      "group": "I",
+      "example": {
+        "fr": "Demain, je fais un exposé, j'ai le trac."
+      },
+      "contexts": [
+        {
+          "cue": "C'est bientôt ton tour de parler !"
+        }
+      ]
+    },
+    {
+      "id": "E127",
+      "group": "F",
+      "example": {
+        "fr": "Tu es déçu ? Ça se comprend."
+      },
+      "contexts": [
+        {
+          "cue": "Je suis stressé, j'ai un entretien demain."
+        }
+      ]
+    },
+    {
+      "id": "E128",
+      "group": "F",
+      "example": {
+        "fr": "Tu as déménagé seul ? Ça n'a pas dû être facile."
+      },
+      "contexts": [
+        {
+          "cue": "J'ai attendu le train trois heures sous la pluie."
+        }
+      ]
+    },
+    {
+      "id": "E129",
+      "group": "F",
+      "example": {
+        "fr": "Tu ne viens pas ? C'est dommage !"
+      },
+      "contexts": [
+        {
+          "cue": "Le restaurant est fermé ce soir."
+        }
+      ]
+    },
+    {
+      "id": "E130",
+      "group": "G",
+      "example": {
+        "fr": "Il y a du vrai dans ce que tu dis, mais c'est compliqué."
+      },
+      "contexts": [
+        {
+          "cue": "Les gens travaillent trop en Corée."
+        }
+      ]
+    },
+    {
+      "id": "E131",
+      "group": "G",
+      "example": {
+        "fr": "Tu trouves ça drôle ? C'est une façon de voir les choses."
+      },
+      "contexts": [
+        {
+          "cue": "Le travail, c'est juste pour gagner de l'argent."
+        }
+      ]
+    },
+    {
+      "id": "E132",
+      "group": "G",
+      "example": {
+        "fr": "C'est cher. En même temps, c'est très bon."
+      },
+      "contexts": [
+        {
+          "cue": "Paul est toujours en retard !"
+        }
+      ]
+    },
+    {
+      "id": "E133",
+      "group": "H",
+      "example": {
+        "fr": "Rends-moi le livre quand tu veux, rien ne presse."
+      },
+      "contexts": [
+        {
+          "cue": "Désolé, je n'ai pas encore réparé ton vélo."
+        }
+      ]
+    },
+    {
+      "id": "E134",
+      "group": "H",
+      "example": {
+        "fr": "Tu cherches tes mots ? Prends ton temps."
+      },
+      "contexts": [
+        {
+          "cue": "Attends, je cherche mes clés…"
+        }
+      ]
+    },
+    {
+      "id": "E135",
+      "group": "H",
+      "example": {
+        "fr": "Tu n'es pas obligé de venir, tu sais."
+      },
+      "contexts": [
+        {
+          "cue": "Je dois apporter du vin ce soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E136",
+      "group": "I",
+      "example": {
+        "fr": "Il fait beau, je suis de bonne humeur."
+      },
+      "contexts": [
+        {
+          "cue": "Tu chantes ? Qu'est-ce qui se passe ?"
+        }
+      ]
+    },
+    {
+      "id": "E137",
+      "group": "I",
+      "example": {
+        "fr": "Un bon café, ça me remonte le moral."
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, je t'ai apporté des chocolats."
+        }
+      ]
+    },
+    {
+      "id": "E138",
+      "group": "I",
+      "example": {
+        "fr": "Ce soleil, ça me donne envie de partir à la plage."
+      },
+      "contexts": [
+        {
+          "cue": "Regarde la recette de tarte de ma grand-mère."
+        }
+      ]
+    },
+    {
+      "id": "E139",
+      "group": "F",
+      "example": {
+        "fr": "Tu as vu Paul hier ? Raconte !"
+      },
+      "contexts": [
+        {
+          "cue": "Il m'est arrivé un truc bizarre ce matin."
+        }
+      ]
+    },
+    {
+      "id": "E140",
+      "group": "F",
+      "example": {
+        "fr": "Tu n'aimes pas courir ? Moi non plus !"
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai pas bien dormi cette nuit."
+        }
+      ]
+    },
+    {
+      "id": "E141",
+      "group": "F",
+      "example": {
+        "fr": "Je te dérange ? Mais pas du tout !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu es fâché contre moi ?"
+        }
+      ]
+    },
+    {
+      "id": "E142",
+      "group": "G",
+      "example": {
+        "fr": "J'aime ce quartier. Le problème, c'est que c'est bruyant."
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu ne prends pas la voiture ?"
+        }
+      ]
+    },
+    {
+      "id": "E143",
+      "group": "G",
+      "example": {
+        "fr": "Ce qui me dérange, c'est que personne ne dit merci."
+      },
+      "contexts": [
+        {
+          "cue": "Tu aimes ton nouveau bureau ?"
+        }
+      ]
+    },
+    {
+      "id": "E144",
+      "group": "G",
+      "example": {
+        "fr": "Je t'avoue que je n'ai pas lu ton message."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé le film d'hier ?"
+        }
+      ]
+    },
+    {
+      "id": "E145",
+      "group": "H",
+      "example": {
+        "fr": "Je n'ai pas encore la réponse, je te tiens au courant."
+      },
+      "contexts": [
+        {
+          "cue": "Tu sais quand tu pars en voyage ?"
+        }
+      ]
+    },
+    {
+      "id": "E146",
+      "group": "H",
+      "example": {
+        "fr": "Comme convenu, je t'attends à huit heures."
+      },
+      "contexts": [
+        {
+          "cue": "On se voit toujours demain matin ?"
+        }
+      ]
+    },
+    {
+      "id": "E147",
+      "group": "H",
+      "example": {
+        "fr": "Je suis dans le métro, je te rappelle."
+      },
+      "contexts": [
+        {
+          "cue": "Allô ? Tu as deux minutes ?"
+        }
+      ]
+    },
+    {
+      "id": "E148",
+      "group": "I",
+      "example": {
+        "fr": "J'ai envie de manger une glace."
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce que tu veux faire ce soir ?"
+        }
+      ]
+    },
+    {
+      "id": "E149",
+      "group": "I",
+      "example": {
+        "fr": "Il est seize heures, j'ai un petit creux."
+      },
+      "contexts": [
+        {
+          "cue": "On mange dans deux heures."
+        }
+      ]
+    },
+    {
+      "id": "E150",
+      "group": "I",
+      "example": {
+        "fr": "Merci pour le dîner, je me suis régalé !"
+      },
+      "contexts": [
+        {
+          "cue": "Alors, tu as aimé le couscous ?"
+        }
+      ]
+    },
+    {
+      "id": "E151",
+      "group": "F",
+      "example": {
+        "fr": "C'est pas vrai, j'ai encore raté le bus !"
+      },
+      "contexts": [
+        {
+          "cue": "Désolé, la machine à café est encore en panne."
+        }
+      ]
+    },
+    {
+      "id": "E152",
+      "group": "F",
+      "example": {
+        "fr": "Non mais je rêve, il a pris ma place !"
+      },
+      "contexts": [
+        {
+          "cue": "Le train a deux heures de retard."
+        }
+      ]
+    },
+    {
+      "id": "E153",
+      "group": "F",
+      "example": {
+        "fr": "Mince, j'ai oublié mes clés !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu as pris ton parapluie ? Il pleut."
+        }
+      ]
+    },
+    {
+      "id": "E154",
+      "group": "G",
+      "example": {
+        "fr": "Tout compte fait, je préfère rester ici."
+      },
+      "contexts": [
+        {
+          "cue": "Alors, tu prends le train ou l'avion ?"
+        }
+      ]
+    },
+    {
+      "id": "E155",
+      "group": "G",
+      "example": {
+        "fr": "On a perdu, mais au moins, on a essayé."
+      },
+      "contexts": [
+        {
+          "cue": "Il a plu toute la semaine pendant mes vacances."
+        }
+      ]
+    },
+    {
+      "id": "E156",
+      "group": "G",
+      "example": {
+        "fr": "Au pire, on mange une pizza à la maison."
+      },
+      "contexts": [
+        {
+          "cue": "Et si le restaurant est complet ?"
+        }
+      ]
+    },
+    {
+      "id": "E157",
+      "group": "H",
+      "example": {
+        "fr": "Ne t'inquiète pas, tout va bien se passer demain."
+      },
+      "contexts": [
+        {
+          "cue": "Je passe mon permis demain, j'ai peur."
+        }
+      ]
+    },
+    {
+      "id": "E158",
+      "group": "H",
+      "example": {
+        "fr": "Tu pars en vacances ? Profites-en bien !"
+      },
+      "contexts": [
+        {
+          "cue": "Demain, je pars une semaine à Nice."
+        }
+      ]
+    },
+    {
+      "id": "E159",
+      "group": "H",
+      "example": {
+        "fr": "Tu as l'air fatigué. Prends soin de toi."
+      },
+      "contexts": [
+        {
+          "cue": "Je suis malade depuis lundi."
+        }
+      ]
+    },
+    {
+      "id": "E160",
+      "group": "I",
+      "example": {
+        "fr": "Pardon, j'ai la tête ailleurs aujourd'hui."
+      },
+      "contexts": [
+        {
+          "cue": "Tu m'écoutes ? Je t'ai posé une question."
+        }
+      ]
+    },
+    {
+      "id": "E161",
+      "group": "I",
+      "example": {
+        "fr": "C'est une semaine difficile, mais je tiens le coup."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as beaucoup de travail en ce moment, ça va ?"
+        }
+      ]
+    },
+    {
+      "id": "E162",
+      "group": "I",
+      "example": {
+        "fr": "Je ne peux pas déjeuner, je suis débordé."
+      },
+      "contexts": [
+        {
+          "cue": "On prend un café cet après-midi ?"
+        }
+      ]
+    },
+    {
+      "id": "E163",
+      "group": "F",
+      "example": {
+        "fr": "Il va arriver à l'heure ? Ça m'étonnerait."
+      },
+      "contexts": [
+        {
+          "cue": "Je pense qu'il va faire beau demain."
+        }
+      ]
+    },
+    {
+      "id": "E164",
+      "group": "F",
+      "example": {
+        "fr": "Deux heures ? Tu exagères, c'était vingt minutes !"
+      },
+      "contexts": [
+        {
+          "cue": "Ce film est le pire film du monde !"
+        }
+      ]
+    },
+    {
+      "id": "E165",
+      "group": "F",
+      "example": {
+        "fr": "Les chats détestent les gens ? N'importe quoi !"
+      },
+      "contexts": [
+        {
+          "cue": "Les Coréens ne mangent que du riz."
+        }
+      ]
+    },
+    {
+      "id": "E166",
+      "group": "G",
+      "example": {
+        "fr": "Un tiers de notre vie à dormir ? Je n'y avais jamais pensé."
+      },
+      "contexts": [
+        {
+          "cue": "Tu pourrais apprendre le français avec des chansons."
+        }
+      ]
+    },
+    {
+      "id": "E167",
+      "group": "G",
+      "example": {
+        "fr": "Prendre le métro ? C'est pas bête."
+      },
+      "contexts": [
+        {
+          "cue": "On peut cuisiner ensemble au lieu d'aller au restaurant."
+        }
+      ]
+    },
+    {
+      "id": "E168",
+      "group": "G",
+      "example": {
+        "fr": "Ce livre parle de la solitude. Ça me parle."
+      },
+      "contexts": [
+        {
+          "cue": "Apprendre une langue, c'est comme le sport."
+        }
+      ]
+    },
+    {
+      "id": "E169",
+      "group": "F",
+      "example": {
+        "fr": "Tu as trouvé un appartement ? Quelle bonne nouvelle !"
+      },
+      "contexts": [
+        {
+          "cue": "Ma sœur attend un bébé !"
+        }
+      ]
+    },
+    {
+      "id": "E170",
+      "group": "F",
+      "example": {
+        "fr": "Tu as eu le poste ? Je suis super content pour toi !"
+      },
+      "contexts": [
+        {
+          "cue": "J'ai enfin eu mon permis de conduire !"
+        }
+      ]
+    },
+    {
+      "id": "E171",
+      "group": "F",
+      "example": {
+        "fr": "Tu as couru un marathon ? Chapeau !"
+      },
+      "contexts": [
+        {
+          "cue": "J'ai appris à jouer de la guitare tout seul."
+        }
+      ]
+    },
+    {
+      "id": "E172",
+      "group": "H",
+      "example": {
+        "fr": "Un film ce soir ? Pourquoi pas !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu veux essayer le nouveau restaurant thaï ?"
+        }
+      ]
+    },
+    {
+      "id": "E173",
+      "group": "H",
+      "example": {
+        "fr": "Une randonnée dimanche ? Je suis partant !"
+      },
+      "contexts": [
+        {
+          "cue": "On va faire du ski en janvier. Tu viens ?"
+        }
+      ]
+    },
+    {
+      "id": "E174",
+      "group": "H",
+      "example": {
+        "fr": "Encore un peu de thé ? — Volontiers !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu veux encore un morceau de gâteau ?"
+        }
+      ]
+    },
+    {
+      "id": "E175",
+      "group": "G",
+      "example": {
+        "fr": "Pourquoi les Français dînent si tard ? Bonne question !"
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu apprends le français ?"
+        }
+      ]
+    },
+    {
+      "id": "E176",
+      "group": "G",
+      "example": {
+        "fr": "Qui va gagner ? C'est difficile à dire."
+      },
+      "contexts": [
+        {
+          "cue": "Tu crois qu'il va neiger à Noël ?"
+        }
+      ]
+    },
+    {
+      "id": "E177",
+      "group": "G",
+      "example": {
+        "fr": "Sortir ce soir ? Je ne sais pas trop."
+      },
+      "contexts": [
+        {
+          "cue": "Tu préfères la mer ou la montagne ?"
+        }
+      ]
+    },
+    {
+      "id": "E178",
+      "group": "I",
+      "example": {
+        "fr": "Merci pour ton message, ça me fait chaud au cœur."
+      },
+      "contexts": [
+        {
+          "cue": "Tous tes collègues ont signé une carte pour toi."
+        }
+      ]
+    },
+    {
+      "id": "E179",
+      "group": "I",
+      "example": {
+        "fr": "Elle a dit oui ! Je suis aux anges !"
+      },
+      "contexts": [
+        {
+          "cue": "Ta famille vient te voir pour Noël ?"
+        }
+      ]
+    },
+    {
+      "id": "E180",
+      "group": "I",
+      "example": {
+        "fr": "Une petite promenade, ça m'a fait du bien."
+      },
+      "contexts": [
+        {
+          "cue": "Alors, ton week-end à la mer ?"
+        }
+      ]
+    },
+    {
+      "id": "E181",
+      "group": "F",
+      "example": {
+        "fr": "Comment ça, le magasin est fermé ?"
+      },
+      "contexts": [
+        {
+          "cue": "Finalement, je ne pars plus en vacances."
+        }
+      ]
+    },
+    {
+      "id": "E182",
+      "group": "F",
+      "example": {
+        "fr": "Tu as l'air triste. Dis-moi tout."
+      },
+      "contexts": [
+        {
+          "cue": "J'ai un petit problème au travail."
+        }
+      ]
+    },
+    {
+      "id": "E183",
+      "group": "G",
+      "example": {
+        "fr": "J'ai acheté ce manteau. Tu en penses quoi ?"
+      },
+      "contexts": [
+        {
+          "cue": "Moi, je trouve que Séoul est trop grand."
+        }
+      ]
+    },
+    {
+      "id": "E184",
+      "group": "H",
+      "example": {
+        "fr": "Tu es libre samedi après-midi ?"
+      },
+      "contexts": [
+        {
+          "cue": "J'aimerais bien te voir avant Noël."
+        }
+      ]
+    },
+    {
+      "id": "E185",
+      "group": "H",
+      "example": {
+        "fr": "On se voit mardi ? Ça m'arrange bien."
+      },
+      "contexts": [
+        {
+          "cue": "On peut se voir près de ton bureau, si tu veux."
+        }
+      ]
+    },
+    {
+      "id": "E186",
+      "group": "H",
+      "example": {
+        "fr": "Je suis malade. On peut repousser à lundi ?"
+      },
+      "contexts": [
+        {
+          "cue": "On se voit toujours demain à midi ?"
+        }
+      ]
+    },
+    {
+      "id": "E187",
+      "group": "G",
+      "example": {
+        "fr": "Il a encore oublié ? Je m'en doutais."
+      },
+      "contexts": [
+        {
+          "cue": "Finalement, Paul ne vient pas ce soir."
+        }
+      ]
+    },
+    {
+      "id": "E188",
+      "group": "G",
+      "example": {
+        "fr": "Ça se trouve, il est déjà parti."
+      },
+      "contexts": [
+        {
+          "cue": "Marie ne répond pas au téléphone."
+        }
+      ]
+    },
+    {
+      "id": "E189",
+      "group": "G",
+      "example": {
+        "fr": "Si je me souviens bien, il habite à Lyon."
+      },
+      "contexts": [
+        {
+          "cue": "Le musée est ouvert le lundi ?"
+        }
+      ]
+    },
+    {
+      "id": "E190",
+      "group": "I",
+      "example": {
+        "fr": "Pardon pour ton verre, je ne l'ai pas fait exprès."
+      },
+      "contexts": [
+        {
+          "cue": "Hé ! Tu as pris mon parapluie !"
+        }
+      ]
+    },
+    {
+      "id": "E191",
+      "group": "I",
+      "example": {
+        "fr": "On a raté le train, c'est ma faute."
+      },
+      "contexts": [
+        {
+          "cue": "On est arrivés en retard au cinéma."
+        }
+      ]
+    },
+    {
+      "id": "E192",
+      "group": "I",
+      "example": {
+        "fr": "J'ai oublié ton anniversaire, je m'en veux."
+      },
+      "contexts": [
+        {
+          "cue": "Tu ne m'as pas appelé hier…"
+        }
+      ]
+    },
+    {
+      "id": "E193",
+      "group": "F",
+      "example": {
+        "fr": "Merci, c'est gentil de m'avoir attendu."
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, je t'ai gardé une place."
+        }
+      ]
+    },
+    {
+      "id": "E194",
+      "group": "F",
+      "example": {
+        "fr": "Mon accent est bon ? Tu trouves ?"
+      },
+      "contexts": [
+        {
+          "cue": "Tu parles vraiment bien français !"
+        }
+      ]
+    },
+    {
+      "id": "E195",
+      "group": "F",
+      "example": {
+        "fr": "Merci à toi ! — Non, c'est moi qui te remercie."
+      },
+      "contexts": [
+        {
+          "cue": "Merci d'être venu à ma fête !"
+        }
+      ]
+    },
+    {
+      "id": "E196",
+      "group": "H",
+      "example": {
+        "fr": "Samedi ? Désolé, je suis déjà pris."
+      },
+      "contexts": [
+        {
+          "cue": "Tu viens dîner chez nous vendredi ?"
+        }
+      ]
+    },
+    {
+      "id": "E197",
+      "group": "H",
+      "example": {
+        "fr": "Ça aurait été avec plaisir, mais je travaille."
+      },
+      "contexts": [
+        {
+          "cue": "On fait une fête samedi soir. Tu viens ?"
+        }
+      ]
+    },
+    {
+      "id": "E198",
+      "group": "H",
+      "example": {
+        "fr": "Pas ce soir. Une prochaine fois, peut-être."
+      },
+      "contexts": [
+        {
+          "cue": "Le concert, c'est ce soir. Tu viens ?"
+        }
+      ]
+    },
+    {
+      "id": "E199",
+      "group": "F",
+      "example": {
+        "fr": "Encore de la pluie ? Quel temps de chien !"
+      },
+      "contexts": [
+        {
+          "cue": "Il y a du vent et de la pluie depuis ce matin."
+        }
+      ]
+    },
+    {
+      "id": "E200",
+      "group": "F",
+      "example": {
+        "fr": "Mets ton bonnet, il fait un froid de canard."
+      },
+      "contexts": [
+        {
+          "cue": "Il fait combien dehors ?"
+        }
+      ]
+    },
+    {
+      "id": "E201",
+      "group": "F",
+      "example": {
+        "fr": "Prends un parapluie, il pleut des cordes !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu sors faire ton jogging ?"
+        }
+      ]
+    },
+    {
+      "id": "E202",
+      "group": "G",
+      "example": {
+        "fr": "Le Japon ? Je n'y suis jamais allé."
+      },
+      "contexts": [
+        {
+          "cue": "Tu connais Marseille ?"
+        }
+      ]
+    },
+    {
+      "id": "E203",
+      "group": "G",
+      "example": {
+        "fr": "Le film ? J'ai été un peu déçu."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as aimé le nouveau café en bas ?"
+        }
+      ]
+    },
+    {
+      "id": "E204",
+      "group": "G",
+      "example": {
+        "fr": "Ce livre est génial, je te le recommande."
+      },
+      "contexts": [
+        {
+          "cue": "Je cherche un bon restaurant coréen à Paris."
+        }
+      ]
+    },
+    {
+      "id": "E205",
+      "group": "I",
+      "example": {
+        "fr": "Il fait gris, j'ai un peu le cafard."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as l'air triste aujourd'hui."
+        }
+      ]
+    },
+    {
+      "id": "E206",
+      "group": "I",
+      "example": {
+        "fr": "Je ne connais personne ici, je suis mal à l'aise."
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu ne parles à personne à la fête ?"
+        }
+      ]
+    },
+    {
+      "id": "E207",
+      "group": "I",
+      "example": {
+        "fr": "Tu pleures ? Qu'est-ce qui t'arrive ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je ne me sens pas bien du tout…"
+        }
+      ]
+    },
+    {
+      "id": "E208",
+      "group": "F",
+      "example": {
+        "fr": "Tu n'as pas dormi ? Forcément, tu es fatigué."
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai rien mangé ce midi et j'ai très faim."
+        }
+      ]
+    },
+    {
+      "id": "E209",
+      "group": "F",
+      "example": {
+        "fr": "Ce nom, ça me dit quelque chose."
+      },
+      "contexts": [
+        {
+          "cue": "Tu connais le Mont-Saint-Michel ?"
+        }
+      ]
+    },
+    {
+      "id": "E210",
+      "group": "F",
+      "example": {
+        "fr": "Tu as acheté dix livres ? Tant que ça ?"
+      },
+      "contexts": [
+        {
+          "cue": "J'ai bu cinq cafés aujourd'hui."
+        }
+      ]
+    },
+    {
+      "id": "E211",
+      "group": "H",
+      "example": {
+        "fr": "Pour le dessert, qu'est-ce que tu me conseilles ?"
+      },
+      "contexts": [
+        {
+          "cue": "Tu vas à Lyon ? J'y ai habité cinq ans !"
+        }
+      ]
+    },
+    {
+      "id": "E212",
+      "group": "H",
+      "example": {
+        "fr": "Ce meuble ? Je ne sais pas comment m'y prendre."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as fini de monter ton armoire ?"
+        }
+      ]
+    },
+    {
+      "id": "E213",
+      "group": "H",
+      "example": {
+        "fr": "Excuse-moi de te déranger, tu as une minute ?"
+      },
+      "contexts": [
+        {
+          "cue": "Allô ? Oui, c'est Julie."
+        }
+      ]
+    },
+    {
+      "id": "E214",
+      "group": "G",
+      "example": {
+        "fr": "J'hésite entre le poisson et la viande."
+      },
+      "contexts": [
+        {
+          "cue": "Tu pars où pour les vacances ?"
+        }
+      ]
+    },
+    {
+      "id": "E215",
+      "group": "G",
+      "example": {
+        "fr": "Ton idée est intéressante, je vais y réfléchir."
+      },
+      "contexts": [
+        {
+          "cue": "Tu veux venir au cours de danse avec moi ?"
+        }
+      ]
+    },
+    {
+      "id": "E216",
+      "group": "G",
+      "example": {
+        "fr": "Prends un parapluie, on ne sait jamais."
+      },
+      "contexts": [
+        {
+          "cue": "Tu achètes un billet de loto ?"
+        }
+      ]
+    },
+    {
+      "id": "E217",
+      "group": "I",
+      "example": {
+        "fr": "Tu as un examen demain ? Bon courage !"
+      },
+      "contexts": [
+        {
+          "cue": "Ce soir, je dois finir un gros dossier."
+        }
+      ]
+    },
+    {
+      "id": "E218",
+      "group": "I",
+      "example": {
+        "fr": "C'est un moment difficile. Je suis de tout cœur avec toi."
+      },
+      "contexts": [
+        {
+          "cue": "Mon père est à l'hôpital depuis lundi."
+        }
+      ]
+    },
+    {
+      "id": "E219",
+      "group": "I",
+      "example": {
+        "fr": "Ton vol est annulé ? Ce n'est vraiment pas de chance."
+      },
+      "contexts": [
+        {
+          "cue": "J'ai cassé mon téléphone le jour de mon anniversaire."
+        }
+      ]
+    },
+    {
+      "id": "E220",
+      "group": "F",
+      "example": {
+        "fr": "Tu es au courant ? Léa va se marier !"
+      },
+      "contexts": [
+        {
+          "cue": "Salut ! Ça va, au bureau ?"
+        }
+      ]
+    },
+    {
+      "id": "E221",
+      "group": "F",
+      "example": {
+        "fr": "Il n'y a personne ? Comment ça se fait ?"
+      },
+      "contexts": [
+        {
+          "cue": "Le restaurant est fermé ce soir."
+        }
+      ]
+    },
+    {
+      "id": "E222",
+      "group": "F",
+      "example": {
+        "fr": "Je ne sais pas. En tout cas, merci !"
+      },
+      "contexts": [
+        {
+          "cue": "Je ne sais pas si je peux venir samedi."
+        }
+      ]
+    },
+    {
+      "id": "E223",
+      "group": "H",
+      "example": {
+        "fr": "Il fait froid. On se fait un chocolat chaud ?"
+      },
+      "contexts": [
+        {
+          "cue": "J'ai fini le travail plus tôt aujourd'hui."
+        }
+      ]
+    },
+    {
+      "id": "E224",
+      "group": "H",
+      "example": {
+        "fr": "Je passe te prendre à huit heures."
+      },
+      "contexts": [
+        {
+          "cue": "C'est loin, la fête ? Je n'ai pas de voiture."
+        }
+      ]
+    },
+    {
+      "id": "E225",
+      "group": "H",
+      "example": {
+        "fr": "Attends-moi, j'en ai pour cinq minutes."
+      },
+      "contexts": [
+        {
+          "cue": "Tu es prêt ? On y va ?"
+        }
+      ]
+    },
+    {
+      "id": "E226",
+      "group": "G",
+      "example": {
+        "fr": "Il est amoureux, ça saute aux yeux !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu crois que Léa aime son nouveau travail ?"
+        }
+      ]
+    },
+    {
+      "id": "E227",
+      "group": "G",
+      "example": {
+        "fr": "Ce prix ? Il y a quelque chose qui cloche."
+      },
+      "contexts": [
+        {
+          "cue": "Regarde, la facture fait trois cents euros."
+        }
+      ]
+    },
+    {
+      "id": "E228",
+      "group": "G",
+      "example": {
+        "fr": "Finir tout ça ce soir ? Ce n'est pas gagné."
+      },
+      "contexts": [
+        {
+          "cue": "Je veux parler français couramment en six mois."
+        }
+      ]
+    },
+    {
+      "id": "E229",
+      "group": "I",
+      "example": {
+        "fr": "Le train est en retard, je n'y peux rien."
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu travailles encore ce week-end ?"
+        }
+      ]
+    },
+    {
+      "id": "E230",
+      "group": "I",
+      "example": {
+        "fr": "Pardon, je me suis trompé de numéro."
+      },
+      "contexts": [
+        {
+          "cue": "Tu es où ? On t'attend devant le cinéma."
+        }
+      ]
+    },
+    {
+      "id": "E231",
+      "group": "I",
+      "example": {
+        "fr": "Désolé pour le retard, il y avait des bouchons."
+      },
+      "contexts": [
+        {
+          "cue": "Ah, te voilà enfin !"
+        }
+      ]
+    },
+    {
+      "id": "E232",
+      "group": "H",
+      "example": {
+        "fr": "Joyeux anniversaire ! J'ai un petit quelque chose pour toi."
+      },
+      "contexts": [
+        {
+          "cue": "Pourquoi tu as un grand sac aujourd'hui ?"
+        }
+      ]
+    },
+    {
+      "id": "E233",
+      "group": "F",
+      "example": {
+        "fr": "Des fleurs ? Oh, tu n'aurais pas dû !"
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, c'est un cadeau pour toi."
+        }
+      ]
+    },
+    {
+      "id": "E234",
+      "group": "F",
+      "example": {
+        "fr": "Ce pull rouge, ça te va très bien."
+      },
+      "contexts": [
+        {
+          "cue": "Regarde mon nouveau manteau. Il est bien ?"
+        }
+      ]
+    },
+    {
+      "id": "E235",
+      "group": "G",
+      "example": {
+        "fr": "J'ai eu un coup de cœur pour cette petite ville."
+      },
+      "contexts": [
+        {
+          "cue": "Qu'est-ce que tu as préféré au Portugal ?"
+        }
+      ]
+    },
+    {
+      "id": "E236",
+      "group": "G",
+      "example": {
+        "fr": "Pour trouver un appartement, j'ai galéré !"
+      },
+      "contexts": [
+        {
+          "cue": "Alors, ton déménagement ?"
+        }
+      ]
+    },
+    {
+      "id": "E237",
+      "group": "G",
+      "example": {
+        "fr": "La voiture ne m'a pas vu. Je l'ai échappé belle !"
+      },
+      "contexts": [
+        {
+          "cue": "Il paraît que tu as presque raté ton avion ?"
+        }
+      ]
+    },
+    {
+      "id": "E238",
+      "group": "F",
+      "example": {
+        "fr": "Joyeux Noël à toi et à ta famille !"
+      },
+      "contexts": [
+        {
+          "cue": "C'est le 24 décembre aujourd'hui !"
+        }
+      ]
+    },
+    {
+      "id": "E239",
+      "group": "F",
+      "example": {
+        "fr": "Je pars demain. Bonnes fêtes de fin d'année !"
+      },
+      "contexts": [
+        {
+          "cue": "C'est mon dernier jour au bureau avant les vacances."
+        }
+      ]
+    },
+    {
+      "id": "E240",
+      "group": "F",
+      "example": {
+        "fr": "Bon week-end ! — Merci, pareillement !"
+      },
+      "contexts": [
+        {
+          "cue": "Bonnes vacances, Brice !"
+        }
+      ]
+    },
+    {
+      "id": "E241",
+      "group": "I",
+      "example": {
+        "fr": "J'ai posé quelques jours pour me reposer."
+      },
+      "contexts": [
+        {
+          "cue": "Tu travailles entre Noël et le Nouvel An ?"
+        }
+      ]
+    },
+    {
+      "id": "E242",
+      "group": "I",
+      "example": {
+        "fr": "Encore trois jours de travail. Vivement les vacances !"
+      },
+      "contexts": [
+        {
+          "cue": "Encore deux jours de travail avant le week-end."
+        }
+      ]
+    },
+    {
+      "id": "E243",
+      "group": "I",
+      "example": {
+        "fr": "Tu as l'air fatigué. Repose-toi bien !"
+      },
+      "contexts": [
+        {
+          "cue": "Je suis crevé, je rentre à la maison."
+        }
+      ]
+    },
+    {
+      "id": "E244",
+      "group": "F",
+      "example": {
+        "fr": "Salut Marc ! Quoi de neuf ?"
+      },
+      "contexts": [
+        {
+          "cue": "Salut ! Ça fait une semaine qu'on ne s'est pas vus."
+        }
+      ]
+    },
+    {
+      "id": "E245",
+      "group": "G",
+      "example": {
+        "fr": "En ce moment, c'est métro-boulot-dodo."
+      },
+      "contexts": [
+        {
+          "cue": "Tu fais quoi de beau en ce moment ?"
+        }
+      ]
+    },
+    {
+      "id": "E246",
+      "group": "G",
+      "example": {
+        "fr": "Déjà décembre ? Le temps passe trop vite !"
+      },
+      "contexts": [
+        {
+          "cue": "Tu te rends compte ? C'est bientôt la fin de l'année."
+        }
+      ]
+    },
+    {
+      "id": "E247",
+      "group": "H",
+      "example": {
+        "fr": "Tu apportes le dessert ? Je compte sur toi !"
+      },
+      "contexts": [
+        {
+          "cue": "D'accord, je m'occupe des boissons pour la fête."
+        }
+      ]
+    },
+    {
+      "id": "E248",
+      "group": "H",
+      "example": {
+        "fr": "Rendez-vous lundi à neuf heures ? C'est noté."
+      },
+      "contexts": [
+        {
+          "cue": "La réunion commence à dix heures, pas à neuf."
+        }
+      ]
+    },
+    {
+      "id": "E249",
+      "group": "H",
+      "example": {
+        "fr": "Et ton projet, tu en es où ?"
+      },
+      "contexts": [
+        {
+          "cue": "Je cherche toujours un nouvel appartement."
+        }
+      ]
+    },
+    {
+      "id": "E250",
+      "group": "F",
+      "example": {
+        "fr": "Bon anniversaire, Paul ! À la tienne !"
+      },
+      "contexts": [
+        {
+          "cue": "Tiens, ton verre de champagne. Santé !"
+        }
+      ]
+    },
+    {
+      "id": "E251",
+      "group": "F",
+      "example": {
+        "fr": "Tu passes le 31 chez tes parents ? Bon réveillon !"
+      },
+      "contexts": [
+        {
+          "cue": "Le 31, on fait une fête chez des amis."
+        }
+      ]
+    },
+    {
+      "id": "E252",
+      "group": "F",
+      "example": {
+        "fr": "Merci pour tout et à l'année prochaine !"
+      },
+      "contexts": [
+        {
+          "cue": "C'est notre dernier cours de l'année !"
+        }
+      ]
+    },
+    {
+      "id": "E253",
+      "group": "G",
+      "example": {
+        "fr": "Cette année, ma résolution, c'est de faire du sport."
+      },
+      "contexts": [
+        {
+          "cue": "Tu as des projets pour l'année prochaine ?"
+        }
+      ]
+    },
+    {
+      "id": "E254",
+      "group": "G",
+      "example": {
+        "fr": "J'ai tendance à trop manger à Noël."
+      },
+      "contexts": [
+        {
+          "cue": "Tu dors bien en ce moment ?"
+        }
+      ]
+    },
+    {
+      "id": "E255",
+      "group": "G",
+      "example": {
+        "fr": "Ton gâteau est raté ? Il faut bien un début à tout !"
+      },
+      "contexts": [
+        {
+          "cue": "Je n'ai jamais fait de ski. J'ai un peu peur."
+        }
+      ]
+    },
+    {
+      "id": "E256",
+      "group": "F",
+      "example": {
+        "fr": "Minuit ! Bonne année, bonne santé à tous !"
+      },
+      "contexts": [
+        {
+          "cue": "Ça y est, il est minuit !"
+        }
+      ]
+    },
+    {
+      "id": "E257",
+      "group": "F",
+      "example": {
+        "fr": "Meilleurs vœux pour la nouvelle année !"
+      },
+      "contexts": [
+        {
+          "cue": "Salut ! Tu as passé de bonnes fêtes ?"
+        }
+      ]
+    },
+    {
+      "id": "E258",
+      "group": "F",
+      "example": {
+        "fr": "Pour cette nouvelle année, je te souhaite le meilleur."
+      },
+      "contexts": [
+        {
+          "cue": "Merci pour tout cette année, tu m'as beaucoup aidé."
+        }
+      ]
+    }
+  ]
+}
