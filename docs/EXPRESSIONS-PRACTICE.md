@@ -1,0 +1,70 @@
+# 말하기 표현 연습 — 문제 검토 기록
+
+`/expressions/practice` 는 study-french 의 `speaking/expressions.json`(ChatGPT 수업에서 배운 그대로)을 읽어 문제를 만든다. 수업 데이터는 고치지 않는다. 대신 FTF 에 **검토 기록**을 두어, 문제가 매끄럽지 않은 경우를 화면이 피하거나 너그럽게 받는다.
+
+- 여러 보기가 맥락상 답이 될 수 있다 → 그 표현을 오답 보기로 내지 않고, 고르면 "이것도 자연스러워요"로 받는다.
+- 정답이 부자연스럽다 → 그 방식으로는 내지 않는다.
+- 뜻(한국어)이 거의 같은 표현 → 뜻 고르기 문제에서 서로 오답으로 내지 않는다.
+
+검토 기록에는 판단(표현 id·방식 이름·짧은 메모)만 적는다. 새 프랑스어 문장을 만들지 않는다.
+
+## 파일
+
+`src/features/expressions/data/practice-review.json`
+
+```jsonc
+{
+  "schema": "ftf/expressions-practice-review@1",
+  "reviewedAt": "2026-11-23",
+  "items": {
+    "E50": {
+      // 뜻(ko)이 거의 같아 뜻 고르기에서 서로 오답이 되면 안 되는 표현
+      "similarMeaning": ["E120"],
+      // 예문(example.fr) 한 칸. text 는 검토할 때의 문장 — 원본이 바뀌면 이 칸은 무시된다
+      "example": {
+        "text": "Je pense que le télétravail, c'est pratique.",
+        "alsoFits": ["E51"],          // 이 문장의 표현 자리에 넣어도 자연스러운 다른 표현
+        "skip": [],                   // 이 문장으로 내지 않을 방식
+        "note": ""
+      },
+      // 맥락(contexts[]) 하나에 한 칸. cue 로 원본의 맥락과 짝을 맞춘다
+      "contexts": [
+        {
+          "cue": "Tu aimes ton nouveau bureau ?",
+          "alsoFits": ["E57", "E60"],  // 이 cue 에 이 표현 대신 써도 자연스러운 대꾸가 되는 다른 표현
+          "skip": [],
+          "note": "의견을 묻는 말이라 장단점·불만 표현도 자연스럽다"
+        }
+      ]
+    }
+  }
+}
+```
+
+### 방식 이름 (`skip` 에 쓴다)
+
+| 이름 | 화면 이름 | 쓰는 문장 |
+|---|---|---|
+| `recall` | 떠올리기 | ko·example |
+| `situation` | 상황 대꾸 | context 의 cue → 표현 |
+| `blank` | 빈칸 | example 또는 context 의 reply |
+| `order` | 순서 맞추기 | example |
+| `listen` | 듣고 고르기 | example → ko |
+
+### 판단 기준
+
+- `alsoFits`: 그 자리(cue 에 대한 대꾸, 또는 문장의 표현 자리)에 다른 표현을 넣어도 **원어민이 자연스럽다고 볼** 때만 넣는다. 뜻이 조금 달라져도 대화로 자연스러우면 넣는다(질문이 열려 있으면 여러 대꾸가 맞다). 문법이 맞지 않거나 대화가 어색해지면 넣지 않는다.
+- `skip`: 그 방식으로 냈을 때 정답이 부자연스럽거나(표현이 대꾸에 억지로 들어감, reply 가 사실상 다른 표현(combo)으로 성립), 정답이 하나로 정해지지 않을 때. `order` 는 낱말 순서가 여럿 자연스러울 때.
+- `similarMeaning`: 한국어 뜻만 보고는 구별하기 어려울 때.
+
+## 화면이 쓰는 방식
+
+- 검토 기록이 없는 표현(새로 더해진 표현)은 지금 규칙 그대로 낸다. 같은 묶음(group)의 표현은 대신 쓸 수 있는 경우가 많으니, 기록이 없을 때는 같은 묶음 표현을 상황 대꾸 오답 보기에서 뺀다.
+- `text`·`cue` 가 원본과 다르면 그 칸은 쓰지 않는다(원본이 바뀌었다는 뜻).
+- 새 표현이 들어오면 검토를 다시 돌린다(아래 절차).
+
+## 검토 다시 돌리기
+
+1. 검토 기록에 없는 표현과, `text`·`cue` 가 원본과 달라진 칸을 뽑는다(`scripts/expressions-review-todo.ts`).
+2. 서브에이전트가 묶음별로 판단해 같은 형식으로 쓴다. 전체 표현 목록(id·fr·ko)을 함께 준다.
+3. 형식 검사 테스트(`tests/expressions-practice-review.test.ts`)가 통과해야 한다: 모르는 id·방식 이름, 자기 자신을 `alsoFits` 에 넣음, combo 와 겹침 같은 것을 잡는다.
