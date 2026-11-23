@@ -47,7 +47,7 @@ study-french 데이터와 이어진 화면(표현·연습·DELF)만 study-french
 1. **세션 인계(바깥 일 없음)**: FTF 의 남은 일·절차를 study-french HANDOFF 로 옮기고, 이 문서와 FTF HANDOFF 를 study-french 가 읽는다. 이때부터 FTF 일은 study-french 세션이 맡는다.
 2. **코드 옮기기**: study-french 저장소에 `app/` 으로 FTF 기록을 합친다(git subtree). 테스트·lint 가 study-french 안에서 돈다. 이 단계에서는 배포를 바꾸지 않는다(FTF 저장소가 계속 배포).
 3. **배포 옮기기**: 이미지 빌드 워크플로를 study-french 로 옮기고(경로 필터 `app/**`), servers 저장소의 deploy.sh·compose 를 새 이미지 이름으로. 배포 키 forced-command 경로를 맞춘다. 서버 DB 는 그대로(옮기지 않음).
-4. **주소 바꾸기**: 새 주소 nginx·TLS, 옛 `ftf.byb.kr` 은 301 로 넘긴다. 폰 홈 화면 바로가기·북마크는 사용자가 새로 단다.
+4. **주소 바꾸기**: 새 주소 nginx·TLS, 옛 `ftf.byb.kr` 은 301 로 넘긴다. `lang.byb.kr` 홈의 프랑스어 링크를 새 주소로 바꾼다(홈은 lang.byb.kr 세션이 맡는다, 비서를 통해 요청). 폰 홈 화면 바로가기·북마크는 사용자가 새로 단다.
 5. **정리**: FTF 저장소 archive, 표현 원본을 같은 저장소 파일로 읽게 바꾸기, 겹치는 buzz-challenge 정리.
 
 ## FTF 세션이 넘길 것
