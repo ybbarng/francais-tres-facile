@@ -50,6 +50,7 @@ import {
   type ReviewIndex,
 } from "../lib/practice-review";
 import PracticeQuestionView from "./PracticeQuestionView";
+import SessionCalendar from "./SessionCalendar";
 
 /** 문제 검토 기록(빌드에 들어가는 정적 JSON). 형식이 틀리면 없는 것으로 보고 지금 규칙대로 낸다 */
 function loadReview(): PracticeReview {
@@ -457,44 +458,10 @@ export default function PracticeGame() {
 }
 
 const RANGE_HINTS: Record<RangeMode, string> = {
-  cumulative: "처음부터 고른 세션까지 배운 표현을 모두 냅니다.",
-  single: "고른 세션의 표현만 냅니다. 오답 보기는 그 세션까지 배운 표현에서 뽑습니다.",
-  span: "시작부터 끝 세션까지의 표현을 냅니다. 오답 보기는 끝 세션까지 배운 표현에서 뽑습니다.",
+  cumulative: "날짜를 누르면 처음부터 그날까지 배운 표현을 모두 냅니다.",
+  single: "누른 날의 표현만 냅니다. 오답 보기는 그날까지 배운 표현에서 뽑습니다.",
+  span: "시작과 끝 날짜를 차례로 누르세요. 오답 보기는 끝 날까지 배운 표현에서 뽑습니다.",
 };
-
-function SessionSelect({
-  id,
-  label,
-  options,
-  value,
-  onChange,
-}: {
-  id: string;
-  label: string;
-  options: SessionOption[];
-  value: string;
-  onChange: (name: string) => void;
-}) {
-  return (
-    <div className="min-w-0 space-y-1">
-      <label htmlFor={id} className="block text-xs text-muted-foreground">
-        {label}
-      </label>
-      <select
-        id={id}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="h-11 w-full min-w-0 rounded-lg border border-border bg-background px-2 text-base tabular-nums"
-      >
-        {options.map((o) => (
-          <option key={o.session} value={o.name}>
-            {o.name} · {o.count}개
-          </option>
-        ))}
-      </select>
-    </div>
-  );
-}
 
 function Setup({
   options,
@@ -540,40 +507,22 @@ function Setup({
                 </Chip>
               ))}
             </div>
-            {range.mode === "span" ? (
-              <div className="grid grid-cols-2 gap-2">
-                <SessionSelect
-                  id="practice-range-from"
-                  label="시작"
-                  options={options}
-                  value={range.from ?? range.to}
-                  onChange={(name) => setSpan(name, range.to)}
-                />
-                <SessionSelect
-                  id="practice-range-to"
-                  label="끝"
-                  options={options}
-                  value={range.to}
-                  onChange={(name) => setSpan(range.from ?? range.to, name)}
-                />
-              </div>
-            ) : (
-              <SessionSelect
-                id="practice-range-to"
-                label={range.mode === "single" ? "세션" : "이 세션까지"}
-                options={options}
-                value={range.to}
-                onChange={(name) => onRange({ mode: range.mode, to: name })}
-              />
-            )}
+            <SessionCalendar
+              options={options}
+              range={range}
+              onRange={onRange}
+              count={targetCount}
+            />
             <p className="text-xs text-muted-foreground">{RANGE_HINTS[range.mode]}</p>
           </>
         ) : (
-          <p className="text-sm text-muted-foreground">날짜별 세션이 아직 없습니다.</p>
+          <>
+            <p className="text-sm text-muted-foreground">날짜별 세션이 아직 없습니다.</p>
+            <p className="text-sm text-muted-foreground">
+              이 범위 <b className="tabular-nums text-foreground">{targetCount}</b>개에서 냅니다.
+            </p>
+          </>
         )}
-        <p className="text-sm text-muted-foreground">
-          이 범위 <b className="tabular-nums text-foreground">{targetCount}</b>개에서 냅니다.
-        </p>
       </div>
 
       <div className="space-y-2">
