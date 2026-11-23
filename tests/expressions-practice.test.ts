@@ -13,6 +13,12 @@ import {
   scrambleOrder,
   splitTokens,
 } from "../src/features/expressions/lib/practice";
+import {
+  distractorPool,
+  expressionsInRange,
+  rangeBounds,
+  sessionOptions,
+} from "../src/features/expressions/lib/practice-range";
 import sample from "./mocks/expressions-practice-sample.json";
 
 const pool = parseExpressions(sample).expressions;
@@ -211,6 +217,49 @@ describe("makeQuestion", () => {
 
   it("듣고 고르기: 음성이 없는 기기에서는 만들지 않는다", () => {
     expect(makeQuestion("listen", byId("E91"), pool, { canSpeak: false })).toBeNull();
+  });
+});
+
+describe("한 세션만 고른 범위", () => {
+  // 표본을 지금 데이터의 세션 번호로 옮긴다(10-01·10-09·10-17·11-05·11-12·11-30).
+  // E91 의 대꾸는 E92 와 이어진다고 둔다(combo 는 id 만 바꾼 것, 프랑스어는 그대로)
+  const renumber: Record<string, [number, string]> = {
+    E01: [1, "10-01"],
+    E02: [1, "10-01"],
+    E16: [9, "10-09"],
+    E42: [17, "10-17"],
+    E91: [35, "11-05"],
+    E92: [35, "11-05"],
+    E112: [42, "11-12"],
+    E166: [60, "11-30"],
+  };
+  const list = pool.map((e) => {
+    const [session, sessionName] = renumber[e.id];
+    const contexts = e.id === "E91" ? e.contexts?.map((c) => ({ ...c, combo: "E92" })) : e.contexts;
+    return { ...e, session, sessionName, contexts };
+  });
+  const options = sessionOptions(list);
+  const bounds = rangeBounds(options, { mode: "single", to: "11-05" });
+  const targets = expressionsInRange(list, bounds);
+  const distractors = distractorPool(list, bounds);
+
+  it("문제 범위는 11-05 의 두 표현뿐이라 그것만으로는 4지선다를 못 만든다", () => {
+    expect(targets.map((e) => e.id)).toEqual(["E91", "E92"]);
+    const e91 = targets[0];
+    expect(makeQuestion("context", e91, targets, { canSpeak: true })).toBeNull();
+  });
+
+  it("상황 대꾸 오답은 11-05 까지 누적 풀에서 뽑고 정답·combo 는 뺀다", () => {
+    const e91 = targets[0];
+    for (let seed = 1; seed <= 10; seed++) {
+      const q = makeQuestion("context", e91, distractors, { canSpeak: true, random: seeded(seed) });
+      if (q?.mode !== "context") throw new Error("context 문제가 아님");
+      const others = q.choices.map((c) => c.id).filter((id) => id !== "E91");
+      expect(q.choices).toHaveLength(4);
+      expect(others).toHaveLength(3);
+      // 11-05 까지 누적에서 정답 E91 과 combo E92 를 빼면 남는 넷
+      for (const id of others) expect(["E01", "E02", "E16", "E42"]).toContain(id);
+    }
   });
 });
 

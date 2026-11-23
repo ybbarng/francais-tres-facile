@@ -133,7 +133,9 @@ export function matchFirstCase(s: string, ref: string): string {
 // ── 오답 보기 ─────────────────────────────────────────
 
 /**
- * 같은 범위의 다른 표현에서 오답을 뽑는다. 정답 표현과 excludeIds(context 의 combo 등)는 빼고,
+ * 보기 풀(pool)의 다른 표현에서 오답을 뽑는다. 풀은 문제 범위가 아니라 범위 끝 세션까지 누적이라
+ * (practice-range 의 distractorPool) 한 세션만 골라도 보기가 모자라지 않다.
+ * 정답 표현과 excludeIds(context 의 combo 등)는 빼고,
  * key 로 본 글이 정답과 같거나 서로 같은 것도 뺀다. count 개를 못 채우면 null
  */
 export function pickDistractors(

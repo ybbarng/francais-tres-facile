@@ -28,51 +28,62 @@ describe("/api/expressions/practice-setting", () => {
     vi.doUnmock("@/lib/db");
   });
 
-  it("GET 은 암호 없이 저장한 세션 번호를 숫자로 돌려준다", async () => {
-    findUnique.mockResolvedValue({ key: "lastSession", value: "45" });
+  it("GET 은 암호 없이 range 키에 저장한 범위를 돌려준다", async () => {
+    findUnique.mockResolvedValue({
+      key: "range",
+      value: '{"mode":"span","from":"10-15","to":"10-30"}',
+    });
     const { GET } = await load();
     const res = await GET();
     expect(res.status).toBe(200);
-    expect(await res.json()).toEqual({ lastSession: 45 });
-    expect(findUnique).toHaveBeenCalledWith({ where: { key: "lastSession" } });
+    expect(await res.json()).toEqual({ range: { mode: "span", from: "10-15", to: "10-30" } });
+    expect(findUnique).toHaveBeenCalledWith({ where: { key: "range" } });
   });
 
   it("GET 은 저장한 적이 없으면 null", async () => {
     findUnique.mockResolvedValue(null);
     const { GET } = await load();
-    expect(await (await GET()).json()).toEqual({ lastSession: null });
+    expect(await (await GET()).json()).toEqual({ range: null });
+  });
+
+  it("GET 은 저장된 값이 JSON 이 아니면 null", async () => {
+    findUnique.mockResolvedValue({ key: "range", value: "45" });
+    const { GET } = await load();
+    expect(await (await GET()).json()).toEqual({ range: null });
   });
 
   it("POST 는 암호가 없으면 401 이고 저장하지 않는다", async () => {
     const { POST } = await load();
-    const res = await POST(req({ lastSession: 40 }, undefined, "10.8.0.2"));
+    const res = await POST(
+      req({ range: { mode: "cumulative", to: "11-23" } }, undefined, "10.8.0.2")
+    );
     expect(res.status).toBe(401);
     expect(upsert).not.toHaveBeenCalled();
   });
 
   it.each([
-    ["문자열", "40"],
-    ["소수", 40.5],
-    ["0", 0],
-    ["너무 큰 수", 10001],
+    ["모르는 방식", { mode: "all", to: "11-23" }],
+    ["MM-DD 가 아닌 끝", { mode: "single", to: "2026-11-23" }],
+    ["시작이 빠진 구간", { mode: "span", to: "11-23" }],
+    ["옛 숫자 값", 53],
     ["빠짐", undefined],
   ])("POST 는 %s 를 400 으로 막는다", async (_label, value) => {
     const { POST } = await load();
-    const res = await POST(req({ lastSession: value }, "pw"));
+    const res = await POST(req({ range: value }, "pw"));
     expect(res.status).toBe(400);
     expect(upsert).not.toHaveBeenCalled();
   });
 
-  it("POST 는 세션 번호를 lastSession 키에 문자열로 저장한다", async () => {
+  it("POST 는 범위를 range 키에 JSON 문자열로 저장하고 저장한 값을 돌려준다", async () => {
     upsert.mockResolvedValue({});
     const { POST } = await load();
-    const res = await POST(req({ lastSession: 57 }, "pw"));
+    const res = await POST(req({ range: { mode: "single", to: "11-05" } }, "pw"));
     expect(res.status).toBe(200);
-    expect(await res.json()).toEqual({ lastSession: 57 });
+    expect(await res.json()).toEqual({ range: { mode: "single", to: "11-05" } });
     expect(upsert).toHaveBeenCalledWith({
-      where: { key: "lastSession" },
-      update: { value: "57" },
-      create: { key: "lastSession", value: "57" },
+      where: { key: "range" },
+      update: { value: '{"mode":"single","to":"11-05"}' },
+      create: { key: "range", value: '{"mode":"single","to":"11-05"}' },
     });
   });
 });

@@ -1,19 +1,20 @@
 import { describe, expect, it } from "vitest";
 import { parseExpressions } from "../src/features/expressions/lib/expressions";
 import {
+  defaultRange,
+  distractorPool,
   expressionsInRange,
-  latestSession,
+  type PracticeRange,
+  parsePracticeRange,
+  rangeBounds,
+  resolveRange,
+  seoulMonthDay,
   sessionOptions,
 } from "../src/features/expressions/lib/practice-range";
 import practiceSample from "./mocks/expressions-practice-sample.json";
 import real from "./mocks/expressions-sessions.json";
 
 const list = real.expressions;
-const sessionOf = (name: string) => {
-  const found = sessionOptions(list).find((o) => o.name === name);
-  if (!found) throw new Error(`no session ${name}`);
-  return found.session;
-};
 
 describe("parseExpressions 의 새 선택 필드", () => {
   it("sessionName·source·contexts·combo 를 그대로 읽는다", () => {
@@ -51,16 +52,21 @@ describe("parseExpressions 의 새 선택 필드", () => {
 });
 
 describe("sessionOptions", () => {
-  it("실제 데이터에서 11-05 부터 11-30 까지 26개를 session 순으로 만든다", () => {
+  it("10월 세션부터 12-30 까지 85개를 session 순으로, 표현 수와 함께 만든다", () => {
     const options = sessionOptions(list);
-    expect(options).toHaveLength(26);
-    expect(options[0]).toEqual({ session: 32, name: "11-05" });
-    expect(options[25]).toEqual({ session: 57, name: "11-30" });
+    expect(options).toHaveLength(85);
+    expect(options[0]).toEqual({ session: 1, name: "10-01", count: 6 });
+    expect(options[1]).toEqual({ session: 4, name: "10-04", count: 3 });
+    expect(options[options.length - 1]).toEqual({ session: 90, name: "12-30", count: 3 });
   });
 
-  it("같은 session 은 한 번만 나온다", () => {
-    const sessions = sessionOptions(list).map((o) => o.session);
-    expect(new Set(sessions).size).toBe(sessions.length);
+  it("목록 중간에 있는 표현(E61~E63, 11-04)도 session 자리에 놓는다", () => {
+    const names = sessionOptions(list).map((o) => o.name);
+    expect(names.slice(names.indexOf("11-03"), names.indexOf("11-03") + 3)).toEqual([
+      "11-03",
+      "11-04",
+      "11-05",
+    ]);
   });
 
   it("해가 바뀌어도 글자가 아니라 session 숫자 순으로 둔다", () => {
@@ -71,44 +77,145 @@ describe("sessionOptions", () => {
       { session: 59, sessionName: "12-31" },
       { session: 58, sessionName: "12-01" },
     ];
-    expect(sessionOptions(mixed).map((o) => o.name)).toEqual(["12-01", "12-31", "01-05"]);
+    expect(sessionOptions(mixed).map((o) => [o.name, o.count])).toEqual([
+      ["12-01", 2],
+      ["12-31", 1],
+      ["01-05", 1],
+    ]);
   });
 });
 
-describe("latestSession", () => {
-  it("가장 큰 session 을 돌려준다", () => {
-    expect(latestSession(list)).toBe(57);
+describe("seoulMonthDay", () => {
+  it("UTC 로 전날 저녁이어도 서울 날짜로 센다", () => {
+    expect(seoulMonthDay(new Date("2026-11-22T15:30:00Z"))).toBe("11-23");
+  });
+});
+
+describe("defaultRange", () => {
+  const options = sessionOptions(list);
+
+  it("오늘이 11-23 이면 누적, 끝은 11-23", () => {
+    expect(defaultRange(options, "11-23")).toEqual({ mode: "cumulative", to: "11-23" });
   });
 
-  it("날짜별 표현이 없으면 null", () => {
-    expect(latestSession([{ session: 1 }, { session: 30 }])).toBeNull();
+  it("오늘 날짜 세션이 없으면(10-24) 그 앞 가장 가까운 세션(10-23)", () => {
+    expect(defaultRange(options, "10-24")?.to).toBe("10-23");
+  });
+
+  it("오늘이 데이터 마지막 세션보다 뒤(12-31)면 12-30", () => {
+    expect(defaultRange(options, "12-31")?.to).toBe("12-30");
+  });
+
+  it("오늘이 첫 세션보다 앞(09-15)이면 가장 최근 세션", () => {
+    expect(defaultRange(options, "09-15")?.to).toBe("12-30");
+  });
+
+  it("세션이 하나도 없으면 null", () => {
+    expect(defaultRange([], "11-23")).toBeNull();
+  });
+});
+
+describe("resolveRange", () => {
+  const options = sessionOptions(list);
+
+  it("저장된 범위의 세션이 데이터에 있으면 그대로 쓴다", () => {
+    const saved = { mode: "single" as const, to: "11-05" };
+    expect(resolveRange(options, saved, "11-23")).toEqual(saved);
+  });
+
+  it("저장된 세션이 데이터에 없으면 기본값", () => {
+    expect(resolveRange(options, { mode: "single", to: "10-02" }, "11-23")).toEqual({
+      mode: "cumulative",
+      to: "11-23",
+    });
+  });
+
+  it("구간의 시작이 끝보다 뒤면 둘을 바꾼다", () => {
+    expect(resolveRange(options, { mode: "span", from: "10-30", to: "10-15" }, "11-23")).toEqual({
+      mode: "span",
+      from: "10-15",
+      to: "10-30",
+    });
+  });
+});
+
+describe("parsePracticeRange", () => {
+  it("구간이 아니면 from 을 버린다", () => {
+    expect(parsePracticeRange({ mode: "cumulative", from: "10-01", to: "11-05" })).toEqual({
+      mode: "cumulative",
+      to: "11-05",
+    });
+  });
+
+  it.each([
+    ["모르는 방식", { mode: "all", to: "11-05" }],
+    ["MM-DD 가 아닌 끝", { mode: "single", to: "11-5" }],
+    ["없는 달", { mode: "single", to: "13-01" }],
+    ["숫자 끝", { mode: "single", to: 35 }],
+    ["시작이 빠진 구간", { mode: "span", to: "11-05" }],
+    ["옛 숫자 값", 35],
+  ])("%s 는 null", (_label, value) => {
+    expect(parsePracticeRange(value)).toBeNull();
   });
 });
 
 describe("expressionsInRange", () => {
-  it("11-05 까지면 E01~E93 의 93개", () => {
-    const range = expressionsInRange(list, sessionOf("11-05"));
+  const options = sessionOptions(list);
+  const ids = (range: PracticeRange) => expressionsInRange(list, rangeBounds(options, range));
+
+  it("누적 11-05 면 E01~E93 의 93개", () => {
+    const range = ids({ mode: "cumulative", to: "11-05" });
     expect(range).toHaveLength(93);
     expect(range[range.length - 1].id).toBe("E93");
   });
 
-  it("11-30 까지면 168개 전부", () => {
-    expect(expressionsInRange(list, sessionOf("11-30"))).toHaveLength(168);
+  it("누적 11-30 이면 168개", () => {
+    expect(ids({ mode: "cumulative", to: "11-30" })).toHaveLength(168);
   });
 
-  it("sessionName 이 없는 표현은 session 숫자가 커도 늘 들어간다", () => {
-    const range = expressionsInRange(
-      [
-        { id: "E01", session: 40 },
-        { id: "E91", session: 32, sessionName: "11-05" },
-        { id: "E94", session: 33, sessionName: "11-06" },
-      ],
-      32
-    );
-    expect(range.map((e) => e.id)).toEqual(["E01", "E91"]);
+  it("한 세션 11-05 면 그 세션의 E91~E93 만", () => {
+    expect(ids({ mode: "single", to: "11-05" }).map((e) => e.id)).toEqual(["E91", "E92", "E93"]);
+  });
+
+  it("구간 10-15~10-30 은 양 끝 세션을 넣고 11-04 의 E61~E63 은 뺀다", () => {
+    const range = ids({ mode: "span", from: "10-15", to: "10-30" }).map((e) => e.id);
+    expect(range).toHaveLength(45);
+    expect(range[0]).toBe("E34");
+    expect(range[range.length - 1]).toBe("E81");
+    expect(range).not.toContain("E61");
+  });
+
+  it("sessionName 이 없는 표현(옛 데이터)은 누적일 때만 들어간다", () => {
+    const mixed = [
+      { id: "E01", session: 40 },
+      { id: "E91", session: 35, sessionName: "11-05" },
+      { id: "E94", session: 36, sessionName: "11-06" },
+    ];
+    expect(expressionsInRange(mixed, { from: null, to: 35 }).map((e) => e.id)).toEqual([
+      "E01",
+      "E91",
+    ]);
+    expect(expressionsInRange(mixed, { from: 35, to: 35 }).map((e) => e.id)).toEqual(["E91"]);
   });
 
   it("null 이면 전부", () => {
-    expect(expressionsInRange(list, null)).toHaveLength(168);
+    expect(expressionsInRange(list, null)).toHaveLength(258);
+  });
+});
+
+describe("distractorPool", () => {
+  const options = sessionOptions(list);
+
+  it("한 세션 11-05 를 골라도 오답 풀은 11-05 까지 누적 93개", () => {
+    const bounds = rangeBounds(options, { mode: "single", to: "11-05" });
+    expect(distractorPool(list, bounds)).toHaveLength(93);
+  });
+
+  it("구간 10-15~10-30 의 오답 풀은 10-30 까지 누적(E61~E63 은 11-04 라 빠진다)", () => {
+    const bounds = rangeBounds(options, { mode: "span", from: "10-15", to: "10-30" });
+    const pool = distractorPool(list, bounds).map((e) => e.id);
+    expect(pool).toHaveLength(78);
+    expect(pool).toContain("E01");
+    expect(pool).not.toContain("E61");
   });
 });

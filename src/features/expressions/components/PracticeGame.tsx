@@ -27,10 +27,24 @@ import {
   queueAfterAnswer,
   type RoundItem,
 } from "../lib/practice";
-import { expressionsInRange, latestSession, sessionOptions } from "../lib/practice-range";
+import {
+  distractorPool,
+  expressionsInRange,
+  type PracticeRange,
+  parsePracticeRange,
+  RANGE_MODE_LABELS,
+  RANGE_MODES,
+  type RangeMode,
+  rangeBounds,
+  resolveRange,
+  type SessionOption,
+  seoulMonthDay,
+  sessionOptions,
+} from "../lib/practice-range";
 import PracticeQuestionView from "./PracticeQuestionView";
 
-const LOCAL_SESSION_KEY = "ftf-expressions-practice-last-session";
+// 옛 키(ftf-expressions-practice-last-session)는 옛 session 번호라 읽지 않는다
+const LOCAL_RANGE_KEY = "ftf-expressions-practice-range";
 const LOCAL_MODES_KEY = "ftf-expressions-practice-modes";
 const SETTING_URL = "/api/expressions/practice-setting";
 
@@ -47,6 +61,16 @@ function writeLocal(key: string, value: string) {
     localStorage.setItem(key, value);
   } catch {
     // 저장소를 못 쓰는 브라우저에서는 이번 방문에만 기억한다
+  }
+}
+
+function readLocalRange(): PracticeRange | null {
+  const raw = readLocal(LOCAL_RANGE_KEY);
+  if (!raw) return null;
+  try {
+    return parsePracticeRange(JSON.parse(raw));
+  } catch {
+    return null;
   }
 }
 
@@ -200,8 +224,8 @@ function Chip({
 export default function PracticeGame() {
   const [data, setData] = useState<ExpressionsData | null>(null);
   const [loadError, setLoadError] = useState(false);
-  const [lastSession, setLastSession] = useState<number | null>(null);
-  const [serverSession, setServerSession] = useState<number | null | undefined>(undefined);
+  const [savedRange, setSavedRange] = useState<PracticeRange | null>(null);
+  const [serverRange, setServerRange] = useState<PracticeRange | null | undefined>(undefined);
   const [modes, setModes] = useState<PracticeMode[]>([...PRACTICE_MODES]);
   const [play, dispatch] = useReducer(reducer, null);
   const [now, setNow] = useState(() => Date.now());
@@ -209,8 +233,8 @@ export default function PracticeGame() {
   const voice = useFrenchVoice();
 
   useEffect(() => {
-    const local = Number(readLocal(LOCAL_SESSION_KEY));
-    if (Number.isInteger(local) && local > 0) setLastSession(local);
+    const localRange = readLocalRange();
+    if (localRange) setSavedRange(localRange);
     const savedModes = readLocalModes();
     if (savedModes) setModes(savedModes);
 
@@ -225,30 +249,35 @@ export default function PracticeGame() {
         setLoadError(true);
       });
     fetch(SETTING_URL)
-      .then((r) => (r.ok ? r.json() : { lastSession: null }))
-      .then((json: { lastSession?: number | null }) => setServerSession(json.lastSession ?? null))
+      .then((r) => (r.ok ? r.json() : { range: null }))
+      .then((json: { range?: unknown }) => setServerRange(parsePracticeRange(json.range)))
       .catch((e) => {
         console.error("Failed to load practice setting", e);
-        setServerSession(null);
+        setServerRange(null);
       });
   }, []);
 
   // 서버에 저장한 값이 있으면 그것을 쓴다(폰과 맥이 같이 본다)
   useEffect(() => {
-    if (typeof serverSession === "number") setLastSession(serverSession);
-  }, [serverSession]);
+    if (serverRange) setSavedRange(serverRange);
+  }, [serverRange]);
 
+  // 기본 범위의 끝을 정하는 오늘 날짜(서울). 데이터에 아직 배우지 않은 세션이 미리 들어 있다
+  const today = useMemo(() => seoulMonthDay(new Date()), []);
   const options = useMemo(() => (data ? sessionOptions(data.expressions) : []), [data]);
-  const effectiveSession = useMemo(() => {
-    if (!data) return null;
-    if (lastSession !== null && options.some((o) => o.session === lastSession)) {
-      return lastSession;
-    }
-    return latestSession(data.expressions);
-  }, [data, lastSession, options]);
+  const range = useMemo(
+    () => resolveRange(options, savedRange, today),
+    [options, savedRange, today]
+  );
+  const bounds = useMemo(() => (range ? rangeBounds(options, range) : null), [options, range]);
+  // 문제는 고른 범위에서, 4지선다 오답 보기는 범위 끝 세션까지 누적에서 뽑는다
+  const targetsInRange = useMemo(
+    () => (data ? expressionsInRange(data.expressions, bounds) : []),
+    [data, bounds]
+  );
   const pool = useMemo(
-    () => (data ? expressionsInRange(data.expressions, effectiveSession) : []),
-    [data, effectiveSession]
+    () => (data ? distractorPool(data.expressions, bounds) : []),
+    [data, bounds]
   );
 
   const playing = play !== null && play.endedAt === null;
@@ -258,9 +287,9 @@ export default function PracticeGame() {
     return () => window.clearInterval(t);
   }, [playing]);
 
-  const chooseSession = useCallback(async (session: number) => {
-    setLastSession(session);
-    writeLocal(LOCAL_SESSION_KEY, String(session));
+  const chooseRange = useCallback(async (next: PracticeRange) => {
+    setSavedRange(next);
+    writeLocal(LOCAL_RANGE_KEY, JSON.stringify(next));
     if (!getStoredPassword()) {
       if (!warnedNoPassword.current) {
         warnedNoPassword.current = true;
@@ -274,14 +303,14 @@ export default function PracticeGame() {
       const res = await fetchWithAuth(SETTING_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lastSession: session }),
+        body: JSON.stringify({ range: next }),
       });
       if (!res.ok) {
         const body = (await res.json().catch(() => ({}))) as { error?: string };
         throw new Error(body.error ?? `HTTP ${res.status}`);
       }
     } catch (e) {
-      toast.error(`진도를 서버에 저장하지 못했습니다. ${e instanceof Error ? e.message : ""}`);
+      toast.error(`연습 범위를 서버에 저장하지 못했습니다. ${e instanceof Error ? e.message : ""}`);
     }
   }, []);
 
@@ -328,13 +357,13 @@ export default function PracticeGame() {
         ) : play === null ? (
           <Setup
             options={options}
-            session={effectiveSession}
-            onSession={chooseSession}
-            poolSize={pool.length}
+            range={range}
+            onRange={chooseRange}
+            targetCount={targetsInRange.length}
             modes={modes}
             onToggleMode={toggleMode}
             canSpeak={voice.available}
-            onStart={() => start(pool)}
+            onStart={() => start(targetsInRange)}
           />
         ) : play.question && play.item ? (
           <div className="space-y-4">
@@ -385,7 +414,7 @@ export default function PracticeGame() {
             canSpeak={voice.available}
             speak={voice.speak}
             onRetryWrong={() => start(play.wrongIds.flatMap((id) => byId.get(id) ?? []))}
-            onAgain={() => start(pool)}
+            onAgain={() => start(targetsInRange)}
             onSetup={() => dispatch({ type: "reset" })}
           />
         )}
@@ -394,50 +423,123 @@ export default function PracticeGame() {
   );
 }
 
+const RANGE_HINTS: Record<RangeMode, string> = {
+  cumulative: "처음부터 고른 세션까지 배운 표현을 모두 냅니다.",
+  single: "고른 세션의 표현만 냅니다. 오답 보기는 그 세션까지 배운 표현에서 뽑습니다.",
+  span: "시작부터 끝 세션까지의 표현을 냅니다. 오답 보기는 끝 세션까지 배운 표현에서 뽑습니다.",
+};
+
+function SessionSelect({
+  id,
+  label,
+  options,
+  value,
+  onChange,
+}: {
+  id: string;
+  label: string;
+  options: SessionOption[];
+  value: string;
+  onChange: (name: string) => void;
+}) {
+  return (
+    <div className="min-w-0 space-y-1">
+      <label htmlFor={id} className="block text-xs text-muted-foreground">
+        {label}
+      </label>
+      <select
+        id={id}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="h-11 w-full min-w-0 rounded-lg border border-border bg-background px-2 text-base tabular-nums"
+      >
+        {options.map((o) => (
+          <option key={o.session} value={o.name}>
+            {o.name} · {o.count}개
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+
 function Setup({
   options,
-  session,
-  onSession,
-  poolSize,
+  range,
+  onRange,
+  targetCount,
   modes,
   onToggleMode,
   canSpeak,
   onStart,
 }: {
-  options: { session: number; name: string }[];
-  session: number | null;
-  onSession: (s: number) => void;
-  poolSize: number;
+  options: SessionOption[];
+  range: PracticeRange | null;
+  onRange: (r: PracticeRange) => void;
+  targetCount: number;
   modes: PracticeMode[];
   onToggleMode: (m: PracticeMode) => void;
   canSpeak: boolean;
   onStart: () => void;
 }) {
+  const order = (name: string) => options.findIndex((o) => o.name === name);
+  // 구간의 시작이 끝보다 뒤로 가면 둘을 바꿔 저장한다
+  const setSpan = (from: string, to: string) =>
+    onRange(
+      order(from) <= order(to) ? { mode: "span", from, to } : { mode: "span", from: to, to: from }
+    );
+  const setMode = (mode: RangeMode) => {
+    if (!range || mode === range.mode) return;
+    if (mode === "span") setSpan(range.from ?? range.to, range.to);
+    else onRange({ mode, to: range.to });
+  };
+
   return (
     <div className="space-y-4">
-      <div className="space-y-2 rounded-xl border border-border bg-muted/40 p-3">
-        <label htmlFor="practice-session" className="block text-sm font-medium">
-          마지막으로 한 세션
-        </label>
-        {options.length ? (
-          <select
-            id="practice-session"
-            value={session ?? ""}
-            onChange={(e) => onSession(Number(e.target.value))}
-            className="h-11 w-full rounded-lg border border-border bg-background px-3 text-base"
-          >
-            {options.map((o) => (
-              <option key={o.session} value={o.session}>
-                {o.name} (Session {o.session})
-              </option>
-            ))}
-          </select>
+      <div className="space-y-3 rounded-xl border border-border bg-muted/40 p-3">
+        <p className="text-sm font-medium">연습 범위</p>
+        {range ? (
+          <>
+            <div className="flex flex-wrap gap-1.5">
+              {RANGE_MODES.map((m) => (
+                <Chip key={m} pressed={range.mode === m} onClick={() => setMode(m)}>
+                  {RANGE_MODE_LABELS[m]}
+                </Chip>
+              ))}
+            </div>
+            {range.mode === "span" ? (
+              <div className="grid grid-cols-2 gap-2">
+                <SessionSelect
+                  id="practice-range-from"
+                  label="시작"
+                  options={options}
+                  value={range.from ?? range.to}
+                  onChange={(name) => setSpan(name, range.to)}
+                />
+                <SessionSelect
+                  id="practice-range-to"
+                  label="끝"
+                  options={options}
+                  value={range.to}
+                  onChange={(name) => setSpan(range.from ?? range.to, name)}
+                />
+              </div>
+            ) : (
+              <SessionSelect
+                id="practice-range-to"
+                label={range.mode === "single" ? "세션" : "이 세션까지"}
+                options={options}
+                value={range.to}
+                onChange={(name) => onRange({ mode: range.mode, to: name })}
+              />
+            )}
+            <p className="text-xs text-muted-foreground">{RANGE_HINTS[range.mode]}</p>
+          </>
         ) : (
           <p className="text-sm text-muted-foreground">날짜별 세션이 아직 없습니다.</p>
         )}
         <p className="text-sm text-muted-foreground">
-          이 세션까지 배운 표현 <b className="tabular-nums text-foreground">{poolSize}</b>개에서
-          냅니다.
+          이 범위 <b className="tabular-nums text-foreground">{targetCount}</b>개에서 냅니다.
         </p>
       </div>
 
@@ -471,7 +573,7 @@ function Setup({
         <li>틀린 표현은 그 판에서 다른 방식으로 최대 두 번 더 나옵니다.</li>
       </ul>
 
-      <Button className="h-12 w-full text-base" onClick={onStart} disabled={poolSize === 0}>
+      <Button className="h-12 w-full text-base" onClick={onStart} disabled={targetCount === 0}>
         시작
       </Button>
     </div>
@@ -566,7 +668,7 @@ function Result({
           한 판 더
         </Button>
         <Button variant="ghost" className="w-full" onClick={onSetup}>
-          <ArrowLeft /> 진도·방식 바꾸기
+          <ArrowLeft /> 범위·방식 바꾸기
         </Button>
         <Button variant="ghost" className="w-full" asChild>
           <Link href="/expressions">표현 목록으로</Link>
